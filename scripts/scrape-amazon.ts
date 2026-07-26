@@ -45,12 +45,18 @@ function isMatch(title: string, p: ProductRef): boolean {
   const t = title.toLowerCase();
   const brand = p.brand.toLowerCase();
   const brandOk = t.includes(brand) || t.includes(brand.replace(/\s+/g, ""));
+  // Tokens de 2 letras incluidos: en modelos como "RX Carbon" el "rx" es lo
+  // único que distingue, y descartarlo dejaba "carbon", que casa con media
+  // gama de la marca.
   const kws = p.model.toLowerCase().replace(/by\s+[^,]+$/i, "")
-    .split(/\s+/).filter(w => w.length > 2 && !["the", "pro", "by"].includes(w));
+    .split(/\s+/).filter(w => w.length >= 2 && !["the", "pro", "by", "de"].includes(w));
   const hits = kws.filter(k => t.includes(k)).length;
   const score = kws.length > 0 ? hits / kws.length : 0;
   const yearOk = t.includes(String(p.year)) || t.includes(String(p.year + 1));
-  return brandOk && (score >= 0.4 || yearOk);
+  // El año ajusta el listón, nunca sustituye al modelo: con `score >= 0.4 ||
+  // yearOk` bastaba con que coincidieran marca y año, así que cualquier pala de
+  // esa marca y temporada se daba por buena.
+  return brandOk && score >= (yearOk ? 0.5 : 0.7);
 }
 
 async function scrapeAmazon() {
@@ -58,9 +64,25 @@ async function scrapeAmazon() {
   console.log(`📋 ${products.length} productos a buscar en Amazon ES\n`);
 
   const outputPath = join(__dirname, "../src/data/real-offers.json");
-  const existing: Record<string, ScrapedOffer> = existsSync(outputPath)
+  const cached: Record<string, ScrapedOffer> = existsSync(outputPath)
     ? JSON.parse(readFileSync(outputPath, "utf-8"))
     : {};
+
+  // Poda las entradas cuyo producto ya no existe. Al renombrar un id (p. ej. al
+  // pasar un modelo a la temporada siguiente) su precio queda huérfano: no lo
+  // usa nadie, pero sin esto se arrastraría para siempre en el JSON.
+  const vivos = new Set(products.map((p) => p.id));
+  const existing: Record<string, ScrapedOffer> = {};
+  const huerfanos: string[] = [];
+  for (const [id, offer] of Object.entries(cached)) {
+    if (vivos.has(id)) existing[id] = offer;
+    else huerfanos.push(id);
+  }
+  if (huerfanos.length > 0) {
+    console.log(`🧹 ${huerfanos.length} huérfanas podadas:`);
+    huerfanos.forEach((id) => console.log(`     ${id}`));
+    console.log();
+  }
 
   const browser = await chromium.launch({
     headless: true,
@@ -82,6 +104,14 @@ async function scrapeAmazon() {
   const results: Record<string, ScrapedOffer> = { ...existing };
   let found = 0;
   let missed = 0;
+
+  // Un ASIN pertenece a un solo producto. Sin esto, el matching difuso puede
+  // asignar el mismo anuncio a dos modelos parecidos de la misma marca y uno de
+  // los dos acaba enlazando —y mostrando el precio de— la pala equivocada.
+  const asinsUsados = new Map<string, string>();
+  for (const [id, o] of Object.entries(existing)) {
+    if (o.asin) asinsUsados.set(o.asin, id);
+  }
 
   for (const product of products) {
     if (existing[product.id]?.price) {
@@ -135,9 +165,12 @@ async function scrapeAmazon() {
 
       await page.close();
 
-      const matched = items.find(item => isMatch(item.title, product));
+      const matched = items.find(
+        item => isMatch(item.title, product) && !asinsUsados.has(item.asin)
+      );
 
       if (matched && matched.price) {
+        asinsUsados.set(matched.asin, product.id);
         const priceNum = parseFloat(matched.price.replace("€", "").replace(/\./g, "").replace(",", ".").trim());
         const cleanUrl = `https://www.amazon.es/dp/${matched.asin}`;
         results[product.id] = {

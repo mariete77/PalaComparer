@@ -1,46 +1,10 @@
 {
-  "nox-at10-genius-attack-18k-2025": {
-    "productId": "nox-at10-genius-attack-18k-2025",
-    "title": "At10 Genius Attack 18k Alum by Agust\u00edn Tapia 2026",
-    "price": 214.9,
-    "url": "https://www.amazon.es/dp/B0DHT12YC4",
-    "asin": "B0DHT12YC4",
-    "inStock": true,
-    "scrapedAt": "2026-07-26T17:00:00.000Z"
-  },
-  "nox-ml10-quantum-2025": {
-    "productId": "nox-ml10-quantum-2025",
-    "title": "ML10 Quantum 3K",
-    "price": 214.9,
-    "url": "https://www.amazon.es/dp/B0DHSYHXM3",
-    "asin": "B0DHSYHXM3",
-    "inStock": true,
-    "scrapedAt": "2026-07-26T17:00:00.000Z"
-  },
-  "bullpadel-vertex-04-2024": {
-    "productId": "bullpadel-vertex-04-2024",
-    "title": "Bullpadel Vertex 04",
-    "price": 109.0,
-    "url": "https://www.amazon.es/dp/B0CL6PJG3R",
-    "asin": "B0CL6PJG3R",
-    "inStock": true,
-    "scrapedAt": "2026-07-26T17:00:00.000Z"
-  },
   "bullpadel-vertex-04-comfort-2024": {
     "productId": "bullpadel-vertex-04-comfort-2024",
     "title": "Vertex 04 Comfort",
-    "price": 109.0,
+    "price": 109,
     "url": "https://www.amazon.es/dp/B0CL6PJG3R",
     "asin": "B0CL6PJG3R",
-    "inStock": true,
-    "scrapedAt": "2026-07-26T17:00:00.000Z"
-  },
-  "bullpadel-hack-03-2024": {
-    "productId": "bullpadel-hack-03-2024",
-    "title": "Hack 03",
-    "price": 119.0,
-    "url": "https://www.amazon.es/dp/B0CL6NT39Z",
-    "asin": "B0CL6NT39Z",
     "inStock": true,
     "scrapedAt": "2026-07-26T17:00:00.000Z"
   },
@@ -50,15 +14,6 @@
     "price": 139.9,
     "url": "https://www.amazon.es/dp/B0CL6MYQ1W",
     "asin": "B0CL6MYQ1W",
-    "inStock": true,
-    "scrapedAt": "2026-07-26T17:00:00.000Z"
-  },
-  "bullpadel-neuron-2025": {
-    "productId": "bullpadel-neuron-2025",
-    "title": "Neuron 25",
-    "price": 129.0,
-    "url": "https://www.amazon.es/dp/B0DJR3NTYM",
-    "asin": "B0DJR3NTYM",
     "inStock": true,
     "scrapedAt": "2026-07-26T17:00:00.000Z"
   },
@@ -83,7 +38,7 @@
   "head-speed-pro-2024": {
     "productId": "head-speed-pro-2024",
     "title": "Head Speed Pro",
-    "price": 129.0,
+    "price": 129,
     "url": "https://www.amazon.es/dp/B0CQKZX17F",
     "asin": "B0CQKZX17F",
     "inStock": true,
@@ -152,15 +107,6 @@
     "inStock": true,
     "scrapedAt": "2026-07-26T17:00:00.000Z"
   },
-  "nox-x-one-2024": {
-    "productId": "nox-x-one-2024",
-    "title": "Nox X-One",
-    "price": 169.9,
-    "url": "https://www.amazon.es/dp/B0CLTXSBZ1",
-    "asin": "B0CLTXSBZ1",
-    "inStock": true,
-    "scrapedAt": "2026-07-26T17:00:00.000Z"
-  },
   "adidas-drive-2024": {
     "productId": "adidas-drive-2024",
     "title": "Adidas Drive 3.3",
@@ -182,7 +128,7 @@
   "wilson-blade-98-v9-2024": {
     "productId": "wilson-blade-98-v9-2024",
     "title": "Blade 98 16x19 v9",
-    "price": 184.0,
+    "price": 184,
     "url": "https://www.amazon.es/dp/B0CTK5NFDS",
     "asin": "B0CTK5NFDS",
     "inStock": true,
@@ -209,7 +155,7 @@
   "babolat-pure-aero-2023": {
     "productId": "babolat-pure-aero-2023",
     "title": "Pure Aero",
-    "price": 165.0,
+    "price": 165,
     "url": "https://www.amazon.es/dp/B0BKSBC7JC",
     "asin": "B0BKSBC7JC",
     "inStock": true,
@@ -218,7 +164,7 @@
   "babolat-pure-drive-2024": {
     "productId": "babolat-pure-drive-2024",
     "title": "Pure Drive",
-    "price": 229.0,
+    "price": 229,
     "url": "https://www.amazon.es/dp/B0DQKQTHPQ",
     "asin": "B0DQKQTHPQ",
     "inStock": true,
@@ -263,7 +209,7 @@
   "yonex-ezone-100-2022": {
     "productId": "yonex-ezone-100-2022",
     "title": "Ezone 100",
-    "price": 350.0,
+    "price": 350,
     "url": "https://www.amazon.es/dp/B09VCR766F",
     "asin": "B09VCR766F",
     "inStock": true,
@@ -313,5 +259,113 @@
     "asin": "B007ATJ5D2",
     "inStock": true,
     "scrapedAt": "2026-07-26T17:00:00.000Z"
+  },
+  "nox-at10-genius-attack-18k-2026": {
+    "productId": "nox-at10-genius-attack-18k-2026",
+    "title": "Nox At10 Genius Attack 18k Alum by Agustín Tapia 2026",
+    "price": 214.9,
+    "url": "https://www.amazon.es/dp/B0G176L7ZZ",
+    "asin": "B0G176L7ZZ",
+    "inStock": true,
+    "scrapedAt": "2026-07-26T19:36:57.837Z"
+  },
+  "nox-ea10-ventus-attack-12k-2026": {
+    "productId": "nox-ea10-ventus-attack-12k-2026",
+    "title": "Nox Ea10 Ventus Attack 12k Xtreme by Edu Alonso 2026",
+    "price": 200.97,
+    "url": "https://www.amazon.es/dp/B0FX4MB8JL",
+    "asin": "B0FX4MB8JL",
+    "inStock": true,
+    "scrapedAt": "2026-07-26T19:37:06.394Z"
+  },
+  "nox-ml10-ventus-control-3k-2026": {
+    "productId": "nox-ml10-ventus-control-3k-2026",
+    "title": "NOX ML10 Ventus Control 3K 2026 | Miguel Lamperti Pala de Pádel Forma redonda, Cara de fibra de carbono 3K, Núcleo de EVA de color HR3, Túnel EOS de agilidad, Grip personalizado de confort, Doble giro",
+    "price": 246.8,
+    "url": "https://www.amazon.es/dp/B0G1864GVC",
+    "asin": "B0G1864GVC",
+    "inStock": true,
+    "scrapedAt": "2026-07-26T19:37:23.682Z"
+  },
+  "bullpadel-vertex-05-2026": {
+    "productId": "bullpadel-vertex-05-2026",
+    "title": "Bullpadel Vertex 05",
+    "price": 208.9,
+    "url": "https://www.amazon.es/dp/B0FPT66NNF",
+    "asin": "B0FPT66NNF",
+    "inStock": true,
+    "scrapedAt": "2026-07-26T19:37:31.981Z"
+  },
+  "bullpadel-hack-04-2026": {
+    "productId": "bullpadel-hack-04-2026",
+    "title": "Bullpadel Hack 04 26",
+    "price": 208.9,
+    "url": "https://www.amazon.es/dp/B0FPTM52HS",
+    "asin": "B0FPTM52HS",
+    "inStock": true,
+    "scrapedAt": "2026-07-26T19:37:41.051Z"
+  },
+  "bullpadel-neuron-02-2026": {
+    "productId": "bullpadel-neuron-02-2026",
+    "title": "Bullpadel Neuron 02",
+    "price": 213.9,
+    "url": "https://www.amazon.es/dp/B0FPT5S2P7",
+    "asin": "B0FPT5S2P7",
+    "inStock": true,
+    "scrapedAt": "2026-07-26T19:37:49.937Z"
+  },
+  "adidas-metalbone-carbon-ctrl-2024": {
+    "productId": "adidas-metalbone-carbon-ctrl-2024",
+    "title": "Pala de pádel adidas Metalbone Carbon Ctrl 3.3, Negra, Forma Redonda, Goma eva Soft Performance,Fibra 6k",
+    "price": 134.9,
+    "url": "https://www.amazon.es/dp/B0CNWGVR6M",
+    "asin": "B0CNWGVR6M",
+    "inStock": true,
+    "scrapedAt": "2026-07-26T19:38:08.793Z"
+  },
+  "wilson-bela-elite-2024": {
+    "productId": "wilson-bela-elite-2024",
+    "title": "Wilson Bela Padel Rackets",
+    "price": 159,
+    "url": "https://www.amazon.es/dp/B0CLPFB6WT",
+    "asin": "B0CLPFB6WT",
+    "inStock": true,
+    "scrapedAt": "2026-07-26T19:38:37.449Z"
+  },
+  "black-crown-piton-2024": {
+    "productId": "black-crown-piton-2024",
+    "title": "Black Crown - Pala de Padel Piton 11 Soft- Forma Redonda - Equilibrio Entre Control y Potencia - Peso 355 gr - Marco 38 mm 80% Fibra de Carbono - Resistente - Golpes agresivos",
+    "price": 89.95,
+    "url": "https://www.amazon.es/dp/B0BPY1RDW6",
+    "asin": "B0BPY1RDW6",
+    "inStock": true,
+    "scrapedAt": "2026-07-26T19:38:56.288Z"
+  },
+  "nox-x-one-2026": {
+    "productId": "nox-x-one-2026",
+    "title": "Nox X-One 26",
+    "price": 69.9,
+    "url": "https://www.amazon.es/dp/B0H6C2DX31",
+    "asin": "B0H6C2DX31",
+    "inStock": true,
+    "scrapedAt": "2026-07-26T19:39:15.892Z"
+  },
+  "nox-at10-genius-18k-2026": {
+    "productId": "nox-at10-genius-18k-2026",
+    "title": "Nox At10 Genius 18k Alum by Agustin Tapia 2026",
+    "price": 242.31,
+    "url": "https://www.amazon.es/dp/B0FX4M8T89",
+    "asin": "B0FX4M8T89",
+    "inStock": true,
+    "scrapedAt": "2026-07-26T19:40:32.281Z"
+  },
+  "nox-at10-genius-12k-xtrem-2026": {
+    "productId": "nox-at10-genius-12k-xtrem-2026",
+    "title": "NOX AT10 Luxury Genius 12K Alum XTREM 2026 Pala de pádel",
+    "price": 222.4,
+    "url": "https://www.amazon.es/dp/B0G16FSNG6",
+    "asin": "B0G16FSNG6",
+    "inStock": true,
+    "scrapedAt": "2026-07-26T19:40:42.426Z"
   }
 }

@@ -36,6 +36,16 @@ Define los 47 productos con `id`, `brand`, `model`, `year`, `sport`, etc.
 - **Matching:** fuzzy — compara marca, modelo y año con los resultados de Amazon
 - **Guardado incremental:** cada resultado se escribe inmediatamente (si se corta, no pierde lo ya hecho)
 - **Cache:** si un producto ya tiene precio en `real-offers.json`, se salta (forzar re-scrape borrando la entrada del JSON)
+- **Poda de huérfanas:** al arrancar elimina las entradas cuyo `id` ya no existe en `products.ts`
+
+> **Ojo al renombrar ids.** El JSON se indexa por `id` de producto, así que
+> cambiar el id de un modelo (por ejemplo al pasarlo a la temporada siguiente)
+> deja su precio huérfano y el producto nuevo sin precio real. La poda limpia lo
+> primero; lo segundo se arregla volviendo a lanzar el scraper, que gracias a la
+> cache solo buscará los que falten.
+>
+> Nunca reasignes a mano el precio del id viejo al nuevo: son productos
+> distintos y estarías publicando un precio que no es el de ese modelo.
 
 ### 3. Datos (`src/data/real-offers.json`)
 
