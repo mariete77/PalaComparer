@@ -26,7 +26,7 @@ export function Callout({
   );
 }
 
-/** Enlace en línea a una ficha, con su mejor precio. `<ProductRef id="nox-x-one-2024" />` */
+/** Enlace en línea a una ficha, con su mejor precio. `<ProductRef id="nox-x-one-2026" />` */
 export function ProductRef({ id }: { id: string }) {
   const product = getProduct(id);
   if (!product) return null;

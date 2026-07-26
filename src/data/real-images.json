@@ -1,4 +1,59 @@
 {
   "$comment": "Manifiesto de fotos reales. Lo escribe `npm run import:images` a partir de scripts/image-sources.json. Clave = id de producto.",
-  "images": {}
+  "images": {
+    "bullpadel-hack-04-2026": {
+      "src": "/images/rackets/real/bullpadel-hack-04-2026.jpg",
+      "credit": "© Bullpadel",
+      "source": "https://www.bullpadel.com/es/5674-pala-bullpadel-hack-04-26.html",
+      "licence": "pendiente"
+    },
+    "bullpadel-neuron-02-2026": {
+      "src": "/images/rackets/real/bullpadel-neuron-02-2026.jpg",
+      "credit": "© Bullpadel",
+      "source": "https://www.bullpadel.com/es/palas/5966-pala-bullpadel-neuron-02-pp26.html",
+      "licence": "pendiente"
+    },
+    "bullpadel-vertex-05-2026": {
+      "src": "/images/rackets/real/bullpadel-vertex-05-2026.jpg",
+      "credit": "© Bullpadel",
+      "source": "https://www.bullpadel.com/es/5677-pala-bullpadel-vertex-05.html",
+      "licence": "pendiente"
+    },
+    "nox-at10-genius-12k-xtrem-2026": {
+      "src": "/images/rackets/real/nox-at10-genius-12k-xtrem-2026.png",
+      "credit": "© NOX Sport",
+      "source": "https://noxsport.com/en/products/pala-at10-genius-12k-alum-xtrem-2026-by-agustin-tapia",
+      "licence": "pendiente"
+    },
+    "nox-at10-genius-18k-2026": {
+      "src": "/images/rackets/real/nox-at10-genius-18k-2026.png",
+      "credit": "© NOX Sport",
+      "source": "https://noxsport.com/en/products/pala-at10-genius-18k-alum-2026-by-agustin-tapia",
+      "licence": "pendiente"
+    },
+    "nox-at10-genius-attack-18k-2026": {
+      "src": "/images/rackets/real/nox-at10-genius-attack-18k-2026.png",
+      "credit": "© NOX Sport",
+      "source": "https://noxsport.com/en/products/pala-at10-genius-attack-18k-alum-2026-by-agustin-tapia",
+      "licence": "pendiente"
+    },
+    "nox-ea10-ventus-attack-12k-2026": {
+      "src": "/images/rackets/real/nox-ea10-ventus-attack-12k-2026.png",
+      "credit": "© NOX Sport",
+      "source": "https://noxsport.com/en/products/ea10-ventus-attack-12k-xtrem-by-edu-alonso",
+      "licence": "pendiente"
+    },
+    "nox-ml10-ventus-control-3k-2026": {
+      "src": "/images/rackets/real/nox-ml10-ventus-control-3k-2026.png",
+      "credit": "© NOX Sport",
+      "source": "https://noxsport.com/en/products/pala-ml10-ventus-3k-by-miguel-lamperti",
+      "licence": "pendiente"
+    },
+    "nox-x-one-2026": {
+      "src": "/images/rackets/real/nox-x-one-2026.png",
+      "credit": "© NOX Sport",
+      "source": "https://noxsport.com/en/products/pala-x-one",
+      "licence": "pendiente"
+    }
+  }
 }

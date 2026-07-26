@@ -7,6 +7,20 @@
 import manifest from "./real-images.json";
 import type { Product } from "./products";
 
+/**
+ * Situación de derechos de cada imagen.
+ *
+ * `pendiente` es el estado por defecto: la imagen está en uso pero todavía no
+ * hay permiso del titular. Sirve para poder listar en cualquier momento qué
+ * queda por regularizar y sustituirlo de forma selectiva — sin esto, "ya
+ * pediré permiso" se vuelve inaplicable en cuanto hay unas cuantas.
+ */
+export type ImageLicence =
+  | "pendiente"
+  | "prensa" // material de prensa del fabricante
+  | "feed" // feed de afiliación (licencia incluida en el programa)
+  | "propia"; // fotografía propia
+
 export interface RealImageEntry {
   /** Ruta pública (`/images/...`) o URL absoluta de un CDN permitido. */
   src: string;
@@ -14,6 +28,8 @@ export interface RealImageEntry {
   credit?: string;
   /** Página de origen desde la que se descargó. */
   source?: string;
+  /** Situación de derechos. Si falta, se asume `pendiente`. */
+  licence?: ImageLicence;
 }
 
 export interface ResolvedImage {
@@ -49,4 +65,17 @@ export function hasRealImage(productId: string): boolean {
 /** Cuántos productos tienen ya foto real. Útil para medir el avance. */
 export function realImageCount(): number {
   return Object.keys(REAL_IMAGES).length;
+}
+
+export function getImageLicence(productId: string): ImageLicence | null {
+  const real = REAL_IMAGES[productId];
+  if (!real) return null;
+  return real.licence ?? "pendiente";
+}
+
+/** Ids con imagen en uso pero sin permiso del titular todavía. */
+export function pendingLicenceIds(): string[] {
+  return Object.entries(REAL_IMAGES)
+    .filter(([, entry]) => (entry.licence ?? "pendiente") === "pendiente")
+    .map(([id]) => id);
 }

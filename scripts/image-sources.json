@@ -1,10 +1,166 @@
 {
-  "$comment": "Fotos reales por producto. Clave = id en src/data/products.ts. Añade solo imágenes que tengas derecho a usar: material de prensa de la marca, fotos propias o assets con licencia. Ejecuta `npm run import:images` para descargarlas. Si prefieres servir desde un CDN sin descargar, añade '#remote' al final de la url y da de alta el dominio en images.remotePatterns (next.config.ts).",
-  "$ejemplo": {
-    "nox-x-one-2024": {
-      "url": "https://cdn.ejemplo.com/nox-x-one.jpg",
-      "credit": "© Nox Sport",
-      "source": "https://www.noxsport.com/prensa"
-    }
+  "$comment": "Fotos reales por producto. Clave = id en src/data/products.ts. Rellena 'url' con una imagen que tengas derecho a usar y ejecuta `npm run import:images`. Las entradas con url vacía se ignoran. Regenera esta plantilla con `npm run images:scaffold`.",
+  "$licence": "El campo 'licence' registra la situación de derechos: 'pendiente' (por defecto: en uso pero sin permiso del titular), 'prensa' (material de prensa del fabricante), 'feed' (feed de afiliación) o 'propia'. El importador te resume cuántas quedan pendientes.",
+  "adidas-drive-2024": {
+    "url": ""
+  },
+  "adidas-metalbone-31-2024": {
+    "url": ""
+  },
+  "adidas-metalbone-carbon-ctrl-2024": {
+    "url": ""
+  },
+  "adidas-rx-carbon-2024": {
+    "url": ""
+  },
+  "babolat-counter-viper-2025": {
+    "url": ""
+  },
+  "babolat-technical-veron-2025": {
+    "url": ""
+  },
+  "babolat-technical-viper-2025": {
+    "url": ""
+  },
+  "black-crown-piton-2024": {
+    "url": ""
+  },
+  "bullpadel-flow-2024": {
+    "url": ""
+  },
+  "bullpadel-hack-04-2026": {
+    "url": "https://www.bullpadel.com/18931-large_default/pala-bullpadel-hack-04-26.jpg",
+    "credit": "© Bullpadel",
+    "source": "https://www.bullpadel.com/es/5674-pala-bullpadel-hack-04-26.html"
+  },
+  "bullpadel-indiga-ctr-2024": {
+    "url": ""
+  },
+  "bullpadel-neuron-02-2026": {
+    "url": "https://www.bullpadel.com/21342-large_default/pala-bullpadel-neuron-02-pp26.jpg",
+    "credit": "© Bullpadel",
+    "source": "https://www.bullpadel.com/es/palas/5966-pala-bullpadel-neuron-02-pp26.html"
+  },
+  "bullpadel-vertex-04-comfort-2024": {
+    "url": ""
+  },
+  "bullpadel-vertex-05-2026": {
+    "url": "https://www.bullpadel.com/18920-large_default/pala-bullpadel-vertex-05.jpg",
+    "credit": "© Bullpadel",
+    "source": "https://www.bullpadel.com/es/5677-pala-bullpadel-vertex-05.html"
+  },
+  "dunlop-aero-star-pro-2024": {
+    "url": ""
+  },
+  "head-extreme-motion-2024": {
+    "url": ""
+  },
+  "head-extreme-pro-2024": {
+    "url": ""
+  },
+  "head-flash-2024": {
+    "url": ""
+  },
+  "head-gravity-pro-2024": {
+    "url": ""
+  },
+  "head-speed-pro-2024": {
+    "url": ""
+  },
+  "nox-at10-genius-12k-xtrem-2026": {
+    "url": "https://noxsport.com/cdn/shop/files/at10-luxury-genius-12k-alum-xtrem-2026-by-agustin-tapia-pat10genius1226-8435778902645-9466941.png?v=1758604499",
+    "credit": "© NOX Sport",
+    "source": "https://noxsport.com/en/products/pala-at10-genius-12k-alum-xtrem-2026-by-agustin-tapia"
+  },
+  "nox-at10-genius-18k-2026": {
+    "url": "https://noxsport.com/cdn/shop/files/at10-luxury-genius-18k-alum-2026-by-agustin-tapia-pat10genius1826-8435778902621-2175122.png?v=1758604499",
+    "credit": "© NOX Sport",
+    "source": "https://noxsport.com/en/products/pala-at10-genius-18k-alum-2026-by-agustin-tapia"
+  },
+  "nox-at10-genius-attack-18k-2026": {
+    "url": "https://noxsport.com/cdn/shop/files/at10-luxury-genius-attack-18k-alum-2026-by-agustin-tapia-pat10geniusat1826-8435778902638-4015240.png",
+    "credit": "© NOX Sport",
+    "source": "https://noxsport.com/en/products/pala-at10-genius-attack-18k-alum-2026-by-agustin-tapia"
+  },
+  "nox-ea10-ventus-attack-12k-2026": {
+    "url": "https://noxsport.com/cdn/shop/files/ea10-ventus-attack-12k-xtrem-by-edu-alonso-pea10ventusa1226-8435778902683-7841159.png?v=1758604500",
+    "credit": "© NOX Sport",
+    "source": "https://noxsport.com/en/products/ea10-ventus-attack-12k-xtrem-by-edu-alonso"
+  },
+  "nox-ml10-pro-cup-2023": {
+    "url": ""
+  },
+  "nox-ml10-ventus-control-3k-2026": {
+    "url": "https://noxsport.com/cdn/shop/files/ml10-ventus-control-3k-by-miguel-lamperti-pml10ventus326-8435778902690-1107820.png?v=1758604428",
+    "credit": "© NOX Sport",
+    "source": "https://noxsport.com/en/products/pala-ml10-ventus-3k-by-miguel-lamperti"
+  },
+  "nox-x-one-2026": {
+    "url": "https://noxsport.com/cdn/shop/files/x-one-palas-pxone26nox-3552916.png?v=1780372228",
+    "credit": "© NOX Sport",
+    "source": "https://noxsport.com/en/products/pala-x-one"
+  },
+  "siux-diablo-revolution-2024": {
+    "url": ""
+  },
+  "starvie-aquila-2024": {
+    "url": ""
+  },
+  "wilson-bela-elite-2024": {
+    "url": ""
+  },
+  "wilson-bela-pro-2024": {
+    "url": ""
+  },
+  "babolat-boost-aero-2023": {
+    "url": ""
+  },
+  "babolat-pure-aero-2023": {
+    "url": ""
+  },
+  "babolat-pure-drive-2024": {
+    "url": ""
+  },
+  "babolat-pure-strike-97-2024": {
+    "url": ""
+  },
+  "dunlop-cx-200-2024": {
+    "url": ""
+  },
+  "head-boom-mp-2024": {
+    "url": ""
+  },
+  "head-radical-mp-2023": {
+    "url": ""
+  },
+  "head-speed-mp-2024": {
+    "url": ""
+  },
+  "head-ti-s6-2022": {
+    "url": ""
+  },
+  "tecnifibre-tfight-305-2023": {
+    "url": ""
+  },
+  "wilson-blade-98-v9-2024": {
+    "url": ""
+  },
+  "wilson-clash-100-v2-2022": {
+    "url": ""
+  },
+  "wilson-hyper-hammer-2022": {
+    "url": ""
+  },
+  "wilson-pro-staff-97-v14-2023": {
+    "url": ""
+  },
+  "wilson-shift-99-2023": {
+    "url": ""
+  },
+  "yonex-ezone-100-2022": {
+    "url": ""
+  },
+  "yonex-vcore-98-2023": {
+    "url": ""
   }
 }

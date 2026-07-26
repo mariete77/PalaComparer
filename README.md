@@ -28,7 +28,7 @@ Todo el contenido vive en `src/data/`. No hay base de datos ni API externa.
 
 | Fichero | Contenido |
 |---|---|
-| `products.ts` | Los 47 modelos y sus specs (`PadelSpecs` / `TenisSpecs`) |
+| `products.ts` | Los 48 modelos y sus specs (`PadelSpecs` / `TenisSpecs`) |
 | `stores.ts` | Tiendas, gastos de envío y umbral de envío gratis |
 | `offers.ts` | Ofertas por tienda e histórico de precios |
 | `news.ts` | Índice de artículos |
@@ -54,24 +54,37 @@ Cada producto usa, por este orden:
    como «Ilustración orientativa».
 
 ```bash
-npm run gen:images      # regenera los SVG placeholder desde las specs
-npm run import:images   # descarga las fotos reales del manifiesto
+npm run gen:images        # regenera los SVG placeholder desde las specs
+npm run images:scaffold   # plantilla con los 48 ids, para ir rellenando
+npm run import:images     # descarga las fotos del manifiesto
 ```
 
-Para añadir fotos, edita `scripts/image-sources.json`:
+`images:scaffold` deja `scripts/image-sources.json` con una entrada por
+producto y el hueco de `url` vacío. Es idempotente: conserva lo ya rellenado y
+solo añade lo que falte, así que puedes reejecutarlo al meter productos nuevos.
+Las entradas con `url` vacía se ignoran y ese producto se queda con su SVG.
 
 ```json
 {
-  "nox-x-one-2024": {
+  "nox-x-one-2026": {
     "url": "https://cdn.ejemplo.com/nox-x-one.jpg",
     "credit": "© Nox Sport",
-    "source": "https://www.noxsport.com/prensa"
+    "source": "https://www.noxsport.com/prensa",
+    "licence": "prensa"
   }
 }
 ```
 
 Solo imágenes que tengas derecho a usar: material de prensa de la marca, fotos
 propias o assets con licencia. El `credit` se muestra bajo la foto en la ficha.
+
+### Seguimiento de derechos
+
+`licence` registra la situación de cada imagen — `pendiente` (por defecto),
+`prensa`, `feed` o `propia` — y el importador resume cuántas quedan sin
+regularizar. Cada entrada guarda además su `source` con la URL exacta de
+origen, que es lo que permite después reclamar el permiso o sustituir la
+imagen de forma selectiva en lugar de rehacerlo todo.
 
 Si prefieres servir desde un CDN sin descargar nada, añade `#remote` al final de
 la URL y da de alta el dominio en `images.remotePatterns` (`next.config.ts`).
@@ -100,6 +113,8 @@ direcciones: el artículo enseña las fichas y cada ficha enseña sus artículos
 npm run dev            # servidor de desarrollo
 npm run build          # build de producción
 npm run lint           # eslint
-npm run gen:images     # SVG placeholder
-npm run import:images  # fotos reales (-- --force para volver a descargar)
+npm run gen:images       # SVG placeholder
+npm run gen:logo         # derivados del logo (cabecera, favicon, Open Graph)
+npm run images:scaffold  # plantilla de fuentes con los 48 ids
+npm run import:images    # fotos reales (-- --force para volver a descargar)
 ```

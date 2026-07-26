@@ -8,7 +8,7 @@ export default function Home() {
   const destacadosPadel = PRODUCTS.filter(
     (p) =>
       p.sport === "padel" &&
-      ["nox-at10-genius-18k-2025", "bullpadel-vertex-04-2024", "head-extreme-pro-2024", "adidas-metalbone-31-2024"].includes(p.id)
+      ["nox-at10-genius-18k-2026", "bullpadel-vertex-05-2026", "head-extreme-pro-2024", "adidas-metalbone-31-2024"].includes(p.id)
   );
   const destacadosTenis = PRODUCTS.filter(
     (p) =>
@@ -25,7 +25,7 @@ export default function Home() {
         <div className="max-w-7xl mx-auto px-6 pt-20 pb-16 text-center relative">
           <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full border border-padel/30 bg-padel/10 text-padel text-xs font-semibold mb-6">
             <span className="w-1.5 h-1.5 rounded-full bg-padel animate-pulse" />
-            47 palas y raquetas · 2022-2026
+            48 palas y raquetas · 2022-2026
           </div>
           <h1 className="font-display text-5xl sm:text-7xl font-bold tracking-tight leading-[1.05]">
             Encuentra tu
