@@ -93,6 +93,24 @@ function shiftDate(iso: string, days: number): string {
 }
 
 // ---------------------------------------------------------------------------
+// Datos reales scrapeados de Amazon ES (scripts/scrape-amazon.ts)
+// ---------------------------------------------------------------------------
+
+import realOffersData from "./real-offers.json";
+
+interface RealOffer {
+  productId: string;
+  title: string;
+  price: number | null;
+  url: string;
+  asin: string | null;
+  inStock: boolean;
+  scrapedAt: string;
+}
+
+const REAL_OFFERS = (realOffersData as Record<string, RealOffer>) ?? {};
+
+// ---------------------------------------------------------------------------
 // Generación
 // ---------------------------------------------------------------------------
 
@@ -101,10 +119,26 @@ function storesFor(product: Product): Store[] {
 }
 
 function buildOffers(product: Product): Offer[] {
-  const candidates = storesFor(product);
   const offers: Offer[] = [];
 
-  for (const store of candidates) {
+  // 1. Si tenemos precio real de Amazon, usarlo
+  const real = REAL_OFFERS[product.id];
+  if (real && real.price) {
+    const amazon = STORES.find((s) => s.id === "amazon");
+    if (amazon) {
+      offers.push({
+        storeId: "amazon",
+        price: real.price,
+        total: round2(totalWithShipping(amazon, real.price)),
+        url: real.url, // URL real con ASIN
+        inStock: real.inStock,
+        checkedDaysAgo: 0, // fresco
+      });
+    }
+  }
+
+  // 2. Generar ofertas sintéticas para el resto de tiendas
+  for (const store of storesFor(product).filter((s) => s.id !== "amazon")) {
     const r = rng(hashSeed(`${product.id}:${store.id}`));
 
     // ~25% de las tiendas no listan el producto.
@@ -129,7 +163,7 @@ function buildOffers(product: Product): Offer[] {
 
   // Garantiza un mínimo de 2 ofertas aunque el sorteo las haya descartado.
   if (offers.length < 2) {
-    for (const store of candidates) {
+    for (const store of storesFor(product)) {
       if (offers.some((o) => o.storeId === store.id)) continue;
       const r = rng(hashSeed(`${product.id}:${store.id}:fallback`));
       const price = retailPrice(product.price * (0.85 + r() * 0.15), 0.95);
