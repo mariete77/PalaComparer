@@ -27,6 +27,10 @@ export default function OfferTable({ offers }: { offers: Offer[] }) {
 
   return (
     <div className="overflow-x-auto">
+      <p className="text-xs text-muted mb-3">
+        Los precios son orientativos y se actualizan periódicamente. El botón te
+        lleva a la búsqueda del producto en cada tienda.
+      </p>
       <table className="w-full text-sm border-separate border-spacing-y-2 min-w-[520px]">
         <caption className="sr-only">
           Ofertas por tienda, ordenadas de menor a mayor precio
@@ -90,9 +94,13 @@ export default function OfferTable({ offers }: { offers: Offer[] }) {
                     href={offer.url}
                     target="_blank"
                     rel="noopener noreferrer nofollow sponsored"
-                    className="inline-block px-3 py-1.5 rounded-lg border border-white/10 hover:bg-white/5 transition-colors whitespace-nowrap"
+                    className={`inline-block px-4 py-2 rounded-lg font-bold text-xs uppercase tracking-widest transition-all whitespace-nowrap ${
+                      isBest
+                        ? "btn-primary"
+                        : "border border-outline-variant text-on-surface-variant hover:bg-white/5"
+                    }`}
                   >
-                    Ver oferta ↗
+                    Ver en tienda ↗
                   </a>
                 </td>
               </tr>

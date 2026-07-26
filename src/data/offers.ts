@@ -8,7 +8,7 @@
 // consume únicamente estas funciones y los tipos de abajo.
 
 import { getProduct, type Product } from "./products";
-import { STORES, totalWithShipping, type Store } from "./stores";
+import { STORES, totalWithShipping, buildSearchUrl, type Store } from "./stores";
 
 /** Fecha del snapshot de precios. Fija a propósito: mantiene el render
  *  determinista entre servidor y cliente y hace los builds reproducibles. */
@@ -121,7 +121,7 @@ function buildOffers(product: Product): Offer[] {
       storeId: store.id,
       price,
       total: round2(totalWithShipping(store, price)),
-      url: `${store.url}/${product.id}`,
+      url: buildSearchUrl(store, product.brand, product.model),
       inStock,
       checkedDaysAgo,
     });
@@ -137,7 +137,7 @@ function buildOffers(product: Product): Offer[] {
         storeId: store.id,
         price,
         total: round2(totalWithShipping(store, price)),
-        url: `${store.url}/${product.id}`,
+        url: buildSearchUrl(store, product.brand, product.model),
         inStock: true,
         checkedDaysAgo: 0,
       });

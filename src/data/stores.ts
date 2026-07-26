@@ -7,8 +7,14 @@ import type { Sport } from "./products";
 export interface Store {
   id: string;
   name: string;
-  /** Home de la tienda. Las URLs de oferta se construyen sobre este dominio. */
+  /** Home de la tienda. */
   url: string;
+  /**
+   * Plantilla de URL de búsqueda. `{q}` se reemplaza por el término
+   * (marca + modelo codificado para URL). Esto garantiza que el botón "Ver
+   * oferta" lleve siempre a resultados reales, nunca a un 404.
+   */
+  searchUrl: string;
   /** Color de marca, para el punto de color en la tabla de ofertas. */
   color: string;
   sports: Sport[];
@@ -23,6 +29,7 @@ export const STORES: Store[] = [
     id: "padelnuestro",
     name: "Padel Nuestro",
     url: "https://www.padelnuestro.com",
+    searchUrl: "https://www.padelnuestro.com/catalogsearch/result/?q={q}",
     color: "#e11d48",
     sports: ["padel", "tenis"],
     shipping: 4.95,
@@ -32,6 +39,7 @@ export const STORES: Store[] = [
     id: "padelpoint",
     name: "PádelPoint",
     url: "https://www.padelpoint.es",
+    searchUrl: "https://www.padelpoint.es/catalogsearch/result/?q={q}",
     color: "#0ea5e9",
     sports: ["padel"],
     shipping: 3.95,
@@ -41,7 +49,8 @@ export const STORES: Store[] = [
     id: "time2padel",
     name: "Time2Pádel",
     url: "https://www.time2padel.es",
-    color: "#8b5cf6",
+    searchUrl: "https://www.time2padel.es/search?q={q}",
+    color: "##8b5cf6",
     sports: ["padel"],
     shipping: 4.5,
     freeShippingFrom: 70,
@@ -50,6 +59,7 @@ export const STORES: Store[] = [
     id: "streetpadel",
     name: "StreetPadel",
     url: "https://www.streetpadel.es",
+    searchUrl: "https://www.streetpadel.es/buscar?q={q}",
     color: "#f59e0b",
     sports: ["padel"],
     shipping: 4.9,
@@ -59,6 +69,7 @@ export const STORES: Store[] = [
     id: "decathlon",
     name: "Decathlon",
     url: "https://www.decathlon.es",
+    searchUrl: "https://www.decathlon.es/es/search?q={q}",
     color: "#0082c3",
     sports: ["padel", "tenis"],
     shipping: 3.99,
@@ -68,6 +79,7 @@ export const STORES: Store[] = [
     id: "tenisboutique",
     name: "Tenis Boutique",
     url: "https://www.tenisboutique.es",
+    searchUrl: "https://www.tenisboutique.es/catalogsearch/result/?q={q}",
     color: "#16a34a",
     sports: ["tenis"],
     shipping: 4.95,
@@ -77,6 +89,7 @@ export const STORES: Store[] = [
     id: "zonadetenis",
     name: "Zona de Tenis",
     url: "https://www.zonadetenis.com",
+    searchUrl: "https://www.zonadetenis.com/catalogsearch/result/?q={q}",
     color: "#dc2626",
     sports: ["tenis"],
     shipping: 5.5,
@@ -86,6 +99,7 @@ export const STORES: Store[] = [
     id: "amazon",
     name: "Amazon",
     url: "https://www.amazon.es",
+    searchUrl: "https://www.amazon.es/s?k={q}",
     color: "#ff9900",
     sports: ["padel", "tenis"],
     shipping: 0,
@@ -105,4 +119,13 @@ export function totalWithShipping(store: Store, price: number): number {
     return price;
   }
   return price + store.shipping;
+}
+
+/**
+ * Construye la URL de búsqueda del producto en la tienda.
+ * Usa marca + modelo como término de búsqueda.
+ */
+export function buildSearchUrl(store: Store, brand: string, model: string): string {
+  const query = encodeURIComponent(`${brand} ${model}`);
+  return store.searchUrl.replace("{q}", query);
 }
