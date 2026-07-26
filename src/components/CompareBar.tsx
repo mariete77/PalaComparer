@@ -13,7 +13,7 @@ export default function CompareBar() {
 
   return (
     <div className="fixed bottom-4 left-1/2 -translate-x-1/2 z-50 w-[calc(100%-2rem)] max-w-2xl">
-      <div className="rounded-2xl border border-white/10 bg-slate-900/95 backdrop-blur-xl shadow-2xl p-3 flex items-center gap-3">
+      <div className="glass-bar rounded-2xl p-3 flex items-center gap-3">
         <div className="flex items-center gap-2 flex-1 min-w-0">
           {products.map((p) => (
             <div
@@ -45,9 +45,9 @@ export default function CompareBar() {
           </button>
           <Link
             href={`/comparar?ids=${ids.join(",")}`}
-            className={`px-4 py-2 rounded-lg font-semibold text-sm transition-all ${
+            className={`px-4 py-2 rounded-lg font-bold text-xs uppercase tracking-widest transition-all ${
               ids.length >= 2
-                ? "bg-padel text-black hover:bg-lime-300"
+                ? "btn-primary"
                 : "bg-white/10 text-muted cursor-not-allowed pointer-events-none"
             }`}
           >

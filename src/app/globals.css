@@ -1,20 +1,80 @@
 @import "tailwindcss";
-@plugin "@tailwindcss/typography";
 
+/* ============ ProCourt Precision Design Tokens ============ */
 :root {
-  --background: #0a0f1c;
-  --foreground: #e6edf7;
-  --accent-padel: #a3e635; /* lime-400 */
-  --accent-tenis: #fb923c; /* orange-400 */
-  --muted: #94a3b8;
+  /* Surfaces */
+  --surface: #0e131e;
+  --surface-dim: #0e131e;
+  --surface-bright: #343945;
+  --surface-container-lowest: #090e19;
+  --surface-container-low: #171b27;
+  --surface-container: #1b202b;
+  --surface-container-high: #252a36;
+  --surface-container-highest: #303541;
+  --on-surface: #dee2f2;
+  --on-surface-variant: #c4c9ac;
+  --outline: #8e9379;
+  --outline-variant: #444933;
+
+  /* Primary — Vibrant Lime */
+  --primary: #ffffff;
+  --primary-container: #c3f400;
+  --on-primary: #283500;
+  --on-primary-container: #556d00;
+  --primary-fixed: #c3f400;
+  --primary-fixed-dim: #abd600;
+
+  /* Secondary — Slate Blue */
+  --secondary: #bec6de;
+  --secondary-container: #41495d;
+  --on-secondary: #283043;
+  --on-secondary-container: #b0b8d0;
+
+  /* Tertiary — Muted Blue */
+  --tertiary-container: #d7e2ff;
+  --on-tertiary-container: #576481;
+
+  /* Functional */
+  --error: #ffb4ab;
+  --success: #34d399;
+  --warning: #fbbf24;
+
+  /* Accent deporte (compat) */
+  --accent-padel: #c3f400;
+  --accent-tenis: #fb923c;
 }
 
 @theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
+  --color-surface: var(--surface);
+  --color-surface-dim: var(--surface-dim);
+  --color-surface-bright: var(--surface-bright);
+  --color-surface-container-lowest: var(--surface-container-lowest);
+  --color-surface-container-low: var(--surface-container-low);
+  --color-surface-container: var(--surface-container);
+  --color-surface-container-high: var(--surface-container-high);
+  --color-surface-container-highest: var(--surface-container-highest);
+  --color-on-surface: var(--on-surface);
+  --color-on-surface-variant: var(--on-surface-variant);
+  --color-outline: var(--outline);
+  --color-outline-variant: var(--outline-variant);
+
+  --color-primary: var(--primary);
+  --color-primary-container: var(--primary-container);
+  --color-on-primary: var(--on-primary);
+  --color-on-primary-container: var(--on-primary-container);
+
+  --color-secondary: var(--secondary);
+  --color-secondary-container: var(--secondary-container);
+
   --color-padel: var(--accent-padel);
   --color-tenis: var(--accent-tenis);
-  --color-muted: var(--muted);
+
+  --color-background: var(--surface);
+  --color-foreground: var(--on-surface);
+  --color-muted: var(--on-surface-variant);
+
+  --font-sans: var(--font-sans), system-ui, sans-serif;
+  --font-display: var(--font-display), system-ui, sans-serif;
 }
 
 html {
@@ -22,24 +82,98 @@ html {
 }
 
 body {
-  background: var(--background);
-  color: var(--foreground);
+  background: var(--surface);
+  color: var(--on-surface);
   font-feature-settings: "ss01", "cv11";
-}
-
-/* subtle grid bg */
-.bg-grid {
+  /* Subtle grid pattern — technical aesthetic */
   background-image:
-    linear-gradient(to right, rgb(148 163 184 / 0.05) 1px, transparent 1px),
-    linear-gradient(to bottom, rgb(148 163 184 / 0.05) 1px, transparent 1px);
+    linear-gradient(to right, rgba(255,255,255,0.02) 1px, transparent 1px),
+    linear-gradient(to bottom, rgba(255,255,255,0.02) 1px, transparent 1px);
   background-size: 40px 40px;
 }
 
+/* Custom scrollbar */
+::-webkit-scrollbar { width: 8px; }
+::-webkit-scrollbar-track { background: var(--surface-container-lowest); }
+::-webkit-scrollbar-thumb { background: var(--surface-container-highest); border-radius: 4px; }
+::-webkit-scrollbar-thumb:hover { background: var(--secondary-container); }
+
+/* ============ Component primitives ============ */
+
+/* Split-tone card: image top (radial gradient) + data bottom (slate) */
+.card-split {
+  background: var(--surface-container-high);
+  border: 1px solid rgba(255,255,255,0.06);
+  border-radius: 0.75rem;
+  overflow: hidden;
+  transition: border-color 0.2s ease, transform 0.2s ease;
+}
+.card-split:hover {
+  border-color: rgba(195,244,0,0.4);
+}
+.card-split-img {
+  background: linear-gradient(to bottom, var(--surface-container-low), var(--surface-container-high));
+  position: relative;
+}
+.card-split-body {
+  background: rgba(48,53,65,0.5);
+  border-top: 1px solid rgba(255,255,255,0.05);
+}
+
+/* Primary button — glossy lime with inner glow */
+.btn-primary {
+  background: var(--primary-container);
+  color: var(--on-primary);
+  font-weight: 700;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  font-size: 12px;
+  box-shadow: inset 0 1px 4px rgba(255,255,255,0.4);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+.btn-primary:hover {
+  transform: scale(1.02);
+  box-shadow: inset 0 1px 4px rgba(255,255,255,0.5), 0 0 20px rgba(195,244,0,0.3);
+}
+
+/* Filter pill */
+.pill {
+  background: var(--surface-container-high);
+  border: 1px solid rgba(255,255,255,0.08);
+  color: var(--on-surface-variant);
+  transition: all 0.15s ease;
+}
+.pill:hover { background: rgba(255,255,255,0.05); }
+.pill.active {
+  background: var(--primary-container);
+  color: var(--on-primary);
+  border-color: var(--primary-container);
+}
+
+/* Glassmorphic floating bar */
+.glass-bar {
+  background: rgba(14,19,30,0.85);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border: 1px solid rgba(255,255,255,0.1);
+  border-top: 2px solid var(--primary-container);
+  box-shadow: 0 -8px 32px rgba(0,0,0,0.4);
+}
+
+/* Spec cell in data grid */
+.spec-cell {
+  background: var(--surface-container-low);
+  border: 1px solid rgba(255,255,255,0.05);
+  border-radius: 0.5rem;
+}
+
+/* Legacy compat (used across pages) */
+.bg-grid { /* merged into body */ }
 .card-glow {
-  box-shadow: 0 0 0 1px rgb(148 163 184 / 0.1), 0 8px 24px -8px rgb(0 0 0 / 0.5);
+  box-shadow: 0 0 0 1px rgba(255,255,255,0.06);
   transition: transform 0.2s ease, box-shadow 0.2s ease;
 }
 .card-glow:hover {
   transform: translateY(-2px);
-  box-shadow: 0 0 0 1px rgb(163 230 53 / 0.3), 0 12px 32px -8px rgb(0 0 0 / 0.6);
+  box-shadow: 0 0 0 1px rgba(195,244,0,0.3), 0 12px 32px -8px rgba(0,0,0,0.6);
 }

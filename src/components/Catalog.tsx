@@ -79,14 +79,20 @@ export default function Catalog({ products, sport, priceIndex }: Props) {
   return (
     <div className="grid lg:grid-cols-[260px_1fr] gap-8">
       {/* FILTROS */}
-      <aside className="space-y-6 lg:sticky lg:top-24 self-start">
+      <aside className="space-y-6 lg:sticky lg:top-24 self-start rounded-xl bg-surface-container-high/50 backdrop-blur-md border border-white/5 p-5">
+        <div>
+          <h2 className="font-display font-bold text-sm text-primary uppercase tracking-widest mb-1">
+            Filtros
+          </h2>
+          <p className="text-muted text-xs">Búsqueda de precisión</p>
+        </div>
         <div>
           <input
             type="text"
             placeholder="Buscar marca o modelo..."
             value={query}
             onChange={(e) => setQuery(e.target.value)}
-            className="w-full px-4 py-2.5 rounded-xl bg-white/5 border border-white/10 focus:border-padel/50 focus:outline-none text-sm"
+            className="w-full px-4 py-2.5 rounded-lg bg-surface-container-high border border-outline-variant focus:border-primary-container focus:ring-1 focus:ring-primary-container focus:outline-none text-sm"
           />
         </div>
 
@@ -94,7 +100,7 @@ export default function Catalog({ products, sport, priceIndex }: Props) {
           <select
             value={brand}
             onChange={(e) => setBrand(e.target.value)}
-            className="w-full px-3 py-2 rounded-lg bg-white/5 border border-white/10 text-sm focus:outline-none focus:border-padel/50"
+            className="w-full px-3 py-2 rounded-lg bg-surface-container-high border border-outline-variant text-sm focus:outline-none focus:border-primary-container"
           >
             <option value="">Todas</option>
             {brands.map((b) => (
@@ -157,9 +163,23 @@ export default function Catalog({ products, sport, priceIndex }: Props) {
             step={10}
             value={maxPrice}
             onChange={(e) => setMaxPrice(Number(e.target.value))}
-            className="w-full accent-lime-400"
+            className="w-full accent-[#c3f400]"
           />
         </FilterGroup>
+
+        <button
+          onClick={() => {
+            setBrand("");
+            setLevel("");
+            setStyle("");
+            setShape("");
+            setMaxPrice(350);
+            setQuery("");
+          }}
+          className="w-full border border-outline-variant text-on-surface-variant font-bold text-xs uppercase tracking-widest p-3 rounded-lg hover:bg-white/5 transition-colors"
+        >
+          Limpiar todo
+        </button>
       </aside>
 
       {/* GRID */}
@@ -172,7 +192,7 @@ export default function Catalog({ products, sport, priceIndex }: Props) {
           <select
             value={sort}
             onChange={(e) => setSort(e.target.value as typeof sort)}
-            className="px-3 py-1.5 rounded-lg bg-white/5 border border-white/10 text-sm focus:outline-none"
+            className="px-3 py-1.5 rounded-lg bg-surface-container-high border border-outline-variant text-sm focus:outline-none focus:border-primary-container"
           >
             <option value="year">Más recientes</option>
             <option value="price-asc">Precio: menor a mayor</option>
@@ -242,11 +262,7 @@ function Chip({
   return (
     <button
       onClick={onClick}
-      className={`px-3 py-1.5 rounded-full text-xs font-medium transition-all ${
-        active
-          ? "bg-padel text-black"
-          : "bg-white/5 border border-white/10 hover:bg-white/10"
-      }`}
+      className={`pill px-3 py-1.5 rounded-full text-xs font-semibold ${active ? "active" : ""}`}
     >
       {children}
     </button>
