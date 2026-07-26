@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { Montserrat, Hanken_Grotesk } from "next/font/google";
 import Image from "next/image";
 import Link from "next/link";
+import { GoogleAnalytics } from "@next/third-parties/google";
 import { CompareProvider } from "@/components/CompareContext";
 import CompareBar from "@/components/CompareBar";
 import "./globals.css";
@@ -23,6 +24,10 @@ const SITE_DESCRIPTION =
 // Define NEXT_PUBLIC_SITE_URL en producción: sin él, las URLs absolutas de las
 // tarjetas para compartir apuntarían a localhost.
 const SITE_URL = process.env.NEXT_PUBLIC_SITE_URL ?? "http://localhost:3000";
+
+// Google Analytics 4. Sobreescribible con NEXT_PUBLIC_GA_ID para poder apuntar
+// a otra propiedad (staging) sin tocar el código.
+const GA_ID = process.env.NEXT_PUBLIC_GA_ID ?? "G-4YZ39NTPE6";
 
 export const metadata: Metadata = {
   metadataBase: new URL(SITE_URL),
@@ -118,6 +123,7 @@ export default function RootLayout({
             </p>
           </div>
         </footer>
+        {GA_ID ? <GoogleAnalytics gaId={GA_ID} /> : null}
       </body>
     </html>
   );

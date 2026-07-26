@@ -117,4 +117,21 @@ npm run gen:images       # SVG placeholder
 npm run gen:logo         # derivados del logo (cabecera, favicon, Open Graph)
 npm run images:scaffold  # plantilla de fuentes con los 48 ids
 npm run import:images    # fotos reales (-- --force para volver a descargar)
+
+npx tsx scripts/scrape-amazon.ts   # precios reales de Amazon ES (ver docs/SCRAPING.md)
 ```
+
+## Variables de entorno
+
+Ninguna es obligatoria para desarrollo, pero las dos importan en producción.
+
+| Variable | Para qué | Sin ella |
+|---|---|---|
+| `NEXT_PUBLIC_SITE_URL` | Base de las URLs absolutas de Open Graph | Las tarjetas para compartir apuntan a `localhost:3000` |
+| `NEXT_PUBLIC_GA_ID` | Propiedad de Google Analytics 4 | Usa la de producción (`G-4YZ39NTPE6`) |
+
+El tag de GA se monta con `<GoogleAnalytics>` de `@next/third-parties/google`,
+que es lo que recomienda la documentación de Next 16 en vez de pegar el snippet
+de `gtag.js` a mano. Se carga en todos los entornos: si no quieres que tu
+tráfico local cuente, define `NEXT_PUBLIC_GA_ID` con una propiedad de pruebas o
+filtra tu IP como tráfico interno en GA4.
