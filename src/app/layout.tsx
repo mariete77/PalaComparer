@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import { Inter, Space_Grotesk } from "next/font/google";
+import Image from "next/image";
 import Link from "next/link";
 import { CompareProvider } from "@/components/CompareContext";
 import CompareBar from "@/components/CompareBar";
@@ -8,10 +9,27 @@ import "./globals.css";
 const inter = Inter({ subsets: ["latin"], variable: "--font-inter" });
 const grotesk = Space_Grotesk({ subsets: ["latin"], variable: "--font-grotesk" });
 
+const SITE_DESCRIPTION =
+  "Compara palas de pádel y raquetas de tenis por especificaciones, nivel y estilo de juego. Encuentra tu arma perfecta.";
+
+// Define NEXT_PUBLIC_SITE_URL en producción: sin él, las URLs absolutas de las
+// tarjetas para compartir apuntarían a localhost.
+const SITE_URL = process.env.NEXT_PUBLIC_SITE_URL ?? "http://localhost:3000";
+
 export const metadata: Metadata = {
+  metadataBase: new URL(SITE_URL),
   title: "PalaComparer — Encuentra tu pala o raqueta perfecta",
-  description:
-    "Compara palas de pádel y raquetas de tenis por especificaciones, nivel y estilo de juego. Encuentra tu arma perfecta.",
+  description: SITE_DESCRIPTION,
+  openGraph: {
+    siteName: "PalaComparer",
+    locale: "es_ES",
+    type: "website",
+    title: "PalaComparer — Encuentra tu pala o raqueta perfecta",
+    description: SITE_DESCRIPTION,
+  },
+  twitter: {
+    card: "summary_large_image",
+  },
 };
 
 export default function RootLayout({
@@ -23,7 +41,15 @@ export default function RootLayout({
         <header className="sticky top-0 z-50 backdrop-blur-xl bg-background/80 border-b border-white/5">
           <nav className="max-w-7xl mx-auto px-4 sm:px-6 h-16 flex items-center justify-between">
             <Link href="/" className="flex items-center gap-2 group">
-              <span className="text-2xl">🎾</span>
+              {/* Decorativo: el nombre ya va escrito al lado. */}
+              <Image
+                src="/logo-mark.png"
+                alt=""
+                width={36}
+                height={36}
+                priority
+                className="w-9 h-9 object-contain"
+              />
               <span className="font-display font-bold text-xl tracking-tight">
                 Pala<span className="text-padel">Comparer</span>
               </span>

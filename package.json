@@ -8,7 +8,8 @@
     "start": "next start",
     "lint": "eslint",
     "gen:images": "tsx scripts/gen-images.ts",
-    "import:images": "tsx scripts/import-images.mts"
+    "import:images": "tsx scripts/import-images.mts",
+    "gen:logo": "tsx scripts/gen-logo.mts"
   },
   "dependencies": {
     "@mdx-js/loader": "^3.1.1",
@@ -29,6 +30,7 @@
     "@types/react-dom": "^19",
     "eslint": "^9",
     "eslint-config-next": "16.2.12",
+    "sharp": "^0.35.3",
     "tailwindcss": "^4",
     "tsx": "^4.23.1",
     "typescript": "^5"
