@@ -245,7 +245,7 @@ export default async function ProductPage({
             </p>
           </div>
 
-          <div className="grid lg:grid-cols-[1fr_380px] gap-8 items-start">
+          <div className="flex flex-col lg:grid lg:grid-cols-[1fr_380px] gap-8 items-start">
             <OfferTable offers={offers} />
 
             {history.length > 1 && (

@@ -23,7 +23,7 @@ export default function ProductCard({
   const specs: { icon: string; label: string; value: string }[] =
     product.sport === "padel" && product.padel
       ? [
-          { icon: "⚖️", label: "Peso", value: product.padel.weight.replace(" g", "g") },
+          { icon: "⚖️", label: "Peso", value: product.padel.weight.replace(" g", "g").replace(" (+12g sistema)", "") },
           { icon: "🎯", label: "Balance", value: cap(product.padel.balance) },
         ]
       : product.tenis
@@ -64,15 +64,15 @@ export default function ProductCard({
 
           {/* Spec grid */}
           {specs.length > 0 && (
-            <div className="grid grid-cols-2 gap-2 mt-3 mb-3">
+            <div className="grid grid-cols-2 gap-1.5 mt-3 mb-3">
               {specs.map((s) => (
-                <div key={s.label} className="spec-cell p-2 flex items-center gap-2">
-                  <span className="text-sm">{s.icon}</span>
-                  <div className="min-w-0">
-                    <div className="text-[9px] text-muted font-bold uppercase tracking-wider">
+                <div key={s.label} className="spec-cell px-2 py-1.5 flex items-center gap-1.5 overflow-hidden">
+                  <span className="text-xs shrink-0">{s.icon}</span>
+                  <div className="min-w-0 flex-1">
+                    <div className="text-[8px] sm:text-[9px] text-muted font-bold uppercase tracking-wider leading-none">
                       {s.label}
                     </div>
-                    <div className="text-xs text-on-surface font-semibold truncate">
+                    <div className="text-[11px] sm:text-xs text-on-surface font-semibold leading-tight">
                       {s.value}
                     </div>
                   </div>
