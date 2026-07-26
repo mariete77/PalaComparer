@@ -1,0 +1,21 @@
+# Normaliza los finales de línea a LF dentro del repositorio.
+#
+# Los scripts de generación (gen-images, gen-logo, import-images,
+# scaffold-sources) escriben LF, pero el checkout en Windows dejaba CRLF. El
+# resultado era que cada `npm run gen:images` marcaba los 48 SVG como
+# modificados sin que hubiera cambiado nada de su contenido.
+* text=auto eol=lf
+
+# Binarios: que git no intente convertir nada.
+*.png binary
+*.jpg binary
+*.jpeg binary
+*.webp binary
+*.avif binary
+*.ico binary
+
+# Ficheros generados: colapsa el diff en GitHub y los deja fuera de las
+# estadísticas de lenguaje del repositorio.
+package-lock.json -diff linguist-generated
+public/images/rackets/*.svg linguist-generated
+src/data/real-images.json linguist-generated
