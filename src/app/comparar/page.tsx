@@ -5,8 +5,22 @@ import Image from "next/image";
 import Link from "next/link";
 import { useSearchParams } from "next/navigation";
 import { findProducts, Product, PRODUCTS } from "@/data/products";
+import { getProductImage } from "@/data/product-image";
+import { formatPrice, getBestPrice, getPriceSummary } from "@/data/offers";
 import { useCompare } from "@/components/CompareContext";
 import { useState } from "react";
+
+/** Mejor precio entre tiendas, o "—" si no hay ofertas. */
+function bestPriceLabel(p: Product): string {
+  const best = getBestPrice(p.id);
+  return best === null ? "—" : formatPrice(best);
+}
+
+function storeCountLabel(p: Product): string {
+  const summary = getPriceSummary(p.id);
+  if (!summary) return "—";
+  return `${summary.offerCount} ${summary.offerCount === 1 ? "tienda" : "tiendas"}`;
+}
 
 function CompareContent() {
   const searchParams = useSearchParams();
@@ -60,7 +74,9 @@ function CompareContent() {
   const specRows: { label: string; get: (p: Product) => string }[] = sameSport
     ? isPadel
       ? [
-          { label: "Precio", get: (p) => `${p.price.toFixed(2)} €` },
+          { label: "Mejor precio", get: bestPriceLabel },
+          { label: "Disponible en", get: storeCountLabel },
+          { label: "PVP", get: (p) => formatPrice(p.price) },
           { label: "Año", get: (p) => String(p.year) },
           { label: "Forma", get: (p) => cap(p.padel?.shape ?? "—") },
           { label: "Peso", get: (p) => p.padel?.weight ?? "—" },
@@ -74,7 +90,9 @@ function CompareContent() {
           { label: "Jugador", get: (p) => p.player ?? "—" },
         ]
       : [
-          { label: "Precio", get: (p) => `${p.price.toFixed(2)} €` },
+          { label: "Mejor precio", get: bestPriceLabel },
+          { label: "Disponible en", get: storeCountLabel },
+          { label: "PVP", get: (p) => formatPrice(p.price) },
           { label: "Año", get: (p) => String(p.year) },
           { label: "Tamis", get: (p) => (p.tenis ? `${p.tenis.headSize} in²` : "—") },
           { label: "Peso encordada", get: (p) => (p.tenis ? `${p.tenis.weightStrung} g` : "—") },
@@ -88,7 +106,9 @@ function CompareContent() {
           { label: "Jugador", get: (p) => p.player ?? "—" },
         ]
     : [
-        { label: "Precio", get: (p) => `${p.price.toFixed(2)} €` },
+        { label: "Mejor precio", get: bestPriceLabel },
+        { label: "Disponible en", get: storeCountLabel },
+        { label: "PVP", get: (p) => formatPrice(p.price) },
         { label: "Año", get: (p) => String(p.year) },
         { label: "Deporte", get: (p) => (p.sport === "padel" ? "Pádel" : "Tenis") },
         { label: "Nivel", get: (p) => p.level.map(cap).join(", ") },
@@ -140,8 +160,8 @@ function CompareContent() {
                     <Link href={`/producto/${p.id}`}>
                       <div className="relative w-full aspect-[2/3] max-w-[160px] mx-auto mb-3">
                         <Image
-                          src={p.image}
-            unoptimized
+                          src={getProductImage(p).src}
+                          unoptimized={getProductImage(p).unoptimized}
                           alt={p.model}
                           fill
                           className="object-contain"
@@ -174,7 +194,7 @@ function CompareContent() {
                     <td
                       key={j}
                       className={`p-3 text-sm text-center ${
-                        row.label === "Precio"
+                        row.label === "Mejor precio"
                           ? "font-display font-bold text-padel"
                           : allSame
                             ? "text-muted"
@@ -244,8 +264,8 @@ function AddSearch({
             >
               <div className="relative w-8 h-12 flex-shrink-0">
                 <Image
-                  src={p.image}
-            unoptimized
+                  src={getProductImage(p).src}
+                  unoptimized={getProductImage(p).unoptimized}
                   alt={p.model}
                   fill
                   className="object-contain"

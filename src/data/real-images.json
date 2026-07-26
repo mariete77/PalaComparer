@@ -1,0 +1,4 @@
+{
+  "$comment": "Manifiesto de fotos reales. Lo escribe `npm run import:images` a partir de scripts/image-sources.json. Clave = id de producto.",
+  "images": {}
+}

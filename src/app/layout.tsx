@@ -42,8 +42,14 @@ export default function RootLayout({
                 Raquetas
               </Link>
               <Link
-                href="/finder"
+                href="/noticias"
                 className="px-3 py-2 rounded-lg hover:bg-white/5 transition-colors"
+              >
+                Noticias
+              </Link>
+              <Link
+                href="/finder"
+                className="hidden sm:block px-3 py-2 rounded-lg hover:bg-white/5 transition-colors"
               >
                 Encuentra la tuya
               </Link>

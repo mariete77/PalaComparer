@@ -1,7 +1,8 @@
 "use client";
 
 import { useState, useMemo } from "react";
-import { PRODUCTS, Product, Sport, Level, PlayStyle } from "@/data/products";
+import { PRODUCTS, Sport, Level, PlayStyle } from "@/data/products";
+import { getBestPrice } from "@/data/offers";
 import ProductCard from "@/components/ProductCard";
 
 type Step = "sport" | "level" | "style" | "budget" | "results";
@@ -15,7 +16,13 @@ export default function FinderPage() {
 
   const recommendations = useMemo(() => {
     if (!sport) return [];
-    let pool = PRODUCTS.filter((p) => p.sport === sport && p.price <= budget);
+    // El presupuesto se compara contra el mejor precio de tienda, no contra el
+    // PVP: es lo que el usuario va a pagar de verdad.
+    const priceOf = (id: string, pvp: number) => getBestPrice(id) ?? pvp;
+
+    let pool = PRODUCTS.filter(
+      (p) => p.sport === sport && priceOf(p.id, p.price) <= budget
+    );
     if (level) pool = pool.filter((p) => p.level.includes(level));
     if (style) pool = pool.filter((p) => p.style.includes(style));
     // Score: exact style match first, then year desc, then price asc
@@ -24,11 +31,11 @@ export default function FinderPage() {
         const scoreA =
           (style && a.style.includes(style) ? 10 : 0) +
           (a.year >= 2024 ? 5 : 0) -
-          a.price / 100;
+          priceOf(a.id, a.price) / 100;
         const scoreB =
           (style && b.style.includes(style) ? 10 : 0) +
           (b.year >= 2024 ? 5 : 0) -
-          b.price / 100;
+          priceOf(b.id, b.price) / 100;
         return scoreB - scoreA;
       })
       .slice(0, 6);
@@ -185,7 +192,7 @@ export default function FinderPage() {
           {recommendations.length > 0 ? (
             <div className="grid grid-cols-2 md:grid-cols-3 gap-4 mb-10">
               {recommendations.map((p) => (
-                <ProductCard key={p.id} product={p} />
+                <ProductCard key={p.id} product={p} bestPrice={getBestPrice(p.id)} />
               ))}
             </div>
           ) : (

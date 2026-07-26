@@ -1,36 +1,105 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# PalaComparer
 
-## Getting Started
-
-First, run the development server:
+Comparador de palas de pádel y raquetas de tenis: catálogo con specs reales,
+comparación lado a lado, buscador por perfil de juego, precios por tienda y una
+sección de guías y análisis.
 
 ```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+npm install
+npm run dev     # http://localhost:3000
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Next.js 16 (App Router, Turbopack), React 19, Tailwind v4.
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+## Rutas
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+| Ruta | Qué es |
+|---|---|
+| `/` | Portada: destacados de cada deporte y últimas noticias |
+| `/palas`, `/raquetas` | Catálogo con filtros por marca, nivel, estilo, forma y precio |
+| `/producto/[id]` | Ficha: specs, dónde comprar, evolución de precio y artículos relacionados |
+| `/comparar` | Hasta 3 modelos lado a lado, spec por spec |
+| `/finder` | Cuestionario que recomienda modelos por nivel, estilo y presupuesto |
+| `/noticias`, `/noticias/[slug]` | Guías y análisis en MDX |
 
-## Learn More
+## Datos
 
-To learn more about Next.js, take a look at the following resources:
+Todo el contenido vive en `src/data/`. No hay base de datos ni API externa.
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+| Fichero | Contenido |
+|---|---|
+| `products.ts` | Los 47 modelos y sus specs (`PadelSpecs` / `TenisSpecs`) |
+| `stores.ts` | Tiendas, gastos de envío y umbral de envío gratis |
+| `offers.ts` | Ofertas por tienda e histórico de precios |
+| `news.ts` | Índice de artículos |
+| `real-images.json` | Manifiesto de fotos reales (lo genera un script) |
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+### ⚠️ Los precios son simulados
 
-## Deploy on Vercel
+`offers.ts` **genera las ofertas de forma determinista** a partir del PVP y del id
+de la tienda. No son precios reales: son un stub con la forma exacta que tendrá
+el feed definitivo, para poder construir la UI.
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+Para conectar datos de verdad basta con sustituir `getOffers` y
+`getPriceHistory`; el resto de la app solo consume esas funciones y sus tipos.
+`PRICE_SNAPSHOT` fija la fecha del snapshot para que el render sea determinista
+entre servidor y cliente.
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+## Imágenes
+
+Cada producto usa, por este orden:
+
+1. La foto real registrada en `src/data/real-images.json`, si existe.
+2. Si no, el SVG procedural de `public/images/rackets/` — se marca en la ficha
+   como «Ilustración orientativa».
+
+```bash
+npm run gen:images      # regenera los SVG placeholder desde las specs
+npm run import:images   # descarga las fotos reales del manifiesto
+```
+
+Para añadir fotos, edita `scripts/image-sources.json`:
+
+```json
+{
+  "nox-x-one-2024": {
+    "url": "https://cdn.ejemplo.com/nox-x-one.jpg",
+    "credit": "© Nox Sport",
+    "source": "https://www.noxsport.com/prensa"
+  }
+}
+```
+
+Solo imágenes que tengas derecho a usar: material de prensa de la marca, fotos
+propias o assets con licencia. El `credit` se muestra bajo la foto en la ficha.
+
+Si prefieres servir desde un CDN sin descargar nada, añade `#remote` al final de
+la URL y da de alta el dominio en `images.remotePatterns` (`next.config.ts`).
+
+## Publicar un artículo
+
+1. Crea `src/content/noticias/<slug>.mdx` con su `export const metadata`
+   (ver `ArticleMeta` en `src/data/news.ts`).
+2. Regístralo en `ARTICLES`, en `src/data/news.ts`.
+
+Dentro del MDX tienes disponibles, sin importarlos, estos componentes:
+
+| Componente | Uso |
+|---|---|
+| `<Callout title="…">` | Bloque destacado |
+| `<ProductRef id="…" />` | Enlace en línea a una ficha, con su mejor precio |
+| `<ProductGrid ids={[…]} />` | Rejilla de tarjetas de producto |
+| `<SpecList>` + `<SpecRow label value />` | Tabla de specs |
+
+Los ids de `relatedProducts` generan los enlaces cruzados en las dos
+direcciones: el artículo enseña las fichas y cada ficha enseña sus artículos.
+
+## Scripts
+
+```bash
+npm run dev            # servidor de desarrollo
+npm run build          # build de producción
+npm run lint           # eslint
+npm run gen:images     # SVG placeholder
+npm run import:images  # fotos reales (-- --force para volver a descargar)
+```

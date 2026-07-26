@@ -1,0 +1,10 @@
+{
+  "$comment": "Fotos reales por producto. Clave = id en src/data/products.ts. Añade solo imágenes que tengas derecho a usar: material de prensa de la marca, fotos propias o assets con licencia. Ejecuta `npm run import:images` para descargarlas. Si prefieres servir desde un CDN sin descargar, añade '#remote' al final de la url y da de alta el dominio en images.remotePatterns (next.config.ts).",
+  "$ejemplo": {
+    "nox-x-one-2024": {
+      "url": "https://cdn.ejemplo.com/nox-x-one.jpg",
+      "credit": "© Nox Sport",
+      "source": "https://www.noxsport.com/prensa"
+    }
+  }
+}

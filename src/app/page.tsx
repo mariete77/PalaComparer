@@ -1,6 +1,7 @@
 import Link from "next/link";
-import Image from "next/image";
 import { PRODUCTS } from "@/data/products";
+import { getBestPrice } from "@/data/offers";
+import { ARTICLES, KIND_LABEL, formatArticleDate } from "@/data/news";
 import ProductCard from "@/components/ProductCard";
 
 export default function Home() {
@@ -14,6 +15,7 @@ export default function Home() {
       p.sport === "tenis" &&
       ["babolat-pure-aero-2023", "wilson-blade-98-v9-2024", "head-speed-mp-2024", "yonex-ezone-100-2022"].includes(p.id)
   );
+  const ultimasNoticias = ARTICLES.slice(0, 3);
 
   return (
     <div>
@@ -83,7 +85,7 @@ export default function Home() {
         </div>
         <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
           {destacadosPadel.map((p) => (
-            <ProductCard key={p.id} product={p} />
+            <ProductCard key={p.id} product={p} bestPrice={getBestPrice(p.id)} />
           ))}
         </div>
       </section>
@@ -101,7 +103,46 @@ export default function Home() {
         </div>
         <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
           {destacadosTenis.map((p) => (
-            <ProductCard key={p.id} product={p} />
+            <ProductCard key={p.id} product={p} bestPrice={getBestPrice(p.id)} />
+          ))}
+        </div>
+      </section>
+
+      {/* NOTICIAS */}
+      <section className="max-w-7xl mx-auto px-6 mb-16">
+        <div className="flex items-end justify-between mb-6">
+          <div>
+            <p className="text-xs font-bold text-muted uppercase tracking-wider mb-1">
+              Noticias
+            </p>
+            <h2 className="font-display text-3xl font-bold">
+              Antes de comprar, léete esto
+            </h2>
+          </div>
+          <Link href="/noticias" className="text-sm text-padel hover:underline">
+            Ver todas →
+          </Link>
+        </div>
+        <div className="grid md:grid-cols-3 gap-4">
+          {ultimasNoticias.map((a) => (
+            <Link
+              key={a.slug}
+              href={`/noticias/${a.slug}`}
+              className="card-glow rounded-2xl bg-white/[0.02] p-6 flex flex-col"
+            >
+              <span className="text-xs font-bold uppercase tracking-wider text-padel">
+                {KIND_LABEL[a.kind]}
+              </span>
+              <h3 className="font-display font-semibold text-lg mt-2 leading-snug">
+                {a.title}
+              </h3>
+              <p className="text-sm text-muted mt-2 leading-relaxed flex-1">
+                {a.excerpt}
+              </p>
+              <p className="text-xs text-muted mt-4">
+                {formatArticleDate(a.date)} · {a.readingMinutes} min
+              </p>
+            </Link>
           ))}
         </div>
       </section>

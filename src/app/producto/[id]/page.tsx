@@ -2,8 +2,19 @@ import Image from "next/image";
 import Link from "next/link";
 import { notFound } from "next/navigation";
 import { getProduct, PRODUCTS } from "@/data/products";
+import { getProductImage } from "@/data/product-image";
+import {
+  formatPrice,
+  getBestPrice,
+  getOffers,
+  getPriceHistory,
+  getPriceSummary,
+} from "@/data/offers";
+import { KIND_LABEL, getArticlesForProduct } from "@/data/news";
 import AddToCompare from "@/components/AddToCompare";
 import ProductCard from "@/components/ProductCard";
+import OfferTable from "@/components/OfferTable";
+import PriceHistoryChart from "@/components/PriceHistoryChart";
 import { Metadata } from "next";
 
 export function generateStaticParams() {
@@ -35,6 +46,13 @@ export default async function ProductPage({
 
   const accentText = p.sport === "padel" ? "text-padel" : "text-tenis";
   const accentBg = p.sport === "padel" ? "bg-padel" : "bg-tenis";
+  const accentVar = p.sport === "padel" ? "var(--accent-padel)" : "var(--accent-tenis)";
+
+  const image = getProductImage(p);
+  const summary = getPriceSummary(p.id);
+  const offers = getOffers(p.id);
+  const history = getPriceHistory(p.id);
+  const noticias = getArticlesForProduct(p.id);
 
   const specs: [string, string][] =
     p.sport === "padel" && p.padel
@@ -84,16 +102,39 @@ export default async function ProductPage({
 
       <div className="grid md:grid-cols-2 gap-10 mb-16">
         {/* Imagen */}
-        <div className="relative aspect-[2/3] max-h-[600px] rounded-3xl bg-gradient-to-b from-white/5 to-transparent overflow-hidden card-glow">
-          <Image
-            src={p.image}
-            unoptimized
-            alt={`${p.brand} ${p.model}`}
-            fill
-            className="object-contain p-8"
-            priority
-            sizes="(max-width: 768px) 100vw, 50vw"
-          />
+        <div>
+          <div className="relative aspect-[2/3] max-h-[600px] rounded-3xl bg-gradient-to-b from-white/5 to-transparent overflow-hidden card-glow">
+            <Image
+              src={image.src}
+              unoptimized={image.unoptimized}
+              alt={`${p.brand} ${p.model}`}
+              fill
+              className="object-contain p-8"
+              priority
+              sizes="(max-width: 768px) 100vw, 50vw"
+            />
+            {!image.isReal && (
+              <span className="absolute bottom-3 left-3 text-[10px] text-muted bg-background/70 px-2 py-1 rounded-full">
+                Ilustración orientativa
+              </span>
+            )}
+          </div>
+          {image.credit && (
+            <p className="mt-2 text-[11px] text-muted text-right">
+              {image.source ? (
+                <a
+                  href={image.source}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="hover:text-foreground"
+                >
+                  {image.credit}
+                </a>
+              ) : (
+                image.credit
+              )}
+            </p>
+          )}
         </div>
 
         {/* Info */}
@@ -110,12 +151,42 @@ export default async function ProductPage({
             </p>
           )}
 
-          <div className="mt-6 flex items-baseline gap-3">
-            <span className="font-display text-4xl font-bold">
-              {p.price.toFixed(2)} €
-            </span>
-            <span className="text-xs text-muted">PVP orientativo</span>
-          </div>
+          {summary ? (
+            <div className="mt-6">
+              <div className="flex items-baseline flex-wrap gap-x-3 gap-y-1">
+                <span className="font-display text-4xl font-bold">
+                  {formatPrice(summary.min)}
+                </span>
+                {summary.discountPct > 0 && (
+                  <>
+                    <span className="text-muted line-through text-sm">
+                      {formatPrice(p.price)}
+                    </span>
+                    <span className={`text-sm font-semibold ${accentText}`}>
+                      −{summary.discountPct}%
+                    </span>
+                  </>
+                )}
+              </div>
+              <p className="mt-1 text-xs text-muted">
+                Mejor precio entre {summary.offerCount}{" "}
+                {summary.offerCount === 1 ? "tienda" : "tiendas"} · PVP{" "}
+                {formatPrice(p.price)}
+              </p>
+              {summary.atHistoricalLow && (
+                <p className="mt-2 inline-block text-xs font-semibold px-3 py-1 rounded-full bg-padel/15 text-padel border border-padel/30">
+                  ↓ Mínimo histórico de los últimos 60 días
+                </p>
+              )}
+            </div>
+          ) : (
+            <div className="mt-6 flex items-baseline gap-3">
+              <span className="font-display text-4xl font-bold">
+                {formatPrice(p.price)}
+              </span>
+              <span className="text-xs text-muted">PVP orientativo</span>
+            </div>
+          )}
 
           <p className="mt-6 text-muted leading-relaxed">{p.description}</p>
 
@@ -164,6 +235,83 @@ export default async function ProductPage({
         </div>
       </section>
 
+      {/* Dónde comprar */}
+      {offers.length > 0 && (
+        <section className="mb-16">
+          <div className="flex items-end justify-between mb-6 gap-4 flex-wrap">
+            <h2 className="font-display text-2xl font-bold">Dónde comprar</h2>
+            <p className="text-xs text-muted">
+              Precios orientativos. Confirma siempre el importe final en la tienda.
+            </p>
+          </div>
+
+          <div className="grid lg:grid-cols-[1fr_380px] gap-8 items-start">
+            <OfferTable offers={offers} />
+
+            {history.length > 1 && (
+              <div className="rounded-2xl bg-white/[0.02] border border-white/5 p-5">
+                <h3 className="font-display font-semibold mb-1">
+                  Evolución del precio
+                </h3>
+                <p className="text-xs text-muted mb-4">
+                  Mejor precio diario de los últimos 60 días
+                </p>
+                <PriceHistoryChart points={history} accent={accentVar} />
+                {summary && (
+                  <dl className="mt-5 grid grid-cols-2 gap-3 text-sm">
+                    <div>
+                      <dt className="text-xs text-muted uppercase tracking-wider">
+                        Mínimo histórico
+                      </dt>
+                      <dd className="font-semibold tabular-nums mt-0.5">
+                        {formatPrice(summary.historicalMin)}
+                      </dd>
+                    </div>
+                    <div>
+                      <dt className="text-xs text-muted uppercase tracking-wider">
+                        Máximo actual
+                      </dt>
+                      <dd className="font-semibold tabular-nums mt-0.5">
+                        {formatPrice(summary.max)}
+                      </dd>
+                    </div>
+                  </dl>
+                )}
+              </div>
+            )}
+          </div>
+        </section>
+      )}
+
+      {/* Noticias relacionadas */}
+      {noticias.length > 0 && (
+        <section className="mb-16">
+          <h2 className="font-display text-2xl font-bold mb-6">
+            Hablamos de esta {p.sport === "padel" ? "pala" : "raqueta"}
+          </h2>
+          <ul className="grid md:grid-cols-2 gap-4">
+            {noticias.map((a) => (
+              <li key={a.slug}>
+                <Link
+                  href={`/noticias/${a.slug}`}
+                  className="block h-full rounded-xl bg-white/[0.02] border border-white/5 p-5 hover:bg-white/[0.05] transition-colors"
+                >
+                  <span className="text-xs font-bold uppercase tracking-wider text-muted">
+                    {KIND_LABEL[a.kind]} · {a.readingMinutes} min
+                  </span>
+                  <p className="font-display font-semibold mt-1.5 leading-snug">
+                    {a.title}
+                  </p>
+                  <p className="text-sm text-muted mt-1.5 leading-relaxed">
+                    {a.excerpt}
+                  </p>
+                </Link>
+              </li>
+            ))}
+          </ul>
+        </section>
+      )}
+
       {/* Similares */}
       {similares.length > 0 && (
         <section>
@@ -172,7 +320,11 @@ export default async function ProductPage({
           </h2>
           <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
             {similares.map((s) => (
-              <ProductCard key={s.id} product={s} />
+              <ProductCard
+                key={s.id}
+                product={s}
+                bestPrice={getBestPrice(s.id)}
+              />
             ))}
           </div>
         </section>

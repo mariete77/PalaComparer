@@ -3,20 +3,30 @@
 import Image from "next/image";
 import Link from "next/link";
 import { Product } from "@/data/products";
+import { getProductImage } from "@/data/product-image";
+import { formatPrice } from "@/data/offers";
 import { useCompare } from "@/components/CompareContext";
 
-export default function ProductCard({ product }: { product: Product }) {
+export default function ProductCard({
+  product,
+  bestPrice,
+}: {
+  product: Product;
+  /** Mejor precio entre tiendas. Si no se pasa, se muestra el PVP. */
+  bestPrice?: number | null;
+}) {
   const { add, remove, has, isFull } = useCompare();
   const selected = has(product.id);
   const accent = product.sport === "padel" ? "text-padel" : "text-tenis";
+  const image = getProductImage(product);
 
   return (
     <div className="card-glow rounded-2xl bg-white/[0.02] overflow-hidden group relative">
       <Link href={`/producto/${product.id}`} className="block">
         <div className="aspect-[2/3] relative bg-gradient-to-b from-white/5 to-transparent">
           <Image
-            src={product.image}
-            unoptimized
+            src={image.src}
+            unoptimized={image.unoptimized}
             alt={`${product.brand} ${product.model}`}
             fill
             className="object-contain p-4 group-hover:scale-105 transition-transform duration-300"
@@ -37,9 +47,18 @@ export default function ProductCard({ product }: { product: Product }) {
           <h3 className="font-display font-semibold text-sm leading-tight mt-0.5 line-clamp-2 min-h-[2.5em]">
             {product.model}
           </h3>
-          <div className="mt-2 flex items-center justify-between">
+          <div className="mt-2 flex items-end justify-between">
             <span className={`font-display font-bold ${accent}`}>
-              {product.price.toFixed(2)} €
+              {bestPrice != null ? (
+                <>
+                  <span className="text-[10px] text-muted font-sans font-normal mr-1">
+                    desde
+                  </span>
+                  {formatPrice(bestPrice)}
+                </>
+              ) : (
+                formatPrice(product.price)
+              )}
             </span>
             <span className="text-[10px] text-muted">{product.year}</span>
           </div>

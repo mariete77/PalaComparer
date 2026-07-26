@@ -7,6 +7,8 @@ import ProductCard from "./ProductCard";
 interface Props {
   products: Product[];
   sport: Sport;
+  /** Mejor precio por id de producto, calculado en el servidor. */
+  priceIndex: Record<string, number>;
 }
 
 const LEVELS: { value: Level; label: string }[] = [
@@ -29,7 +31,7 @@ const SHAPES: { value: PadelShape; label: string }[] = [
   { value: "hibrida", label: "Híbrida" },
 ];
 
-export default function Catalog({ products, sport }: Props) {
+export default function Catalog({ products, sport, priceIndex }: Props) {
   const [brand, setBrand] = useState<string>("");
   const [level, setLevel] = useState<Level | "">("");
   const [style, setStyle] = useState<PlayStyle | "">("");
@@ -44,12 +46,13 @@ export default function Catalog({ products, sport }: Props) {
   );
 
   const filtered = useMemo(() => {
+    const priceOf = (p: Product) => priceIndex[p.id] ?? p.price;
     let r = products.filter((p) => {
       if (brand && p.brand !== brand) return false;
       if (level && !p.level.includes(level)) return false;
       if (style && !p.style.includes(style)) return false;
       if (shape && p.sport === "padel" && p.padel?.shape !== shape) return false;
-      if (p.price > maxPrice) return false;
+      if (priceOf(p) > maxPrice) return false;
       if (
         query &&
         !`${p.brand} ${p.model}`.toLowerCase().includes(query.toLowerCase())
@@ -59,17 +62,17 @@ export default function Catalog({ products, sport }: Props) {
     });
     switch (sort) {
       case "price-asc":
-        r = [...r].sort((a, b) => a.price - b.price);
+        r = [...r].sort((a, b) => priceOf(a) - priceOf(b));
         break;
       case "price-desc":
-        r = [...r].sort((a, b) => b.price - a.price);
+        r = [...r].sort((a, b) => priceOf(b) - priceOf(a));
         break;
       case "year":
         r = [...r].sort((a, b) => b.year - a.year);
         break;
     }
     return r;
-  }, [products, brand, level, style, shape, maxPrice, sort, query]);
+  }, [products, priceIndex, brand, level, style, shape, maxPrice, sort, query]);
 
   const accentText = sport === "padel" ? "text-padel" : "text-tenis";
 
@@ -197,7 +200,11 @@ export default function Catalog({ products, sport }: Props) {
         ) : (
           <div className="grid grid-cols-2 md:grid-cols-3 xl:grid-cols-4 gap-4">
             {filtered.map((p) => (
-              <ProductCard key={p.id} product={p} />
+              <ProductCard
+                key={p.id}
+                product={p}
+                bestPrice={priceIndex[p.id] ?? null}
+              />
             ))}
           </div>
         )}
