@@ -91,25 +91,28 @@ function shiftDate(iso: string, days: number): string {
   d.setUTCDate(d.getUTCDate() + days);
   return d.toISOString().slice(0, 10);
 }
-
 // ---------------------------------------------------------------------------
-// Datos reales scrapeados de Amazon ES (scripts/scrape-amazon.ts)
+// Datos reales scrapeados (scripts/scrape-amazon.ts, scrape-firecrawl.ts, scrape-decathlon.ts)
 // ---------------------------------------------------------------------------
 
 import realOffersData from "./real-offers.json";
+import realOffersStoresData from "./real-offers-stores.json";
+import realOffersDecathlonData from "./real-offers-decathlon.json";
 
 interface RealOffer {
   productId: string;
   title: string;
   price: number | null;
   url: string;
-  asin: string | null;
+  asin?: string | null;
   inStock: boolean;
   scrapedAt: string;
 }
 
 const REAL_OFFERS = (realOffersData as Record<string, RealOffer>) ?? {};
 
+// Decathlon scrapeado con Firefox (Chromium bloqueado por Cloudflare)
+const REAL_OFFERS_DECATHLON = (realOffersDecathlonData as Record<string, RealOffer>) ?? {};
 // ---------------------------------------------------------------------------
 // Datos reales del resto de tiendas (Firecrawl — ver docs/SCRAPING.md)
 // ---------------------------------------------------------------------------
@@ -171,7 +174,23 @@ function buildOffers(product: Product): Offer[] {
     });
   }
 
-  // 3. Generar ofertas sintéticas para las tiendas que no tengan precio real
+  // 3. Precio real de Decathlon (scrapeado con Firefox por Cloudflare)
+  const decathlonOffer = REAL_OFFERS_DECATHLON[product.id];
+  if (decathlonOffer && decathlonOffer.price) {
+    const decathlon = STORES.find((s) => s.id === "decathlon");
+    if (decathlon) {
+      offers.push({
+        storeId: "decathlon",
+        price: decathlonOffer.price,
+        total: round2(totalWithShipping(decathlon, decathlonOffer.price)),
+        url: decathlonOffer.url,
+        inStock: decathlonOffer.inStock,
+        checkedDaysAgo: 0,
+      });
+    }
+  }
+
+  // 4. Generar ofertas sintéticas para las tiendas que no tengan precio real
   const conPrecioReal = new Set(offers.map((o) => o.storeId));
   for (const store of storesFor(product).filter((s) => !conPrecioReal.has(s.id) && s.id !== "amazon")) {
     const r = rng(hashSeed(`${product.id}:${store.id}`));
