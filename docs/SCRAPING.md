@@ -7,22 +7,28 @@ Pipeline para obtener precios y URLs reales de tiendas de pádel/tenis.
 ```bash
 # Actualizar precios de Amazon ES (todos los productos)
 npx tsx scripts/scrape-amazon.ts
+
+# Actualizar precios de PadelNuestro (todos los productos)
+npx tsx scripts/scrape-padelnuestro.ts
 ```
 
-El script lee `src/data/products.ts`, busca cada producto en Amazon ES y guarda los resultados en `src/data/real-offers.json`.
+El script de Amazon lee `src/data/products.ts`, busca cada producto en Amazon ES y guarda los resultados en `src/data/real-offers.json`.
+
+El script de PadelNuestro usa las **URLs de categoría por marca** (`padelnuestro.com/palas-padel/nox`, etc.) y guarda en `src/data/real-offers-padelnuestro.json`.
 
 ## Cómo funciona
 
 ```
-products.ts (47 productos)
+products.ts (48 productos)
         ↓
-scripts/scrape-amazon.ts
-        ↓
-Amazon ES (búsqueda headless con Playwright)
-        ↓
-real-offers.json (precio real + URL real)
-        ↓
-offers.ts (integra datos reales en la web)
+scripts/scrape-amazon.ts          scripts/scrape-padelnuestro.ts
+        ↓                                    ↓
+Amazon ES (búsqueda Playwright)    PadelNuestro (categorías por marca)
+        ↓                                    ↓
+real-offers.json                   real-offers-padelnuestro.json
+        └──────────┬─────────────────────────┘
+                   ↓
+              offers.ts (integra datos reales en la web)
 ```
 
 ### 1. Productos (`src/data/products.ts`)
@@ -89,6 +95,10 @@ Para forzar la actualización de TODOS los precios:
 # Borrar el cache y re-scrapear todo
 rm src/data/real-offers.json
 npx tsx scripts/scrape-amazon.ts
+
+# PadelNuestro
+rm src/data/real-offers-padelnuestro.json
+npx tsx scripts/scrape-padelnuestro.ts
 ```
 
 Para actualizar solo un producto concreto, borrar su entrada del JSON y re-ejecutar el script.
@@ -105,13 +115,17 @@ Para actualizar solo un producto concreto, borrar su entrada del JSON y re-ejecu
 
 ## Resultados actuales
 
-- ✅ **35 de 47 productos** con precio real de Amazon ES (75%)
-- ❌ 12 no encontrados (no disponibles en Amazon ES o matching fallido)
-- Cobertura: todas las marcas principales (Nox, Bullpadel, Head, Adidas, Babolat, Wilson, etc.)
+**Amazon ES:**
+- ✅ **35 de 48 productos** con precio real (73%)
+- ❌ 13 no encontrados
+
+**PadelNuestro:**
+- ✅ **32 de 48 productos** con precio real (67%)
+- ❌ 16 no encontrados (la mayoría de tenis — PadelNuestro es especialista en pádel)
+- Método: URLs de categoría por marca (`/palas-padel/nox`, `/palas-padel/bullpadel`, etc.)
 
 ## Ideas futuras
 
-- [ ] Scraping de PadelNuestro (Magento)
 - [ ] Scraping de Decathlon ES
 - [ ] Scraping de Time2Pádel
 - [ ] Descargar imágenes reales de producto

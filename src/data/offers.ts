@@ -93,22 +93,24 @@ function shiftDate(iso: string, days: number): string {
 }
 
 // ---------------------------------------------------------------------------
-// Datos reales scrapeados de Amazon ES (scripts/scrape-amazon.ts)
+// Datos reales scrapeados (scripts/scrape-amazon.ts, scrape-padelnuestro.ts)
 // ---------------------------------------------------------------------------
 
 import realOffersData from "./real-offers.json";
+import realOffersPNData from "./real-offers-padelnuestro.json";
 
 interface RealOffer {
   productId: string;
   title: string;
   price: number | null;
   url: string;
-  asin: string | null;
+  asin?: string | null;
   inStock: boolean;
   scrapedAt: string;
 }
 
 const REAL_OFFERS = (realOffersData as Record<string, RealOffer>) ?? {};
+const REAL_OFFERS_PN = (realOffersPNData as Record<string, RealOffer>) ?? {};
 
 // ---------------------------------------------------------------------------
 // Generación
@@ -137,8 +139,24 @@ function buildOffers(product: Product): Offer[] {
     }
   }
 
-  // 2. Generar ofertas sintéticas para el resto de tiendas
-  for (const store of storesFor(product).filter((s) => s.id !== "amazon")) {
+  // 2. Si tenemos precio real de PadelNuestro, usarlo
+  const realPN = REAL_OFFERS_PN[product.id];
+  if (realPN && realPN.price) {
+    const pn = STORES.find((s) => s.id === "padelnuestro");
+    if (pn) {
+      offers.push({
+        storeId: "padelnuestro",
+        price: realPN.price,
+        total: round2(totalWithShipping(pn, realPN.price)),
+        url: realPN.url, // URL real del producto
+        inStock: realPN.inStock,
+        checkedDaysAgo: 0,
+      });
+    }
+  }
+
+  // 3. Generar ofertas sintéticas para el resto de tiendas
+  for (const store of storesFor(product).filter((s) => s.id !== "amazon" && s.id !== "padelnuestro")) {
     const r = rng(hashSeed(`${product.id}:${store.id}`));
 
     // ~25% de las tiendas no listan el producto.
