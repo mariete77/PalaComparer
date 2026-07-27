@@ -4,13 +4,13 @@
   "adidas-drive-2024": {
     "url": ""
   },
-  "adidas-metalbone-31-2024": {
+  "adidas-metalbone-2026": {
     "url": ""
   },
   "adidas-metalbone-carbon-ctrl-2024": {
     "url": ""
   },
-  "adidas-rx-carbon-2024": {
+  "adidas-rx-series-2026": {
     "url": ""
   },
   "babolat-counter-viper-2025": {
@@ -22,8 +22,10 @@
   "babolat-technical-viper-2025": {
     "url": ""
   },
-  "black-crown-piton-2024": {
-    "url": ""
+  "black-crown-piton-14-2026": {
+    "url": "https://blackcrown.es/wp-content/uploads/2025/12/jimsports_pala_pdel_black_crown_piton_14.jpg",
+    "credit": "© Black Crown",
+    "source": "https://blackcrown.es/product/pala-pdel-black-crown-piton-14"
   },
   "bullpadel-flow-2024": {
     "url": ""
@@ -52,13 +54,15 @@
   "dunlop-aero-star-pro-2024": {
     "url": ""
   },
+  "head-bolt-2026": {
+    "url": "https://cdn-mdb.head.com/CDN3/G/226206/1/683x911/bolt-2026-rd-bk.webp",
+    "credit": "© HEAD",
+    "source": "https://www.head.com/es_ES/product/bolt-2026-rd-bk-226206-cp"
+  },
   "head-extreme-motion-2024": {
     "url": ""
   },
   "head-extreme-pro-2024": {
-    "url": ""
-  },
-  "head-flash-2024": {
     "url": ""
   },
   "head-gravity-pro-2024": {
@@ -100,17 +104,23 @@
     "credit": "© NOX Sport",
     "source": "https://noxsport.com/en/products/pala-x-one"
   },
-  "siux-diablo-revolution-2024": {
-    "url": ""
+  "siux-diablo-pro-2026": {
+    "url": "https://cdn.shopify.com/s/files/1/0655/2322/0662/files/b01a10d37910866970e30596f82c09ff.jpg?v=1781268084",
+    "credit": "© Siux",
+    "source": "https://www.siuxpadel.com/products/siux-diablo-pro-2026-royal-blue"
   },
-  "starvie-aquila-2024": {
-    "url": ""
-  },
-  "wilson-bela-elite-2024": {
-    "url": ""
+  "starvie-raptor-2026": {
+    "url": "https://cdn.shopify.com/s/files/1/0918/2026/1753/files/RAPTOR_EN.png?v=1782393025",
+    "credit": "© StarVie",
+    "source": "https://starvie.com/products/raptor"
   },
   "wilson-bela-pro-2024": {
     "url": ""
+  },
+  "wilson-bela-v3-2026": {
+    "url": "https://www.wilson.com/en-gb/media/catalog/product/article_images/WR186511U_/WR186511U__ff3c1069e9871eb5ed70e8c7fb2baa73.png",
+    "credit": "© Wilson Sporting Goods",
+    "source": "https://www.wilson.com/es-es/product/bela-v3-padel-wr18650"
   },
   "babolat-boost-aero-2023": {
     "url": ""

@@ -44,15 +44,6 @@
     "inStock": true,
     "scrapedAt": "2026-07-26T17:00:00.000Z"
   },
-  "adidas-metalbone-31-2024": {
-    "productId": "adidas-metalbone-31-2024",
-    "title": "Adidas Metalbone 3.1",
-    "price": 189.48,
-    "url": "https://www.amazon.es/dp/B0CNWGCZ9M",
-    "asin": "B0CNWGCZ9M",
-    "inStock": true,
-    "scrapedAt": "2026-07-26T17:00:00.000Z"
-  },
   "babolat-technical-viper-2025": {
     "productId": "babolat-technical-viper-2025",
     "title": "Technical Viper",
@@ -80,30 +71,12 @@
     "inStock": true,
     "scrapedAt": "2026-07-26T17:00:00.000Z"
   },
-  "starvie-aquila-2024": {
-    "productId": "starvie-aquila-2024",
-    "title": "Aquila Space Pro",
-    "price": 106.9,
-    "url": "https://www.amazon.es/dp/B0CMDGP2GC",
-    "asin": "B0CMDGP2GC",
-    "inStock": true,
-    "scrapedAt": "2026-07-26T17:00:00.000Z"
-  },
   "dunlop-aero-star-pro-2024": {
     "productId": "dunlop-aero-star-pro-2024",
     "title": "Aero-Star Pro",
     "price": 99.9,
     "url": "https://www.amazon.es/dp/B0CJ3D3SKQ",
     "asin": "B0CJ3D3SKQ",
-    "inStock": true,
-    "scrapedAt": "2026-07-26T17:00:00.000Z"
-  },
-  "head-flash-2024": {
-    "productId": "head-flash-2024",
-    "title": "Head Flash",
-    "price": 79.14,
-    "url": "https://www.amazon.es/dp/B0BPF5H99G",
-    "asin": "B0BPF5H99G",
     "inStock": true,
     "scrapedAt": "2026-07-26T17:00:00.000Z"
   },
@@ -322,24 +295,6 @@
     "asin": "B0CNWGVR6M",
     "inStock": true,
     "scrapedAt": "2026-07-26T19:38:08.793Z"
-  },
-  "wilson-bela-elite-2024": {
-    "productId": "wilson-bela-elite-2024",
-    "title": "Wilson Bela Padel Rackets",
-    "price": 159,
-    "url": "https://www.amazon.es/dp/B0CLPFB6WT",
-    "asin": "B0CLPFB6WT",
-    "inStock": true,
-    "scrapedAt": "2026-07-26T19:38:37.449Z"
-  },
-  "black-crown-piton-2024": {
-    "productId": "black-crown-piton-2024",
-    "title": "Black Crown - Pala de Padel Piton 11 Soft- Forma Redonda - Equilibrio Entre Control y Potencia - Peso 355 gr - Marco 38 mm 80% Fibra de Carbono - Resistente - Golpes agresivos",
-    "price": 89.95,
-    "url": "https://www.amazon.es/dp/B0BPY1RDW6",
-    "asin": "B0BPY1RDW6",
-    "inStock": true,
-    "scrapedAt": "2026-07-26T19:38:56.288Z"
   },
   "nox-x-one-2026": {
     "productId": "nox-x-one-2026",

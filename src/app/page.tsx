@@ -8,7 +8,7 @@ export default function Home() {
   const destacadosPadel = PRODUCTS.filter(
     (p) =>
       p.sport === "padel" &&
-      ["nox-at10-genius-18k-2026", "bullpadel-vertex-05-2026", "head-extreme-pro-2024", "adidas-metalbone-31-2024"].includes(p.id)
+      ["nox-at10-genius-18k-2026", "bullpadel-vertex-05-2026", "head-extreme-pro-2024", "adidas-metalbone-2026"].includes(p.id)
   );
   const destacadosTenis = PRODUCTS.filter(
     (p) =>

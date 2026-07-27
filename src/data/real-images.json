@@ -1,6 +1,12 @@
 {
   "$comment": "Manifiesto de fotos reales. Lo escribe `npm run import:images` a partir de scripts/image-sources.json. Clave = id de producto.",
   "images": {
+    "black-crown-piton-14-2026": {
+      "src": "/images/rackets/real/black-crown-piton-14-2026.jpg",
+      "credit": "© Black Crown",
+      "source": "https://blackcrown.es/product/pala-pdel-black-crown-piton-14",
+      "licence": "pendiente"
+    },
     "bullpadel-hack-04-2026": {
       "src": "/images/rackets/real/bullpadel-hack-04-2026.jpg",
       "credit": "© Bullpadel",
@@ -17,6 +23,12 @@
       "src": "/images/rackets/real/bullpadel-vertex-05-2026.jpg",
       "credit": "© Bullpadel",
       "source": "https://www.bullpadel.com/es/5677-pala-bullpadel-vertex-05.html",
+      "licence": "pendiente"
+    },
+    "head-bolt-2026": {
+      "src": "/images/rackets/real/head-bolt-2026.webp",
+      "credit": "© HEAD",
+      "source": "https://www.head.com/es_ES/product/bolt-2026-rd-bk-226206-cp",
       "licence": "pendiente"
     },
     "nox-at10-genius-12k-xtrem-2026": {
@@ -53,6 +65,24 @@
       "src": "/images/rackets/real/nox-x-one-2026.png",
       "credit": "© NOX Sport",
       "source": "https://noxsport.com/en/products/pala-x-one",
+      "licence": "pendiente"
+    },
+    "siux-diablo-pro-2026": {
+      "src": "/images/rackets/real/siux-diablo-pro-2026.jpg",
+      "credit": "© Siux",
+      "source": "https://www.siuxpadel.com/products/siux-diablo-pro-2026-royal-blue",
+      "licence": "pendiente"
+    },
+    "starvie-raptor-2026": {
+      "src": "/images/rackets/real/starvie-raptor-2026.png",
+      "credit": "© StarVie",
+      "source": "https://starvie.com/products/raptor",
+      "licence": "pendiente"
+    },
+    "wilson-bela-v3-2026": {
+      "src": "/images/rackets/real/wilson-bela-v3-2026.jpg",
+      "credit": "© Wilson Sporting Goods",
+      "source": "https://www.wilson.com/es-es/product/bela-v3-padel-wr18650",
       "licence": "pendiente"
     }
   }
