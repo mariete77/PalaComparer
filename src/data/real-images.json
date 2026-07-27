@@ -3,86 +3,171 @@
   "images": {
     "black-crown-piton-14-2026": {
       "src": "/images/rackets/real/black-crown-piton-14-2026.jpg",
-      "credit": "© Black Crown",
+      "credit": "\u00a9 Black Crown",
       "source": "https://blackcrown.es/product/pala-pdel-black-crown-piton-14",
       "licence": "pendiente"
     },
     "bullpadel-hack-04-2026": {
       "src": "/images/rackets/real/bullpadel-hack-04-2026.jpg",
-      "credit": "© Bullpadel",
+      "credit": "\u00a9 Bullpadel",
       "source": "https://www.bullpadel.com/es/5674-pala-bullpadel-hack-04-26.html",
       "licence": "pendiente"
     },
     "bullpadel-neuron-02-2026": {
       "src": "/images/rackets/real/bullpadel-neuron-02-2026.jpg",
-      "credit": "© Bullpadel",
+      "credit": "\u00a9 Bullpadel",
       "source": "https://www.bullpadel.com/es/palas/5966-pala-bullpadel-neuron-02-pp26.html",
       "licence": "pendiente"
     },
     "bullpadel-vertex-05-2026": {
       "src": "/images/rackets/real/bullpadel-vertex-05-2026.jpg",
-      "credit": "© Bullpadel",
+      "credit": "\u00a9 Bullpadel",
       "source": "https://www.bullpadel.com/es/5677-pala-bullpadel-vertex-05.html",
       "licence": "pendiente"
     },
     "head-bolt-2026": {
       "src": "/images/rackets/real/head-bolt-2026.webp",
-      "credit": "© HEAD",
+      "credit": "\u00a9 HEAD",
       "source": "https://www.head.com/es_ES/product/bolt-2026-rd-bk-226206-cp",
       "licence": "pendiente"
     },
     "nox-at10-genius-12k-xtrem-2026": {
       "src": "/images/rackets/real/nox-at10-genius-12k-xtrem-2026.png",
-      "credit": "© NOX Sport",
+      "credit": "\u00a9 NOX Sport",
       "source": "https://noxsport.com/en/products/pala-at10-genius-12k-alum-xtrem-2026-by-agustin-tapia",
       "licence": "pendiente"
     },
     "nox-at10-genius-18k-2026": {
       "src": "/images/rackets/real/nox-at10-genius-18k-2026.png",
-      "credit": "© NOX Sport",
+      "credit": "\u00a9 NOX Sport",
       "source": "https://noxsport.com/en/products/pala-at10-genius-18k-alum-2026-by-agustin-tapia",
       "licence": "pendiente"
     },
     "nox-at10-genius-attack-18k-2026": {
       "src": "/images/rackets/real/nox-at10-genius-attack-18k-2026.png",
-      "credit": "© NOX Sport",
+      "credit": "\u00a9 NOX Sport",
       "source": "https://noxsport.com/en/products/pala-at10-genius-attack-18k-alum-2026-by-agustin-tapia",
       "licence": "pendiente"
     },
     "nox-ea10-ventus-attack-12k-2026": {
       "src": "/images/rackets/real/nox-ea10-ventus-attack-12k-2026.png",
-      "credit": "© NOX Sport",
+      "credit": "\u00a9 NOX Sport",
       "source": "https://noxsport.com/en/products/ea10-ventus-attack-12k-xtrem-by-edu-alonso",
       "licence": "pendiente"
     },
     "nox-ml10-ventus-control-3k-2026": {
       "src": "/images/rackets/real/nox-ml10-ventus-control-3k-2026.png",
-      "credit": "© NOX Sport",
+      "credit": "\u00a9 NOX Sport",
       "source": "https://noxsport.com/en/products/pala-ml10-ventus-3k-by-miguel-lamperti",
       "licence": "pendiente"
     },
     "nox-x-one-2026": {
       "src": "/images/rackets/real/nox-x-one-2026.png",
-      "credit": "© NOX Sport",
+      "credit": "\u00a9 NOX Sport",
       "source": "https://noxsport.com/en/products/pala-x-one",
       "licence": "pendiente"
     },
     "siux-diablo-pro-2026": {
       "src": "/images/rackets/real/siux-diablo-pro-2026.jpg",
-      "credit": "© Siux",
+      "credit": "\u00a9 Siux",
       "source": "https://www.siuxpadel.com/products/siux-diablo-pro-2026-royal-blue",
       "licence": "pendiente"
     },
     "starvie-raptor-2026": {
       "src": "/images/rackets/real/starvie-raptor-2026.png",
-      "credit": "© StarVie",
+      "credit": "\u00a9 StarVie",
       "source": "https://starvie.com/products/raptor",
       "licence": "pendiente"
     },
     "wilson-bela-v3-2026": {
       "src": "/images/rackets/real/wilson-bela-v3-2026.jpg",
-      "credit": "© Wilson Sporting Goods",
+      "credit": "\u00a9 Wilson Sporting Goods",
       "source": "https://www.wilson.com/es-es/product/bela-v3-padel-wr18650",
+      "licence": "pendiente"
+    },
+    "nox-ml10-pro-cup-2023": {
+      "src": "/images/rackets/real/nox-ml10-pro-cup-2023.jpg",
+      "source": "https://www.padelnuestro.com/nox-ml10-pro-cup-luxury-series-23-31580-p",
+      "licence": "pendiente"
+    },
+    "head-gravity-pro-2024": {
+      "src": "/images/rackets/real/head-gravity-pro-2024.jpg",
+      "source": "https://www.padelnuestro.com/head-gravity-pro-2024-113828-p",
+      "licence": "pendiente"
+    },
+    "adidas-metalbone-carbon-ctrl-2024": {
+      "src": "/images/rackets/real/adidas-metalbone-carbon-ctrl-2024.jpg",
+      "source": "https://www.padelnuestro.com/adidas-metalbone-carbon-ctrl-3-3-2024-110143-p",
+      "licence": "pendiente"
+    },
+    "babolat-counter-viper-2025": {
+      "src": "/images/rackets/real/babolat-counter-viper-2025.png",
+      "source": "https://www.amazon.es/dp/B0DTTP72XK",
+      "licence": "pendiente"
+    },
+    "dunlop-aero-star-pro-2024": {
+      "src": "/images/rackets/real/dunlop-aero-star-pro-2024.jpg",
+      "source": "https://www.padelnuestro.com/dunlop-aero-star-pro-moyano-104752-p",
+      "licence": "pendiente"
+    },
+    "adidas-drive-2024": {
+      "src": "/images/rackets/real/adidas-drive-2024.png",
+      "source": "https://www.amazon.es/dp/B0CNWH1K6H",
+      "licence": "pendiente"
+    },
+    "wilson-blade-98-v9-2024": {
+      "src": "/images/rackets/real/wilson-blade-98-v9-2024.png",
+      "source": "https://www.amazon.es/dp/B0CTK5NFDS",
+      "licence": "pendiente"
+    },
+    "wilson-shift-99-2023": {
+      "src": "/images/rackets/real/wilson-shift-99-2023.png",
+      "source": "https://www.amazon.es/dp/B0FZVJXXFY",
+      "licence": "pendiente"
+    },
+    "babolat-pure-drive-2024": {
+      "src": "/images/rackets/real/babolat-pure-drive-2024.png",
+      "source": "https://www.amazon.es/dp/B0DQKQTHPQ",
+      "licence": "pendiente"
+    },
+    "head-speed-mp-2024": {
+      "src": "/images/rackets/real/head-speed-mp-2024.png",
+      "source": "https://www.amazon.es/dp/B0CRN7PSMK",
+      "licence": "pendiente"
+    },
+    "head-boom-mp-2024": {
+      "src": "/images/rackets/real/head-boom-mp-2024.png",
+      "source": "https://www.amazon.es/dp/B0CVRNGP4H",
+      "licence": "pendiente"
+    },
+    "tecnifibre-tfight-305-2023": {
+      "src": "/images/rackets/real/tecnifibre-tfight-305-2023.png",
+      "source": "https://www.amazon.es/dp/B0BS1FG76B",
+      "licence": "pendiente"
+    },
+    "head-ti-s6-2022": {
+      "src": "/images/rackets/real/head-ti-s6-2022.png",
+      "source": "https://www.amazon.es/dp/B00PETDZ4K",
+      "licence": "pendiente"
+    },
+    "bullpadel-vertex-04-comfort-2024": {
+      "src": "/images/rackets/real/bullpadel-vertex-04-comfort-2024.jpg",
+      "source": "https://www.padelnuestro.com/bullpadel-vertex-04-comfort-110866-p",
+      "licence": "pendiente"
+    },
+    "bullpadel-flow-2024": {
+      "src": "/images/rackets/real/bullpadel-flow-2024.jpg",
+      "source": "https://www.padelnuestro.com/bullpadel-flow-w-24-110860-p",
+      "licence": "pendiente"
+    },
+    "wilson-bela-pro-2024": {
+      "src": "/images/rackets/real/wilson-bela-pro-2024.jpg",
+      "source": "https://www.padelnuestro.com/wilson-bela-pro-v2-105138-p",
+      "licence": "pendiente"
+    },
+    "bullpadel-indiga-ctr-2024": {
+      "src": "/images/rackets/real/bullpadel-indiga-ctr-2024.jpg",
+      "source": "https://www.padelnuestro.com/bullpadel-indiga-ctr-2024-32438-p",
       "licence": "pendiente"
     }
   }
