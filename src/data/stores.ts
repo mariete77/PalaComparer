@@ -91,6 +91,19 @@ export const STORES: Store[] = [
   // comprobar antes que el dominio responde y que su buscador devuelve
   // resultados con el término del producto.
   {
+    id: "tennispro",
+    name: "Tennispro",
+    url: "https://www.tennispro.es",
+    // Magento. Buscador comprobado con "babolat pure aero": devuelve resultados
+    // reales y el <title> confirma el término, no como el de Padel Nuestro.
+    searchUrl: "https://www.tennispro.es/catalogsearch/result/?q={q}",
+    color: "#0d3b66",
+    sports: ["tenis"],
+    // 7,50 € por debajo de 49 €, gratis a partir de ahí.
+    shipping: 7.5,
+    freeShippingFrom: 49,
+  },
+  {
     id: "amazon",
     name: "Amazon",
     url: "https://www.amazon.es",

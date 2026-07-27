@@ -206,5 +206,47 @@
       "inStock": false,
       "scrapedAt": "2026-07-26T20:00:00.000Z"
     }
+  ],
+  "wilson-blade-98-v9-2024": [
+    {
+      "storeId": "tennispro",
+      "title": "RAQUETA BLADE 98 16*19 V9.0 (305 GR)",
+      "price": 197.95,
+      "listPrice": 280,
+      "url": "https://www.tennispro.es/raqueta-wilson-blade-98-16-19-v9-0-305-gr-702145.html",
+      "inStock": true,
+      "scrapedAt": "2026-07-27T20:30:00.000Z"
+    }
+  ],
+  "babolat-pure-drive-2024": [
+    {
+      "storeId": "tennispro",
+      "title": "RAQUETA BABOLAT PURE DRIVE (300 GR)",
+      "price": 174,
+      "listPrice": 269.95,
+      "url": "https://www.tennispro.es/raqueta-babolat-pure-drive-300-gr-737588.html",
+      "inStock": true,
+      "scrapedAt": "2026-07-27T20:30:00.000Z"
+    }
+  ],
+  "wilson-shift-99-2023": [
+    {
+      "storeId": "tennispro",
+      "title": "RAQUETA WILSON SHIFT 99 (300 GR)",
+      "price": 141.95,
+      "url": "https://www.tennispro.es/raqueta-wilson-shift-99-300-gr-658742.html",
+      "inStock": true,
+      "scrapedAt": "2026-07-27T20:30:00.000Z"
+    }
+  ],
+  "dunlop-cx-200-2024": [
+    {
+      "storeId": "tennispro",
+      "title": "RAQUETA DUNLOP CX 200 (305 GR)",
+      "price": 142,
+      "url": "https://www.tennispro.es/raqueta-dunlop-cx-200-305-gr-705159.html",
+      "inStock": true,
+      "scrapedAt": "2026-07-27T20:30:00.000Z"
+    }
   ]
 }
