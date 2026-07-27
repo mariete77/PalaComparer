@@ -111,6 +111,26 @@ interface RealOffer {
 const REAL_OFFERS = (realOffersData as Record<string, RealOffer>) ?? {};
 
 // ---------------------------------------------------------------------------
+// Datos reales del resto de tiendas (Firecrawl — ver docs/SCRAPING.md)
+// ---------------------------------------------------------------------------
+
+import realStoreOffersData from "./real-offers-stores.json";
+
+interface RealStoreOffer {
+  storeId: string;
+  title: string;
+  price: number;
+  /** PVP tachado en la tienda, si lo publica. Informativo. */
+  listPrice?: number;
+  url: string;
+  inStock: boolean;
+  scrapedAt: string;
+}
+
+const REAL_STORE_OFFERS =
+  (realStoreOffersData as Record<string, RealStoreOffer[]>) ?? {};
+
+// ---------------------------------------------------------------------------
 // Generación
 // ---------------------------------------------------------------------------
 
@@ -137,8 +157,23 @@ function buildOffers(product: Product): Offer[] {
     }
   }
 
-  // 2. Generar ofertas sintéticas para el resto de tiendas
-  for (const store of storesFor(product).filter((s) => s.id !== "amazon")) {
+  // 2. Precios reales scrapeados en el resto de tiendas
+  for (const real of REAL_STORE_OFFERS[product.id] ?? []) {
+    const store = STORES.find((s) => s.id === real.storeId);
+    if (!store) continue;
+    offers.push({
+      storeId: store.id,
+      price: real.price,
+      total: round2(totalWithShipping(store, real.price)),
+      url: real.url, // URL real de la ficha, no una búsqueda
+      inStock: real.inStock,
+      checkedDaysAgo: 0,
+    });
+  }
+
+  // 3. Generar ofertas sintéticas para las tiendas que no tengan precio real
+  const conPrecioReal = new Set(offers.map((o) => o.storeId));
+  for (const store of storesFor(product).filter((s) => !conPrecioReal.has(s.id) && s.id !== "amazon")) {
     const r = rng(hashSeed(`${product.id}:${store.id}`));
 
     // ~25% de las tiendas no listan el producto.

@@ -31,15 +31,19 @@ export const STORES: Store[] = [
     url: "https://www.padelnuestro.com",
     searchUrl: "https://www.padelnuestro.com/catalogsearch/result/?q={q}",
     color: "#e11d48",
-    sports: ["padel", "tenis"],
+    // Padel Nuestro no vende raquetas de tenis: su catálogo es pádel (y tenis
+    // playa). Solo aparece en el comparador de palas.
+    sports: ["padel"],
     shipping: 4.95,
     freeShippingFrom: 60,
   },
   {
     id: "padelpoint",
     name: "PádelPoint",
-    url: "https://www.padelpoint.es",
-    searchUrl: "https://www.padelpoint.es/catalogsearch/result/?q={q}",
+    // La tienda online es tiendapadelpoint.com (OpenCart). padelpoint.es es la
+    // web corporativa del club y no tiene buscador de productos.
+    url: "https://www.tiendapadelpoint.com",
+    searchUrl: "https://www.tiendapadelpoint.com/index.php?route=product/search&search={q}",
     color: "#0ea5e9",
     sports: ["padel"],
     shipping: 3.95,
@@ -48,9 +52,10 @@ export const STORES: Store[] = [
   {
     id: "time2padel",
     name: "Time2Pádel",
-    url: "https://www.time2padel.es",
-    searchUrl: "https://www.time2padel.es/search?q={q}",
-    color: "##8b5cf6",
+    // El dominio .es devuelve 421 (no está en el certificado); el bueno es .com.
+    url: "https://www.time2padel.com",
+    searchUrl: "https://www.time2padel.com/es/buscar?controller=search&s={q}",
+    color: "#8b5cf6",
     sports: ["padel"],
     shipping: 4.5,
     freeShippingFrom: 70,
@@ -58,8 +63,10 @@ export const STORES: Store[] = [
   {
     id: "streetpadel",
     name: "StreetPadel",
-    url: "https://www.streetpadel.es",
-    searchUrl: "https://www.streetpadel.es/buscar?q={q}",
+    // streetpadel.es redirige a .com (Shopify), donde la ruta de búsqueda es
+    // /search: /buscar daba 404.
+    url: "https://www.streetpadel.com",
+    searchUrl: "https://www.streetpadel.com/es/search?q={q}",
     color: "#f59e0b",
     sports: ["padel"],
     shipping: 4.9,
@@ -69,32 +76,20 @@ export const STORES: Store[] = [
     id: "decathlon",
     name: "Decathlon",
     url: "https://www.decathlon.es",
-    searchUrl: "https://www.decathlon.es/es/search?q={q}",
+    // Decathlon busca por `Ntt`. Con `?q=` la web ignora el término y te deja
+    // en la portada.
+    searchUrl: "https://www.decathlon.es/es/search?Ntt={q}",
     color: "#0082c3",
     sports: ["padel", "tenis"],
     shipping: 3.99,
     freeShippingFrom: 30,
   },
-  {
-    id: "tenisboutique",
-    name: "Tenis Boutique",
-    url: "https://www.tenisboutique.es",
-    searchUrl: "https://www.tenisboutique.es/catalogsearch/result/?q={q}",
-    color: "#16a34a",
-    sports: ["tenis"],
-    shipping: 4.95,
-    freeShippingFrom: 60,
-  },
-  {
-    id: "zonadetenis",
-    name: "Zona de Tenis",
-    url: "https://www.zonadetenis.com",
-    searchUrl: "https://www.zonadetenis.com/catalogsearch/result/?q={q}",
-    color: "#dc2626",
-    sports: ["tenis"],
-    shipping: 5.5,
-    freeShippingFrom: 90,
-  },
+  // Aquí había dos tiendas de tenis, "Tenis Boutique" (tenisboutique.es) y
+  // "Zona de Tenis" (zonadetenis.com). Ninguno de los dos dominios resuelve por
+  // DNS —tenisboutique.com sí existe pero Cloudflare lo da por caído—, así que
+  // enlazaban a la nada y se han eliminado. Si se añade una tienda de tenis,
+  // comprobar antes que el dominio responde y que su buscador devuelve
+  // resultados con el término del producto.
   {
     id: "amazon",
     name: "Amazon",
