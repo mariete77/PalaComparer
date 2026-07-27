@@ -12,20 +12,21 @@ npx tsx scripts/scrape-amazon.ts
 FIRECRAWL_API_KEY=fc-... npm run scrape:firecrawl
 ```
 
-El script lee `src/data/products.ts`, busca cada producto en Amazon ES y guarda los resultados en `src/data/real-offers.json`.
+El script de Amazon lee `src/data/products.ts`, busca cada producto en Amazon ES y guarda los resultados en `src/data/real-offers.json`.
 
 ## Cómo funciona
 
 ```
-products.ts (47 productos)
+products.ts (48 productos)
         ↓
-scripts/scrape-amazon.ts
-        ↓
-Amazon ES (búsqueda headless con Playwright)
-        ↓
-real-offers.json (precio real + URL real)
-        ↓
-offers.ts (integra datos reales en la web)
+scripts/scrape-amazon.ts          scripts/scrape-firecrawl.ts
+        ↓                                    ↓
+Amazon ES (búsqueda Playwright)    Padel Nuestro, Tennispro (Firecrawl)
+        ↓                                    ↓
+real-offers.json                   real-offers-stores.json
+        └──────────┬─────────────────────────┘
+                   ↓
+              offers.ts (integra datos reales en la web)
 ```
 
 ### 1. Productos (`src/data/products.ts`)
@@ -142,6 +143,28 @@ generación es un precio falso, igual que reasignar el de un id viejo:
   tienda no lo dice, confírmalo por el colorway o la descripción antes de darlo
   por bueno.
 
+#### Por qué no vale recorrer la categoría de la marca
+
+Hubo un `scripts/scrape-padelnuestro.ts` que sacaba los precios de las páginas
+de categoría (`/palas-padel/{marca}`) y llegaba a 32 de 48 productos, bastante
+más que los 19 de aquí. Se retiró: **17 de sus 27 entradas vivas apuntaban a
+otro producto**, porque recorrer la categoría te da los modelos de la marca y
+el emparejamiento acaba cayendo en el más parecido.
+
+Muestra de lo que guardaba:
+
+| id | precio que le asignaba | lo que era en realidad |
+|---|---|---|
+| `head-speed-mp-2024` (raqueta de tenis) | 119,95 € | "HEAD SPEED PRO X 2023", una pala de pádel |
+| `wilson-blade-98-v9-2024` (tenis) | 189,95 € | "WILSON BLADE V4 PADEL" |
+| `nox-at10-genius-12k-xtrem-2026` | 176,90 € | la AT10 Genius 18K de 2025 |
+| `babolat-counter-viper-2025` y `babolat-technical-viper-2025` | 274,95 € | los dos, el mismo "VIPER JUAN LEBRON 3.0" |
+
+La categoría de la marca sigue siendo útil para **encontrar la URL española**
+de una ficha concreta (ver arriba), pero el precio se lee de la ficha y solo si
+el título casa con el modelo. Cobertura menor y correcta antes que mayor e
+inventada.
+
 ### El script (`scripts/scrape-firecrawl.ts`)
 
 Automatiza el procedimiento de arriba contra la API REST de Firecrawl. Necesita
@@ -211,6 +234,9 @@ Para forzar la actualización de TODOS los precios:
 # Borrar el cache y re-scrapear todo
 rm src/data/real-offers.json
 npx tsx scripts/scrape-amazon.ts
+
+# Resto de tiendas (--refresh revisita las que ya tienen precio)
+FIRECRAWL_API_KEY=fc-... npm run scrape:firecrawl -- --refresh
 ```
 
 Para actualizar solo un producto concreto, borrar su entrada del JSON y re-ejecutar el script.
@@ -258,6 +284,7 @@ Lo que queda sin precio y por qué:
 - [ ] Más tiendas de **tenis**: con Tennispro solo casan 4 de 17 raquetas. El
       buscador de Smashinn (tradeinn) se genera por JS y no vale como
       `searchUrl`, aunque sus fichas sí son scrapeables
+- [ ] Time2Pádel, que se quedó sin scrapear
 - [ ] Descargar imágenes reales de producto
 - [ ] Cron job semanal automático
 - [ ] Patchright (undetected Playwright fork) para evitar CAPTCHAs
