@@ -8,6 +8,7 @@
     "start": "next start",
     "lint": "eslint",
     "gen:images": "tsx scripts/gen-images.ts",
+    "scrape:firecrawl": "tsx scripts/scrape-firecrawl.ts",
     "import:images": "tsx scripts/import-images.mts",
     "gen:logo": "tsx scripts/gen-logo.mts",
     "images:scaffold": "tsx scripts/scaffold-sources.mts"

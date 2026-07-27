@@ -7,6 +7,9 @@ Pipeline para obtener precios y URLs reales de tiendas de pádel/tenis.
 ```bash
 # Actualizar precios de Amazon ES (todos los productos)
 npx tsx scripts/scrape-amazon.ts
+
+# Actualizar precios del resto de tiendas (Padel Nuestro, Tennispro)
+FIRECRAWL_API_KEY=fc-... npm run scrape:firecrawl
 ```
 
 El script lee `src/data/products.ts`, busca cada producto en Amazon ES y guarda los resultados en `src/data/real-offers.json`.
@@ -139,6 +142,35 @@ generación es un precio falso, igual que reasignar el de un id viejo:
   tienda no lo dice, confírmalo por el colorway o la descripción antes de darlo
   por bueno.
 
+### El script (`scripts/scrape-firecrawl.ts`)
+
+Automatiza el procedimiento de arriba contra la API REST de Firecrawl. Necesita
+`FIRECRAWL_API_KEY` (la del MCP es OAuth y no sirve aquí; se saca en
+<https://firecrawl.dev/app/api-keys>).
+
+```bash
+npm run scrape:firecrawl -- --store=tennispro   # solo una tienda
+npm run scrape:firecrawl -- --only=head-bolt-2026,nox-x-one-2026
+npm run scrape:firecrawl -- --refresh           # revisita los ya guardados
+npm run scrape:firecrawl -- --dry-run           # sin escribir el JSON
+```
+
+Las tiendas se declaran en `TARGETS`, con el deporte que venden y los
+fragmentos de URL que hay que descartar (`/int/`, `-test-`, `usada`, packs…).
+Por cada producto hace `map` con `search` + `scrape` en markdown: dos créditos
+por producto, no cinco.
+
+Tres cosas que el script no se salta:
+
+1. **El título tiene que casar** con marca y modelo (mismo criterio que el
+   scraper de Amazon) tanto en el resultado de `map` como en la página ya
+   descargada. Si la tienda redirige a la portada, el segundo control lo pilla.
+2. **Sin precio legible no se guarda nada**, ni se inventa desde el listado.
+3. **Poda las huérfanas** al arrancar, igual que el de Amazon.
+
+Respeta un límite de 11 peticiones/minuto y obedece el `Retry-After` de los 429.
+Las funciones de parseo se exportan para poder probarlas sin gastar créditos.
+
 ## Estado de las tiendas (comprobado el 26/07/2026)
 
 Cada dominio y cada URL de búsqueda de `stores.ts` se probó con Firecrawl
@@ -195,41 +227,37 @@ Para actualizar solo un producto concreto, borrar su entrada del JSON y re-ejecu
 
 ## Resultados actuales
 
-- ✅ **41 de 48 productos** con precio real de Amazon ES
+- ✅ **36 de 48 productos** con precio real de Amazon ES (las 5 que perdieron su
+  id al corregir el año se podaron y hay que volver a scrapearlas)
 - ✅ **19 de las 31 palas de pádel** con precio real de Padel Nuestro (Firecrawl)
-- ❌ **3 sin ningún precio real**, y no por fallo del scraper:
-  - `adidas-rx-carbon-2024` — Adidas no sacó RX Carbon en 2024. Existe la de
-    2023 y la RX Series; el año del catálogo parece equivocado.
-  - `siux-diablo-revolution-2024` — la "Diablo Revolution 2 12K" no se vende en
-    tiendas ES; la de 2024 es la Diablo Revolution **Pro 3**.
-  - `yonex-vcore-98-2023` — está en Amazon (ASIN B0BSNNC7T5, versión Scarlet)
-    pero sin precio ni stock. Decathlon tiene una VCore 98 a 274,99 € que no
-    confirma generación.
+- ✅ **4 de las 17 raquetas de tenis** con precio real de Tennispro
 
-### Palas que Padel Nuestro no lista
+### El aviso de "esta pala no existe" hay que hacerle caso
 
-No es un fallo del scraper: la tienda ya no vende ese modelo/temporada. Varias
-apuntan a errores de año en `products.ts`, que conviene revisar:
+La primera pasada dejó una lista de productos que ninguna tienda listaba. No era
+un fallo del scraper: **el año del catálogo estaba mal en 6 de ellos**, y se
+corrigieron pasando cada uno al modelo de la temporada actual (ver el commit
+"Catálogo: corrige 7 palas que llevaban un año que no existía").
 
-| Producto | Qué hay en la tienda |
-|----------|----------------------|
-| `adidas-metalbone-31-2024` | La gama 2024 de Adidas es la **3.3**; la 3.1 es de temporadas anteriores |
-| `black-crown-piton-2024` | Solo Piton 11 **Soft 2023**, Piton 14 y Piton Attack 15K 2024 |
-| `head-speed-pro-2024` | Head Speed Pro **2023** y **2025**; no hay 2024 |
-| `head-extreme-motion-2024` | Extreme Motion **2023** y **2025**; no hay 2024 |
-| `head-flash-2024` | Ninguna Flash en catálogo |
-| `starvie-aquila-2024` | Ninguna Aquila Space Pro |
-| `wilson-bela-elite-2024` | Wilson Bela Pro V2/V2.5, LT y LS; no hay "Bela Elite" |
+Lo que queda sin precio y por qué:
+
+| Producto | Motivo |
+|----------|--------|
+| `yonex-vcore-98-2023` | En Amazon sin precio ni stock. La que venden las tiendas es la Blast Blue / Ruby Red, otra generación |
+| `head-speed-mp-2024`, `head-boom-mp-2024` | Tennispro solo tiene la generación **2026** |
+| `babolat-pure-strike-97-2024` | La suya es la **2025**, y con patrón 16x20 en vez de 16x19 |
+| `wilson-pro-staff-97-v14-2023`, `wilson-clash-100-v2-2022`, `babolat-pure-aero-2023`, `tecnifibre-tfight-305-2023` | Fuera del catálogo actual de Tennispro |
 | `babolat-technical-viper-2025`, `babolat-technical-veron-2025`, `babolat-counter-viper-2025` | La web española ya solo tiene la generación **3.0 / 2.6** (2026). Las 2025 siguen en `/int/`, pero es otra tienda y otra generación |
 
 ## Ideas futuras
 
-- [ ] Automatizar el flujo de Firecrawl en un script (`scripts/scrape-firecrawl.ts`)
-      con `FIRECRAWL_API_KEY`: hoy se hace a mano desde el MCP
+- [x] Automatizar el flujo de Firecrawl en `scripts/scrape-firecrawl.ts` con
+      `FIRECRAWL_API_KEY` — falta estrenarlo contra la API con una clave real
+- [ ] Volver a scrapear Amazon para los 7 ids nuevos del catálogo 2026
 - [ ] Scraping de Decathlon ES (marketplace: ojo al vendedor y a la generación)
-- [ ] Precios reales para las raquetas de **tenis**: hoy solo tienen Amazon,
-      porque Padel Nuestro no vende tenis y las dos tiendas de tenis que había
-      en `stores.ts` no existían
+- [ ] Más tiendas de **tenis**: con Tennispro solo casan 4 de 17 raquetas. El
+      buscador de Smashinn (tradeinn) se genera por JS y no vale como
+      `searchUrl`, aunque sus fichas sí son scrapeables
 - [ ] Descargar imágenes reales de producto
 - [ ] Cron job semanal automático
 - [ ] Patchright (undetected Playwright fork) para evitar CAPTCHAs
