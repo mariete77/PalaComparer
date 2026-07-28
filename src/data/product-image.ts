@@ -62,6 +62,14 @@ export function hasRealImage(productId: string): boolean {
   return productId in REAL_IMAGES;
 }
 
+/**
+ * Filtra un array de productos y devuelve solo los que tienen foto real.
+ * Se usa en catálogos públicos para que nunca aparezca una card con SVG placeholder.
+ */
+export function withRealImage<T extends { id: string }>(products: T[]): T[] {
+  return products.filter((p) => p.id in REAL_IMAGES);
+}
+
 /** Cuántos productos tienen ya foto real. Útil para medir el avance. */
 export function realImageCount(): number {
   return Object.keys(REAL_IMAGES).length;

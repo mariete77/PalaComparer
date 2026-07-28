@@ -1,6 +1,7 @@
 import Catalog from "@/components/Catalog";
 import { bySport } from "@/data/products";
 import { buildPriceIndex } from "@/data/offers";
+import { withRealImage } from "@/data/product-image";
 import { Metadata } from "next";
 
 export const metadata: Metadata = {
@@ -10,7 +11,7 @@ export const metadata: Metadata = {
 };
 
 export default function PalasPage() {
-  const products = bySport("padel");
+  const products = withRealImage(bySport("padel"));
   const priceIndex = buildPriceIndex(products);
   return (
     <div className="max-w-7xl mx-auto px-6 py-10">

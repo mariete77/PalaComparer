@@ -23,7 +23,7 @@ export default function ProductCard({
   const specs: { icon: string; label: string; value: string }[] =
     product.sport === "padel" && product.padel
       ? [
-          { icon: "⚖️", label: "Peso", value: product.padel.weight.replace(" g", "g").replace(" (+12g sistema)", "") },
+          { icon: "⚖️", label: "Peso", value: product.padel.weight.replace(/\s*/g, "").replace(/\(+.*\)/, "") },
           { icon: "🎯", label: "Balance", value: cap(product.padel.balance) },
         ]
       : product.tenis
@@ -66,13 +66,13 @@ export default function ProductCard({
           {specs.length > 0 && (
             <div className="grid grid-cols-2 gap-1.5 mt-3 mb-3">
               {specs.map((s) => (
-                <div key={s.label} className="spec-cell px-2 py-1.5 flex items-center gap-1.5 overflow-hidden">
-                  <span className="text-xs shrink-0">{s.icon}</span>
+                <div key={s.label} className="spec-cell px-1.5 py-1 sm:px-2 sm:py-1.5 flex items-center gap-1 sm:gap-1.5 overflow-hidden">
+                  <span className="text-[10px] sm:text-xs shrink-0">{s.icon}</span>
                   <div className="min-w-0 flex-1">
-                    <div className="text-[8px] sm:text-[9px] text-muted font-bold uppercase tracking-wider leading-none">
+                    <div className="text-[7px] sm:text-[9px] text-muted font-bold uppercase tracking-wider leading-none truncate">
                       {s.label}
                     </div>
-                    <div className="text-[11px] sm:text-xs text-on-surface font-semibold leading-tight">
+                    <div className="text-[10px] sm:text-xs text-on-surface font-semibold leading-tight truncate">
                       {s.value}
                     </div>
                   </div>

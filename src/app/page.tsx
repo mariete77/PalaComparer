@@ -1,19 +1,17 @@
 import Link from "next/link";
 import { PRODUCTS } from "@/data/products";
 import { getBestPrice } from "@/data/offers";
+import { withRealImage } from "@/data/product-image";
 import { ARTICLES, KIND_LABEL, formatArticleDate } from "@/data/news";
 import ProductCard from "@/components/ProductCard";
 
 export default function Home() {
-  const destacadosPadel = PRODUCTS.filter(
-    (p) =>
-      p.sport === "padel" &&
-      ["nox-at10-genius-18k-2026", "bullpadel-vertex-05-2026", "head-extreme-pro-2024", "adidas-metalbone-2026"].includes(p.id)
-  );
-  const destacadosTenis = PRODUCTS.filter(
-    (p) =>
-      p.sport === "tenis" &&
-      ["babolat-pure-aero-2023", "wilson-blade-98-v9-2024", "head-speed-mp-2024", "yonex-ezone-100-2022"].includes(p.id)
+  const destacadosPadel = withRealImage(
+    PRODUCTS.filter(
+      (p) =>
+        p.sport === "padel" &&
+        ["nox-at10-genius-18k-2026", "bullpadel-vertex-05-2026", "siux-diablo-pro-2026", "starvie-raptor-2026"].includes(p.id)
+    )
   );
   const ultimasNoticias = ARTICLES.slice(0, 3);
 
@@ -25,7 +23,7 @@ export default function Home() {
         <div className="max-w-7xl mx-auto px-6 pt-20 pb-16 text-center relative">
           <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full border border-padel/30 bg-padel/10 text-padel text-xs font-semibold mb-6">
             <span className="w-1.5 h-1.5 rounded-full bg-padel animate-pulse" />
-            48 palas y raquetas · 2022-2026
+            {PRODUCTS.length} modelos · 2022-2026
           </div>
           <h1 className="font-display text-5xl sm:text-7xl font-bold tracking-tight leading-[1.05]">
             Encuentra tu
@@ -90,21 +88,21 @@ export default function Home() {
         </div>
       </section>
 
-      {/* TENIS DESTACADO */}
+      {/* TENIS — PRÓXIMAMENTE */}
       <section className="max-w-7xl mx-auto px-6 mb-16">
         <div className="flex items-end justify-between mb-6">
           <div>
             <p className="text-xs font-bold text-tenis uppercase tracking-wider mb-1">Tenis</p>
             <h2 className="font-display text-3xl font-bold">Raquetas destacadas</h2>
           </div>
-          <Link href="/raquetas" className="text-sm text-tenis hover:underline">
-            Ver todas →
-          </Link>
         </div>
-        <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
-          {destacadosTenis.map((p) => (
-            <ProductCard key={p.id} product={p} bestPrice={getBestPrice(p.id)} />
-          ))}
+        <div className="card-glow rounded-2xl bg-white/[0.02] p-10 text-center">
+          <div className="text-5xl mb-4">🎾</div>
+          <h3 className="font-display text-xl font-bold mb-2">Catálogo de tenis en preparación</h3>
+          <p className="text-muted text-sm max-w-md mx-auto">
+            Estamos consiguiendo fotos reales de cada raqueta.Cuando el catálogo esté completo con imágenes de verdad, lo abriremos.
+            Mientras tanto, usa el comparador con las palas de pádel.
+          </p>
         </div>
       </section>
 
