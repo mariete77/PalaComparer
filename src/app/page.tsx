@@ -1,17 +1,19 @@
 import Link from "next/link";
 import { PRODUCTS } from "@/data/products";
 import { getBestPrice } from "@/data/offers";
-import { withRealImage } from "@/data/product-image";
 import { ARTICLES, KIND_LABEL, formatArticleDate } from "@/data/news";
 import ProductCard from "@/components/ProductCard";
 
 export default function Home() {
-  const destacadosPadel = withRealImage(
-    PRODUCTS.filter(
-      (p) =>
-        p.sport === "padel" &&
-        ["nox-at10-genius-18k-2026", "bullpadel-vertex-05-2026", "siux-diablo-pro-2026", "starvie-raptor-2026"].includes(p.id)
-    )
+  const destacadosPadel = PRODUCTS.filter(
+    (p) =>
+      p.sport === "padel" &&
+      ["nox-at10-genius-18k-2026", "bullpadel-vertex-05-2026", "siux-diablo-pro-2026", "starvie-raptor-2026"].includes(p.id)
+  );
+  const destacadosTenis = PRODUCTS.filter(
+    (p) =>
+      p.sport === "tenis" &&
+      ["babolat-pure-aero-2023", "wilson-blade-98-v9-2024", "head-speed-mp-2024", "yonex-ezone-100-2022"].includes(p.id)
   );
   const ultimasNoticias = ARTICLES.slice(0, 3);
 
@@ -88,21 +90,21 @@ export default function Home() {
         </div>
       </section>
 
-      {/* TENIS — PRÓXIMAMENTE */}
+      {/* TENIS DESTACADO */}
       <section className="max-w-7xl mx-auto px-6 mb-16">
         <div className="flex items-end justify-between mb-6">
           <div>
             <p className="text-xs font-bold text-tenis uppercase tracking-wider mb-1">Tenis</p>
             <h2 className="font-display text-3xl font-bold">Raquetas destacadas</h2>
           </div>
+          <Link href="/raquetas" className="text-sm text-tenis hover:underline">
+            Ver todas →
+          </Link>
         </div>
-        <div className="card-glow rounded-2xl bg-white/[0.02] p-10 text-center">
-          <div className="text-5xl mb-4">🎾</div>
-          <h3 className="font-display text-xl font-bold mb-2">Catálogo de tenis en preparación</h3>
-          <p className="text-muted text-sm max-w-md mx-auto">
-            Estamos consiguiendo fotos reales de cada raqueta.Cuando el catálogo esté completo con imágenes de verdad, lo abriremos.
-            Mientras tanto, usa el comparador con las palas de pádel.
-          </p>
+        <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
+          {destacadosTenis.map((p) => (
+            <ProductCard key={p.id} product={p} bestPrice={getBestPrice(p.id)} />
+          ))}
         </div>
       </section>
 
