@@ -466,5 +466,185 @@
     "asin": null,
     "inStock": true,
     "scrapedAt": "2026-07-29T22:45:00.000Z"
+  },
+  "drop-shot-conqueror-attack-2-0-2025": {
+    "productId": "drop-shot-conqueror-attack-2-0-2025",
+    "title": "Drop Shot Conqueror Attack 2.0 2025",
+    "price": 224.95,
+    "url": "https://www.padelnuestro.com/palas-padel/drop-shot",
+    "asin": null,
+    "inStock": true,
+    "scrapedAt": "2026-07-29T23:00:00.000Z"
+  },
+  "drop-shot-explorer-pro-attack-2-0-2025": {
+    "productId": "drop-shot-explorer-pro-attack-2-0-2025",
+    "title": "Drop Shot Explorer Pro Attack 2.0 2025",
+    "price": 229.95,
+    "url": "https://www.padelnuestro.com/palas-padel/drop-shot",
+    "asin": null,
+    "inStock": true,
+    "scrapedAt": "2026-07-29T23:00:00.000Z"
+  },
+  "drop-shot-axion-attack-1-0-2025": {
+    "productId": "drop-shot-axion-attack-1-0-2025",
+    "title": "Drop Shot Axion Attack 1.0 2025",
+    "price": 157.95,
+    "url": "https://www.padelnuestro.com/palas-padel/drop-shot",
+    "asin": null,
+    "inStock": true,
+    "scrapedAt": "2026-07-29T23:00:00.000Z"
+  },
+  "royal-padel-whip-extreme-2026": {
+    "productId": "royal-padel-whip-extreme-2026",
+    "title": "Royal Padel Whip Extreme 2026",
+    "price": 231.95,
+    "url": "https://www.padelnuestro.com/palas-padel/royal-padel",
+    "asin": null,
+    "inStock": true,
+    "scrapedAt": "2026-07-29T23:00:00.000Z"
+  },
+  "royal-padel-rp-r30-golden-white-2025": {
+    "productId": "royal-padel-rp-r30-golden-white-2025",
+    "title": "Royal Padel RP R30 Golden White 2025",
+    "price": 239.95,
+    "url": "https://www.padelnuestro.com/palas-padel/royal-padel",
+    "asin": null,
+    "inStock": true,
+    "scrapedAt": "2026-07-29T23:00:00.000Z"
+  },
+  "royal-padel-rp-fury-2026": {
+    "productId": "royal-padel-rp-fury-2026",
+    "title": "Royal Padel RP Fury 2026",
+    "price": 261.95,
+    "url": "https://www.padelnuestro.com/palas-padel/royal-padel",
+    "asin": null,
+    "inStock": true,
+    "scrapedAt": "2026-07-29T23:00:00.000Z"
+  },
+  "akkeron-black-diablo-pro-2025": {
+    "productId": "akkeron-black-diablo-pro-2025",
+    "title": "Akkeron Black Diablo Pro 2025",
+    "price": 139.95,
+    "url": "https://www.padelnuestro.com/palas-padel/akkeron",
+    "asin": null,
+    "inStock": true,
+    "scrapedAt": "2026-07-29T23:00:00.000Z"
+  },
+  "akkeron-black-predator-pro-2025": {
+    "productId": "akkeron-black-predator-pro-2025",
+    "title": "Akkeron Black Predator Pro 2025",
+    "price": 139.95,
+    "url": "https://www.padelnuestro.com/palas-padel/akkeron",
+    "asin": null,
+    "inStock": true,
+    "scrapedAt": "2026-07-29T23:00:00.000Z"
+  },
+  "bullpadel-xplo-premier-padel-2026": {
+    "productId": "bullpadel-xplo-premier-padel-2026",
+    "title": "Bullpadel XPLO Premier Pádel 2026",
+    "price": 239.95,
+    "url": "https://www.padelnuestro.com/palas-padel/bullpadel",
+    "asin": null,
+    "inStock": true,
+    "scrapedAt": "2026-07-29T23:00:00.000Z"
+  },
+  "bullpadel-vertex-05-geo-premier-padel-2026": {
+    "productId": "bullpadel-vertex-05-geo-premier-padel-2026",
+    "title": "Bullpadel Vertex 05 GEO Premier Pádel 2026",
+    "price": 244.95,
+    "url": "https://www.padelnuestro.com/palas-padel/bullpadel",
+    "asin": null,
+    "inStock": true,
+    "scrapedAt": "2026-07-29T23:00:00.000Z"
+  },
+  "bullpadel-indiga-power-2026": {
+    "productId": "bullpadel-indiga-power-2026",
+    "title": "Bullpadel Indiga Power 2026",
+    "price": 294.95,
+    "url": "https://www.padelnuestro.com/palas-padel/bullpadel",
+    "asin": null,
+    "inStock": true,
+    "scrapedAt": "2026-07-29T23:00:00.000Z"
+  },
+  "head-coello-pro-2026": {
+    "productId": "head-coello-pro-2026",
+    "title": "Head Coello Pro 2026",
+    "price": 264.95,
+    "url": "https://www.padelnuestro.com/palas-padel/head",
+    "asin": null,
+    "inStock": true,
+    "scrapedAt": "2026-07-29T23:00:00.000Z"
+  },
+  "head-coello-motion-2026": {
+    "productId": "head-coello-motion-2026",
+    "title": "Head Coello Motion 2026",
+    "price": 264.95,
+    "url": "https://www.padelnuestro.com/palas-padel/head",
+    "asin": null,
+    "inStock": true,
+    "scrapedAt": "2026-07-29T23:00:00.000Z"
+  },
+  "head-extreme-one-x-2025": {
+    "productId": "head-extreme-one-x-2025",
+    "title": "Head Extreme One X 2025",
+    "price": 199.95,
+    "url": "https://www.padelnuestro.com/palas-padel/head",
+    "asin": null,
+    "inStock": true,
+    "scrapedAt": "2026-07-29T23:00:00.000Z"
+  },
+  "adidas-crossit-carbon-2026": {
+    "productId": "adidas-crossit-carbon-2026",
+    "title": "Adidas Cross IT Carbon 2026",
+    "price": 219.95,
+    "url": "https://www.padelnuestro.com/palas-padel/adidas",
+    "asin": null,
+    "inStock": true,
+    "scrapedAt": "2026-07-29T23:00:00.000Z"
+  },
+  "adidas-arrow-hit-attk-2026": {
+    "productId": "adidas-arrow-hit-attk-2026",
+    "title": "Adidas Arrow HIT ATTK 2026",
+    "price": 274.95,
+    "url": "https://www.padelnuestro.com/palas-padel/adidas",
+    "asin": null,
+    "inStock": true,
+    "scrapedAt": "2026-07-29T23:00:00.000Z"
+  },
+  "siux-electra-pro-2026": {
+    "productId": "siux-electra-pro-2026",
+    "title": "Siux Electra Pro Fire Red 2026",
+    "price": 197.95,
+    "url": "https://www.padelnuestro.com/palas-padel/siux",
+    "asin": null,
+    "inStock": true,
+    "scrapedAt": "2026-07-29T23:00:00.000Z"
+  },
+  "siux-valkiria-pro-2026": {
+    "productId": "siux-valkiria-pro-2026",
+    "title": "Siux Valkiria Pro 2026",
+    "price": 261.95,
+    "url": "https://www.padelnuestro.com/palas-padel/siux",
+    "asin": null,
+    "inStock": true,
+    "scrapedAt": "2026-07-29T23:00:00.000Z"
+  },
+  "starvie-triton-power-2025": {
+    "productId": "starvie-triton-power-2025",
+    "title": "StarVie Triton Power+ 2025",
+    "price": 149.95,
+    "url": "https://www.padelnuestro.com/palas-padel/starvie",
+    "asin": null,
+    "inStock": true,
+    "scrapedAt": "2026-07-29T23:00:00.000Z"
+  },
+  "nox-nextgen-pro-attack-12k-2026": {
+    "productId": "nox-nextgen-pro-attack-12k-2026",
+    "title": "Nox NextGen Pro Attack 12K NFA Series 2026",
+    "price": 149.95,
+    "url": "https://www.padelnuestro.com/palas-padel/nox",
+    "asin": null,
+    "inStock": true,
+    "scrapedAt": "2026-07-29T23:00:00.000Z"
   }
 }
