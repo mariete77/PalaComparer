@@ -1,0 +1,22 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 300" width="400" height="600">
+  <defs>
+    <linearGradient id="g" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#ea580c"/>
+      <stop offset="100%" stop-color="#fb923c"/>
+    </linearGradient>
+    <linearGradient id="bg" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#1e293b"/>
+      <stop offset="100%" stop-color="#0f172a"/>
+    </linearGradient>
+    <filter id="s"><feDropShadow dx="0" dy="6" stdDeviation="10" flood-color="#ea580c" flood-opacity="0.4"/></filter>
+  </defs>
+  <rect width="200" height="300" fill="url(#bg)"/>
+  <ellipse cx="100" cy="150" rx="90" ry="130" fill="#ea580c" opacity="0.06"/>
+  <g filter="url(#s)">
+    <path d="M100 20 C 45 20, 25 70, 25 130 C 25 195, 60 230, 100 230 C 140 230, 175 195, 175 130 C 175 70, 155 20, 100 20 Z" fill="url(#g)" stroke="rgba(255,255,255,0.2)" stroke-width="2"/>
+    <circle cx="50" cy="60" r="4" fill="rgba(15,23,42,0.7)"/><circle cx="75" cy="60" r="4" fill="rgba(15,23,42,0.7)"/><circle cx="100" cy="60" r="4" fill="rgba(15,23,42,0.7)"/><circle cx="125" cy="60" r="4" fill="rgba(15,23,42,0.7)"/><circle cx="150" cy="60" r="4" fill="rgba(15,23,42,0.7)"/><circle cx="62" cy="90" r="4" fill="rgba(15,23,42,0.7)"/><circle cx="87" cy="90" r="4" fill="rgba(15,23,42,0.7)"/><circle cx="112" cy="90" r="4" fill="rgba(15,23,42,0.7)"/><circle cx="137" cy="90" r="4" fill="rgba(15,23,42,0.7)"/><circle cx="162" cy="90" r="4" fill="rgba(15,23,42,0.7)"/><circle cx="50" cy="120" r="4" fill="rgba(15,23,42,0.7)"/><circle cx="75" cy="120" r="4" fill="rgba(15,23,42,0.7)"/><circle cx="100" cy="120" r="4" fill="rgba(15,23,42,0.7)"/><circle cx="125" cy="120" r="4" fill="rgba(15,23,42,0.7)"/><circle cx="150" cy="120" r="4" fill="rgba(15,23,42,0.7)"/><circle cx="62" cy="150" r="4" fill="rgba(15,23,42,0.7)"/><circle cx="87" cy="150" r="4" fill="rgba(15,23,42,0.7)"/><circle cx="112" cy="150" r="4" fill="rgba(15,23,42,0.7)"/><circle cx="137" cy="150" r="4" fill="rgba(15,23,42,0.7)"/><circle cx="162" cy="150" r="4" fill="rgba(15,23,42,0.7)"/><circle cx="50" cy="180" r="4" fill="rgba(15,23,42,0.7)"/><circle cx="75" cy="180" r="4" fill="rgba(15,23,42,0.7)"/><circle cx="100" cy="180" r="4" fill="rgba(15,23,42,0.7)"/><circle cx="125" cy="180" r="4" fill="rgba(15,23,42,0.7)"/><circle cx="150" cy="180" r="4" fill="rgba(15,23,42,0.7)"/><circle cx="62" cy="210" r="4" fill="rgba(15,23,42,0.7)"/><circle cx="87" cy="210" r="4" fill="rgba(15,23,42,0.7)"/><circle cx="112" cy="210" r="4" fill="rgba(15,23,42,0.7)"/>
+    <rect x="92" y="228" width="16" height="60" rx="4" fill="#1f2937"/>
+       <rect x="88" y="285" width="24" height="8" rx="2" fill="#111827"/>
+  </g>
+  <text x="100" y="140" text-anchor="middle" font-family="system-ui,sans-serif" font-weight="800" font-size="15" fill="#fff" letter-spacing="2" opacity="0.95">KOMBAT</text>
+</svg>

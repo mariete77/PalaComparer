@@ -15,6 +15,10 @@ const BRAND_COLORS: Record<string, { primary: string; accent: string }> = {
   Dunlop: { primary: "#65a30d", accent: "#a3e635" },
   Yonex: { primary: "#166534", accent: "#4ade80" },
   Tecnifibre: { primary: "#b91c1c", accent: "#f87171" },
+  Varlion: { primary: "#eab308", accent: "#facc15" },
+  "Drop Shot": { primary: "#1d4ed8", accent: "#60a5fa" },
+  "Royal Padel": { primary: "#be123c", accent: "#f43f5e" },
+  Kombat: { primary: "#ea580c", accent: "#fb923c" },
 };
 
 function padelShapePath(shape: string): string {
