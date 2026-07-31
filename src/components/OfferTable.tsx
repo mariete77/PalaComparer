@@ -27,9 +27,16 @@ export default function OfferTable({ offers }: { offers: Offer[] }) {
 
   return (
     <div>
+      {/* Declaración de independencia: confirmado que hoy no hay afiliación.
+          Si algún día se activa, este texto tiene que cambiar antes. */}
       <p className="text-xs text-muted mb-3">
         Los precios son orientativos y se actualizan periódicamente. El botón te
-        lleva a la búsqueda del producto en cada tienda.
+        lleva a la búsqueda del producto en cada tienda.{" "}
+        <strong className="font-semibold text-on-surface">
+          No cobramos comisión por estos enlaces
+        </strong>
+        : la tabla se ordena de más barato a más caro y ninguna tienda puede
+        pagar por aparecer antes.
       </p>
       {/* En móvil: tarjetas apiladas. En desktop: tabla. */}
       <div className="md:hidden flex flex-col gap-3">

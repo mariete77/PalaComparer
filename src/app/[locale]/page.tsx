@@ -1,27 +1,24 @@
 import Link from "next/link";
 import { PRODUCTS } from "@/data/products";
 import { getBestPrice } from "@/data/offers";
-import { ARTICLES, KIND_LABEL, formatArticleDate } from "@/data/news";
+import { ARTICLES, kindLabel, formatArticleDate, articleHref } from "@/data/news";
 import ProductCard from "@/components/ProductCard";
 import HeroMedia from "@/components/HeroMedia";
 import StoreMarquee from "@/components/StoreMarquee";
+import { isLocale, type Locale, localePath } from "@/i18n/locales";
+import { translate, type TranslationKey } from "@/i18n/locales";
 
-const PILARES = [
-  {
-    title: "Specs del fabricante",
-    desc: "Peso, balance, núcleo y caras tal y como los publica la marca. Sin adjetivos.",
-  },
-  {
-    title: "Filtros por tu juego",
-    desc: "Nivel y estilo antes que marca: control, potencia o polivalente.",
-  },
-  {
-    title: "Comparador lado a lado",
-    desc: "Hasta tres modelos enfrentados, spec por spec, en la misma pantalla.",
-  },
-];
+export default async function HomePage({
+  params,
+}: {
+  params: Promise<{ locale: string }>;
+}) {
+  const { locale: raw } = await params;
+  const locale: Locale = isLocale(raw) ? raw : "es";
+  const lp = (path: string) => localePath(locale, path);
+  const t = (key: TranslationKey, params?: Record<string, string | number>) =>
+    translate(locale, key, params);
 
-export default function Home() {
   const destacadosPadel = PRODUCTS.filter(
     (p) =>
       p.sport === "padel" &&
@@ -33,6 +30,21 @@ export default function Home() {
       ["babolat-pure-aero-2023", "wilson-blade-98-v9-2024", "head-speed-mp-2024", "yonex-ezone-100-2022"].includes(p.id)
   );
   const ultimasNoticias = ARTICLES.slice(0, 3);
+
+  const pilares = [
+    {
+      title: t("home.pilarSpecsTitulo"),
+      desc: t("home.pilarSpecsDesc"),
+    },
+    {
+      title: t("home.pilarFiltrosTitulo"),
+      desc: t("home.pilarFiltrosDesc"),
+    },
+    {
+      title: t("home.pilarComparadorTitulo"),
+      desc: t("home.pilarComparadorDesc"),
+    },
+  ];
 
   return (
     <div>
@@ -46,32 +58,31 @@ export default function Home() {
         <div className="relative mx-auto max-w-7xl px-6 pt-20 pb-24 md:pt-32 md:pb-36">
           <div className="max-w-3xl">
             <p className="rise text-sm text-muted">
-              {PRODUCTS.length} modelos — 2022-2026
+              {PRODUCTS.length} {t("home.modelosRango")}
             </p>
             <h1
               className="rise mt-5 font-display text-5xl font-bold leading-[1.05] tracking-tight sm:text-6xl lg:text-7xl"
               style={{ animationDelay: "60ms" }}
             >
-              Encuentra tu
+              {t("home.encuentraTu")}
               <br />
-              <span className="text-primary-container">arma perfecta</span>
+              <span className="text-primary-container">{t("home.armaPerfecta")}</span>
             </h1>
             <p
               className="rise mt-6 max-w-[48ch] text-lg leading-relaxed text-muted"
               style={{ animationDelay: "120ms" }}
             >
-              Compara palas de padel y raquetas de tenis por especificaciones
-              reales. Decide con datos, no con marketing.
+              {t("footer.tagline")}
             </p>
             <div
               className="rise mt-10 flex flex-wrap items-center gap-4"
               style={{ animationDelay: "180ms" }}
             >
-              <Link href="/finder" className="btn-lime rounded-lg px-7 py-4 text-sm">
-                Encontrar mi pala
+              <Link href={lp("/finder")} className="btn-lime rounded-lg px-7 py-4 text-sm">
+                {t("home.encontrarMiPala")}
               </Link>
-              <Link href="/comparar" className="btn-outline rounded-lg px-7 py-4 text-sm">
-                Comparar modelos
+              <Link href={lp("/comparar")} className="btn-outline rounded-lg px-7 py-4 text-sm">
+                {t("home.compararModelos")}
               </Link>
             </div>
           </div>
@@ -85,10 +96,10 @@ export default function Home() {
       <section className="mx-auto max-w-7xl px-6 py-20 md:py-28">
         <div className="grid gap-8 md:grid-cols-12 md:gap-12">
           <h2 className="font-display text-2xl font-bold leading-tight tracking-tight sm:text-3xl md:col-span-4">
-            Datos del fabricante, no argumentos de venta.
+            {t("home.pilarTitulo")}
           </h2>
           <dl className="divide-y divide-white/10 border-t border-white/10 md:col-span-7 md:col-start-6">
-            {PILARES.map((p) => (
+            {pilares.map((p) => (
               <div key={p.title} className="grid gap-1 py-5 sm:grid-cols-[13rem_1fr] sm:gap-8">
                 <dt className="font-display font-semibold text-primary-container">
                   {p.title}
@@ -104,10 +115,10 @@ export default function Home() {
       <section className="max-w-7xl mx-auto px-6 mb-20 md:mb-28">
         <div className="flex items-end justify-between gap-4 mb-8">
           <h2 className="font-display text-3xl font-bold tracking-tight">
-            Las palas del momento
+            {t("home.palasDelMomento")}
           </h2>
-          <Link href="/palas" className="shrink-0 text-sm font-semibold text-padel hover:underline">
-            Ver todas
+          <Link href={lp("/palas")} className="shrink-0 text-sm font-semibold text-padel hover:underline">
+            {t("common.verTodas")}
           </Link>
         </div>
         <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
@@ -121,10 +132,10 @@ export default function Home() {
       <section className="max-w-7xl mx-auto px-6 mb-20 md:mb-28">
         <div className="flex items-end justify-between gap-4 mb-8">
           <h2 className="font-display text-3xl font-bold tracking-tight">
-            Raquetas destacadas
+            {t("home.raquetasDestacadas")}
           </h2>
-          <Link href="/raquetas" className="shrink-0 text-sm font-semibold text-tenis hover:underline">
-            Ver todas
+          <Link href={lp("/raquetas")} className="shrink-0 text-sm font-semibold text-tenis hover:underline">
+            {t("common.verTodas")}
           </Link>
         </div>
         <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
@@ -138,30 +149,30 @@ export default function Home() {
       <section className="max-w-7xl mx-auto px-6 mb-24">
         <div className="flex items-end justify-between gap-4 mb-8">
           <h2 className="font-display text-3xl font-bold tracking-tight">
-            Antes de comprar, leete esto
+            {t("home.antesDeComprar")}
           </h2>
-          <Link href="/noticias" className="shrink-0 text-sm font-semibold text-padel hover:underline">
-            Ver todas
+          <Link href={lp("/noticias")} className="shrink-0 text-sm font-semibold text-padel hover:underline">
+            {t("common.verTodas")}
           </Link>
         </div>
         <div className="grid md:grid-cols-3 gap-6">
           {ultimasNoticias.map((a) => (
             <Link
               key={a.slug}
-              href={`/noticias/${a.slug}`}
+              href={articleHref(a, locale)}
               className="group card-glow rounded-2xl bg-white/[0.02] p-6 flex flex-col"
             >
               <span className="text-xs font-semibold text-padel">
-                {KIND_LABEL[a.kind]}
+                {kindLabel(a.kind, locale)}
               </span>
               <h3 className="mt-3 font-display text-lg font-bold leading-snug transition-colors group-hover:text-primary-container flex-1">
-                {a.title}
+                {a.title[locale]}
               </h3>
               <p className="mt-3 text-sm text-muted leading-relaxed line-clamp-2">
-                {a.excerpt}
+                {a.excerpt[locale]}
               </p>
               <p className="mt-4 text-xs text-muted">
-                {formatArticleDate(a.date)} · {a.readingMinutes} min
+                {formatArticleDate(a.date, locale)} · {a.readingMinutes} {t("common.min")}
               </p>
             </Link>
           ))}

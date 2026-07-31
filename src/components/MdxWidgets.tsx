@@ -1,3 +1,5 @@
+"use client";
+
 // Componentes disponibles dentro de los .mdx sin necesidad de importarlos.
 // Se registran en src/mdx-components.tsx.
 
@@ -5,6 +7,7 @@ import Link from "next/link";
 import { getProduct } from "@/data/products";
 import { formatPrice, getBestPrice } from "@/data/offers";
 import ProductCard from "@/components/ProductCard";
+import { useLocale } from "@/i18n/LocaleContext";
 
 /** Bloque destacado. `<Callout title="Ojo">…</Callout>` */
 export function Callout({
@@ -29,17 +32,18 @@ export function Callout({
 /** Enlace en línea a una ficha, con su mejor precio. `<ProductRef id="nox-x-one-2026" />` */
 export function ProductRef({ id }: { id: string }) {
   const product = getProduct(id);
+  const { lp, t } = useLocale();
   if (!product) return null;
   const best = getBestPrice(id);
 
   return (
     <Link
-      href={`/producto/${id}`}
+      href={lp(`/producto/${id}`)}
       className="not-prose inline-flex items-baseline gap-1.5 font-medium text-padel hover:underline"
     >
       {product.brand} {product.model}
       {best !== null && (
-        <span className="text-xs text-muted">desde {formatPrice(best)}</span>
+        <span className="text-xs text-muted">{t("common.desde")} {formatPrice(best)}</span>
       )}
     </Link>
   );

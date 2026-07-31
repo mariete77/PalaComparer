@@ -1,9 +1,11 @@
 "use client";
 
 import { useCompare } from "./CompareContext";
+import { useLocale } from "@/i18n/LocaleContext";
 
 export default function AddToCompare({ productId }: { productId: string }) {
   const { add, remove, has, isFull, ids } = useCompare();
+  const { lp, t } = useLocale();
   const selected = has(productId);
 
   return (
@@ -19,14 +21,14 @@ export default function AddToCompare({ productId }: { productId: string }) {
               : "bg-white/10 hover:bg-padel hover:text-black"
         }`}
       >
-        {selected ? "✓ En el comparador" : "+ Añadir al comparador"}
+        {selected ? t("compare.enComparador") : t("compare.anadirComparador")}
       </button>
       {ids.length >= 2 && (
         <a
-          href={`/comparar?ids=${ids.join(",")}`}
+          href={lp(`/comparar?ids=${ids.join(",")}`)}
           className="px-6 py-3 rounded-xl bg-padel text-black font-semibold hover:bg-lime-300 transition-colors"
         >
-          Comparar ahora ({ids.length})
+          {t("compare.compararAhora", { n: ids.length })}
         </a>
       )}
     </div>

@@ -1,5 +1,7 @@
 // PalaComparer data model
 
+import type { Locale } from "@/i18n/locales";
+
 export type Sport = "padel" | "tenis";
 
 export type PadelShape = "redonda" | "lagrima" | "diamante" | "hibrida";
@@ -39,7 +41,15 @@ export interface Product {
   player?: string; // pro player associated
   padel?: PadelSpecs;
   tenis?: TenisSpecs;
+  /** Descripción en español (idioma base del catálogo). */
   description: string;
+  /** Traducción al inglés. Si falta, se cae a la española. */
+  descriptionEn?: string;
+}
+
+/** Descripción del producto en el locale pedido (con fallback a ES). */
+export function getDescription(p: Product, locale: Locale): string {
+  return locale === "en" ? p.descriptionEn ?? p.description : p.description;
 }
 
 export const PRODUCTS: Product[] = [

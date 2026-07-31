@@ -18,6 +18,56 @@ export const LOCALE_LABEL: Record<Locale, string> = {
   en: "EN",
 };
 
+// Código BCP-47 para <html lang> y Open Graph.
+export const LOCALE_BCP47: Record<Locale, string> = {
+  es: "es-ES",
+  en: "en-US",
+};
+
+/** Comprueba que un string es uno de nuestros locales (type guard). */
+export function isLocale(value: string | undefined | null): value is Locale {
+  return value === "es" || value === "en";
+}
+
+/** El locale «otro» del dado (para el toggle). */
+export function otherLocale(locale: Locale): Locale {
+  return locale === "es" ? "en" : "es";
+}
+
+/**
+ * Prefija una ruta interna con el locale, sin duplicar barras ni reescribir
+ * URLs que ya vienen prefijadas. Diseñado para rutas internas como `/palas`.
+ *
+ *   localePath("en", "/palas")        → "/en/palas"
+ *   localePath("es", "/")             → "/es"
+ *   localePath("en", "/producto/x?q") → "/en/producto/x?q"
+ */
+export function localePath(locale: Locale, path: string): string {
+  if (path === "/" || path === "") return `/${locale}`;
+  return `/${locale}${path.startsWith("/") ? path : `/${path}`}`;
+}
+
+/**
+ * Quita el prefijo de locale de una ruta, si lo lleva. Devuelve la ruta «interna»
+ * sin locale. Útil en el proxy y al conmutar idioma manteniendo la ruta.
+ *
+ *   stripLocale("/en/palas")   → "/palas"
+ *   stripLocale("/palas")      → "/palas"
+ *   stripLocale("/es")         → "/"
+ */
+export function stripLocale(pathname: string): string {
+  const m = pathname.match(/^\/(es|en)(?=\/|$)/);
+  if (!m) return pathname === "/" ? "/" : pathname;
+  const rest = pathname.slice(m[0].length);
+  return rest === "" ? "/" : rest;
+}
+
+/** Locale que aparece en una ruta, o `null` si no lleva prefijo. */
+export function localeFromPath(pathname: string): Locale | null {
+  const m = pathname.match(/^\/(es|en)(?=\/|$)/);
+  return m ? (m[1] as Locale) : null;
+}
+
 const es = {
   nav: {
     palas: "Palas",
@@ -29,9 +79,88 @@ const es = {
     abrirMenu: "Abrir menú",
     cerrarMenu: "Cerrar menú",
   },
+  layout: {
+    title: "PalaComparer — Encuentra tu pala o raqueta perfecta",
+  },
+  home: {
+    modelosRango: "modelos — 2022-2026",
+    encuentraTu: "Encuentra tu",
+    armaPerfecta: "arma perfecta",
+    encontrarMiPala: "Encontrar mi pala",
+    compararModelos: "Comparar modelos",
+    pilarTitulo: "Datos del fabricante, no argumentos de venta.",
+    pilarSpecsTitulo: "Specs del fabricante",
+    pilarSpecsDesc: "Peso, balance, núcleo y caras tal y como los publica la marca. Sin adjetivos.",
+    pilarFiltrosTitulo: "Filtros por tu juego",
+    pilarFiltrosDesc: "Nivel y estilo antes que marca: control, potencia o polivalente.",
+    pilarComparadorTitulo: "Comparador lado a lado",
+    pilarComparadorDesc: "Hasta tres modelos enfrentados, spec por spec, en la misma pantalla.",
+    palasDelMomento: "Las palas del momento",
+    raquetasDestacadas: "Raquetas destacadas",
+    antesDeComprar: "Antes de comprar, leete esto",
+  },
+  palas: {
+    metaTitle: "Palas de pádel — PalaComparer",
+    metaDesc:
+      "Todas las palas de pádel 2022-2026: Nox, Bullpadel, Head, Adidas, Babolat y más. Filtra por nivel, forma, estilo y precio.",
+    titulo: "Palas de pádel",
+    subtitulo: "{n} palas de las mejores marcas. Usa los filtros para encontrar la tuya.",
+  },
+  raquetas: {
+    metaTitle: "Raquetas de tenis — PalaComparer",
+    metaDesc:
+      "Todas las raquetas de tenis 2022-2026: Wilson, Babolat, Head, Yonex y más. Filtra por nivel, estilo y precio.",
+    titulo: "Raquetas de tenis",
+    subtitulo: "{n} raquetas de las mejores marcas. Usa los filtros para encontrar la tuya.",
+  },
+  noticias: {
+    metaTitle: "Novedades de pádel y tenis — PalaComparer",
+    metaDesc:
+      "Lanzamientos y novedades de palas de pádel y raquetas de tenis. Para las guías de compra y los análisis de material, ve a la sección de guías.",
+    titulo: "Novedades",
+    subtitulo:
+      "Lanzamientos y cambios de catálogo, con el contexto de qué se mueve respecto al modelo anterior.",
+    vacioCuerpo:
+      "Cuando salga material nuevo lo contamos aquí. Mientras tanto, las guías de compra y los análisis están en su propia sección.",
+  },
+  guias: {
+    metaTitle: "Guías de compra de palas y raquetas — PalaComparer",
+    metaDesc:
+      "Guías y análisis de material para elegir pala de pádel o raqueta de tenis: formas, carbono, tamiz, peso y balance explicados con las specs del catálogo.",
+    titulo: "Guías para elegir bien",
+    subtitulo:
+      "Cómo leer una ficha técnica y qué cambia de verdad en la pista. Si una guía recomienda un modelo, puedes abrir su ficha y comprobar los números.",
+  },
+  finder: {
+    etiqueta: "Finder",
+    titulo: "Encuentra tu {arma} ideal",
+    preguntaDeporte: "¿Qué deporte juegas?",
+    deportePadel: "Palas de pádel",
+    deporteTenis: "Raquetas de tenis",
+    preguntaNivel: "¿Cuál es tu nivel?",
+    nivelPrincipiante: "Llevo menos de 1 año jugando",
+    nivelIntermedio: "Juego regularmente, domino golpes básicos",
+    nivelAvanzado: "Compite o juego a alto nivel",
+    nivelProfesional: "Nivel competición/torneo",
+    preguntaEstilo: "¿Cuál es tu estilo de juego?",
+    estiloControl: "Gano con precisión y colocación",
+    estiloPotencia: "Busco el remate y el golpe ganador",
+    estiloPolivalente: "Un poco de todo, juego completo",
+    preguntaPresupuesto: "¿Cuál es tu presupuesto máximo?",
+    atras: "Atrás",
+    verRecomendaciones: "Ver recomendaciones",
+    tusRecomendaciones: "Tus recomendaciones",
+    resultadoOk: "Tu {arma} ideal está aquí",
+    resultadoVacio: "No encontramos nada con esos criterios",
+    hasta: "Hasta",
+    vacioCuerpo: "Prueba a subir el presupuesto o cambiar algún criterio.",
+    empezarDeNuevo: "Empezar de nuevo",
+  },
   common: {
     padel: "Pádel",
     tenis: "Tenis",
+    padelLower: "pala",
+    tenisLower: "raqueta",
     desde: "desde",
     anadirComparador: "Añadir al comparador",
     quitarComparador: "Quitar del comparador",
@@ -41,6 +170,7 @@ const es = {
   },
   catalog: {
     filtros: "Filtros",
+    catalogoCompleto: "Catálogo completo",
     busquedaPrecision: "Búsqueda de precisión",
     placeholderBusqueda: "Buscar marca o modelo...",
     marca: "Marca",
@@ -77,16 +207,32 @@ const es = {
       diamante: "Diamante",
       hibrida: "Híbrida",
     },
+    balance: {
+      bajo: "Bajo",
+      medio: "Medio",
+      alto: "Alto",
+    },
+    superficie: {
+      rugosa: "Rugosa",
+      lisa: "Lisa",
+    },
+    dureza: {
+      blanda: "Blanda",
+      media: "Media",
+      dura: "Dura",
+    },
   },
   product: {
     ilustracionOrientativa: "Ilustración orientativa",
     eleccionDe: "La elección de",
-    mejorPrecioTiendas: "Mejor precio entre {n} tiendas · PVP",
+    mejorPrecioTiendas: "Mejor precio entre {n} {tiendas} · PVP {pvp}",
     minimoHistorico: "↓ Mínimo histórico",
     pvpOrientativo: "PVP orientativo",
     specsTecnicas: "Especificaciones técnicas",
     dondeComprar: "Dónde comprar",
+    dondeComprarNota: "Precios orientativos. Confirma siempre el importe final en la tienda.",
     evolucionPrecio: "Evolución del precio",
+    evolucionPrecioSub: "Evolución del mejor precio",
     minimoHistoricoLabel: "Mínimo histórico",
     maximoActual: "Máximo actual",
     hablamosPala: "Hablamos de esta pala",
@@ -112,6 +258,9 @@ const es = {
     pvp: "PVP",
     disponibleEn: "Disponible en",
     mejorPrecio: "Mejor precio",
+    nivel: "Nivel",
+    estiloLabel: "Estilo",
+    deporte: "Deporte",
   },
   offers: {
     envioGratis: "Envío gratis",
@@ -124,6 +273,8 @@ const es = {
     sinStock: "Sin stock",
     verTienda: "Ver en tienda ↗",
     tienda: "Tienda",
+    tiendaSingular: "tienda",
+    tiendaPlural: "tiendas",
     disponibilidad: "Disponibilidad",
     precio: "Precio",
     total: "Total",
@@ -132,17 +283,21 @@ const es = {
   compare: {
     mejorPrecio: "Mejor precio",
     titulo: "Comparador",
-    subtitulo: "Compara hasta 3 modelos, Specification por Specification.",
+    subtitulo: "Compara hasta 3 modelos, spec por spec.",
     cargando: "Cargando comparador…",
     buscarPlaceholder: "Busca un modelo para añadir…",
+    anadirPlaceholder: "Añadir otra para comparar...",
     vacioTitulo: "Selecciona modelos para comparar",
     vacioCuerpo:
       "Añade palas o raquetas desde el catálogo o el buscador para ver sus especificaciones lado a lado.",
     limpiar: "Limpiar",
     comparar: "Comparar",
-    compararAhora: "Comparar ahora",
+    compararAhora: "Comparar ahora ({n})",
     enComparador: "✓ En el comparador",
     anadirComparador: "+ Añadir al comparador",
+    seleccionadas: "{n} de 3 seleccionadas.",
+    deportesDistintos:
+      "⚠️ Estás comparando deportes distintos — mostrando specs comunes.",
   },
   compareBar: {
     limpiar: "Limpiar",
@@ -187,9 +342,88 @@ const en = {
     abrirMenu: "Open menu",
     cerrarMenu: "Close menu",
   },
+  layout: {
+    title: "PalaComparer — Find your perfect paddle or racket",
+  },
+  home: {
+    modelosRango: "models — 2022-2026",
+    encuentraTu: "Find your",
+    armaPerfecta: "perfect weapon",
+    encontrarMiPala: "Find my paddle",
+    compararModelos: "Compare models",
+    pilarTitulo: "Manufacturer data, not sales pitches.",
+    pilarSpecsTitulo: "Manufacturer specs",
+    pilarSpecsDesc: "Weight, balance, core and faces exactly as the brand publishes them. No adjectives.",
+    pilarFiltrosTitulo: "Filters for your game",
+    pilarFiltrosDesc: "Level and style before brand: control, power or all-round.",
+    pilarComparadorTitulo: "Side-by-side comparator",
+    pilarComparadorDesc: "Up to three models matched, spec by spec, on the same screen.",
+    palasDelMomento: "Today's paddles",
+    raquetasDestacadas: "Featured rackets",
+    antesDeComprar: "Before you buy, read this",
+  },
+  palas: {
+    metaTitle: "Padel paddles — PalaComparer",
+    metaDesc:
+      "Every padel paddle 2022-2026: Nox, Bullpadel, Head, Adidas, Babolat and more. Filter by level, shape, play style and price.",
+    titulo: "Padel paddles",
+    subtitulo: "{n} paddles from the best brands. Use the filters to find yours.",
+  },
+  raquetas: {
+    metaTitle: "Tennis rackets — PalaComparer",
+    metaDesc:
+      "Every tennis racket 2022-2026: Wilson, Babolat, Head, Yonex and more. Filter by level, play style and price.",
+    titulo: "Tennis rackets",
+    subtitulo: "{n} rackets from the best brands. Use the filters to find yours.",
+  },
+  noticias: {
+    metaTitle: "Padel & tennis news — PalaComparer",
+    metaDesc:
+      "Launches and news on padel paddles and tennis rackets. For buying guides and gear reviews, head to the guides section.",
+    titulo: "Latest",
+    subtitulo:
+      "Launches and catalog changes, with context on what shifts versus the previous model.",
+    vacioCuerpo:
+      "When new gear drops we cover it here. In the meantime, the buying guides and reviews live in their own section.",
+  },
+  guias: {
+    metaTitle: "Padel & tennis buying guides — PalaComparer",
+    metaDesc:
+      "Guides and gear reviews to choose a padel paddle or tennis racket: shapes, carbon, head size, weight and balance explained with catalog specs.",
+    titulo: "Guides to choose well",
+    subtitulo:
+      "How to read a spec sheet and what actually changes on court. If a guide recommends a model, you can open its page and check the numbers.",
+  },
+  finder: {
+    etiqueta: "Finder",
+    titulo: "Find your ideal {arma}",
+    preguntaDeporte: "What sport do you play?",
+    deportePadel: "Padel paddles",
+    deporteTenis: "Tennis rackets",
+    preguntaNivel: "What's your level?",
+    nivelPrincipiante: "I've been playing for less than a year",
+    nivelIntermedio: "I play regularly, I've mastered the basics",
+    nivelAvanzado: "I compete or play at a high level",
+    nivelProfesional: "Competition / tournament level",
+    preguntaEstilo: "What's your play style?",
+    estiloControl: "I win with precision and placement",
+    estiloPotencia: "I go for the smash and the winner",
+    estiloPolivalente: "A bit of everything, all-round game",
+    preguntaPresupuesto: "What's your maximum budget?",
+    atras: "Back",
+    verRecomendaciones: "See recommendations",
+    tusRecomendaciones: "Your recommendations",
+    resultadoOk: "Your ideal {arma} is here",
+    resultadoVacio: "We couldn't find anything with those criteria",
+    hasta: "Up to",
+    vacioCuerpo: "Try raising the budget or changing a criterion.",
+    empezarDeNuevo: "Start over",
+  },
   common: {
     padel: "Padel",
     tenis: "Tennis",
+    padelLower: "paddle",
+    tenisLower: "racket",
     desde: "from",
     anadirComparador: "Add to compare",
     quitarComparador: "Remove from compare",
@@ -199,6 +433,7 @@ const en = {
   },
   catalog: {
     filtros: "Filters",
+    catalogoCompleto: "Full catalog",
     busquedaPrecision: "Precision search",
     placeholderBusqueda: "Search brand or model...",
     marca: "Brand",
@@ -234,16 +469,32 @@ const en = {
       diamante: "Diamond",
       hibrida: "Hybrid",
     },
+    balance: {
+      bajo: "Low",
+      medio: "Medium",
+      alto: "High",
+    },
+    superficie: {
+      rugosa: "Rough",
+      lisa: "Smooth",
+    },
+    dureza: {
+      blanda: "Soft",
+      media: "Medium",
+      dura: "Hard",
+    },
   },
   product: {
     ilustracionOrientativa: "Illustrative image",
     eleccionDe: "Choice of",
-    mejorPrecioTiendas: "Best price across {n} stores · RRP",
+    mejorPrecioTiendas: "Best price across {n} {tiendas} · RRP {pvp}",
     minimoHistorico: "↓ All-time low",
     pvpOrientativo: "Approx. RRP",
     specsTecnicas: "Technical specs",
     dondeComprar: "Where to buy",
+    dondeComprarNota: "Indicative prices. Always confirm the final amount at the store.",
     evolucionPrecio: "Price history",
+    evolucionPrecioSub: "Best-price history",
     minimoHistoricoLabel: "All-time low",
     maximoActual: "Current high",
     hablamosPala: "About this paddle",
@@ -268,6 +519,9 @@ const en = {
     pvp: "RRP",
     disponibleEn: "Available at",
     mejorPrecio: "Best price",
+    nivel: "Level",
+    estiloLabel: "Style",
+    deporte: "Sport",
   },
   offers: {
     envioGratis: "Free shipping",
@@ -280,6 +534,8 @@ const en = {
     sinStock: "Out of stock",
     verTienda: "View at store ↗",
     tienda: "Store",
+    tiendaSingular: "store",
+    tiendaPlural: "stores",
     disponibilidad: "Availability",
     precio: "Price",
     total: "Total",
@@ -291,12 +547,16 @@ const en = {
     subtitulo: "Compare up to 3 models, spec by spec.",
     cargando: "Loading comparator…",
     buscarPlaceholder: "Search a model to add…",
+    anadirPlaceholder: "Add another to compare...",
     vacioTitulo: "Pick models to compare",
     vacioCuerpo:
       "Add paddles or rackets from the catalog or the search to see their specs side by side.",
+    seleccionadas: "{n} of 3 selected.",
+    deportesDistintos:
+      "⚠️ You're comparing different sports — showing common specs.",
     limpiar: "Clear",
     comparar: "Compare",
-    compararAhora: "Compare now",
+    compararAhora: "Compare now ({n})",
     enComparador: "✓ In comparator",
     anadirComparador: "+ Add to compare",
   },
@@ -334,6 +594,20 @@ const en = {
 
 export type Dict = typeof es;
 export const DICTS = { es, en } as unknown as Record<Locale, Dict>;
+
+/** Texto disponible en los dos idiomas (descripciones, títulos de artículo…). */
+export type LocalizedText = { es: string; en: string };
+
+/** Devuelve el texto en el locale pedido. */
+export function pickText(text: LocalizedText, locale: Locale): string {
+  return text[locale];
+}
+
+/** Versión server del traductor: devuelve `t` atada a un locale. */
+export function translator(locale: Locale) {
+  return (key: TranslationKey, params?: Record<string, string | number>) =>
+    translate(locale, key, params);
+}
 
 // Acceso anidado por clave con puntos, p. ej. t("nav.palas").
 // Inserción {placeholder} vía params.

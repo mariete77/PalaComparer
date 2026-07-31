@@ -4,9 +4,11 @@ import Link from "next/link";
 import Image from "next/image";
 import { useCompare } from "./CompareContext";
 import { findProducts } from "@/data/products";
+import { useLocale } from "@/i18n/LocaleContext";
 
 export default function CompareBar() {
   const { ids, remove, clear } = useCompare();
+  const { lp, t } = useLocale();
   if (ids.length === 0) return null;
 
   const products = findProducts(ids);
@@ -41,17 +43,17 @@ export default function CompareBar() {
             onClick={clear}
             className="text-xs text-muted hover:text-foreground transition-colors px-2"
           >
-            Limpiar
+            {t("compareBar.limpiar")}
           </button>
           <Link
-            href={`/comparar?ids=${ids.join(",")}`}
+            href={lp(`/comparar?ids=${ids.join(",")}`)}
             className={`px-4 py-2 rounded-lg font-bold text-xs uppercase tracking-widest transition-all ${
               ids.length >= 2
                 ? "btn-primary"
                 : "bg-white/10 text-muted cursor-not-allowed pointer-events-none"
             }`}
           >
-            Comparar {ids.length > 0 && `(${ids.length})`}
+            {t("compareBar.compararN", { n: ids.length })}
           </Link>
         </div>
       </div>

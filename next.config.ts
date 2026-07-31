@@ -18,11 +18,21 @@ const nextConfig: NextConfig = {
   // Las noticias se escriben en .mdx (src/content/noticias).
   pageExtensions: ["ts", "tsx", "md", "mdx"],
   async redirects() {
-    return GUIAS_MOVIDAS_DESDE_NOTICIAS.map((slug) => ({
-      source: `/noticias/${slug}`,
-      destination: `/guias/${slug}`,
-      permanent: true,
-    }));
+    // Las guías vivían bajo /noticias/<slug> (o /{locale}/noticias/<slug> tras
+    // el i18n). Se redirigen con 301 para no perder el posicionamiento de las
+    // URLs ya indexadas. El `:locale(*)` captura el prefijo opcional.
+    return GUIAS_MOVIDAS_DESDE_NOTICIAS.flatMap((slug) => [
+      {
+        source: `/:locale(es|en)/noticias/${slug}`,
+        destination: `/:locale/guias/${slug}`,
+        permanent: true,
+      },
+      {
+        source: `/noticias/${slug}`,
+        destination: `/guias/${slug}`,
+        permanent: true,
+      },
+    ]);
   },
   images: {
     // Fotos reales servidas desde un CDN. Da de alta aquí cada dominio antes de

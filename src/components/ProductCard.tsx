@@ -10,6 +10,7 @@ import { Product } from "@/data/products";
 import { getProductImage } from "@/data/product-image";
 import { formatPrice } from "@/data/offers";
 import { useCompare } from "@/components/CompareContext";
+import { useLocale } from "@/i18n/LocaleContext";
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -21,30 +22,32 @@ export default function ProductCard({
   bestPrice?: number | null;
 }) {
   const { add, remove, has, isFull } = useCompare();
+  const { lp, t } = useLocale();
   const selected = has(product.id);
   const image = getProductImage(product);
   const cardRef = useRef<HTMLDivElement>(null);
-  const imgRef = useRef<HTMLDivElement>(null);
+  const revealRef = useRef<HTMLDivElement>(null);
 
-  // GSAP: image scale+fade on scroll
+  // Reveal the media wrapper, leaving the inner element free for its hover transform.
   useGSAP(() => {
-    if (!cardRef.current || !imgRef.current) return;
+    if (!cardRef.current || !revealRef.current) return;
     const prefersReduced = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
     if (prefersReduced) return;
 
     gsap.fromTo(
-      imgRef.current,
-      { scale: 0.9, opacity: 0.6 },
+      revealRef.current,
+      { y: 18, opacity: 0, willChange: "transform, opacity" },
       {
-        scale: 1,
+        y: 0,
         opacity: 1,
-        duration: 0.6,
-        ease: "power2.out",
+        duration: 0.7,
+        ease: "power3.out",
+        clearProps: "willChange",
         scrollTrigger: {
           trigger: cardRef.current,
-          start: "top 85%",
-          end: "top 40%",
-          toggleActions: "play none none reverse",
+          start: "top 88%",
+          toggleActions: "play none none none",
+          once: true,
         },
       }
     );
@@ -65,24 +68,26 @@ export default function ProductCard({
 
   return (
     <div ref={cardRef} className="card-split group relative flex flex-col h-full">
-      <Link href={`/producto/${product.id}`} className="block flex-1 flex flex-col">
+      <Link href={lp(`/producto/${product.id}`)} className="block flex-1 flex flex-col">
         <div className={`card-split-img aspect-[4/5] flex items-center justify-center p-6 ${image.isReal ? "has-real-photo" : ""}`}>
           <span className={`absolute top-3 left-3 font-bold text-[10px] px-2 py-1 rounded border uppercase tracking-wider z-10 ${
             image.isReal
               ? "bg-surface/70 text-on-surface border-white/10"
               : "bg-primary-container/20 text-primary-container border-primary-container/30"
           }`}>
-            {product.sport === "padel" ? "Pádel" : "Tenis"}
+            {product.sport === "padel" ? t("common.padel") : t("common.tenis")}
           </span>
-          <div ref={imgRef} className="relative w-full h-full group-hover:scale-105 transition-transform duration-500">
-            <Image
-              src={image.src}
-              unoptimized={image.unoptimized}
-              alt={`${product.brand} ${product.model}`}
-              fill
-              className={`object-contain ${image.isReal ? "" : "drop-shadow-[0_10px_20px_rgba(0,0,0,0.5)]"}`}
-              sizes="(max-width: 768px) 50vw, 25vw"
-            />
+          <div ref={revealRef} className="h-full w-full">
+            <div className="relative h-full w-full transition-transform duration-500 ease-out group-hover:scale-105">
+              <Image
+                src={image.src}
+                unoptimized={image.unoptimized}
+                alt={`${product.brand} ${product.model}`}
+                fill
+                className={`object-contain ${image.isReal ? "" : "drop-shadow-[0_10px_20px_rgba(0,0,0,0.5)]"}`}
+                sizes="(max-width: 768px) 50vw, 25vw"
+              />
+            </div>
           </div>
         </div>
 
@@ -114,7 +119,7 @@ export default function ProductCard({
           <div className="mt-auto flex justify-between items-end pt-2">
             <div>
               {bestPrice != null && (
-                <span className="text-muted text-[10px] block">desde</span>
+                <span className="text-muted text-[10px] block">{t("common.desde")}</span>
               )}
               <div className="font-display font-bold text-lg text-primary-container">
                 {bestPrice != null ? formatPrice(bestPrice) : formatPrice(product.price)}
@@ -135,7 +140,7 @@ export default function ProductCard({
               ? "bg-surface-container-highest text-muted border-white/5 cursor-not-allowed"
               : "bg-surface-container-highest text-on-surface-variant border-white/5 hover:bg-primary-container hover:text-on-primary hover:border-primary-container"
         }`}
-        title={selected ? "Quitar del comparador" : "Anadir al comparador"}
+        title={selected ? t("common.quitarComparador") : t("common.anadirComparador")}
       >
         {selected ? "\u2713" : "+"}
       </button>

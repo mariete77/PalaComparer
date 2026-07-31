@@ -5,10 +5,16 @@ import { PRODUCTS, Sport, Level, PlayStyle } from "@/data/products";
 import { getBestPrice } from "@/data/offers";
 import ProductCard from "@/components/ProductCard";
 import { PadelIcon, TennisIcon } from "@/components/icons";
+import { useLocale } from "@/i18n/LocaleContext";
+import { translate, type TranslationKey } from "@/i18n/locales";
 
 type Step = "sport" | "level" | "style" | "budget" | "results";
 
 export default function FinderPage() {
+  const { locale } = useLocale();
+  const t = (k: TranslationKey, p?: Record<string, string | number>) =>
+    translate(locale, k, p);
+
   const [step, setStep] = useState<Step>("sport");
   const [sport, setSport] = useState<Sport | null>(null);
   const [level, setLevel] = useState<Level | null>(null);
@@ -56,20 +62,20 @@ export default function FinderPage() {
         <>
           <div className="text-center mb-12">
             <p className="text-xs font-bold text-padel mb-2">
-              Finder
+              {t("finder.etiqueta")}
             </p>
             <h1 className="font-display text-4xl sm:text-5xl font-bold">
-              Encuentra tu {sport === "tenis" ? "raqueta" : "pala"} ideal
+              {t("finder.titulo", { arma: sport === "tenis" ? t("common.tenisLower") : t("common.padelLower") })}
             </h1>
             <Progress step={step} />
           </div>
 
           {step === "sport" && (
             <QuestionStep
-              question="¿Qué deporte juegas?"
+              question={t("finder.preguntaDeporte")}
               options={[
-                { value: "padel", label: "Padel", desc: "Palas de padel", icon: <PadelIcon className="w-7 h-7 text-padel" /> },
-                { value: "tenis", label: "Tenis", desc: "Raquetas de tenis", icon: <TennisIcon className="w-7 h-7 text-tenis" /> },
+                { value: "padel", label: t("common.padel"), desc: t("finder.deportePadel"), icon: <PadelIcon className="w-7 h-7 text-padel" /> },
+                { value: "tenis", label: t("common.tenis"), desc: t("finder.deporteTenis"), icon: <TennisIcon className="w-7 h-7 text-tenis" /> },
               ]}
               onSelect={(v) => {
                 setSport(v as Sport);
@@ -80,28 +86,12 @@ export default function FinderPage() {
 
           {step === "level" && (
             <QuestionStep
-              question="¿Cuál es tu nivel?"
+              question={t("finder.preguntaNivel")}
               options={[
-                {
-                  value: "principiante",
-                  label: "Principiante",
-                  desc: "Llevo menos de 1 ano jugando",
-                },
-                {
-                  value: "intermedio",
-                  label: "Intermedio",
-                  desc: "Juego regularmente, domino golpes basicos",
-                },
-                {
-                  value: "avanzado",
-                  label: "Avanzado",
-                  desc: "Compito o juego a alto nivel",
-                },
-                {
-                  value: "profesional",
-                  label: "Profesional",
-                  desc: "Nivel competicion/torneo",
-                },
+                { value: "principiante", label: t("catalog.nivel.principiante"), desc: t("finder.nivelPrincipiante") },
+                { value: "intermedio", label: t("catalog.nivel.intermedio"), desc: t("finder.nivelIntermedio") },
+                { value: "avanzado", label: t("catalog.nivel.avanzado"), desc: t("finder.nivelAvanzado") },
+                { value: "profesional", label: t("catalog.nivel.profesional"), desc: t("finder.nivelProfesional") },
               ]}
               onSelect={(v) => {
                 setLevel(v as Level);
@@ -113,23 +103,11 @@ export default function FinderPage() {
 
           {step === "style" && (
             <QuestionStep
-              question="¿Cuál es tu estilo de juego?"
+              question={t("finder.preguntaEstilo")}
               options={[
-                {
-                  value: "control",
-                  label: "Control",
-                  desc: "Gano con precision y colocacion",
-                },
-                {
-                  value: "potencia",
-                  label: "Potencia",
-                  desc: "Busco el remate y el golpe ganador",
-                },
-                {
-                  value: "polivalente",
-                  label: "Polivalente",
-                  desc: "Un poco de todo, juego completo",
-                },
+                { value: "control", label: t("catalog.estilo.control"), desc: t("finder.estiloControl") },
+                { value: "potencia", label: t("catalog.estilo.potencia"), desc: t("finder.estiloPotencia") },
+                { value: "polivalente", label: t("catalog.estilo.polivalente"), desc: t("finder.estiloPolivalente") },
               ]}
               onSelect={(v) => {
                 setStyle(v as PlayStyle);
@@ -142,7 +120,7 @@ export default function FinderPage() {
           {step === "budget" && (
             <div className="text-center">
               <h2 className="font-display text-2xl font-bold mb-8">
-                ¿Cuál es tu presupuesto máximo?
+                {t("finder.preguntaPresupuesto")}
               </h2>
               <p className="font-display text-5xl font-bold text-padel mb-6">
                 {budget} €
@@ -161,13 +139,13 @@ export default function FinderPage() {
                   onClick={() => setStep("style")}
                   className="px-6 py-3 rounded-xl border border-white/10 hover:bg-white/5"
                 >
-                  ← Atrás
+                  ← {t("finder.atras")}
                 </button>
                 <button
                   onClick={() => setStep("results")}
                   className="px-8 py-3 rounded-xl bg-padel text-black font-semibold hover:bg-lime-300"
                 >
-                  Ver recomendaciones →
+                  {t("finder.verRecomendaciones")} →
                 </button>
               </div>
             </div>
@@ -177,16 +155,17 @@ export default function FinderPage() {
         <div>
           <div className="text-center mb-10">
             <p className="text-xs font-bold text-padel mb-2">
-              Tus recomendaciones
+              {t("finder.tusRecomendaciones")}
             </p>
             <h1 className="font-display text-4xl font-bold">
               {recommendations.length > 0
-                ? `Tu ${sport === "tenis" ? "raqueta" : "pala"} ideal está aquí`
-                : "No encontramos nada con esos criterios"}
+                ? t("finder.resultadoOk", { arma: sport === "tenis" ? t("common.tenisLower") : t("common.padelLower") })
+                : t("finder.resultadoVacio")}
             </h1>
             <p className="text-muted mt-3">
-              {level && capitalize(level)} · {style && capitalize(style)} · Hasta{" "}
-              {budget} €
+              {level && translate(locale, `catalog.nivel.${level}`)} ·{" "}
+              {style && translate(locale, `catalog.estilo.${style}`)} ·{" "}
+              {t("finder.hasta")} {budget} €
             </p>
           </div>
 
@@ -199,7 +178,7 @@ export default function FinderPage() {
           ) : (
             <div className="text-center mb-10">
               <p className="text-muted">
-                Prueba a subir el presupuesto o cambiar algun criterio.
+                {t("finder.vacioCuerpo")}
               </p>
             </div>
           )}
@@ -209,7 +188,7 @@ export default function FinderPage() {
               onClick={restart}
               className="px-6 py-3 rounded-xl border border-white/10 hover:bg-white/5"
             >
-              ↺ Empezar de nuevo
+              ↺ {t("finder.empezarDeNuevo")}
             </button>
           </div>
         </div>
@@ -246,6 +225,8 @@ function QuestionStep({
   onSelect: (v: string) => void;
   onBack?: () => void;
 }) {
+  const { locale } = useLocale();
+  const t = (k: TranslationKey) => translate(locale, k);
   return (
     <div>
       <h2 className="font-display text-2xl font-bold text-center mb-8">
@@ -272,14 +253,10 @@ function QuestionStep({
             onClick={onBack}
             className="text-sm text-muted hover:text-foreground"
           >
-            ← Atrás
+            ← {t("finder.atras")}
           </button>
         </div>
       )}
     </div>
   );
-}
-
-function capitalize(s: string) {
-  return s.charAt(0).toUpperCase() + s.slice(1);
 }

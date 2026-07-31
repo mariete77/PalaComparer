@@ -1,5 +1,7 @@
 // Configuración de sitio compartida.
 
+import type { Locale } from "@/i18n/locales";
+
 /**
  * URL canónica del sitio, sin barra final.
  *
@@ -18,10 +20,31 @@ export const SITE_URL = (
 
 export const SITE_NAME = "PalaComparer";
 
-export const SITE_DESCRIPTION =
-  "Compara palas de pádel y raquetas de tenis por especificaciones, nivel y estilo de juego. Encuentra tu arma perfecta.";
+/**
+ * Descripción SEO del sitio en cada idioma. Se usa en metadatos y JSON-LD.
+ */
+export const SITE_DESCRIPTIONS = {
+  es: "Compara palas de pádel y raquetas de tenis por especificaciones, nivel y estilo de juego. Encuentra tu arma perfecta.",
+  en: "Compare padel paddles and tennis rackets by specs, skill level and play style. Find your perfect weapon.",
+} as const;
+
+/** Descripción para un locale concreto (con fallback a español). */
+export function siteDescription(locale: Locale): string {
+  return SITE_DESCRIPTIONS[locale] ?? SITE_DESCRIPTIONS.es;
+}
 
 /** URL absoluta a partir de una ruta interna (`/palas` → `https://.../palas`). */
 export function absoluteUrl(path: string): string {
   return `${SITE_URL}${path.startsWith("/") ? path : `/${path}`}`;
 }
+
+/**
+ * URL absoluta para una ruta en un locale dado.
+ *
+ *   absoluteLocaleUrl("en", "/palas") → "https://.../en/palas"
+ */
+export function absoluteLocaleUrl(locale: Locale, path: string): string {
+  const internal = path === "/" ? "" : path.startsWith("/") ? path : `/${path}`;
+  return `${SITE_URL}/${locale}${internal}`;
+}
+

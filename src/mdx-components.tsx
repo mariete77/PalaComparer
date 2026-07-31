@@ -1,5 +1,4 @@
 import type { MDXComponents } from "mdx/types";
-import Link from "next/link";
 import {
   Callout,
   ProductGrid,
@@ -7,32 +6,23 @@ import {
   SpecList,
   SpecRow,
 } from "@/components/MdxWidgets";
+import { MdxLink } from "@/components/MdxLink";
 
-const components = {
-  // Los enlaces internos pasan por next/link para navegar sin recarga.
-  a: ({ href = "", children, ...rest }) => {
-    const internal = href.startsWith("/") || href.startsWith("#");
-    if (internal) {
-      return (
-        <Link href={href} {...rest}>
-          {children}
-        </Link>
-      );
-    }
-    return (
-      <a href={href} target="_blank" rel="noopener noreferrer" {...rest}>
-        {children}
-      </a>
-    );
-  },
-  // Widgets propios: usables en cualquier .mdx sin importarlos.
-  Callout,
-  ProductGrid,
-  ProductRef,
-  SpecList,
-  SpecRow,
-} satisfies MDXComponents;
-
+/**
+ * Componentes disponibles dentro de los .mdx sin necesidad de importarlos.
+ *
+ * Los enlaces internos (markdown `[x](/finder)`) pasan por `MdxLink`, un Client
+ * Component que los prefija con el locale en uso.
+ */
 export function useMDXComponents(): MDXComponents {
-  return components;
+  return {
+    a: MdxLink,
+    // Widgets propios: usables en cualquier .mdx sin importarlos.
+    Callout,
+    ProductGrid,
+    ProductRef,
+    SpecList,
+    SpecRow,
+  };
 }
+

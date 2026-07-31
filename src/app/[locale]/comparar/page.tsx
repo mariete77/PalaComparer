@@ -4,27 +4,37 @@ import { Suspense, useMemo } from "react";
 import Image from "next/image";
 import Link from "next/link";
 import { useSearchParams } from "next/navigation";
-import { findProducts, Product, PRODUCTS } from "@/data/products";
+import { findProducts, Product, PRODUCTS, getDescription } from "@/data/products";
 import { getProductImage } from "@/data/product-image";
 import { formatPrice, getBestPrice, getPriceSummary } from "@/data/offers";
 import { useCompare } from "@/components/CompareContext";
 import { ScaleIcon } from "@/components/icons";
+import { useLocale } from "@/i18n/LocaleContext";
+import { translate, type TranslationKey } from "@/i18n/locales";
 import { useState } from "react";
 
 /** Mejor precio entre tiendas, o "—" si no hay ofertas. */
-function bestPriceLabel(p: Product): string {
-  const best = getBestPrice(p.id);
-  return best === null ? "—" : formatPrice(best);
+function makeBestPriceLabel(locale: Parameters<typeof translate>[0]) {
+  return (p: Product): string => {
+    const best = getBestPrice(p.id);
+    return best === null ? "—" : formatPrice(best);
+  };
 }
 
-function storeCountLabel(p: Product): string {
-  const summary = getPriceSummary(p.id);
-  if (!summary) return "—";
-  return `${summary.offerCount} ${summary.offerCount === 1 ? "tienda" : "tiendas"}`;
+function makeStoreCountLabel(locale: Parameters<typeof translate>[0]) {
+  const t = (k: TranslationKey, params?: Record<string, string | number>) =>
+    translate(locale, k, params);
+  return (p: Product): string => {
+    const summary = getPriceSummary(p.id);
+    if (!summary) return "—";
+    const tienda = summary.offerCount === 1 ? t("offers.tiendaSingular") : t("offers.tiendaPlural");
+    return `${summary.offerCount} ${tienda}`;
+  };
 }
 
 function CompareContent() {
   const searchParams = useSearchParams();
+  const { locale, lp, t } = useLocale();
   const idsParam = searchParams.get("ids");
   const { ids: ctxIds, add, remove } = useCompare();
   const [query, setQuery] = useState("");
@@ -52,17 +62,15 @@ function CompareContent() {
       <div className="max-w-3xl mx-auto px-6 py-20 text-center">
         <ScaleIcon className="w-12 h-12 text-muted mx-auto mb-4" />
         <h1 className="font-display text-3xl font-bold mb-3">
-          Elige que comparar
+          {t("compare.vacioTitulo")}
         </h1>
-        <p className="text-muted mb-8">
-          Añade hasta 3 palas o raquetas con el botón + de cualquier tarjeta, o
-          búscalas aquí:
-        </p>
+        <p className="text-muted mb-8">{t("compare.vacioCuerpo")}</p>
         <AddSearch
           query={query}
           setQuery={setQuery}
           results={searchResults}
           onAdd={add}
+          placeholder={t("compare.buscarPlaceholder")}
         />
       </div>
     );
@@ -72,59 +80,64 @@ function CompareContent() {
   const sameSport = products.every((p) => p.sport === products[0].sport);
   const isPadel = products[0]?.sport === "padel";
 
+  const bestPriceLabel = makeBestPriceLabel(locale);
+  const storeCountLabel = makeStoreCountLabel(locale);
+  // Helper para traducir enum de specs según el dict.
+  const enumT = (ns: "formaPala", v: string) => translate(locale, `catalog.${ns}.${v}` as TranslationKey);
+
   const specRows: { label: string; get: (p: Product) => string }[] = sameSport
     ? isPadel
       ? [
-          { label: "Mejor precio", get: bestPriceLabel },
-          { label: "Disponible en", get: storeCountLabel },
-          { label: "PVP", get: (p) => formatPrice(p.price) },
-          { label: "Año", get: (p) => String(p.year) },
-          { label: "Forma", get: (p) => cap(p.padel?.shape ?? "—") },
-          { label: "Peso", get: (p) => p.padel?.weight ?? "—" },
-          { label: "Balance", get: (p) => cap(p.padel?.balance ?? "—") },
-          { label: "Núcleo", get: (p) => p.padel?.core ?? "—" },
-          { label: "Caras", get: (p) => p.padel?.faces ?? "—" },
-          { label: "Superficie", get: (p) => cap(p.padel?.surface ?? "—") },
-          { label: "Dureza", get: (p) => cap(p.padel?.hardness ?? "—") },
-          { label: "Nivel", get: (p) => p.level.map(cap).join(", ") },
-          { label: "Estilo", get: (p) => p.style.map(cap).join(", ") },
-          { label: "Jugador", get: (p) => p.player ?? "—" },
+          { label: t("product.mejorPrecio"), get: bestPriceLabel },
+          { label: t("product.disponibleEn"), get: storeCountLabel },
+          { label: t("product.pvp"), get: (p) => formatPrice(p.price) },
+          { label: t("product.ano"), get: (p) => String(p.year) },
+          { label: t("product.forma"), get: (p) => p.padel ? enumT("formaPala", p.padel.shape) : "—" },
+          { label: t("product.peso"), get: (p) => p.padel?.weight ?? "—" },
+          { label: t("product.balance"), get: (p) => p.padel ? translate(locale, `catalog.balance.${p.padel.balance}` as TranslationKey) : "—" },
+          { label: t("product.nucleo"), get: (p) => p.padel?.core ?? "—" },
+          { label: t("product.caras"), get: (p) => p.padel?.faces ?? "—" },
+          { label: t("product.superficie"), get: (p) => p.padel ? translate(locale, `catalog.superficie.${p.padel.surface}` as TranslationKey) : "—" },
+          { label: t("product.dureza"), get: (p) => p.padel ? translate(locale, `catalog.dureza.${p.padel.hardness}` as TranslationKey) : "—" },
+          { label: t("product.nivel"), get: (p) => p.level.map((l) => translate(locale, `catalog.nivel.${l}` as TranslationKey)).join(", ") },
+          { label: t("product.estiloLabel"), get: (p) => p.style.map((s) => translate(locale, `catalog.estilo.${s}` as TranslationKey)).join(", ") },
+          { label: t("product.jugador"), get: (p) => p.player ?? "—" },
         ]
       : [
-          { label: "Mejor precio", get: bestPriceLabel },
-          { label: "Disponible en", get: storeCountLabel },
-          { label: "PVP", get: (p) => formatPrice(p.price) },
-          { label: "Año", get: (p) => String(p.year) },
-          { label: "Tamis", get: (p) => (p.tenis ? `${p.tenis.headSize} in²` : "—") },
-          { label: "Peso encordada", get: (p) => (p.tenis ? `${p.tenis.weightStrung} g` : "—") },
-          { label: "Longitud", get: (p) => (p.tenis ? `${p.tenis.length} cm` : "—") },
-          { label: "Patrón encordado", get: (p) => p.tenis?.stringPattern ?? "—" },
-          { label: "Rigidez (RA)", get: (p) => String(p.tenis?.stiffness ?? "—") },
-          { label: "Balance", get: (p) => (p.tenis ? `${p.tenis.balancePoints} mm` : "—") },
-          { label: "Swingweight", get: (p) => String(p.tenis?.swingweight ?? "—") },
-          { label: "Nivel", get: (p) => p.level.map(cap).join(", ") },
-          { label: "Estilo", get: (p) => p.style.map(cap).join(", ") },
-          { label: "Jugador", get: (p) => p.player ?? "—" },
+          { label: t("product.mejorPrecio"), get: bestPriceLabel },
+          { label: t("product.disponibleEn"), get: storeCountLabel },
+          { label: t("product.pvp"), get: (p) => formatPrice(p.price) },
+          { label: t("product.ano"), get: (p) => String(p.year) },
+          { label: t("product.tamis"), get: (p) => (p.tenis ? `${p.tenis.headSize} in²` : "—") },
+          { label: t("product.pesoEncordada"), get: (p) => (p.tenis ? `${p.tenis.weightStrung} g` : "—") },
+          { label: t("product.longitud"), get: (p) => (p.tenis ? `${p.tenis.length} cm` : "—") },
+          { label: t("product.patronEncordado"), get: (p) => p.tenis?.stringPattern ?? "—" },
+          { label: t("product.rigidez"), get: (p) => String(p.tenis?.stiffness ?? "—") },
+          { label: t("product.balance"), get: (p) => (p.tenis ? `${p.tenis.balancePoints} mm` : "—") },
+          { label: t("product.swingweight"), get: (p) => String(p.tenis?.swingweight ?? "—") },
+          { label: t("product.nivel"), get: (p) => p.level.map((l) => translate(locale, `catalog.nivel.${l}` as TranslationKey)).join(", ") },
+          { label: t("product.estiloLabel"), get: (p) => p.style.map((s) => translate(locale, `catalog.estilo.${s}` as TranslationKey)).join(", ") },
+          { label: t("product.jugador"), get: (p) => p.player ?? "—" },
         ]
     : [
-        { label: "Mejor precio", get: bestPriceLabel },
-        { label: "Disponible en", get: storeCountLabel },
-        { label: "PVP", get: (p) => formatPrice(p.price) },
-        { label: "Año", get: (p) => String(p.year) },
-        { label: "Deporte", get: (p) => (p.sport === "padel" ? "Pádel" : "Tenis") },
-        { label: "Nivel", get: (p) => p.level.map(cap).join(", ") },
-        { label: "Estilo", get: (p) => p.style.map(cap).join(", ") },
+        { label: t("product.mejorPrecio"), get: bestPriceLabel },
+        { label: t("product.disponibleEn"), get: storeCountLabel },
+        { label: t("product.pvp"), get: (p) => formatPrice(p.price) },
+        { label: t("product.ano"), get: (p) => String(p.year) },
+        { label: t("product.deporte"), get: (p) => (p.sport === "padel" ? t("common.padel") : t("common.tenis")) },
+        { label: t("product.nivel"), get: (p) => p.level.map((l) => translate(locale, `catalog.nivel.${l}` as TranslationKey)).join(", ") },
+        { label: t("product.estiloLabel"), get: (p) => p.style.map((s) => translate(locale, `catalog.estilo.${s}` as TranslationKey)).join(", ") },
       ];
 
   return (
     <div className="max-w-7xl mx-auto px-6 py-10">
       <header className="mb-8">
-        <h1 className="font-display text-4xl font-bold">Comparador</h1>
+        <h1 className="font-display text-4xl font-bold">{t("compare.titulo")}</h1>
         <p className="text-muted mt-2">
-          {products.length} de 3 seleccionadas.{" "}
+          {t("compare.seleccionadas", { n: products.length })}{" "}
           {!sameSport && (
             <span className="text-tenis">
-              ⚠️ Estás comparando deportes distintos — mostrando specs comunes.
+              {t("compare.deportesDistintos")}
             </span>
           )}
         </p>
@@ -138,7 +151,7 @@ function CompareContent() {
             setQuery={setQuery}
             results={searchResults}
             onAdd={add}
-            placeholder="Añadir otra para comparar..."
+            placeholder={t("compare.anadirPlaceholder")}
           />
         </div>
       )}
@@ -160,7 +173,7 @@ function CompareContent() {
                     >
                       ✕
                     </button>
-                    <Link href={`/producto/${p.id}`}>
+                    <Link href={lp(`/producto/${p.id}`)}>
                       <div className="relative w-full aspect-[2/3] max-w-[160px] mx-auto mb-3">
                         <Image
                           src={img.src}
@@ -186,6 +199,7 @@ function CompareContent() {
             {specRows.map((row, i) => {
               const values = products.map((p) => row.get(p));
               const allSame = values.every((v) => v === values[0]);
+              const isPrice = row.label === t("product.mejorPrecio");
               return (
                 <tr
                   key={row.label}
@@ -198,7 +212,7 @@ function CompareContent() {
                     <td
                       key={j}
                       className={`p-3 text-sm text-center ${
-                        row.label === "Mejor precio"
+                        isPrice
                           ? "font-display font-bold text-padel"
                           : allSame
                             ? "text-muted"
@@ -225,7 +239,7 @@ function CompareContent() {
             <h3 className="font-display font-semibold text-sm mb-2">
               {p.brand} {p.model}
             </h3>
-            <p className="text-xs text-muted leading-relaxed">{p.description}</p>
+            <p className="text-xs text-muted leading-relaxed">{getDescription(p, locale)}</p>
           </div>
         ))}
       </div>
@@ -238,7 +252,7 @@ function AddSearch({
   setQuery,
   results,
   onAdd,
-  placeholder = "Buscar pala o raqueta...",
+  placeholder,
 }: {
   query: string;
   setQuery: (q: string) => void;
@@ -289,16 +303,13 @@ function AddSearch({
   );
 }
 
-function cap(s: string) {
-  return s.charAt(0).toUpperCase() + s.slice(1);
-}
-
 export default function CompararPage() {
+  const { t } = useLocale();
   return (
     <Suspense
       fallback={
         <div className="max-w-7xl mx-auto px-6 py-20 text-center text-muted">
-          Cargando comparador...
+          {t("compare.cargando")}
         </div>
       }
     >

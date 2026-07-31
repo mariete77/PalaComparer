@@ -101,11 +101,11 @@ body {
   border: 1px solid rgba(255,255,255,0.06);
   border-radius: 0.75rem;
   overflow: hidden;
-  transition: border-color 0.4s cubic-bezier(0.16,1,0.3,1), transform 0.4s cubic-bezier(0.16,1,0.3,1), box-shadow 0.4s ease;
+  transition: border-color 0.35s cubic-bezier(0.16, 1, 0.3, 1), transform 0.35s cubic-bezier(0.16, 1, 0.3, 1), box-shadow 0.35s ease;
 }
 .card-split:hover {
   border-color: rgba(195,244,0,0.3);
-  transform: scale(1.02);
+  transform: translateY(-4px);
   box-shadow: 0 8px 32px -4px rgba(0,0,0,0.4);
 }
 .card-split-img {
@@ -136,7 +136,7 @@ body {
   transition: transform 0.2s ease, box-shadow 0.2s ease;
 }
 .btn-primary:hover {
-  transform: scale(1.02);
+  transform: translateY(-1px);
   box-shadow: 0 4px 16px rgba(195,244,0,0.2);
 }
 
@@ -149,6 +149,7 @@ body {
   transition: box-shadow 0.3s ease, transform 0.1s ease;
 }
 .btn-lime:hover {
+  transform: translateY(-1px);
   box-shadow: 0 4px 20px rgba(195, 244, 0, 0.2);
 }
 .btn-lime:active {
@@ -161,6 +162,7 @@ body {
   transition: background-color 0.2s ease, border-color 0.2s ease, transform 0.1s ease;
 }
 .btn-outline:hover {
+  transform: translateY(-1px);
   background: rgba(255, 255, 255, 0.06);
   border-color: rgba(255, 255, 255, 0.26);
 }
@@ -197,8 +199,13 @@ body {
   to { transform: translateX(-50%); }
 }
 @media (prefers-reduced-motion: no-preference) {
-  .animate-marquee {
+.animate-marquee {
     animation: marquee 25s linear infinite;
+  }
+
+  .group:hover .animate-marquee,
+  .group:focus-within .animate-marquee {
+    animation-play-state: paused;
   }
 }
 @media (prefers-reduced-motion: reduce) {
@@ -218,9 +225,9 @@ body {
   background: var(--surface-container-high);
   border: 1px solid rgba(255,255,255,0.08);
   color: var(--on-surface-variant);
-  transition: all 0.15s ease;
+  transition: background-color 0.15s ease, border-color 0.15s ease, color 0.15s ease, transform 0.15s ease;
 }
-.pill:hover { background: rgba(255,255,255,0.05); }
+.pill:hover { background: rgba(255,255,255,0.05); transform: translateY(-1px); }
 .pill.active {
   background: var(--primary-container);
   color: var(--on-primary);
@@ -249,6 +256,17 @@ body {
   transition: transform 0.4s cubic-bezier(0.16,1,0.3,1), box-shadow 0.4s ease;
 }
 .card-glow:hover {
-  transform: scale(1.02);
+  transform: translateY(-4px);
   box-shadow: 0 8px 32px -4px rgba(0,0,0,0.5), 0 0 0 1px rgba(195,244,0,0.2);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    scroll-behavior: auto !important;
+    transition-duration: 0.01ms !important;
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+  }
 }
