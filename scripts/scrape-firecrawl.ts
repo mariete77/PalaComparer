@@ -73,6 +73,24 @@ const TARGETS: Target[] = [
     sport: "tenis",
     excluye: ["-test-", "usada", "/outlet", "pack-de-2", "raquetas-test"],
   },
+  {
+    storeId: "padelpoint",
+    site: "https://www.tiendapadelpoint.com",
+    sport: "padel",
+    excluye: ["/outlet", "/pack-", "usada", "test"],
+  },
+  {
+    storeId: "time2padel",
+    site: "https://www.time2padel.com",
+    sport: "padel",
+    excluye: ["/outlet", "pack", "usada"],
+  },
+  {
+    storeId: "streetpadel",
+    site: "https://www.streetpadel.com",
+    sport: "padel",
+    excluye: ["/outlet", "pack", "usada"],
+  },
 ];
 
 function arg(nombre: string): string | undefined {

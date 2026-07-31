@@ -8,6 +8,7 @@ import { findProducts, Product, PRODUCTS } from "@/data/products";
 import { getProductImage } from "@/data/product-image";
 import { formatPrice, getBestPrice, getPriceSummary } from "@/data/offers";
 import { useCompare } from "@/components/CompareContext";
+import { ScaleIcon } from "@/components/icons";
 import { useState } from "react";
 
 /** Mejor precio entre tiendas, o "—" si no hay ofertas. */
@@ -49,9 +50,9 @@ function CompareContent() {
   if (products.length === 0) {
     return (
       <div className="max-w-3xl mx-auto px-6 py-20 text-center">
-        <p className="text-5xl mb-4">⚖️</p>
+        <ScaleIcon className="w-12 h-12 text-muted mx-auto mb-4" />
         <h1 className="font-display text-3xl font-bold mb-3">
-          Elige qué comparar
+          Elige que comparar
         </h1>
         <p className="text-muted mb-8">
           Añade hasta 3 palas o raquetas con el botón + de cualquier tarjeta, o
@@ -148,9 +149,11 @@ function CompareContent() {
           <thead>
             <tr>
               <th className="text-left p-3 w-40" />
-              {products.map((p) => (
+              {products.map((p) => {
+                const img = getProductImage(p);
+                return (
                 <th key={p.id} className="p-3 align-top">
-                  <div className="relative rounded-2xl bg-white/[0.03] border border-white/5 p-4 group">
+                  <div className={`relative rounded-2xl border border-white/5 p-4 group ${img.isReal ? "bg-white" : "bg-white/[0.03]"}`}>
                     <button
                       onClick={() => remove(p.id)}
                       className="absolute top-2 right-2 w-6 h-6 rounded-full bg-white/10 hover:bg-red-500/80 text-xs opacity-0 group-hover:opacity-100 transition-opacity"
@@ -160,8 +163,8 @@ function CompareContent() {
                     <Link href={`/producto/${p.id}`}>
                       <div className="relative w-full aspect-[2/3] max-w-[160px] mx-auto mb-3">
                         <Image
-                          src={getProductImage(p).src}
-                          unoptimized={getProductImage(p).unoptimized}
+                          src={img.src}
+                          unoptimized={img.unoptimized}
                           alt={p.model}
                           fill
                           className="object-contain"
@@ -175,7 +178,8 @@ function CompareContent() {
                     </Link>
                   </div>
                 </th>
-              ))}
+                );
+              })}
             </tr>
           </thead>
           <tbody>

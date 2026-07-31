@@ -1,14 +1,13 @@
 import type { Metadata } from "next";
 import { notFound } from "next/navigation";
-import { getArticle, getNews, isGuide } from "@/data/news";
+import { getArticle, getGuides, isGuide } from "@/data/news";
 import ArticleDetail from "@/components/ArticleDetail";
 
 export function generateStaticParams() {
-  return getNews().map((a) => ({ slug: a.slug }));
+  return getGuides().map((a) => ({ slug: a.slug }));
 }
 
-// Solo existen las novedades registradas: cualquier otro slug es 404. Las guías
-// viven en /guias/[slug] y sus URLs antiguas se redirigen desde next.config.
+// Solo existen las guías registradas: cualquier otro slug es 404.
 export const dynamicParams = false;
 
 export async function generateMetadata({
@@ -34,15 +33,18 @@ export async function generateMetadata({
   };
 }
 
-export default async function NoticiaPage({
+export default async function GuiaPage({
   params,
 }: {
   params: Promise<{ slug: string }>;
 }) {
   const { slug } = await params;
   const article = getArticle(slug);
-  if (!article || isGuide(article)) notFound();
+  // Una novedad no se sirve desde /guias aunque el slug exista.
+  if (!article || !isGuide(article)) notFound();
 
+  // Todo el contenido vive en src/content/noticias, también el de las guías:
+  // la carpeta es el almacén, la sección la decide `kind`.
   const { default: Body } = await import(`@/content/noticias/${slug}.mdx`);
 
   return <ArticleDetail article={article} Body={Body} />;

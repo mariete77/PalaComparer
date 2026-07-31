@@ -4,6 +4,7 @@ import { useState, useMemo } from "react";
 import { PRODUCTS, Sport, Level, PlayStyle } from "@/data/products";
 import { getBestPrice } from "@/data/offers";
 import ProductCard from "@/components/ProductCard";
+import { PadelIcon, TennisIcon } from "@/components/icons";
 
 type Step = "sport" | "level" | "style" | "budget" | "results";
 
@@ -54,7 +55,7 @@ export default function FinderPage() {
       {step !== "results" ? (
         <>
           <div className="text-center mb-12">
-            <p className="text-xs font-bold text-padel uppercase tracking-wider mb-2">
+            <p className="text-xs font-bold text-padel mb-2">
               Finder
             </p>
             <h1 className="font-display text-4xl sm:text-5xl font-bold">
@@ -67,8 +68,8 @@ export default function FinderPage() {
             <QuestionStep
               question="¿Qué deporte juegas?"
               options={[
-                { value: "padel", label: "🏓 Pádel", desc: "Palas de pádel" },
-                { value: "tenis", label: "🎾 Tenis", desc: "Raquetas de tenis" },
+                { value: "padel", label: "Padel", desc: "Palas de padel", icon: <PadelIcon className="w-7 h-7 text-padel" /> },
+                { value: "tenis", label: "Tenis", desc: "Raquetas de tenis", icon: <TennisIcon className="w-7 h-7 text-tenis" /> },
               ]}
               onSelect={(v) => {
                 setSport(v as Sport);
@@ -83,23 +84,23 @@ export default function FinderPage() {
               options={[
                 {
                   value: "principiante",
-                  label: "🌱 Principiante",
-                  desc: "Llevo menos de 1 año jugando",
+                  label: "Principiante",
+                  desc: "Llevo menos de 1 ano jugando",
                 },
                 {
                   value: "intermedio",
-                  label: "📈 Intermedio",
-                  desc: "Juego regularmente, domino golpes básicos",
+                  label: "Intermedio",
+                  desc: "Juego regularmente, domino golpes basicos",
                 },
                 {
                   value: "avanzado",
-                  label: "🔥 Avanzado",
+                  label: "Avanzado",
                   desc: "Compito o juego a alto nivel",
                 },
                 {
                   value: "profesional",
-                  label: "🏆 Profesional",
-                  desc: "Nivel competición/torneo",
+                  label: "Profesional",
+                  desc: "Nivel competicion/torneo",
                 },
               ]}
               onSelect={(v) => {
@@ -116,17 +117,17 @@ export default function FinderPage() {
               options={[
                 {
                   value: "control",
-                  label: "🎯 Control",
-                  desc: "Gano con precisión y colocación",
+                  label: "Control",
+                  desc: "Gano con precision y colocacion",
                 },
                 {
                   value: "potencia",
-                  label: "💥 Potencia",
+                  label: "Potencia",
                   desc: "Busco el remate y el golpe ganador",
                 },
                 {
                   value: "polivalente",
-                  label: "⚡ Polivalente",
+                  label: "Polivalente",
                   desc: "Un poco de todo, juego completo",
                 },
               ]}
@@ -175,7 +176,7 @@ export default function FinderPage() {
       ) : (
         <div>
           <div className="text-center mb-10">
-            <p className="text-xs font-bold text-padel uppercase tracking-wider mb-2">
+            <p className="text-xs font-bold text-padel mb-2">
               Tus recomendaciones
             </p>
             <h1 className="font-display text-4xl font-bold">
@@ -197,9 +198,8 @@ export default function FinderPage() {
             </div>
           ) : (
             <div className="text-center mb-10">
-              <p className="text-5xl mb-4">😅</p>
               <p className="text-muted">
-                Prueba a subir el presupuesto o cambiar algún criterio.
+                Prueba a subir el presupuesto o cambiar algun criterio.
               </p>
             </div>
           )}
@@ -242,7 +242,7 @@ function QuestionStep({
   onBack,
 }: {
   question: string;
-  options: { value: string; label: string; desc: string }[];
+  options: { value: string; label: string; desc: string; icon?: React.ReactNode }[];
   onSelect: (v: string) => void;
   onBack?: () => void;
 }) {
@@ -256,10 +256,13 @@ function QuestionStep({
           <button
             key={o.value}
             onClick={() => onSelect(o.value)}
-            className="card-glow rounded-2xl bg-white/[0.02] p-6 text-left hover:bg-white/[0.05] transition-colors"
+            className="card-glow rounded-2xl bg-white/[0.02] p-6 text-left hover:bg-white/[0.05] transition-colors flex items-start gap-4"
           >
-            <p className="font-display font-semibold text-lg">{o.label}</p>
-            <p className="text-sm text-muted mt-1">{o.desc}</p>
+            {o.icon && <div className="mt-0.5 shrink-0">{o.icon}</div>}
+            <div>
+              <p className="font-display font-semibold text-lg">{o.label}</p>
+              <p className="text-sm text-muted mt-1">{o.desc}</p>
+            </div>
           </button>
         ))}
       </div>

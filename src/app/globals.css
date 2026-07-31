@@ -85,11 +85,6 @@ body {
   background: var(--surface);
   color: var(--on-surface);
   font-feature-settings: "ss01", "cv11";
-  /* Subtle grid pattern — technical aesthetic */
-  background-image:
-    linear-gradient(to right, rgba(255,255,255,0.02) 1px, transparent 1px),
-    linear-gradient(to bottom, rgba(255,255,255,0.02) 1px, transparent 1px);
-  background-size: 40px 40px;
 }
 
 /* Custom scrollbar */
@@ -106,21 +101,30 @@ body {
   border: 1px solid rgba(255,255,255,0.06);
   border-radius: 0.75rem;
   overflow: hidden;
-  transition: border-color 0.2s ease, transform 0.2s ease;
+  transition: border-color 0.4s cubic-bezier(0.16,1,0.3,1), transform 0.4s cubic-bezier(0.16,1,0.3,1), box-shadow 0.4s ease;
 }
 .card-split:hover {
-  border-color: rgba(195,244,0,0.4);
+  border-color: rgba(195,244,0,0.3);
+  transform: scale(1.02);
+  box-shadow: 0 8px 32px -4px rgba(0,0,0,0.4);
 }
 .card-split-img {
   background: linear-gradient(to bottom, var(--surface-container-low), var(--surface-container-high));
   position: relative;
+}
+/* Las fotos reales pueden llevar fondo blanco propio (JPEG de Amazon) o ser
+   PNG con transparencia: en ambos casos un fondo blanco unifica el aspecto.
+   Las ilustraciones SVG generadas ya traen su fondo oscuro, así que solo se
+   aplica a productos con fotos reales. */
+.card-split-img.has-real-photo {
+  background: #ffffff;
 }
 .card-split-body {
   background: rgba(48,53,65,0.5);
   border-top: 1px solid rgba(255,255,255,0.05);
 }
 
-/* Primary button — glossy lime with inner glow */
+/* Primary button — flat lime */
 .btn-primary {
   background: var(--primary-container);
   color: var(--on-primary);
@@ -128,12 +132,85 @@ body {
   letter-spacing: 0.05em;
   text-transform: uppercase;
   font-size: 12px;
-  box-shadow: inset 0 1px 4px rgba(255,255,255,0.4);
+  box-shadow: 0 1px 2px rgba(0,0,0,0.3);
   transition: transform 0.2s ease, box-shadow 0.2s ease;
 }
 .btn-primary:hover {
   transform: scale(1.02);
-  box-shadow: inset 0 1px 4px rgba(255,255,255,0.5), 0 0 20px rgba(195,244,0,0.3);
+  box-shadow: 0 4px 16px rgba(195,244,0,0.2);
+}
+
+/* Hero CTAs — flat lime */
+.btn-lime {
+  background: var(--primary-container);
+  color: var(--on-primary);
+  font-weight: 700;
+  box-shadow: 0 1px 2px rgba(0,0,0,0.3);
+  transition: box-shadow 0.3s ease, transform 0.1s ease;
+}
+.btn-lime:hover {
+  box-shadow: 0 4px 20px rgba(195, 244, 0, 0.2);
+}
+.btn-lime:active {
+  transform: scale(0.98);
+}
+.btn-outline {
+  border: 1px solid rgba(255, 255, 255, 0.14);
+  color: var(--on-surface);
+  font-weight: 700;
+  transition: background-color 0.2s ease, border-color 0.2s ease, transform 0.1s ease;
+}
+.btn-outline:hover {
+  background: rgba(255, 255, 255, 0.06);
+  border-color: rgba(255, 255, 255, 0.26);
+}
+.btn-outline:active {
+  transform: scale(0.98);
+}
+
+/* Foco visible en toda la página (antes se heredaba el del navegador) */
+:focus-visible {
+  outline: 2px solid var(--primary-container);
+  outline-offset: 3px;
+}
+
+/* Entrada del hero: ordena la lectura titular → texto → CTA. */
+@keyframes rise {
+  from {
+    opacity: 0;
+    transform: translateY(14px);
+  }
+  to {
+    opacity: 1;
+    transform: none;
+  }
+}
+@media (prefers-reduced-motion: no-preference) {
+  .rise {
+    animation: rise 0.7s cubic-bezier(0.16, 1, 0.3, 1) both;
+  }
+}
+
+/* Infinite marquee */
+@keyframes marquee {
+  from { transform: translateX(0); }
+  to { transform: translateX(-50%); }
+}
+@media (prefers-reduced-motion: no-preference) {
+  .animate-marquee {
+    animation: marquee 25s linear infinite;
+  }
+}
+@media (prefers-reduced-motion: reduce) {
+  .animate-marquee {
+    animation: none;
+  }
+}
+
+/* Mobile drawer overlay */
+.drawer-overlay {
+  background: rgba(0,0,0,0.6);
+  backdrop-filter: blur(4px);
 }
 
 /* Filter pill */
@@ -150,14 +227,12 @@ body {
   border-color: var(--primary-container);
 }
 
-/* Glassmorphic floating bar */
+/* Glassmorphic floating bar — solid, no blur */
 .glass-bar {
-  background: rgba(14,19,30,0.85);
-  backdrop-filter: blur(12px);
-  -webkit-backdrop-filter: blur(12px);
-  border: 1px solid rgba(255,255,255,0.1);
+  background: var(--surface-container);
+  border: 1px solid rgba(255,255,255,0.08);
   border-top: 2px solid var(--primary-container);
-  box-shadow: 0 -8px 32px rgba(0,0,0,0.4);
+  box-shadow: 0 -4px 24px rgba(0,0,0,0.3);
 }
 
 /* Spec cell in data grid */
@@ -171,9 +246,9 @@ body {
 .bg-grid { /* merged into body */ }
 .card-glow {
   box-shadow: 0 0 0 1px rgba(255,255,255,0.06);
-  transition: transform 0.2s ease, box-shadow 0.2s ease;
+  transition: transform 0.4s cubic-bezier(0.16,1,0.3,1), box-shadow 0.4s ease;
 }
 .card-glow:hover {
-  transform: translateY(-2px);
-  box-shadow: 0 0 0 1px rgba(195,244,0,0.3), 0 12px 32px -8px rgba(0,0,0,0.6);
+  transform: scale(1.02);
+  box-shadow: 0 8px 32px -4px rgba(0,0,0,0.5), 0 0 0 1px rgba(195,244,0,0.2);
 }

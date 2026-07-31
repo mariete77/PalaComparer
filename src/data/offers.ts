@@ -1,18 +1,21 @@
 // Ofertas por producto y evolución de precio.
 //
-// ⚠️ MVP: las ofertas se generan de forma DETERMINISTA a partir del PVP del
-// producto y del id de la tienda. No son precios reales — son un stub con la
-// forma exacta que tendrá el feed definitivo, para poder construir la UI.
-// Al conectar feeds/afiliación reales basta con sustituir `getOffers` y
-// `getPriceHistory` por lecturas de la fuente de datos: el resto de la app
-// consume únicamente estas funciones y los tipos de abajo.
+// Las ofertas de cada tienda se generan a partir de datos reales scrapeados
+// (Amazon, PadelNuestro, Decathlon, etc.) con fallback sintético para tiendas
+// sin precio real. El histórico de precios lee snapshots semanales reales
+// del directorio price-history/.
 
 import { getProduct, type Product } from "./products";
 import { STORES, totalWithShipping, buildSearchUrl, type Store } from "./stores";
 
-/** Fecha del snapshot de precios. Fija a propósito: mantiene el render
- *  determinista entre servidor y cliente y hace los builds reproducibles. */
-export const PRICE_SNAPSHOT = "2026-07-20";
+/** Fecha del último snapshot de precios. */
+let latestSnapshotDate = "2026-07-20";
+try {
+  // eslint-disable-next-line @typescript-eslint/no-require-imports
+  const latest = require("./price-history/latest-date.json") as { date: string };
+  if (latest?.date) latestSnapshotDate = latest.date;
+} catch {}
+export const PRICE_SNAPSHOT: string = latestSnapshotDate;
 
 /** Días de histórico que se guardan por producto. */
 const HISTORY_DAYS = 60;
@@ -134,6 +137,20 @@ const REAL_STORE_OFFERS =
   (realStoreOffersData as Record<string, RealStoreOffer[]>) ?? {};
 
 // ---------------------------------------------------------------------------
+// Histórico de precios (snapshots semanales reales)
+// ---------------------------------------------------------------------------
+
+let COMPILED_HISTORY: Record<string, PricePoint[]> = {};
+
+try {
+  // eslint-disable-next-line @typescript-eslint/no-require-imports
+  const compiled = require("./price-history/compiled.json") as Record<string, PricePoint[]>;
+  COMPILED_HISTORY = compiled ?? {};
+} catch {
+  // No hay snapshots todavía — se usa fallback sintético
+}
+
+// ---------------------------------------------------------------------------
 // Generación
 // ---------------------------------------------------------------------------
 
@@ -253,13 +270,22 @@ export function getOffers(productId: string): Offer[] {
 const historyCache = new Map<string, PricePoint[]>();
 
 /**
- * Serie diaria del mejor precio en los últimos `HISTORY_DAYS` días.
- * El último punto coincide siempre con el mejor precio actual.
+ * Histórico del mejor precio por producto.
+ * Si hay snapshots reales en price-history/compiled.json, los usa.
+ * Si no, genera datos sintéticos como fallback.
  */
 export function getPriceHistory(productId: string): PricePoint[] {
   const cached = historyCache.get(productId);
   if (cached) return cached;
 
+  // Datos reales del histórico semanal
+  const real = COMPILED_HISTORY[productId];
+  if (real && real.length > 0) {
+    historyCache.set(productId, real);
+    return real;
+  }
+
+  // Fallback sintético: random walk de 60 días
   const product = getProduct(productId);
   if (!product) return [];
 
@@ -269,20 +295,18 @@ export function getPriceHistory(productId: string): PricePoint[] {
   const current = offers[0].price;
   const r = rng(hashSeed(`${productId}:history`));
 
-  // Se parte de un precio cercano al PVP y se camina hasta el precio actual.
   let price = product.price * (0.92 + r() * 0.08);
   const points: PricePoint[] = [];
 
   for (let i = 0; i < HISTORY_DAYS; i++) {
     const roll = r();
     if (roll < 0.06) {
-      price *= 0.9 + r() * 0.05; // promo puntual
+      price *= 0.9 + r() * 0.05;
     } else if (roll < 0.12) {
-      price *= 1.02 + r() * 0.04; // rebote tras promo
+      price *= 1.02 + r() * 0.04;
     } else {
-      price *= 0.997 + r() * 0.006; // deriva suave
+      price *= 0.997 + r() * 0.006;
     }
-    // No se aleja más de un 30% por debajo del PVP.
     price = Math.min(Math.max(price, product.price * 0.7), product.price * 1.05);
 
     points.push({
@@ -291,7 +315,6 @@ export function getPriceHistory(productId: string): PricePoint[] {
     });
   }
 
-  // El punto de hoy es, por definición, el mejor precio actual.
   points[points.length - 1] = { date: PRICE_SNAPSHOT, price: current };
 
   historyCache.set(productId, points);

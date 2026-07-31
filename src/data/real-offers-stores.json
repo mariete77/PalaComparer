@@ -248,5 +248,27 @@
       "inStock": true,
       "scrapedAt": "2026-07-27T20:30:00.000Z"
     }
+  ],
+  "bullpadel-vertex-04-2025": [
+    {
+      "storeId": "padelnuestro",
+      "title": "BULLPADEL VERTEX 04 25",
+      "price": 156.95,
+      "listPrice": 339.95,
+      "url": "https://www.padelnuestro.com/bullpadel-vertex-04-25-113772-p",
+      "inStock": true,
+      "scrapedAt": "2026-07-28T12:00:00.000Z"
+    }
+  ],
+  "adidas-metalbone-carbon-2026": [
+    {
+      "storeId": "padelnuestro",
+      "title": "ADIDAS METALBONE CARBON 2026",
+      "price": 201.95,
+      "listPrice": 269.95,
+      "url": "https://www.padelnuestro.com/adidas-metalbone-carbon-2026",
+      "inStock": true,
+      "scrapedAt": "2026-07-28T12:00:00.000Z"
+    }
   ]
 }

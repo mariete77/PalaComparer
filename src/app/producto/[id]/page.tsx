@@ -10,7 +10,9 @@ import {
   getPriceHistory,
   getPriceSummary,
 } from "@/data/offers";
-import { KIND_LABEL, getArticlesForProduct } from "@/data/news";
+import { KIND_LABEL, getArticlesForProduct, articleHref } from "@/data/news";
+import { buildProductSchema, buildBreadcrumbSchema } from "@/data/schema";
+import JsonLd from "@/components/JsonLd";
 import AddToCompare from "@/components/AddToCompare";
 import ProductCard from "@/components/ProductCard";
 import OfferTable from "@/components/OfferTable";
@@ -29,9 +31,18 @@ export async function generateMetadata({
   const { id } = await params;
   const p = getProduct(id);
   if (!p) return {};
+  const path = `/producto/${p.id}`;
   return {
     title: `${p.brand} ${p.model} (${p.year}) — PalaComparer`,
     description: p.description,
+    // Evita duplicados por www/apex y por parámetros de campaña.
+    alternates: { canonical: path },
+    openGraph: {
+      title: `${p.brand} ${p.model} (${p.year})`,
+      description: p.description,
+      url: path,
+      type: "website",
+    },
   };
 }
 
@@ -84,8 +95,21 @@ export default async function ProductPage({
       (x.style.some((s) => p.style.includes(s)) || x.brand === p.brand)
   ).slice(0, 4);
 
+  const listado = p.sport === "padel" ? "/palas" : "/raquetas";
+
   return (
     <div className="max-w-7xl mx-auto px-6 py-10">
+      {/* El dato que hace citable esta ficha: specs de fabricante + precios
+          reales de varias tiendas, legibles como entidad por sistemas de IA. */}
+      <JsonLd data={buildProductSchema(p, offers, image.isReal ? image.src : undefined)} />
+      <JsonLd
+        data={buildBreadcrumbSchema([
+          { name: "Inicio", path: "/" },
+          { name: p.sport === "padel" ? "Palas" : "Raquetas", path: listado },
+          { name: `${p.brand} ${p.model}`, path: `/producto/${p.id}` },
+        ])}
+      />
+
       {/* Breadcrumb */}
       <nav className="text-xs text-muted mb-6">
         <Link href="/" className="hover:text-foreground">Inicio</Link>
@@ -103,7 +127,9 @@ export default async function ProductPage({
       <div className="grid md:grid-cols-2 gap-10 mb-16">
         {/* Imagen */}
         <div>
-          <div className="relative aspect-[2/3] max-h-[600px] rounded-3xl bg-gradient-to-b from-white/5 to-transparent overflow-hidden card-glow">
+          <div className={`relative aspect-[2/3] max-h-[600px] rounded-3xl overflow-hidden card-glow ${
+            image.isReal ? "bg-white" : "bg-gradient-to-b from-white/5 to-transparent"
+          }`}>
             <Image
               src={image.src}
               unoptimized={image.unoptimized}
@@ -175,7 +201,7 @@ export default async function ProductPage({
               </p>
               {summary.atHistoricalLow && (
                 <p className="mt-2 inline-block text-xs font-semibold px-3 py-1 rounded-full bg-padel/15 text-padel border border-padel/30">
-                  ↓ Mínimo histórico de los últimos 60 días
+                  ↓ Mínimo histórico
                 </p>
               )}
             </div>
@@ -254,7 +280,7 @@ export default async function ProductPage({
                   Evolución del precio
                 </h3>
                 <p className="text-xs text-muted mb-4">
-                  Mejor precio diario de los últimos 60 días
+                  Evolución del mejor precio
                 </p>
                 <PriceHistoryChart points={history} accent={accentVar} />
                 {summary && (
@@ -293,7 +319,7 @@ export default async function ProductPage({
             {noticias.map((a) => (
               <li key={a.slug}>
                 <Link
-                  href={`/noticias/${a.slug}`}
+                  href={articleHref(a)}
                   className="block h-full rounded-xl bg-white/[0.02] border border-white/5 p-5 hover:bg-white/[0.05] transition-colors"
                 >
                   <span className="text-xs font-bold uppercase tracking-wider text-muted">

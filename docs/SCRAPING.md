@@ -202,9 +202,9 @@ buscando "Head Gravity Pro":
 | Tienda | Estado |
 |--------|--------|
 | Padel Nuestro | ✅ dominio y fichas OK. Su buscador (`/catalogsearch/result/?q=`) responde 200 pero **devuelve la portada** a los scrapers, con proxy normal y con stealth. No se ha podido confirmar si le pasa lo mismo a un usuario real; los productos con precio real ya enlazan a su ficha y no pasan por el buscador |
-| PádelPoint | ⚠️ la tienda es `tiendapadelpoint.com` (OpenCart), no `padelpoint.es`. URL corregida |
-| Time2Pádel | ⚠️ `.es` devuelve 421 (no está en el certificado). La buena es `time2padel.com`, PrestaShop, con búsqueda en `/es/buscar?controller=search&s=`. Corregida |
-| StreetPadel | ⚠️ `.es` redirige a `.com` (Shopify) y `/buscar` daba **404**. La ruta es `/search?q=`. Corregida |
+| PádelPoint | ✅ `tiendapadelpoint.com` (OpenCart). Añadido como target de Firecrawl. Su buscador funciona y el HTML incluye `datalayerDataGMT` con precios estructurados |
+| Time2Pádel | ⚠️ `.es` devuelve 421 (no está en el certificado). La buena es `time2padel.com`, PrestaShop. Devuelve 403 a fetch simple — Firecrawl puede atravesar el bloqueo con su renderizado JS. Si falla, documentar como pendiente |
+| StreetPadel | ✅ `.es` redirige a `.com` (Shopify). Ruta de búsqueda `/search?q=`. Añadido como target de Firecrawl |
 | Decathlon | ⚠️ el parámetro es `Ntt`, no `q`: con `?q=` te deja en la portada. Corregido |
 | Tenis Boutique | ❌ `tenisboutique.es` no resuelve por DNS y `.com` está caído en Cloudflare. **Eliminada** |
 | Zona de Tenis | ❌ `zonadetenis.com` y `.es` no resuelven por DNS. **Eliminada** |
@@ -240,6 +240,64 @@ FIRECRAWL_API_KEY=fc-... npm run scrape:firecrawl -- --refresh
 ```
 
 Para actualizar solo un producto concreto, borrar su entrada del JSON y re-ejecutar el script.
+
+## Histórico de precios (snapshots)
+
+El gráfico de evolución de precio en la ficha de producto usa datos reales
+de snapshots semanales, no datos sintéticos.
+
+### Capturar un snapshot
+
+```bash
+npx tsx scripts/snapshot-prices.ts
+```
+
+Este script:
+1. Lee los JSONs de ofertas reales (Amazon, Firecrawl, Decathlon)
+2. Calcula el mejor precio de cada producto
+3. Guarda `src/data/price-history/YYYY-MM-DD.json` (snapshot individual)
+4. Regenera `src/data/price-history/compiled.json` (índice completo)
+
+**NO re-scrapea** las tiendas. Es un "fotografía" de los precios ya guardados.
+Ejecutar después de actualizar los precios con los scrapers.
+
+### Flujo semanal recomendado
+
+```bash
+# 1. Actualizar precios de todas las tiendas
+npx tsx scripts/scrape-amazon.ts
+FIRECRAWL_API_KEY=fc-... npm run scrape:firecrawl -- --refresh
+npx tsx scripts/scrape-decathlon.ts
+
+# 2. Capturar snapshot
+npx tsx scripts/snapshot-prices.ts
+
+# 3. Verificar en local
+npm run dev
+```
+
+### Formato del snapshot
+
+Cada archivo `YYYY-MM-DD.json` contiene:
+```json
+{
+  "date": "2026-07-28",
+  "scrapedAt": "2026-07-28T18:00:00.000Z",
+  "products": {
+    "bullpadel-vertex-04-2024": {
+      "bestPrice": 109.0,
+      "bestStoreId": "amazon",
+      "offers": [
+        { "storeId": "amazon", "price": 109.0, "inStock": true },
+        { "storeId": "padelnuestro", "price": 119.95, "inStock": true }
+      ]
+    }
+  }
+}
+```
+
+`compiled.json` es un `Record<productId, PricePoint[]>` que `offers.ts` importa
+directamente para alimentar el gráfico.
 
 ## Troubleshooting
 
@@ -280,12 +338,15 @@ Lo que queda sin precio y por qué:
 - [x] Automatizar el flujo de Firecrawl en `scripts/scrape-firecrawl.ts` con
       `FIRECRAWL_API_KEY` — falta estrenarlo contra la API con una clave real
 - [ ] Volver a scrapear Amazon para los 7 ids nuevos del catálogo 2026
-- [ ] Scraping de Decathlon ES (marketplace: ojo al vendedor y a la generación)
+- [x] Scraping de Decathlon ES (marketplace: ojo al vendedor y a la generación)
 - [ ] Más tiendas de **tenis**: con Tennispro solo casan 4 de 17 raquetas. El
       buscador de Smashinn (tradeinn) se genera por JS y no vale como
       `searchUrl`, aunque sus fichas sí son scrapeables
-- [ ] Time2Pádel, que se quedó sin scrapear
+- [x] Time2Pádel — añadido como target de Firecrawl (pendiente verificar que no sea 403)
+- [x] StreetPadel — añadido como target de Firecrawl
+- [x] PádelPoint — añadido como target de Firecrawl
 - [ ] Descargar imágenes reales de producto
+- [x] Histórico semanal de precios — `scripts/snapshot-prices.ts` + `price-history/`
 - [ ] Cron job semanal automático
 - [ ] Patchright (undetected Playwright fork) para evitar CAPTCHAs
 - [ ] FlareSolverr sidecar para Cloudflare

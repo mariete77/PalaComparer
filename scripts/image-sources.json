@@ -122,55 +122,67 @@
     "credit": "© Wilson Sporting Goods",
     "source": "https://www.wilson.com/es-es/product/bela-v3-padel-wr18650"
   },
-  "babolat-boost-aero-2023": {
-    "url": ""
+  "babolat-pure-aero-2026": {
+    "url": "https://m.media-amazon.com/images/I/51aohxFX9UL._AC_SL1197_.jpg",
+    "source": "https://www.amazon.es/dp/B0H1J9G7K9",
+    "licence": "feed"
   },
-  "babolat-pure-aero-2023": {
-    "url": ""
+  "babolat-pure-aero-98-2026": {
+    "url": "https://media.babolat.com/image/upload/f_auto,q_auto/v1739968467/Product_Media/2026/Tennis/RACQUETS/Expert/101567-PURE_AERO_98_GEN9-100-1-Face.png",
+    "credit": "© Babolat",
+    "source": "https://www.babolat.com/product/pure-aero-98-gen9-101567",
+    "licence": "pendiente"
   },
-  "babolat-pure-drive-2024": {
-    "url": ""
+  "babolat-pure-drive-2025": {
+    "url": "https://m.media-amazon.com/images/I/61MylfeEj0L._AC_SL1050_.jpg",
+    "source": "https://www.amazon.es/dp/B0DQKQTHPQ",
+    "licence": "feed"
   },
-  "babolat-pure-strike-97-2024": {
-    "url": ""
+  "head-boom-mp-2026": {
+    "url": "https://m.media-amazon.com/images/I/71iu00wQKXL._AC_SL1500_.jpg",
+    "source": "https://www.amazon.com/dp/B0H89DVHYZ",
+    "licence": "feed"
   },
-  "dunlop-cx-200-2024": {
-    "url": ""
+  "head-speed-mp-2026": {
+    "url": "https://m.media-amazon.com/images/I/61kn1kEQQ2L._AC_SL1500_.jpg",
+    "source": "https://www.amazon.com/dp/B0G4FJ82CV",
+    "licence": "feed"
   },
-  "head-boom-mp-2024": {
-    "url": ""
+  "tecnifibre-tfight-305s-2025": {
+    "url": "https://m.media-amazon.com/images/I/51Nu8is11bL._AC_SL1200_.jpg",
+    "source": "https://www.amazon.es/dp/B0DSCWGF3G",
+    "licence": "feed"
   },
-  "head-radical-mp-2023": {
-    "url": ""
+  "wilson-blade-98-v10-2026": {
+    "url": "https://m.media-amazon.com/images/I/61XWXJukR7L._AC_SL1500_.jpg",
+    "source": "https://www.amazon.es/dp/B0G1V7D4LQ",
+    "licence": "feed"
   },
-  "head-speed-mp-2024": {
-    "url": ""
+  "wilson-rf-01-pro-2025": {
+    "url": "https://m.media-amazon.com/images/I/61rHHf2pH%2BL._AC_SL1500_.jpg",
+    "source": "https://www.amazon.es/dp/B0DB2YJ8BT",
+    "licence": "feed"
   },
-  "head-ti-s6-2022": {
-    "url": ""
+  "yonex-ezone-98-2025": {
+    "url": "https://m.media-amazon.com/images/I/41yT9dpcbTL._AC_SL1000_.jpg",
+    "source": "https://www.amazon.es/dp/B0DT7K8GHG",
+    "licence": "feed"
   },
-  "tecnifibre-tfight-305-2023": {
-    "url": ""
+  "yonex-vcore-98-2026": {
+    "url": "https://m.media-amazon.com/images/I/5199dopho-L._AC_SL1050_.jpg",
+    "source": "https://www.amazon.com/dp/B0G698BYHV",
+    "licence": "feed"
   },
-  "wilson-blade-98-v9-2024": {
-    "url": ""
+  "bullpadel-vertex-04-2025": {
+    "url": "https://www.padelnuestro.com/media/catalog/product/1/1/113772-pala-bullpadel-vertex-04-25-448115-1500x1500-vista1.jpg",
+    "source": "https://www.padelnuestro.com/bullpadel-vertex-04-25-113772-p",
+    "credit": "Padel Nuestro",
+    "licence": "pendiente"
   },
-  "wilson-clash-100-v2-2022": {
-    "url": ""
-  },
-  "wilson-hyper-hammer-2022": {
-    "url": ""
-  },
-  "wilson-pro-staff-97-v14-2023": {
-    "url": ""
-  },
-  "wilson-shift-99-2023": {
-    "url": ""
-  },
-  "yonex-ezone-100-2022": {
-    "url": ""
-  },
-  "yonex-vcore-98-2023": {
-    "url": ""
+  "adidas-metalbone-carbon-2026": {
+    "url": "https://www.padelnuestro.com/media/catalog/product/1/2/120469-pala-adidas-metalbone-carbon-2026-ar2aa2u22-1200x1200-1.jpg",
+    "source": "https://www.padelnuestro.com/adidas-metalbone-carbon-2026",
+    "credit": "Padel Nuestro",
+    "licence": "pendiente"
   }
 }

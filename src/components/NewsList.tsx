@@ -4,6 +4,7 @@ import { useMemo, useState } from "react";
 import Link from "next/link";
 import {
   KIND_LABEL,
+  articleHref,
   formatArticleDate,
   type Article,
   type ArticleKind,
@@ -101,7 +102,7 @@ function ArticleCard({ article }: { article: Article }) {
 
   return (
     <Link
-      href={`/noticias/${article.slug}`}
+      href={articleHref(article)}
       className="card-glow rounded-2xl bg-white/[0.02] p-6 flex flex-col h-full"
     >
       <div className="flex items-center gap-2 mb-3">

@@ -1,59 +1,91 @@
 "use client";
 
+import { useRef } from "react";
 import Image from "next/image";
 import Link from "next/link";
+import gsap from "gsap";
+import { ScrollTrigger } from "gsap/ScrollTrigger";
+import { useGSAP } from "@gsap/react";
 import { Product } from "@/data/products";
 import { getProductImage } from "@/data/product-image";
 import { formatPrice } from "@/data/offers";
 import { useCompare } from "@/components/CompareContext";
+
+gsap.registerPlugin(ScrollTrigger);
 
 export default function ProductCard({
   product,
   bestPrice,
 }: {
   product: Product;
-  /** Mejor precio entre tiendas. Si no se pasa, se muestra el PVP. */
   bestPrice?: number | null;
 }) {
   const { add, remove, has, isFull } = useCompare();
   const selected = has(product.id);
   const image = getProductImage(product);
+  const cardRef = useRef<HTMLDivElement>(null);
+  const imgRef = useRef<HTMLDivElement>(null);
 
-  // Spec chips: 2 primary specs según deporte
-  const specs: { icon: string; label: string; value: string }[] =
+  // GSAP: image scale+fade on scroll
+  useGSAP(() => {
+    if (!cardRef.current || !imgRef.current) return;
+    const prefersReduced = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+    if (prefersReduced) return;
+
+    gsap.fromTo(
+      imgRef.current,
+      { scale: 0.9, opacity: 0.6 },
+      {
+        scale: 1,
+        opacity: 1,
+        duration: 0.6,
+        ease: "power2.out",
+        scrollTrigger: {
+          trigger: cardRef.current,
+          start: "top 85%",
+          end: "top 40%",
+          toggleActions: "play none none reverse",
+        },
+      }
+    );
+  }, { scope: cardRef });
+
+  const specs: { label: string; value: string }[] =
     product.sport === "padel" && product.padel
       ? [
-          { icon: "⚖️", label: "Peso", value: product.padel.weight.replace(/\s*/g, "").replace(/\(+.*\)/, "") },
-          { icon: "🎯", label: "Balance", value: cap(product.padel.balance) },
+          { label: "Peso", value: product.padel.weight.replace(/\s*/g, "").replace(/\(+.*\)/, "") },
+          { label: "Balance", value: cap(product.padel.balance) },
         ]
       : product.tenis
         ? [
-            { icon: "⚖️", label: "Peso", value: `${product.tenis.weightStrung}g` },
-            { icon: "🎾", label: "Tamis", value: `${product.tenis.headSize}in²` },
+            { label: "Peso", value: `${product.tenis.weightStrung}g` },
+            { label: "Tamis", value: `${product.tenis.headSize}in²` },
           ]
         : [];
 
   return (
-    <div className="card-split group relative flex flex-col h-full">
+    <div ref={cardRef} className="card-split group relative flex flex-col h-full">
       <Link href={`/producto/${product.id}`} className="block flex-1 flex flex-col">
-        {/* Top: imagen split-tone */}
-        <div className="card-split-img aspect-[4/5] flex items-center justify-center p-6">
-          <span className="absolute top-3 left-3 bg-primary-container/20 text-primary-container font-bold text-[10px] px-2 py-1 rounded border border-primary-container/30 uppercase tracking-wider z-10">
+        <div className={`card-split-img aspect-[4/5] flex items-center justify-center p-6 ${image.isReal ? "has-real-photo" : ""}`}>
+          <span className={`absolute top-3 left-3 font-bold text-[10px] px-2 py-1 rounded border uppercase tracking-wider z-10 ${
+            image.isReal
+              ? "bg-surface/70 text-on-surface border-white/10"
+              : "bg-primary-container/20 text-primary-container border-primary-container/30"
+          }`}>
             {product.sport === "padel" ? "Pádel" : "Tenis"}
           </span>
-          <div className="relative w-full h-full group-hover:scale-105 transition-transform duration-500">
+          <div ref={imgRef} className="relative w-full h-full group-hover:scale-105 transition-transform duration-500">
             <Image
               src={image.src}
               unoptimized={image.unoptimized}
               alt={`${product.brand} ${product.model}`}
               fill
-              className="object-contain drop-shadow-[0_10px_20px_rgba(0,0,0,0.5)]"
+              className={`object-contain ${image.isReal ? "" : "drop-shadow-[0_10px_20px_rgba(0,0,0,0.5)]"}`}
               sizes="(max-width: 768px) 50vw, 25vw"
             />
           </div>
         </div>
 
-        {/* Bottom: data */}
         <div className="card-split-body p-4 flex-1 flex flex-col">
           <span className="text-muted font-bold text-[11px] uppercase tracking-wider">
             {product.brand}
@@ -62,13 +94,11 @@ export default function ProductCard({
             {product.model}
           </h3>
 
-          {/* Spec grid */}
           {specs.length > 0 && (
             <div className="grid grid-cols-2 gap-1.5 mt-3 mb-3">
               {specs.map((s) => (
-                <div key={s.label} className="spec-cell px-1.5 py-1 sm:px-2 sm:py-1.5 flex items-center gap-1 sm:gap-1.5 overflow-hidden">
-                  <span className="text-[10px] sm:text-xs shrink-0">{s.icon}</span>
-                  <div className="min-w-0 flex-1">
+                <div key={s.label} className="spec-cell px-1.5 py-1 sm:px-2 sm:py-1.5 overflow-hidden">
+                  <div className="min-w-0">
                     <div className="text-[7px] sm:text-[9px] text-muted font-bold uppercase tracking-wider leading-none truncate">
                       {s.label}
                     </div>
@@ -95,7 +125,6 @@ export default function ProductCard({
         </div>
       </Link>
 
-      {/* Add to compare */}
       <button
         onClick={() => (selected ? remove(product.id) : add(product.id))}
         disabled={!selected && isFull}
@@ -106,9 +135,9 @@ export default function ProductCard({
               ? "bg-surface-container-highest text-muted border-white/5 cursor-not-allowed"
               : "bg-surface-container-highest text-on-surface-variant border-white/5 hover:bg-primary-container hover:text-on-primary hover:border-primary-container"
         }`}
-        title={selected ? "Quitar del comparador" : "Añadir al comparador"}
+        title={selected ? "Quitar del comparador" : "Anadir al comparador"}
       >
-        {selected ? "✓" : "+"}
+        {selected ? "\u2713" : "+"}
       </button>
     </div>
   );

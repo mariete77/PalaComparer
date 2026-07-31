@@ -56,6 +56,37 @@ export function getArticlesBySport(sport: Sport): Article[] {
   return ARTICLES.filter((a) => a.sport === sport || a.sport === "ambos");
 }
 
+/**
+ * Guías y noticias viven en secciones distintas.
+ *
+ * Guías = contenido perenne de ayuda a la compra. Los análisis entran aquí
+ * porque un análisis de material sigue sirviendo meses después, a diferencia de
+ * una novedad, que caduca.
+ */
+export const GUIDE_KINDS: ArticleKind[] = ["guia", "analisis"];
+
+export function isGuide(article: Article): boolean {
+  return GUIDE_KINDS.includes(article.kind);
+}
+
+/** Artículos de la sección /guias, del más reciente al más antiguo. */
+export function getGuides(): Article[] {
+  return ARTICLES.filter(isGuide);
+}
+
+/** Artículos de la sección /noticias (novedades de actualidad). */
+export function getNews(): Article[] {
+  return ARTICLES.filter((a) => !isGuide(a));
+}
+
+/**
+ * URL de un artículo según su sección. Centralizado aquí para que ningún
+ * enlace del sitio pueda apuntar a la sección equivocada.
+ */
+export function articleHref(article: Article): string {
+  return isGuide(article) ? `/guias/${article.slug}` : `/noticias/${article.slug}`;
+}
+
 export const KIND_LABEL: Record<ArticleKind, string> = {
   guia: "Guía",
   analisis: "Análisis",
