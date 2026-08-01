@@ -44,6 +44,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     { internalPath: "/comparar", lastModified: priceDataLastModified, changeFrequency: "monthly", priority: 0.6 },
     { internalPath: "/noticias", lastModified: priceDataLastModified, changeFrequency: "weekly", priority: 0.7 },
     { internalPath: "/guias", lastModified: priceDataLastModified, changeFrequency: "weekly", priority: 0.7 },
+    { internalPath: "/metodologia", lastModified: priceDataLastModified, changeFrequency: "monthly", priority: 0.7 },
   ];
 
   // Los precios se refrescan a menudo, así que las fichas son `daily`.

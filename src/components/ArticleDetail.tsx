@@ -90,7 +90,7 @@ export default function ArticleDetail({ article, locale, Body }: ArticleDetailPr
         <h1 className="font-display text-4xl font-bold leading-tight">
           {title}
         </h1>
-        <p className="mt-4 text-lg text-muted leading-relaxed">
+        <p className="article-summary mt-4 text-lg text-muted leading-relaxed">
           {excerpt}
         </p>
         <p className="mt-6 text-sm text-muted">

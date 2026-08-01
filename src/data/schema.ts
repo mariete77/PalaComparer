@@ -103,6 +103,7 @@ export function buildProductSchema(
   return {
     "@context": "https://schema.org",
     "@type": "Product",
+    "@id": absoluteLocaleUrl(locale, `/producto/${p.id}#product`),
     name: `${p.brand} ${p.model}`,
     sku: p.id,
     description,
@@ -169,6 +170,10 @@ export function buildArticleSchema(
       name: SITE_NAME,
       logo: { "@type": "ImageObject", url: absoluteUrl("/logo-full.png") },
     },
+    speakable: {
+      "@type": "SpeakableSpecification",
+      cssSelector: [".article-summary", "article h1", "article h2"],
+    },
     mainEntityOfPage: {
       "@type": "WebPage",
       "@id": absoluteLocaleUrl(locale, `/${section}/${article.slug}`),
@@ -186,6 +191,7 @@ export function buildItemListSchema(
     "@context": "https://schema.org",
     "@type": "ItemList",
     name,
+    itemListOrder: "https://schema.org/ItemListOrderAscending",
     numberOfItems: items.length,
     itemListElement: items.map((p, i) => ({
       "@type": "ListItem",
@@ -200,10 +206,14 @@ export function buildOrganizationSchema(locale: Locale = "es") {
   return {
     "@context": "https://schema.org",
     "@type": "Organization",
+    "@id": `${SITE_URL}/#organization`,
     name: SITE_NAME,
     url: SITE_URL,
     logo: absoluteUrl("/logo-full.png"),
     description: ORG_DESCRIPTION[locale],
+    knowsAbout: locale === "en"
+      ? ["Padel equipment", "Tennis rackets", "Manufacturer specifications", "Retail price comparison"]
+      : ["Material de pádel", "Raquetas de tenis", "Especificaciones de fabricante", "Comparación de precios"],
   };
 }
 
@@ -211,6 +221,7 @@ export function buildWebSiteSchema(locale: Locale = "es") {
   return {
     "@context": "https://schema.org",
     "@type": "WebSite",
+    "@id": `${SITE_URL}/#website`,
     name: SITE_NAME,
     url: SITE_URL,
     inLanguage: LOCALE_BCP47[locale],

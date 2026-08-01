@@ -59,6 +59,9 @@ export default async function PalasPage({
         <p className="text-muted mt-2">
           {t("palas.subtitulo", { n: products.length })}
         </p>
+        <p className="mt-4 max-w-3xl text-sm leading-relaxed text-muted">
+          {t("palas.intro")}
+        </p>
       </header>
       <Catalog products={products} sport="padel" priceIndex={priceIndex} />
     </div>

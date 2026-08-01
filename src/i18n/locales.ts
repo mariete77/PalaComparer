@@ -106,6 +106,7 @@ const es = {
       "Todas las palas de pádel 2022-2026: Nox, Bullpadel, Head, Adidas, Babolat y más. Filtra por nivel, forma, estilo y precio.",
     titulo: "Palas de pádel",
     subtitulo: "{n} palas de las mejores marcas. Usa los filtros para encontrar la tuya.",
+    intro: "Una pala de pádel debe elegirse por nivel, estilo y especificaciones, no solo por marca. Aquí puedes comparar forma, balance, peso, materiales y precios actuales de varias tiendas para encontrar un modelo que encaje con tu juego.",
   },
   raquetas: {
     metaTitle: "Raquetas de tenis — PalaComparer",
@@ -113,6 +114,7 @@ const es = {
       "Todas las raquetas de tenis 2022-2026: Wilson, Babolat, Head, Yonex y más. Filtra por nivel, estilo y precio.",
     titulo: "Raquetas de tenis",
     subtitulo: "{n} raquetas de las mejores marcas. Usa los filtros para encontrar la tuya.",
+    intro: "Una raqueta de tenis cambia mucho según su peso, tamaño de cabeza, patrón de cuerdas y rigidez. Este catálogo reúne esos datos para que compares control, potencia, comodidad y precio antes de elegir tu siguiente marco.",
   },
   noticias: {
     metaTitle: "Novedades de pádel y tenis — PalaComparer",
@@ -123,6 +125,21 @@ const es = {
       "Lanzamientos y cambios de catálogo, con el contexto de qué se mueve respecto al modelo anterior.",
     vacioCuerpo:
       "Cuando salga material nuevo lo contamos aquí. Mientras tanto, las guías de compra y los análisis están en su propia sección.",
+  },
+  metodologia: {
+    metaTitle: "Metodología de precios y especificaciones — PalaComparer",
+    metaDesc: "Cómo recopilamos especificaciones de fabricante, precios, stock e histórico de palas y raquetas.",
+    eyebrow: "Transparencia",
+    titulo: "Cómo construimos cada comparación",
+    resumen: "PalaComparer reúne especificaciones publicadas por fabricantes y precios observados en varias tiendas para que puedas comparar modelos con un criterio claro y verificable.",
+    especificacionesTitulo: "De dónde salen las especificaciones",
+    especificaciones: "Peso, balance, forma, materiales, patrón de cuerdas y demás datos proceden de fichas técnicas de fabricantes o distribuidores. Cuando una cifra puede variar por talla, encordado o tolerancia de fabricación, la mostramos como referencia y no como una medición propia.",
+    preciosTitulo: "Cómo comparamos precios",
+    precios: "Cada oferta muestra el precio del producto sin ocultar que el importe final puede cambiar con envío, stock o promociones. La tabla enlaza a la tienda correspondiente y ordena las ofertas por precio del artículo para facilitar una primera comparación.",
+    actualizacionTitulo: "Cuándo se actualizan",
+    actualizacion: "El barrido automático revisa las fuentes conectadas cada semana y guarda un snapshot histórico. Si una tienda no devuelve una oferta verificable, no se presenta como precio real; el PVP del fabricante se mantiene separado como referencia.",
+    criterioTitulo: "Qué significa una recomendación",
+    criterio: "Las etiquetas de nivel y estilo son una ayuda basada en las especificaciones y el uso descrito por la marca. No sustituyen una prueba en pista ni una valoración médica, y recomendamos confirmar siempre precio, disponibilidad y características antes de comprar.",
   },
   guias: {
     metaTitle: "Guías de compra de palas y raquetas — PalaComparer",
@@ -337,6 +354,7 @@ const es = {
     avisoLegal: "Aviso legal",
     privacidad: "Privacidad",
     creadoPor: "Creado por",
+    metodologia: "Metodología",
   },
   news: {
     todo: "Todo",
@@ -392,6 +410,7 @@ const en = {
       "Every padel paddle 2022-2026: Nox, Bullpadel, Head, Adidas, Babolat and more. Filter by level, shape, play style and price.",
     titulo: "Padel paddles",
     subtitulo: "{n} paddles from the best brands. Use the filters to find yours.",
+    intro: "A padel paddle should be chosen by level, play style and specifications, not only by brand. Compare shape, balance, weight, materials and current prices from several stores to find a model that fits your game.",
   },
   raquetas: {
     metaTitle: "Tennis rackets — PalaComparer",
@@ -399,6 +418,7 @@ const en = {
       "Every tennis racket 2022-2026: Wilson, Babolat, Head, Yonex and more. Filter by level, play style and price.",
     titulo: "Tennis rackets",
     subtitulo: "{n} rackets from the best brands. Use the filters to find yours.",
+    intro: "A tennis racket changes significantly with its weight, head size, string pattern and stiffness. This catalogue brings those facts together so you can compare control, power, comfort and price before choosing your next frame.",
   },
   noticias: {
     metaTitle: "Padel & tennis news — PalaComparer",
@@ -409,6 +429,21 @@ const en = {
       "Launches and catalog changes, with context on what shifts versus the previous model.",
     vacioCuerpo:
       "When new gear drops we cover it here. In the meantime, the buying guides and reviews live in their own section.",
+  },
+  metodologia: {
+    metaTitle: "Price and specification methodology — PalaComparer",
+    metaDesc: "How we collect manufacturer specifications, prices, availability and price history for paddles and rackets.",
+    eyebrow: "Transparency",
+    titulo: "How we build each comparison",
+    resumen: "PalaComparer brings together manufacturer specifications and observed prices from several retailers so you can compare models using a clear, verifiable method.",
+    especificacionesTitulo: "Where specifications come from",
+    especificaciones: "Weight, balance, shape, materials, string pattern and other data come from manufacturer or distributor technical sheets. When a figure can vary with size, stringing or manufacturing tolerance, we present it as a reference rather than an in-house measurement.",
+    preciosTitulo: "How prices are compared",
+    precios: "Each offer shows the product price clearly, while the final amount can still change with shipping, stock or promotions. The table links to the relevant retailer and sorts offers by item price for an initial comparison.",
+    actualizacionTitulo: "When data is updated",
+    actualizacion: "The automated sweep checks connected sources every week and stores a historical snapshot. If a retailer does not return a verifiable offer, it is not presented as a real price; manufacturer RRP remains separate as a reference.",
+    criterioTitulo: "What a recommendation means",
+    criterio: "Level and play-style labels are guidance based on specifications and the use described by the brand. They do not replace an on-court test or medical advice, and you should always confirm price, availability and specifications before buying.",
   },
   guias: {
     metaTitle: "Padel & tennis buying guides — PalaComparer",
@@ -621,6 +656,7 @@ const en = {
     avisoLegal: "Legal notice",
     privacidad: "Privacy",
     creadoPor: "Created by",
+    metodologia: "Methodology",
   },
   news: {
     todo: "All",

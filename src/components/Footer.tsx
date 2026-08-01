@@ -63,6 +63,9 @@ export default function Footer() {
               <Link href={lp("/noticias")} className="text-sm text-muted hover:text-primary-container transition-colors">
                 {t("footer.noticiasGuias")}
               </Link>
+              <Link href={lp("/metodologia")} className="text-sm text-muted hover:text-primary-container transition-colors">
+                {t("footer.metodologia")}
+              </Link>
               <Link href={lp("/jugadores")} className="text-sm text-muted hover:text-primary-container transition-colors">
                 {t("footer.jugadores")}
               </Link>

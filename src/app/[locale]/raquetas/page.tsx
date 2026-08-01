@@ -57,6 +57,9 @@ export default async function RaquetasPage({
         <p className="text-muted mt-2">
           {t("raquetas.subtitulo", { n: products.length })}
         </p>
+        <p className="mt-4 max-w-3xl text-sm leading-relaxed text-muted">
+          {t("raquetas.intro")}
+        </p>
       </header>
       <Catalog products={products} sport="tenis" priceIndex={priceIndex} />
     </div>
