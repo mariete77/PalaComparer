@@ -58,13 +58,13 @@ export default function Footer() {
             </h4>
             <nav className="flex flex-col gap-2.5">
               <Link href={lp("/guias")} className="text-sm text-muted hover:text-primary-container transition-colors">
-                Guías
+                {t("footer.guias")}
               </Link>
               <Link href={lp("/noticias")} className="text-sm text-muted hover:text-primary-container transition-colors">
                 {t("footer.noticiasGuias")}
               </Link>
               <Link href={lp("/jugadores")} className="text-sm text-muted hover:text-primary-container transition-colors">
-                Jugadores
+                {t("footer.jugadores")}
               </Link>
             </nav>
           </div>
@@ -75,10 +75,10 @@ export default function Footer() {
             {/* Enlaces legales: obligatorios y accesibles desde cualquier página. */}
             <nav className="flex flex-col gap-2 mt-4">
               <Link href={lp("/legal/aviso-legal")} className="text-xs text-muted hover:text-primary-container transition-colors">
-                Aviso legal
+                {t("footer.avisoLegal")}
               </Link>
               <Link href={lp("/legal/privacidad")} className="text-xs text-muted hover:text-primary-container transition-colors">
-                Privacidad
+                {t("footer.privacidad")}
               </Link>
               <Link href={lp("/legal/cookies")} className="text-xs text-muted hover:text-primary-container transition-colors">
                 Cookies

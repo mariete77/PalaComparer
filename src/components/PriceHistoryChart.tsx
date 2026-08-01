@@ -3,13 +3,17 @@
 import { useMemo, useState } from "react";
 import type { PricePoint } from "@/data/offers";
 import { formatPrice } from "@/data/offers";
+import { useLocale } from "@/i18n/LocaleContext";
 
-const MESES = ["ene", "feb", "mar", "abr", "may", "jun", "jul", "ago", "sep", "oct", "nov", "dic"];
+const MESES = {
+  es: ["ene", "feb", "mar", "abr", "may", "jun", "jul", "ago", "sep", "oct", "nov", "dic"],
+  en: ["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"],
+} as const;
 
 /** Formato manual: `toLocaleDateString` puede diferir entre Node y el navegador. */
-function shortDate(iso: string): string {
+function shortDate(iso: string, locale: "es" | "en"): string {
   const [, m, d] = iso.split("-");
-  return `${Number(d)} ${MESES[Number(m) - 1]}`;
+  return `${Number(d)} ${MESES[locale][Number(m) - 1]}`;
 }
 
 const W = 640;
@@ -24,6 +28,7 @@ export default function PriceHistoryChart({
   accent: string;
 }) {
   const [hover, setHover] = useState<number | null>(null);
+  const { locale } = useLocale();
 
   const chart = useMemo(() => {
     const prices = points.map((p) => p.price);
@@ -63,7 +68,7 @@ export default function PriceHistoryChart({
         viewBox={`0 0 ${W} ${H}`}
         className="w-full h-auto overflow-visible"
         role="img"
-        aria-label={`Evolución del mejor precio entre el ${shortDate(points[0].date)} y el ${shortDate(points[points.length - 1].date)}`}
+        aria-label={`${locale === "en" ? "Best-price history between" : "Evolución del mejor precio entre el"} ${shortDate(points[0].date, locale)} ${locale === "en" ? "and" : "y el"} ${shortDate(points[points.length - 1].date, locale)}`}
         onMouseLeave={() => setHover(null)}
         onMouseMove={(e) => {
           const rect = e.currentTarget.getBoundingClientRect();
@@ -127,10 +132,10 @@ export default function PriceHistoryChart({
 
         {/* Fechas: extremos */}
         <text x={PAD.left} y={H - 8} className="fill-muted" fontSize="10">
-          {shortDate(points[0].date)}
+          {shortDate(points[0].date, locale)}
         </text>
         <text x={W - PAD.right} y={H - 8} textAnchor="end" className="fill-muted" fontSize="10">
-          {shortDate(points[points.length - 1].date)}
+          {shortDate(points[points.length - 1].date, locale)}
         </text>
 
         {/* Crosshair */}
@@ -155,7 +160,7 @@ export default function PriceHistoryChart({
 
       <figcaption className="mt-2 flex items-center justify-between text-xs">
         <span className="text-muted">
-          {shortDate(activePoint.date)}
+          {shortDate(activePoint.date, locale)}
         </span>
         <span className="font-semibold tabular-nums">{formatPrice(activePoint.price)}</span>
       </figcaption>

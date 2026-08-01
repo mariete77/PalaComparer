@@ -1,6 +1,7 @@
 // PalaComparer data model
 
 import type { Locale } from "@/i18n/locales";
+import { PRODUCT_DESCRIPTIONS_EN } from "./product-descriptions-en";
 
 export type Sport = "padel" | "tenis";
 
@@ -49,7 +50,9 @@ export interface Product {
 
 /** Descripción del producto en el locale pedido (con fallback a ES). */
 export function getDescription(p: Product, locale: Locale): string {
-  return locale === "en" ? p.descriptionEn ?? p.description : p.description;
+  return locale === "en"
+    ? p.descriptionEn ?? PRODUCT_DESCRIPTIONS_EN[p.id] ?? p.description
+    : p.description;
 }
 
 export const PRODUCTS: Product[] = [

@@ -295,7 +295,7 @@ export default async function ProductPage({
           </div>
 
           <div className="flex flex-col lg:grid lg:grid-cols-[1fr_380px] gap-8 items-start">
-            <OfferTable offers={offers} />
+            <OfferTable offers={offers} locale={locale} />
 
             {history.length > 1 && (
               <div className="rounded-2xl bg-white/[0.02] border border-white/5 p-5">

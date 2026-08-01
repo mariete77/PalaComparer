@@ -1,9 +1,15 @@
+"use client";
+
+import { useLocale } from "@/i18n/LocaleContext";
+
 /**
  * Crédito de autoría de Ayanip. Va en el footer de todos los proyectos.
  * El icono es SVG inline y conserva el teal de la marca: es un logo ajeno al
  * sistema de color del sitio, no un acento más de PalaComparer.
  */
 export default function AyanipCredit() {
+  const { t } = useLocale();
+
   return (
     <div className="flex justify-center border-t border-white/5 pt-6">
       <a
@@ -12,7 +18,7 @@ export default function AyanipCredit() {
         rel="noopener noreferrer"
         className="group inline-flex items-center gap-1.5 text-[11px] text-muted/60 transition-colors hover:text-on-surface"
       >
-        <span className="uppercase tracking-[0.2em]">Creado por</span>
+        <span className="uppercase tracking-[0.2em]">{t("footer.creadoPor")}</span>
         <span className="inline-flex items-center">
           <svg
             xmlns="http://www.w3.org/2000/svg"

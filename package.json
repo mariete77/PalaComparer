@@ -4,6 +4,7 @@
   "private": true,
   "scripts": {
     "dev": "next dev",
+    "prebuild": "npm run check:translations",
     "build": "next build",
     "start": "next start",
     "lint": "eslint",
@@ -11,7 +12,8 @@
     "scrape:firecrawl": "tsx scripts/scrape-firecrawl.ts",
     "import:images": "tsx scripts/import-images.mts",
     "gen:logo": "tsx scripts/gen-logo.mts",
-    "images:scaffold": "tsx scripts/scaffold-sources.mts"
+    "images:scaffold": "tsx scripts/scaffold-sources.mts",
+    "check:translations": "tsx scripts/check-product-translations.ts"
   },
   "dependencies": {
     "@gsap/react": "^2.1.2",
