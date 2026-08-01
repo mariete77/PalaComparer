@@ -4,6 +4,7 @@ import Link from "next/link";
 import Image from "next/image";
 import { useCompare } from "./CompareContext";
 import { findProducts } from "@/data/products";
+import { getProductImage } from "@/data/product-image";
 import { useLocale } from "@/i18n/LocaleContext";
 
 export default function CompareBar() {
@@ -17,13 +18,15 @@ export default function CompareBar() {
     <div className="fixed bottom-4 left-1/2 -translate-x-1/2 z-50 w-[calc(100%-2rem)] max-w-2xl">
       <div className="glass-bar rounded-2xl p-3 flex items-center gap-3">
         <div className="flex items-center gap-2 flex-1 min-w-0">
-          {products.map((p) => (
+          {products.map((p) => {
+            const img = getProductImage(p);
+            return (
             <div
               key={p.id}
               className="relative w-12 h-16 rounded-lg bg-white/5 overflow-hidden flex-shrink-0 group"
             >
-              <Image src={p.image}
-            unoptimized alt={p.model} fill className="object-contain p-1" sizes="48px" />
+              <Image src={img.src}
+            unoptimized={img.unoptimized} alt={p.model} fill className="object-contain p-1" sizes="48px" />
               <button
                 onClick={() => remove(p.id)}
                 className="absolute inset-0 bg-black/70 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center text-xs"
@@ -31,7 +34,8 @@ export default function CompareBar() {
                 ✕
               </button>
             </div>
-          ))}
+            );
+          })}
           {ids.length < 3 && (
             <div className="w-12 h-16 rounded-lg border-2 border-dashed border-white/20 flex items-center justify-center text-muted text-xs flex-shrink-0">
               +

@@ -157,35 +157,35 @@ function CompareContent() {
       )}
 
       {/* Comparison table */}
-      <div className="overflow-x-auto -mx-6 px-6">
-        <table className="w-full border-collapse min-w-[640px]">
+      <div className="overflow-x-auto -mx-6 px-6 pb-2 lg:overflow-visible lg:mx-0 lg:px-0">
+        <table className="w-full border-collapse min-w-0 lg:min-w-[640px]">
           <thead>
             <tr>
-              <th className="text-left p-3 w-40" />
+              <th className="text-left p-2 sm:p-3 w-28 sm:w-40" />
               {products.map((p) => {
                 const img = getProductImage(p);
                 return (
-                <th key={p.id} className="p-3 align-top">
-                  <div className={`relative rounded-2xl border border-white/5 p-4 group ${img.isReal ? "bg-white" : "bg-white/[0.03]"}`}>
+                <th key={p.id} className="p-2 sm:p-3 align-top">
+                  <div className={`relative rounded-2xl border border-white/5 p-3 sm:p-4 group ${img.isReal ? "bg-white" : "bg-white/[0.03]"}`}>
                     <button
                       onClick={() => remove(p.id)}
-                      className="absolute top-2 right-2 w-6 h-6 rounded-full bg-white/10 hover:bg-red-500/80 text-xs opacity-0 group-hover:opacity-100 transition-opacity"
+                      className="absolute top-2 right-2 w-6 h-6 rounded-full bg-white/10 hover:bg-red-500/80 text-xs opacity-0 group-hover:opacity-100 transition-opacity z-10"
                     >
                       ✕
                     </button>
                     <Link href={lp(`/producto/${p.id}`)}>
-                      <div className="relative w-full aspect-[2/3] max-w-[160px] mx-auto mb-3">
+                      <div className="relative w-full aspect-[2/3] max-w-[120px] sm:max-w-[160px] mx-auto mb-3">
                         <Image
                           src={img.src}
                           unoptimized={img.unoptimized}
                           alt={p.model}
                           fill
                           className="object-contain"
-                          sizes="160px"
+                          sizes="(max-width: 640px) 120px, 160px"
                         />
                       </div>
                       <p className="text-xs text-muted text-center">{p.brand}</p>
-                      <p className="font-display font-semibold text-sm text-center leading-tight">
+                      <p className="font-display font-semibold text-xs sm:text-sm text-center leading-tight">
                         {p.model}
                       </p>
                     </Link>
@@ -205,13 +205,13 @@ function CompareContent() {
                   key={row.label}
                   className={i % 2 === 0 ? "bg-white/[0.02]" : ""}
                 >
-                  <td className="p-3 text-xs font-bold uppercase tracking-wider text-muted">
+                  <td className="p-2 sm:p-3 text-[10px] sm:text-xs font-bold uppercase tracking-wider text-muted align-top">
                     {row.label}
                   </td>
                   {values.map((v, j) => (
                     <td
                       key={j}
-                      className={`p-3 text-sm text-center ${
+                      className={`p-2 sm:p-3 text-xs sm:text-sm text-center align-top ${
                         isPrice
                           ? "font-display font-bold text-padel"
                           : allSame
