@@ -56,13 +56,13 @@ export default function ProductCard({
   const specs: { label: string; value: string }[] =
     product.sport === "padel" && product.padel
       ? [
-          { label: "Peso", value: product.padel.weight.replace(/\s*/g, "").replace(/\(+.*\)/, "") },
-          { label: "Balance", value: cap(product.padel.balance) },
+          { label: t("product.peso"), value: product.padel.weight.replace(/\s*/g, "").replace(/\(+.*\)/, "") },
+          { label: t("product.balance"), value: cap(product.padel.balance) },
         ]
       : product.tenis
         ? [
-            { label: "Peso", value: `${product.tenis.weightStrung}g` },
-            { label: "Tamis", value: `${product.tenis.headSize}in²` },
+            { label: t("product.peso"), value: `${product.tenis.weightStrung}g` },
+            { label: t("product.tamis"), value: `${product.tenis.headSize}in²` },
           ]
         : [];
 

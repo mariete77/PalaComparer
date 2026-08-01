@@ -10,7 +10,19 @@ export default function Footer() {
   const year = new Date().getFullYear();
 
   return (
-    <footer className="border-t border-white/5 mt-24 bg-surface-container-lowest">
+    <footer className="relative isolate overflow-hidden border-t border-white/5 mt-24 bg-surface-container-lowest">
+      {/* Textura de fondo: pista de noche desenfocada. Va al 40% y con un velo
+          encima porque el footer es texto a 4 columnas y la legibilidad manda
+          sobre la imagen. Decorativa: aria-hidden y sin alt. */}
+      <div
+        className="pointer-events-none absolute inset-0 -z-10 bg-cover bg-center opacity-90"
+        style={{ backgroundImage: "url('/footer-court.webp')" }}
+        aria-hidden="true"
+      />
+      <div
+        className="pointer-events-none absolute inset-0 -z-10 bg-gradient-to-b from-surface-container-lowest/85 via-surface-container-lowest/30 to-surface-container-lowest/70"
+        aria-hidden="true"
+      />
       <div className="max-w-[1280px] mx-auto px-6 py-16">
         <div className="grid grid-cols-2 md:grid-cols-4 gap-10 pb-10">
           <div className="col-span-2 md:col-span-1">
@@ -45,8 +57,14 @@ export default function Footer() {
               {t("footer.contenido")}
             </h4>
             <nav className="flex flex-col gap-2.5">
+              <Link href={lp("/guias")} className="text-sm text-muted hover:text-primary-container transition-colors">
+                Guías
+              </Link>
               <Link href={lp("/noticias")} className="text-sm text-muted hover:text-primary-container transition-colors">
                 {t("footer.noticiasGuias")}
+              </Link>
+              <Link href={lp("/jugadores")} className="text-sm text-muted hover:text-primary-container transition-colors">
+                Jugadores
               </Link>
             </nav>
           </div>
@@ -54,7 +72,19 @@ export default function Footer() {
             <p className="text-xs text-muted leading-relaxed">
               {t("footer.legal")}
             </p>
-            <p className="text-xs text-muted mt-3">
+            {/* Enlaces legales: obligatorios y accesibles desde cualquier página. */}
+            <nav className="flex flex-col gap-2 mt-4">
+              <Link href={lp("/legal/aviso-legal")} className="text-xs text-muted hover:text-primary-container transition-colors">
+                Aviso legal
+              </Link>
+              <Link href={lp("/legal/privacidad")} className="text-xs text-muted hover:text-primary-container transition-colors">
+                Privacidad
+              </Link>
+              <Link href={lp("/legal/cookies")} className="text-xs text-muted hover:text-primary-container transition-colors">
+                Cookies
+              </Link>
+            </nav>
+            <p className="text-xs text-muted mt-4">
               © {year} PalaComparer
             </p>
           </div>

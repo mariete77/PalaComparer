@@ -8,7 +8,8 @@ import { PadelIcon, TennisIcon } from "@/components/icons";
 import { useLocale } from "@/i18n/LocaleContext";
 import { translate, type TranslationKey } from "@/i18n/locales";
 
-type Step = "sport" | "level" | "style" | "budget" | "results";
+type Step = "sport" | "level" | "style" | "priority" | "budget" | "results";
+type HandPriority = "manejo" | "equilibrio" | "estabilidad";
 
 export default function FinderPage() {
   const { locale } = useLocale();
@@ -19,6 +20,7 @@ export default function FinderPage() {
   const [sport, setSport] = useState<Sport | null>(null);
   const [level, setLevel] = useState<Level | null>(null);
   const [style, setStyle] = useState<PlayStyle | null>(null);
+  const [priority, setPriority] = useState<HandPriority | null>(null);
   const [budget, setBudget] = useState<number>(350);
 
   const recommendations = useMemo(() => {
@@ -37,22 +39,25 @@ export default function FinderPage() {
       .sort((a, b) => {
         const scoreA =
           (style && a.style.includes(style) ? 10 : 0) +
+          preferenceScore(a, priority) +
           (a.year >= 2024 ? 5 : 0) -
           priceOf(a.id, a.price) / 100;
         const scoreB =
           (style && b.style.includes(style) ? 10 : 0) +
+          preferenceScore(b, priority) +
           (b.year >= 2024 ? 5 : 0) -
           priceOf(b.id, b.price) / 100;
         return scoreB - scoreA;
       })
       .slice(0, 6);
-  }, [sport, level, style, budget]);
+  }, [sport, level, style, priority, budget]);
 
   const restart = () => {
     setStep("sport");
     setSport(null);
     setLevel(null);
     setStyle(null);
+    setPriority(null);
     setBudget(350);
   };
 
@@ -105,15 +110,31 @@ export default function FinderPage() {
             <QuestionStep
               question={t("finder.preguntaEstilo")}
               options={[
-                { value: "control", label: t("catalog.estilo.control"), desc: t("finder.estiloControl") },
-                { value: "potencia", label: t("catalog.estilo.potencia"), desc: t("finder.estiloPotencia") },
-                { value: "polivalente", label: t("catalog.estilo.polivalente"), desc: t("finder.estiloPolivalente") },
+                { value: "control", label: t("finder.estiloControl"), desc: t("finder.estiloControlDesc") },
+                { value: "potencia", label: t("finder.estiloPotencia"), desc: t("finder.estiloPotenciaDesc") },
+                { value: "polivalente", label: t("finder.estiloPolivalente"), desc: t("finder.estiloPolivalenteDesc") },
               ]}
               onSelect={(v) => {
                 setStyle(v as PlayStyle);
-                setStep("budget");
+                setStep("priority");
               }}
               onBack={() => setStep("level")}
+            />
+          )}
+
+          {step === "priority" && (
+            <QuestionStep
+              question={t("finder.preguntaPrioridad")}
+              options={[
+                { value: "manejo", label: t("finder.prioridadManejo"), desc: t("finder.prioridadManejoDesc") },
+                { value: "equilibrio", label: t("finder.prioridadEquilibrio"), desc: t("finder.prioridadEquilibrioDesc") },
+                { value: "estabilidad", label: t("finder.prioridadEstabilidad"), desc: t("finder.prioridadEstabilidadDesc") },
+              ]}
+              onSelect={(v) => {
+                setPriority(v as HandPriority);
+                setStep("budget");
+              }}
+              onBack={() => setStep("style")}
             />
           )}
 
@@ -136,7 +157,7 @@ export default function FinderPage() {
               />
               <div className="flex items-center justify-center gap-3">
                 <button
-                  onClick={() => setStep("style")}
+                  onClick={() => setStep("priority")}
                   className="px-6 py-3 rounded-xl border border-white/10 hover:bg-white/5"
                 >
                   ← {t("finder.atras")}
@@ -198,7 +219,7 @@ export default function FinderPage() {
 }
 
 function Progress({ step }: { step: Step }) {
-  const steps = ["sport", "level", "style", "budget"];
+  const steps = ["sport", "level", "style", "priority", "budget"];
   const idx = steps.indexOf(step);
   return (
     <div className="flex items-center justify-center gap-2 mt-6">
@@ -212,6 +233,23 @@ function Progress({ step }: { step: Step }) {
       ))}
     </div>
   );
+}
+
+function preferenceScore(product: (typeof PRODUCTS)[number], priority: HandPriority | null) {
+  if (!priority) return 0;
+
+  if (product.padel) {
+    const weights = product.padel.weight.match(/\d+/g)?.map(Number) ?? [];
+    const weight = weights.length > 1 ? (weights[0] + weights[1]) / 2 : weights[0] ?? 0;
+    if (priority === "manejo") return (product.padel.balance === "bajo" ? 4 : 0) + (weight <= 365 ? 2 : 0);
+    if (priority === "equilibrio") return (product.padel.balance === "medio" ? 4 : 0) + (product.style.includes("polivalente") ? 2 : 0);
+    return (product.padel.balance === "alto" ? 4 : 0) + (weight >= 365 ? 2 : 0);
+  }
+
+  const weight = product.tenis?.weightStrung ?? 0;
+  if (priority === "manejo") return weight <= 300 ? 4 : 0;
+  if (priority === "equilibrio") return weight >= 300 && weight <= 315 ? 4 : 0;
+  return weight >= 315 ? 4 : 0;
 }
 
 function QuestionStep({

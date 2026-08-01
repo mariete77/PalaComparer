@@ -2,36 +2,17 @@
 
 import { useState, useMemo } from "react";
 import { Product, Sport, Level, PlayStyle, PadelShape } from "@/data/products";
+import { useLocale } from "@/i18n/LocaleContext";
 import ProductCard from "./ProductCard";
 
 interface Props {
   products: Product[];
   sport: Sport;
-  /** Mejor precio por id de producto, calculado en el servidor. */
   priceIndex: Record<string, number>;
 }
 
-const LEVELS: { value: Level; label: string }[] = [
-  { value: "principiante", label: "Principiante" },
-  { value: "intermedio", label: "Intermedio" },
-  { value: "avanzado", label: "Avanzado" },
-  { value: "profesional", label: "Profesional" },
-];
-
-const STYLES: { value: PlayStyle; label: string }[] = [
-  { value: "control", label: "Control" },
-  { value: "potencia", label: "Potencia" },
-  { value: "polivalente", label: "Polivalente" },
-];
-
-const SHAPES: { value: PadelShape; label: string }[] = [
-  { value: "redonda", label: "Redonda" },
-  { value: "lagrima", label: "Lágrima" },
-  { value: "diamante", label: "Diamante" },
-  { value: "hibrida", label: "Híbrida" },
-];
-
 export default function Catalog({ products, sport, priceIndex }: Props) {
+  const { t } = useLocale();
   const [brand, setBrand] = useState<string>("");
   const [level, setLevel] = useState<Level | "">("");
   const [style, setStyle] = useState<PlayStyle | "">("");
@@ -44,6 +25,26 @@ export default function Catalog({ products, sport, priceIndex }: Props) {
     () => Array.from(new Set(products.map((p) => p.brand))).sort(),
     [products]
   );
+
+  const levels: { value: Level; label: string }[] = [
+    { value: "principiante", label: t("catalog.nivel.principiante") },
+    { value: "intermedio", label: t("catalog.nivel.intermedio") },
+    { value: "avanzado", label: t("catalog.nivel.avanzado") },
+    { value: "profesional", label: t("catalog.nivel.profesional") },
+  ];
+
+  const styles: { value: PlayStyle; label: string }[] = [
+    { value: "control", label: t("catalog.estilo.control") },
+    { value: "potencia", label: t("catalog.estilo.potencia") },
+    { value: "polivalente", label: t("catalog.estilo.polivalente") },
+  ];
+
+  const shapes: { value: PadelShape; label: string }[] = [
+    { value: "redonda", label: t("catalog.formaPala.redonda") },
+    { value: "lagrima", label: t("catalog.formaPala.lagrima") },
+    { value: "diamante", label: t("catalog.formaPala.diamante") },
+    { value: "hibrida", label: t("catalog.formaPala.hibrida") },
+  ];
 
   const filtered = useMemo(() => {
     const priceOf = (p: Product) => priceIndex[p.id] ?? p.price;
@@ -82,27 +83,27 @@ export default function Catalog({ products, sport, priceIndex }: Props) {
       <aside className="space-y-6 lg:sticky lg:top-24 self-start rounded-xl bg-surface-container-high/50 backdrop-blur-md border border-white/5 p-5">
         <div>
           <h2 className="font-display font-bold text-sm text-primary uppercase tracking-widest mb-1">
-            Filtros
+            {t("catalog.filtros")}
           </h2>
-          <p className="text-muted text-xs">Búsqueda de precisión</p>
+          <p className="text-muted text-xs">{t("catalog.busquedaPrecision")}</p>
         </div>
         <div>
           <input
             type="text"
-            placeholder="Buscar marca o modelo..."
+            placeholder={t("catalog.placeholderBusqueda")}
             value={query}
             onChange={(e) => setQuery(e.target.value)}
             className="w-full px-4 py-2.5 rounded-lg bg-surface-container-high border border-outline-variant focus:border-primary-container focus:ring-1 focus:ring-primary-container focus:outline-none text-sm"
           />
         </div>
 
-        <FilterGroup title="Marca">
+        <FilterGroup title={t("catalog.marca")}>
           <select
             value={brand}
             onChange={(e) => setBrand(e.target.value)}
             className="w-full px-3 py-2 rounded-lg bg-surface-container-high border border-outline-variant text-sm focus:outline-none focus:border-primary-container"
           >
-            <option value="">Todas</option>
+            <option value="">{t("catalog.todas")}</option>
             {brands.map((b) => (
               <option key={b} value={b}>
                 {b}
@@ -111,9 +112,9 @@ export default function Catalog({ products, sport, priceIndex }: Props) {
           </select>
         </FilterGroup>
 
-        <FilterGroup title="Nivel">
+        <FilterGroup title={t("catalog.nivelLabel")}>
           <div className="flex flex-wrap gap-1.5">
-            {LEVELS.map((l) => (
+            {levels.map((l) => (
               <Chip
                 key={l.value}
                 active={level === l.value}
@@ -125,9 +126,9 @@ export default function Catalog({ products, sport, priceIndex }: Props) {
           </div>
         </FilterGroup>
 
-        <FilterGroup title="Estilo de juego">
+        <FilterGroup title={t("catalog.estiloLabel")}>
           <div className="flex flex-wrap gap-1.5">
-            {STYLES.map((s) => (
+            {styles.map((s) => (
               <Chip
                 key={s.value}
                 active={style === s.value}
@@ -140,9 +141,9 @@ export default function Catalog({ products, sport, priceIndex }: Props) {
         </FilterGroup>
 
         {sport === "padel" && (
-          <FilterGroup title="Forma">
+          <FilterGroup title={t("catalog.forma")}>
             <div className="flex flex-wrap gap-1.5">
-              {SHAPES.map((s) => (
+              {shapes.map((s) => (
                 <Chip
                   key={s.value}
                   active={shape === s.value}
@@ -155,7 +156,7 @@ export default function Catalog({ products, sport, priceIndex }: Props) {
           </FilterGroup>
         )}
 
-        <FilterGroup title={`Precio máximo: ${maxPrice} €`}>
+        <FilterGroup title={`${t("catalog.precioMaximo")}: ${maxPrice} €`}>
           <input
             type="range"
             min={50}
@@ -178,7 +179,7 @@ export default function Catalog({ products, sport, priceIndex }: Props) {
           }}
           className="w-full border border-outline-variant text-on-surface-variant font-bold text-xs uppercase tracking-widest p-3 rounded-lg hover:bg-white/5 transition-colors"
         >
-          Limpiar todo
+          {t("catalog.limpiarTodo")}
         </button>
       </aside>
 
@@ -187,22 +188,21 @@ export default function Catalog({ products, sport, priceIndex }: Props) {
         <div className="flex items-center justify-between mb-4">
           <p className="text-sm text-muted">
             <span className={`font-bold ${accentText}`}>{filtered.length}</span>{" "}
-            {sport === "padel" ? "palas" : "raquetas"}
+            {sport === "padel" ? t("catalog.cuentaPalas") : t("catalog.cuentaRaquetas")}
           </p>
           <select
             value={sort}
             onChange={(e) => setSort(e.target.value as typeof sort)}
             className="px-3 py-1.5 rounded-lg bg-surface-container-high border border-outline-variant text-sm focus:outline-none focus:border-primary-container"
           >
-            <option value="year">Más recientes</option>
-            <option value="price-asc">Precio: menor a mayor</option>
-            <option value="price-desc">Precio: mayor a menor</option>
+            <option value="year">{t("catalog.ordenar.recientes")}</option>
+            <option value="price-asc">{t("catalog.ordenar.precioAsc")}</option>
+            <option value="price-desc">{t("catalog.ordenar.precioDesc")}</option>
           </select>
         </div>
         {filtered.length === 0 ? (
           <div className="text-center py-20 text-muted">
-            <p className="text-4xl mb-3">🎾</p>
-            <p>No hay resultados con esos filtros.</p>
+            <p>{t("catalog.noResultados")}</p>
             <button
               onClick={() => {
                 setBrand("");
@@ -214,7 +214,7 @@ export default function Catalog({ products, sport, priceIndex }: Props) {
               }}
               className="mt-3 text-sm text-padel hover:underline"
             >
-              Limpiar filtros
+              {t("catalog.limpiarFiltros")}
             </button>
           </div>
         ) : (

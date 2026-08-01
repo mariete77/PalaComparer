@@ -1,6 +1,7 @@
 import type { MetadataRoute } from "next";
 import { PRODUCTS } from "@/data/products";
 import { ARTICLES, isGuide } from "@/data/news";
+import { PLAYERS } from "@/data/players";
 import { absoluteLocaleUrl } from "@/data/site";
 import type { Locale } from "@/i18n/locales";
 import latestPriceDate from "@/data/price-history/latest-date.json";
@@ -51,6 +52,23 @@ export default function sitemap(): MetadataRoute.Sitemap {
       internalPath: `/producto/${p.id}`,
       lastModified: priceDataLastModified,
       changeFrequency: "daily",
+      priority: 0.8,
+    });
+  }
+
+  // Las legales no entran: van con noindex y solo gastarían presupuesto de
+  // rastreo. Las de jugador sí, que son las que responden "qué pala usa X".
+  entries.push({
+    internalPath: "/jugadores",
+    lastModified: priceDataLastModified,
+    changeFrequency: "weekly",
+    priority: 0.8,
+  });
+  for (const p of PLAYERS) {
+    entries.push({
+      internalPath: `/jugadores/${p.slug}`,
+      lastModified: priceDataLastModified,
+      changeFrequency: "weekly",
       priority: 0.8,
     });
   }

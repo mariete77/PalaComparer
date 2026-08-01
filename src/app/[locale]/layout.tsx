@@ -106,7 +106,8 @@ export default async function RootLayout({
           <JsonLd data={buildWebSiteSchema(locale)} />
           <Nav />
           <CompareProvider>
-            <main className="min-h-screen pt-[72px]">{children}</main>
+            {/* 12px de separación superior + 64px de cápsula + aire. */}
+            <main className="min-h-screen pt-[92px] sm:pt-[96px]">{children}</main>
             <CompareBar />
           </CompareProvider>
           <Footer />

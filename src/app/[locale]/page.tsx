@@ -27,7 +27,7 @@ export default async function HomePage({
   const destacadosTenis = PRODUCTS.filter(
     (p) =>
       p.sport === "tenis" &&
-      ["babolat-pure-aero-2023", "wilson-blade-98-v9-2024", "head-speed-mp-2024", "yonex-ezone-100-2022"].includes(p.id)
+      ["wilson-blade-98-v10-2026", "babolat-pure-aero-2026", "head-speed-mp-2026", "yonex-vcore-98-2026"].includes(p.id)
   );
   const ultimasNoticias = ARTICLES.slice(0, 3);
 
@@ -73,6 +73,9 @@ export default async function HomePage({
               style={{ animationDelay: "120ms" }}
             >
               {t("footer.tagline")}
+              <span className="mt-3 block text-sm font-semibold text-primary-container/90">
+                {t("home.actualizacionSemanal")}
+              </span>
             </p>
             <div
               className="rise mt-10 flex flex-wrap items-center gap-4"

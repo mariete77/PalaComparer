@@ -45,21 +45,27 @@ export default function Nav() {
 
   return (
     <>
-      <header className="fixed top-0 w-full z-50 bg-surface/90 border-b border-white/8">
-        <nav className="max-w-[1280px] mx-auto px-6 h-[72px] flex items-center justify-between">
-          <Link href={lp("/")} className="flex items-center gap-2.5 group">
+      {/* Navbar flotante: cápsula despegada del borde, como en los otros
+          proyectos. El blur vive en el div interior, no en el <header>, porque
+          un ancestro con backdrop-filter se convierte en bloque contenedor de
+          sus hijos `fixed` y recortaría el drawer. */}
+      <header className="fixed top-3 sm:top-4 inset-x-0 z-50 px-3 sm:px-4">
+        <div className="max-w-[1280px] mx-auto flex items-center gap-4">
+          <Link href={lp("/")} className="shrink-0 flex items-center gap-3 group transition-transform duration-300 hover:scale-[1.03]">
             <Image
               src="/logo-icon.png"
               alt=""
-              width={36}
-              height={36}
+              width={46}
+              height={46}
               priority
-              className="w-9 h-9 rounded-lg border border-white/10 object-cover"
+              className="w-11 h-11 sm:w-12 sm:h-12 rounded-xl border border-white/10 object-cover shadow-lg shadow-black/20"
             />
-            <span className="font-display font-extrabold text-xl tracking-tighter text-primary-container">
+            <span className="hidden sm:block font-display font-extrabold text-2xl tracking-tighter text-primary-container">
               PalaComparer
             </span>
           </Link>
+
+          <nav className="min-w-0 flex-1 px-4 sm:px-6 h-[64px] flex items-center justify-between rounded-2xl border border-white/10 bg-surface/70 backdrop-blur-md shadow-lg shadow-black/30">
 
           {/* Desktop nav */}
           <div className="hidden md:flex items-center gap-6 font-display font-bold text-sm">
@@ -94,7 +100,8 @@ export default function Nav() {
               <span className="w-3.5 h-0.5 bg-on-surface rounded-full" />
             </button>
           </div>
-        </nav>
+          </nav>
+        </div>
       </header>
 
       {/* Mobile drawer */}

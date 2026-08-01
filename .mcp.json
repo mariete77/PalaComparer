@@ -1,0 +1,12 @@
+{
+  "mcpServers": {
+    "openart": {
+      "type": "http",
+      "url": "https://mcp.openart.ai/mcp"
+    },
+    "vercel": {
+      "type": "http",
+      "url": "https://mcp.vercel.com"
+    }
+  }
+}
