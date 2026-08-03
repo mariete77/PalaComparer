@@ -15,7 +15,7 @@ concurrency:
 jobs:
   refresh:
     runs-on: ubuntu-latest
-    timeout-minutes: 45
+    timeout-minutes: 60
     steps:
       - name: Descargar el repositorio
         uses: actions/checkout@v4
@@ -26,8 +26,8 @@ jobs:
           cache: npm
       - name: Instalar dependencias
         run: npm ci
-      - name: Instalar Chromium para Amazon y Decathlon
-        run: npx playwright install --with-deps chromium
+      - name: Instalar Chromium y Firefox (Amazon y Decathlon)
+        run: npx playwright install --with-deps chromium firefox
       - name: Actualizar Amazon
         run: npx tsx scripts/scrape-amazon.ts
       - name: Actualizar tiendas con Firecrawl
@@ -42,6 +42,9 @@ jobs:
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          # Integrar lo que haya podido llegar a main durante el scraping
+          # (pushes manuales, deploys) antes de añadir nuestros cambios.
+          git pull --rebase origin main
           git add src/data/real-offers.json src/data/real-offers-stores.json src/data/real-offers-decathlon.json src/data/price-history
           git diff --cached --quiet && echo "Sin cambios de precios" || git commit -m "chore(data): actualizar precios semanales"
           git push
