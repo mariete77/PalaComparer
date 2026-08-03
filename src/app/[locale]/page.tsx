@@ -3,7 +3,7 @@ import { PRODUCTS } from "@/data/products";
 import { getBestPrice } from "@/data/offers";
 import { ARTICLES, kindLabel, formatArticleDate, articleHref } from "@/data/news";
 import ProductCard from "@/components/ProductCard";
-import HeroMedia from "@/components/HeroMedia";
+import Hero from "@/components/Hero";
 import StoreMarquee from "@/components/StoreMarquee";
 import { isLocale, type Locale, localePath } from "@/i18n/locales";
 import { translate, type TranslationKey } from "@/i18n/locales";
@@ -49,48 +49,19 @@ export default async function HomePage({
   return (
     <div>
       {/* HERO — Artistic Asymmetry with video background */}
-      <section className="relative isolate overflow-hidden">
-        {/* Video background */}
-        <div className="absolute inset-0 -z-10">
-          <HeroMedia />
-        </div>
-
-        <div className="relative mx-auto max-w-7xl px-6 pt-20 pb-24 md:pt-32 md:pb-36">
-          <div className="max-w-3xl">
-            <p className="rise text-sm text-muted">
-              {PRODUCTS.length} {t("home.modelosRango")}
-            </p>
-            <h1
-              className="rise mt-5 font-display text-5xl font-bold leading-[1.05] tracking-tight sm:text-6xl lg:text-7xl"
-              style={{ animationDelay: "60ms" }}
-            >
-              {t("home.encuentraTu")}
-              <br />
-              <span className="text-primary-container">{t("home.armaPerfecta")}</span>
-            </h1>
-            <p
-              className="rise mt-6 max-w-[48ch] text-lg leading-relaxed text-muted"
-              style={{ animationDelay: "120ms" }}
-            >
-              {t("footer.tagline")}
-              <span className="mt-3 block text-sm font-semibold text-primary-container/90">
-                {t("home.actualizacionSemanal")}
-              </span>
-            </p>
-            <div
-              className="rise mt-10 flex flex-wrap items-center gap-4"
-              style={{ animationDelay: "180ms" }}
-            >
-              <Link href={lp("/finder")} className="btn-lime rounded-lg px-7 py-4 text-sm">
-                {t("home.encontrarMiPala")}
-              </Link>
-              <Link href={lp("/comparar")} className="btn-outline rounded-lg px-7 py-4 text-sm">
-                {t("home.compararModelos")}
-              </Link>
-            </div>
-          </div>
-        </div>
-      </section>
+      <Hero
+        content={{
+          eyebrow: `${PRODUCTS.length} ${t("home.modelosRango")}`,
+          titleA: t("home.encuentraTu"),
+          titleB: t("home.armaPerfecta"),
+          tagline: t("footer.tagline"),
+          updateNote: t("home.actualizacionSemanal"),
+          primaryHref: lp("/finder"),
+          primaryLabel: t("home.encontrarMiPala"),
+          secondaryHref: lp("/comparar"),
+          secondaryLabel: t("home.compararModelos"),
+        }}
+      />
 
       {/* Store marquee */}
       <StoreMarquee />

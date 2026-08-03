@@ -60,7 +60,7 @@ export default function Nav() {
               priority
               className="w-11 h-11 sm:w-12 sm:h-12 rounded-xl border border-white/10 object-cover shadow-lg shadow-black/20"
             />
-            <span className="hidden sm:block font-display font-extrabold text-2xl tracking-tighter text-primary-container">
+            <span className="font-display font-extrabold text-lg sm:text-2xl tracking-tighter text-primary-container">
               PalaComparer
             </span>
           </Link>
