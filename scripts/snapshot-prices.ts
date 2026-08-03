@@ -129,14 +129,21 @@ function main() {
   console.log(`💾 ${snapshotPath}`);
 
   // Generar compiled.json: Record<productId, PricePoint[]>
-  // Lee todos los snapshots existentes y compila el histórico
+  // Lee todos los snapshots existentes y compila el histórico.
   const compiled: Record<string, PricePoint[]> = {};
+  // Solo se incluyen archivos con formato de fecha YYYY-MM-DD.json: eso
+  // excluye compiled.json, index.json, latest-date.json y cualquier otro
+  // JSON auxiliar que viva en el mismo directorio (latest-date.json solo
+  // contiene {date} y rompía Object.entries(snap.products) con TypeError).
   const files = readdirSync(snapshotDir)
-    .filter((f) => f.endsWith(".json") && f !== "compiled.json" && f !== "index.json")
+    .filter((f) => /^\d{4}-\d{2}-\d{2}\.json$/.test(f))
     .sort();
 
   for (const file of files) {
-    const snap: Snapshot = JSON.parse(readFileSync(join(snapshotDir, file), "utf-8"));
+    const snap = JSON.parse(readFileSync(join(snapshotDir, file), "utf-8")) as Snapshot;
+    // Defensa: si un snapshot está malformado (sin products), se salta en
+    // vez de tumbar el job entero.
+    if (!snap || typeof snap !== "object" || !snap.products) continue;
     for (const [productId, data] of Object.entries(snap.products)) {
       if (!compiled[productId]) compiled[productId] = [];
       compiled[productId].push({ date: snap.date, price: data.bestPrice });

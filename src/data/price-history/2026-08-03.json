@@ -1,0 +1,857 @@
+{
+  "date": "2026-08-03",
+  "scrapedAt": "2026-08-03T22:09:46.602Z",
+  "products": {
+    "bullpadel-vertex-04-2025": {
+      "bestPrice": 156.95,
+      "bestStoreId": "padelnuestro",
+      "offers": [
+        {
+          "storeId": "padelnuestro",
+          "price": 156.95,
+          "inStock": true
+        }
+      ]
+    },
+    "adidas-metalbone-carbon-2026": {
+      "bestPrice": 201.95,
+      "bestStoreId": "padelnuestro",
+      "offers": [
+        {
+          "storeId": "padelnuestro",
+          "price": 201.95,
+          "inStock": true
+        }
+      ]
+    },
+    "nox-at10-genius-18k-2026": {
+      "bestPrice": 169.9,
+      "bestStoreId": "decathlon",
+      "offers": [
+        {
+          "storeId": "amazon",
+          "price": 242.31,
+          "inStock": true
+        },
+        {
+          "storeId": "padelnuestro",
+          "price": 259.95,
+          "inStock": true
+        },
+        {
+          "storeId": "decathlon",
+          "price": 169.9,
+          "inStock": true
+        }
+      ]
+    },
+    "nox-at10-genius-12k-xtrem-2026": {
+      "bestPrice": 222.4,
+      "bestStoreId": "amazon",
+      "offers": [
+        {
+          "storeId": "amazon",
+          "price": 222.4,
+          "inStock": true
+        },
+        {
+          "storeId": "padelnuestro",
+          "price": 232.95,
+          "inStock": true
+        }
+      ]
+    },
+    "nox-at10-genius-attack-18k-2026": {
+      "bestPrice": 214.9,
+      "bestStoreId": "amazon",
+      "offers": [
+        {
+          "storeId": "amazon",
+          "price": 214.9,
+          "inStock": true
+        },
+        {
+          "storeId": "padelnuestro",
+          "price": 214.95,
+          "inStock": true
+        }
+      ]
+    },
+    "nox-ea10-ventus-attack-12k-2026": {
+      "bestPrice": 200.97,
+      "bestStoreId": "amazon",
+      "offers": [
+        {
+          "storeId": "amazon",
+          "price": 200.97,
+          "inStock": true
+        },
+        {
+          "storeId": "padelnuestro",
+          "price": 219.95,
+          "inStock": true
+        }
+      ]
+    },
+    "nox-ml10-pro-cup-2023": {
+      "bestPrice": 129.95,
+      "bestStoreId": "padelnuestro",
+      "offers": [
+        {
+          "storeId": "padelnuestro",
+          "price": 129.95,
+          "inStock": false
+        }
+      ]
+    },
+    "nox-ml10-ventus-control-3k-2026": {
+      "bestPrice": 218.95,
+      "bestStoreId": "padelnuestro",
+      "offers": [
+        {
+          "storeId": "amazon",
+          "price": 246.8,
+          "inStock": true
+        },
+        {
+          "storeId": "padelnuestro",
+          "price": 218.95,
+          "inStock": true
+        }
+      ]
+    },
+    "bullpadel-vertex-05-2026": {
+      "bestPrice": 208.9,
+      "bestStoreId": "amazon",
+      "offers": [
+        {
+          "storeId": "amazon",
+          "price": 208.9,
+          "inStock": true
+        },
+        {
+          "storeId": "padelnuestro",
+          "price": 208.95,
+          "inStock": true
+        },
+        {
+          "storeId": "decathlon",
+          "price": 244.9,
+          "inStock": true
+        }
+      ]
+    },
+    "bullpadel-vertex-04-comfort-2024": {
+      "bestPrice": 109,
+      "bestStoreId": "amazon",
+      "offers": [
+        {
+          "storeId": "amazon",
+          "price": 109,
+          "inStock": true
+        },
+        {
+          "storeId": "padelnuestro",
+          "price": 109.95,
+          "inStock": true
+        }
+      ]
+    },
+    "bullpadel-hack-04-2026": {
+      "bestPrice": 208.9,
+      "bestStoreId": "amazon",
+      "offers": [
+        {
+          "storeId": "amazon",
+          "price": 208.9,
+          "inStock": true
+        },
+        {
+          "storeId": "padelnuestro",
+          "price": 208.95,
+          "inStock": true
+        },
+        {
+          "storeId": "decathlon",
+          "price": 295,
+          "inStock": true
+        }
+      ]
+    },
+    "bullpadel-flow-2024": {
+      "bestPrice": 139.9,
+      "bestStoreId": "amazon",
+      "offers": [
+        {
+          "storeId": "amazon",
+          "price": 139.9,
+          "inStock": true
+        },
+        {
+          "storeId": "padelnuestro",
+          "price": 139.95,
+          "inStock": true
+        }
+      ]
+    },
+    "bullpadel-neuron-02-2026": {
+      "bestPrice": 213.9,
+      "bestStoreId": "amazon",
+      "offers": [
+        {
+          "storeId": "amazon",
+          "price": 213.9,
+          "inStock": true
+        },
+        {
+          "storeId": "padelnuestro",
+          "price": 213.95,
+          "inStock": true
+        },
+        {
+          "storeId": "decathlon",
+          "price": 213.9,
+          "inStock": true
+        }
+      ]
+    },
+    "head-extreme-pro-2024": {
+      "bestPrice": 124.95,
+      "bestStoreId": "padelnuestro",
+      "offers": [
+        {
+          "storeId": "amazon",
+          "price": 129.9,
+          "inStock": true
+        },
+        {
+          "storeId": "padelnuestro",
+          "price": 124.95,
+          "inStock": true
+        }
+      ]
+    },
+    "head-extreme-motion-2024": {
+      "bestPrice": 112.9,
+      "bestStoreId": "amazon",
+      "offers": [
+        {
+          "storeId": "amazon",
+          "price": 112.9,
+          "inStock": true
+        },
+        {
+          "storeId": "decathlon",
+          "price": 239.99,
+          "inStock": true
+        }
+      ]
+    },
+    "head-speed-pro-2024": {
+      "bestPrice": 129,
+      "bestStoreId": "amazon",
+      "offers": [
+        {
+          "storeId": "amazon",
+          "price": 129,
+          "inStock": true
+        }
+      ]
+    },
+    "head-gravity-pro-2024": {
+      "bestPrice": 244.9,
+      "bestStoreId": "decathlon",
+      "offers": [
+        {
+          "storeId": "padelnuestro",
+          "price": 139.95,
+          "inStock": false
+        },
+        {
+          "storeId": "decathlon",
+          "price": 244.9,
+          "inStock": true
+        }
+      ]
+    },
+    "adidas-metalbone-carbon-ctrl-2024": {
+      "bestPrice": 134.9,
+      "bestStoreId": "amazon",
+      "offers": [
+        {
+          "storeId": "amazon",
+          "price": 134.9,
+          "inStock": true
+        },
+        {
+          "storeId": "padelnuestro",
+          "price": 141.95,
+          "inStock": true
+        },
+        {
+          "storeId": "decathlon",
+          "price": 233.9,
+          "inStock": true
+        }
+      ]
+    },
+    "babolat-technical-viper-2025": {
+      "bestPrice": 142.9,
+      "bestStoreId": "amazon",
+      "offers": [
+        {
+          "storeId": "amazon",
+          "price": 142.9,
+          "inStock": true
+        },
+        {
+          "storeId": "decathlon",
+          "price": 142.9,
+          "inStock": true
+        }
+      ]
+    },
+    "babolat-technical-veron-2025": {
+      "bestPrice": 129.4,
+      "bestStoreId": "amazon",
+      "offers": [
+        {
+          "storeId": "amazon",
+          "price": 129.4,
+          "inStock": true
+        }
+      ]
+    },
+    "babolat-counter-viper-2025": {
+      "bestPrice": 219.99,
+      "bestStoreId": "amazon",
+      "offers": [
+        {
+          "storeId": "amazon",
+          "price": 219.99,
+          "inStock": true
+        },
+        {
+          "storeId": "decathlon",
+          "price": 289.99,
+          "inStock": true
+        }
+      ]
+    },
+    "wilson-bela-pro-2024": {
+      "bestPrice": 149.95,
+      "bestStoreId": "padelnuestro",
+      "offers": [
+        {
+          "storeId": "padelnuestro",
+          "price": 149.95,
+          "inStock": false
+        }
+      ]
+    },
+    "wilson-bela-v3-2026": {
+      "bestPrice": 177.49,
+      "bestStoreId": "decathlon",
+      "offers": [
+        {
+          "storeId": "decathlon",
+          "price": 177.49,
+          "inStock": true
+        }
+      ]
+    },
+    "black-crown-piton-14-2026": {
+      "bestPrice": 134.95,
+      "bestStoreId": "decathlon",
+      "offers": [
+        {
+          "storeId": "decathlon",
+          "price": 134.95,
+          "inStock": true
+        }
+      ]
+    },
+    "dunlop-aero-star-pro-2024": {
+      "bestPrice": 99.9,
+      "bestStoreId": "amazon",
+      "offers": [
+        {
+          "storeId": "amazon",
+          "price": 99.9,
+          "inStock": true
+        },
+        {
+          "storeId": "padelnuestro",
+          "price": 119.95,
+          "inStock": false
+        }
+      ]
+    },
+    "bullpadel-indiga-ctr-2024": {
+      "bestPrice": 59.95,
+      "bestStoreId": "padelnuestro",
+      "offers": [
+        {
+          "storeId": "padelnuestro",
+          "price": 59.95,
+          "inStock": false
+        }
+      ]
+    },
+    "head-bolt-2026": {
+      "bestPrice": 79.95,
+      "bestStoreId": "decathlon",
+      "offers": [
+        {
+          "storeId": "decathlon",
+          "price": 79.95,
+          "inStock": true
+        }
+      ]
+    },
+    "nox-x-one-2026": {
+      "bestPrice": 69.9,
+      "bestStoreId": "amazon",
+      "offers": [
+        {
+          "storeId": "amazon",
+          "price": 69.9,
+          "inStock": true
+        },
+        {
+          "storeId": "padelnuestro",
+          "price": 69.95,
+          "inStock": true
+        }
+      ]
+    },
+    "adidas-drive-2024": {
+      "bestPrice": 169.99,
+      "bestStoreId": "amazon",
+      "offers": [
+        {
+          "storeId": "amazon",
+          "price": 169.99,
+          "inStock": true
+        },
+        {
+          "storeId": "padelnuestro",
+          "price": 44.95,
+          "inStock": false
+        }
+      ]
+    },
+    "dunlop-cx-200-2024": {
+      "bestPrice": 142,
+      "bestStoreId": "tennispro",
+      "offers": [
+        {
+          "storeId": "amazon",
+          "price": 155.56,
+          "inStock": true
+        },
+        {
+          "storeId": "tennispro",
+          "price": 142,
+          "inStock": true
+        }
+      ]
+    },
+    "varlion-carrera-c-black-ltd-2025": {
+      "bestPrice": 149.95,
+      "bestStoreId": "amazon",
+      "offers": [
+        {
+          "storeId": "amazon",
+          "price": 149.95,
+          "inStock": true
+        }
+      ]
+    },
+    "varlion-l-bourne-summum-2025": {
+      "bestPrice": 189.95,
+      "bestStoreId": "amazon",
+      "offers": [
+        {
+          "storeId": "amazon",
+          "price": 189.95,
+          "inStock": true
+        }
+      ]
+    },
+    "drop-shot-canyon-pro-10-pablo-lima-2025": {
+      "bestPrice": 119,
+      "bestStoreId": "amazon",
+      "offers": [
+        {
+          "storeId": "amazon",
+          "price": 119,
+          "inStock": true
+        }
+      ]
+    },
+    "drop-shot-canyon-pro-control-2025": {
+      "bestPrice": 94.9,
+      "bestStoreId": "amazon",
+      "offers": [
+        {
+          "storeId": "amazon",
+          "price": 94.9,
+          "inStock": true
+        }
+      ]
+    },
+    "drop-shot-explorer-pro-comfort-10-2025": {
+      "bestPrice": 89.9,
+      "bestStoreId": "amazon",
+      "offers": [
+        {
+          "storeId": "amazon",
+          "price": 89.9,
+          "inStock": true
+        }
+      ]
+    },
+    "royal-padel-m27-light-2026": {
+      "bestPrice": 248.9,
+      "bestStoreId": "amazon",
+      "offers": [
+        {
+          "storeId": "amazon",
+          "price": 248.9,
+          "inStock": true
+        }
+      ]
+    },
+    "royal-padel-36th-anniversary-poly-2026": {
+      "bestPrice": 234.9,
+      "bestStoreId": "amazon",
+      "offers": [
+        {
+          "storeId": "amazon",
+          "price": 234.9,
+          "inStock": true
+        }
+      ]
+    },
+    "royal-padel-whip-eva-2025": {
+      "bestPrice": 139.31,
+      "bestStoreId": "amazon",
+      "offers": [
+        {
+          "storeId": "amazon",
+          "price": 139.31,
+          "inStock": true
+        }
+      ]
+    },
+    "siux-electra-stupa-pro-st4-2025": {
+      "bestPrice": 149,
+      "bestStoreId": "amazon",
+      "offers": [
+        {
+          "storeId": "amazon",
+          "price": 149,
+          "inStock": true
+        }
+      ]
+    },
+    "siux-fenix-pro-5-2025": {
+      "bestPrice": 139.95,
+      "bestStoreId": "amazon",
+      "offers": [
+        {
+          "storeId": "amazon",
+          "price": 139.95,
+          "inStock": true
+        }
+      ]
+    },
+    "siux-electra-st3-stupa-pro-2024": {
+      "bestPrice": 119.4,
+      "bestStoreId": "amazon",
+      "offers": [
+        {
+          "storeId": "amazon",
+          "price": 119.4,
+          "inStock": true
+        }
+      ]
+    },
+    "kombat-vesuvius-2025": {
+      "bestPrice": 152,
+      "bestStoreId": "amazon",
+      "offers": [
+        {
+          "storeId": "amazon",
+          "price": 152,
+          "inStock": true
+        }
+      ]
+    },
+    "kombat-etna-2025": {
+      "bestPrice": 152,
+      "bestStoreId": "amazon",
+      "offers": [
+        {
+          "storeId": "amazon",
+          "price": 152,
+          "inStock": true
+        }
+      ]
+    },
+    "kombat-osorno-2025": {
+      "bestPrice": 152,
+      "bestStoreId": "amazon",
+      "offers": [
+        {
+          "storeId": "amazon",
+          "price": 152,
+          "inStock": true
+        }
+      ]
+    },
+    "adidas-metalbone-hrd-plus-2026": {
+      "bestPrice": 252,
+      "bestStoreId": "amazon",
+      "offers": [
+        {
+          "storeId": "amazon",
+          "price": 252,
+          "inStock": true
+        }
+      ]
+    },
+    "adidas-metalbone-carbon-ctrl-2026": {
+      "bestPrice": 179,
+      "bestStoreId": "amazon",
+      "offers": [
+        {
+          "storeId": "amazon",
+          "price": 179,
+          "inStock": true
+        }
+      ]
+    },
+    "drop-shot-conqueror-attack-2-0-2025": {
+      "bestPrice": 224.95,
+      "bestStoreId": "amazon",
+      "offers": [
+        {
+          "storeId": "amazon",
+          "price": 224.95,
+          "inStock": true
+        }
+      ]
+    },
+    "drop-shot-explorer-pro-attack-2-0-2025": {
+      "bestPrice": 229.95,
+      "bestStoreId": "amazon",
+      "offers": [
+        {
+          "storeId": "amazon",
+          "price": 229.95,
+          "inStock": true
+        }
+      ]
+    },
+    "drop-shot-axion-attack-1-0-2025": {
+      "bestPrice": 157.95,
+      "bestStoreId": "amazon",
+      "offers": [
+        {
+          "storeId": "amazon",
+          "price": 157.95,
+          "inStock": true
+        }
+      ]
+    },
+    "royal-padel-whip-extreme-2026": {
+      "bestPrice": 231.95,
+      "bestStoreId": "amazon",
+      "offers": [
+        {
+          "storeId": "amazon",
+          "price": 231.95,
+          "inStock": true
+        }
+      ]
+    },
+    "royal-padel-rp-r30-golden-white-2025": {
+      "bestPrice": 239.95,
+      "bestStoreId": "amazon",
+      "offers": [
+        {
+          "storeId": "amazon",
+          "price": 239.95,
+          "inStock": true
+        }
+      ]
+    },
+    "royal-padel-rp-fury-2026": {
+      "bestPrice": 261.95,
+      "bestStoreId": "amazon",
+      "offers": [
+        {
+          "storeId": "amazon",
+          "price": 261.95,
+          "inStock": true
+        }
+      ]
+    },
+    "akkeron-black-diablo-pro-2025": {
+      "bestPrice": 139.95,
+      "bestStoreId": "amazon",
+      "offers": [
+        {
+          "storeId": "amazon",
+          "price": 139.95,
+          "inStock": true
+        }
+      ]
+    },
+    "akkeron-black-predator-pro-2025": {
+      "bestPrice": 139.95,
+      "bestStoreId": "amazon",
+      "offers": [
+        {
+          "storeId": "amazon",
+          "price": 139.95,
+          "inStock": true
+        }
+      ]
+    },
+    "bullpadel-xplo-premier-padel-2026": {
+      "bestPrice": 239.95,
+      "bestStoreId": "amazon",
+      "offers": [
+        {
+          "storeId": "amazon",
+          "price": 239.95,
+          "inStock": true
+        }
+      ]
+    },
+    "bullpadel-vertex-05-geo-premier-padel-2026": {
+      "bestPrice": 244.95,
+      "bestStoreId": "amazon",
+      "offers": [
+        {
+          "storeId": "amazon",
+          "price": 244.95,
+          "inStock": true
+        }
+      ]
+    },
+    "bullpadel-indiga-power-2026": {
+      "bestPrice": 294.95,
+      "bestStoreId": "amazon",
+      "offers": [
+        {
+          "storeId": "amazon",
+          "price": 294.95,
+          "inStock": true
+        }
+      ]
+    },
+    "head-coello-pro-2026": {
+      "bestPrice": 264.95,
+      "bestStoreId": "amazon",
+      "offers": [
+        {
+          "storeId": "amazon",
+          "price": 264.95,
+          "inStock": true
+        }
+      ]
+    },
+    "head-coello-motion-2026": {
+      "bestPrice": 264.95,
+      "bestStoreId": "amazon",
+      "offers": [
+        {
+          "storeId": "amazon",
+          "price": 264.95,
+          "inStock": true
+        }
+      ]
+    },
+    "head-extreme-one-x-2025": {
+      "bestPrice": 199.95,
+      "bestStoreId": "amazon",
+      "offers": [
+        {
+          "storeId": "amazon",
+          "price": 199.95,
+          "inStock": true
+        }
+      ]
+    },
+    "adidas-crossit-carbon-2026": {
+      "bestPrice": 219.95,
+      "bestStoreId": "amazon",
+      "offers": [
+        {
+          "storeId": "amazon",
+          "price": 219.95,
+          "inStock": true
+        }
+      ]
+    },
+    "adidas-arrow-hit-attk-2026": {
+      "bestPrice": 274.95,
+      "bestStoreId": "amazon",
+      "offers": [
+        {
+          "storeId": "amazon",
+          "price": 274.95,
+          "inStock": true
+        }
+      ]
+    },
+    "siux-electra-pro-2026": {
+      "bestPrice": 197.95,
+      "bestStoreId": "amazon",
+      "offers": [
+        {
+          "storeId": "amazon",
+          "price": 197.95,
+          "inStock": true
+        }
+      ]
+    },
+    "siux-valkiria-pro-2026": {
+      "bestPrice": 261.95,
+      "bestStoreId": "amazon",
+      "offers": [
+        {
+          "storeId": "amazon",
+          "price": 261.95,
+          "inStock": true
+        }
+      ]
+    },
+    "starvie-triton-power-2025": {
+      "bestPrice": 149.95,
+      "bestStoreId": "amazon",
+      "offers": [
+        {
+          "storeId": "amazon",
+          "price": 149.95,
+          "inStock": true
+        }
+      ]
+    },
+    "nox-nextgen-pro-attack-12k-2026": {
+      "bestPrice": 149.95,
+      "bestStoreId": "amazon",
+      "offers": [
+        {
+          "storeId": "amazon",
+          "price": 149.95,
+          "inStock": true
+        }
+      ]
+    }
+  }
+}
