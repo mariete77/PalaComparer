@@ -1,6 +1,6 @@
 import Link from "next/link";
 import { PRODUCTS } from "@/data/products";
-import { getBestPrice } from "@/data/offers";
+import { getBestPrice, getPriceSummary } from "@/data/offers";
 import { ARTICLES, kindLabel, formatArticleDate, articleHref } from "@/data/news";
 import ProductCard from "@/components/ProductCard";
 import Hero from "@/components/Hero";
@@ -30,6 +30,16 @@ export default async function HomePage({
       ["wilson-blade-98-v10-2026", "babolat-pure-aero-2026", "head-speed-mp-2026", "yonex-vcore-98-2026"].includes(p.id)
   );
   const ultimasNoticias = ARTICLES.slice(0, 3);
+
+  // Ofertas de la semana: los 4 productos con mayor descuento real verificado.
+  const ofertasSemana = PRODUCTS.map((p) => ({ p, s: getPriceSummary(p.id) }))
+    .filter(
+      (x): x is { p: (typeof PRODUCTS)[number]; s: NonNullable<ReturnType<typeof getPriceSummary>> } =>
+        Boolean(x.s && x.s.min < x.p.price && (x.s.discountPct ?? 0) >= 10)
+    )
+    .sort((a, b) => (b.s.discountPct ?? 0) - (a.s.discountPct ?? 0))
+    .slice(0, 4)
+    .map((x) => x.p);
 
   const pilares = [
     {
@@ -82,6 +92,23 @@ export default async function HomePage({
               </div>
             ))}
           </dl>
+        </div>
+      </section>
+
+      {/* OFERTAS DE LA SEMANA — las 4 con mayor descuento real */}
+      <section className="max-w-7xl mx-auto px-6 mb-20 md:mb-28">
+        <div className="flex items-end justify-between gap-4 mb-8">
+          <h2 className="font-display text-3xl font-bold tracking-tight">
+            {t("home.ofertasSemana")}
+          </h2>
+          <Link href={lp("/ofertas")} className="shrink-0 text-sm font-semibold text-padel hover:underline">
+            {t("common.verTodas")}
+          </Link>
+        </div>
+        <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
+          {ofertasSemana.map((p) => (
+            <ProductCard key={p.id} product={p} bestPrice={getBestPrice(p.id)} />
+          ))}
         </div>
       </section>
 
