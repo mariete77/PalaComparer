@@ -43,6 +43,11 @@ import { metadata as carbono } from "@/content/noticias/carbono-3k-12k-18k-difer
 import { metadata as iniciacion } from "@/content/noticias/palas-iniciacion-que-mirar.mdx";
 import { metadata as tamis } from "@/content/noticias/tamis-y-patron-de-cuerdas.mdx";
 import { metadata as gamaAlta } from "@/content/noticias/gama-alta-2025-2026-tendencias.mdx";
+import { metadata as calidadPrecio } from "@/content/noticias/mejores-palas-calidad-precio-2026.mdx";
+import { metadata as sudafrica } from "@/content/noticias/triay-brea-chingalan-campeones-sudafrica.mdx";
+import { metadata as london } from "@/content/noticias/london-p1-primer-torneo-londres.mdx";
+import { metadata as malaga } from "@/content/noticias/malaga-p1-numeros-1-martin-carpena.mdx";
+import { metadata as fanatics } from "@/content/noticias/premier-padel-fanatics-acuerdo-licencias.mdx";
 
 /**
  * Traducciones EN de los metadatos de cada artículo. Las ES vienen del propio
@@ -80,6 +85,36 @@ const EN_META: Record<string, { title: string; excerpt: string; tags: string[] }
       "We analyze the 48 models in the catalog: 18K has taken over the padel premium, diamond dominates signature paddles, and tennis has standardized on 100 in².",
     tags: ["Analysis", "Trends", "Catalog"],
   },
+  "mejores-palas-calidad-precio-2026": {
+    title: "Best value padel paddles of 2026 (real price data)",
+    excerpt:
+      "We cross the catalog's specs with real scraped Amazon prices: these are the paddles that offer the most paddle per euro in 2026.",
+    tags: ["Value for money", "Analysis", "Deals", "2026"],
+  },
+  "triay-brea-chingalan-campeones-sudafrica": {
+    title: "Triay-Brea and Chingalán win South Africa's first Premier Padel crown",
+    excerpt:
+      "Gemma Triay and Delfi Brea on one side, Galán and Chingotto on the other: the two favourites lift the title in Pretoria after two finals decided in third-set tie-breaks.",
+    tags: ["Premier Padel", "Pretoria", "Triay", "Chingotto", "Galán"],
+  },
+  "london-p1-primer-torneo-londres": {
+    title: "Pro padel lands in London: London P1 kicks off at Olympia",
+    excerpt:
+      "For the first time ever, a Premier Padel tournament is held in the British capital. The main draw starts this week at Olympia London in Kensington.",
+    tags: ["Premier Padel", "London P1", "Calendar"],
+  },
+  "malaga-p1-numeros-1-martin-carpena": {
+    title: "Málaga P1: world No.1s reign at Martín Carpena in front of 44,000 fans",
+    excerpt:
+      "Triay and Brea battle for over three hours to beat Josemaría-González; Coello and Tapia crush Lebrón-Augsburger in 53 minutes. Attendance record in Málaga.",
+    tags: ["Premier Padel", "Málaga P1", "Coello", "Tapia", "Triay"],
+  },
+  "premier-padel-fanatics-acuerdo-licencias": {
+    title: "Premier Padel signs historic licensing deal with Fanatics",
+    excerpt:
+      "The sports merchandising giant becomes Master Licensee of the tour: official online store already live, with in-venue retail coming in December.",
+    tags: ["Premier Padel", "Fanatics", "Merchandising"],
+  },
 };
 
 /**
@@ -109,6 +144,11 @@ export const ARTICLES: Article[] = [
   localize({ slug: "palas-iniciacion-que-mirar", ...iniciacion }),
   localize({ slug: "tamis-y-patron-de-cuerdas", ...tamis }),
   localize({ slug: "gama-alta-2025-2026-tendencias", ...gamaAlta }),
+  localize({ slug: "mejores-palas-calidad-precio-2026", ...calidadPrecio }),
+  localize({ slug: "triay-brea-chingalan-campeones-sudafrica", ...sudafrica }),
+  localize({ slug: "london-p1-primer-torneo-londres", ...london }),
+  localize({ slug: "malaga-p1-numeros-1-martin-carpena", ...malaga }),
+  localize({ slug: "premier-padel-fanatics-acuerdo-licencias", ...fanatics }),
 ].sort((a, b) => b.date.localeCompare(a.date));
 
 export function getArticle(slug: string): Article | undefined {
