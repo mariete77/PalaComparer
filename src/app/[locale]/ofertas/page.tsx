@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import Link from "next/link";
 import { PRODUCTS } from "@/data/products";
 import { getPriceSummary } from "@/data/offers";
 import ProductCard from "@/components/ProductCard";
@@ -61,6 +62,28 @@ export default async function OfertasPage({
           <p className="text-sm text-muted mb-6">
             {t("ofertas.contador", { n: String(withDeals.length), max: String(maxDiscount) })}
           </p>
+
+          {/* Cross-link: análisis calidad/precio con metodología y contexto. */}
+          <Link
+            href={localePath(locale, "/guias/mejores-palas-calidad-precio-2026")}
+            className="card-glow group mb-8 flex flex-col sm:flex-row sm:items-center justify-between gap-4 rounded-2xl bg-white/[0.02] border border-white/10 p-6 transition-colors hover:bg-white/[0.04]"
+          >
+            <div>
+              <p className="text-xs font-semibold text-padel uppercase tracking-wider">
+                {t("ofertas.analisisTag")}
+              </p>
+              <p className="mt-1 font-display text-lg font-bold group-hover:text-primary-container transition-colors">
+                {t("ofertas.analisisTitulo")}
+              </p>
+              <p className="mt-1 text-sm text-muted leading-relaxed max-w-xl">
+                {t("ofertas.analisisDesc")}
+              </p>
+            </div>
+            <span className="shrink-0 btn-outline rounded-lg px-5 py-2.5 text-sm">
+              {t("ofertas.leerAnalisis")}
+            </span>
+          </Link>
+
           <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
             {withDeals.map(({ p, s }) => (
               <ProductCard key={p.id} product={p} bestPrice={s.min} />

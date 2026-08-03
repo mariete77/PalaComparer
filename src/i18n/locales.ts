@@ -119,6 +119,11 @@ const es = {
       "Precios reales scrapeados esta semana, no PVP teórico. Solo modelos con descuento real sobre el precio de catálogo.",
     contador: "{n} modelos con descuento real. El mayor es de un {max}% sobre el PVP.",
     sinOfertas: "Esta semana no hay ofertas verificadas. Vuelve pronto: actualizamos precios cada semana.",
+    analisisTag: "Análisis con precios reales",
+    analisisTitulo: "Las mejores palas calidad/precio de 2026",
+    analisisDesc:
+      "La metodología completa detrás de estas gangas: qué modelos conviene comprar de la generación anterior y por qué.",
+    leerAnalisis: "Leer el análisis",
   },
   raquetas: {
     metaTitle: "Raquetas de tenis — PalaComparer",
@@ -435,6 +440,11 @@ const en = {
       "Real scraped prices from this week, not theoretical MSRP. Only models with a real discount off the catalog price.",
     contador: "{n} models with a real discount. The biggest one is {max}% off MSRP.",
     sinOfertas: "No verified deals this week. Come back soon: we refresh prices every week.",
+    analisisTag: "Analysis with real prices",
+    analisisTitulo: "Best value padel paddles of 2026",
+    analisisDesc:
+      "The full methodology behind these deals: which previous-generation paddles are worth buying and why.",
+    leerAnalisis: "Read the analysis",
   },
   raquetas: {
     metaTitle: "Tennis rackets — PalaComparer",
