@@ -69,6 +69,18 @@ export default function Footer() {
               <Link href={lp("/jugadores")} className="text-sm text-muted hover:text-primary-container transition-colors">
                 {t("footer.jugadores")}
               </Link>
+              {/* RSS: enlace directo (no localizado) para lectores y agregadores. */}
+              <a
+                href="/rss.xml"
+                className="text-sm text-muted hover:text-primary-container transition-colors inline-flex items-center gap-1.5"
+              >
+                RSS
+                <svg width="12" height="12" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+                  <circle cx="6" cy="18" r="2" />
+                  <path d="M4 10v3a7 7 0 0 1 7 7h3a10 10 0 0 0-10-10z" />
+                  <path d="M4 4v3c7.18 0 13 5.82 13 13h3A16 16 0 0 0 4 4z" />
+                </svg>
+              </a>
             </nav>
           </div>
           <div>
