@@ -1,6 +1,6 @@
 "use client";
 
-import { useState } from "react";
+import { useEffect, useRef, useState } from "react";
 import Link from "next/link";
 import HeroMedia from "./HeroMedia";
 
@@ -17,18 +17,54 @@ export interface HeroContent {
 }
 
 /**
- * Hero con video de fondo: el video se reproduce una vez al entrar en la
- * vista y, cuando termina, el contenido (título, texto, botones) aparece con
- * un fade-in. Al volver a entrar (remount), el ciclo se repite.
+ * Hero con video de fondo. El ciclo funciona así:
+ *
+ * 1. La sección entra en el viewport (primera carga o al volver a hacer
+ *    scroll hacia arriba) → el video se reproduce desde el principio y el
+ *    contenido queda oculto.
+ * 2. Al terminar el video, el contenido (título, texto, botones) aparece con
+ *    fade-in + slide-up.
+ * 3. Al salir del viewport (scroll a la siguiente sección) el video se pausa.
+ * 4. Al volver a entrar, el ciclo se repite.
  */
 export default function Hero({ content }: { content: HeroContent }) {
   const [ended, setEnded] = useState(false);
+  const [playSignal, setPlaySignal] = useState(0);
+  const [visible, setVisible] = useState(true);
+  const sectionRef = useRef<HTMLElement>(null);
+
+  // Observa el hero: al entrar en el viewport reinicia el ciclo del video;
+  // al salir marca la sección como no visible (el video se pausa).
+  useEffect(() => {
+    const section = sectionRef.current;
+    if (!section) return;
+
+    const observer = new IntersectionObserver(
+      ([entry]) => {
+        if (entry.isIntersecting) {
+          setVisible(true);
+          setEnded(false);
+          setPlaySignal((s) => s + 1);
+        } else {
+          setVisible(false);
+        }
+      },
+      { threshold: 0.15 }
+    );
+
+    observer.observe(section);
+    return () => observer.disconnect();
+  }, []);
 
   return (
-    <section className="relative isolate overflow-hidden">
+    <section ref={sectionRef} className="relative isolate overflow-hidden">
       {/* Video background */}
       <div className="absolute inset-0 -z-10">
-        <HeroMedia onEnded={() => setEnded(true)} />
+        <HeroMedia
+          onEnded={() => setEnded(true)}
+          playSignal={playSignal}
+          active={visible}
+        />
       </div>
 
       <div
