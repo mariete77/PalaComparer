@@ -39,6 +39,7 @@ export default function Nav() {
   const NAV_LINKS = [
     { href: "/palas", label: t("nav.palas") },
     { href: "/raquetas", label: t("nav.raquetas") },
+    { href: "/ofertas", label: t("nav.ofertas") },
     { href: "/noticias", label: t("nav.noticias") },
     { href: "/finder", label: t("nav.finder") },
   ];

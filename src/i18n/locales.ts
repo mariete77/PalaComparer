@@ -73,6 +73,7 @@ const es = {
     palas: "Palas",
     raquetas: "Raquetas",
     noticias: "Noticias",
+    ofertas: "Ofertas",
     finder: "Encuentra la tuya",
     comparar: "Comparar",
     menu: "Menú",
@@ -107,6 +108,16 @@ const es = {
     titulo: "Palas de pádel",
     subtitulo: "{n} palas de las mejores marcas. Usa los filtros para encontrar la tuya.",
     intro: "Una pala de pádel debe elegirse por nivel, estilo y especificaciones, no solo por marca. Aquí puedes comparar forma, balance, peso, materiales y precios actuales de varias tiendas para encontrar un modelo que encaje con tu juego.",
+  },
+  ofertas: {
+    metaTitle: "Palas y raquetas en oferta — PalaComparer",
+    metaDesc:
+      "Descuentos reales verificados esta semana: palas de pádel y raquetas de tenis con precio actualizado de Amazon, Padel Nuestro, Decathlon y más.",
+    titulo: "Ofertas verificadas",
+    subtitulo:
+      "Precios reales scrapeados esta semana, no PVP teórico. Solo modelos con descuento real sobre el precio de catálogo.",
+    contador: "{n} modelos con descuento real. El mayor es de un {max}% sobre el PVP.",
+    sinOfertas: "Esta semana no hay ofertas verificadas. Vuelve pronto: actualizamos precios cada semana.",
   },
   raquetas: {
     metaTitle: "Raquetas de tenis — PalaComparer",
@@ -377,6 +388,7 @@ const en = {
     palas: "Paddles",
     raquetas: "Rackets",
     noticias: "News",
+    ofertas: "Deals",
     finder: "Find yours",
     comparar: "Compare",
     menu: "Menu",
@@ -411,6 +423,16 @@ const en = {
     titulo: "Padel paddles",
     subtitulo: "{n} paddles from the best brands. Use the filters to find yours.",
     intro: "A padel paddle should be chosen by level, play style and specifications, not only by brand. Compare shape, balance, weight, materials and current prices from several stores to find a model that fits your game.",
+  },
+  ofertas: {
+    metaTitle: "Paddles and rackets on sale — PalaComparer",
+    metaDesc:
+      "Real verified deals this week: padel paddles and tennis rackets with live prices from Amazon, Padel Nuestro, Decathlon and more.",
+    titulo: "Verified deals",
+    subtitulo:
+      "Real scraped prices from this week, not theoretical MSRP. Only models with a real discount off the catalog price.",
+    contador: "{n} models with a real discount. The biggest one is {max}% off MSRP.",
+    sinOfertas: "No verified deals this week. Come back soon: we refresh prices every week.",
   },
   raquetas: {
     metaTitle: "Tennis rackets — PalaComparer",
