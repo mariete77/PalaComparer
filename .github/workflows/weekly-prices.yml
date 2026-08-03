@@ -42,9 +42,18 @@ jobs:
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          # Integrar lo que haya podido llegar a main durante el scraping
-          # (pushes manuales, deploys) antes de añadir nuestros cambios.
-          git pull --rebase origin main
+          # Estrategia: los datos scrapeados en CI son los más frescos, así que
+          # SIEMPRE ganan. Se guardan fuera del repo, se parte del último main
+          # (que puede haber avanzado durante el scraping) y se vuelcan encima.
+          # Esto evita los errores de 'fetch first' y los conflictos de rebase
+          # con el working tree sucio.
+          mkdir -p /tmp/price-data
+          cp src/data/real-offers.json src/data/real-offers-stores.json src/data/real-offers-decathlon.json /tmp/price-data/
+          cp -r src/data/price-history /tmp/price-data/
+          git fetch origin
+          git checkout -f -B ci-tmp origin/main
+          cp /tmp/price-data/real-offers.json /tmp/price-data/real-offers-stores.json /tmp/price-data/real-offers-decathlon.json src/data/
+          cp -r /tmp/price-data/price-history/. src/data/price-history/
           git add src/data/real-offers.json src/data/real-offers-stores.json src/data/real-offers-decathlon.json src/data/price-history
           git diff --cached --quiet && echo "Sin cambios de precios" || git commit -m "chore(data): actualizar precios semanales"
-          git push
+          git push origin ci-tmp:main
