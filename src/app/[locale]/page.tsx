@@ -2,7 +2,7 @@ import Link from "next/link";
 import { PRODUCTS } from "@/data/products";
 import { getBestPrice, getPriceSummary } from "@/data/offers";
 import { ARTICLES, kindLabel, formatArticleDate, articleHref } from "@/data/news";
-import ProductCard from "@/components/ProductCard";
+import ProductCarousel from "@/components/ProductCarousel";
 import Hero from "@/components/Hero";
 import StoreMarquee from "@/components/StoreMarquee";
 import { isLocale, type Locale, localePath } from "@/i18n/locales";
@@ -105,11 +105,14 @@ export default async function HomePage({
             {t("common.verTodas")}
           </Link>
         </div>
-        <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
-          {ofertasSemana.map((p) => (
-            <ProductCard key={p.id} product={p} bestPrice={getBestPrice(p.id)} />
-          ))}
-        </div>
+        <ProductCarousel
+          id="ofertas"
+          autoplay
+          items={ofertasSemana.map((p) => ({
+            product: p,
+            bestPrice: getBestPrice(p.id),
+          }))}
+        />
       </section>
 
       {/* PADEL DESTACADO */}
@@ -122,11 +125,13 @@ export default async function HomePage({
             {t("common.verTodas")}
           </Link>
         </div>
-        <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
-          {destacadosPadel.map((p) => (
-            <ProductCard key={p.id} product={p} bestPrice={getBestPrice(p.id)} />
-          ))}
-        </div>
+        <ProductCarousel
+          id="padel"
+          items={destacadosPadel.map((p) => ({
+            product: p,
+            bestPrice: getBestPrice(p.id),
+          }))}
+        />
       </section>
 
       {/* TENIS DESTACADO */}
@@ -139,11 +144,13 @@ export default async function HomePage({
             {t("common.verTodas")}
           </Link>
         </div>
-        <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
-          {destacadosTenis.map((p) => (
-            <ProductCard key={p.id} product={p} bestPrice={getBestPrice(p.id)} />
-          ))}
-        </div>
+        <ProductCarousel
+          id="tenis"
+          items={destacadosTenis.map((p) => ({
+            product: p,
+            bestPrice: getBestPrice(p.id),
+          }))}
+        />
       </section>
 
       {/* NOTICIAS — editorial layout */}
