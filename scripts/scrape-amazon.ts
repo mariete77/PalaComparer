@@ -7,13 +7,7 @@
 import { chromium } from "playwright";
 import { readFileSync, writeFileSync, existsSync } from "fs";
 import { join } from "path";
-
-interface ProductRef {
-  id: string;
-  brand: string;
-  model: string;
-  year: number;
-}
+import { loadProducts, isMatch, buildQuery, type ProductRef } from "./lib/product-match";
 
 interface ScrapedOffer {
   productId: string;
@@ -23,40 +17,6 @@ interface ScrapedOffer {
   asin: string | null;
   inStock: boolean;
   scrapedAt: string;
-}
-
-function loadProducts(): ProductRef[] {
-  const content = readFileSync(join(__dirname, "../src/data/products.ts"), "utf-8");
-  const products: ProductRef[] = [];
-  const re = /id:\s*"([^"]+)".*?brand:\s*"([^"]+)".*?model:\s*"([^"]+)".*?year:\s*(\d+)/gs;
-  let m;
-  while ((m = re.exec(content)) !== null) {
-    products.push({ id: m[1], brand: m[2], model: m[3], year: parseInt(m[4]) });
-  }
-  return products;
-}
-
-function buildQuery(p: ProductRef): string {
-  const model = p.model.replace(/by\s+[^,]+$/i, "").replace(/\s+/g, " ").trim();
-  return `${p.brand} ${model} ${p.year}`;
-}
-
-function isMatch(title: string, p: ProductRef): boolean {
-  const t = title.toLowerCase();
-  const brand = p.brand.toLowerCase();
-  const brandOk = t.includes(brand) || t.includes(brand.replace(/\s+/g, ""));
-  // Tokens de 2 letras incluidos: en modelos como "RX Carbon" el "rx" es lo
-  // único que distingue, y descartarlo dejaba "carbon", que casa con media
-  // gama de la marca.
-  const kws = p.model.toLowerCase().replace(/by\s+[^,]+$/i, "")
-    .split(/\s+/).filter(w => w.length >= 2 && !["the", "pro", "by", "de"].includes(w));
-  const hits = kws.filter(k => t.includes(k)).length;
-  const score = kws.length > 0 ? hits / kws.length : 0;
-  const yearOk = t.includes(String(p.year)) || t.includes(String(p.year + 1));
-  // El año ajusta el listón, nunca sustituye al modelo: con `score >= 0.4 ||
-  // yearOk` bastaba con que coincidieran marca y año, así que cualquier pala de
-  // esa marca y temporada se daba por buena.
-  return brandOk && score >= (yearOk ? 0.5 : 0.7);
 }
 
 async function scrapeAmazon() {

@@ -14,14 +14,7 @@
 import { firefox } from "playwright";
 import { readFileSync, writeFileSync, existsSync } from "fs";
 import { join } from "path";
-
-interface ProductRef {
-  id: string;
-  brand: string;
-  model: string;
-  year: number;
-  sport: string;
-}
+import { loadProducts, isMatch, type ProductRef } from "./lib/product-match";
 
 interface ScrapedOffer {
   productId: string;
@@ -44,80 +37,12 @@ const EXCLUDE = [
   "girl", "woman", "women", "wta", "femenina", "lady",
 ];
 
-function loadProducts(): ProductRef[] {
-  const content = readFileSync(join(__dirname, "../src/data/products.ts"), "utf-8");
-  const products: ProductRef[] = [];
-  // ⚠️ El orden de campos en products.ts es id → model → brand (NO id → brand → model).
-  // Un regex `id...brand...model` cruza entries y mezcla modelos de productos
-  // vecinos. Por eso se extraen brand/model/year dentro de una ventana tras el id.
-  const re = /id:\s*"([^"]+)"/g;
-  let m;
-  while ((m = re.exec(content)) !== null) {
-    const win = content.slice(m.index, m.index + 600);
-    const brand = /brand:\s*"([^"]+)"/.exec(win)?.[1];
-    const model = /model:\s*"([^"]+)"/.exec(win)?.[1];
-    const year = /year:\s*(\d+)/.exec(win)?.[1];
-    if (!brand || !model || !year) continue;
-    products.push({ id: m[1], brand, model, year: parseInt(year), sport: /sport:\s*"([^"]+)"/.exec(win)?.[1] ?? "" });
-  }
-  return products;
-}
-
 function buildQuery(p: ProductRef): string {
   const model = p.model.replace(/by\s+[^,]+$/i, "").replace(/\s+/g, " ").trim();
   if (p.sport === "padel") {
     return `pala padel ${p.brand} ${model} ${p.year}`;
   }
   return `raqueta tenis ${p.brand} ${model} ${p.year}`;
-}
-
-/** Palabras sin valor discriminante para el matching. */
-const STOPWORDS = new Set([
-  "the", "pro", "by", "de", "del", "padel", "pala", "palas", "raqueta",
-  "raquetas", "adulto", "adultos", "gen",
-]);
-
-/**
- * Variantes del producto que NO deben emparejarse si el modelo del catálogo
- * no las menciona: versiones femeninas (Indiga Girl ≠ Indiga Power),
- * junior, light (Clash 100 L ≠ Clash 100), team, etc.
- */
-const VARIANT_TOKENS = new Set([
-  "girl", "woman", "women", "wta", "femenina", "fem", "lady",
-  "junior", "júnior", "kid", "kids", "niño", "niña",
-  "light", "team", "l", "w",
-]);
-
-/** Normaliza el modelo: quita paréntesis "(8th gen)", "by <jugador>" y años. */
-function modelKeywords(model: string): string[] {
-  return model
-    .toLowerCase()
-    .replace(/\([^)]*\)/g, " ") // "(4th Gen)", "(8th gen)", "(300G)"…
-    .replace(/by\s+[^,]+$/i, " ")
-    .split(/\s+/)
-    .filter((w) => w.length >= 2 && !STOPWORDS.has(w) && !/^\d{4}$/.test(w));
-}
-
-function isMatch(title: string, p: ProductRef): boolean {
-  const t = title.toLowerCase();
-  const brand = p.brand.toLowerCase();
-  const brandOk = t.includes(brand) || t.includes(brand.replace(/\s+/g, ""));
-  if (!brandOk) return false;
-
-  // Variante del producto (género, light, junior…) no contemplada en el modelo → rechazar.
-  // Ej.: título "INDIGA Girl 2026" contra modelo "Indiga Power 2026".
-  const modelLower = p.model.toLowerCase();
-  const modelTokens = new Set(modelLower.split(/\s+/));
-  const tokens = t.split(/[^a-z0-9áéíóúñü]+/).filter(Boolean);
-  if (tokens.some((tk) => VARIANT_TOKENS.has(tk) && !modelTokens.has(tk))) return false;
-
-  const kws = modelKeywords(p.model);
-  const hits = kws.filter((k) => t.includes(k)).length;
-  const score = kws.length > 0 ? hits / kws.length : 0;
-
-  // Umbral alto y fijo: mejor no mostrar oferta que mostrar un producto distinto.
-  // 0.85 descarta "CTRL 3.4" contra "CTRL 3.3" (0.75) o "Blade v10" contra "v9" (0.8).
-  return score >= 0.85;
 }
 
 function parsePrice(text: string): number | null {

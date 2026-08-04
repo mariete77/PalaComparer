@@ -276,26 +276,46 @@ npx tsx scripts/snapshot-prices.ts
 npm run dev
 ```
 
-### Scraper de Decathlon (`scrape-decathlon.ts`)
+### Matching de producto — `scripts/lib/product-match.ts`
 
-- **Método**: Playwright **Firefox** (Chromium lo bloquea Cloudflare) + búsqueda
-  con `Ntt`. Delays de 5-8s entre búsquedas. Guardado incremental: los
-  productos con precio ya en cache se saltan (borrar la entrada del JSON para
-  re-scrapear uno concreto).
-- **Matching de producto**: `isMatch()` exige **≥85% de las palabras del
-  modelo** (normalizado: sin paréntesis, sin "by <jugador>", sin año) y
-  rechaza variantes que el modelo no mencione: femeninas (`girl`, `woman`,
-  `wta`, `femenina`…), `junior`/`kid`, `light` y los tokens `l`/`w`
-  (Clash 100 **L** ≠ Clash 100, Vertex 04 **W** ≠ Vertex 04).
+**El criterio es común a los 3 scrapers** (Amazon, Decathlon, Firecrawl) y
+centraliza todo el aprendizaje anti-ofertas-falsas:
+
+- **Marca obligatoria** en el título de la tienda.
+- **Umbral fijo ≥ 85%** de las palabras del modelo (normalizado: minúsculas,
+  sin acentos —"Agustín" = "Agustin"–, sin paréntesis "(8th gen)", sin
+  "by <jugador>", sin años). El año ya **no** rebaja el listón: con el umbral
+  en 0.5 bastaba marca + año + una palabra ("Speed Jr. 25 2026" colaba como
+  "Speed MP 2026").
+- **Variantes rechazadas** si el modelo no las menciona: femeninas (`girl`,
+  `woman`, `wta`, `femenina`…), `junior`/`jr`/`kid`/`nino`/`nina`,
+  `light`/`team` y los tokens `l`/`w` (Clash 100 **L** ≠ Clash 100,
+  Vertex 04 **W** ≠ Vertex 04, Boom **Jr.** ≠ Boom MP).
+- **Stopwords de gama**: `luxury` no cuenta como palabra de modelo (la tienda
+  vende "AT10 Genius 18K Alum" donde el catálogo dice "AT10 *Luxury* Genius").
+- **⚠️ Sufijos pegados no detectables** (p. ej. Yonex Percept **97D** vs
+  catálogo "Percept 97"): el token "97d" no se puede comparar por palabras.
+  Revisar a mano cuando se sospeche.
 - **⚠️ Pitfall del parseo de `products.ts`**: el orden de campos es
   `id → model → brand`; un regex `id…brand…model` cruza entries y mezcla
   modelos de productos vecinos. `loadProducts()` extrae por ventana tras el
   `id`.
-- **04/08/2026**: se limpiaron 9 ofertas falsas de Decathlon (p. ej. la
-  "Indiga Girl" colada como Indiga Power a 50,90 €, la Valkiria como Electra
-  Pro) + 5 entradas huérfanas, y se corrigieron los snapshots/histórico
-  contaminados. Si un precio de Decathlon parece de otro producto, borrar su
-  entrada del JSON y re-scrapear.
+
+**Validación**: `npx tsx scripts/validate-match.ts` recorre los JSONs de
+ofertas reales y lista todo lo que el matcher actual rechazaría. Ejecutarlo
+tras tocar el matcher o los datos.
+
+**Historial de limpiezas** (ofertas falsas eliminadas a mano):
+- 04/08/2026 — Decathlon: Indiga Girl como Indiga Power (50,90 €), Valkiria
+  como Electra Pro, Axion como Explorer, Whip Extreme como Whip EVA, CTRL 3.4
+  como 3.3, Clash 100 L, Vertex 04 Pro Line W, CX 200 Júnior, Speed MP L +
+  5 huérfanos. Snapshot e histórico corregidos.
+- 04/08/2026 — Amazon: Speed Jr. 25 como Speed MP (74,74 €), Boom Jr. como
+  Boom MP, Trilogy Pro como Diablo Pro, Percept 97D como Percept 97.
+  Snapshot e histórico corregidos.
+
+Si un precio de una tienda parece de otro producto, borrar su entrada del
+JSON y re-scrapear.
 
 ### Formato del snapshot
 

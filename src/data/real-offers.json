@@ -422,15 +422,6 @@
     "inStock": true,
     "scrapedAt": "2026-07-29T23:00:00.000Z"
   },
-  "siux-diablo-pro-2026": {
-    "productId": "siux-diablo-pro-2026",
-    "title": "Siux Siux Trilogy Pro 2026 Noir Fog Pala de pádel g Unisex",
-    "price": 174.99,
-    "url": "https://www.amazon.es/dp/B0FV8K843D",
-    "asin": "B0FV8K843D",
-    "inStock": true,
-    "scrapedAt": "2026-08-04T00:11:53.235Z"
-  },
   "wilson-rf-01-pro-2025": {
     "productId": "wilson-rf-01-pro-2025",
     "title": "Wilson RF 01 Pro - Raquetas de tenis sin cuerdas, tamaños de agarre 0-5",
@@ -439,33 +430,6 @@
     "asin": "B0DB2YJ8BT",
     "inStock": true,
     "scrapedAt": "2026-08-04T00:12:46.142Z"
-  },
-  "head-speed-mp-2026": {
-    "productId": "head-speed-mp-2026",
-    "title": "Head Speed Jr. 25 2026",
-    "price": 74.74,
-    "url": "https://www.amazon.es/dp/B0GLZKG3P1",
-    "asin": "B0GLZKG3P1",
-    "inStock": true,
-    "scrapedAt": "2026-08-04T00:13:23.348Z"
-  },
-  "head-boom-mp-2026": {
-    "productId": "head-boom-mp-2026",
-    "title": "HEAD Boom Jr. Alternate 2026",
-    "price": 73.55,
-    "url": "https://www.amazon.es/dp/B0G71JRHGR",
-    "asin": "B0G71JRHGR",
-    "inStock": true,
-    "scrapedAt": "2026-08-04T00:13:31.298Z"
-  },
-  "yonex-percept-97-2023": {
-    "productId": "yonex-percept-97-2023",
-    "title": "YONEX Percept 97D - Raqueta de tenis para jugadores avanzados, diseño de cara de raqueta rígida, precisión precisa, sensación y flexibilidad",
-    "price": 365.4,
-    "url": "https://www.amazon.es/dp/B0FNKQNP28",
-    "asin": "B0FNKQNP28",
-    "inStock": true,
-    "scrapedAt": "2026-08-04T00:14:46.633Z"
   },
   "volkl-v-cell-v1-pro-2023": {
     "productId": "volkl-v-cell-v1-pro-2023",

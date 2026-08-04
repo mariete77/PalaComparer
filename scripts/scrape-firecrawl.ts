@@ -17,19 +17,12 @@
 
 import { readFileSync, writeFileSync, existsSync } from "fs";
 import { join } from "path";
+import { loadProducts, isMatch, limpiaModelo, type ProductRef } from "./lib/product-match";
 
 const API = "https://api.firecrawl.dev/v2";
 
 /** Peticiones por minuto que admite el plan. */
 const RATE_LIMIT_PER_MIN = 11;
-
-interface ProductRef {
-  id: string;
-  sport: string;
-  brand: string;
-  model: string;
-  year: number;
-}
 
 interface StoreOffer {
   storeId: string;
@@ -100,47 +93,8 @@ function arg(nombre: string): string | undefined {
 const FLAG_REFRESH = process.argv.includes("--refresh");
 const FLAG_DRY = process.argv.includes("--dry-run");
 
-function loadProducts(): ProductRef[] {
-  const content = readFileSync(join(__dirname, "../src/data/products.ts"), "utf-8");
-  const products: ProductRef[] = [];
-  const re =
-    /id:\s*"([^"]+)".*?sport:\s*"([^"]+)".*?brand:\s*"([^"]+)".*?model:\s*"([^"]+)".*?year:\s*(\d+)/gs;
-  let m;
-  while ((m = re.exec(content)) !== null) {
-    products.push({ id: m[1], sport: m[2], brand: m[3], model: m[4], year: parseInt(m[5]) });
-  }
-  return products;
-}
-
-/** Quita el "by Jugador" del final, que ninguna tienda pone igual. */
-function limpiaModelo(model: string): string {
-  return model.replace(/by\s+[^,]+$/i, "").replace(/\s+/g, " ").trim();
-}
-
 function buildQuery(p: ProductRef): string {
   return `${p.brand} ${limpiaModelo(p.model)} ${p.year}`;
-}
-
-/**
- * Mismo criterio que el scraper de Amazon: la marca es obligatoria y el modelo
- * tiene que casar de sobra. El año baja el listón pero nunca lo sustituye —
- * si bastara con marca + año, cualquier pala de esa temporada valdría.
- *
- * Los tokens de dos letras cuentan: en "RX Carbon" el "rx" es lo único que
- * distingue el modelo del resto de la gama.
- */
-function isMatch(title: string, p: ProductRef): boolean {
-  const t = title.toLowerCase();
-  const brand = p.brand.toLowerCase();
-  const brandOk = t.includes(brand) || t.includes(brand.replace(/\s+/g, ""));
-  const kws = limpiaModelo(p.model)
-    .toLowerCase()
-    .split(/\s+/)
-    .filter((w) => w.length >= 2 && !["the", "pro", "by", "de"].includes(w));
-  const hits = kws.filter((k) => t.includes(k)).length;
-  const score = kws.length > 0 ? hits / kws.length : 0;
-  const yearOk = t.includes(String(p.year)) || t.includes(String(p.year + 1));
-  return brandOk && score >= (yearOk ? 0.5 : 0.7);
 }
 
 // --- Rate limit -------------------------------------------------------------

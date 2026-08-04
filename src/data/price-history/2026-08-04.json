@@ -355,17 +355,6 @@
         }
       ]
     },
-    "siux-diablo-pro-2026": {
-      "bestPrice": 174.99,
-      "bestStoreId": "amazon",
-      "offers": [
-        {
-          "storeId": "amazon",
-          "price": 174.99,
-          "inStock": true
-        }
-      ]
-    },
     "black-crown-piton-14-2026": {
       "bestPrice": 134.95,
       "bestStoreId": "decathlon",
@@ -463,28 +452,6 @@
         }
       ]
     },
-    "head-speed-mp-2026": {
-      "bestPrice": 74.74,
-      "bestStoreId": "amazon",
-      "offers": [
-        {
-          "storeId": "amazon",
-          "price": 74.74,
-          "inStock": true
-        }
-      ]
-    },
-    "head-boom-mp-2026": {
-      "bestPrice": 73.55,
-      "bestStoreId": "amazon",
-      "offers": [
-        {
-          "storeId": "amazon",
-          "price": 73.55,
-          "inStock": true
-        }
-      ]
-    },
     "yonex-vcore-98-2026": {
       "bestPrice": 305.45,
       "bestStoreId": "decathlon",
@@ -492,17 +459,6 @@
         {
           "storeId": "decathlon",
           "price": 305.45,
-          "inStock": true
-        }
-      ]
-    },
-    "yonex-percept-97-2023": {
-      "bestPrice": 365.4,
-      "bestStoreId": "amazon",
-      "offers": [
-        {
-          "storeId": "amazon",
-          "price": 365.4,
           "inStock": true
         }
       ]
