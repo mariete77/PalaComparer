@@ -36,6 +36,8 @@ jobs:
           FIRECRAWL_API_KEY: ${{ secrets.FIRECRAWL_API_KEY }}
       - name: Actualizar Decathlon
         run: npx tsx scripts/scrape-decathlon.ts
+      - name: Validar ofertas (rechazar productos equivocados)
+        run: npx tsx scripts/validate-match.ts
       - name: Crear snapshot histórico
         run: npx tsx scripts/snapshot-prices.ts
       - name: Publicar cambios

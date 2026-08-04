@@ -2,6 +2,10 @@
 
 Pipeline para obtener precios y URLs reales de tiendas de pádel/tenis.
 
+> 📌 **Memoria de errores**: antes de tocar el matching o los datos, lee
+> [`MEMORIA-SCRAPING.md`](./MEMORIA-SCRAPING.md) — errores pasados, reglas de
+> oro y checklist de limpieza.
+
 ## Uso rápido
 
 ```bash
