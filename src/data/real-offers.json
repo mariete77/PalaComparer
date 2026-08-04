@@ -89,147 +89,12 @@
     "inStock": true,
     "scrapedAt": "2026-07-26T17:00:00.000Z"
   },
-  "wilson-pro-staff-97-v14-2023": {
-    "productId": "wilson-pro-staff-97-v14-2023",
-    "title": "Pro Staff 97 v14",
-    "price": 147.83,
-    "url": "https://www.amazon.es/dp/B0BV8R3N64",
-    "asin": "B0BV8R3N64",
-    "inStock": true,
-    "scrapedAt": "2026-07-26T17:00:00.000Z"
-  },
-  "wilson-blade-98-v9-2024": {
-    "productId": "wilson-blade-98-v9-2024",
-    "title": "Blade 98 16x19 v9",
-    "price": 184,
-    "url": "https://www.amazon.es/dp/B0CTK5NFDS",
-    "asin": "B0CTK5NFDS",
-    "inStock": true,
-    "scrapedAt": "2026-07-26T17:00:00.000Z"
-  },
-  "wilson-clash-100-v2-2022": {
-    "productId": "wilson-clash-100-v2-2022",
-    "title": "Clash 100 v2",
-    "price": 212.12,
-    "url": "https://www.amazon.es/dp/B09S3ZPP9R",
-    "asin": "B09S3ZPP9R",
-    "inStock": true,
-    "scrapedAt": "2026-07-26T17:00:00.000Z"
-  },
-  "wilson-shift-99-2023": {
-    "productId": "wilson-shift-99-2023",
-    "title": "Shift 99",
-    "price": 187.49,
-    "url": "https://www.amazon.es/dp/B0FZVJXXFY",
-    "asin": "B0FZVJXXFY",
-    "inStock": true,
-    "scrapedAt": "2026-07-26T17:00:00.000Z"
-  },
-  "babolat-pure-aero-2023": {
-    "productId": "babolat-pure-aero-2023",
-    "title": "Pure Aero",
-    "price": 165,
-    "url": "https://www.amazon.es/dp/B0BKSBC7JC",
-    "asin": "B0BKSBC7JC",
-    "inStock": true,
-    "scrapedAt": "2026-07-26T17:00:00.000Z"
-  },
-  "babolat-pure-drive-2024": {
-    "productId": "babolat-pure-drive-2024",
-    "title": "Pure Drive",
-    "price": 229,
-    "url": "https://www.amazon.es/dp/B0DQKQTHPQ",
-    "asin": "B0DQKQTHPQ",
-    "inStock": true,
-    "scrapedAt": "2026-07-26T17:00:00.000Z"
-  },
-  "babolat-pure-strike-97-2024": {
-    "productId": "babolat-pure-strike-97-2024",
-    "title": "Pure Strike 97",
-    "price": 227.99,
-    "url": "https://www.amazon.es/dp/B0CSKBKZ2Y",
-    "asin": "B0CSKBKZ2Y",
-    "inStock": true,
-    "scrapedAt": "2026-07-26T17:00:00.000Z"
-  },
-  "head-speed-mp-2024": {
-    "productId": "head-speed-mp-2024",
-    "title": "Speed MP 2024",
-    "price": 204.65,
-    "url": "https://www.amazon.es/dp/B0CRN7PSMK",
-    "asin": "B0CRN7PSMK",
-    "inStock": true,
-    "scrapedAt": "2026-07-26T17:00:00.000Z"
-  },
-  "head-radical-mp-2023": {
-    "productId": "head-radical-mp-2023",
-    "title": "Radical MP",
-    "price": 131.82,
-    "url": "https://www.amazon.es/dp/B0BSRLGY83",
-    "asin": "B0BSRLGY83",
-    "inStock": true,
-    "scrapedAt": "2026-07-26T17:00:00.000Z"
-  },
-  "head-boom-mp-2024": {
-    "productId": "head-boom-mp-2024",
-    "title": "Boom MP",
-    "price": 177.35,
-    "url": "https://www.amazon.es/dp/B0CVRNGP4H",
-    "asin": "B0CVRNGP4H",
-    "inStock": true,
-    "scrapedAt": "2026-07-26T17:00:00.000Z"
-  },
-  "yonex-ezone-100-2022": {
-    "productId": "yonex-ezone-100-2022",
-    "title": "Ezone 100",
-    "price": 350,
-    "url": "https://www.amazon.es/dp/B09VCR766F",
-    "asin": "B09VCR766F",
-    "inStock": true,
-    "scrapedAt": "2026-07-26T17:00:00.000Z"
-  },
   "dunlop-cx-200-2024": {
     "productId": "dunlop-cx-200-2024",
     "title": "CX 200",
     "price": 155.56,
     "url": "https://www.amazon.es/dp/B0DTP3PDGD",
     "asin": "B0DTP3PDGD",
-    "inStock": true,
-    "scrapedAt": "2026-07-26T17:00:00.000Z"
-  },
-  "tecnifibre-tfight-305-2023": {
-    "productId": "tecnifibre-tfight-305-2023",
-    "title": "TFight 305",
-    "price": 51.75,
-    "url": "https://www.amazon.es/dp/B0BS1FG76B",
-    "asin": "B0BS1FG76B",
-    "inStock": true,
-    "scrapedAt": "2026-07-26T17:00:00.000Z"
-  },
-  "babolat-boost-aero-2023": {
-    "productId": "babolat-boost-aero-2023",
-    "title": "Boost Aero",
-    "price": 101.25,
-    "url": "https://www.amazon.es/dp/B0GP3TZW1R",
-    "asin": "B0GP3TZW1R",
-    "inStock": true,
-    "scrapedAt": "2026-07-26T17:00:00.000Z"
-  },
-  "head-ti-s6-2022": {
-    "productId": "head-ti-s6-2022",
-    "title": "Ti.S6",
-    "price": 99.95,
-    "url": "https://www.amazon.es/dp/B00PETDZ4K",
-    "asin": "B00PETDZ4K",
-    "inStock": true,
-    "scrapedAt": "2026-07-26T17:00:00.000Z"
-  },
-  "wilson-hyper-hammer-2022": {
-    "productId": "wilson-hyper-hammer-2022",
-    "title": "Hyper Hammer",
-    "price": 206.04,
-    "url": "https://www.amazon.es/dp/B007ATJ5D2",
-    "asin": "B007ATJ5D2",
     "inStock": true,
     "scrapedAt": "2026-07-26T17:00:00.000Z"
   },
@@ -344,7 +209,7 @@
   "drop-shot-canyon-pro-10-pablo-lima-2025": {
     "productId": "drop-shot-canyon-pro-10-pablo-lima-2025",
     "title": "Drop Shot Canyon Pro 1.0 Pablo Lima",
-    "price": 119.0,
+    "price": 119,
     "url": "https://www.amazon.es/s?k=drop+shot+canyon+pro+1.0+pablo+lima",
     "asin": null,
     "inStock": true,
@@ -398,7 +263,7 @@
   "siux-electra-stupa-pro-st4-2025": {
     "productId": "siux-electra-stupa-pro-st4-2025",
     "title": "Siux Electra Stupa Pro ST4",
-    "price": 149.0,
+    "price": 149,
     "url": "https://www.amazon.es/s?k=siux+electra+stupa+pro+st4",
     "asin": null,
     "inStock": true,
@@ -425,7 +290,7 @@
   "kombat-vesuvius-2025": {
     "productId": "kombat-vesuvius-2025",
     "title": "Kombat Vesuvius",
-    "price": 152.0,
+    "price": 152,
     "url": "https://www.amazon.es/s?k=kombat+vesuvius",
     "asin": null,
     "inStock": true,
@@ -434,7 +299,7 @@
   "kombat-etna-2025": {
     "productId": "kombat-etna-2025",
     "title": "Kombat ETNA 2025",
-    "price": 152.0,
+    "price": 152,
     "url": "https://www.amazon.es/s?k=kombat+etna+2025",
     "asin": null,
     "inStock": true,
@@ -443,7 +308,7 @@
   "kombat-osorno-2025": {
     "productId": "kombat-osorno-2025",
     "title": "Kombat Osorno",
-    "price": 152.0,
+    "price": 152,
     "url": "https://www.amazon.es/s?k=kombat+osorno",
     "asin": null,
     "inStock": true,
@@ -452,7 +317,7 @@
   "adidas-metalbone-hrd-plus-2026": {
     "productId": "adidas-metalbone-hrd-plus-2026",
     "title": "Adidas Metalbone HRD+ 2026",
-    "price": 252.0,
+    "price": 252,
     "url": "https://www.amazon.es/s?k=adidas+metalbone+hrd+plus+2026",
     "asin": null,
     "inStock": true,
@@ -461,7 +326,7 @@
   "adidas-metalbone-carbon-ctrl-2026": {
     "productId": "adidas-metalbone-carbon-ctrl-2026",
     "title": "Adidas Metalbone Carbon CTRL 2026",
-    "price": 179.0,
+    "price": 179,
     "url": "https://www.amazon.es/s?k=adidas+metalbone+carbon+ctrl+2026",
     "asin": null,
     "inStock": true,
@@ -476,29 +341,11 @@
     "inStock": true,
     "scrapedAt": "2026-07-29T23:00:00.000Z"
   },
-  "drop-shot-explorer-pro-attack-2-0-2025": {
-    "productId": "drop-shot-explorer-pro-attack-2-0-2025",
-    "title": "Drop Shot Explorer Pro Attack 2.0 2025",
-    "price": 229.95,
-    "url": "https://www.padelnuestro.com/palas-padel/drop-shot",
-    "asin": null,
-    "inStock": true,
-    "scrapedAt": "2026-07-29T23:00:00.000Z"
-  },
   "drop-shot-axion-attack-1-0-2025": {
     "productId": "drop-shot-axion-attack-1-0-2025",
     "title": "Drop Shot Axion Attack 1.0 2025",
     "price": 157.95,
     "url": "https://www.padelnuestro.com/palas-padel/drop-shot",
-    "asin": null,
-    "inStock": true,
-    "scrapedAt": "2026-07-29T23:00:00.000Z"
-  },
-  "royal-padel-whip-extreme-2026": {
-    "productId": "royal-padel-whip-extreme-2026",
-    "title": "Royal Padel Whip Extreme 2026",
-    "price": 231.95,
-    "url": "https://www.padelnuestro.com/palas-padel/royal-padel",
     "asin": null,
     "inStock": true,
     "scrapedAt": "2026-07-29T23:00:00.000Z"
@@ -512,27 +359,9 @@
     "inStock": true,
     "scrapedAt": "2026-07-29T23:00:00.000Z"
   },
-  "royal-padel-rp-fury-2026": {
-    "productId": "royal-padel-rp-fury-2026",
-    "title": "Royal Padel RP Fury 2026",
-    "price": 261.95,
-    "url": "https://www.padelnuestro.com/palas-padel/royal-padel",
-    "asin": null,
-    "inStock": true,
-    "scrapedAt": "2026-07-29T23:00:00.000Z"
-  },
   "akkeron-black-diablo-pro-2025": {
     "productId": "akkeron-black-diablo-pro-2025",
     "title": "Akkeron Black Diablo Pro 2025",
-    "price": 139.95,
-    "url": "https://www.padelnuestro.com/palas-padel/akkeron",
-    "asin": null,
-    "inStock": true,
-    "scrapedAt": "2026-07-29T23:00:00.000Z"
-  },
-  "akkeron-black-predator-pro-2025": {
-    "productId": "akkeron-black-predator-pro-2025",
-    "title": "Akkeron Black Predator Pro 2025",
     "price": 139.95,
     "url": "https://www.padelnuestro.com/palas-padel/akkeron",
     "asin": null,
@@ -548,15 +377,6 @@
     "inStock": true,
     "scrapedAt": "2026-07-29T23:00:00.000Z"
   },
-  "bullpadel-vertex-05-geo-premier-padel-2026": {
-    "productId": "bullpadel-vertex-05-geo-premier-padel-2026",
-    "title": "Bullpadel Vertex 05 GEO Premier Pádel 2026",
-    "price": 244.95,
-    "url": "https://www.padelnuestro.com/palas-padel/bullpadel",
-    "asin": null,
-    "inStock": true,
-    "scrapedAt": "2026-07-29T23:00:00.000Z"
-  },
   "bullpadel-indiga-power-2026": {
     "productId": "bullpadel-indiga-power-2026",
     "title": "Bullpadel Indiga Power 2026",
@@ -566,28 +386,10 @@
     "inStock": true,
     "scrapedAt": "2026-07-29T23:00:00.000Z"
   },
-  "head-coello-pro-2026": {
-    "productId": "head-coello-pro-2026",
-    "title": "Head Coello Pro 2026",
-    "price": 264.95,
-    "url": "https://www.padelnuestro.com/palas-padel/head",
-    "asin": null,
-    "inStock": true,
-    "scrapedAt": "2026-07-29T23:00:00.000Z"
-  },
   "head-coello-motion-2026": {
     "productId": "head-coello-motion-2026",
     "title": "Head Coello Motion 2026",
     "price": 264.95,
-    "url": "https://www.padelnuestro.com/palas-padel/head",
-    "asin": null,
-    "inStock": true,
-    "scrapedAt": "2026-07-29T23:00:00.000Z"
-  },
-  "head-extreme-one-x-2025": {
-    "productId": "head-extreme-one-x-2025",
-    "title": "Head Extreme One X 2025",
-    "price": 199.95,
     "url": "https://www.padelnuestro.com/palas-padel/head",
     "asin": null,
     "inStock": true,
@@ -602,28 +404,10 @@
     "inStock": true,
     "scrapedAt": "2026-07-29T23:00:00.000Z"
   },
-  "adidas-arrow-hit-attk-2026": {
-    "productId": "adidas-arrow-hit-attk-2026",
-    "title": "Adidas Arrow HIT ATTK 2026",
-    "price": 274.95,
-    "url": "https://www.padelnuestro.com/palas-padel/adidas",
-    "asin": null,
-    "inStock": true,
-    "scrapedAt": "2026-07-29T23:00:00.000Z"
-  },
   "siux-electra-pro-2026": {
     "productId": "siux-electra-pro-2026",
     "title": "Siux Electra Pro Fire Red 2026",
     "price": 197.95,
-    "url": "https://www.padelnuestro.com/palas-padel/siux",
-    "asin": null,
-    "inStock": true,
-    "scrapedAt": "2026-07-29T23:00:00.000Z"
-  },
-  "siux-valkiria-pro-2026": {
-    "productId": "siux-valkiria-pro-2026",
-    "title": "Siux Valkiria Pro 2026",
-    "price": 261.95,
     "url": "https://www.padelnuestro.com/palas-padel/siux",
     "asin": null,
     "inStock": true,
@@ -638,13 +422,76 @@
     "inStock": true,
     "scrapedAt": "2026-07-29T23:00:00.000Z"
   },
-  "nox-nextgen-pro-attack-12k-2026": {
-    "productId": "nox-nextgen-pro-attack-12k-2026",
-    "title": "Nox NextGen Pro Attack 12K NFA Series 2026",
-    "price": 149.95,
-    "url": "https://www.padelnuestro.com/palas-padel/nox",
-    "asin": null,
+  "siux-diablo-pro-2026": {
+    "productId": "siux-diablo-pro-2026",
+    "title": "Siux Siux Trilogy Pro 2026 Noir Fog Pala de pádel g Unisex",
+    "price": 174.99,
+    "url": "https://www.amazon.es/dp/B0FV8K843D",
+    "asin": "B0FV8K843D",
     "inStock": true,
-    "scrapedAt": "2026-07-29T23:00:00.000Z"
+    "scrapedAt": "2026-08-04T00:11:53.235Z"
+  },
+  "wilson-rf-01-pro-2025": {
+    "productId": "wilson-rf-01-pro-2025",
+    "title": "Wilson RF 01 Pro - Raquetas de tenis sin cuerdas, tamaños de agarre 0-5",
+    "price": 396.1,
+    "url": "https://www.amazon.es/dp/B0DB2YJ8BT",
+    "asin": "B0DB2YJ8BT",
+    "inStock": true,
+    "scrapedAt": "2026-08-04T00:12:46.142Z"
+  },
+  "head-speed-mp-2026": {
+    "productId": "head-speed-mp-2026",
+    "title": "Head Speed Jr. 25 2026",
+    "price": 74.74,
+    "url": "https://www.amazon.es/dp/B0GLZKG3P1",
+    "asin": "B0GLZKG3P1",
+    "inStock": true,
+    "scrapedAt": "2026-08-04T00:13:23.348Z"
+  },
+  "head-boom-mp-2026": {
+    "productId": "head-boom-mp-2026",
+    "title": "HEAD Boom Jr. Alternate 2026",
+    "price": 73.55,
+    "url": "https://www.amazon.es/dp/B0G71JRHGR",
+    "asin": "B0G71JRHGR",
+    "inStock": true,
+    "scrapedAt": "2026-08-04T00:13:31.298Z"
+  },
+  "yonex-percept-97-2023": {
+    "productId": "yonex-percept-97-2023",
+    "title": "YONEX Percept 97D - Raqueta de tenis para jugadores avanzados, diseño de cara de raqueta rígida, precisión precisa, sensación y flexibilidad",
+    "price": 365.4,
+    "url": "https://www.amazon.es/dp/B0FNKQNP28",
+    "asin": "B0FNKQNP28",
+    "inStock": true,
+    "scrapedAt": "2026-08-04T00:14:46.633Z"
+  },
+  "volkl-v-cell-v1-pro-2023": {
+    "productId": "volkl-v-cell-v1-pro-2023",
+    "title": "Volkl V-Cell V1 Pro Tennisschläger",
+    "price": 316.67,
+    "url": "https://www.amazon.es/dp/B09H3NH4XW",
+    "asin": "B09H3NH4XW",
+    "inStock": true,
+    "scrapedAt": "2026-08-04T00:15:03.291Z"
+  },
+  "head-instinct-mp-2025": {
+    "productId": "head-instinct-mp-2025",
+    "title": "Head Instinct MP 2025 - Tennis Racquet Unisex Adulto",
+    "price": 148.76,
+    "url": "https://www.amazon.es/dp/B0DQV66QJL",
+    "asin": "B0DQV66QJL",
+    "inStock": true,
+    "scrapedAt": "2026-08-04T00:15:11.606Z"
+  },
+  "wilson-pro-staff-97-v14-2025": {
+    "productId": "wilson-pro-staff-97-v14-2025",
+    "title": "Wilson Pro Staff 97 V14 Raqueta de Tenis sin Cuerdas",
+    "price": 143.53,
+    "url": "https://www.amazon.es/dp/B0BV8R3N64",
+    "asin": "B0BV8R3N64",
+    "inStock": true,
+    "scrapedAt": "2026-08-04T00:15:28.878Z"
   }
 }
