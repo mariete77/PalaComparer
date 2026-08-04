@@ -53,15 +53,6 @@
     "inStock": true,
     "scrapedAt": "2026-07-27T22:47:03.610Z"
   },
-  "adidas-metalbone-carbon-ctrl-2024": {
-    "productId": "adidas-metalbone-carbon-ctrl-2024",
-    "title": "ADIDAS Pala de Pádel Adidas Metalbone Carbon CTRL 3.4",
-    "price": 233.9,
-    "listPrice": null,
-    "url": "https://www.decathlon.es/es/p/mp/pala-de-padel-adidas-metalbone-carbon-ctrl-3-4/621c96de-cf8c-413e-a1e0-05f8446a9620/c14c1c4",
-    "inStock": true,
-    "scrapedAt": "2026-07-27T22:47:15.457Z"
-  },
   "babolat-technical-viper-2025": {
     "productId": "babolat-technical-viper-2025",
     "title": "BABOLAT Babolat Technical Viper 2025",
@@ -107,60 +98,6 @@
     "inStock": true,
     "scrapedAt": "2026-07-27T22:48:25.058Z"
   },
-  "wilson-blade-98-v9-2024": {
-    "productId": "wilson-blade-98-v9-2024",
-    "title": "WILSON Raqueta de tenis 305 g sin encordar adulto, Wilson Blade 98 16x19 v10 verde",
-    "price": 169.99,
-    "listPrice": null,
-    "url": "https://www.decathlon.es/es/p/raqueta-de-tenis-305-g-sin-encordar-adulto-wilson-blade-98-16x19-v10-verde/360563/c9m9000594",
-    "inStock": true,
-    "scrapedAt": "2026-07-27T22:48:47.052Z"
-  },
-  "wilson-shift-99-2023": {
-    "productId": "wilson-shift-99-2023",
-    "title": "WILSON RAQUETA WILSON SHIFT 99 V1   (300G)",
-    "price": 247.7,
-    "listPrice": null,
-    "url": "https://www.decathlon.es/es/p/mp/raqueta-wilson-shift-99-v1-300g/be447d1d-d030-415b-bdfd-82042b68453e/c4c1",
-    "inStock": true,
-    "scrapedAt": "2026-07-27T22:48:58.193Z"
-  },
-  "babolat-pure-drive-2024": {
-    "productId": "babolat-pure-drive-2024",
-    "title": "BABOLAT Raqueta de tenis adulto - Babolat Pure Drive azul claro 300 g",
-    "price": 152.99,
-    "listPrice": null,
-    "url": "https://www.decathlon.es/es/p/raqueta-de-tenis-adulto-babolat-pure-drive-azul-claro-300-g/359896/m8940506",
-    "inStock": true,
-    "scrapedAt": "2026-07-27T22:49:09.456Z"
-  },
-  "head-speed-mp-2024": {
-    "productId": "head-speed-mp-2024",
-    "title": "HEAD Raqueta de tenis HEAD Speed MP L 2024 Djokovic",
-    "price": 237.99,
-    "listPrice": null,
-    "url": "https://www.decathlon.es/es/p/mp/raqueta-de-tenis-head-speed-mp-l-2024-djokovic/317d18a5-7516-46fc-a12e-d24e93a8b9f8/c1c4",
-    "inStock": true,
-    "scrapedAt": "2026-07-27T22:49:20.683Z"
-  },
-  "head-boom-mp-2024": {
-    "productId": "head-boom-mp-2024",
-    "title": "HEAD Raqueta de tenis BOOM MP 2024 de HEAD",
-    "price": 189.45,
-    "listPrice": null,
-    "url": "https://www.decathlon.es/es/p/mp/raqueta-de-tenis-boom-mp-2024-de-head/b3a1a62a-9bee-4710-a13c-d0456cb6e9d8/c255",
-    "inStock": true,
-    "scrapedAt": "2026-07-27T22:49:31.603Z"
-  },
-  "bullpadel-vertex-04-2025": {
-    "productId": "bullpadel-vertex-04-2025",
-    "title": "BULLPADEL Pala Bullpadel Delfi Brea Vertex 04 Pro Line W 2025",
-    "price": 155.6,
-    "listPrice": null,
-    "url": "https://www.decathlon.es/es/p/mp/pala-bullpadel-delfi-brea-vertex-04-pro-line-w-2025/66a116ca-552f-4d89-860c-dce32fb03f36/c4",
-    "inStock": true,
-    "scrapedAt": "2026-08-04T00:40:03.768Z"
-  },
   "wilson-rf-01-pro-2025": {
     "productId": "wilson-rf-01-pro-2025",
     "title": "WILSON Raqueta wilson RF 01 PRO",
@@ -170,15 +107,6 @@
     "inStock": true,
     "scrapedAt": "2026-08-04T00:41:03.201Z"
   },
-  "head-speed-mp-2026": {
-    "productId": "head-speed-mp-2026",
-    "title": "HEAD Raqueta de tenis adulto 285 g, Head Speed MP L 2026 negro",
-    "price": 150.49,
-    "listPrice": null,
-    "url": "https://www.decathlon.es/es/p/raqueta-de-tenis-adulto-285-g-head-speed-mp-l-2026-negro/359900/c1c4m9000571",
-    "inStock": true,
-    "scrapedAt": "2026-08-04T00:41:28.758Z"
-  },
   "yonex-vcore-98-2026": {
     "productId": "yonex-vcore-98-2026",
     "title": "YONEX YONEX Vcore 98 (305gr) Rojo Rubí 2026",
@@ -187,24 +115,6 @@
     "url": "https://www.decathlon.es/es/p/mp/yonex-vcore-98-305gr-rojo-rubi-2026/11680c28-71a4-4848-af5c-f3df09588878/c4",
     "inStock": true,
     "scrapedAt": "2026-08-04T00:41:39.861Z"
-  },
-  "wilson-clash-100-v3-2025": {
-    "productId": "wilson-clash-100-v3-2025",
-    "title": "WILSON Raqueta de tenis adulto, Wilson Clash 100 L V3 negro naranja",
-    "price": 150.49,
-    "listPrice": null,
-    "url": "https://www.decathlon.es/es/p/raqueta-de-tenis-adulto-wilson-clash-100-l-v3-negro-naranja/360500/c1c20m8961110",
-    "inStock": true,
-    "scrapedAt": "2026-08-04T00:42:19.157Z"
-  },
-  "dunlop-cx-200-2024": {
-    "productId": "dunlop-cx-200-2024",
-    "title": "DUNLOP Raqueta de Tenis Dunlop CX 200 Júnior 26''",
-    "price": 95.76,
-    "listPrice": null,
-    "url": "https://www.decathlon.es/es/p/mp/raqueta-de-tenis-dunlop-cx-200-junior-26/219e95df-59a5-4265-b88b-cd579c6806b7/novar",
-    "inStock": true,
-    "scrapedAt": "2026-08-04T00:42:31.544Z"
   },
   "babolat-pure-strike-100-2024": {
     "productId": "babolat-pure-strike-100-2024",
@@ -233,15 +143,6 @@
     "inStock": true,
     "scrapedAt": "2026-08-04T00:43:44.145Z"
   },
-  "royal-padel-whip-eva-2025": {
-    "productId": "royal-padel-whip-eva-2025",
-    "title": "ROYAL PADEL Pala de Padel RP WHIP EXTREME 2025",
-    "price": 289.95,
-    "listPrice": null,
-    "url": "https://www.decathlon.es/es/p/mp/pala-de-padel-rp-whip-extreme-2025/67ba067e-5200-418c-a0f7-a4e9cc88284a/c1c14",
-    "inStock": true,
-    "scrapedAt": "2026-08-04T00:43:56.899Z"
-  },
   "siux-fenix-pro-5-2025": {
     "productId": "siux-fenix-pro-5-2025",
     "title": "SIUX Pala de Pádel Siux Fenix Pro 5 Black 2025 Leo Augsburger",
@@ -268,32 +169,5 @@
     "url": "https://www.decathlon.es/es/p/pala-de-padel-adultos-adidas-metalbone-carbon-ctrl-2026/381470/m9001828",
     "inStock": true,
     "scrapedAt": "2026-08-04T00:44:45.449Z"
-  },
-  "drop-shot-explorer-pro-attack-2-0-2025": {
-    "productId": "drop-shot-explorer-pro-attack-2-0-2025",
-    "title": "DROP SHOT Pala de Pádel Drop Shot Axion Attack 1.0 2025 Jon Sanz",
-    "price": 159.9,
-    "listPrice": null,
-    "url": "https://www.decathlon.es/es/p/mp/pala-de-padel-drop-shot-axion-attack-1-0-2025-jon-sanz/0b5de43a-94ee-478d-9f97-bfa006ddc4c1/c1c4",
-    "inStock": true,
-    "scrapedAt": "2026-08-04T00:44:58.523Z"
-  },
-  "bullpadel-indiga-power-2026": {
-    "productId": "bullpadel-indiga-power-2026",
-    "title": "BULLPADEL BULLPADEL INDIGA Girl 2026 (Pala)",
-    "price": 50.9,
-    "listPrice": null,
-    "url": "https://www.decathlon.es/es/p/mp/bullpadel-indiga-girl-2026-pala/5740dc00-aa4d-41db-8fe5-3346fed96bc7/c1c9",
-    "inStock": true,
-    "scrapedAt": "2026-08-04T00:45:34.020Z"
-  },
-  "siux-electra-pro-2026": {
-    "productId": "siux-electra-pro-2026",
-    "title": "SIUX Siux Valkiria Pro 2026",
-    "price": 195.84,
-    "listPrice": null,
-    "url": "https://www.decathlon.es/es/p/mp/siux-valkiria-pro-2026/a6b7df05-84a9-4439-baa6-774c33076dd9/c4",
-    "inStock": true,
-    "scrapedAt": "2026-08-04T00:45:58.579Z"
   }
 }

@@ -3,17 +3,12 @@
   "scrapedAt": "2026-08-04T00:46:07.211Z",
   "products": {
     "bullpadel-vertex-04-2025": {
-      "bestPrice": 155.6,
-      "bestStoreId": "decathlon",
+      "bestPrice": 156.95,
+      "bestStoreId": "padelnuestro",
       "offers": [
         {
           "storeId": "padelnuestro",
           "price": 156.95,
-          "inStock": true
-        },
-        {
-          "storeId": "decathlon",
-          "price": 155.6,
           "inStock": true
         }
       ]
@@ -292,11 +287,6 @@
           "storeId": "padelnuestro",
           "price": 141.95,
           "inStock": true
-        },
-        {
-          "storeId": "decathlon",
-          "price": 233.9,
-          "inStock": true
         }
       ]
     },
@@ -481,11 +471,6 @@
           "storeId": "amazon",
           "price": 74.74,
           "inStock": true
-        },
-        {
-          "storeId": "decathlon",
-          "price": 150.49,
-          "inStock": true
         }
       ]
     },
@@ -511,17 +496,6 @@
         }
       ]
     },
-    "wilson-clash-100-v3-2025": {
-      "bestPrice": 150.49,
-      "bestStoreId": "decathlon",
-      "offers": [
-        {
-          "storeId": "decathlon",
-          "price": 150.49,
-          "inStock": true
-        }
-      ]
-    },
     "yonex-percept-97-2023": {
       "bestPrice": 365.4,
       "bestStoreId": "amazon",
@@ -534,8 +508,8 @@
       ]
     },
     "dunlop-cx-200-2024": {
-      "bestPrice": 95.76,
-      "bestStoreId": "decathlon",
+      "bestPrice": 142,
+      "bestStoreId": "tennispro",
       "offers": [
         {
           "storeId": "amazon",
@@ -545,11 +519,6 @@
         {
           "storeId": "tennispro",
           "price": 142,
-          "inStock": true
-        },
-        {
-          "storeId": "decathlon",
-          "price": 95.76,
           "inStock": true
         }
       ]
@@ -693,11 +662,6 @@
           "storeId": "amazon",
           "price": 139.31,
           "inStock": true
-        },
-        {
-          "storeId": "decathlon",
-          "price": 289.95,
-          "inStock": true
         }
       ]
     },
@@ -815,17 +779,6 @@
         }
       ]
     },
-    "drop-shot-explorer-pro-attack-2-0-2025": {
-      "bestPrice": 159.9,
-      "bestStoreId": "decathlon",
-      "offers": [
-        {
-          "storeId": "decathlon",
-          "price": 159.9,
-          "inStock": true
-        }
-      ]
-    },
     "drop-shot-axion-attack-1-0-2025": {
       "bestPrice": 157.95,
       "bestStoreId": "amazon",
@@ -871,17 +824,12 @@
       ]
     },
     "bullpadel-indiga-power-2026": {
-      "bestPrice": 50.9,
-      "bestStoreId": "decathlon",
+      "bestPrice": 294.95,
+      "bestStoreId": "amazon",
       "offers": [
         {
           "storeId": "amazon",
           "price": 294.95,
-          "inStock": true
-        },
-        {
-          "storeId": "decathlon",
-          "price": 50.9,
           "inStock": true
         }
       ]
@@ -909,17 +857,12 @@
       ]
     },
     "siux-electra-pro-2026": {
-      "bestPrice": 195.84,
-      "bestStoreId": "decathlon",
+      "bestPrice": 197.95,
+      "bestStoreId": "amazon",
       "offers": [
         {
           "storeId": "amazon",
           "price": 197.95,
-          "inStock": true
-        },
-        {
-          "storeId": "decathlon",
-          "price": 195.84,
           "inStock": true
         }
       ]

@@ -276,6 +276,27 @@ npx tsx scripts/snapshot-prices.ts
 npm run dev
 ```
 
+### Scraper de Decathlon (`scrape-decathlon.ts`)
+
+- **Método**: Playwright **Firefox** (Chromium lo bloquea Cloudflare) + búsqueda
+  con `Ntt`. Delays de 5-8s entre búsquedas. Guardado incremental: los
+  productos con precio ya en cache se saltan (borrar la entrada del JSON para
+  re-scrapear uno concreto).
+- **Matching de producto**: `isMatch()` exige **≥85% de las palabras del
+  modelo** (normalizado: sin paréntesis, sin "by <jugador>", sin año) y
+  rechaza variantes que el modelo no mencione: femeninas (`girl`, `woman`,
+  `wta`, `femenina`…), `junior`/`kid`, `light` y los tokens `l`/`w`
+  (Clash 100 **L** ≠ Clash 100, Vertex 04 **W** ≠ Vertex 04).
+- **⚠️ Pitfall del parseo de `products.ts`**: el orden de campos es
+  `id → model → brand`; un regex `id…brand…model` cruza entries y mezcla
+  modelos de productos vecinos. `loadProducts()` extrae por ventana tras el
+  `id`.
+- **04/08/2026**: se limpiaron 9 ofertas falsas de Decathlon (p. ej. la
+  "Indiga Girl" colada como Indiga Power a 50,90 €, la Valkiria como Electra
+  Pro) + 5 entradas huérfanas, y se corrigieron los snapshots/histórico
+  contaminados. Si un precio de Decathlon parece de otro producto, borrar su
+  entrada del JSON y re-scrapear.
+
 ### Formato del snapshot
 
 Cada archivo `YYYY-MM-DD.json` contiene:
