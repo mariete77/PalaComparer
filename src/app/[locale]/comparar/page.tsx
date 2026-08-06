@@ -11,6 +11,8 @@ import { useCompare } from "@/components/CompareContext";
 import { ScaleIcon } from "@/components/icons";
 import { useLocale } from "@/i18n/LocaleContext";
 import { translate, type TranslationKey } from "@/i18n/locales";
+import { getRatings, type RatingKey } from "@/data/ratings";
+import RatingBar from "@/components/RatingBar";
 import { useState } from "react";
 
 /** Mejor precio entre tiendas, o "—" si no hay ofertas. */
@@ -225,6 +227,33 @@ function CompareContent() {
                 </tr>
               );
             })}
+            {/* Rating bars — potencia, control, dulce, manejo */}
+            {(() => {
+              const ratingKeys: RatingKey[] = ["potencia", "control", "dulce", "manejo"];
+              return ratingKeys.map((rk, idx) => (
+                <tr key={`rating-${rk}`} className={idx === 0 ? "border-t border-white/10" : ""}>
+                  <td className="p-2 sm:p-3 text-[10px] sm:text-xs font-bold uppercase tracking-wider text-muted align-top">
+                    {rk === "potencia" ? (locale === "en" ? "Power" : "Potencia")
+                      : rk === "control" ? "Control"
+                      : rk === "dulce" ? (locale === "en" ? "Sweet spot" : "Punto dulce")
+                      : (locale === "en" ? "Maneuverability" : "Manejabilidad")}
+                  </td>
+                  {products.map((p) => {
+                    const r = getRatings(p);
+                    const val = r ? r[rk] : null;
+                    return (
+                      <td key={p.id} className="p-2 sm:p-3 align-top">
+                        {val !== null ? (
+                          <RatingBar labelKey={rk} value={val} variant="compact" showValue />
+                        ) : (
+                          <span className="text-muted">—</span>
+                        )}
+                      </td>
+                    );
+                  })}
+                </tr>
+              ));
+            })()}
           </tbody>
         </table>
       </div>

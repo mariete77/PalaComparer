@@ -20,6 +20,8 @@ import PriceHistoryChart from "@/components/PriceHistoryChart";
 import type { Metadata } from "next";
 import { isLocale, type Locale, localePath } from "@/i18n/locales";
 import { translate, type TranslationKey } from "@/i18n/locales";
+import { getRatings } from "@/data/ratings";
+import { RatingGrid } from "@/components/RatingBar";
 
 export function generateStaticParams() {
   return PRODUCTS.flatMap((p) => [
@@ -238,6 +240,19 @@ export default async function ProductPage({
           )}
 
           <p className="mt-6 text-muted leading-relaxed">{description}</p>
+
+          {/* Rating bars */}
+          {(() => {
+            const ratings = getRatings(p);
+            return ratings ? (
+              <div className="mt-6 rounded-2xl bg-white/[0.03] border border-white/5 p-5">
+                <h3 className="font-display text-sm font-bold uppercase tracking-wider text-muted mb-3">
+                  {t("product.rendimiento")}
+                </h3>
+                <RatingGrid ratings={ratings} />
+              </div>
+            ) : null;
+          })()}
 
           <div className="mt-6 flex flex-wrap gap-2">
             {p.level.map((l) => (

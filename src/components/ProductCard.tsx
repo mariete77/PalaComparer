@@ -9,6 +9,8 @@ import { useGSAP } from "@gsap/react";
 import { Product } from "@/data/products";
 import { getProductImage } from "@/data/product-image";
 import { formatPrice } from "@/data/offers";
+import { getRatings } from "@/data/ratings";
+import RatingBar from "@/components/RatingBar";
 import { useCompare } from "@/components/CompareContext";
 import { useLocale } from "@/i18n/LocaleContext";
 
@@ -66,6 +68,8 @@ export default function ProductCard({
           ]
         : [];
 
+  const ratings = getRatings(product);
+
   return (
     <div ref={cardRef} className="card-split group relative flex flex-col h-full">
       <Link href={lp(`/producto/${product.id}`)} className="block flex-1 flex flex-col">
@@ -113,6 +117,14 @@ export default function ProductCard({
                   </div>
                 </div>
               ))}
+            </div>
+          )}
+
+          {/* Mini rating bars */}
+          {ratings && (
+            <div className="space-y-1 mb-3">
+              <RatingBar labelKey="potencia" value={ratings.potencia} variant="compact" />
+              <RatingBar labelKey="control" value={ratings.control} variant="compact" />
             </div>
           )}
 
