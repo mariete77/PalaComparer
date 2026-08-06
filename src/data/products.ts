@@ -1380,28 +1380,6 @@ export const PRODUCTS: Product[] = [
     description:
       "La Carrera C Black Ltd combina carbono 12K con núcleo EVA Soft para un tacto equilibrado. Forma de lágrima y balance medio perfecta para jugadores avanzados que buscan control sin perder pegada.",
   },
-  {
-    id: "varlion-l-bourne-summum-2025",
-    sport: "padel",
-    brand: "Varlion",
-    model: "L Bourne Summum",
-    year: 2025,
-    price: 189.95,
-    image: "/images/rackets/varlion-l-bourne-summum-2025.svg",
-    level: ["avanzado"],
-    style: ["polivalente"],
-    padel: {
-      shape: "lagrima",
-      weight: "360-370 g",
-      balance: "medio",
-      core: "Summum EVA",
-      faces: "Carbono 12K",
-      surface: "rugosa",
-      hardness: "media",
-    },
-    description:
-      "La joya de Varlion. Frame de Prisma (hexagonal) y tecnología Summum que desplaza el núcleo para ampliar la zona dulce. Carbono 12K y EVA Summum de máxima recuperación.",
-  },
   // ============ PÁDEL — DROP SHOT ============
   {
     id: "drop-shot-canyon-pro-10-pablo-lima-2025",
