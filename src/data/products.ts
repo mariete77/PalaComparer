@@ -591,6 +591,31 @@ export const PRODUCTS: Product[] = [
       "Para los contraatacantes. Redonda, punto dulce generoso y la firmeza del carbono 12K. Devuelve todo y espera tu momento.",
   },
 
+  {
+    id: "babolat-air-viper-2025",
+    sport: "padel",
+    brand: "Babolat",
+    model: "Air Viper 2.6",
+    year: 2025,
+    price: 320,
+    image: "/images/rackets/babolat-air-viper-2025.svg",
+    level: ["avanzado", "profesional"],
+    style: ["polivalente", "potencia"],
+    padel: {
+      shape: "lagrima",
+      weight: "345-365 g",
+      balance: "medio",
+      core: "X-EVA (3 capas)",
+      faces: "Carbono 16K",
+      surface: "rugosa 3D Spin+",
+      hardness: "media",
+    },
+    description:
+      "La más ligera y maniobrable de la familia Viper de Babolat. Lágrima de 38 mm con solo 355 g y equilibrio uniforme: pensada para el jugador dinámico que vive de la velocidad de brazo y el cambio de dirección. Núcleo X-EVA de tres capas (dos externas rígidas para explosividad, una interna flexible para confort) y caras de carbono 16K con acabado rugoso 3D Spin+ para clavar efectos.",
+    descriptionEn:
+      "The lightest, most maneuverable racket in Babolat's Viper family. A 38 mm teardrop at just 355 g with even balance: built for the dynamic player who thrives on arm speed and direction changes. X-EVA three-layer core (two rigid outer layers for explosiveness, one flexible inner layer for comfort) and 16K carbon faces with a rough 3D Spin+ finish to lock in spin.",
+  },
+
   // ============ PÁDEL — WILSON ============
   {
     id: "wilson-bela-pro-2024",
