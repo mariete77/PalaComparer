@@ -2,10 +2,14 @@
   "$comment": "Fotos reales por producto. Clave = id en src/data/products.ts. Rellena 'url' con una imagen que tengas derecho a usar y ejecuta `npm run import:images`. Las entradas con url vacía se ignoran. Regenera esta plantilla con `npm run images:scaffold`.",
   "$licence": "El campo 'licence' registra la situación de derechos: 'pendiente' (por defecto: en uso pero sin permiso del titular), 'prensa' (material de prensa del fabricante), 'feed' (feed de afiliación) o 'propia'. El importador te resume cuántas quedan pendientes.",
   "adidas-drive-2024": {
-    "url": ""
+    "url": "https://m.media-amazon.com/images/I/71bYArDYHTL._AC_SL1500_.jpg",
+    "credit": "© Amazon ES",
+    "source": "https://www.amazon.es/s?k=adidas+drive+2024"
   },
   "adidas-metalbone-2026": {
-    "url": ""
+    "url": "https://m.media-amazon.com/images/I/618aVyChlaL._AC_SL1500_.jpg",
+    "credit": "© Amazon ES",
+    "source": "https://www.amazon.es/s?k=adidas+metalbone+2026"
   },
   "adidas-metalbone-carbon-ctrl-2024": {
     "url": ""
@@ -16,7 +20,9 @@
     "source": "https://padelproshop.com/products/pala-adidas-rx-series-2026"
   },
   "babolat-counter-viper-2025": {
-    "url": ""
+    "url": "https://m.media-amazon.com/images/I/81RqbPbb8bL._AC_SL1500_.jpg",
+    "credit": "© Amazon ES",
+    "source": "https://www.amazon.es/s?k=babolat+counter+viper+2025"
   },
   "babolat-technical-veron-2025": {
     "url": "https://cdn.shopify.com/s/files/1/0763/9577/4257/files/Pala_Babolat_Technical_Veron_2025.webp?v=1773749170",
@@ -34,7 +40,9 @@
     "source": "https://blackcrown.es/product/pala-pdel-black-crown-piton-14"
   },
   "bullpadel-flow-2024": {
-    "url": ""
+    "url": "https://m.media-amazon.com/images/I/51084vQ08KL._AC_SL1500_.jpg",
+    "credit": "© Amazon ES",
+    "source": "https://www.amazon.es/s?k=bullpadel+flow+2024"
   },
   "bullpadel-hack-04-2026": {
     "url": "https://www.bullpadel.com/18931-large_default/pala-bullpadel-hack-04-26.jpg",
@@ -42,7 +50,9 @@
     "source": "https://www.bullpadel.com/es/5674-pala-bullpadel-hack-04-26.html"
   },
   "bullpadel-indiga-ctr-2024": {
-    "url": ""
+    "url": "https://m.media-amazon.com/images/I/61vjImJgChL._AC_SL1500_.jpg",
+    "credit": "© Amazon ES",
+    "source": "https://www.amazon.es/s?k=bullpadel+indiga+ctr+2024"
   },
   "bullpadel-neuron-02-2026": {
     "url": "https://www.bullpadel.com/21342-large_default/pala-bullpadel-neuron-02-pp26.jpg",
@@ -50,7 +60,9 @@
     "source": "https://www.bullpadel.com/es/palas/5966-pala-bullpadel-neuron-02-pp26.html"
   },
   "bullpadel-vertex-04-comfort-2024": {
-    "url": ""
+    "url": "https://m.media-amazon.com/images/I/61eDyAYKidL._AC_SL1500_.jpg",
+    "credit": "© Amazon ES",
+    "source": "https://www.amazon.es/s?k=bullpadel+vertex+04+comfort+2024"
   },
   "bullpadel-vertex-05-2026": {
     "url": "https://www.bullpadel.com/18920-large_default/pala-bullpadel-vertex-05.jpg",
@@ -58,7 +70,9 @@
     "source": "https://www.bullpadel.com/es/5677-pala-bullpadel-vertex-05.html"
   },
   "dunlop-aero-star-pro-2024": {
-    "url": ""
+    "url": "https://m.media-amazon.com/images/I/71I4Ny6WwWL._AC_SL1500_.jpg",
+    "credit": "© Amazon ES",
+    "source": "https://www.amazon.es/s?k=dunlop+aero+star+pro+2024"
   },
   "head-bolt-2026": {
     "url": "https://cdn-mdb.head.com/CDN3/G/226206/1/683x911/bolt-2026-rd-bk.webp",
@@ -66,16 +80,24 @@
     "source": "https://www.head.com/es_ES/product/bolt-2026-rd-bk-226206-cp"
   },
   "head-extreme-motion-2024": {
-    "url": ""
+    "url": "https://m.media-amazon.com/images/I/51E1mr-8WIL._AC_SL1500_.jpg",
+    "credit": "© Amazon ES",
+    "source": "https://www.amazon.es/s?k=head+extreme+motion+2024"
   },
   "head-extreme-pro-2024": {
-    "url": ""
+    "url": "https://m.media-amazon.com/images/I/61DcrFR+xGL._AC_SL1500_.jpg",
+    "credit": "© Amazon ES",
+    "source": "https://www.amazon.es/s?k=head+extreme+pro+2024"
   },
   "head-gravity-pro-2024": {
-    "url": ""
+    "url": "https://m.media-amazon.com/images/I/611vHfl4W6L._AC_SL1500_.jpg",
+    "credit": "© Amazon ES",
+    "source": "https://www.amazon.es/s?k=head+gravity+pro+2024"
   },
   "head-speed-pro-2024": {
-    "url": ""
+    "url": "https://m.media-amazon.com/images/I/61hmlPLUANL._AC_SL1500_.jpg",
+    "credit": "© Amazon ES",
+    "source": "https://www.amazon.es/s?k=head+speed+pro+2024"
   },
   "nox-at10-genius-12k-xtrem-2026": {
     "url": "https://noxsport.com/cdn/shop/files/at10-luxury-genius-12k-alum-xtrem-2026-by-agustin-tapia-pat10genius1226-8435778902645-9466941.png?v=1758604499",
@@ -98,7 +120,9 @@
     "source": "https://noxsport.com/en/products/ea10-ventus-attack-12k-xtrem-by-edu-alonso"
   },
   "nox-ml10-pro-cup-2023": {
-    "url": ""
+    "url": "https://m.media-amazon.com/images/I/81XeiB6IJoL._AC_SL1500_.jpg",
+    "credit": "© Amazon ES",
+    "source": "https://www.amazon.es/s?k=nox+ml10+pro+cup+2023"
   },
   "nox-ml10-ventus-control-3k-2026": {
     "url": "https://noxsport.com/cdn/shop/files/ml10-ventus-control-3k-by-miguel-lamperti-pml10ventus326-8435778902690-1107820.png?v=1758604428",
@@ -121,7 +145,9 @@
     "source": "https://starvie.com/products/raptor"
   },
   "wilson-bela-pro-2024": {
-    "url": ""
+    "url": "https://m.media-amazon.com/images/I/71anQA0g29L._AC_SL1500_.jpg",
+    "credit": "© Amazon ES",
+    "source": "https://www.amazon.es/s?k=wilson+bela+pro+2024"
   },
   "wilson-bela-v3-2026": {
     "url": "https://www.wilson.com/en-gb/media/catalog/product/article_images/WR186511U_/WR186511U__ff3c1069e9871eb5ed70e8c7fb2baa73.png",
@@ -425,5 +451,85 @@
     "url": "https://cdn.shopify.com/s/files/1/0763/9577/4257/files/PalaNoxNextgenProAttack12kNFASeries2026_1.webp?v=1785414175",
     "credit": "© PadelProShop",
     "source": "https://padelproshop.com/products/pala-nox-nextgen-pro-attack-12k-nfa-series-2026"
+  },
+  "varlion-carrera-c-black-ltd-2025": {
+    "url": "https://m.media-amazon.com/images/I/51pLy2yfsgL._AC_SL1500_.jpg",
+    "credit": "© Amazon ES",
+    "source": "https://www.amazon.es/s?k=varlion+carrera+c+black+ltd+2025"
+  },
+  "royal-padel-m27-light-2026": {
+    "url": "https://m.media-amazon.com/images/I/51dXSZ+MFnL._AC_SL1500_.jpg",
+    "credit": "© Amazon ES",
+    "source": "https://www.amazon.es/s?k=royal+padel+m27+light+2026"
+  },
+  "royal-padel-36th-anniversary-poly-2026": {
+    "url": "https://m.media-amazon.com/images/I/51gkWAVyA4L._AC_SL1500_.jpg",
+    "credit": "© Amazon ES",
+    "source": "https://www.amazon.es/s?k=royal+padel+36th+anniversary+poly+2026"
+  },
+  "royal-padel-whip-eva-2025": {
+    "url": "https://m.media-amazon.com/images/I/61CG8FvhUQL._AC_SL1500_.jpg",
+    "credit": "© Amazon ES",
+    "source": "https://www.amazon.es/s?k=royal+padel+whip+eva+2025"
+  },
+  "siux-electra-st3-stupa-pro-2024": {
+    "url": "https://m.media-amazon.com/images/I/51tds2je-uL._AC_SL1500_.jpg",
+    "credit": "© Amazon ES",
+    "source": "https://www.amazon.es/s?k=siux+electra+st3+stupa+pro+2024"
+  },
+  "kombat-vesuvius-2025": {
+    "url": "https://m.media-amazon.com/images/I/711NZnPmE6L._AC_SL1500_.jpg",
+    "credit": "© Amazon ES",
+    "source": "https://www.amazon.es/s?k=kombat+vesuvius+2025"
+  },
+  "kombat-etna-2025": {
+    "url": "https://m.media-amazon.com/images/I/71T2Cjb8z4L._AC_SL1500_.jpg",
+    "credit": "© Amazon ES",
+    "source": "https://www.amazon.es/s?k=kombat+etna+2025"
+  },
+  "kombat-osorno-2025": {
+    "url": "https://m.media-amazon.com/images/I/71DlFOcLtwL._AC_SL1500_.jpg",
+    "credit": "© Amazon ES",
+    "source": "https://www.amazon.es/s?k=kombat+osorno+2025"
+  },
+  "royal-padel-whip-extreme-2026": {
+    "url": "https://m.media-amazon.com/images/I/51F8lF3emAL._AC_SL1500_.jpg",
+    "credit": "© Amazon ES",
+    "source": "https://www.amazon.es/s?k=royal+padel+whip+extreme+2026"
+  },
+  "royal-padel-rp-r30-golden-white-2025": {
+    "url": "https://m.media-amazon.com/images/I/51SYVXfD1QL._AC_SL1500_.jpg",
+    "credit": "© Amazon ES",
+    "source": "https://www.amazon.es/s?k=royal+padel+rp+r30+golden+white+2025"
+  },
+  "akkeron-black-diablo-pro-2025": {
+    "url": "https://m.media-amazon.com/images/I/61z6DSA6boL._AC_SL1500_.jpg",
+    "credit": "© Amazon ES",
+    "source": "https://www.amazon.es/s?k=akkeron+black+diablo+pro+2025"
+  },
+  "royal-padel-rp-fury-2026": {
+    "url": "https://m.media-amazon.com/images/I/51e3vqHRClL._AC_SL1500_.jpg",
+    "credit": "© Amazon ES",
+    "source": "https://www.amazon.es/s?k=royal+padel+rp+fury+2026"
+  },
+  "starvie-triton-power-2025": {
+    "url": "https://m.media-amazon.com/images/I/61ArcFVLWoL._AC_SL1500_.jpg",
+    "credit": "© Amazon ES",
+    "source": "https://www.amazon.es/s?k=starvie+triton+power+2025"
+  },
+  "head-coello-pro-2026": {
+    "url": "https://m.media-amazon.com/images/I/71Q-K2XiBHL._AC_SL1500_.jpg",
+    "credit": "© Amazon ES",
+    "source": "https://www.amazon.es/s?k=head+coello+pro+2026"
+  },
+  "bullpadel-indiga-power-2026": {
+    "url": "https://m.media-amazon.com/images/I/61SxMDPrHZL._AC_SL1500_.jpg",
+    "credit": "© Amazon ES",
+    "source": "https://www.amazon.es/s?k=bullpadel+indiga+power+2026"
+  },
+  "drop-shot-conqueror-attack-2-0-2025": {
+    "url": "https://padelproshop.com/cdn/shop/files/PalaDropShotConquerorAttack2.02026_1.webp?v=1777272299&width=1200",
+    "credit": "© PadelProShop",
+    "source": "https://padelproshop.com"
   }
 }

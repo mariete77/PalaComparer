@@ -1,10 +1,28 @@
 {
   "$comment": "Manifiesto de fotos reales. Lo escribe `npm run import:images` a partir de scripts/image-sources.json. Clave = id de producto.",
   "images": {
+    "adidas-drive-2024": {
+      "src": "/images/rackets/real/adidas-drive-2024.jpg",
+      "credit": "© Amazon ES",
+      "source": "https://www.amazon.es/s?k=adidas+drive+2024",
+      "licence": "pendiente"
+    },
+    "adidas-metalbone-2026": {
+      "src": "/images/rackets/real/adidas-metalbone-2026.jpg",
+      "credit": "© Amazon ES",
+      "source": "https://www.amazon.es/s?k=adidas+metalbone+2026",
+      "licence": "pendiente"
+    },
     "adidas-rx-series-2026": {
       "src": "/images/rackets/real/adidas-rx-series-2026.jpg",
       "credit": "© PadelProShop",
       "source": "https://padelproshop.com/products/pala-adidas-rx-series-2026",
+      "licence": "pendiente"
+    },
+    "babolat-counter-viper-2025": {
+      "src": "/images/rackets/real/babolat-counter-viper-2025.jpg",
+      "credit": "© Amazon ES",
+      "source": "https://www.amazon.es/s?k=babolat+counter+viper+2025",
       "licence": "pendiente"
     },
     "babolat-technical-veron-2025": {
@@ -25,10 +43,22 @@
       "source": "https://blackcrown.es/product/pala-pdel-black-crown-piton-14",
       "licence": "pendiente"
     },
+    "bullpadel-flow-2024": {
+      "src": "/images/rackets/real/bullpadel-flow-2024.jpg",
+      "credit": "© Amazon ES",
+      "source": "https://www.amazon.es/s?k=bullpadel+flow+2024",
+      "licence": "pendiente"
+    },
     "bullpadel-hack-04-2026": {
       "src": "/images/rackets/real/bullpadel-hack-04-2026.jpg",
       "credit": "© Bullpadel",
       "source": "https://www.bullpadel.com/es/5674-pala-bullpadel-hack-04-26.html",
+      "licence": "pendiente"
+    },
+    "bullpadel-indiga-ctr-2024": {
+      "src": "/images/rackets/real/bullpadel-indiga-ctr-2024.jpg",
+      "credit": "© Amazon ES",
+      "source": "https://www.amazon.es/s?k=bullpadel+indiga+ctr+2024",
       "licence": "pendiente"
     },
     "bullpadel-neuron-02-2026": {
@@ -37,16 +67,52 @@
       "source": "https://www.bullpadel.com/es/palas/5966-pala-bullpadel-neuron-02-pp26.html",
       "licence": "pendiente"
     },
+    "bullpadel-vertex-04-comfort-2024": {
+      "src": "/images/rackets/real/bullpadel-vertex-04-comfort-2024.jpg",
+      "credit": "© Amazon ES",
+      "source": "https://www.amazon.es/s?k=bullpadel+vertex+04+comfort+2024",
+      "licence": "pendiente"
+    },
     "bullpadel-vertex-05-2026": {
       "src": "/images/rackets/real/bullpadel-vertex-05-2026.jpg",
       "credit": "© Bullpadel",
       "source": "https://www.bullpadel.com/es/5677-pala-bullpadel-vertex-05.html",
       "licence": "pendiente"
     },
+    "dunlop-aero-star-pro-2024": {
+      "src": "/images/rackets/real/dunlop-aero-star-pro-2024.jpg",
+      "credit": "© Amazon ES",
+      "source": "https://www.amazon.es/s?k=dunlop+aero+star+pro+2024",
+      "licence": "pendiente"
+    },
     "head-bolt-2026": {
       "src": "/images/rackets/real/head-bolt-2026.webp",
       "credit": "© HEAD",
       "source": "https://www.head.com/es_ES/product/bolt-2026-rd-bk-226206-cp",
+      "licence": "pendiente"
+    },
+    "head-extreme-motion-2024": {
+      "src": "/images/rackets/real/head-extreme-motion-2024.jpg",
+      "credit": "© Amazon ES",
+      "source": "https://www.amazon.es/s?k=head+extreme+motion+2024",
+      "licence": "pendiente"
+    },
+    "head-extreme-pro-2024": {
+      "src": "/images/rackets/real/head-extreme-pro-2024.jpg",
+      "credit": "© Amazon ES",
+      "source": "https://www.amazon.es/s?k=head+extreme+pro+2024",
+      "licence": "pendiente"
+    },
+    "head-gravity-pro-2024": {
+      "src": "/images/rackets/real/head-gravity-pro-2024.jpg",
+      "credit": "© Amazon ES",
+      "source": "https://www.amazon.es/s?k=head+gravity+pro+2024",
+      "licence": "pendiente"
+    },
+    "head-speed-pro-2024": {
+      "src": "/images/rackets/real/head-speed-pro-2024.jpg",
+      "credit": "© Amazon ES",
+      "source": "https://www.amazon.es/s?k=head+speed+pro+2024",
       "licence": "pendiente"
     },
     "nox-at10-genius-12k-xtrem-2026": {
@@ -73,6 +139,12 @@
       "source": "https://noxsport.com/en/products/ea10-ventus-attack-12k-xtrem-by-edu-alonso",
       "licence": "pendiente"
     },
+    "nox-ml10-pro-cup-2023": {
+      "src": "/images/rackets/real/nox-ml10-pro-cup-2023.jpg",
+      "credit": "© Amazon ES",
+      "source": "https://www.amazon.es/s?k=nox+ml10+pro+cup+2023",
+      "licence": "pendiente"
+    },
     "nox-ml10-ventus-control-3k-2026": {
       "src": "/images/rackets/real/nox-ml10-ventus-control-3k-2026.png",
       "credit": "© NOX Sport",
@@ -95,6 +167,12 @@
       "src": "/images/rackets/real/starvie-raptor-2026.png",
       "credit": "© StarVie",
       "source": "https://starvie.com/products/raptor",
+      "licence": "pendiente"
+    },
+    "wilson-bela-pro-2024": {
+      "src": "/images/rackets/real/wilson-bela-pro-2024.jpg",
+      "credit": "© Amazon ES",
+      "source": "https://www.amazon.es/s?k=wilson+bela+pro+2024",
       "licence": "pendiente"
     },
     "wilson-bela-v3-2026": {
@@ -434,6 +512,102 @@
       "src": "/images/rackets/real/nox-nextgen-pro-attack-12k-2026.jpg",
       "credit": "© PadelProShop",
       "source": "https://padelproshop.com/products/pala-nox-nextgen-pro-attack-12k-nfa-series-2026",
+      "licence": "pendiente"
+    },
+    "varlion-carrera-c-black-ltd-2025": {
+      "src": "/images/rackets/real/varlion-carrera-c-black-ltd-2025.jpg",
+      "credit": "© Amazon ES",
+      "source": "https://www.amazon.es/s?k=varlion+carrera+c+black+ltd+2025",
+      "licence": "pendiente"
+    },
+    "royal-padel-m27-light-2026": {
+      "src": "/images/rackets/real/royal-padel-m27-light-2026.jpg",
+      "credit": "© Amazon ES",
+      "source": "https://www.amazon.es/s?k=royal+padel+m27+light+2026",
+      "licence": "pendiente"
+    },
+    "royal-padel-36th-anniversary-poly-2026": {
+      "src": "/images/rackets/real/royal-padel-36th-anniversary-poly-2026.jpg",
+      "credit": "© Amazon ES",
+      "source": "https://www.amazon.es/s?k=royal+padel+36th+anniversary+poly+2026",
+      "licence": "pendiente"
+    },
+    "royal-padel-whip-eva-2025": {
+      "src": "/images/rackets/real/royal-padel-whip-eva-2025.jpg",
+      "credit": "© Amazon ES",
+      "source": "https://www.amazon.es/s?k=royal+padel+whip+eva+2025",
+      "licence": "pendiente"
+    },
+    "siux-electra-st3-stupa-pro-2024": {
+      "src": "/images/rackets/real/siux-electra-st3-stupa-pro-2024.jpg",
+      "credit": "© Amazon ES",
+      "source": "https://www.amazon.es/s?k=siux+electra+st3+stupa+pro+2024",
+      "licence": "pendiente"
+    },
+    "kombat-vesuvius-2025": {
+      "src": "/images/rackets/real/kombat-vesuvius-2025.jpg",
+      "credit": "© Amazon ES",
+      "source": "https://www.amazon.es/s?k=kombat+vesuvius+2025",
+      "licence": "pendiente"
+    },
+    "kombat-etna-2025": {
+      "src": "/images/rackets/real/kombat-etna-2025.jpg",
+      "credit": "© Amazon ES",
+      "source": "https://www.amazon.es/s?k=kombat+etna+2025",
+      "licence": "pendiente"
+    },
+    "kombat-osorno-2025": {
+      "src": "/images/rackets/real/kombat-osorno-2025.jpg",
+      "credit": "© Amazon ES",
+      "source": "https://www.amazon.es/s?k=kombat+osorno+2025",
+      "licence": "pendiente"
+    },
+    "royal-padel-whip-extreme-2026": {
+      "src": "/images/rackets/real/royal-padel-whip-extreme-2026.jpg",
+      "credit": "© Amazon ES",
+      "source": "https://www.amazon.es/s?k=royal+padel+whip+extreme+2026",
+      "licence": "pendiente"
+    },
+    "royal-padel-rp-r30-golden-white-2025": {
+      "src": "/images/rackets/real/royal-padel-rp-r30-golden-white-2025.jpg",
+      "credit": "© Amazon ES",
+      "source": "https://www.amazon.es/s?k=royal+padel+rp+r30+golden+white+2025",
+      "licence": "pendiente"
+    },
+    "akkeron-black-diablo-pro-2025": {
+      "src": "/images/rackets/real/akkeron-black-diablo-pro-2025.jpg",
+      "credit": "© Amazon ES",
+      "source": "https://www.amazon.es/s?k=akkeron+black+diablo+pro+2025",
+      "licence": "pendiente"
+    },
+    "royal-padel-rp-fury-2026": {
+      "src": "/images/rackets/real/royal-padel-rp-fury-2026.jpg",
+      "credit": "© Amazon ES",
+      "source": "https://www.amazon.es/s?k=royal+padel+rp+fury+2026",
+      "licence": "pendiente"
+    },
+    "starvie-triton-power-2025": {
+      "src": "/images/rackets/real/starvie-triton-power-2025.jpg",
+      "credit": "© Amazon ES",
+      "source": "https://www.amazon.es/s?k=starvie+triton+power+2025",
+      "licence": "pendiente"
+    },
+    "head-coello-pro-2026": {
+      "src": "/images/rackets/real/head-coello-pro-2026.jpg",
+      "credit": "© Amazon ES",
+      "source": "https://www.amazon.es/s?k=head+coello+pro+2026",
+      "licence": "pendiente"
+    },
+    "bullpadel-indiga-power-2026": {
+      "src": "/images/rackets/real/bullpadel-indiga-power-2026.jpg",
+      "credit": "© Amazon ES",
+      "source": "https://www.amazon.es/s?k=bullpadel+indiga+power+2026",
+      "licence": "pendiente"
+    },
+    "drop-shot-conqueror-attack-2-0-2025": {
+      "src": "/images/rackets/real/drop-shot-conqueror-attack-2-0-2025.jpg",
+      "credit": "© PadelProShop",
+      "source": "https://padelproshop.com",
       "licence": "pendiente"
     }
   }
