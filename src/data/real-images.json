@@ -1,6 +1,24 @@
 {
   "$comment": "Manifiesto de fotos reales. Lo escribe `npm run import:images` a partir de scripts/image-sources.json. Clave = id de producto.",
   "images": {
+    "adidas-rx-series-2026": {
+      "src": "/images/rackets/real/adidas-rx-series-2026.jpg",
+      "credit": "© PadelProShop",
+      "source": "https://padelproshop.com/products/pala-adidas-rx-series-2026",
+      "licence": "pendiente"
+    },
+    "babolat-technical-veron-2025": {
+      "src": "/images/rackets/real/babolat-technical-veron-2025.jpg",
+      "credit": "© PadelProShop",
+      "source": "https://padelproshop.com/products/pala-babolat-technical-veron",
+      "licence": "pendiente"
+    },
+    "babolat-technical-viper-2025": {
+      "src": "/images/rackets/real/babolat-technical-viper-2025.jpg",
+      "credit": "© PadelProShop",
+      "source": "https://padelproshop.com/products/pala-babolat-te-chnical-viper",
+      "licence": "pendiente"
+    },
     "black-crown-piton-14-2026": {
       "src": "/images/rackets/real/black-crown-piton-14-2026.jpg",
       "credit": "© Black Crown",
@@ -314,6 +332,108 @@
       "src": "/images/rackets/real/babolat-viper-3-0-2026-juan-lebron.png",
       "credit": "© Babolat / PadelProShop",
       "source": "https://padelproshop.com/products/pala-babolat-viper-3-0-2026-j-lebron",
+      "licence": "pendiente"
+    },
+    "drop-shot-canyon-pro-10-pablo-lima-2025": {
+      "src": "/images/rackets/real/drop-shot-canyon-pro-10-pablo-lima-2025.jpg",
+      "credit": "© PadelProShop",
+      "source": "https://padelproshop.com/products/pala-drop-shot-canyon-pro-1-pablo-lima",
+      "licence": "pendiente"
+    },
+    "drop-shot-canyon-pro-control-2025": {
+      "src": "/images/rackets/real/drop-shot-canyon-pro-control-2025.jpg",
+      "credit": "© PadelProShop",
+      "source": "https://padelproshop.com/products/pala-drop-shot-canyon-pro-control",
+      "licence": "pendiente"
+    },
+    "drop-shot-explorer-pro-comfort-10-2025": {
+      "src": "/images/rackets/real/drop-shot-explorer-pro-comfort-10-2025.jpg",
+      "credit": "© PadelProShop",
+      "source": "https://padelproshop.com/products/pala-drop-shot-explorer-pro-225-1",
+      "licence": "pendiente"
+    },
+    "siux-electra-stupa-pro-st4-2025": {
+      "src": "/images/rackets/real/siux-electra-stupa-pro-st4-2025.jpg",
+      "credit": "© PadelProShop",
+      "source": "https://padelproshop.com/products/pala-siux-electra-pro-st4-2025-f-stupaczuk",
+      "licence": "pendiente"
+    },
+    "siux-fenix-pro-5-2025": {
+      "src": "/images/rackets/real/siux-fenix-pro-5-2025.jpg",
+      "credit": "© PadelProShop",
+      "source": "https://padelproshop.com/products/pala-siux-fenix-pro-5-black",
+      "licence": "pendiente"
+    },
+    "adidas-metalbone-hrd-plus-2026": {
+      "src": "/images/rackets/real/adidas-metalbone-hrd-plus-2026.jpg",
+      "credit": "© PadelProShop",
+      "source": "https://padelproshop.com/products/pala-adidas-metalbone-hrd-2026",
+      "licence": "pendiente"
+    },
+    "adidas-metalbone-carbon-ctrl-2026": {
+      "src": "/images/rackets/real/adidas-metalbone-carbon-ctrl-2026.jpg",
+      "credit": "© PadelProShop",
+      "source": "https://padelproshop.com/products/pala-adidas-metalbone-carbon-ctrl-2026",
+      "licence": "pendiente"
+    },
+    "drop-shot-axion-attack-1-0-2025": {
+      "src": "/images/rackets/real/drop-shot-axion-attack-1-0-2025.jpg",
+      "credit": "© PadelProShop",
+      "source": "https://padelproshop.com/products/pala-drop-shot-axion-attack-1-ltd-jon-sanz",
+      "licence": "pendiente"
+    },
+    "bullpadel-xplo-premier-padel-2026": {
+      "src": "/images/rackets/real/bullpadel-xplo-premier-padel-2026.jpg",
+      "credit": "© PadelProShop",
+      "source": "https://padelproshop.com/products/pala-bullpadel-xplo-premier-padel-2026",
+      "licence": "pendiente"
+    },
+    "bullpadel-vertex-05-geo-premier-padel-2026": {
+      "src": "/images/rackets/real/bullpadel-vertex-05-geo-premier-padel-2026.jpg",
+      "credit": "© PadelProShop",
+      "source": "https://padelproshop.com/products/pala-bullpadel-vertex-05-geo-2026-premier-padel",
+      "licence": "pendiente"
+    },
+    "head-coello-motion-2026": {
+      "src": "/images/rackets/real/head-coello-motion-2026.jpg",
+      "credit": "© PadelProShop",
+      "source": "https://padelproshop.com/products/pala-head-coello-motion-2026",
+      "licence": "pendiente"
+    },
+    "head-extreme-one-x-2025": {
+      "src": "/images/rackets/real/head-extreme-one-x-2025.jpg",
+      "credit": "© PadelProShop",
+      "source": "https://padelproshop.com/products/pala-head-extreme-one-25",
+      "licence": "pendiente"
+    },
+    "adidas-crossit-carbon-2026": {
+      "src": "/images/rackets/real/adidas-crossit-carbon-2026.jpg",
+      "credit": "© PadelProShop",
+      "source": "https://padelproshop.com/products/pala-adidas-crossit-carbon-ctrl-2026",
+      "licence": "pendiente"
+    },
+    "adidas-arrow-hit-attk-2026": {
+      "src": "/images/rackets/real/adidas-arrow-hit-attk-2026.jpg",
+      "credit": "© PadelProShop",
+      "source": "https://padelproshop.com/products/pala-adidas-arrow-hit-2026",
+      "licence": "pendiente"
+    },
+    "siux-electra-pro-2026": {
+      "src": "/images/rackets/real/siux-electra-pro-2026.jpg",
+      "credit": "© PadelProShop",
+      "source": "https://padelproshop.com/products/pala-siux-electra-pro-fire-red-2026",
+      "licence": "pendiente"
+    },
+    "siux-valkiria-pro-2026": {
+      "src": "/images/rackets/real/siux-valkiria-pro-2026.jpg",
+      "credit": "© PadelProShop",
+      "source": "https://padelproshop.com/products/pala-siux-valkiria-pro-2026",
+      "licence": "pendiente"
+    },
+    "nox-nextgen-pro-attack-12k-2026": {
+      "src": "/images/rackets/real/nox-nextgen-pro-attack-12k-2026.jpg",
+      "credit": "© PadelProShop",
+      "source": "https://padelproshop.com/products/pala-nox-nextgen-pro-attack-12k-nfa-series-2026",
       "licence": "pendiente"
     }
   }
