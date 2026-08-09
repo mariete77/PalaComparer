@@ -2523,6 +2523,31 @@ export const PRODUCTS: Product[] = [
     },
     description: `Pala de control de gama alta de Siux. La Valkiria Pro combina forma redonda, balance bajo y EVA Soft para máximo control y confort.`,
   },
+  {
+    id: "siux-electra-pro-it-26-2026",
+    sport: "padel",
+    brand: "Siux",
+    model: "Electra Pro IT 26",
+    year: 2026,
+    price: 315.0,
+    image: "/images/rackets/siux-electra-pro-it-26-2026.svg",
+    level: ["avanzado", "profesional"],
+    style: ["polivalente"],
+    player: "Franco Stupaczuk",
+    padel: {
+      shape: "lagrima",
+      weight: "355-375 g",
+      balance: "medio",
+      core: "EVA (dureza 8/10)",
+      faces: "Carbono 12K",
+      surface: "rugosa",
+      hardness: "dura",
+    },
+    description:
+      "Edición limitada de Siux creada para el Premier Pádel de Italia. Lágrima de competición con carbono 12K, núcleo EVA de dureza 8/10 y acabado arenoso mate que agarra la bola para el efecto. Versátil y explosiva, pensada para jugadores de élite que dominan tanto la defensa como el remate.",
+    descriptionEn:
+      "Limited-edition Siux created for the Italy Premier Padel. Competition teardrop with 12K carbon faces, 8/10 hardness EVA core and a sandy matte finish that grips the ball for spin. Versatile and explosive, aimed at elite players who dominate both defense and the smash.",
+  },
   // ============ PÁDEL — STARVIE (BATCH 2) ============
   {
     id: "starvie-triton-power-2025",
