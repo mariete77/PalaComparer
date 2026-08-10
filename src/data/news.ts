@@ -48,6 +48,7 @@ import { metadata as sudafrica } from "@/content/noticias/triay-brea-chingalan-c
 import { metadata as london } from "@/content/noticias/london-p1-primer-torneo-londres.mdx";
 import { metadata as malaga } from "@/content/noticias/malaga-p1-numeros-1-martin-carpena.mdx";
 import { metadata as fanatics } from "@/content/noticias/premier-padel-fanatics-acuerdo-licencias.mdx";
+import { metadata as londonCampeones } from "@/content/noticias/london-p1-2026-campeones-calvo-coello.mdx";
 
 /**
  * Traducciones EN de los metadatos de cada artículo. Las ES vienen del propio
@@ -115,6 +116,12 @@ const EN_META: Record<string, { title: string; excerpt: string; tags: string[] }
       "The sports merchandising giant becomes Master Licensee of the tour: official online store already live, with in-venue retail coming in December.",
     tags: ["Premier Padel", "Fanatics", "Merchandising"],
   },
+  "london-p1-2026-campeones-calvo-coello": {
+    title: "London P1: Calvo-Fernández make history as Coello-Tapia reclaim the throne at Olympia",
+    excerpt:
+      "Martina Calvo, aged 18, becomes the youngest champion in Premier Padel history alongside Claudia Fernández. Coello and Tapia claim their eighth title of the season in a near two-hour final against Chingalán.",
+    tags: ["Premier Padel", "London P1", "Coello", "Tapia", "Calvo"],
+  },
 };
 
 /**
@@ -149,6 +156,7 @@ export const ARTICLES: Article[] = [
   localize({ slug: "london-p1-primer-torneo-londres", ...london }),
   localize({ slug: "malaga-p1-numeros-1-martin-carpena", ...malaga }),
   localize({ slug: "premier-padel-fanatics-acuerdo-licencias", ...fanatics }),
+  localize({ slug: "london-p1-2026-campeones-calvo-coello", ...londonCampeones }),
 ].sort((a, b) => b.date.localeCompare(a.date));
 
 export function getArticle(slug: string): Article | undefined {
