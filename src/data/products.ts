@@ -1237,6 +1237,31 @@ export const PRODUCTS: Product[] = [
       "La puerta de entrada de Nox: redonda, control 100/100 en su propia escala y acabado con textura de arena para agarrar la bola. Perfil de 38 mm y goma blanda, justo lo que pide una primera pala.",
   },
   {
+    id: "nox-at10-genius-ultralight-2026",
+    sport: "padel",
+    brand: "Nox",
+    model: "AT10 Genius Ultra Light 2026 by Agustín Tapia",
+    year: 2026,
+    price: 79.99,
+    image: "/images/rackets/nox-at10-genius-ultralight-2026.svg",
+    level: ["principiante", "intermedio"],
+    style: ["control"],
+    player: "Agustín Tapia",
+    padel: {
+      shape: "lagrima",
+      weight: "310-325 g",
+      balance: "bajo",
+      core: "HR2",
+      faces: "Fibra de vidrio 3K",
+      surface: "lisa",
+      hardness: "blanda",
+    },
+    description:
+      "La versión ultraligera de la AT10 Genius (310-325 g), para jugar con menos esfuerzo: caras de fibra de vidrio 3K y goma HR2 blanda que absorbe vibraciones. Forma lágrima con punto dulce amplio, ideal para iniciarse, buscar manejabilidad o volver de una lesión. Acabado mate, control 80/100 en la escala oficial de Nox.",
+    descriptionEn:
+      "The ultralight version of the AT10 Genius (310-325 g), built to play with less effort: fibreglass 3K faces and soft HR2 foam that absorbs vibrations. Teardrop shape with a larger sweet spot, ideal for beginners, players seeking maneuverability, or those coming back from injury. Matt finish, 80/100 control on Nox's own scale.",
+  },
+  {
     id: "adidas-drive-2024",
     sport: "padel",
     brand: "Adidas",
