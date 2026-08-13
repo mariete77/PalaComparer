@@ -79,4 +79,5 @@ export const PRODUCT_DESCRIPTIONS_EN: Record<string, string> = {
   "siux-valkiria-pro-2026": "A premium Siux power paddle with high balance, carbon faces and an attacking profile for confident finishers.",
   "starvie-triton-power-2025": "StarVie's Triton Power combines a diamond profile and high balance with carbon construction for decisive attacking shots.",
   "nox-nextgen-pro-attack-12k-2026": "A NextGen Nox attack paddle with 12K carbon, high balance and a firm response for aggressive modern play.",
+  "nox-nextgen-pro-hybrid-12k-2026": "The all-round sister of the NextGen Attack within the NFA Series: same family, but in a teardrop shape with medium-high balance to move comfortably in defence and attack. The MLD Black Eva core delivers a firm, controlled response, and the Dual Spin surface maximises spin without sacrificing ball output. A balanced choice for intermediate players stepping up without jumping to a demanding diamond.",
 };

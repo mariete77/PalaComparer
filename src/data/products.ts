@@ -2617,6 +2617,27 @@ export const PRODUCTS: Product[] = [
     },
     description: `La nueva línea NextGen de Nox para jugadores jóvenes y competitivos. Carbono 12K con forma diamante para un juego agresivo a precio accesible.`,
   },
+  {
+    id: "nox-nextgen-pro-hybrid-12k-2026",
+    model: "NextGen Pro Hybrid 12K NFA Series 2026",
+    brand: "Nox",
+    sport: "padel",
+    year: 2026,
+    price: 179.95,
+    image: "/images/rackets/nox-nextgen-pro-hybrid-12k-2026.svg",
+    level: ["intermedio", "avanzado"],
+    style: ["polivalente"],
+    padel: {
+      shape: "lagrima",
+      weight: "360-375 g",
+      balance: "medio",
+      core: "MLD Black Eva",
+      faces: "Carbono 12K",
+      surface: "rugosa",
+      hardness: "media",
+    },
+    description: `La hermana polivalente de la NextGen Attack dentro de la NFA Series: misma familia, pero en lágrima con balance medio-alto para moverse con comodidad en defensa y ataque. El núcleo MLD Black Eva da una respuesta firme y controlada, y la superficie Dual Spin maximiza el efecto sin sacrificar salida de bola. Una opción equilibrada para intermedios que quieren dar el salto sin pasarse a una diamante exigente.`,
+  },
 ];
 
 export function getProduct(id: string) {
