@@ -9,6 +9,7 @@ export const PRODUCT_DESCRIPTIONS_EN: Record<string, string> = {
   "nox-ml10-pro-cup-2023": "Miguel Lamperti's legendary paddle. Round, with a huge sweet spot and the classic HR3 feel: an icon of total control.",
   "nox-ml10-ventus-control-3k-2026": "The 2026 ML10, named Testea's best control paddle for two consecutive years. Round, forgiving and built around the familiar HR3 feel with Dual Spin texture.",
   "bullpadel-vertex-05-2026": "Juan Tello's paddle and Bullpadel's power flagship. A 38 mm diamond with high balance, a three-layer Multieva core and Top Spin finish for heavy spin.",
+  "bullpadel-icon-2026": "The tribute paddle to Juan Martin Diaz, world No.1 for 14 years. A 38 mm diamond with high balance and a 535 cm² hitting surface: an offensive punch with a medium feel from the MultiEva core. X-Tend 12K carbon, Torsion Concept anti-twist structure and a 3D Grain rough finish for spin.",
   "bullpadel-vertex-04-comfort-2024": "The more approachable Vertex. Hybrid Fibrix fibre softens ball output while preserving the range's characteristic punch.",
   "bullpadel-hack-04-2026": "The 2026 Hack is a pure diamond with one of the highest balances in the range. TriCarbon 18K faces sit over a three-density Multieva core with concentric 3D texture.",
   "bullpadel-flow-2024": "Designed with Alejandra Salazar. Light, manoeuvrable and lively, it is Bullpadel's reference women's paddle.",
