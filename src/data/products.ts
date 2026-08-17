@@ -271,6 +271,31 @@ export const PRODUCTS: Product[] = [
       "La pala de Juan Tello y el buque insignia de potencia de Bullpadel. Diamante de 38 mm con balance en 25,4 y 530 cm² de superficie de golpeo. Núcleo Multieva de tres capas y acabado Top Spin para efectos.",
   },
   {
+    id: "bullpadel-vertex-05-woman-2026",
+    sport: "padel",
+    brand: "Bullpadel",
+    model: "Vertex 05 Woman",
+    year: 2026,
+    price: 158.95,
+    image: "/images/rackets/bullpadel-vertex-05-woman-2026.svg",
+    level: ["avanzado"],
+    style: ["polivalente"],
+    player: "Delfi Brea",
+    padel: {
+      shape: "diamante",
+      weight: "350-360 g",
+      balance: "medio",
+      core: "Multieva",
+      faces: "Fibrix",
+      surface: "rugosa",
+      hardness: "media",
+    },
+    description:
+      "La Vertex 05 para mujer, desarrollada con Delfi Brea: mismo molde de diamante que la Vertex 05 pero más ligera (350-360 g) y con balance medio-alto, así que mantiene la pegada de la familia con mucha más manejabilidad. Caras Fibrix, la mezcla de fibra de vidrio y carbono de Bullpadel, sobre núcleo Multieva, con textura rugosa Top Spin para los efectos.",
+    descriptionEn:
+      "The women's Vertex 05, developed with Delfi Brea: the same diamond mold as the Vertex 05 but lighter (350-360 g) with a medium-high balance, keeping the family's punch with far more maneuverability. Fibrix faces, Bullpadel's fiberglass-carbon blend, over a Multieva core, with a rough Top Spin finish for spin.",
+  },
+  {
     id: "bullpadel-icon-2026",
     sport: "padel",
     brand: "Bullpadel",
