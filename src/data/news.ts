@@ -49,6 +49,7 @@ import { metadata as london } from "@/content/noticias/london-p1-primer-torneo-l
 import { metadata as malaga } from "@/content/noticias/malaga-p1-numeros-1-martin-carpena.mdx";
 import { metadata as fanatics } from "@/content/noticias/premier-padel-fanatics-acuerdo-licencias.mdx";
 import { metadata as londonCampeones } from "@/content/noticias/london-p1-2026-campeones-calvo-coello.mdx";
+import { metadata as stupaczukSanz } from "@/content/noticias/stupaczuk-jon-sanz-nueva-pareja-p1-madrid.mdx";
 
 /**
  * Traducciones EN de los metadatos de cada artículo. Las ES vienen del propio
@@ -122,6 +123,12 @@ const EN_META: Record<string, { title: string; excerpt: string; tags: string[] }
       "Martina Calvo, aged 18, becomes the youngest champion in Premier Padel history alongside Claudia Fernández. Coello and Tapia claim their eighth title of the season in a near two-hour final against Chingalán.",
     tags: ["Premier Padel", "London P1", "Coello", "Tapia", "Calvo"],
   },
+  "stupaczuk-jon-sanz-nueva-pareja-p1-madrid": {
+    title: "Stupaczuk and Jon Sanz to team up from the Madrid P1",
+    excerpt:
+      "The partner shuffle shakes up the top of the rankings: Franco Stupaczuk will play with Jon Sanz from the Madrid P1, while Coki Nieto and Mike Yanguas reunite at the Movistar Arena.",
+    tags: ["Premier Padel", "Madrid P1", "Stupaczuk", "Jon Sanz", "Signings"],
+  },
 };
 
 /**
@@ -157,6 +164,7 @@ export const ARTICLES: Article[] = [
   localize({ slug: "malaga-p1-numeros-1-martin-carpena", ...malaga }),
   localize({ slug: "premier-padel-fanatics-acuerdo-licencias", ...fanatics }),
   localize({ slug: "london-p1-2026-campeones-calvo-coello", ...londonCampeones }),
+  localize({ slug: "stupaczuk-jon-sanz-nueva-pareja-p1-madrid", ...stupaczukSanz }),
 ].sort((a, b) => b.date.localeCompare(a.date));
 
 export function getArticle(slug: string): Article | undefined {
