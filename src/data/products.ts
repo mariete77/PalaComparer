@@ -1125,6 +1125,30 @@ export const PRODUCTS: Product[] = [
     description:
       "La Bela de calle, híbrida entre redonda y diamante. Garganta V-Bridge para estabilidad y agujeros DuoGrid de distinto diámetro: los de arriba dan potencia en el remate y los de abajo control en la volea.",
   },
+  {
+    id: "wilson-blade-v4-2026",
+    sport: "padel",
+    brand: "Wilson",
+    model: "Blade V4",
+    year: 2026,
+    price: 170,
+    image: "/images/rackets/wilson-blade-v4-2026.svg",
+    level: ["intermedio", "avanzado"],
+    style: ["polivalente", "control"],
+    padel: {
+      shape: "lagrima",
+      weight: "360-370 g",
+      balance: "medio",
+      core: "Firm EVA",
+      faces: "Carbono + Fibra de vidrio",
+      surface: "rugosa",
+      hardness: "media",
+    },
+    description:
+      "La Blade V4 es la pala equilibrada de Wilson para jugar de todo: lágrima media con compuesto Carbon Fiber (carbono + fibra de vidrio) que le da más salida de bola que una fibra pura, sobre núcleo Firm EVA para un tacto seco y preciso. La superficie rugosa 3D (Spin Texture) y los agujeros DuoGrid optimizan el efecto y la colocación, y la construcción tubular C2 con borde Anti-Fragile la hace de las más aguantonas de su gama a la hora de chocar contra el cristal.",
+    descriptionEn:
+      "The Blade V4 is Wilson's balanced racket for every situation: a medium teardrop with a Carbon Fiber composite (carbon + fiberglass) that delivers more ball speed than pure fiberglass, over a Firm EVA core for a dry, precise feel. The rough 3D surface (Spin Texture) and DuoGrid drill pattern optimise spin and placement, and the C2 tubular construction with Anti-Fragile edge makes it one of the toughest of its range when you clash into the glass.",
+  },
 
   // ============ PÁDEL — SIUX / BLACK CROWN / STARVIE / DUNLOP ============
   {
