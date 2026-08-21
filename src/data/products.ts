@@ -2710,6 +2710,32 @@ export const PRODUCTS: Product[] = [
     },
     description: `La hermana polivalente de la NextGen Attack dentro de la NFA Series: misma familia, pero en lágrima con balance medio-alto para moverse con comodidad en defensa y ataque. El núcleo MLD Black Eva da una respuesta firme y controlada, y la superficie Dual Spin maximiza el efecto sin sacrificar salida de bola. Una opción equilibrada para intermedios que quieren dar el salto sin pasarse a una diamante exigente.`,
   },
+  // ============ PÁDEL — WILSON (2026) ============
+  {
+    id: "wilson-endure-pro-v1-2026",
+    sport: "padel",
+    brand: "Wilson",
+    model: "Endure Pro V1",
+    year: 2026,
+    price: 229.95,
+    image: "/images/rackets/wilson-endure-pro-v1-2026.svg",
+    level: ["avanzado", "profesional"],
+    style: ["control"],
+    player: "Momo González",
+    padel: {
+      shape: "redonda",
+      weight: "365 g",
+      balance: "bajo",
+      core: "Control Sandwich Foam",
+      faces: "Carbono 3K (Raw Carbon)",
+      surface: "rugosa",
+      hardness: "media",
+    },
+    description:
+      "La pala de Momo González dentro de la nueva línea Endure de Wilson para 2026, y la opción de control de la familia. Forma redonda con balance muy bajo (260 mm) y punto dulce amplio, pensada para un juego defensivo: cara de carbono 3K texturizado (Raw Carbon) para agarre y efecto, núcleo Control Sandwich Foam de doble densidad que mejora la conexión con la bola en los golpes de toque, y geometría Double Y Beam que favorece los cambios de dirección. Con unos 365 g en la balanza y mango extendido para el revés a dos manos, es precisa donde otras palas de la gama priorizan la pegada.",
+    descriptionEn:
+      "Momo González's paddle in Wilson's new Endure line for 2026, and the family's control option. A round shape with a very low balance (260 mm) and a wide sweet spot, built for defensive play: textured 3K carbon (Raw Carbon) faces for grip and spin, a double-density Control Sandwich Foam core that improves ball connection on soft touch shots, and Double Y Beam geometry for quicker changes of direction. At around 365 g with an extended handle for two-handed backhands, it prioritises precision where other paddles in the range chase outright power.",
+  },
 ];
 
 export function getProduct(id: string) {
