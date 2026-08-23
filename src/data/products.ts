@@ -2534,6 +2534,28 @@ export const PRODUCTS: Product[] = [
     },
     description: `Pala de potencia de la gama Extreme con forma diamante y carbono 12K. Para jugadores agresivos que buscan máxima potencia en el remate.`,
   },
+  {
+    id: "head-radical-pro-2026",
+    model: "Radical Pro 2026",
+    brand: "Head",
+    sport: "padel",
+    year: 2026,
+    price: 239.95,
+    image: "/images/rackets/head-radical-pro-2026.svg",
+    level: ["avanzado", "profesional"],
+    style: ["polivalente"],
+    padel: {
+      shape: "lagrima",
+      weight: "370 g",
+      balance: "bajo",
+      core: "Control Foam",
+      faces: "Carbono 3K",
+      surface: "lisa",
+      hardness: "media",
+    },
+    description: `La pala de referencia de Head para el control: lágrima de 38 mm con planos de Carbono 3K, núcleo Control Foam y balance bajo (370 g) para un manejo superior. Con Auxetic 2.0, Optimized Sweet Spot y Tailored Frame, rinde en chiquitas, bandejas y víboras sin perder sensibilidad en defensa.`,
+    descriptionEn: `Head's reference control racket: a 38 mm teardrop with 3K carbon faces, Control Foam core and low balance (370 g) for superior handling. With Auxetic 2.0, Optimized Sweet Spot and Tailored Frame, it shines in chiquitas, bandejas and víboras without losing feel on defense.`,
+  },
   // ============ PÁDEL — ADIDAS (BATCH 2) ============
   {
     id: "adidas-crossit-carbon-2026",
