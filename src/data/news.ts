@@ -50,6 +50,7 @@ import { metadata as malaga } from "@/content/noticias/malaga-p1-numeros-1-marti
 import { metadata as fanatics } from "@/content/noticias/premier-padel-fanatics-acuerdo-licencias.mdx";
 import { metadata as londonCampeones } from "@/content/noticias/london-p1-2026-campeones-calvo-coello.mdx";
 import { metadata as stupaczukSanz } from "@/content/noticias/stupaczuk-jon-sanz-nueva-pareja-p1-madrid.mdx";
+import { metadata as alexRuizCristal } from "@/content/noticias/alex-ruiz-ileso-rotura-cristal-fip-gold-san-luis.mdx";
 
 /**
  * Traducciones EN de los metadatos de cada artículo. Las ES vienen del propio
@@ -129,6 +130,12 @@ const EN_META: Record<string, { title: string; excerpt: string; tags: string[] }
       "The partner shuffle shakes up the top of the rankings: Franco Stupaczuk will play with Jon Sanz from the Madrid P1, while Coki Nieto and Mike Yanguas reunite at the Movistar Arena.",
     tags: ["Premier Padel", "Madrid P1", "Stupaczuk", "Jon Sanz", "Signings"],
   },
+  "alex-ruiz-ileso-rotura-cristal-fip-gold-san-luis": {
+    title: "Álex Ruiz unharmed after glass pane shatters at FIP Gold San Luis",
+    excerpt:
+      "A glass wall exploded mid-semi-final at the FIP Gold San Luis (Mexico) when Álex Ruiz leaned into it. The Spaniard dodged the fragments by centimetres and reopened the debate over court safety.",
+    tags: ["Álex Ruiz", "CUPRA FIP Tour", "FIP Gold", "Safety", "San Luis"],
+  },
 };
 
 /**
@@ -165,6 +172,7 @@ export const ARTICLES: Article[] = [
   localize({ slug: "premier-padel-fanatics-acuerdo-licencias", ...fanatics }),
   localize({ slug: "london-p1-2026-campeones-calvo-coello", ...londonCampeones }),
   localize({ slug: "stupaczuk-jon-sanz-nueva-pareja-p1-madrid", ...stupaczukSanz }),
+  localize({ slug: "alex-ruiz-ileso-rotura-cristal-fip-gold-san-luis", ...alexRuizCristal }),
 ].sort((a, b) => b.date.localeCompare(a.date));
 
 export function getArticle(slug: string): Article | undefined {
