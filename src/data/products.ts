@@ -296,6 +296,30 @@ export const PRODUCTS: Product[] = [
       "The women's Vertex 05, developed with Delfi Brea: the same diamond mold as the Vertex 05 but lighter (350-360 g) with a medium-high balance, keeping the family's punch with far more maneuverability. Fibrix faces, Bullpadel's fiberglass-carbon blend, over a Multieva core, with a rough Top Spin finish for spin.",
   },
   {
+    id: "bullpadel-vertex-05-hybrid-2026",
+    sport: "padel",
+    brand: "Bullpadel",
+    model: "Vertex 05 Hybrid",
+    year: 2026,
+    price: 339.95,
+    image: "/images/rackets/bullpadel-vertex-05-hybrid-2026.svg",
+    level: ["avanzado", "profesional"],
+    style: ["polivalente"],
+    padel: {
+      shape: "hibrida",
+      weight: "365-375 g",
+      balance: "medio",
+      core: "Multieva",
+      faces: "Carbono 12K",
+      surface: "rugosa",
+      hardness: "media",
+    },
+    description:
+      "La versión polivalente de la Vertex 05 y la más completa de la saga: molde híbrido de 38 mm con balance medio y 365-375 g que reparte control y potencia sin decantarse por ninguno. Núcleo Multieva, caras de carbono 12K con acabado rugoso y las tecnologías Curv:Aktiv y Air Power, que reducen vibraciones y aceleran la salida de bola. Para jugadores de nivel alto que quieren la pegada de la familia Vertex sin la exigencia de una diamante pura.",
+    descriptionEn:
+      "The all-round version of the Vertex 05 and the most complete of the saga: a 38 mm hybrid mold with medium balance at 365-375 g that splits control and power evenly. Multieva core, 12K carbon faces with a rough finish, and the Curv:Aktiv and Air Power technologies, which cut vibrations and speed up ball exit. For advanced players who want the Vertex family's punch without the demands of a pure diamond.",
+  },
+  {
     id: "bullpadel-icon-2026",
     sport: "padel",
     brand: "Bullpadel",
