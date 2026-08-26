@@ -197,15 +197,6 @@
     "inStock": true,
     "scrapedAt": "2026-07-29T22:45:00.000Z"
   },
-  "varlion-l-bourne-summum-2025": {
-    "productId": "varlion-l-bourne-summum-2025",
-    "title": "Varlion L Bourne Summum",
-    "price": 189.95,
-    "url": "https://www.amazon.es/s?k=varlion+l+bourne+summum",
-    "asin": null,
-    "inStock": true,
-    "scrapedAt": "2026-07-29T22:45:00.000Z"
-  },
   "drop-shot-canyon-pro-10-pablo-lima-2025": {
     "productId": "drop-shot-canyon-pro-10-pablo-lima-2025",
     "title": "Drop Shot Canyon Pro 1.0 Pablo Lima",
@@ -457,5 +448,113 @@
     "asin": "B0BV8R3N64",
     "inStock": true,
     "scrapedAt": "2026-08-04T00:15:28.878Z"
+  },
+  "babolat-viper-3-0-2026-juan-lebron": {
+    "productId": "babolat-viper-3-0-2026-juan-lebron",
+    "title": "Babolat Technical Viper Soft 3.0",
+    "price": 189.9,
+    "url": "https://www.amazon.es/dp/B0GD2QFZJD",
+    "asin": "B0GD2QFZJD",
+    "inStock": true,
+    "scrapedAt": "2026-08-26T18:15:04.823Z"
+  },
+  "babolat-veron-3-0-2026-juan-lebron": {
+    "productId": "babolat-veron-3-0-2026-juan-lebron",
+    "title": "Babolat Veron Juan Lebron 3.0",
+    "price": 159.9,
+    "url": "https://www.amazon.es/dp/B0G4XVF9XL",
+    "asin": "B0G4XVF9XL",
+    "inStock": true,
+    "scrapedAt": "2026-08-26T18:15:32.026Z"
+  },
+  "babolat-counter-viper-2026": {
+    "productId": "babolat-counter-viper-2026",
+    "title": "Babolat Counter Viper 2.6",
+    "price": 224.9,
+    "url": "https://www.amazon.es/dp/B0GD3DPFPZ",
+    "asin": "B0GD3DPFPZ",
+    "inStock": true,
+    "scrapedAt": "2026-08-26T18:16:18.775Z"
+  },
+  "babolat-counter-vertuo-2026": {
+    "productId": "babolat-counter-vertuo-2026",
+    "title": "Babolat Counter Vertuo 2.6",
+    "price": 124.9,
+    "url": "https://www.amazon.es/dp/B0GHWSN58R",
+    "asin": "B0GHWSN58R",
+    "inStock": true,
+    "scrapedAt": "2026-08-26T18:16:38.179Z"
+  },
+  "babolat-air-viper-2026": {
+    "productId": "babolat-air-viper-2026",
+    "title": "Babolat Air Viper 2.6",
+    "price": 234.9,
+    "url": "https://www.amazon.es/dp/B0GCS9NHJN",
+    "asin": "B0GCS9NHJN",
+    "inStock": true,
+    "scrapedAt": "2026-08-26T18:16:46.968Z"
+  },
+  "babolat-air-veron-2026": {
+    "productId": "babolat-air-veron-2026",
+    "title": "Babolat Air Veron 2.6",
+    "price": 163.9,
+    "url": "https://www.amazon.es/dp/B0GFXKL3BW",
+    "asin": "B0GFXKL3BW",
+    "inStock": true,
+    "scrapedAt": "2026-08-26T18:16:57.853Z"
+  },
+  "babolat-pure-aero-2026": {
+    "productId": "babolat-pure-aero-2026",
+    "title": "Babolat Pure Aero - Raqueta de tenis 9ª generación, encordada con intestino Babolat Syn de 16 g a tensión de rango medio",
+    "price": 337.23,
+    "url": "https://www.amazon.es/dp/B0GRFWT863",
+    "asin": "B0GRFWT863",
+    "inStock": true,
+    "scrapedAt": "2026-08-26T18:19:25.855Z"
+  },
+  "babolat-pure-drive-2025": {
+    "productId": "babolat-pure-drive-2025",
+    "title": "Babolat Pure Drive - Raqueta de tenis de 11ª generación",
+    "price": 340.49,
+    "url": "https://www.amazon.es/dp/B0DQKTL1TC",
+    "asin": "B0DQKTL1TC",
+    "inStock": true,
+    "scrapedAt": "2026-08-26T18:19:44.805Z"
+  },
+  "yonex-ezone-98-2025": {
+    "productId": "yonex-ezone-98-2025",
+    "title": "Yonex EZONE 98 Blast - Raqueta de tenis azul",
+    "price": 338.5,
+    "url": "https://www.amazon.es/dp/B0DSQQ1CGY",
+    "asin": "B0DSQQ1CGY",
+    "inStock": true,
+    "scrapedAt": "2026-08-26T18:20:23.431Z"
+  },
+  "yonex-percept-97-2023": {
+    "productId": "yonex-percept-97-2023",
+    "title": "YONEX Percept 97D - Raqueta de tenis para jugadores avanzados, diseño de cara de raqueta rígida, precisión precisa, sensación y flexibilidad",
+    "price": 350.15,
+    "url": "https://www.amazon.es/dp/B0FNKQNP28",
+    "asin": "B0FNKQNP28",
+    "inStock": true,
+    "scrapedAt": "2026-08-26T18:21:23.597Z"
+  },
+  "head-extreme-one-x-2025": {
+    "productId": "head-extreme-one-x-2025",
+    "title": "Head Serie Extreme Padel Pádel (Elite, Motion, One, Pro)",
+    "price": 189.99,
+    "url": "https://www.amazon.es/dp/B0G59YX8H5",
+    "asin": "B0G59YX8H5",
+    "inStock": true,
+    "scrapedAt": "2026-08-26T18:22:58.680Z"
+  },
+  "head-radical-pro-2026": {
+    "productId": "head-radical-pro-2026",
+    "title": "Head Raqueta de pádel Radical Padel Serie (Pro, Motion, Elite)",
+    "price": 99.09,
+    "url": "https://www.amazon.es/dp/B0FVHD7BQL",
+    "asin": "B0FVHD7BQL",
+    "inStock": true,
+    "scrapedAt": "2026-08-26T18:23:06.500Z"
   }
 }
