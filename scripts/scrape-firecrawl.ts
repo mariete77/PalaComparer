@@ -224,6 +224,21 @@ async function main() {
     ? JSON.parse(readFileSync(outputPath, "utf-8"))
     : {};
 
+  // Caché de URLs de ficha (storeId → productId → url). El /map que la busca es
+  // la mitad de las peticiones del run y casi nunca cambia: guardándola, el
+  // refresh semanal solo hace /scrape. Se commitea para que CI la reutilice.
+  // El scrape sigue validando título/precio, así que una URL podrida no se
+  // publica: si falla, se vuelve a buscar con /map y se actualiza.
+  const urlsPath = join(__dirname, "../src/data/firecrawl-ficha-urls.json");
+  const urlsCache: Record<string, Record<string, string>> = existsSync(urlsPath)
+    ? JSON.parse(readFileSync(urlsPath, "utf-8"))
+    : {};
+  for (const t of TARGETS) urlsCache[t.storeId] ??= {};
+  let urlsNuevas = 0;
+  const guardaUrls = () => {
+    if (!FLAG_DRY) writeFileSync(urlsPath, JSON.stringify(urlsCache, null, 2) + "\n");
+  };
+
   // Poda las entradas cuyo producto ya no existe: al pasar un modelo a la
   // temporada siguiente cambia su id y el precio viejo queda huérfano. Nunca se
   // reasigna a mano al id nuevo — son productos distintos.
@@ -245,6 +260,27 @@ async function main() {
   let encontrados = 0;
   let fallidos = 0;
 
+  /** Busca con /map la ficha del producto en la tienda. null = nada que case. */
+  const buscarFichaUrl = async (
+    target: Target,
+    p: ProductRef
+  ): Promise<string | null> => {
+    const mapa = await firecrawl<MapResponse>("/map", {
+      url: target.site,
+      search: buildQuery(p),
+      limit: 20,
+    });
+    const ficha = (mapa.links ?? []).find((l) => {
+      if (!l.url.startsWith(target.site.replace("https://www.", "https://"))
+          && !l.url.startsWith(target.site)) return false;
+      if (target.excluye?.some((frag) => l.url.toLowerCase().includes(frag))) return false;
+      // Sin título no se puede comprobar que sea el producto: descartar
+      // antes que arriesgarse a publicar el precio de otro modelo.
+      return l.title ? isMatch(l.title, p) : false;
+    });
+    return ficha?.url ?? null;
+  };
+
   for (const target of targets) {
     const candidatos = products.filter(
       (p) => p.sport === target.sport && (!soloIds || soloIds.includes(p.id))
@@ -260,42 +296,64 @@ async function main() {
       }
 
       try {
-        const mapa = await firecrawl<MapResponse>("/map", {
-          url: target.site,
-          search: buildQuery(p),
-          limit: 20,
-        });
-
-        const ficha = (mapa.links ?? []).find((l) => {
-          if (!l.url.startsWith(target.site.replace("https://www.", "https://"))
-              && !l.url.startsWith(target.site)) return false;
-          if (target.excluye?.some((frag) => l.url.toLowerCase().includes(frag))) return false;
-          // Sin título no se puede comprobar que sea el producto: descartar
-          // antes que arriesgarse a publicar el precio de otro modelo.
-          return l.title ? isMatch(l.title, p) : false;
-        });
-
-        if (!ficha) {
-          console.log(`  ❌ ${p.id}: sin ficha que case (${mapa.links?.length ?? 0} urls)`);
+        // Atajo: si conocemos la URL de la ficha de semanas anteriores, nos
+        // saltamos el /map y vamos directos al scrape.
+        const cacheada = urlsCache[target.storeId][p.id];
+        let fichaUrl = cacheada ?? (await buscarFichaUrl(target, p));
+        if (!fichaUrl) {
+          console.log(`  ❌ ${p.id}: sin ficha que case`);
           fallidos++;
           continue;
         }
+        if (!cacheada) {
+          urlsCache[target.storeId][p.id] = fichaUrl;
+          urlsNuevas++;
+          guardaUrls();
+        }
 
-        const scrape = await firecrawl<ScrapeResponse>("/scrape", {
-          url: ficha.url,
+        let scrape = await firecrawl<ScrapeResponse>("/scrape", {
+          url: fichaUrl,
           formats: ["markdown"],
           onlyMainContent: true,
         });
 
         // La URL que devuelve el scrape es la final tras redirecciones. Si la
         // tienda te ha mandado a la portada, el título deja de casar.
-        const titulo = meta(scrape.data, "title") ?? ficha.title ?? "";
-        const urlFinal = meta(scrape.data, "url") ?? ficha.url;
-        if (!isMatch(titulo, p)) {
+        let titulo = meta(scrape.data, "title") ?? "";
+        if (cacheada && !isMatch(titulo, p)) {
+          // La URL cacheada ya no lleva al producto (redirección, cambio de
+          // slug): invalidar, rebuscar y scrapear una vez más.
+          console.log(`  ♻️  ${p.id}: URL cacheada obsoleta, rebuscando…`);
+          delete urlsCache[target.storeId][p.id];
+          const rebuscada = await buscarFichaUrl(target, p);
+          if (!rebuscada || rebuscada === cacheada) {
+            console.log(`  ❌ ${p.id}: la caché apuntaba a otra página ("${titulo.slice(0, 50)}")`);
+            fallidos++;
+            continue;
+          }
+          fichaUrl = rebuscada;
+          urlsCache[target.storeId][p.id] = fichaUrl;
+          urlsNuevas++;
+          guardaUrls();
+          scrape = await firecrawl<ScrapeResponse>("/scrape", {
+            url: fichaUrl,
+            formats: ["markdown"],
+            onlyMainContent: true,
+          });
+          titulo = meta(scrape.data, "title") ?? "";
+          if (!isMatch(titulo, p)) {
+            console.log(`  ⚠️  ${p.id}: la nueva ficha tampoco casa ("${titulo.slice(0, 50)}")`);
+            fallidos++;
+            continue;
+          }
+        } else if (!cacheada && !isMatch(titulo, p)) {
+          delete urlsCache[target.storeId][p.id];
+          guardaUrls();
           console.log(`  ⚠️  ${p.id}: la ficha redirige a otra página ("${titulo.slice(0, 50)}")`);
           fallidos++;
           continue;
         }
+        const urlFinal = meta(scrape.data, "url") ?? fichaUrl;
 
         const price = extraePrecio(scrape.data);
         if (!price) {
@@ -330,7 +388,8 @@ async function main() {
   }
 
   guarda();
-  console.log(`\n📊 ${encontrados} con precio, ${fallidos} sin él`);
+  guardaUrls();
+  console.log(`\n📊 ${encontrados} con precio, ${fallidos} sin él (${urlsNuevas} URLs nuevas en caché)`);
   console.log(FLAG_DRY ? "🔍 --dry-run: no se ha escrito nada" : "💾 src/data/real-offers-stores.json");
 }
 

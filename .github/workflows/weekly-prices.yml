@@ -15,12 +15,14 @@ concurrency:
 jobs:
   refresh:
     runs-on: ubuntu-latest
-    timeout-minutes: 60
+    # El scraping completo ronda los 55 min (Amazon ~12, Firecrawl ~27 con la
+    # caché de URLs, Decathlon ~6): 90 deja margen sin rozar el límite.
+    timeout-minutes: 90
     steps:
       - name: Descargar el repositorio
-        uses: actions/checkout@v4
+        uses: actions/checkout@v5
       - name: Preparar Node.js
-        uses: actions/setup-node@v4
+        uses: actions/setup-node@v5
         with:
           node-version: 22
           cache: npm
@@ -50,12 +52,15 @@ jobs:
           # Esto evita los errores de 'fetch first' y los conflictos de rebase
           # con el working tree sucio.
           mkdir -p /tmp/price-data
+          [ -f src/data/firecrawl-ficha-urls.json ] || echo '{}' > src/data/firecrawl-ficha-urls.json
           cp src/data/real-offers.json src/data/real-offers-stores.json src/data/real-offers-decathlon.json /tmp/price-data/
+          cp src/data/firecrawl-ficha-urls.json /tmp/price-data/
           cp -r src/data/price-history /tmp/price-data/
           git fetch origin
           git checkout -f -B ci-tmp origin/main
           cp /tmp/price-data/real-offers.json /tmp/price-data/real-offers-stores.json /tmp/price-data/real-offers-decathlon.json src/data/
+          cp /tmp/price-data/firecrawl-ficha-urls.json src/data/
           cp -r /tmp/price-data/price-history/. src/data/price-history/
-          git add src/data/real-offers.json src/data/real-offers-stores.json src/data/real-offers-decathlon.json src/data/price-history
+          git add src/data/real-offers.json src/data/real-offers-stores.json src/data/real-offers-decathlon.json src/data/firecrawl-ficha-urls.json src/data/price-history
           git diff --cached --quiet && echo "Sin cambios de precios" || git commit -m "chore(data): actualizar precios semanales"
           git push origin ci-tmp:main
