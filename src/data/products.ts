@@ -2320,6 +2320,31 @@ export const PRODUCTS: Product[] = [
     },
     description: `Ofrece control, potencia y tecnologías avanzadas. Diseñada para jugadores que buscan una pala polivalente con punto dulce amplio.`,
   },
+  {
+    id: "drop-shot-axion-attack-2-0-2026",
+    model: "Axion Attack 2.0 2026",
+    brand: "Drop Shot",
+    sport: "padel",
+    year: 2026,
+    price: 204.0,
+    image: "/images/rackets/drop-shot-axion-attack-2-0-2026.svg",
+    level: ["avanzado"],
+    style: ["potencia"],
+    player: "Jon Sanz",
+    padel: {
+      shape: "diamante",
+      weight: "360-375 g",
+      balance: "alto",
+      core: "EVA Pro High Density",
+      faces: "Carbono 24K Twill Textreme",
+      surface: "rugosa",
+      hardness: "dura",
+    },
+    description:
+      "La nueva pala de Jon Sanz para 2026 y la evolución de la Axion Attack: diamante con balance medio-alto y caras de carbono 24K Twill Textreme para un rendimiento ofensivo sin perder control. El núcleo EVA Pro High Density da una respuesta potente y estable en cada golpe, y el Anti Twist System (una pieza de silicona en el corazón de la pala) reduce hasta un 85% las vibraciones y protege el brazo en los impactos descentrados. Para jugadores avanzados que quieren rematar con autoridad y aguantar el ritmo sin fatiga.",
+    descriptionEn:
+      "Jon Sanz's new racket for 2026 and the evolution of the Axion Attack: a diamond shape with a medium-high balance and 24K Twill Textreme carbon faces for offensive performance without giving up control. The EVA Pro High Density core delivers a powerful, stable response on every shot, and the Anti Twist System (a silicone piece in the racket's heart) reduces vibrations by up to 85% and protects the arm on off-center hits. For advanced players who want to finish points with authority and sustain the pace without fatigue.",
+  },
   // ============ PÁDEL — ROYAL PADEL (BATCH 2) ============
   {
     id: "royal-padel-whip-extreme-2026",
