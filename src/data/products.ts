@@ -2807,6 +2807,31 @@ export const PRODUCTS: Product[] = [
     descriptionEn:
       "Momo González's paddle in Wilson's new Endure line for 2026, and the family's control option. A round shape with a very low balance (260 mm) and a wide sweet spot, built for defensive play: textured 3K carbon (Raw Carbon) faces for grip and spin, a double-density Control Sandwich Foam core that improves ball connection on soft touch shots, and Double Y Beam geometry for quicker changes of direction. At around 365 g with an extended handle for two-handed backhands, it prioritises precision where other paddles in the range chase outright power.",
   },
+  {
+    id: "wilson-endure-v1-2026",
+    sport: "padel",
+    brand: "Wilson",
+    model: "Endure V1",
+    year: 2026,
+    price: 199.0,
+    image: "/images/rackets/wilson-endure-v1-2026.svg",
+    level: ["intermedio", "avanzado"],
+    style: ["control"],
+    player: "Momo González",
+    padel: {
+      shape: "redonda",
+      weight: "360-370 g",
+      balance: "bajo",
+      core: "Control Sandwich Foam (EVA Soft)",
+      faces: "Carbono UD + Fibra de vidrio (Raw Hybrid)",
+      surface: "rugosa",
+      hardness: "blanda",
+    },
+    description:
+      "La versión más blanda y asequible de la familia Endure 2026 de Wilson, la línea de Momo González: redonda con balance muy bajo y punto dulce amplio, pensada para defender con seguridad y construir el punto sin riesgo. Cara Raw Hybrid de carbono UD sobre base de fibra de vidrio con textura ExactTouch para el efecto, núcleo Control Sandwich Foam de doble densidad y mango extendido de 14 cm para el revés a dos manos. Misma filosofía que la Endure Pro, con un tacto más cómodo y un precio bastante menor.",
+    descriptionEn:
+      "The softer, more affordable version of Wilson's 2026 Endure family, Momo González's line: round with a very low balance and a wide sweet spot, built to defend safely and build points without risk. Raw Hybrid face of UD carbon over a fibreglass base with ExactTouch texture for spin, a double-density Control Sandwich Foam core, and a 14 cm extended handle for two-handed backhands. Same philosophy as the Endure Pro, with a more comfortable feel at a considerably lower price.",
+  },
 ];
 
 export function getProduct(id: string) {
