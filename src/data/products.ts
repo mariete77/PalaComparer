@@ -246,6 +246,33 @@ export const PRODUCTS: Product[] = [
       "La ML10 de 2026, premiada por Testea como mejor pala de control dos años seguidos. Redonda, punto dulce amplio y el tacto HR3 de siempre, ahora con superficie Dual Spin.",
   },
 
+  // ============ PÁDEL — NOX AT10 PRO CUP 2026 ============
+  {
+    id: "nox-at10-pro-cup-soft-2026",
+    sport: "padel",
+    brand: "Nox",
+    model: "AT10 Pro Cup Soft 2026 by Agustín Tapia",
+    year: 2026,
+    price: 199.99,
+    image: "/images/rackets/nox-at10-pro-cup-soft-2026.svg",
+    level: ["intermedio", "avanzado"],
+    style: ["control", "polivalente"],
+    player: "Agustín Tapia",
+    padel: {
+      shape: "lagrima",
+      weight: "360-375 g",
+      balance: "medio",
+      core: "HR3 Soft EVA",
+      faces: "Fibra de vidrio + Aluminio",
+      surface: "rugosa",
+      hardness: "media",
+    },
+    description:
+      "La puerta de entrada a la gama AT10 de Nox para 2026: hereda el molde de la pala de Agustín Tapia en 2025 y el ADN de control de la familia Pro Cup, pero con caras de fibra de vidrio con acabado aluminizado sobre marco 100% carbono y núcleo HR3 Soft EVA. La dureza intermedia de la goma perdona errores sin renunciar a la salida de bola, y las tecnologías EOS Flap (aerodinámica) y Pulse System (menos vibraciones) la convierten en una de las palas más cómodas del catálogo Nox. La opción para intermedios que quieren el molde de Tapia sin pagar el precio de la gama Genius.",
+    descriptionEn:
+      "The gateway to Nox's AT10 range for 2026: it inherits the mold of Agustín Tapia's 2025 racket and the control DNA of the Pro Cup family, but with fiberglass faces with an aluminised finish over a 100% carbon frame and an HR3 Soft EVA core. The rubber's intermediate hardness forgives mistakes without giving up ball speed, and the EOS Flap (aerodynamics) and Pulse System (reduced vibration) technologies make it one of the most comfortable rackets in the Nox catalogue. The choice for intermediate players who want Tapia's mold without the Genius price tag.",
+  },
+
   // ============ PÁDEL — BULLPADEL ============
   {
     id: "bullpadel-vertex-05-2026",
