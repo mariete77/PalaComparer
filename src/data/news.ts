@@ -51,6 +51,7 @@ import { metadata as fanatics } from "@/content/noticias/premier-padel-fanatics-
 import { metadata as londonCampeones } from "@/content/noticias/london-p1-2026-campeones-calvo-coello.mdx";
 import { metadata as stupaczukSanz } from "@/content/noticias/stupaczuk-jon-sanz-nueva-pareja-p1-madrid.mdx";
 import { metadata as alexRuizCristal } from "@/content/noticias/alex-ruiz-ileso-rotura-cristal-fip-gold-san-luis.mdx";
+import { metadata as madridP1 } from "@/content/noticias/madrid-p1-2026-lucha-por-el-numero-uno.mdx";
 
 /**
  * Traducciones EN de los metadatos de cada artículo. Las ES vienen del propio
@@ -136,6 +137,12 @@ const EN_META: Record<string, { title: string; excerpt: string; tags: string[] }
       "A glass wall exploded mid-semi-final at the FIP Gold San Luis (Mexico) when Álex Ruiz leaned into it. The Spaniard dodged the fragments by centimetres and reopened the debate over court safety.",
     tags: ["Álex Ruiz", "CUPRA FIP Tour", "FIP Gold", "Safety", "San Luis"],
   },
+  "madrid-p1-2026-lucha-por-el-numero-uno": {
+    title: "Madrid P1 2026: the race for No.1 and the new pairs take over the Movistar Arena",
+    excerpt:
+      "Premier Padel is back from the break with the Comunidad de Madrid P1: €479,068 in prize money, Coello-Tapia and Galán-Chingotto separated by 1,290 points in the Race, debuts for Stupa-Sanz and Nieto-Yanguas and a tribute to Alejandra Salazar.",
+    tags: ["Premier Padel", "Madrid P1", "Coello", "Tapia", "Galán", "Chingotto"],
+  },
 };
 
 /**
@@ -173,6 +180,7 @@ export const ARTICLES: Article[] = [
   localize({ slug: "london-p1-2026-campeones-calvo-coello", ...londonCampeones }),
   localize({ slug: "stupaczuk-jon-sanz-nueva-pareja-p1-madrid", ...stupaczukSanz }),
   localize({ slug: "alex-ruiz-ileso-rotura-cristal-fip-gold-san-luis", ...alexRuizCristal }),
+  localize({ slug: "madrid-p1-2026-lucha-por-el-numero-uno", ...madridP1 }),
 ].sort((a, b) => b.date.localeCompare(a.date));
 
 export function getArticle(slug: string): Article | undefined {
