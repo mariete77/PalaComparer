@@ -2859,6 +2859,31 @@ export const PRODUCTS: Product[] = [
     descriptionEn:
       "The softer, more affordable version of Wilson's 2026 Endure family, Momo González's line: round with a very low balance and a wide sweet spot, built to defend safely and build points without risk. Raw Hybrid face of UD carbon over a fibreglass base with ExactTouch texture for spin, a double-density Control Sandwich Foam core, and a 14 cm extended handle for two-handed backhands. Same philosophy as the Endure Pro, with a more comfortable feel at a considerably lower price.",
   },
+  {
+    id: "wilson-defy-pro-v1-2026",
+    sport: "padel",
+    brand: "Wilson",
+    model: "Defy Pro V1",
+    year: 2026,
+    price: 249.95,
+    image: "/images/rackets/wilson-defy-pro-v1-2026.svg",
+    level: ["avanzado", "profesional"],
+    style: ["potencia"],
+    player: "Javi Garrido",
+    padel: {
+      shape: "diamante",
+      weight: "370 g",
+      balance: "alto",
+      core: "Power Foam",
+      faces: "Carbono 15K",
+      surface: "rugosa",
+      hardness: "dura",
+    },
+    description:
+      "La pala de Javi Garrido y la apuesta de Wilson para atacantes: diamante heavy-frame de 370 g con cara de carbono 15K y núcleo Power Foam para una potencia explosiva que se nota sobre todo en el remate. El marco tubular C2 con tecnología I-Beam le da rigidez y estabilidad, la textura Spin² maximiza el efecto y el patrón de agujeros Duo Grid reparte potencia arriba y control abajo. Es exigente — balance alto y tacto duro piden brazo hecho—, pero premia el juego de riesgo.",
+    descriptionEn:
+      "Javi Garrido's racket and Wilson's weapon for attackers: a 370 g heavy-frame diamond with a 15K carbon face and Power Foam core for explosive power that really shows in the smash. The C2 tubular frame with I-Beam technology adds stiffness and stability, the Spin² texture maximises spin and the Duo Grid drill pattern balances power at the top with control at the bottom. It is demanding — high balance and a hard feel need a strong arm — but it rewards risk-taking play.",
+  },
 ];
 
 export function getProduct(id: string) {
