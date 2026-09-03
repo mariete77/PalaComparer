@@ -2632,6 +2632,28 @@ export const PRODUCTS: Product[] = [
     description: `La pala de referencia de Head para el control: lágrima de 38 mm con planos de Carbono 3K, núcleo Control Foam y balance bajo (370 g) para un manejo superior. Con Auxetic 2.0, Optimized Sweet Spot y Tailored Frame, rinde en chiquitas, bandejas y víboras sin perder sensibilidad en defensa.`,
     descriptionEn: `Head's reference control racket: a 38 mm teardrop with 3K carbon faces, Control Foam core and low balance (370 g) for superior handling. With Auxetic 2.0, Optimized Sweet Spot and Tailored Frame, it shines in chiquitas, bandejas and víboras without losing feel on defense.`,
   },
+  {
+    id: "head-extreme-pro-2026",
+    model: "Extreme Pro 2026",
+    brand: "Head",
+    sport: "padel",
+    year: 2026,
+    price: 280,
+    image: "/images/rackets/head-extreme-pro-2026.svg",
+    level: ["avanzado", "profesional"],
+    style: ["potencia"],
+    padel: {
+      shape: "diamante",
+      weight: "370 g",
+      balance: "alto",
+      core: "Power Foam",
+      faces: "Carbono UD",
+      surface: "rugosa",
+      hardness: "dura",
+    },
+    description: `La más potente y pesada de la gama Extreme 2026. Diamante de 370 g con balance alto (270 mm), marco de carbono rígido y caras de carbono unidireccional UD Carbon: máxima potencia en remates y golpes por encima de la cabeza. El núcleo Power Foam, el más reactivo de Head, expulsa la bola con violencia; Auxetic 2.0 afina el tacto en el puente y el rugoso Extreme Spin 3D da mordiente al efecto. Exige nivel de torneo y muñeca fuerte — la serie está recomendada por Paula Josemaría e Iñigo Jofre.`,
+    descriptionEn: `The most powerful and heaviest racket in the 2026 Extreme line. A 370 g diamond with high balance (270 mm), rigid carbon frame and UD Carbon unidirectional faces: maximum power on smashes and overheads. The Power Foam core — HEAD's most reactive — launches the ball with violence; Auxetic 2.0 sharpens feel at the bridge and the rough Extreme Spin 3D finish adds bite to spin. Demands tournament level and a strong wrist — the series is recommended by Paula Josemaría and Iñigo Jofre.`,
+  },
   // ============ PÁDEL — ADIDAS (BATCH 2) ============
   {
     id: "adidas-crossit-carbon-2026",
