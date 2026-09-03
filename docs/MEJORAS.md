@@ -6,8 +6,13 @@
 
 ## Protocolo (para el agente nocturno)
 
+0. **Actualidad primero** — ANTES del backlog, buscar qué hay EN CURSO: torneos de tenis y
+   pádel (Grand Slams, Premier Padel, FIP, ATP) y grandes historias de menos de una semana.
+   Si hay un torneo importante en marcha → la tarea de esa noche es contenido ORIGINAL y
+   ACTUAL sobre él (ver sección 📰 Actualidad abajo). Si no hay nada relevante → ir al paso 1.
 1. `git pull` antes de tocar nada.
-2. Leer este archivo y elegir la **PRIMERA tarea sin marcar** (checkbox sin `[x]`).
+2. Leer este archivo y elegir la **PRIMERA tarea sin marcar** (checkbox sin `[x]`). Los
+   items etiquetados `🔝 PRIORIDAD ESTA SEMANA` van antes que el resto de la lista.
 3. Si no queda ninguna → proponer e implementar una mejora nueva, añadiéndola al backlog
    (y esa es la de esa noche).
 4. Verificación SIEMPRE obligatoria:
@@ -24,9 +29,10 @@
 
 ## Notas permanentes
 
-- Las palas y las noticias las añaden **otros crons** (palas cada 2 noches a las 03:00,
-  noticias los lunes a las 04:00). No duplicar ese trabajo; si se detecta un hueco, añadir
-  nota al final del backlog, no implementarlo.
+- Las palas las añade el **cron de palas** (cada 2 noches a las 03:00) y las noticias de
+  agenda el **cron de noticias** (lunes a las 04:00). El cron nocturno NO las crea, salvo
+  contenido de **actualidad por Regla 0** (torneo grande en curso). Si se detecta un hueco,
+  añadir nota al final del backlog, no implementarlo.
 - Las páginas de jugador se generan solas desde el campo `player` de los productos
   (`src/data/players.ts`). El catálogo tiene ~58 productos.
 - El repo usa **Next.js con breaking changes**: leer `node_modules/next/dist/docs/`
@@ -38,6 +44,28 @@
 ---
 
 ## Backlog
+
+### 📰 Actualidad (contenido original y actual)
+
+_Por la Regla 0 del protocolo, si un torneo está en curso este item va primero. Hechos
+verificados a 2026-09-03: US Open del 23 ago al 13 sep (cuadro principal en marcha);
+Comunidad de Madrid Premier Padel P1 del 29 ago al 6 sep (cuadro en el Movistar Arena,
+1-6 sep); Paris Major del 7 al 13 sep. Antes de escribir, comprobar `src/content/noticias/`
+para no duplicar temas ya publicados (ej. ya existe `madrid-p1-2026-lucha-por-el-numero-uno`)._
+
+1. [ ] **Madrid P1 2026 — las palas de los favoritos** — torneo en curso hasta el 6 de
+   septiembre (Movistar Arena). Pieza original con ángulo propio: "Las palas del Madrid P1:
+   qué juegan Tapia, Coello y Galán en el Movistar Arena", con los modelos reales presentes
+   en el catálogo. Datos verificados en premierpadel.com / madridpremierpadel.com.
+   Verificar: web_search + build + check:translations.
+2. [ ] **US Open 2026 — las raquetas de los cuartos de final** — torneo hasta el 13 de
+   septiembre. Pieza original de tenis con los modelos del catálogo (Wilson Blade 98 V10,
+   Babolat Pure Aero, Head Speed MP, Yonex VCore...): qué raqueta usa cada favorito y por
+   qué encaja con su juego. Datos reales (usopen.org, atptour.com). Verificar: web_search +
+   build + check:translations.
+3. [ ] **Paris Major 2026 — previa** — del 7 al 13 de septiembre. Cuando se acerque (o
+   termine el Madrid P1), pieza de previa con los protagonistas y sus palas del catálogo.
+   Verificar: web_search + build + check:translations.
 
 ### 🎨 Visual (mejoras visuales)
 
@@ -91,9 +119,11 @@
     estilo de juego, pareja actual, títulos) en las páginas de jugador, con fuente
     citada. Empezar por los del catálogo: Tapia, Coello, Galán, Momo González, Javi
     Garrido, J. Sanz, Lamperti, Bela... Verificar: web_search + build.
-12. [ ] **"Jugador del día" en homepage** — módulo rotativo que destaca cada día a un
-    jugador del catálogo con su pala y 3 datos verificados. Rotación determinista por
-    fecha para que el SSR sea estable. Verificar: build + screenshot.
+12. [ ] 🔝 **PRIORIDAD ESTA SEMANA** — **"Jugador del día" en homepage** — módulo rotativo
+    que destaca cada día a un jugador del catálogo con su pala y 3 datos verificados
+    (mientras haya torneos en curso da vidilla a la portada y combina con la Regla 0).
+    Rotación determinista por fecha para que el SSR sea estable. Verificar: build +
+    screenshot.
 13. [ ] **FAQ por jugador** — para los 5 jugadores top del catálogo: "¿Qué pala usa X?",
     "¿Qué specs tiene?", "¿Por qué cambió de marca?" con respuestas basadas en fuentes
     reales y enlaces. Verificar: contenido citado + build.
