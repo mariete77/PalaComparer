@@ -41,10 +41,22 @@
 
 ### 🎨 Visual (mejoras visuales)
 
-1. [ ] **Dark mode completo** — toggle sol/luna en la Nav con persistencia
+1. [x] **Dark mode completo** — toggle sol/luna en la Nav con persistencia
    (`localStorage`), respeta `prefers-color-scheme` por defecto, paleta oscura diseñada
    (no un invertido genérico) en toda la web: hero, cards, marquee, tablas de comparar,
    fichas, footer, noticias. Verificar: build + screenshots claro/oscuro.
+   — `2026-09-03`: la web ya era oscura por diseño (tokens ProCourt); se ha añadido el
+   MODO CLARO como segunda paleta diseñada (tokens `html[data-theme="light"]`), toggle
+   sol/luna en la Nav (clave `pc-theme` en localStorage), default = `prefers-color-scheme`
+   (script inline antes del primer paint, sin FOUC), tokens `overlay-*`/`primary-strong`/
+   `padel-strong`/`tenis-strong` para que overlays, bordes y acentos se adapten en toda la
+   web (16 componentes/páginas), y prose de artículos re-mapeado en claro. Build OK +
+   verificación DOM (fondos, colores calculados, toggle, persistencia) + screenshots
+   `docs/screenshots/2026-09-03-dark-mode-{oscuro,claro}.png`. Archivos: globals.css,
+   layout.tsx, Nav.tsx, ThemeToggle.tsx (nuevo), icons.tsx, locales.ts y barrido de
+   overlays en componentes y páginas. NOTA: con el default por sistema, usuarios con OS
+   claro verán la web en claro; si Mario prefiere oscuro por defecto es un cambio de 1
+   línea en THEME_INIT.
 2. [ ] **Blossom Carousel en homepage** — integrar blossom-carousel para los destacados
    de palas y raquetas (reemplazar o mejorar el ProductCarousel actual si gana en tacto
    y transiciones). Mario quiere probarlo. Verificar: build + screenshot del carousel.

@@ -172,15 +172,15 @@ export default async function JugadorPage({
           <div className="md:col-span-4">
             <ProductCard product={actual} bestPrice={mejorPrecio} />
           </div>
-          <dl className="md:col-span-7 md:col-start-6 divide-y divide-white/10 border-t border-white/10">
+          <dl className="md:col-span-7 md:col-start-6 divide-y divide-overlay-10 border-t border-overlay-10">
             {specs.map(([k, v]) => (
               <div key={k} className="grid gap-1 py-4 sm:grid-cols-[12rem_1fr] sm:gap-6">
-                <dt className="font-display font-semibold text-primary-container">{k}</dt>
+                <dt className="font-display font-semibold text-primary-strong">{k}</dt>
                 <dd className="text-sm text-muted">{v}</dd>
               </div>
             ))}
             <div className="grid gap-1 py-4 sm:grid-cols-[12rem_1fr] sm:gap-6">
-              <dt className="font-display font-semibold text-primary-container">
+              <dt className="font-display font-semibold text-primary-strong">
                 {en ? "Best price" : "Mejor precio"}
               </dt>
               <dd className="text-sm text-muted">

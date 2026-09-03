@@ -17,8 +17,8 @@ export default function AddToCompare({ productId }: { productId: string }) {
           selected
             ? "bg-padel text-black"
             : isFull
-              ? "bg-white/5 text-muted cursor-not-allowed"
-              : "bg-white/10 hover:bg-padel hover:text-black"
+              ? "bg-overlay-5 text-muted cursor-not-allowed"
+              : "bg-overlay-10 hover:bg-padel hover:text-black"
         }`}
       >
         {selected ? t("compare.enComparador") : t("compare.anadirComparador")}

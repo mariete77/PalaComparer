@@ -11,7 +11,7 @@ export default function AyanipCredit() {
   const { t } = useLocale();
 
   return (
-    <div className="flex justify-center border-t border-white/5 pt-6">
+    <div className="flex justify-center border-t border-overlay-5 pt-6">
       <a
         href="https://www.ayanip.es"
         target="_blank"

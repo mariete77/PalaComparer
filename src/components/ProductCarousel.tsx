@@ -90,7 +90,7 @@ export default function ProductCarousel({
         onClick={scrollPrev}
         disabled={!canPrev}
         aria-label="Anterior"
-        className="absolute top-1/2 -translate-y-1/2 -left-3 md:-left-5 z-10 w-9 h-9 md:w-11 md:h-11 rounded-full flex items-center justify-center border border-white/10 bg-surface/80 backdrop-blur text-on-surface shadow-lg transition-all hover:bg-primary-container hover:text-on-primary disabled:opacity-0 disabled:pointer-events-none"
+        className="absolute top-1/2 -translate-y-1/2 -left-3 md:-left-5 z-10 w-9 h-9 md:w-11 md:h-11 rounded-full flex items-center justify-center border border-overlay-10 bg-surface/80 backdrop-blur text-on-surface shadow-lg transition-all hover:bg-primary-container hover:text-on-primary disabled:opacity-0 disabled:pointer-events-none"
       >
         <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round">
           <path d="M15 18l-6-6 6-6" />
@@ -101,7 +101,7 @@ export default function ProductCarousel({
         onClick={scrollNext}
         disabled={!canNext}
         aria-label="Siguiente"
-        className="absolute top-1/2 -translate-y-1/2 -right-3 md:-right-5 z-10 w-9 h-9 md:w-11 md:h-11 rounded-full flex items-center justify-center border border-white/10 bg-surface/80 backdrop-blur text-on-surface shadow-lg transition-all hover:bg-primary-container hover:text-on-primary disabled:opacity-0 disabled:pointer-events-none"
+        className="absolute top-1/2 -translate-y-1/2 -right-3 md:-right-5 z-10 w-9 h-9 md:w-11 md:h-11 rounded-full flex items-center justify-center border border-overlay-10 bg-surface/80 backdrop-blur text-on-surface shadow-lg transition-all hover:bg-primary-container hover:text-on-primary disabled:opacity-0 disabled:pointer-events-none"
       >
         <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round">
           <path d="M9 6l6 6-6 6" />
@@ -120,7 +120,7 @@ export default function ProductCarousel({
               className={`h-1.5 rounded-full transition-all duration-300 ${
                 i === activeIndex
                   ? "w-6 bg-primary-container"
-                  : "w-1.5 bg-white/15 hover:bg-white/30"
+                  : "w-1.5 bg-overlay-15 hover:bg-overlay-30"
               }`}
             />
           ))}

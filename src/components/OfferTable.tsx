@@ -50,7 +50,7 @@ export default function OfferTable({ offers, locale }: { offers: Offer[]; locale
           return (
             <div
               key={offer.storeId}
-              className={`rounded-xl p-4 border ${isBest ? "border-primary-container/40 bg-primary-container/5" : "border-white/5 bg-white/[0.03]"}`}
+              className={`rounded-xl p-4 border ${isBest ? "border-primary-container/40 bg-primary-container/5" : "border-overlay-5 bg-overlay-3"}`}
             >
               <div className="flex items-center gap-2 mb-2">
                 <span aria-hidden className="w-2 h-2 rounded-full shrink-0" style={{ background: store.color }} />
@@ -66,7 +66,7 @@ export default function OfferTable({ offers, locale }: { offers: Offer[]; locale
                   <span className="font-display font-bold text-lg">{formatPrice(offer.price)}</span>
                   <p className="text-xs text-muted">{shippingLabel(offer, t)}</p>
                 </div>
-                <span className={`text-xs ${offer.inStock ? "text-padel" : "text-muted"}`}>
+                <span className={`text-xs ${offer.inStock ? "text-padel-strong" : "text-muted"}`}>
                   {offer.inStock ? `● ${t("offers.enStock")}` : `○ ${t("offers.sinStock")}`}
                 </span>
               </div>
@@ -74,7 +74,7 @@ export default function OfferTable({ offers, locale }: { offers: Offer[]; locale
                 href={offer.url}
                 target="_blank"
                 rel="noopener noreferrer nofollow sponsored"
-                className={`mt-3 block text-center px-4 py-2 rounded-lg font-bold text-xs uppercase tracking-widest transition-all ${isBest ? "btn-primary" : "border border-outline-variant text-on-surface-variant hover:bg-white/5"}`}
+                className={`mt-3 block text-center px-4 py-2 rounded-lg font-bold text-xs uppercase tracking-widest transition-all ${isBest ? "btn-primary" : "border border-outline-variant text-on-surface-variant hover:bg-overlay-5"}`}
               >
                 {t("offers.verTienda")}
               </a>
@@ -104,7 +104,7 @@ export default function OfferTable({ offers, locale }: { offers: Offer[]; locale
             return (
               <tr
                 key={offer.storeId}
-                className={`bg-white/[0.03] ${isBest ? "ring-1 ring-padel/40" : ""}`}
+                className={`bg-overlay-3 ${isBest ? "ring-1 ring-padel/40" : ""}`}
               >
                 <td className="px-4 py-3 rounded-l-xl">
                   <div className="flex items-center gap-2">
@@ -126,7 +126,7 @@ export default function OfferTable({ offers, locale }: { offers: Offer[]; locale
                 </td>
                 <td className="px-4 py-3">
                   {offer.inStock ? (
-                    <span className="text-padel">● {t("offers.enStock")}</span>
+                    <span className="text-padel-strong">● {t("offers.enStock")}</span>
                   ) : (
                     <span className="text-muted">○ {t("offers.sinStock")}</span>
                   )}
@@ -148,7 +148,7 @@ export default function OfferTable({ offers, locale }: { offers: Offer[]; locale
                     className={`inline-block px-4 py-2 rounded-lg font-bold text-xs uppercase tracking-widest transition-all whitespace-nowrap ${
                       isBest
                         ? "btn-primary"
-                        : "border border-outline-variant text-on-surface-variant hover:bg-white/5"
+                        : "border border-outline-variant text-on-surface-variant hover:bg-overlay-5"
                     }`}
                   >
                     {t("offers.verTienda")}

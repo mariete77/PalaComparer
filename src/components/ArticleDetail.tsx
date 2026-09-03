@@ -43,7 +43,7 @@ export default function ArticleDetail({ article, locale, Body }: ArticleDetailPr
   const seccion = isGuide(article)
     ? { href: "/guias", label: locale === "en" ? "Guides" : "Guías" }
     : { href: "/noticias", label: locale === "en" ? "News" : "Noticias" };
-  const accent = article.sport === "tenis" ? "text-tenis" : "text-padel";
+  const accent = article.sport === "tenis" ? "text-tenis-strong" : "text-padel-strong";
   const title = article.title[locale];
   const excerpt = article.excerpt[locale];
 
@@ -80,7 +80,7 @@ export default function ArticleDetail({ article, locale, Body }: ArticleDetailPr
           {article.tags.map((t) => (
             <span
               key={t.es}
-              className="px-2.5 py-0.5 rounded-full text-xs bg-white/5 border border-white/10"
+              className="px-2.5 py-0.5 rounded-full text-xs bg-overlay-5 border border-overlay-10"
             >
               {t[locale]}
             </span>
@@ -109,13 +109,13 @@ export default function ArticleDetail({ article, locale, Body }: ArticleDetailPr
           prose-p:text-muted prose-p:leading-relaxed
           prose-li:text-muted
           prose-strong:text-foreground
-          prose-a:text-padel prose-a:no-underline hover:prose-a:underline"
+          prose-a:text-padel-strong prose-a:no-underline hover:prose-a:underline"
       >
         <Body />
       </div>
 
       {related.length > 0 && (
-        <section className="mt-16 pt-10 border-t border-white/5">
+        <section className="mt-16 pt-10 border-t border-overlay-5">
           <h2 className="font-display text-2xl font-bold mb-6">
             {locale === "en" ? "Models in this article" : "Modelos de este artículo"}
           </h2>
@@ -128,7 +128,7 @@ export default function ArticleDetail({ article, locale, Body }: ArticleDetailPr
       )}
 
       {others.length > 0 && (
-        <section className="mt-16 pt-10 border-t border-white/5">
+        <section className="mt-16 pt-10 border-t border-overlay-5">
           <h2 className="font-display text-2xl font-bold mb-6">
             {locale === "en" ? "Keep reading" : "Seguir leyendo"}
           </h2>
@@ -137,7 +137,7 @@ export default function ArticleDetail({ article, locale, Body }: ArticleDetailPr
               <li key={a.slug}>
                 <Link
                   href={articleHref(a, locale)}
-                  className="block rounded-xl bg-white/[0.02] border border-white/5 p-4 hover:bg-white/[0.05] transition-colors"
+                  className="block rounded-xl bg-overlay-2 border border-overlay-5 p-4 hover:bg-overlay-5 transition-colors"
                 >
                   <span className="text-xs text-muted uppercase tracking-wider">
                     {kindLabel(a.kind, locale)}

@@ -79,6 +79,8 @@ const es = {
     menu: "Menú",
     abrirMenu: "Abrir menú",
     cerrarMenu: "Cerrar menú",
+    themeLight: "Cambiar a modo claro",
+    themeDark: "Cambiar a modo oscuro",
   },
   layout: {
     title: "PalaComparer — Encuentra tu pala o raqueta perfecta",
@@ -401,6 +403,8 @@ const en = {
     menu: "Menu",
     abrirMenu: "Open menu",
     cerrarMenu: "Close menu",
+    themeLight: "Switch to light mode",
+    themeDark: "Switch to dark mode",
   },
   layout: {
     title: "PalaComparer — Find your perfect paddle or racket",

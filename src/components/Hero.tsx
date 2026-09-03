@@ -77,11 +77,11 @@ export default function Hero({ content }: { content: HeroContent }) {
           <h1 className="mt-5 font-display text-5xl font-bold leading-[1.05] tracking-tight sm:text-6xl lg:text-7xl">
             {content.titleA}
             <br />
-            <span className="text-primary-container">{content.titleB}</span>
+            <span className="text-primary-strong">{content.titleB}</span>
           </h1>
           <p className="mt-6 max-w-[48ch] text-lg leading-relaxed text-muted">
             {content.tagline}
-            <span className="mt-3 block text-sm font-semibold text-primary-container/90">
+            <span className="mt-3 block text-sm font-semibold text-primary-strong/90">
               {content.updateNote}
             </span>
           </p>

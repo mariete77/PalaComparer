@@ -76,8 +76,8 @@ export default function ProductCard({
         <div className={`card-split-img aspect-[4/5] flex items-center justify-center p-6 ${image.isReal ? "has-real-photo" : ""}`}>
           <span className={`absolute top-3 left-3 font-bold text-[10px] px-2 py-1 rounded border uppercase tracking-wider z-10 ${
             image.isReal
-              ? "bg-surface/70 text-on-surface border-white/10"
-              : "bg-primary-container/20 text-primary-container border-primary-container/30"
+              ? "bg-surface/70 text-on-surface border-overlay-10"
+              : "bg-primary-container/20 text-primary-strong border-primary-container/30"
           }`}>
             {product.sport === "padel" ? t("common.padel") : t("common.tenis")}
           </span>
@@ -133,7 +133,7 @@ export default function ProductCard({
               {bestPrice != null && (
                 <span className="text-muted text-[10px] block">{t("common.desde")}</span>
               )}
-              <div className="font-display font-bold text-lg text-primary-container">
+              <div className="font-display font-bold text-lg text-primary-strong">
                 {bestPrice != null ? formatPrice(bestPrice) : formatPrice(product.price)}
               </div>
             </div>
@@ -149,8 +149,8 @@ export default function ProductCard({
           selected
             ? "bg-primary-container text-on-primary border-primary-container scale-110"
             : isFull
-              ? "bg-surface-container-highest text-muted border-white/5 cursor-not-allowed"
-              : "bg-surface-container-highest text-on-surface-variant border-white/5 hover:bg-primary-container hover:text-on-primary hover:border-primary-container"
+              ? "bg-surface-container-highest text-muted border-overlay-5 cursor-not-allowed"
+              : "bg-surface-container-highest text-on-surface-variant border-overlay-5 hover:bg-primary-container hover:text-on-primary hover:border-primary-container"
         }`}
         title={selected ? t("common.quitarComparador") : t("common.anadirComparador")}
       >

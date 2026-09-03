@@ -57,7 +57,7 @@ export default function NewsList({ articles }: { articles: Article[] }) {
           {t("common.tenis")}
         </Chip>
 
-        <span className="w-px h-5 bg-white/10 mx-1" aria-hidden />
+        <span className="w-px h-5 bg-overlay-10 mx-1" aria-hidden />
 
         {KINDS.map((k) => (
           <Chip
@@ -72,7 +72,7 @@ export default function NewsList({ articles }: { articles: Article[] }) {
         <select
           value={tag}
           onChange={(e) => setTag(e.target.value)}
-          className="ml-auto px-3 py-1.5 rounded-lg bg-white/5 border border-white/10 text-sm focus:outline-none"
+          className="ml-auto px-3 py-1.5 rounded-lg bg-overlay-5 border border-overlay-10 text-sm focus:outline-none"
         >
           <option value="">{t("news.todosTemas")}</option>
           {tags.map((tg) => (
@@ -101,12 +101,12 @@ export default function NewsList({ articles }: { articles: Article[] }) {
 
 function ArticleCard({ article }: { article: Article }) {
   const { locale, t } = useLocale();
-  const accent = article.sport === "tenis" ? "text-tenis" : "text-padel";
+  const accent = article.sport === "tenis" ? "text-tenis-strong" : "text-padel-strong";
 
   return (
     <Link
       href={articleHref(article, locale)}
-      className="card-glow rounded-2xl bg-white/[0.02] p-6 flex flex-col h-full"
+      className="card-glow rounded-2xl bg-overlay-2 p-6 flex flex-col h-full"
     >
       <div className="flex items-center gap-2 mb-3">
         <span className={`text-xs font-bold uppercase tracking-wider ${accent}`}>
@@ -143,7 +143,7 @@ function Chip({
       className={`px-3 py-1.5 rounded-full text-xs font-medium transition-all ${
         active
           ? "bg-padel text-black"
-          : "bg-white/5 border border-white/10 hover:bg-white/10"
+          : "bg-overlay-5 border border-overlay-10 hover:bg-overlay-10"
       }`}
     >
       {children}

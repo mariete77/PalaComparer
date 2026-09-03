@@ -50,7 +50,7 @@ export default async function RaquetasPage({
         )}
       />
       <header className="mb-8">
-        <p className="text-xs font-bold text-tenis uppercase tracking-wider mb-1">
+        <p className="text-xs font-bold text-tenis-strong uppercase tracking-wider mb-1">
           {t("catalog.catalogoCompleto")}
         </p>
         <h1 className="font-display text-4xl font-bold">{t("raquetas.titulo")}</h1>

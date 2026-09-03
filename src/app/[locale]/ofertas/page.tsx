@@ -66,13 +66,13 @@ export default async function OfertasPage({
           {/* Cross-link: análisis calidad/precio con metodología y contexto. */}
           <Link
             href={localePath(locale, "/guias/mejores-palas-calidad-precio-2026")}
-            className="card-glow group mb-8 flex flex-col sm:flex-row sm:items-center justify-between gap-4 rounded-2xl bg-white/[0.02] border border-white/10 p-6 transition-colors hover:bg-white/[0.04]"
+            className="card-glow group mb-8 flex flex-col sm:flex-row sm:items-center justify-between gap-4 rounded-2xl bg-overlay-2 border border-overlay-10 p-6 transition-colors hover:bg-overlay-4"
           >
             <div>
-              <p className="text-xs font-semibold text-padel uppercase tracking-wider">
+              <p className="text-xs font-semibold text-padel-strong uppercase tracking-wider">
                 {t("ofertas.analisisTag")}
               </p>
-              <p className="mt-1 font-display text-lg font-bold group-hover:text-primary-container transition-colors">
+              <p className="mt-1 font-display text-lg font-bold group-hover:text-primary-strong transition-colors">
                 {t("ofertas.analisisTitulo")}
               </p>
               <p className="mt-1 text-sm text-muted leading-relaxed max-w-xl">
@@ -91,7 +91,7 @@ export default async function OfertasPage({
           </div>
         </>
       ) : (
-        <div className="border-t border-white/10 py-16 text-center">
+        <div className="border-t border-overlay-10 py-16 text-center">
           <p className="font-display text-xl font-semibold">{t("ofertas.sinOfertas")}</p>
         </div>
       )}

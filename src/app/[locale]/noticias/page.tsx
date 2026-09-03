@@ -52,7 +52,7 @@ export default async function NoticiasPage({
       {noticias.length > 0 ? (
         <NewsList articles={noticias} />
       ) : (
-        <div className="border-t border-white/10 py-16 text-center">
+        <div className="border-t border-overlay-10 py-16 text-center">
           <p className="font-display text-xl font-semibold">
             {t("news.sinNovedades")}
           </p>

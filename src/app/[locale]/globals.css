@@ -1,6 +1,7 @@
 @import "tailwindcss";
 
 /* ============ ProCourt Precision Design Tokens ============ */
+/* Tema base (SSR, sin JS, y data-theme="dark"): OSCURO — paleta diseñada. */
 :root {
   /* Surfaces */
   --surface: #0e131e;
@@ -24,6 +25,15 @@
   --primary-fixed: #c3f400;
   --primary-fixed-dim: #abd600;
 
+  /* Acentos "fuertes": texto accent sobre superficies claras.
+     En oscuro son idénticos a los acentos normales (cero cambio visual). */
+  --primary-strong: #c3f400;
+  --accent-padel-strong: #c3f400;
+  --accent-tenis-strong: #fb923c;
+
+  /* Foco visible */
+  --focus-ring: #c3f400;
+
   /* Secondary — Slate Blue */
   --secondary: #bec6de;
   --secondary-container: #41495d;
@@ -42,6 +52,99 @@
   /* Accent deporte (compat) */
   --accent-padel: #c3f400;
   --accent-tenis: #fb923c;
+
+  /* Overlays: blanco sobre oscuro (idioma "wash" de la interface). */
+  --overlay-2: rgba(255, 255, 255, 0.02);
+  --overlay-3: rgba(255, 255, 255, 0.03);
+  --overlay-4: rgba(255, 255, 255, 0.04);
+  --overlay-5: rgba(255, 255, 255, 0.05);
+  --overlay-6: rgba(255, 255, 255, 0.06);
+  --overlay-8: rgba(255, 255, 255, 0.08);
+  --overlay-10: rgba(255, 255, 255, 0.1);
+  --overlay-14: rgba(255, 255, 255, 0.14);
+  --overlay-15: rgba(255, 255, 255, 0.15);
+  --overlay-20: rgba(255, 255, 255, 0.2);
+  --overlay-26: rgba(255, 255, 255, 0.26);
+  --overlay-30: rgba(255, 255, 255, 0.3);
+
+  /* Líneas y sombras estructurales */
+  --hairline: rgba(255, 255, 255, 0.06);
+  --card-body: rgba(48, 53, 65, 0.5);
+  --photo-bg: #ffffff;
+  --shadow-card: 0 8px 32px -4px rgba(0, 0, 0, 0.4);
+  --shadow-card-hover: 0 8px 32px -4px rgba(0, 0, 0, 0.5);
+  --shadow-float: 0 -4px 24px rgba(0, 0, 0, 0.3);
+}
+
+/* ============ Modo claro (diseñado, no un invertido genérico) ============
+   Misma arquitectura de tokens, valores claros. El lima sigue siendo el
+   acento de relleno (botones, badges); el texto accent usa los tokens
+   *-strong (oliva profundo / naranja oscuro) para mantener contraste AA. */
+html[data-theme="light"] {
+  /* Surfaces — gris azulado frío de pista */
+  --surface: #f2f4f7;
+  --surface-dim: #eef1f5;
+  --surface-bright: #ffffff;
+  --surface-container-lowest: #ffffff;
+  --surface-container-low: #e9ecf1;
+  --surface-container: #e4e8ee;
+  --surface-container-high: #dde2ea;
+  --surface-container-highest: #d3d9e2;
+  --on-surface: #161b26;
+  --on-surface-variant: #4b5563;
+  --outline: #6b7280;
+  --outline-variant: #c7cdd6;
+
+  /* Primary — tinta + lima de marca */
+  --primary: #161b26;
+  --primary-container: #c3f400;
+  --on-primary: #242e00;
+  --on-primary-container: #485800;
+  --primary-fixed: #c3f400;
+  --primary-fixed-dim: #b5d900;
+
+  --primary-strong: #5f6f00;
+  --accent-padel-strong: #5f6f00;
+  --accent-tenis-strong: #c2410c;
+
+  --focus-ring: #5f6f00;
+
+  /* Secondary — slate */
+  --secondary: #4a5468;
+  --secondary-container: #d9dfea;
+  --on-secondary: #ffffff;
+  --on-secondary-container: #38415a;
+
+  --tertiary-container: #d7e2ff;
+  --on-tertiary-container: #33405e;
+
+  --error: #b3261e;
+  --success: #0e9f6e;
+  --warning: #b45309;
+
+  --accent-padel: #c3f400;
+  --accent-tenis: #fb923c;
+
+  /* Overlays: tinta sobre claro */
+  --overlay-2: rgba(22, 27, 38, 0.035);
+  --overlay-3: rgba(22, 27, 38, 0.05);
+  --overlay-4: rgba(22, 27, 38, 0.06);
+  --overlay-5: rgba(22, 27, 38, 0.07);
+  --overlay-6: rgba(22, 27, 38, 0.08);
+  --overlay-8: rgba(22, 27, 38, 0.1);
+  --overlay-10: rgba(22, 27, 38, 0.12);
+  --overlay-14: rgba(22, 27, 38, 0.16);
+  --overlay-15: rgba(22, 27, 38, 0.18);
+  --overlay-20: rgba(22, 27, 38, 0.22);
+  --overlay-26: rgba(22, 27, 38, 0.3);
+  --overlay-30: rgba(22, 27, 38, 0.32);
+
+  --hairline: rgba(15, 23, 42, 0.08);
+  --card-body: rgba(255, 255, 255, 0.85);
+  --photo-bg: #ffffff;
+  --shadow-card: 0 8px 32px -4px rgba(15, 23, 42, 0.14);
+  --shadow-card-hover: 0 8px 32px -4px rgba(15, 23, 42, 0.18);
+  --shadow-float: 0 -4px 24px rgba(15, 23, 42, 0.14);
 }
 
 @theme inline {
@@ -62,12 +165,26 @@
   --color-primary-container: var(--primary-container);
   --color-on-primary: var(--on-primary);
   --color-on-primary-container: var(--on-primary-container);
+  --color-primary-strong: var(--primary-strong);
+  --color-padel-strong: var(--accent-padel-strong);
+  --color-tenis-strong: var(--accent-tenis-strong);
 
   --color-secondary: var(--secondary);
   --color-secondary-container: var(--secondary-container);
 
   --color-padel: var(--accent-padel);
   --color-tenis: var(--accent-tenis);
+
+  --color-overlay-2: var(--overlay-2);
+  --color-overlay-3: var(--overlay-3);
+  --color-overlay-4: var(--overlay-4);
+  --color-overlay-5: var(--overlay-5);
+  --color-overlay-6: var(--overlay-6);
+  --color-overlay-8: var(--overlay-8);
+  --color-overlay-10: var(--overlay-10);
+  --color-overlay-15: var(--overlay-15);
+  --color-overlay-20: var(--overlay-20);
+  --color-overlay-30: var(--overlay-30);
 
   --color-background: var(--surface);
   --color-foreground: var(--on-surface);
@@ -77,14 +194,18 @@
   --font-display: var(--font-display), system-ui, sans-serif;
 }
 
-html {
+:root {
   color-scheme: dark;
+}
+html[data-theme="light"] {
+  color-scheme: light;
 }
 
 body {
   background: var(--surface);
   color: var(--on-surface);
   font-feature-settings: "ss01", "cv11";
+  transition: background-color 0.25s ease, color 0.25s ease;
 }
 
 /* Custom scrollbar */
@@ -95,10 +216,34 @@ body {
 
 /* ============ Component primitives ============ */
 
+/* Artículos (typography plugin): en oscuro rige prose-invert; en claro se
+   re-mapean las variables invert-* a tinta para que el cuerpo se lea igual
+   de bien sin cambiar el marcado del contenido. */
+html[data-theme="light"] .prose-invert {
+  --tw-prose-invert-body: #3f4757;
+  --tw-prose-invert-headings: #161b26;
+  --tw-prose-invert-lead: #4b5563;
+  --tw-prose-invert-links: #5f6f00;
+  --tw-prose-invert-bold: #161b26;
+  --tw-prose-invert-counters: #6b7280;
+  --tw-prose-invert-bullets: #9ca3af;
+  --tw-prose-invert-hr: rgba(22, 27, 38, 0.12);
+  --tw-prose-invert-quotes: #161b26;
+  --tw-prose-invert-quote-borders: #a3c000;
+  --tw-prose-invert-captions: #6b7280;
+  --tw-prose-invert-kbd: #161b26;
+  --tw-prose-invert-kbd-shadows: rgba(22, 27, 38, 0.12);
+  --tw-prose-invert-code: #161b26;
+  --tw-prose-invert-pre-code: #3a4356;
+  --tw-prose-invert-pre-bg: rgba(22, 27, 38, 0.06);
+  --tw-prose-invert-th-borders: rgba(22, 27, 38, 0.18);
+  --tw-prose-invert-td-borders: rgba(22, 27, 38, 0.1);
+}
+
 /* Split-tone card: image top (radial gradient) + data bottom (slate) */
 .card-split {
   background: var(--surface-container-high);
-  border: 1px solid rgba(255,255,255,0.06);
+  border: 1px solid var(--hairline);
   border-radius: 0.75rem;
   overflow: hidden;
   transition: border-color 0.35s cubic-bezier(0.16, 1, 0.3, 1), transform 0.35s cubic-bezier(0.16, 1, 0.3, 1), box-shadow 0.35s ease;
@@ -106,7 +251,7 @@ body {
 .card-split:hover {
   border-color: rgba(195,244,0,0.3);
   transform: translateY(-4px);
-  box-shadow: 0 8px 32px -4px rgba(0,0,0,0.4);
+  box-shadow: var(--shadow-card);
 }
 .card-split-img {
   background: linear-gradient(to bottom, var(--surface-container-low), var(--surface-container-high));
@@ -117,11 +262,11 @@ body {
    Las ilustraciones SVG generadas ya traen su fondo oscuro, así que solo se
    aplica a productos con fotos reales. */
 .card-split-img.has-real-photo {
-  background: #ffffff;
+  background: var(--photo-bg);
 }
 .card-split-body {
-  background: rgba(48,53,65,0.5);
-  border-top: 1px solid rgba(255,255,255,0.05);
+  background: var(--card-body);
+  border-top: 1px solid var(--hairline);
 }
 
 /* Primary button — flat lime */
@@ -156,15 +301,15 @@ body {
   transform: scale(0.98);
 }
 .btn-outline {
-  border: 1px solid rgba(255, 255, 255, 0.14);
+  border: 1px solid var(--overlay-15);
   color: var(--on-surface);
   font-weight: 700;
   transition: background-color 0.2s ease, border-color 0.2s ease, transform 0.1s ease;
 }
 .btn-outline:hover {
   transform: translateY(-1px);
-  background: rgba(255, 255, 255, 0.06);
-  border-color: rgba(255, 255, 255, 0.26);
+  background: var(--overlay-6);
+  border-color: var(--overlay-30);
 }
 .btn-outline:active {
   transform: scale(0.98);
@@ -172,7 +317,7 @@ body {
 
 /* Foco visible en toda la página (antes se heredaba el del navegador) */
 :focus-visible {
-  outline: 2px solid var(--primary-container);
+  outline: 2px solid var(--focus-ring);
   outline-offset: 3px;
 }
 
@@ -223,11 +368,11 @@ body {
 /* Filter pill */
 .pill {
   background: var(--surface-container-high);
-  border: 1px solid rgba(255,255,255,0.08);
+  border: 1px solid var(--overlay-8);
   color: var(--on-surface-variant);
   transition: background-color 0.15s ease, border-color 0.15s ease, color 0.15s ease, transform 0.15s ease;
 }
-.pill:hover { background: rgba(255,255,255,0.05); transform: translateY(-1px); }
+.pill:hover { background: var(--overlay-5); transform: translateY(-1px); }
 .pill.active {
   background: var(--primary-container);
   color: var(--on-primary);
@@ -237,27 +382,27 @@ body {
 /* Glassmorphic floating bar — solid, no blur */
 .glass-bar {
   background: var(--surface-container);
-  border: 1px solid rgba(255,255,255,0.08);
+  border: 1px solid var(--overlay-8);
   border-top: 2px solid var(--primary-container);
-  box-shadow: 0 -4px 24px rgba(0,0,0,0.3);
+  box-shadow: var(--shadow-float);
 }
 
 /* Spec cell in data grid */
 .spec-cell {
   background: var(--surface-container-low);
-  border: 1px solid rgba(255,255,255,0.05);
+  border: 1px solid var(--overlay-5);
   border-radius: 0.5rem;
 }
 
 /* Legacy compat (used across pages) */
 .bg-grid { /* merged into body */ }
 .card-glow {
-  box-shadow: 0 0 0 1px rgba(255,255,255,0.06);
+  box-shadow: 0 0 0 1px var(--overlay-6);
   transition: transform 0.4s cubic-bezier(0.16,1,0.3,1), box-shadow 0.4s ease;
 }
 .card-glow:hover {
   transform: translateY(-4px);
-  box-shadow: 0 8px 32px -4px rgba(0,0,0,0.5), 0 0 0 1px rgba(195,244,0,0.2);
+  box-shadow: var(--shadow-card-hover), 0 0 0 1px rgba(195,244,0,0.2);
 }
 
 @media (prefers-reduced-motion: reduce) {

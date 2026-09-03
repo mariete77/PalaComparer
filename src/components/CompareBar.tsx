@@ -23,7 +23,7 @@ export default function CompareBar() {
             return (
             <div
               key={p.id}
-              className="relative w-12 h-16 rounded-lg bg-white/5 overflow-hidden flex-shrink-0 group"
+              className="relative w-12 h-16 rounded-lg bg-overlay-5 overflow-hidden flex-shrink-0 group"
             >
               <Image src={img.src}
             unoptimized={img.unoptimized} alt={p.model} fill className="object-contain p-1" sizes="48px" />
@@ -37,7 +37,7 @@ export default function CompareBar() {
             );
           })}
           {ids.length < 3 && (
-            <div className="w-12 h-16 rounded-lg border-2 border-dashed border-white/20 flex items-center justify-center text-muted text-xs flex-shrink-0">
+            <div className="w-12 h-16 rounded-lg border-2 border-dashed border-overlay-20 flex items-center justify-center text-muted text-xs flex-shrink-0">
               +
             </div>
           )}
@@ -54,7 +54,7 @@ export default function CompareBar() {
             className={`px-4 py-2 rounded-lg font-bold text-xs uppercase tracking-widest transition-all ${
               ids.length >= 2
                 ? "btn-primary"
-                : "bg-white/10 text-muted cursor-not-allowed pointer-events-none"
+                : "bg-overlay-10 text-muted cursor-not-allowed pointer-events-none"
             }`}
           >
             {t("compareBar.compararN", { n: ids.length })}

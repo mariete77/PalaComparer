@@ -75,12 +75,12 @@ export default function Catalog({ products, sport, priceIndex }: Props) {
     return r;
   }, [products, priceIndex, brand, level, style, shape, maxPrice, sort, query]);
 
-  const accentText = sport === "padel" ? "text-padel" : "text-tenis";
+  const accentText = sport === "padel" ? "text-padel-strong" : "text-tenis-strong";
 
   return (
     <div className="grid lg:grid-cols-[260px_1fr] gap-8">
       {/* FILTROS */}
-      <aside className="space-y-6 lg:sticky lg:top-24 self-start rounded-xl bg-surface-container-high/50 backdrop-blur-md border border-white/5 p-5">
+      <aside className="space-y-6 lg:sticky lg:top-24 self-start rounded-xl bg-surface-container-high/50 backdrop-blur-md border border-overlay-5 p-5">
         <div>
           <h2 className="font-display font-bold text-sm text-primary uppercase tracking-widest mb-1">
             {t("catalog.filtros")}
@@ -177,7 +177,7 @@ export default function Catalog({ products, sport, priceIndex }: Props) {
             setMaxPrice(350);
             setQuery("");
           }}
-          className="w-full border border-outline-variant text-on-surface-variant font-bold text-xs uppercase tracking-widest p-3 rounded-lg hover:bg-white/5 transition-colors"
+          className="w-full border border-outline-variant text-on-surface-variant font-bold text-xs uppercase tracking-widest p-3 rounded-lg hover:bg-overlay-5 transition-colors"
         >
           {t("catalog.limpiarTodo")}
         </button>
@@ -212,7 +212,7 @@ export default function Catalog({ products, sport, priceIndex }: Props) {
                 setMaxPrice(350);
                 setQuery("");
               }}
-              className="mt-3 text-sm text-padel hover:underline"
+              className="mt-3 text-sm text-padel-strong hover:underline"
             >
               {t("catalog.limpiarFiltros")}
             </button>

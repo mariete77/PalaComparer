@@ -82,10 +82,10 @@ export default async function HomePage({
           <h2 className="font-display text-2xl font-bold leading-tight tracking-tight sm:text-3xl md:col-span-4">
             {t("home.pilarTitulo")}
           </h2>
-          <dl className="divide-y divide-white/10 border-t border-white/10 md:col-span-7 md:col-start-6">
+          <dl className="divide-y divide-overlay-10 border-t border-overlay-10 md:col-span-7 md:col-start-6">
             {pilares.map((p) => (
               <div key={p.title} className="grid gap-1 py-5 sm:grid-cols-[13rem_1fr] sm:gap-8">
-                <dt className="font-display font-semibold text-primary-container">
+                <dt className="font-display font-semibold text-primary-strong">
                   {p.title}
                 </dt>
                 <dd className="text-sm leading-relaxed text-muted">{p.desc}</dd>
@@ -101,7 +101,7 @@ export default async function HomePage({
           <h2 className="font-display text-3xl font-bold tracking-tight">
             {t("home.ofertasSemana")}
           </h2>
-          <Link href={lp("/ofertas")} className="shrink-0 text-sm font-semibold text-padel hover:underline">
+          <Link href={lp("/ofertas")} className="shrink-0 text-sm font-semibold text-padel-strong hover:underline">
             {t("common.verTodas")}
           </Link>
         </div>
@@ -121,7 +121,7 @@ export default async function HomePage({
           <h2 className="font-display text-3xl font-bold tracking-tight">
             {t("home.palasDelMomento")}
           </h2>
-          <Link href={lp("/palas")} className="shrink-0 text-sm font-semibold text-padel hover:underline">
+          <Link href={lp("/palas")} className="shrink-0 text-sm font-semibold text-padel-strong hover:underline">
             {t("common.verTodas")}
           </Link>
         </div>
@@ -140,7 +140,7 @@ export default async function HomePage({
           <h2 className="font-display text-3xl font-bold tracking-tight">
             {t("home.raquetasDestacadas")}
           </h2>
-          <Link href={lp("/raquetas")} className="shrink-0 text-sm font-semibold text-tenis hover:underline">
+          <Link href={lp("/raquetas")} className="shrink-0 text-sm font-semibold text-tenis-strong hover:underline">
             {t("common.verTodas")}
           </Link>
         </div>
@@ -159,7 +159,7 @@ export default async function HomePage({
           <h2 className="font-display text-3xl font-bold tracking-tight">
             {t("home.antesDeComprar")}
           </h2>
-          <Link href={lp("/noticias")} className="shrink-0 text-sm font-semibold text-padel hover:underline">
+          <Link href={lp("/noticias")} className="shrink-0 text-sm font-semibold text-padel-strong hover:underline">
             {t("common.verTodas")}
           </Link>
         </div>
@@ -168,12 +168,12 @@ export default async function HomePage({
             <Link
               key={a.slug}
               href={articleHref(a, locale)}
-              className="group card-glow rounded-2xl bg-white/[0.02] p-6 flex flex-col"
+              className="group card-glow rounded-2xl bg-overlay-2 p-6 flex flex-col"
             >
-              <span className="text-xs font-semibold text-padel">
+              <span className="text-xs font-semibold text-padel-strong">
                 {kindLabel(a.kind, locale)}
               </span>
-              <h3 className="mt-3 font-display text-lg font-bold leading-snug transition-colors group-hover:text-primary-container flex-1">
+              <h3 className="mt-3 font-display text-lg font-bold leading-snug transition-colors group-hover:text-primary-strong flex-1">
                 {a.title[locale]}
               </h3>
               <p className="mt-3 text-sm text-muted leading-relaxed line-clamp-2">

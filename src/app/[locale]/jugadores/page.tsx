@@ -79,14 +79,14 @@ export default async function JugadoresPage({
       {grupos.map((grupo) => (
         <section key={grupo.titulo} className="mb-12">
           <h2 className="font-display text-2xl font-bold mb-5">{grupo.titulo}</h2>
-          <ul className="grid gap-x-8 sm:grid-cols-2 lg:grid-cols-3 border-t border-white/10">
+          <ul className="grid gap-x-8 sm:grid-cols-2 lg:grid-cols-3 border-t border-overlay-10">
             {grupo.jugadores.map((p) => {
               const actual = p.products[0];
               return (
-                <li key={p.slug} className="border-b border-white/10">
+                <li key={p.slug} className="border-b border-overlay-10">
                   <Link
                     href={lp(`/jugadores/${p.slug}`)}
-                    className="group block py-4 transition-colors hover:text-primary-container"
+                    className="group block py-4 transition-colors hover:text-primary-strong"
                   >
                     <span className="font-display font-semibold">{p.name}</span>
                     <span className="block text-sm text-muted">

@@ -66,7 +66,7 @@ export default function FinderPage() {
       {step !== "results" ? (
         <>
           <div className="text-center mb-12">
-            <p className="text-xs font-bold text-padel mb-2">
+            <p className="text-xs font-bold text-padel-strong mb-2">
               {t("finder.etiqueta")}
             </p>
             <h1 className="font-display text-4xl sm:text-5xl font-bold">
@@ -79,8 +79,8 @@ export default function FinderPage() {
             <QuestionStep
               question={t("finder.preguntaDeporte")}
               options={[
-                { value: "padel", label: t("common.padel"), desc: t("finder.deportePadel"), icon: <PadelIcon className="w-7 h-7 text-padel" /> },
-                { value: "tenis", label: t("common.tenis"), desc: t("finder.deporteTenis"), icon: <TennisIcon className="w-7 h-7 text-tenis" /> },
+                { value: "padel", label: t("common.padel"), desc: t("finder.deportePadel"), icon: <PadelIcon className="w-7 h-7 text-padel-strong" /> },
+                { value: "tenis", label: t("common.tenis"), desc: t("finder.deporteTenis"), icon: <TennisIcon className="w-7 h-7 text-tenis-strong" /> },
               ]}
               onSelect={(v) => {
                 setSport(v as Sport);
@@ -143,7 +143,7 @@ export default function FinderPage() {
               <h2 className="font-display text-2xl font-bold mb-8">
                 {t("finder.preguntaPresupuesto")}
               </h2>
-              <p className="font-display text-5xl font-bold text-padel mb-6">
+              <p className="font-display text-5xl font-bold text-padel-strong mb-6">
                 {budget} €
               </p>
               <input
@@ -158,7 +158,7 @@ export default function FinderPage() {
               <div className="flex items-center justify-center gap-3">
                 <button
                   onClick={() => setStep("priority")}
-                  className="px-6 py-3 rounded-xl border border-white/10 hover:bg-white/5"
+                  className="px-6 py-3 rounded-xl border border-overlay-10 hover:bg-overlay-5"
                 >
                   ← {t("finder.atras")}
                 </button>
@@ -175,7 +175,7 @@ export default function FinderPage() {
       ) : (
         <div>
           <div className="text-center mb-10">
-            <p className="text-xs font-bold text-padel mb-2">
+            <p className="text-xs font-bold text-padel-strong mb-2">
               {t("finder.tusRecomendaciones")}
             </p>
             <h1 className="font-display text-4xl font-bold">
@@ -207,7 +207,7 @@ export default function FinderPage() {
           <div className="text-center">
             <button
               onClick={restart}
-              className="px-6 py-3 rounded-xl border border-white/10 hover:bg-white/5"
+              className="px-6 py-3 rounded-xl border border-overlay-10 hover:bg-overlay-5"
             >
               ↺ {t("finder.empezarDeNuevo")}
             </button>
@@ -227,7 +227,7 @@ function Progress({ step }: { step: Step }) {
         <div
           key={s}
           className={`h-1.5 rounded-full transition-all ${
-            i <= idx ? "w-10 bg-padel" : "w-6 bg-white/10"
+            i <= idx ? "w-10 bg-padel" : "w-6 bg-overlay-10"
           }`}
         />
       ))}
@@ -275,7 +275,7 @@ function QuestionStep({
           <button
             key={o.value}
             onClick={() => onSelect(o.value)}
-            className="card-glow rounded-2xl bg-white/[0.02] p-6 text-left hover:bg-white/[0.05] transition-colors flex items-start gap-4"
+            className="card-glow rounded-2xl bg-overlay-2 p-6 text-left hover:bg-overlay-5 transition-colors flex items-start gap-4"
           >
             {o.icon && <div className="mt-0.5 shrink-0">{o.icon}</div>}
             <div>

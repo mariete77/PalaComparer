@@ -10,7 +10,7 @@ export default function Footer() {
   const year = new Date().getFullYear();
 
   return (
-    <footer className="relative isolate overflow-hidden border-t border-white/5 mt-24 bg-surface-container-lowest">
+    <footer className="relative isolate overflow-hidden border-t border-overlay-5 mt-24 bg-surface-container-lowest">
       {/* Textura de fondo: pista de noche desenfocada. Va al 40% y con un velo
           encima porque el footer es texto a 4 columnas y la legibilidad manda
           sobre la imagen. Decorativa: aria-hidden y sin alt. */}
@@ -26,7 +26,7 @@ export default function Footer() {
       <div className="max-w-[1280px] mx-auto px-6 py-16">
         <div className="grid grid-cols-2 md:grid-cols-4 gap-10 pb-10">
           <div className="col-span-2 md:col-span-1">
-            <span className="font-display font-extrabold text-lg text-primary-container tracking-tighter">
+            <span className="font-display font-extrabold text-lg text-primary-strong tracking-tighter">
               PalaComparer
             </span>
             <p className="text-sm text-muted mt-3 leading-relaxed">
@@ -38,16 +38,16 @@ export default function Footer() {
               {t("footer.catalogo")}
             </h4>
             <nav className="flex flex-col gap-2.5">
-              <Link href={lp("/palas")} className="text-sm text-muted hover:text-primary-container transition-colors">
+              <Link href={lp("/palas")} className="text-sm text-muted hover:text-primary-strong transition-colors">
                 {t("footer.palasPadel")}
               </Link>
-              <Link href={lp("/raquetas")} className="text-sm text-muted hover:text-primary-container transition-colors">
+              <Link href={lp("/raquetas")} className="text-sm text-muted hover:text-primary-strong transition-colors">
                 {t("footer.raquetasTenis")}
               </Link>
-              <Link href={lp("/finder")} className="text-sm text-muted hover:text-primary-container transition-colors">
+              <Link href={lp("/finder")} className="text-sm text-muted hover:text-primary-strong transition-colors">
                 {t("footer.encuentraTuya")}
               </Link>
-              <Link href={lp("/comparar")} className="text-sm text-muted hover:text-primary-container transition-colors">
+              <Link href={lp("/comparar")} className="text-sm text-muted hover:text-primary-strong transition-colors">
                 {t("footer.comparador")}
               </Link>
             </nav>
@@ -57,22 +57,22 @@ export default function Footer() {
               {t("footer.contenido")}
             </h4>
             <nav className="flex flex-col gap-2.5">
-              <Link href={lp("/guias")} className="text-sm text-muted hover:text-primary-container transition-colors">
+              <Link href={lp("/guias")} className="text-sm text-muted hover:text-primary-strong transition-colors">
                 {t("footer.guias")}
               </Link>
-              <Link href={lp("/noticias")} className="text-sm text-muted hover:text-primary-container transition-colors">
+              <Link href={lp("/noticias")} className="text-sm text-muted hover:text-primary-strong transition-colors">
                 {t("footer.noticiasGuias")}
               </Link>
-              <Link href={lp("/metodologia")} className="text-sm text-muted hover:text-primary-container transition-colors">
+              <Link href={lp("/metodologia")} className="text-sm text-muted hover:text-primary-strong transition-colors">
                 {t("footer.metodologia")}
               </Link>
-              <Link href={lp("/jugadores")} className="text-sm text-muted hover:text-primary-container transition-colors">
+              <Link href={lp("/jugadores")} className="text-sm text-muted hover:text-primary-strong transition-colors">
                 {t("footer.jugadores")}
               </Link>
               {/* RSS: enlace directo (no localizado) para lectores y agregadores. */}
               <a
                 href="/rss.xml"
-                className="text-sm text-muted hover:text-primary-container transition-colors inline-flex items-center gap-1.5"
+                className="text-sm text-muted hover:text-primary-strong transition-colors inline-flex items-center gap-1.5"
               >
                 RSS
                 <svg width="12" height="12" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
@@ -89,13 +89,13 @@ export default function Footer() {
             </p>
             {/* Enlaces legales: obligatorios y accesibles desde cualquier página. */}
             <nav className="flex flex-col gap-2 mt-4">
-              <Link href={lp("/legal/aviso-legal")} className="text-xs text-muted hover:text-primary-container transition-colors">
+              <Link href={lp("/legal/aviso-legal")} className="text-xs text-muted hover:text-primary-strong transition-colors">
                 {t("footer.avisoLegal")}
               </Link>
-              <Link href={lp("/legal/privacidad")} className="text-xs text-muted hover:text-primary-container transition-colors">
+              <Link href={lp("/legal/privacidad")} className="text-xs text-muted hover:text-primary-strong transition-colors">
                 {t("footer.privacidad")}
               </Link>
-              <Link href={lp("/legal/cookies")} className="text-xs text-muted hover:text-primary-container transition-colors">
+              <Link href={lp("/legal/cookies")} className="text-xs text-muted hover:text-primary-strong transition-colors">
                 Cookies
               </Link>
             </nav>

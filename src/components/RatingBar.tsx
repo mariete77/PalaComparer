@@ -69,7 +69,7 @@ export default function RatingBar({
               key={i}
               className="flex-1 rounded-[2px] transition-colors"
               style={{
-                backgroundColor: active ? color : "rgba(255,255,255,0.06)",
+                backgroundColor: active ? color : "var(--overlay-6)",
                 boxShadow: active ? `0 0 4px ${color}40` : "none",
               }}
             />

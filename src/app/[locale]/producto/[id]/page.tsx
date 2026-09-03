@@ -76,7 +76,7 @@ export default async function ProductPage({
   const p = getProduct(id);
   if (!p) notFound();
 
-  const accentText = p.sport === "padel" ? "text-padel" : "text-tenis";
+  const accentText = p.sport === "padel" ? "text-padel-strong" : "text-tenis-strong";
   const accentBg = p.sport === "padel" ? "bg-padel" : "bg-tenis";
   const accentVar = p.sport === "padel" ? "var(--accent-padel)" : "var(--accent-tenis)";
 
@@ -149,7 +149,7 @@ export default async function ProductPage({
         {/* Imagen */}
         <div>
           <div className={`relative aspect-[2/3] max-h-[600px] rounded-3xl overflow-hidden card-glow ${
-            image.isReal ? "bg-white" : "bg-gradient-to-b from-white/5 to-transparent"
+            image.isReal ? "bg-white" : "bg-gradient-to-b from-overlay-5 to-transparent"
           }`}>
             <Image
               src={image.src}
@@ -245,7 +245,7 @@ export default async function ProductPage({
           {(() => {
             const ratings = getRatings(p);
             return ratings ? (
-              <div className="mt-6 rounded-2xl bg-white/[0.03] border border-white/5 p-5">
+              <div className="mt-6 rounded-2xl bg-overlay-3 border border-overlay-5 p-5">
                 <h3 className="font-display text-sm font-bold uppercase tracking-wider text-muted mb-3">
                   {t("product.rendimiento")}
                 </h3>
@@ -258,7 +258,7 @@ export default async function ProductPage({
             {p.level.map((l) => (
               <span
                 key={l}
-                className="px-3 py-1 rounded-full text-xs font-medium bg-white/5 border border-white/10"
+                className="px-3 py-1 rounded-full text-xs font-medium bg-overlay-5 border border-overlay-10"
               >
                 {translate(locale, `catalog.nivel.${l}`)}
               </span>
@@ -288,7 +288,7 @@ export default async function ProductPage({
           {specs.map(([label, value]) => (
             <div
               key={label}
-              className="rounded-xl bg-white/[0.03] border border-white/5 p-4"
+              className="rounded-xl bg-overlay-3 border border-overlay-5 p-4"
             >
               <p className="text-xs text-muted uppercase tracking-wider mb-1">
                 {label}
@@ -313,7 +313,7 @@ export default async function ProductPage({
             <OfferTable offers={offers} locale={locale} />
 
             {history.length > 1 && (
-              <div className="rounded-2xl bg-white/[0.02] border border-white/5 p-5">
+              <div className="rounded-2xl bg-overlay-2 border border-overlay-5 p-5">
                 <h3 className="font-display font-semibold mb-1">
                   {t("product.evolucionPrecio")}
                 </h3>
@@ -358,7 +358,7 @@ export default async function ProductPage({
               <li key={a.slug}>
                 <Link
                   href={articleHref(a, locale)}
-                  className="block h-full rounded-xl bg-white/[0.02] border border-white/5 p-5 hover:bg-white/[0.05] transition-colors"
+                  className="block h-full rounded-xl bg-overlay-2 border border-overlay-5 p-5 hover:bg-overlay-5 transition-colors"
                 >
                   <span className="text-xs font-bold uppercase tracking-wider text-muted">
                     {kindLabel(a.kind, locale)} · {a.readingMinutes} {t("common.min")}

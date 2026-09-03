@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import Script from "next/script";
 import { Space_Grotesk, Hanken_Grotesk } from "next/font/google";
 import { GoogleAnalytics } from "@next/third-parties/google";
 import { Analytics } from "@vercel/analytics/next";
@@ -35,6 +36,13 @@ const hanken = Hanken_Grotesk({
 });
 
 const GA_ID = process.env.NEXT_PUBLIC_GA_ID ?? "G-4YZ39NTPE6";
+
+/**
+ * Init de tema antes del primer paint (se inyecta en <head> vía
+ * beforeInteractive): lee la preferencia guardada o respeta
+ * prefers-color-scheme. Sin esto habría un flash de tema incorrecto.
+ */
+const THEME_INIT = `(function(){try{var t=localStorage.getItem("pc-theme");if(t!=="light"&&t!=="dark"){t=window.matchMedia&&window.matchMedia("(prefers-color-scheme: light)").matches?"light":"dark";}document.documentElement.setAttribute("data-theme",t);}catch(e){document.documentElement.setAttribute("data-theme","dark");}})();`;
 
 export function generateStaticParams() {
   return [{ locale: "es" }, { locale: "en" }];
@@ -97,8 +105,18 @@ export default async function RootLayout({
   const bcp = LOCALE_BCP47[locale];
 
   return (
-    <html lang={bcp} className={`${spaceGrotesk.variable} ${hanken.variable}`}>
+    <html
+      lang={bcp}
+      data-theme="dark"
+      suppressHydrationWarning
+      className={`${spaceGrotesk.variable} ${hanken.variable}`}
+    >
       <body className="font-sans antialiased min-h-screen overflow-x-hidden">
+        <Script
+          id="theme-init"
+          strategy="beforeInteractive"
+          dangerouslySetInnerHTML={{ __html: THEME_INIT }}
+        />
         <LocaleProvider locale={locale}>
           {/* Entidad de marca: sin esto, ninguna IA puede verificar quién compara
             ni con qué autoridad. */}

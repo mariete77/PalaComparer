@@ -138,7 +138,7 @@ function CompareContent() {
         <p className="text-muted mt-2">
           {t("compare.seleccionadas", { n: products.length })}{" "}
           {!sameSport && (
-            <span className="text-tenis">
+            <span className="text-tenis-strong">
               {t("compare.deportesDistintos")}
             </span>
           )}
@@ -168,10 +168,10 @@ function CompareContent() {
                 const img = getProductImage(p);
                 return (
                 <th key={p.id} className="p-2 sm:p-3 align-top">
-                  <div className={`relative rounded-2xl border border-white/5 p-3 sm:p-4 group ${img.isReal ? "bg-white" : "bg-white/[0.03]"}`}>
+                  <div className={`relative rounded-2xl border border-overlay-5 p-3 sm:p-4 group ${img.isReal ? "bg-white" : "bg-overlay-3"}`}>
                     <button
                       onClick={() => remove(p.id)}
-                      className="absolute top-2 right-2 w-6 h-6 rounded-full bg-white/10 hover:bg-red-500/80 text-xs opacity-0 group-hover:opacity-100 transition-opacity z-10"
+                      className="absolute top-2 right-2 w-6 h-6 rounded-full bg-overlay-10 hover:bg-red-500/80 text-xs opacity-0 group-hover:opacity-100 transition-opacity z-10"
                     >
                       ✕
                     </button>
@@ -205,7 +205,7 @@ function CompareContent() {
               return (
                 <tr
                   key={row.label}
-                  className={i % 2 === 0 ? "bg-white/[0.02]" : ""}
+                  className={i % 2 === 0 ? "bg-overlay-2" : ""}
                 >
                   <td className="p-2 sm:p-3 text-[10px] sm:text-xs font-bold uppercase tracking-wider text-muted align-top">
                     {row.label}
@@ -215,7 +215,7 @@ function CompareContent() {
                       key={j}
                       className={`p-2 sm:p-3 text-xs sm:text-sm text-center align-top ${
                         isPrice
-                          ? "font-display font-bold text-padel"
+                          ? "font-display font-bold text-padel-strong"
                           : allSame
                             ? "text-muted"
                             : ""
@@ -231,7 +231,7 @@ function CompareContent() {
             {(() => {
               const ratingKeys: RatingKey[] = ["potencia", "control", "dulce", "manejo"];
               return ratingKeys.map((rk, idx) => (
-                <tr key={`rating-${rk}`} className={idx === 0 ? "border-t border-white/10" : ""}>
+                <tr key={`rating-${rk}`} className={idx === 0 ? "border-t border-overlay-10" : ""}>
                   <td className="p-2 sm:p-3 text-[10px] sm:text-xs font-bold uppercase tracking-wider text-muted align-top">
                     {rk === "potencia" ? (locale === "en" ? "Power" : "Potencia")
                       : rk === "control" ? "Control"
@@ -263,7 +263,7 @@ function CompareContent() {
         {products.map((p) => (
           <div
             key={p.id}
-            className="rounded-2xl bg-white/[0.03] border border-white/5 p-5"
+            className="rounded-2xl bg-overlay-3 border border-overlay-5 p-5"
           >
             <h3 className="font-display font-semibold text-sm mb-2">
               {p.brand} {p.model}
@@ -296,10 +296,10 @@ function AddSearch({
         value={query}
         onChange={(e) => setQuery(e.target.value)}
         placeholder={placeholder}
-        className="w-full px-4 py-3 rounded-xl bg-white/5 border border-white/10 focus:border-padel/50 focus:outline-none"
+        className="w-full px-4 py-3 rounded-xl bg-overlay-5 border border-overlay-10 focus:border-padel/50 focus:outline-none"
       />
       {results.length > 0 && (
-        <div className="absolute top-full mt-2 left-0 right-0 rounded-xl bg-slate-900 border border-white/10 shadow-2xl overflow-hidden z-20">
+        <div className="absolute top-full mt-2 left-0 right-0 rounded-xl bg-surface-container border border-overlay-10 shadow-2xl overflow-hidden z-20">
           {results.map((p) => (
             <button
               key={p.id}
@@ -307,7 +307,7 @@ function AddSearch({
                 onAdd(p.id);
                 setQuery("");
               }}
-              className="w-full px-4 py-3 flex items-center gap-3 hover:bg-white/5 transition-colors text-left"
+              className="w-full px-4 py-3 flex items-center gap-3 hover:bg-overlay-5 transition-colors text-left"
             >
               <div className="relative w-8 h-12 flex-shrink-0">
                 <Image
@@ -323,7 +323,7 @@ function AddSearch({
                 <p className="text-xs text-muted">{p.brand}</p>
                 <p className="text-sm font-medium truncate">{p.model}</p>
               </div>
-              <span className="ml-auto text-padel font-bold">+</span>
+              <span className="ml-auto text-padel-strong font-bold">+</span>
             </button>
           ))}
         </div>

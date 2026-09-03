@@ -52,7 +52,7 @@ export default async function PalasPage({
         )}
       />
       <header className="mb-8">
-        <p className="text-xs font-bold text-padel uppercase tracking-wider mb-1">
+        <p className="text-xs font-bold text-padel-strong uppercase tracking-wider mb-1">
           {t("catalog.catalogoCompleto")}
         </p>
         <h1 className="font-display text-4xl font-bold">{t("palas.titulo")}</h1>

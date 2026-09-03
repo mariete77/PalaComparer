@@ -20,7 +20,7 @@ export function Callout({
   return (
     <aside className="not-prose my-8 rounded-2xl border border-padel/25 bg-padel/[0.06] p-5">
       {title && (
-        <p className="font-display font-semibold text-padel mb-1">{title}</p>
+        <p className="font-display font-semibold text-padel-strong mb-1">{title}</p>
       )}
       <div className="text-sm text-muted leading-relaxed [&>p]:m-0 [&>p+p]:mt-2">
         {children}
@@ -39,7 +39,7 @@ export function ProductRef({ id }: { id: string }) {
   return (
     <Link
       href={lp(`/producto/${id}`)}
-      className="not-prose inline-flex items-baseline gap-1.5 font-medium text-padel hover:underline"
+      className="not-prose inline-flex items-baseline gap-1.5 font-medium text-padel-strong hover:underline"
     >
       {product.brand} {product.model}
       {best !== null && (
@@ -75,7 +75,7 @@ export function SpecList({ children }: { children: React.ReactNode }) {
 
 export function SpecRow({ label, value }: { label: string; value: string }) {
   return (
-    <div className="rounded-xl bg-white/[0.03] border border-white/5 p-4">
+    <div className="rounded-xl bg-overlay-3 border border-overlay-5 p-4">
       <dt className="text-xs text-muted uppercase tracking-wider mb-1">{label}</dt>
       <dd className="font-semibold m-0">{value}</dd>
     </div>

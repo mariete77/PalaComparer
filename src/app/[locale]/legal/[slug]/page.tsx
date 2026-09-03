@@ -83,7 +83,7 @@ export default async function LegalPage({
         ))}
       </div>
 
-      <p className="mt-12 border-t border-white/10 pt-6 text-xs text-muted">
+      <p className="mt-12 border-t border-overlay-10 pt-6 text-xs text-muted">
         {en ? "Last updated" : "Última actualización"}: {LEGAL_PAGES.updated}
       </p>
     </div>

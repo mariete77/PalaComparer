@@ -44,7 +44,7 @@ export default async function MetodologiaPage({
         }}
       />
       <header className="mb-12">
-        <p className="text-xs font-bold uppercase tracking-wider text-padel mb-2">{t("metodologia.eyebrow")}</p>
+        <p className="text-xs font-bold uppercase tracking-wider text-padel-strong mb-2">{t("metodologia.eyebrow")}</p>
         <h1 className="font-display text-4xl font-bold leading-tight">{title}</h1>
         <p className="mt-5 max-w-3xl text-lg leading-relaxed text-muted">{t("metodologia.resumen")}</p>
       </header>

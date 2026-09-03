@@ -5,6 +5,7 @@ import Image from "next/image";
 import Link from "next/link";
 import { useLocale } from "@/i18n/LocaleContext";
 import { LOCALES, LOCALE_LABEL, type Locale } from "@/i18n/locales";
+import ThemeToggle from "./ThemeToggle";
 
 /**
  * Selector ES/EN. Conmuta al idioma contrario manteniendo la ruta actual;
@@ -13,7 +14,7 @@ import { LOCALES, LOCALE_LABEL, type Locale } from "@/i18n/locales";
 function LocaleSwitcher() {
   const { locale, setLocale } = useLocale();
   return (
-    <div className="flex items-center rounded-full border border-white/10 overflow-hidden text-[11px] font-bold font-display">
+    <div className="flex items-center rounded-full border border-overlay-10 overflow-hidden text-[11px] font-bold font-display">
       {LOCALES.map((l: Locale) => (
         <button
           key={l}
@@ -22,7 +23,7 @@ function LocaleSwitcher() {
           className={`px-2 py-1 transition-colors ${
             locale === l
               ? "bg-primary-container text-on-primary-container"
-              : "text-on-surface-variant hover:bg-white/5"
+              : "text-on-surface-variant hover:bg-overlay-5"
           }`}
         >
           {LOCALE_LABEL[l]}
@@ -59,14 +60,14 @@ export default function Nav() {
               width={46}
               height={46}
               priority
-              className="w-11 h-11 sm:w-12 sm:h-12 rounded-xl border border-white/10 object-cover shadow-lg shadow-black/20"
+              className="w-11 h-11 sm:w-12 sm:h-12 rounded-xl border border-overlay-10 object-cover shadow-lg shadow-black/20"
             />
-            <span className="font-display font-extrabold text-lg sm:text-2xl tracking-tighter text-primary-container">
+            <span className="font-display font-extrabold text-lg sm:text-2xl tracking-tighter text-primary-strong">
               PalaComparer
             </span>
           </Link>
 
-          <nav className="min-w-0 flex-1 px-4 sm:px-6 h-[64px] flex items-center justify-between rounded-2xl border border-white/10 bg-surface/70 backdrop-blur-md shadow-lg shadow-black/30">
+          <nav className="min-w-0 flex-1 px-4 sm:px-6 h-[64px] flex items-center justify-between rounded-2xl border border-overlay-10 bg-surface/70 backdrop-blur-md shadow-lg shadow-black/30">
 
           {/* Desktop nav */}
           <div className="hidden md:flex items-center gap-6 font-display font-bold text-sm">
@@ -82,6 +83,7 @@ export default function Nav() {
           </div>
 
           <div className="flex items-center gap-3">
+            <ThemeToggle />
             <LocaleSwitcher />
             <Link
               href={lp("/comparar")}
@@ -112,9 +114,9 @@ export default function Nav() {
             className="drawer-overlay absolute inset-0"
             onClick={() => setOpen(false)}
           />
-          <div className="absolute top-0 right-0 w-72 h-full bg-surface-container border-l border-white/8 flex flex-col">
-            <div className="flex items-center justify-between px-6 h-[72px] border-b border-white/8">
-              <span className="font-display font-extrabold text-lg text-primary-container">
+          <div className="absolute top-0 right-0 w-72 h-full bg-surface-container border-l border-overlay-8 flex flex-col">
+            <div className="flex items-center justify-between px-6 h-[72px] border-b border-overlay-8">
+              <span className="font-display font-extrabold text-lg text-primary-strong">
                 {t("nav.menu")}
               </span>
               <button
@@ -134,7 +136,7 @@ export default function Nav() {
                   key={link.href}
                   href={lp(link.href)}
                   onClick={() => setOpen(false)}
-                  className="font-display font-bold text-lg text-on-surface-variant hover:text-primary-container px-4 py-3 rounded-lg hover:bg-white/5 transition-colors"
+                  className="font-display font-bold text-lg text-on-surface-variant hover:text-primary-strong px-4 py-3 rounded-lg hover:bg-overlay-5 transition-colors"
                 >
                   {link.label}
                 </Link>
@@ -142,11 +144,11 @@ export default function Nav() {
               <Link
                 href={lp("/comparar")}
                 onClick={() => setOpen(false)}
-                className="font-display font-bold text-lg text-primary-container px-4 py-3 rounded-lg hover:bg-white/5 transition-colors"
+                className="font-display font-bold text-lg text-primary-strong px-4 py-3 rounded-lg hover:bg-overlay-5 transition-colors"
               >
                 {t("nav.comparar")}
               </Link>
-              <div className="px-4 pt-4 mt-2 border-t border-white/8">
+              <div className="px-4 pt-4 mt-2 border-t border-overlay-8">
                 <LocaleSwitcher />
               </div>
             </div>
