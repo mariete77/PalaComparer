@@ -34,7 +34,8 @@
   contenido de **actualidad por Regla 0** (torneo grande en curso). Si se detecta un hueco,
   añadir nota al final del backlog, no implementarlo.
 - Las páginas de jugador se generan solas desde el campo `player` de los productos
-  (`src/data/players.ts`). El catálogo tiene ~58 productos.
+  (`src/data/players.ts`, soporta nombres compartidos "A / B" o "A, B, C" desde
+  2026-09-04). El catálogo tiene ~122 productos.
 - El repo usa **Next.js con breaking changes**: leer `node_modules/next/dist/docs/`
   antes de escribir código si hay dudas (aviso en `AGENTS.md`).
 - Repo: github.com/mariete77/palacomparer · Dominio: www.palacomparer.com
@@ -137,6 +138,26 @@ para no duplicar temas ya publicados (ej. ya existe `madrid-p1-2026-lucha-por-el
     en el catálogo y enlazar sus páginas; añadir campo `player` donde falte. SÓLO con
     datos verificados. Verificar: coherencia de jugadores + build.
 
+### 🏸 Jugadores — demanda real (Search Console, sep 2026)
+
+Búsquedas que ya traen clics; cada una debe tener página limpia del tipo
+"¿Qué pala/raqueta usa X?" con specs verificadas. Estado a 2026-09-04:
+
+- **hurkacz racket specs (16) / hurkacz racket (15)** → `/jugadores/hubert-hurkacz` ✓ (VCORE 98 2026, Prestige Tour Auxetic 2.0, Percept 97)
+- **varlion carrera c black ltd (12)** → ficha `varlion-carrera-c-black-ltd-2025` ✓ (producto en catálogo)
+- **tsitsipas racket (2)** → `/jugadores/stefanos-tsitsipas` ✓ (Blade 98 16x19 v10)
+- **que raqueta usa rybakina (1)** → `/jugadores/elena-rybakina` ✓ creada 2026-09-04 (VCORE 98 + VCORE 100)
+- **rublev racket (1)** → `/jugadores/andrey-rublev` ✓ (Radical MP Auxetic)
+- **pala pádel diamante o lágrima (4)** → guías de formas; pendiente de enlazar desde /palas (item 20)
+- **comparador de palas de padel (2)** → `/comparar` ✓
+- **adidas metalbone (1)** → ficha Metalbone ✓
+
+**Protocolo: el cron nocturno vigila esta tabla.** Si un jugador con demanda no tiene
+página limpia o su modelo carece de specs reales → esa es la tarea de la noche
+(dividir nombres compartidos, añadir `player` a un producto existente, o dar de alta la
+raqueta de tenis que falte con el gate de foto real del skill add-pala; las palas de
+pádel las cubre el cron de palas). Al terminar, actualizar el estado de la fila.
+
 ### 🎯 Recomendaciones
 
 15. [ ] **Finder v2** — ampliar el quiz con presupuesto máximo y frecuencia de juego, y
@@ -183,6 +204,12 @@ para no duplicar temas ya publicados (ej. ya existe `madrid-p1-2026-lucha-por-el
 ---
 
 ## Notas (varias noches)
+
+- 2026-09-04 — Nombre compartidos en `player` arreglados (`players.ts` divide
+  "A / B" y "A, B, C"; descarta "(anotaciones)"). Páginas nuevas: Elena Rybakina
+  (2 raquetas), Holger Rune, Ben Shelton, Jessica Pegula, Jasmine Paolini, Tomáš
+  Macháč; Djokovic limpio. Commit b0b942c. La tabla de demanda real (arriba)
+  nació de las búsquedas de Search Console que pasó Mario.
 
 _(Aquí el agente nocturno apunta huecos detectados: palas que faltan, noticias
 importantes, ideas nuevas, mejoras pendientes de una tarea marcada.)_
