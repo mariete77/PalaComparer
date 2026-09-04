@@ -26,6 +26,23 @@ function canonicalName(raw: string): string {
   return ALIASES[name] ?? name;
 }
 
+/**
+ * Divide un campo `player` en todos los nombres que contiene.
+ * - "Hubert Hurkacz / Elena Rybakina" → 2 jugadores
+ * - "Elena Rybakina, Jasmine Paolini, Tomáš Macháč" → 3 jugadores
+ * - "Novak Djokovic (línea Speed)" → "Novak Djokovic" (se descarta la
+ *   anotación entre paréntesis; no es parte del nombre del jugador)
+ * Cada nombre recibe su propia página /jugadores/<slug>.
+ */
+function canonicalNames(raw: string): string[] {
+  return raw
+    .replace(/\([^)]*\)/g, " ")
+    .split(/[\/,]/)
+    .map((s) => s.trim())
+    .filter(Boolean)
+    .map(canonicalName);
+}
+
 /** `Agustín Tapia` → `agustin-tapia`. Estable: entra en la URL. */
 export function playerSlug(name: string): string {
   return canonicalName(name)
@@ -48,15 +65,17 @@ function buildPlayers(): Player[] {
 
   for (const product of PRODUCTS) {
     if (!product.player) continue;
-    const name = canonicalName(product.player);
-    const slug = playerSlug(name);
+    for (const name of canonicalNames(product.player)) {
+      const slug = playerSlug(name);
 
-    const existing = bySlug.get(slug);
-    if (existing) {
-      existing.products.push(product);
-      continue;
+      const existing = bySlug.get(slug);
+      if (existing) {
+        // Un mismo producto puede nombrar dos veces al mismo jugador.
+        if (!existing.products.includes(product)) existing.products.push(product);
+        continue;
+      }
+      bySlug.set(slug, { slug, name, sport: product.sport, products: [product] });
     }
-    bySlug.set(slug, { slug, name, sport: product.sport, products: [product] });
   }
 
   for (const player of bySlug.values()) {
