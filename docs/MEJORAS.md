@@ -53,11 +53,16 @@ Comunidad de Madrid Premier Padel P1 del 29 ago al 6 sep (cuadro en el Movistar 
 1-6 sep); Paris Major del 7 al 13 sep. Antes de escribir, comprobar `src/content/noticias/`
 para no duplicar temas ya publicados (ej. ya existe `madrid-p1-2026-lucha-por-el-numero-uno`)._
 
-1. [ ] **Madrid P1 2026 — las palas de los favoritos** — torneo en curso hasta el 6 de
+1. [x] **Madrid P1 2026 — las palas de los favoritos** — torneo en curso hasta el 6 de
    septiembre (Movistar Arena). Pieza original con ángulo propio: "Las palas del Madrid P1:
    qué juegan Tapia, Coello y Galán en el Movistar Arena", con los modelos reales presentes
    en el catálogo. Datos verificados en premierpadel.com / madridpremierpadel.com.
-   Verificar: web_search + build + check:translations.
+   Verificar: web_search + build + check:translations. — **HECHO 2026-09-04**: artículo
+   `madrid-p1-2026-palas-cuartos-final` (ES+EN, kind novedad, 6 relatedProducts:
+   AT10 18K, Coello Pro, Metalbone, Neuron 02, Hack 04, Diablo Pro) con resultados reales
+   de octavos (Libaak-Alfonso eliminan a Lebrón-Augsburger; Stupa-Sanz fuera). Archivos:
+   src/content/noticias/{,en/}madrid-p1-2026-palas-cuartos-final.mdx, src/data/news.ts.
+   Build + check:translations OK, página 200 en ES/EN con enlaces a producto verificados.
 2. [ ] **US Open 2026 — las raquetas de los cuartos de final** — torneo hasta el 13 de
    septiembre. Pieza original de tenis con los modelos del catálogo (Wilson Blade 98 V10,
    Babolat Pure Aero, Head Speed MP, Yonex VCore...): qué raqueta usa cada favorito y por

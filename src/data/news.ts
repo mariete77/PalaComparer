@@ -52,6 +52,7 @@ import { metadata as londonCampeones } from "@/content/noticias/london-p1-2026-c
 import { metadata as stupaczukSanz } from "@/content/noticias/stupaczuk-jon-sanz-nueva-pareja-p1-madrid.mdx";
 import { metadata as alexRuizCristal } from "@/content/noticias/alex-ruiz-ileso-rotura-cristal-fip-gold-san-luis.mdx";
 import { metadata as madridP1 } from "@/content/noticias/madrid-p1-2026-lucha-por-el-numero-uno.mdx";
+import { metadata as madridP1Palas } from "@/content/noticias/madrid-p1-2026-palas-cuartos-final.mdx";
 
 /**
  * Traducciones EN de los metadatos de cada artículo. Las ES vienen del propio
@@ -143,6 +144,12 @@ const EN_META: Record<string, { title: string; excerpt: string; tags: string[] }
       "Premier Padel is back from the break with the Comunidad de Madrid P1: €479,068 in prize money, Coello-Tapia and Galán-Chingotto separated by 1,290 points in the Race, debuts for Stupa-Sanz and Nieto-Yanguas and a tribute to Alejandra Salazar.",
     tags: ["Premier Padel", "Madrid P1", "Coello", "Tapia", "Galán", "Chingotto"],
   },
+  "madrid-p1-2026-palas-cuartos-final": {
+    title: "Madrid P1 2026: the rackets of the quarter-finals at the Movistar Arena",
+    excerpt:
+      "Coello-Tapia defend No.1 with NOX and Head, Galán-Chingotto arrive with the Metalbone and the Neuron 02, and Libaak-Alfonso, the pair that knocked out Lebrón, play with the Siux Diablo Pro. A look at the material in the quarter-final matchups, with the catalog specs.",
+    tags: ["Premier Padel", "Madrid P1", "Coello", "Tapia", "Galán", "Chingotto", "Libaak"],
+  },
 };
 
 /**
@@ -181,6 +188,7 @@ export const ARTICLES: Article[] = [
   localize({ slug: "stupaczuk-jon-sanz-nueva-pareja-p1-madrid", ...stupaczukSanz }),
   localize({ slug: "alex-ruiz-ileso-rotura-cristal-fip-gold-san-luis", ...alexRuizCristal }),
   localize({ slug: "madrid-p1-2026-lucha-por-el-numero-uno", ...madridP1 }),
+  localize({ slug: "madrid-p1-2026-palas-cuartos-final", ...madridP1Palas }),
 ].sort((a, b) => b.date.localeCompare(a.date));
 
 export function getArticle(slug: string): Article | undefined {
