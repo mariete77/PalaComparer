@@ -415,6 +415,31 @@ export const PRODUCTS: Product[] = [
       "La Hack de 2026: diamante puro con balance en 26,4, de los más altos del catálogo. Caras TriCarbon 18K sobre núcleo Multieva de tres densidades y rugosidad 3D en círculos concéntricos.",
   },
   {
+    id: "bullpadel-hack-04-hybrid-2026",
+    sport: "padel",
+    brand: "Bullpadel",
+    model: "Hack 04 Hybrid",
+    year: 2026,
+    price: 319.99,
+    image: "/images/rackets/bullpadel-hack-04-hybrid-2026.svg",
+    level: ["avanzado", "profesional"],
+    style: ["control", "polivalente"],
+    player: "Paquito Navarro",
+    padel: {
+      shape: "hibrida",
+      weight: "365-375 g",
+      balance: "medio",
+      core: "MultiEva",
+      faces: "Aluminized Carbon 18K",
+      surface: "rugosa",
+      hardness: "media",
+    },
+    description:
+      "La versión híbrida de la Hack 04 y la pala de contraataque de Paquito Navarro: el mismo ADN de potencia dinámica de la gama pero en formato híbrido de 38 mm, con balance en 25 cm y caras de carbono aluminizado A-18K, un tejido que suaviza el impacto frente a los carbonos 3K y 12K. El canal Total Channel recorre todo el marco y el corazón Tricore con Air React Channel reduce vibraciones y acelera el swing, mientras el sistema CustomWeight permite añadir hasta +12 g para ajustar el balance a tu juego. El resultado: la pegada de la familia Hack con un punto dulce más amplio y un tacto intermedio que perdona más en defensa.",
+    descriptionEn:
+      "The hybrid version of the Hack 04 and Paquito Navarro's counter-attack racket: the same dynamic-power DNA of the family but in a 38 mm hybrid mold, with a 25 cm balance and aluminised A-18K carbon faces, a weave that softens impact compared to 3K and 12K carbons. The Total Channel runs around the whole frame and the Tricore heart with Air React Channel cuts vibrations and speeds up the swing, while the CustomWeight system lets you add up to +12 g to fine-tune balance. The result: the Hack family's punch with a wider sweet spot and a medium touch that forgives more in defence.",
+  },
+  {
     id: "bullpadel-flow-2024",
     sport: "padel",
     brand: "Bullpadel",
