@@ -52,7 +52,8 @@ _Por la Regla 0 del protocolo, si un torneo está en curso este item va primero.
 verificados a 2026-09-03: US Open del 23 ago al 13 sep (cuadro principal en marcha);
 Comunidad de Madrid Premier Padel P1 del 29 ago al 6 sep (cuadro en el Movistar Arena,
 1-6 sep); Paris Major del 7 al 13 sep. Antes de escribir, comprobar `src/content/noticias/`
-para no duplicar temas ya publicados (ej. ya existe `madrid-p1-2026-lucha-por-el-numero-uno`)._
+para no duplicar temas ya publicados (ej. ya existe `madrid-p1-2026-lucha-por-el-numero-uno`
+y `us-open-2026-raquetas-cuartos-final`)._
 
 1. [x] **Madrid P1 2026 — las palas de los favoritos** — torneo en curso hasta el 6 de
    septiembre (Movistar Arena). Pieza original con ángulo propio: "Las palas del Madrid P1:
@@ -64,11 +65,18 @@ para no duplicar temas ya publicados (ej. ya existe `madrid-p1-2026-lucha-por-el
    de octavos (Libaak-Alfonso eliminan a Lebrón-Augsburger; Stupa-Sanz fuera). Archivos:
    src/content/noticias/{,en/}madrid-p1-2026-palas-cuartos-final.mdx, src/data/news.ts.
    Build + check:translations OK, página 200 en ES/EN con enlaces a producto verificados.
-2. [ ] **US Open 2026 — las raquetas de los cuartos de final** — torneo hasta el 13 de
+2. [x] **US Open 2026 — las raquetas de los cuartos de final** — torneo hasta el 13 de
    septiembre. Pieza original de tenis con los modelos del catálogo (Wilson Blade 98 V10,
    Babolat Pure Aero, Head Speed MP, Yonex VCore...): qué raqueta usa cada favorito y por
    qué encaja con su juego. Datos reales (usopen.org, atptour.com). Verificar: web_search +
-   build + check:translations.
+   build + check:translations. — **HECHO 2026-09-05**: artículo
+   `us-open-2026-raquetas-cuartos-final` (ES+EN, kind novedad, 6 relatedProducts: Pure
+   Aero 98, Speed MP, Blade 98 v10, EZONE 98, Boom MP, VCORE 98) con hechos verificados
+   (ESPN 4 sep: Alcaraz a octavos 6-3 6-4 6-1 a Wu, 10º triunfo seguido; Zverev d. Halys en
+   5 sets; Sabalenka y Pegula en segunda semana; fechas de octavos/cuartos según cuadro;
+   raquetas por marcas: Alcaraz Aero 98, Zverev Speed MP, Sabalenka Blade 98 18x20, Gauff
+   Boom MP, Pegula y Shelton EZONE 98 (kit oficial Yonex), Rybakina VCORE). Build +
+   check:translations OK; /es y /en 200; enlaces a jugadores y fichas verificados.
 3. [ ] **Paris Major 2026 — previa** — del 7 al 13 de septiembre. Cuando se acerque (o
    termine el Madrid P1), pieza de previa con los protagonistas y sus palas del catálogo.
    Verificar: web_search + build + check:translations.
@@ -205,6 +213,10 @@ pádel las cubre el cron de palas). Al terminar, actualizar el estado de la fila
 
 ## Notas (varias noches)
 
+- 2026-09-05 — US Open en marcha: publicado `us-open-2026-raquetas-cuartos-final`
+  (Regla 0, item 2 del backlog). Fuentes: ESPN (resultados 4 sep), atptour.com,
+  cuadro oficial via secretnyc, kits oficiales de marca (Yonex USA para Shelton,
+  Wilson/Head/Babolat para el resto). No se tocó la tabla de demanda real: todo ✓.
 - 2026-09-04 — Nombre compartidos en `player` arreglados (`players.ts` divide
   "A / B" y "A, B, C"; descarta "(anotaciones)"). Páginas nuevas: Elena Rybakina
   (2 raquetas), Holger Rune, Ben Shelton, Jessica Pegula, Jasmine Paolini, Tomáš

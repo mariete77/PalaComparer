@@ -53,6 +53,7 @@ import { metadata as stupaczukSanz } from "@/content/noticias/stupaczuk-jon-sanz
 import { metadata as alexRuizCristal } from "@/content/noticias/alex-ruiz-ileso-rotura-cristal-fip-gold-san-luis.mdx";
 import { metadata as madridP1 } from "@/content/noticias/madrid-p1-2026-lucha-por-el-numero-uno.mdx";
 import { metadata as madridP1Palas } from "@/content/noticias/madrid-p1-2026-palas-cuartos-final.mdx";
+import { metadata as usOpenRaquetas } from "@/content/noticias/us-open-2026-raquetas-cuartos-final.mdx";
 
 /**
  * Traducciones EN de los metadatos de cada artículo. Las ES vienen del propio
@@ -150,6 +151,12 @@ const EN_META: Record<string, { title: string; excerpt: string; tags: string[] }
       "Coello-Tapia defend No.1 with NOX and Head, Galán-Chingotto arrive with the Metalbone and the Neuron 02, and Libaak-Alfonso, the pair that knocked out Lebrón, play with the Siux Diablo Pro. A look at the material in the quarter-final matchups, with the catalog specs.",
     tags: ["Premier Padel", "Madrid P1", "Coello", "Tapia", "Galán", "Chingotto", "Libaak"],
   },
+  "us-open-2026-raquetas-cuartos-final": {
+    title: "US Open 2026: the rackets on the road to the quarter-finals",
+    excerpt:
+      "Alcaraz is already in the fourth round with his Pure Aero 98, top seed Zverev leads the draw with the Speed MP, and Sabalenka, Pegula and Gauff rule the women's side with Blade, EZONE and Boom. The catalog models being played in New York.",
+    tags: ["US Open", "Grand Slam", "Alcaraz", "Zverev", "Sabalenka", "Gauff", "Rybakina"],
+  },
 };
 
 /**
@@ -189,6 +196,7 @@ export const ARTICLES: Article[] = [
   localize({ slug: "alex-ruiz-ileso-rotura-cristal-fip-gold-san-luis", ...alexRuizCristal }),
   localize({ slug: "madrid-p1-2026-lucha-por-el-numero-uno", ...madridP1 }),
   localize({ slug: "madrid-p1-2026-palas-cuartos-final", ...madridP1Palas }),
+  localize({ slug: "us-open-2026-raquetas-cuartos-final", ...usOpenRaquetas }),
 ].sort((a, b) => b.date.localeCompare(a.date));
 
 export function getArticle(slug: string): Article | undefined {
