@@ -54,6 +54,7 @@ import { metadata as alexRuizCristal } from "@/content/noticias/alex-ruiz-ileso-
 import { metadata as madridP1 } from "@/content/noticias/madrid-p1-2026-lucha-por-el-numero-uno.mdx";
 import { metadata as madridP1Palas } from "@/content/noticias/madrid-p1-2026-palas-cuartos-final.mdx";
 import { metadata as usOpenRaquetas } from "@/content/noticias/us-open-2026-raquetas-cuartos-final.mdx";
+import { metadata as parisMajorPrevia } from "@/content/noticias/paris-major-2026-previa-roland-garros.mdx";
 
 /**
  * Traducciones EN de los metadatos de cada artículo. Las ES vienen del propio
@@ -157,6 +158,12 @@ const EN_META: Record<string, { title: string; excerpt: string; tags: string[] }
       "Alcaraz is already in the fourth round with his Pure Aero 98, top seed Zverev leads the draw with the Speed MP, and Sabalenka, Pegula and Gauff rule the women's side with Blade, EZONE and Boom. The catalog models being played in New York.",
     tags: ["US Open", "Grand Slam", "Alcaraz", "Zverev", "Sabalenka", "Gauff", "Rybakina"],
   },
+  "paris-major-2026-previa-roland-garros": {
+    title: "Paris Major 2026: padel lands at Roland-Garros with the Race wide open",
+    excerpt:
+      "The Alpine Paris Major takes Premier Padel to the Stade Roland-Garros from September 6 to 13: €1,044,849 in prize money, 2,000 FIP points and a Race blown wide open after Coello-Tapia's fall in Madrid. Preview, draw and the catalog rackets.",
+    tags: ["Premier Padel", "Paris Major", "Roland-Garros", "Coello", "Tapia", "Galán", "Chingotto"],
+  },
 };
 
 /**
@@ -197,6 +204,7 @@ export const ARTICLES: Article[] = [
   localize({ slug: "madrid-p1-2026-lucha-por-el-numero-uno", ...madridP1 }),
   localize({ slug: "madrid-p1-2026-palas-cuartos-final", ...madridP1Palas }),
   localize({ slug: "us-open-2026-raquetas-cuartos-final", ...usOpenRaquetas }),
+  localize({ slug: "paris-major-2026-previa-roland-garros", ...parisMajorPrevia }),
 ].sort((a, b) => b.date.localeCompare(a.date));
 
 export function getArticle(slug: string): Article | undefined {

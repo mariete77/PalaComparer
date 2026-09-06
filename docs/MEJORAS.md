@@ -52,8 +52,8 @@ _Por la Regla 0 del protocolo, si un torneo está en curso este item va primero.
 verificados a 2026-09-03: US Open del 23 ago al 13 sep (cuadro principal en marcha);
 Comunidad de Madrid Premier Padel P1 del 29 ago al 6 sep (cuadro en el Movistar Arena,
 1-6 sep); Paris Major del 7 al 13 sep. Antes de escribir, comprobar `src/content/noticias/`
-para no duplicar temas ya publicados (ej. ya existe `madrid-p1-2026-lucha-por-el-numero-uno`
-y `us-open-2026-raquetas-cuartos-final`)._
+para no duplicar temas ya publicados (ej. ya existe `madrid-p1-2026-lucha-por-el-numero-uno`,
+`us-open-2026-raquetas-cuartos-final` y `paris-major-2026-previa-roland-garros`)._
 
 1. [x] **Madrid P1 2026 — las palas de los favoritos** — torneo en curso hasta el 6 de
    septiembre (Movistar Arena). Pieza original con ángulo propio: "Las palas del Madrid P1:
@@ -77,9 +77,17 @@ y `us-open-2026-raquetas-cuartos-final`)._
    raquetas por marcas: Alcaraz Aero 98, Zverev Speed MP, Sabalenka Blade 98 18x20, Gauff
    Boom MP, Pegula y Shelton EZONE 98 (kit oficial Yonex), Rybakina VCORE). Build +
    check:translations OK; /es y /en 200; enlaces a jugadores y fichas verificados.
-3. [ ] **Paris Major 2026 — previa** — del 7 al 13 de septiembre. Cuando se acerque (o
+3. [x] **Paris Major 2026 — previa** — del 7 al 13 de septiembre. Cuando se acerque (o
    termine el Madrid P1), pieza de previa con los protagonistas y sus palas del catálogo.
-   Verificar: web_search + build + check:translations.
+   Verificar: web_search + build + check:translations. — **HECHO 2026-09-06**: artículo
+   `paris-major-2026-previa-roland-garros` (ES+EN, kind novedad, 7 relatedProducts: AT10
+   18K, Coello Pro, Metalbone, Neuron 02, Hack 04, Diablo Pro, Vertex 05 Woman) con el
+   ángulo Roland-Garros (1er Major en el recinto de la FFT, 1.044.849 €, 2.000 pts, 6
+   pistas outdoor, final dom 13 a las 14:00), la Race abierta tras Nieto-Yanguas d.
+   Coello-Tapia 7-5 7-6(5) en cuartos del Madrid P1 (1ª vez sin semis desde mayo 2025) y
+   finales de hoy: Chingalán vs Nieto-Yanguas y Triay-Brea vs Josemaría-González.
+   Fuentes: padelfip.com, premierpadel.com, elneverazo (cuartos+semis 4-5 sep),
+   parisjetaime (FFT). Build + check:translations OK, /es y /en 200.
 
 ### 🎨 Visual (mejoras visuales)
 
@@ -213,6 +221,13 @@ pádel las cubre el cron de palas). Al terminar, actualizar el estado de la fila
 
 ## Notas (varias noches)
 
+- 2026-09-06 — Regla 0: publicada la previa del Paris Major (`paris-major-2026-previa-roland-garros`),
+  que arranca mañana lunes 7 en Roland-Garros (qualy ya el domingo 6). Destacado de la
+  semana: Nieto-Yanguas eliminaron a Coello-Tapia en cuartos del Madrid P1 (7-5 7-6(5)),
+  primera vez que los nº1 se pierden unas semis desde mayo 2025; finales de Madrid hoy:
+  Chingalán vs Nieto-Yanguas y Triay-Brea vs Josemaría-González. No se tocó la tabla de
+  demanda real: todo ✓. Nota para el cron de noticias (lunes): el resultado de las finales
+  del Madrid P1 (hoy 16:00) y la 1ª ronda de París (lun 7) serían la agenda natural de mañana.
 - 2026-09-05 — US Open en marcha: publicado `us-open-2026-raquetas-cuartos-final`
   (Regla 0, item 2 del backlog). Fuentes: ESPN (resultados 4 sep), atptour.com,
   cuadro oficial via secretnyc, kits oficiales de marca (Yonex USA para Shelton,
