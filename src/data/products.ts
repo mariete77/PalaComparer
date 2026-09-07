@@ -2722,6 +2722,31 @@ export const PRODUCTS: Product[] = [
     },
     description: `La gama más potente de Adidas para 2026. Arrow HIT ATTK con carbono 15K y forma diamante para máxima potencia y respuesta explosiva.`,
   },
+  {
+    id: "adidas-arrow-hit-light-2026",
+    sport: "padel",
+    brand: "Adidas",
+    model: "Arrow HIT Light 2026",
+    year: 2026,
+    price: 229.95,
+    image: "/images/rackets/adidas-arrow-hit-light-2026.svg",
+    level: ["avanzado", "profesional"],
+    style: ["potencia"],
+    player: "Ari Sánchez",
+    padel: {
+      shape: "diamante",
+      weight: "345-360 g",
+      balance: "alto",
+      core: "EVA Soft Performance",
+      faces: "Carbono ASC",
+      surface: "rugosa",
+      hardness: "media",
+    },
+    description:
+      "La pala oficial de Ari Sánchez para 2026, la versión ligera de la Arrow HIT: mismo diamante y balance alto de la familia, pero con 345-360 g y núcleo EVA Soft Performance que la hacen mucho más manejable y cómoda en partidos largos. El mango Extra Power Grip, más largo de lo estándar, desplaza el punto dulce hacia arriba y gana inercia sin pesar en el brazo. Superficie 3D Spin Blade para agarre extra en la dejada y la víbora, y sistema Intelligent Balance para ajustar peso y balance a tu juego. Potencia de atacante con tacto de pala de control.",
+    descriptionEn:
+      "Ari Sánchez's signature racket for 2026, the lightweight version of the Arrow HIT: same diamond shape and head-heavy balance as the family, but with 345-360 g and a Soft Performance EVA core that make it far more maneuverable and comfortable in long matches. The Extra Power Grip — a longer-than-standard handle — shifts the sweet spot upward and adds inertia without tiring the arm. 3D Spin Blade surface for extra grip on drop shots and viboras, plus the Intelligent Balance system to tune weight and balance to your game. Attacker power with a control racket's feel.",
+  },
   // ============ PÁDEL — SIUX (BATCH 2) ============
   {
     id: "siux-electra-pro-2026",
