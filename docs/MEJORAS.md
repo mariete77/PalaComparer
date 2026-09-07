@@ -88,6 +88,15 @@ para no duplicar temas ya publicados (ej. ya existe `madrid-p1-2026-lucha-por-el
    finales de hoy: Chingalán vs Nieto-Yanguas y Triay-Brea vs Josemaría-González.
    Fuentes: padelfip.com, premierpadel.com, elneverazo (cuartos+semis 4-5 sep),
    parisjetaime (FFT). Build + check:translations OK, /es y /en 200.
+4. [x] **Madrid P1 2026 — campeones y sus palas** — finales jugadas el domingo 6 de
+   septiembre; resultados ya públicos la noche del 6 al 7. Pieza original de
+   resultados + material: "Chingalán y Triay-Brea conquistan el Madrid P1: las palas
+   del doblete" (Chingalán d. Nieto-Yanguas 6-4 5-7 6-4, 7º título del año, ~2,5 h;
+   Triay-Brea d. Josemaría-González 6(5)-7 6-3 6-3). — **HECHO 2026-09-07**: artículo
+   `madrid-p1-2026-campeones-chingalan-triay-brea` (ES+EN, kind novedad, 4
+   relatedProducts: Metalbone 2026, Neuron 02 2026, Vertex 05 Woman 2026, Metalbone
+   HRD+). Fuentes: MARCA directo, Olé, EFE/unitel.bo, elneverazo, infoeme, lu32.com.ar.
+   Build + check:translations OK, página 200 en /es y /en.
 
 ### 🎨 Visual (mejoras visuales)
 
@@ -221,6 +230,14 @@ pádel las cubre el cron de palas). Al terminar, actualizar el estado de la fila
 
 ## Notas (varias noches)
 
+- 2026-09-07 — Finales del Madrid P1 (ayer): **Chingalán campeón** d. Nieto-Yanguas
+  6-4 5-7 6-4 (7º título del año; "estrechan la pugna por el nº1", EFE) y
+  **Triay-Brea campeonas** d. Josemaría-González 6(5)-7 6-3 6-3 (remontada).
+  Publicado `madrid-p1-2026-campeones-chingalan-triay-brea` (Regla 0, item 4).
+  HUECO para el cron de palas: la **Bullpadel Elite W 2026 (pala de Gemma Triay)** no
+  está en el catálogo (las otras 3 palas de los campeones sí: Metalbone, Neuron 02,
+  Vertex 05 Woman). Bea González juega la Bullpadel Pearl (tampoco en catálogo, menos
+  prioritaria). Tabla de demanda real: todo ✓ (no se tocó).
 - 2026-09-06 — Regla 0: publicada la previa del Paris Major (`paris-major-2026-previa-roland-garros`),
   que arranca mañana lunes 7 en Roland-Garros (qualy ya el domingo 6). Destacado de la
   semana: Nieto-Yanguas eliminaron a Coello-Tapia en cuartos del Madrid P1 (7-5 7-6(5)),
