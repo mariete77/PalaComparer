@@ -56,6 +56,7 @@ import { metadata as madridP1Palas } from "@/content/noticias/madrid-p1-2026-pal
 import { metadata as usOpenRaquetas } from "@/content/noticias/us-open-2026-raquetas-cuartos-final.mdx";
 import { metadata as parisMajorPrevia } from "@/content/noticias/paris-major-2026-previa-roland-garros.mdx";
 import { metadata as madridP1Campeones } from "@/content/noticias/madrid-p1-2026-campeones-chingalan-triay-brea.mdx";
+import { metadata as aleSalazarDespedida } from "@/content/noticias/alejandra-salazar-despide-madrid-p1.mdx";
 
 /**
  * Traducciones EN de los metadatos de cada artículo. Las ES vienen del propio
@@ -171,6 +172,13 @@ const EN_META: Record<string, { title: string; excerpt: string; tags: string[] }
       "Galán-Chingotto lift their seventh title of the season after a near three-hour battle with Nieto-Yanguas (6-4, 5-7, 6-4), and Triay-Brea come from behind to beat Josemaría-González (6(5)-7, 6-3, 6-3). The rackets that won at the Movistar Arena, and what it means for the Race.",
     tags: ["Premier Padel", "Madrid P1", "Chingalán", "Galán", "Chingotto", "Triay", "Brea"],
   },
+  "alejandra-salazar-despide-madrid-p1": {
+    title:
+      "Alejandra Salazar bids farewell at home: Movistar Arena pays tribute to the most decorated player in padel history",
+    excerpt:
+      "The Madrid-born player, 40 and with 58 titles to her name, played her last tournament in her home city: she fell to Triay-Brea (6-3, 6-3) in the Madrid P1 quarter-finals amid tears and tributes. Her career goes on with one last goal: the Premier Padel Finals in Barcelona.",
+    tags: ["Premier Padel", "Madrid P1", "Alejandra Salazar", "Retirement", "Movistar Arena"],
+  },
 };
 
 /**
@@ -213,6 +221,7 @@ export const ARTICLES: Article[] = [
   localize({ slug: "us-open-2026-raquetas-cuartos-final", ...usOpenRaquetas }),
   localize({ slug: "paris-major-2026-previa-roland-garros", ...parisMajorPrevia }),
   localize({ slug: "madrid-p1-2026-campeones-chingalan-triay-brea", ...madridP1Campeones }),
+  localize({ slug: "alejandra-salazar-despide-madrid-p1", ...aleSalazarDespedida }),
 ].sort((a, b) => b.date.localeCompare(a.date));
 
 export function getArticle(slug: string): Article | undefined {
