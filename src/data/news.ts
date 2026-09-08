@@ -57,6 +57,7 @@ import { metadata as usOpenRaquetas } from "@/content/noticias/us-open-2026-raqu
 import { metadata as parisMajorPrevia } from "@/content/noticias/paris-major-2026-previa-roland-garros.mdx";
 import { metadata as madridP1Campeones } from "@/content/noticias/madrid-p1-2026-campeones-chingalan-triay-brea.mdx";
 import { metadata as aleSalazarDespedida } from "@/content/noticias/alejandra-salazar-despide-madrid-p1.mdx";
+import { metadata as usOpenMartesYonex } from "@/content/noticias/us-open-2026-martes-cuartos-yonex.mdx";
 
 /**
  * Traducciones EN de los metadatos de cada artículo. Las ES vienen del propio
@@ -179,6 +180,12 @@ const EN_META: Record<string, { title: string; excerpt: string; tags: string[] }
       "The Madrid-born player, 40 and with 58 titles to her name, played her last tournament in her home city: she fell to Triay-Brea (6-3, 6-3) in the Madrid P1 quarter-finals amid tears and tributes. Her career goes on with one last goal: the Premier Padel Finals in Barcelona.",
     tags: ["Premier Padel", "Madrid P1", "Alejandra Salazar", "Retirement", "Movistar Arena"],
   },
+  "us-open-2026-martes-cuartos-yonex": {
+    title: "US Open 2026: Tuesday's quarterfinals belong to Yonex (plus Alcaraz–Shelton, the main course)",
+    excerpt:
+      "Five of Tuesday's eight quarterfinalists play Yonex: the EZONE of Shelton, Pegula and Noskova, Navarro's VCORE and Tiafoe's Percept 97. With Alcaraz–Shelton as an early final, we break down the day's rackets — and the ones already in our catalog.",
+    tags: ["US Open", "Grand Slam", "Alcaraz", "Shelton", "Yonex", "Sabalenka", "Noskova"],
+  },
 };
 
 /**
@@ -222,6 +229,7 @@ export const ARTICLES: Article[] = [
   localize({ slug: "paris-major-2026-previa-roland-garros", ...parisMajorPrevia }),
   localize({ slug: "madrid-p1-2026-campeones-chingalan-triay-brea", ...madridP1Campeones }),
   localize({ slug: "alejandra-salazar-despide-madrid-p1", ...aleSalazarDespedida }),
+  localize({ slug: "us-open-2026-martes-cuartos-yonex", ...usOpenMartesYonex }),
 ].sort((a, b) => b.date.localeCompare(a.date));
 
 export function getArticle(slug: string): Article | undefined {

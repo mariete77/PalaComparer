@@ -97,6 +97,20 @@ para no duplicar temas ya publicados (ej. ya existe `madrid-p1-2026-lucha-por-el
    relatedProducts: Metalbone 2026, Neuron 02 2026, Vertex 05 Woman 2026, Metalbone
    HRD+). Fuentes: MARCA directo, Olé, EFE/unitel.bo, elneverazo, infoeme, lu32.com.ar.
    Build + check:translations OK, página 200 en /es y /en.
+5. [x] **US Open 2026 — el martes de cuartos** — cuartos de la mitad alta el martes
+   8 de septiembre. Pieza original con ángulo de gear: 5 de los 8 cuartofinalistas
+   del día juegan Yonex (Shelton/Pegula EZONE 98, Navarro VCORE, Noskova EZONE,
+   Tiafoe Percept 97), con Alcaraz–Shelton (H2H 3-0) como final anticipada.
+   — **HECHO 2026-09-08**: artículo `us-open-2026-martes-cuartos-yonex` (ES+EN,
+   kind novedad, 7 relatedProducts) + mejora de catálogo: campo `player` de la
+   Yonex Percept 97 actualizado a "Hubert Hurkacz / Frances Tiafoe" (verificado en
+   yonex.com), lo que genera automáticamente la página /jugadores/frances-tiafoe.
+   Fuentes: usopen.org, USA Today (orden de juego + resultado Blockx d. Cerúndolo
+   6-3 4-6 7-5 7-5), Olympics.com, Reuters/BBC (Zheng d. Swiatek 7-5 6-3 desde 0-5),
+   tennis.com (H2H Alcaraz–Shelton 3-0), yonex.com (Tiafoe Percept 97), Tennisnerd
+   (Noskova EZONE 98L, Navarro VCORE 98), Tecnifibre (Blockx T-Fight desde los 9
+   años). Build + check:translations OK; artículo, 5 páginas de jugador y 7 fichas
+   de producto verificadas a 200 en local.
 
 ### 🎨 Visual (mejoras visuales)
 

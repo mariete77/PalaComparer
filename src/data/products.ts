@@ -1779,7 +1779,7 @@ export const PRODUCTS: Product[] = [
     image: "/images/rackets/yonex-percept-97-2023.svg",
     level: ["avanzado", "profesional"],
     style: ["control"],
-    player: "Hubert Hurkacz",
+    player: "Hubert Hurkacz / Frances Tiafoe",
     tenis: {
       headSize: 97,
       weightStrung: 310,
