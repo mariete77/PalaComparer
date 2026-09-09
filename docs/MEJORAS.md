@@ -111,6 +111,19 @@ para no duplicar temas ya publicados (ej. ya existe `madrid-p1-2026-lucha-por-el
    (Noskova EZONE 98L, Navarro VCORE 98), Tecnifibre (Blockx T-Fight desde los 9
    años). Build + check:translations OK; artículo, 5 páginas de jugador y 7 fichas
    de producto verificadas a 200 en local.
+6. [x] **Paris Major 2026 — la jornada de los dieciseisavos** — el torneo está en marcha
+   (7-13 sep, Roland-Garros) y este miércoles 9 debutan los cabezas de serie: pieza con
+   los resultados reales de los treintaidosavos (lunes 7 y martes 8), el orden de juego
+   del día (Coello-Tapia vs Libaak-Alfonso abriendo la Philippe Chatrier) y las palas
+   del catálogo de quienes juegan hoy, con la novedad de los widgets `<ProductRef>` /
+   `<ProductGrid>` incrustados en el cuerpo. — **HECHO 2026-09-09**: artículo
+   `paris-major-2026-dieciseisavos-revancha-chatrier` (ES+EN, kind novedad, 7
+   relatedProducts) con resultados verificados de elneverazo (2 jornadas de
+   treintaidosavos + orden de juego del miércoles), bye de Triay-Brea a octavos del
+   jueves (StudyPadel) y tercer título consecutivo de Coello-Tapia en París (Olé/El
+   Ancasti). Primera noticia que usa ProductRef/ProductGrid en el cuerpo (con precio
+   "desde" en vivo). Fuentes: elneverazo.com, studypadel.com, ole.com.ar. Build +
+   check:translations OK; /es y /en a 200, en listado y 7 fichas enlazadas.
 
 ### 🎨 Visual (mejoras visuales)
 

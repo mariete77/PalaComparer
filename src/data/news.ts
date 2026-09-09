@@ -55,6 +55,7 @@ import { metadata as madridP1 } from "@/content/noticias/madrid-p1-2026-lucha-po
 import { metadata as madridP1Palas } from "@/content/noticias/madrid-p1-2026-palas-cuartos-final.mdx";
 import { metadata as usOpenRaquetas } from "@/content/noticias/us-open-2026-raquetas-cuartos-final.mdx";
 import { metadata as parisMajorPrevia } from "@/content/noticias/paris-major-2026-previa-roland-garros.mdx";
+import { metadata as parisMajorDieciseisavos } from "@/content/noticias/paris-major-2026-dieciseisavos-revancha-chatrier.mdx";
 import { metadata as madridP1Campeones } from "@/content/noticias/madrid-p1-2026-campeones-chingalan-triay-brea.mdx";
 import { metadata as aleSalazarDespedida } from "@/content/noticias/alejandra-salazar-despide-madrid-p1.mdx";
 import { metadata as usOpenMartesYonex } from "@/content/noticias/us-open-2026-martes-cuartos-yonex.mdx";
@@ -167,6 +168,12 @@ const EN_META: Record<string, { title: string; excerpt: string; tags: string[] }
       "The Alpine Paris Major takes Premier Padel to the Stade Roland-Garros from September 6 to 13: €1,044,849 in prize money, 2,000 FIP points and a Race blown wide open after Coello-Tapia's fall in Madrid. Preview, draw and the catalog rackets.",
     tags: ["Premier Padel", "Paris Major", "Roland-Garros", "Coello", "Tapia", "Galán", "Chingotto"],
   },
+  "paris-major-2026-dieciseisavos-revancha-chatrier": {
+    title: "Paris Major 2026: seeds' debut day — Coello-Tapia open Chatrier against Lebrón's slayers",
+    excerpt:
+      "Two days of round-of-64 action proved the Paris Major gives nothing away: Libaak-Alfonso booked a Philippe Chatrier date with Coello-Tapia, Collombon and the wild cards fell at home and the women's favourites start on Thursday straight in the round of 16. Recap and the catalog rackets on court this Wednesday.",
+    tags: ["Premier Padel", "Paris Major", "Roland-Garros", "Coello", "Tapia", "Libaak", "Lebrón", "Galán"],
+  },
   "madrid-p1-2026-campeones-chingalan-triay-brea": {
     title: "Chingalán and Triay-Brea conquer the Madrid P1: the rackets behind the double",
     excerpt:
@@ -227,6 +234,7 @@ export const ARTICLES: Article[] = [
   localize({ slug: "madrid-p1-2026-palas-cuartos-final", ...madridP1Palas }),
   localize({ slug: "us-open-2026-raquetas-cuartos-final", ...usOpenRaquetas }),
   localize({ slug: "paris-major-2026-previa-roland-garros", ...parisMajorPrevia }),
+  localize({ slug: "paris-major-2026-dieciseisavos-revancha-chatrier", ...parisMajorDieciseisavos }),
   localize({ slug: "madrid-p1-2026-campeones-chingalan-triay-brea", ...madridP1Campeones }),
   localize({ slug: "alejandra-salazar-despide-madrid-p1", ...aleSalazarDespedida }),
   localize({ slug: "us-open-2026-martes-cuartos-yonex", ...usOpenMartesYonex }),
