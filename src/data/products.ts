@@ -415,6 +415,31 @@ export const PRODUCTS: Product[] = [
       "La Hack de 2026: diamante puro con balance en 26,4, de los más altos del catálogo. Caras TriCarbon 18K sobre núcleo Multieva de tres densidades y rugosidad 3D en círculos concéntricos.",
   },
   {
+    id: "bullpadel-hack-05-2027",
+    sport: "padel",
+    brand: "Bullpadel",
+    model: "Hack 05",
+    year: 2027,
+    price: 349.99,
+    image: "/images/rackets/bullpadel-hack-05-2027.svg",
+    level: ["avanzado", "profesional"],
+    style: ["potencia"],
+    player: "Paquito Navarro",
+    padel: {
+      shape: "diamante",
+      weight: "365-375 g",
+      balance: "alto",
+      core: "MultiEVA",
+      faces: "TriCarbon 18K",
+      surface: "rugosa",
+      hardness: "dura",
+    },
+    description:
+      "La Hack del décimo aniversario apuesta por la 'potencia dinámica': corazón HackCore, canales de aire Air Power y ExoAir para acelerar el swing como ninguna Hack previa. TriCarbon 18K, tacto intermedio-duro, balance alto en 26,5 cm y rugosidad 3D Grain sobre 522 cm².",
+    descriptionEn:
+      "The tenth-anniversary Hack bets on 'dynamic power': HackCore heart, Air Power channels and ExoAir to accelerate the swing faster than any previous Hack. TriCarbon 18K faces, medium-hard feel, high balance at 26.5 cm and 3D Grain roughness over a 522 cm² hitting surface.",
+  },
+  {
     id: "bullpadel-hack-04-hybrid-2026",
     sport: "padel",
     brand: "Bullpadel",
