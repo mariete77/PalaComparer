@@ -1609,6 +1609,7 @@ export const PRODUCTS: Product[] = [
     image: "/images/rackets/head-boom-mp-2026.svg",
     level: ["intermedio"],
     style: ["potencia", "polivalente"],
+    player: "Coco Gauff",
     tenis: {
       headSize: 100,
       weightStrung: 312,

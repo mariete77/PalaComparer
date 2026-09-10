@@ -124,6 +124,19 @@ para no duplicar temas ya publicados (ej. ya existe `madrid-p1-2026-lucha-por-el
    Ancasti). Primera noticia que usa ProductRef/ProductGrid en el cuerpo (con precio
    "desde" en vivo). Fuentes: elneverazo.com, studypadel.com, ole.com.ar. Build +
    check:translations OK; /es y /en a 200, en listado y 7 fichas enlazadas.
+7. [x] **US Open 2026 — la semifinal 100% americana y 100% Yonex** — la historia grande
+   del día: Shelton apeó a Alcaraz en el partido más tardío de la historia del US Open
+   (6-7(5) 6-1 6-3 1-6 7-6(10-7), 146 mph el último saque) y el viernes Tiafoe–Shelton
+   garantiza un USA en la final (ninguno gana desde Roddick 2004). — **HECHO
+   2026-09-10**: artículo `us-open-2026-semifinales-tiafoe-shelton-yonex` (ES+EN, kind
+   novedad, 7 relatedProducts con ProductRef/ProductGrid en el cuerpo) + campo `player:
+   "Coco Gauff"` en la Head Boom MP 2026 (genera /jugadores/coco-gauff). Incluye
+   Rybakina nueva nº1 (30ª desde 1975), Gauff salvando 2 match points ante Andreeva,
+   Blockx retirado por costilla (Khachanov a semis) y Zverev–BVDZ en sesión nocturna.
+   Fuentes: ESPN (marcador+146 mph+vómito Alcaraz+quote "war"), USA Today (Khachanov
+   walkover, Rybakina nº1 30ª, Gauff 2 MP salvados), Guardian/Sky live (Gauff 2-6 7-6(7)
+   6-2), Yahoo/SBNation (bracket semis viernes). Build + check:translations OK.
+
 
 ### 🎨 Visual (mejoras visuales)
 

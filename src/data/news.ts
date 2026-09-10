@@ -59,6 +59,7 @@ import { metadata as parisMajorDieciseisavos } from "@/content/noticias/paris-ma
 import { metadata as madridP1Campeones } from "@/content/noticias/madrid-p1-2026-campeones-chingalan-triay-brea.mdx";
 import { metadata as aleSalazarDespedida } from "@/content/noticias/alejandra-salazar-despide-madrid-p1.mdx";
 import { metadata as usOpenMartesYonex } from "@/content/noticias/us-open-2026-martes-cuartos-yonex.mdx";
+import { metadata as usOpenSemifinalesYonex } from "@/content/noticias/us-open-2026-semifinales-tiafoe-shelton-yonex.mdx";
 
 /**
  * Traducciones EN de los metadatos de cada artículo. Las ES vienen del propio
@@ -193,6 +194,12 @@ const EN_META: Record<string, { title: string; excerpt: string; tags: string[] }
       "Five of Tuesday's eight quarterfinalists play Yonex: the EZONE of Shelton, Pegula and Noskova, Navarro's VCORE and Tiafoe's Percept 97. With Alcaraz–Shelton as an early final, we break down the day's rackets — and the ones already in our catalog.",
     tags: ["US Open", "Grand Slam", "Alcaraz", "Shelton", "Yonex", "Sabalenka", "Noskova"],
   },
+  "us-open-2026-semifinales-tiafoe-shelton-yonex": {
+    title: "US Open 2026: the Tiafoe–Shelton semifinal will be 100% American, 100% Yonex",
+    excerpt:
+      "Shelton ended Alcaraz's reign in the latest-finishing match in US Open history, setting up an all-American — and all-Yonex — Friday semifinal against Tiafoe. With Rybakina already the new world No. 1 and Gauff saving two match points, a look at dream semifinals and the rackets from our catalog playing them.",
+    tags: ["US Open", "Grand Slam", "Ben Shelton", "Frances Tiafoe", "Yonex", "Rybakina", "Gauff"],
+  },
 };
 
 /**
@@ -238,6 +245,7 @@ export const ARTICLES: Article[] = [
   localize({ slug: "madrid-p1-2026-campeones-chingalan-triay-brea", ...madridP1Campeones }),
   localize({ slug: "alejandra-salazar-despide-madrid-p1", ...aleSalazarDespedida }),
   localize({ slug: "us-open-2026-martes-cuartos-yonex", ...usOpenMartesYonex }),
+  localize({ slug: "us-open-2026-semifinales-tiafoe-shelton-yonex", ...usOpenSemifinalesYonex }),
 ].sort((a, b) => b.date.localeCompare(a.date));
 
 export function getArticle(slug: string): Article | undefined {
