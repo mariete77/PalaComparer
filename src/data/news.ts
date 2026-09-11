@@ -58,6 +58,7 @@ import { metadata as parisMajorPrevia } from "@/content/noticias/paris-major-202
 import { metadata as parisMajorDieciseisavos } from "@/content/noticias/paris-major-2026-dieciseisavos-revancha-chatrier.mdx";
 import { metadata as madridP1Campeones } from "@/content/noticias/madrid-p1-2026-campeones-chingalan-triay-brea.mdx";
 import { metadata as aleSalazarDespedida } from "@/content/noticias/alejandra-salazar-despide-madrid-p1.mdx";
+import { metadata as parisMajorCuartos } from "@/content/noticias/paris-major-2026-cuartos-goni-alonso.mdx";
 import { metadata as usOpenMartesYonex } from "@/content/noticias/us-open-2026-martes-cuartos-yonex.mdx";
 import { metadata as usOpenSemifinalesYonex } from "@/content/noticias/us-open-2026-semifinales-tiafoe-shelton-yonex.mdx";
 
@@ -175,6 +176,12 @@ const EN_META: Record<string, { title: string; excerpt: string; tags: string[] }
       "Two days of round-of-64 action proved the Paris Major gives nothing away: Libaak-Alfonso booked a Philippe Chatrier date with Coello-Tapia, Collombon and the wild cards fell at home and the women's favourites start on Thursday straight in the round of 16. Recap and the catalog rackets on court this Wednesday.",
     tags: ["Premier Padel", "Paris Major", "Roland-Garros", "Coello", "Tapia", "Libaak", "Lebrón", "Galán"],
   },
+  "paris-major-2026-cuartos-goni-alonso": {
+    title: "Paris Major 2026: Goñi and Alonso knock out the Madrid runners-up — quarter-finals day",
+    excerpt:
+      "The round of 16 delivered the statement win of the tournament: Edu Alonso and Aimar Goñi eliminated Yanguas-Nieto, the Madrid P1 finalists, 6-4 6-3. Recap of a round that also ended the Moya-Leygue run, Friday's order of play at Roland-Garros and the catalog rackets on court, from Paquito's Hack 05 to Momo's Endure.",
+    tags: ["Premier Padel", "Paris Major", "Roland-Garros", "Edu Alonso", "Goñi", "Stupaczuk", "Lebrón", "Paquito Navarro"],
+  },
   "madrid-p1-2026-campeones-chingalan-triay-brea": {
     title: "Chingalán and Triay-Brea conquer the Madrid P1: the rackets behind the double",
     excerpt:
@@ -246,6 +253,7 @@ export const ARTICLES: Article[] = [
   localize({ slug: "alejandra-salazar-despide-madrid-p1", ...aleSalazarDespedida }),
   localize({ slug: "us-open-2026-martes-cuartos-yonex", ...usOpenMartesYonex }),
   localize({ slug: "us-open-2026-semifinales-tiafoe-shelton-yonex", ...usOpenSemifinalesYonex }),
+  localize({ slug: "paris-major-2026-cuartos-goni-alonso", ...parisMajorCuartos }),
 ].sort((a, b) => b.date.localeCompare(a.date));
 
 export function getArticle(slug: string): Article | undefined {

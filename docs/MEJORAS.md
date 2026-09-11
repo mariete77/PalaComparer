@@ -136,6 +136,18 @@ para no duplicar temas ya publicados (ej. ya existe `madrid-p1-2026-lucha-por-el
    Fuentes: ESPN (marcador+146 mph+vómito Alcaraz+quote "war"), USA Today (Khachanov
    walkover, Rybakina nº1 30ª, Gauff 2 MP salvados), Guardian/Sky live (Gauff 2-6 7-6(7)
    6-2), Yahoo/SBNation (bracket semis viernes). Build + check:translations OK.
+8. [x] **Paris Major 2026 — la jornada de cuartos** — el Major sigue en marcha (7-13 sep)
+   y este viernes 11 se juegan los cuartos con Red Bull TV estrenando emisión: pieza con
+   los resultados reales de los octavos (upset de Goñi-Alonso sobre los subcampeones de
+   Madrid Yanguas-Nieto 6-4 6-3), el orden de juego del viernes y las palas del catálogo
+   de los 14 protagonistas. — **HECHO 2026-09-11**: artículo
+   `paris-major-2026-cuartos-goni-alonso` (ES+EN, kind novedad, 13 relatedProducts con
+   ProductRef/ProductGrid: EA10 Ventus de Edu Alonso, Endure Pro V1 de Momo, Viper 3.0
+   de Lebrón, Electra Pro IT 26 de Stupa, Axion Attack 2.0 de Jon Sanz, Hack 05 2027 de
+   Paquito, Metalbone, Neuron 02, Coello Pro, AT10 18K, Arrow HIT Light, Flow y Vertex
+   05 Woman). Fuentes: elneverazo (octavos + orden de juego de cuartos), premierpadel.com
+   (nota del 10 sep: Orsi-Llaguno a cuartos por primera vez este curso). Build +
+   check:translations OK; /es y /en a 200 con 13 fichas enlazadas verificadas en local.
 
 
 ### 🎨 Visual (mejoras visuales)
