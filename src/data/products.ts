@@ -440,6 +440,31 @@ export const PRODUCTS: Product[] = [
       "The tenth-anniversary Hack bets on 'dynamic power': HackCore heart, Air Power channels and ExoAir to accelerate the swing faster than any previous Hack. TriCarbon 18K faces, medium-hard feel, high balance at 26.5 cm and 3D Grain roughness over a 522 cm² hitting surface.",
   },
   {
+    id: "bullpadel-neuron-02-edge-2027",
+    sport: "padel",
+    brand: "Bullpadel",
+    model: "Neuron 02 Edge",
+    year: 2027,
+    price: 339.99,
+    image: "/images/rackets/bullpadel-neuron-02-edge-2027.svg",
+    level: ["avanzado", "profesional"],
+    style: ["potencia"],
+    player: "Federico Chingotto",
+    padel: {
+      shape: "diamante",
+      weight: "365-375 g",
+      balance: "alto",
+      core: "HardEVA",
+      faces: "X-Tend Carbon 3K",
+      surface: "rugosa",
+      hardness: "dura",
+    },
+    description:
+      "La pala con la que Fede Chingotto ataca en 2027: formato geométrico de diamante y balance alto (~26 cm) que eleva el punto de contacto para exprimir el efecto palanca. Corazón Neuron Core con PrismLock y Hexacore para un golpeo seco y sólido, cara X-Tend Carbon 3K, núcleo HardEVA y textura 3D Grain que agarra la bola para sumar efecto.",
+    descriptionEn:
+      "Fede Chingotto's attacking weapon for 2027: geometric diamond shape and high balance (~26 cm) that raises the contact point to exploit every leverage effect. Neuron Core heart with PrismLock and Hexacore for a dry, solid strike, X-Tend Carbon 3K face, HardEVA core and 3D Grain texture that grips the ball for extra spin.",
+  },
+  {
     id: "bullpadel-hack-04-hybrid-2026",
     sport: "padel",
     brand: "Bullpadel",
