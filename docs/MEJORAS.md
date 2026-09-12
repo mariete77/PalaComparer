@@ -148,6 +148,19 @@ para no duplicar temas ya publicados (ej. ya existe `madrid-p1-2026-lucha-por-el
    05 Woman). Fuentes: elneverazo (octavos + orden de juego de cuartos), premierpadel.com
    (nota del 10 sep: Orsi-Llaguno a cuartos por primera vez este curso). Build +
    check:translations OK; /es y /en a 200 con 13 fichas enlazadas verificadas en local.
+9. [x] **US Open 2026 — la final femenina, hoy: Blade contra VCORE** — la final
+   Sabalenka–Rybakina se juega HOY sábado 12 en el Arthur Ashe: pieza publicada la
+   mañana del partido con el ángulo de duelo de raquetas (Blade 98 v10 vs VCORE 100,
+   ambas en catálogo), el triquete que nadie firma desde Serena 2012-2014, la nº1 que
+   Rybakina estrena el lunes y la final del domingo (Zverev + ganador de Shelton–Tiafoe).
+   — **HECHO 2026-09-12**: artículo `us-open-2026-final-femenina-blade-vcore` (ES+EN,
+   kind novedad, 4 relatedProducts con ProductRef/ProductGrid) con specs contrastadas
+   Blade (98 in², 323 g, 330 mm, 62 RA) vs VCORE (100 in², 300 g, 320 mm, 65 RA), H2H
+   10-7 y la final de Melbourne 2026 que ganó Rybakina. Fuentes: usopen.org (previa y
+   semifinales), Yahoo/CBS (Sabalenka d. Pegula 7-5 6-2, 29 winners/12, 7 aces),
+   Sky Sports (Rybakina d. Gauff 3-6 6-4 6-4, nº1 el lunes tras 99 semanas, triplete
+   solo Serena desde 2014), wilson.com (edición US Open de la Blade), yonex.com (VCORE
+   100 + POLYTOUR FIRE). Build + check:translations OK.
 
 
 ### 🎨 Visual (mejoras visuales)

@@ -61,6 +61,7 @@ import { metadata as aleSalazarDespedida } from "@/content/noticias/alejandra-sa
 import { metadata as parisMajorCuartos } from "@/content/noticias/paris-major-2026-cuartos-goni-alonso.mdx";
 import { metadata as usOpenMartesYonex } from "@/content/noticias/us-open-2026-martes-cuartos-yonex.mdx";
 import { metadata as usOpenSemifinalesYonex } from "@/content/noticias/us-open-2026-semifinales-tiafoe-shelton-yonex.mdx";
+import { metadata as usOpenFinalFemenina } from "@/content/noticias/us-open-2026-final-femenina-blade-vcore.mdx";
 
 /**
  * Traducciones EN de los metadatos de cada artículo. Las ES vienen del propio
@@ -207,6 +208,12 @@ const EN_META: Record<string, { title: string; excerpt: string; tags: string[] }
       "Shelton ended Alcaraz's reign in the latest-finishing match in US Open history, setting up an all-American — and all-Yonex — Friday semifinal against Tiafoe. With Rybakina already the new world No. 1 and Gauff saving two match points, a look at dream semifinals and the rackets from our catalog playing them.",
     tags: ["US Open", "Grand Slam", "Ben Shelton", "Frances Tiafoe", "Yonex", "Rybakina", "Gauff"],
   },
+  "us-open-2026-final-femenina-blade-vcore": {
+    title: "US Open 2026: women's final today — Blade vs VCORE",
+    excerpt:
+      "Sabalenka chases the three-peat in New York and Rybakina her first US Open title, and today's final at Arthur Ashe Stadium is also a clash of racket philosophies: Wilson Blade 98 vs Yonex VCORE 100. The technical keys to Saturday's match.",
+    tags: ["US Open", "Grand Slam", "Sabalenka", "Rybakina", "Wilson", "Yonex"],
+  },
 };
 
 /**
@@ -254,6 +261,7 @@ export const ARTICLES: Article[] = [
   localize({ slug: "us-open-2026-martes-cuartos-yonex", ...usOpenMartesYonex }),
   localize({ slug: "us-open-2026-semifinales-tiafoe-shelton-yonex", ...usOpenSemifinalesYonex }),
   localize({ slug: "paris-major-2026-cuartos-goni-alonso", ...parisMajorCuartos }),
+  localize({ slug: "us-open-2026-final-femenina-blade-vcore", ...usOpenFinalFemenina }),
 ].sort((a, b) => b.date.localeCompare(a.date));
 
 export function getArticle(slug: string): Article | undefined {
