@@ -2730,6 +2730,28 @@ export const PRODUCTS: Product[] = [
     description: `La más potente y pesada de la gama Extreme 2026. Diamante de 370 g con balance alto (270 mm), marco de carbono rígido y caras de carbono unidireccional UD Carbon: máxima potencia en remates y golpes por encima de la cabeza. El núcleo Power Foam, el más reactivo de Head, expulsa la bola con violencia; Auxetic 2.0 afina el tacto en el puente y el rugoso Extreme Spin 3D da mordiente al efecto. Exige nivel de torneo y muñeca fuerte — la serie está recomendada por Paula Josemaría e Iñigo Jofre.`,
     descriptionEn: `The most powerful and heaviest racket in the 2026 Extreme line. A 370 g diamond with high balance (270 mm), rigid carbon frame and UD Carbon unidirectional faces: maximum power on smashes and overheads. The Power Foam core — HEAD's most reactive — launches the ball with violence; Auxetic 2.0 sharpens feel at the bridge and the rough Extreme Spin 3D finish adds bite to spin. Demands tournament level and a strong wrist — the series is recommended by Paula Josemaría and Iñigo Jofre.`,
   },
+  {
+    id: "head-extreme-motion-2026",
+    model: "Extreme Motion 2026",
+    brand: "Head",
+    sport: "padel",
+    year: 2026,
+    price: 240,
+    image: "/images/rackets/head-extreme-motion-2026.svg",
+    level: ["intermedio", "avanzado"],
+    style: ["potencia"],
+    padel: {
+      shape: "diamante",
+      weight: "365 g",
+      balance: "alto",
+      core: "Power Foam",
+      faces: "Carbono UD",
+      surface: "rugosa",
+      hardness: "dura",
+    },
+    description: `La hermana ligera de la Extreme Pro 2026: mismo perfil de ataque (diamante, balance alto, Power Foam y caras de Carbono UD con Graphene Inside) pero con 365 g para ganar velocidad de pala. El núcleo Power Foam expulsa la bola en remates y víboras, Auxetic 2.0 da una respuesta limpia en el puente y el rugoso Extreme Spin 3D añade mordiente al efecto. La vía de entrada a la gama Extreme más explosiva sin sacrificar manejabilidad.`,
+    descriptionEn: `The lighter sibling of the Extreme Pro 2026: same attack profile (diamond shape, high balance, Power Foam core and UD Carbon faces with Graphene Inside) but at 365 g for extra racket speed. Power Foam fires the ball out on smashes and víboras, Auxetic 2.0 delivers clean feedback at the bridge, and the rough Extreme Spin 3D finish bites into spin. The gateway to HEAD's most explosive Extreme line-up without giving up handling.`,
+  },
   // ============ PÁDEL — ADIDAS (BATCH 2) ============
   {
     id: "adidas-crossit-carbon-2026",
