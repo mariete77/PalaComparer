@@ -161,6 +161,22 @@ para no duplicar temas ya publicados (ej. ya existe `madrid-p1-2026-lucha-por-el
    Sky Sports (Rybakina d. Gauff 3-6 6-4 6-4, nº1 el lunes tras 99 semanas, triplete
    solo Serena desde 2014), wilson.com (edición US Open de la Blade), yonex.com (VCORE
    100 + POLYTOUR FIRE). Build + check:translations OK.
+10. [x] **Paris Major 2026 — día de finales: Coello-Tapia por el tetra** — las finales
+   se juegan HOY domingo 13 (femenina 14:00, masculina ~16:30, Philippe Chatrier).
+   Pieza matinal con los resultados verificados de las 4 semifinales del sábado y las
+   palas de los finalistas del catálogo. — **HECHO 2026-09-13**: artículo
+   `paris-major-2026-dia-de-finales-coello-tapia-galan-chingotto` (ES+EN, kind
+   novedad, 8 relatedProducts: Coello Pro, AT10 18K, Metalbone, Neuron 02, Neuron 02
+   Edge 2027, Arrow HIT Light, Vertex 05 Woman, Hack 05) con las 4 semis verificadas
+   (Sánchez-Ustero d. Ortega-Araújo 5-7 6-4 6-1; Calvo-Fernández d. Triay-Brea 6-4
+   6-2, 3ª seguida sobre las nº1; Tapia-Coello d. Lebrón-Augsburger 7-5 6-3 en 1h07;
+   Galán-Chingotto d. Di Nenno-Paquito 7-5 6-2), el ángulo tetra 2023-2026 vs
+   revancha de la final 2025 y el gancho de la Neuron 02 Edge 2027 recién llegada.
+   Fuentes: elneverazo (resultados semis + horarios finales), padel-magazine (crónicas
+   semi Tapia-Coello y programa), premierpadel.com, redbull.com (Red Bull TV).
+   Build + check:translations OK; /es y /en 200 con ProductRef/ProductGrid;
+   screenshot docs/screenshots/2026-09-13-paris-major-dia-de-finales.png (1280×5448,
+   página completa renderizada, verificación de píxeles OK).
 
 
 ### 🎨 Visual (mejoras visuales)

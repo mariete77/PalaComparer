@@ -62,6 +62,7 @@ import { metadata as parisMajorCuartos } from "@/content/noticias/paris-major-20
 import { metadata as usOpenMartesYonex } from "@/content/noticias/us-open-2026-martes-cuartos-yonex.mdx";
 import { metadata as usOpenSemifinalesYonex } from "@/content/noticias/us-open-2026-semifinales-tiafoe-shelton-yonex.mdx";
 import { metadata as usOpenFinalFemenina } from "@/content/noticias/us-open-2026-final-femenina-blade-vcore.mdx";
+import { metadata as parisMajorFinales } from "@/content/noticias/paris-major-2026-dia-de-finales-coello-tapia-galan-chingotto.mdx";
 
 /**
  * Traducciones EN de los metadatos de cada artículo. Las ES vienen del propio
@@ -177,6 +178,12 @@ const EN_META: Record<string, { title: string; excerpt: string; tags: string[] }
       "Two days of round-of-64 action proved the Paris Major gives nothing away: Libaak-Alfonso booked a Philippe Chatrier date with Coello-Tapia, Collombon and the wild cards fell at home and the women's favourites start on Thursday straight in the round of 16. Recap and the catalog rackets on court this Wednesday.",
     tags: ["Premier Padel", "Paris Major", "Roland-Garros", "Coello", "Tapia", "Libaak", "Lebrón", "Galán"],
   },
+  "paris-major-2026-dia-de-finales-coello-tapia-galan-chingotto": {
+    title: "Paris Major 2026: finals day at Roland-Garros — Coello-Tapia chase four in a row, Galán-Chingotto chase revenge",
+    excerpt:
+      "Saturday's semi-finals set the dream card: Coello-Tapia, three-time champions in Paris, replay the 2025 final against the Galán-Chingotto pair that just won the Madrid P1; and an unexpected women's final between the Sánchez-Ustero duo that came back from a set down and the Fernández-Calvo pair that has now beaten the world No. 1s three times in a row. Schedule, the finalists' rackets and the story lines closing out the Major.",
+    tags: ["Premier Padel", "Paris Major", "Roland-Garros", "Coello", "Tapia", "Galán", "Chingotto", "Ari Sánchez"],
+  },
   "paris-major-2026-cuartos-goni-alonso": {
     title: "Paris Major 2026: Goñi and Alonso knock out the Madrid runners-up — quarter-finals day",
     excerpt:
@@ -262,6 +269,7 @@ export const ARTICLES: Article[] = [
   localize({ slug: "us-open-2026-semifinales-tiafoe-shelton-yonex", ...usOpenSemifinalesYonex }),
   localize({ slug: "paris-major-2026-cuartos-goni-alonso", ...parisMajorCuartos }),
   localize({ slug: "us-open-2026-final-femenina-blade-vcore", ...usOpenFinalFemenina }),
+  localize({ slug: "paris-major-2026-dia-de-finales-coello-tapia-galan-chingotto", ...parisMajorFinales }),
 ].sort((a, b) => b.date.localeCompare(a.date));
 
 export function getArticle(slug: string): Article | undefined {
