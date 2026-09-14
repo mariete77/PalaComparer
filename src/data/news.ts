@@ -64,6 +64,7 @@ import { metadata as usOpenSemifinalesYonex } from "@/content/noticias/us-open-2
 import { metadata as usOpenFinalFemenina } from "@/content/noticias/us-open-2026-final-femenina-blade-vcore.mdx";
 import { metadata as usOpenFinalMasculina } from "@/content/noticias/us-open-2026-final-zverev-gravity-tour.mdx";
 import { metadata as parisMajorFinales } from "@/content/noticias/paris-major-2026-dia-de-finales-coello-tapia-galan-chingotto.mdx";
+import { metadata as parisMajorCampeones } from "@/content/noticias/paris-major-2026-campeones-coello-tapia-tetra-sanchez-ustero.mdx";
 
 /**
  * Traducciones EN de los metadatos de cada artículo. Las ES vienen del propio
@@ -185,6 +186,12 @@ const EN_META: Record<string, { title: string; excerpt: string; tags: string[] }
       "Saturday's semi-finals set the dream card: Coello-Tapia, three-time champions in Paris, replay the 2025 final against the Galán-Chingotto pair that just won the Madrid P1; and an unexpected women's final between the Sánchez-Ustero duo that came back from a set down and the Fernández-Calvo pair that has now beaten the world No. 1s three times in a row. Schedule, the finalists' rackets and the story lines closing out the Major.",
     tags: ["Premier Padel", "Paris Major", "Roland-Garros", "Coello", "Tapia", "Galán", "Chingotto", "Ari Sánchez"],
   },
+  "paris-major-2026-campeones-coello-tapia-tetra-sanchez-ustero": {
+    title: "Paris Major 2026: Coello and Tapia complete the four-peat as Sánchez-Ustero lift their first Major",
+    excerpt:
+      "The Golden Boys came back from 5-2 down in the third to beat Galán-Chingotto (6-3, 4-6, 7-6) and win their fourth straight Paris Major; Ari Sánchez and Andrea Ustero crushed Calvo-Fernández (6-2, 6-0) in 71 minutes for their first Major together. A record 81,000 spectators over the week.",
+    tags: ["Premier Padel", "Paris Major", "Roland-Garros", "Coello", "Tapia", "Ari Sánchez", "Ustero", "Galán", "Chingotto"],
+  },
   "paris-major-2026-cuartos-goni-alonso": {
     title: "Paris Major 2026: Goñi and Alonso knock out the Madrid runners-up — quarter-finals day",
     excerpt:
@@ -279,6 +286,7 @@ export const ARTICLES: Article[] = [
   localize({ slug: "us-open-2026-final-femenina-blade-vcore", ...usOpenFinalFemenina }),
   localize({ slug: "us-open-2026-final-zverev-gravity-tour", ...usOpenFinalMasculina }),
   localize({ slug: "paris-major-2026-dia-de-finales-coello-tapia-galan-chingotto", ...parisMajorFinales }),
+  localize({ slug: "paris-major-2026-campeones-coello-tapia-tetra-sanchez-ustero", ...parisMajorCampeones }),
 ].sort((a, b) => b.date.localeCompare(a.date));
 
 export function getArticle(slug: string): Article | undefined {
