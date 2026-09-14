@@ -177,6 +177,27 @@ para no duplicar temas ya publicados (ej. ya existe `madrid-p1-2026-lucha-por-el
    Build + check:translations OK; /es y /en 200 con ProductRef/ProductGrid;
    screenshot docs/screenshots/2026-09-13-paris-major-dia-de-finales.png (1280×5448,
    página completa renderizada, verificación de píxeles OK).
+11. [x] **US Open 2026 — final masculina: Zverev campeón con la Gravity** — la final
+   Zverev–Shelton se jugó el domingo 13 y cerró el torneo: pieza de resultados con el
+   ángulo de material (Gravity Tour Zverev 2026, la edición limitada que HEAD lanzó
+   tras Roland Garros) y alta de esa raqueta en el catálogo con specs oficiales
+   verificadas. — **HECHO 2026-09-14**: artículo `us-open-2026-final-zverev-gravity-tour`
+   (ES+EN, kind novedad, 4 relatedProducts con ProductRef/ProductGrid) + alta de la
+   Head Gravity Tour Zverev 2026 en products.ts (98 in², 323 g, 16x19, 61 RA, 318 mm,
+   SW 326, 280 €; foto real descargada y verificada en real-images.json según el gate
+   del skill add-pala) → genera /es+en/jugadores/alexander-zverev. Corrige además en
+   el propio artículo el error de la pieza de cuartos (Zverev juega Gravity, no Speed
+   MP) con Callout transparente. Resultados verificados: Zverev d. Shelton 6-3 7-6(2)
+   5-7 6-2, 2º Slam del año, H2H 5-0 previo, 44-1 vs zurdos desde RG 2023, 6ª final
+   de GS (3ª en 2026), 1er alemán campeón desde Becker AO 1996; semis Zverev d.
+   Khachanov 6-3 7-6(7) 7-6(6) y Shelton d. Tiafoe 4-6 6-3 6-3 7-5. Fuentes:
+   usopen.org (crónica oficial de la final), Guardian live, Olympics.com, ESPN
+   (semi Shelton-Tiafoe), tennisexpress.com (specs oficiales + lanzamiento 20 ago +
+   precio), tenniswarehouse-europe.com (PVP 280 €, hoy 251,90 €), head.com (atleta
+   con Gravity). Build + check:translations OK; /es y /en 200 (noticia, ficha
+   producto, jugador); screenshots docs/screenshots/2026-09-14-{us-open-final-zverev-
+   noticia,gravity-tour-zverev-ficha,jugador-alexander-zverev}.png (1280×800, no
+   en blanco: 379/501/365 colores únicos).
 
 
 ### 🎨 Visual (mejoras visuales)
@@ -311,6 +332,17 @@ pádel las cubre el cron de palas). Al terminar, actualizar el estado de la fila
 
 ## Notas (varias noches)
 
+- 2026-09-14 — Regla 0 (US Open): publicada la crónica de la final masculina
+  `us-open-2026-final-zverev-gravity-tour` (Zverev d. Shelton 6-3 7-6(2) 5-7 6-2) y
+  dada de alta la **Head Gravity Tour Zverev 2026** (280 €, specs oficiales, foto real
+  verificada) → nueva página /jugadores/alexander-zverev. Corregido en el artículo
+  nuevo el error de la pieza de cuartos (Zverev juega Gravity Tour, no Speed MP) con
+  Callout transparente. RESULTADOS PARIS MAJOR (para el cron de noticias del lunes):
+  campeones **Tapia-Coello** (tetra en París, reedición exacta de la final 2025) y
+  **Ari Sánchez–Andrea Ustero** (primer Major juntas; la final femenina era la
+  inédita Fernández-Calvo). 81.000 espectadores en la semana (premierpadel.com).
+  HUECO detectado: la Gravity Tour estándar (no Zverev) no está en el catálogo; el
+  cron de palas puede valorarla. Tabla de demanda real: todo ✓ (no se tocó).
 - 2026-09-07 — Finales del Madrid P1 (ayer): **Chingalán campeón** d. Nieto-Yanguas
   6-4 5-7 6-4 (7º título del año; "estrechan la pugna por el nº1", EFE) y
   **Triay-Brea campeonas** d. Josemaría-González 6(5)-7 6-3 6-3 (remontada).

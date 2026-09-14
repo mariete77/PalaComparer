@@ -62,6 +62,7 @@ import { metadata as parisMajorCuartos } from "@/content/noticias/paris-major-20
 import { metadata as usOpenMartesYonex } from "@/content/noticias/us-open-2026-martes-cuartos-yonex.mdx";
 import { metadata as usOpenSemifinalesYonex } from "@/content/noticias/us-open-2026-semifinales-tiafoe-shelton-yonex.mdx";
 import { metadata as usOpenFinalFemenina } from "@/content/noticias/us-open-2026-final-femenina-blade-vcore.mdx";
+import { metadata as usOpenFinalMasculina } from "@/content/noticias/us-open-2026-final-zverev-gravity-tour.mdx";
 import { metadata as parisMajorFinales } from "@/content/noticias/paris-major-2026-dia-de-finales-coello-tapia-galan-chingotto.mdx";
 
 /**
@@ -221,6 +222,13 @@ const EN_META: Record<string, { title: string; excerpt: string; tags: string[] }
       "Sabalenka chases the three-peat in New York and Rybakina her first US Open title, and today's final at Arthur Ashe Stadium is also a clash of racket philosophies: Wilson Blade 98 vs Yonex VCORE 100. The technical keys to Saturday's match.",
     tags: ["US Open", "Grand Slam", "Sabalenka", "Rybakina", "Wilson", "Yonex"],
   },
+  "us-open-2026-final-zverev-gravity-tour": {
+    title:
+      "US Open 2026: Zverev champion with the Gravity — the double-Slam racquet is now in the catalog",
+    excerpt:
+      "Zverev beat Shelton 6-3, 7-6(2), 5-7, 6-2 to claim his second Grand Slam of the year, powered by the Head Gravity Tour. The gold-and-purple limited edition HEAD launched after Roland Garros, the keys to the match, and the clash of styles against Shelton's EZONE 98.",
+    tags: ["US Open", "Grand Slam", "Zverev", "Shelton", "Head", "Yonex"],
+  },
 };
 
 /**
@@ -269,6 +277,7 @@ export const ARTICLES: Article[] = [
   localize({ slug: "us-open-2026-semifinales-tiafoe-shelton-yonex", ...usOpenSemifinalesYonex }),
   localize({ slug: "paris-major-2026-cuartos-goni-alonso", ...parisMajorCuartos }),
   localize({ slug: "us-open-2026-final-femenina-blade-vcore", ...usOpenFinalFemenina }),
+  localize({ slug: "us-open-2026-final-zverev-gravity-tour", ...usOpenFinalMasculina }),
   localize({ slug: "paris-major-2026-dia-de-finales-coello-tapia-galan-chingotto", ...parisMajorFinales }),
 ].sort((a, b) => b.date.localeCompare(a.date));
 

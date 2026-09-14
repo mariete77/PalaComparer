@@ -1947,6 +1947,31 @@ export const PRODUCTS: Product[] = [
       "The Instinct MP 2025 combines power with lightness. Designed for intermediate-advanced players seeking racquet head speed.",
   },
   {
+    id: "head-gravity-tour-zverev-2026",
+    sport: "tenis",
+    brand: "Head",
+    model: "Gravity Tour Zverev 2026",
+    year: 2026,
+    price: 280,
+    image: "/images/rackets/head-gravity-tour-zverev-2026.svg",
+    level: ["avanzado"],
+    style: ["polivalente"],
+    player: "Alexander Zverev",
+    tenis: {
+      headSize: 98,
+      weightStrung: 323,
+      length: 68.58,
+      stringPattern: "16x19",
+      stiffness: 61,
+      balancePoints: 318,
+      swingweight: 326,
+    },
+    description:
+      "Edición limitada dorado y morado de la raqueta con la que Zverev ha ganado Roland Garros y el US Open 2026: Gravity Tour de 98 in², el primer Gravity con patrón abierto 16x19, flex RA 61 y Auxetic 2.0. Control, efecto y comodidad para brazos que golpean plano y largo.",
+    descriptionEn:
+      "Gold-and-purple limited edition of the racquet Zverev used to win the 2026 French Open and US Open: 98 sq-in Gravity Tour, the first Gravity with an open 16x19 pattern, RA 61 flex and Auxetic 2.0. Control, spin and comfort for flat, first-strike ball strikers.",
+  },
+  {
     id: "babolat-pure-strike-100-2024",
     sport: "tenis",
     brand: "Babolat",
