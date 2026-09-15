@@ -2,11 +2,29 @@ import Link from "next/link";
 import { PRODUCTS } from "@/data/products";
 import { getBestPrice, getPriceSummary } from "@/data/offers";
 import { ARTICLES, kindLabel, formatArticleDate, articleHref } from "@/data/news";
+import { getDailyPlayer } from "@/data/daily-player";
 import ProductCarousel from "@/components/ProductCarousel";
 import Hero from "@/components/Hero";
 import StoreMarquee from "@/components/StoreMarquee";
+import PlayerOfTheDay from "@/components/PlayerOfTheDay";
 import { isLocale, type Locale, localePath } from "@/i18n/locales";
 import { translate, type TranslationKey } from "@/i18n/locales";
+
+/**
+ * El "jugador del día" rota con la fecha (determinista, sin fetch). Con ISR a
+ * 6 h la portada regenera hasta 4 veces al día y recoge el cambio de jugador
+ * sin redeploy.
+ */
+export const revalidate = 21600;
+
+/** Fecha ISO → "14 sept 2026" / "14 Sep 2026" (UTC, estable en el build). */
+function factDate(iso: string, locale: Locale): string {
+  const [y, m, d] = iso.split("-").map(Number);
+  return new Date(Date.UTC(y, m - 1, d)).toLocaleDateString(
+    locale === "en" ? "en-GB" : "es-ES",
+    { day: "numeric", month: "short", year: "numeric", timeZone: "UTC" }
+  );
+}
 
 export default async function HomePage({
   params,
@@ -30,6 +48,9 @@ export default async function HomePage({
       ["wilson-blade-98-v10-2026", "babolat-pure-aero-2026", "head-speed-mp-2026", "yonex-vcore-98-2026"].includes(p.id)
   );
   const ultimasNoticias = ARTICLES.slice(0, 3);
+
+  // Jugador del día: rotación determinista por fecha (ver daily-player.ts).
+  const daily = getDailyPlayer();
 
   // Ofertas de la semana: los 4 productos con mayor descuento real verificado.
   const ofertasSemana = PRODUCTS.map((p) => ({ p, s: getPriceSummary(p.id) }))
@@ -75,6 +96,28 @@ export default async function HomePage({
 
       {/* Store marquee */}
       <StoreMarquee />
+
+      {/* JUGADOR DEL DÍA — rotación diaria con datos verificados */}
+      <PlayerOfTheDay
+        feature={daily.feature}
+        product={daily.product}
+        locale={locale}
+        labels={{
+          eyebrow: t("home.jugadorDiaEyebrow"),
+          pregunta: t("home.jugadorDiaPregunta", {
+            arma: daily.product.sport === "padel" ? t("common.padelLower") : t("common.tenisLower"),
+            nombre: daily.feature.name,
+          }),
+          verFicha: t("home.jugadorDiaVerFicha"),
+          verProducto: t("home.jugadorDiaVerProducto", {
+            arma: daily.product.sport === "padel" ? t("common.padelLower") : t("common.tenisLower"),
+          }),
+          nota: t("home.jugadorDiaNota", { fecha: factDate(daily.feature.facts[0].since, locale) }),
+          desde: t("common.desde"),
+          padel: t("common.padel"),
+          tenis: t("common.tenis"),
+        }}
+      />
 
       {/* PILARES */}
       <section className="mx-auto max-w-7xl px-6 py-20 md:py-28">

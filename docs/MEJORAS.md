@@ -252,11 +252,22 @@ para no duplicar temas ya publicados (ej. ya existe `madrid-p1-2026-lucha-por-el
     estilo de juego, pareja actual, títulos) en las páginas de jugador, con fuente
     citada. Empezar por los del catálogo: Tapia, Coello, Galán, Momo González, Javi
     Garrido, J. Sanz, Lamperti, Bela... Verificar: web_search + build.
-12. [ ] 🔝 **PRIORIDAD ESTA SEMANA** — **"Jugador del día" en homepage** — módulo rotativo
+12. [x] 🔝 **PRIORIDAD ESTA SEMANA** — **"Jugador del día" en homepage** — módulo rotativo
     que destaca cada día a un jugador del catálogo con su pala y 3 datos verificados
     (mientras haya torneos en curso da vidilla a la portada y combina con la Regla 0).
     Rotación determinista por fecha para que el SSR sea estable. Verificar: build +
-    screenshot.
+    screenshot. — **HECHO 2026-09-15**: módulo `PlayerOfTheDay` (banda editorial a 2
+    columnas: pregunta H2 "¿Qué pala usa X?" + specs dl + 2 facts en bullets + foto real
+    sobre fondo blanco con halo lima/naranja por deporte) alimentado por
+    `src/data/daily-player.ts`: 14 jugadores (8 pádel + 6 tenis), 3 facts ES+EN verificados
+    cada uno (torneos de esta semana, specs del catálogo, precios reales), rotación
+    `dayOfYear % 14` + `revalidate = 6h` (ISR recoge el cambio de jugador sin redeploy).
+    Homepage con claves nuevas ES/EN. Verificado: build OK, check:translations OK, ES/EN
+    a 200 con imagen real cargada, specs localizadas ("High" en EN), sin overflow en
+    375px, dark theme OK (card rgb(23,27,39)). Screenshots:
+    docs/screenshots/2026-09-15-jugador-del-dia{,-dark,-mobile}.png. Archivos:
+    src/data/daily-player.ts (nuevo), src/components/PlayerOfTheDay.tsx (nuevo),
+    src/app/[locale]/page.tsx, src/i18n/locales.ts, globals.css (halos).
 13. [ ] **FAQ por jugador** — para los 5 jugadores top del catálogo: "¿Qué pala usa X?",
     "¿Qué specs tiene?", "¿Por qué cambió de marca?" con respuestas basadas en fuentes
     reales y enlaces. Verificar: contenido citado + build.
@@ -331,6 +342,19 @@ pádel las cubre el cron de palas). Al terminar, actualizar el estado de la fila
 ---
 
 ## Notas (varias noches)
+
+- 2026-09-15 — Sin torneo en curso (US Open y Paris Major cerraron el 13; Davis Cup
+  18-20, Laver Cup 25-27, Rotterdam P2 empieza el 28) → backlog: item 12 🔝
+  "Jugador del día" implementado (ver sección 🎨 Visual / Jugadores). La rotación
+  diaria hace que la portada muestre a Ari Sánchez hoy (índice 258 % 14 = 6). Para
+  MEJORAR EL MÓDULO cuando toque: los facts caducan con los torneos (ej. "campeón
+  del US Open 2026" vale un año; "nueva nº1" vale hasta el siguiente cambio) —
+  re-verificar al editar daily-player.ts; añadir jugadores es copiar un bloque.
+  NOTA RYBAKINA: la final femenina la ganó Rybakina 6-4 5-7 6-2 (Guardian/usopen),
+  no Sabalenka — la pieza del 12 sep la anticipaba como "hoy se juega", sin
+  resultado, así que no hubo que corregir nada. Próximas citas para Regla 0:
+  Davis Cup Qualifiers 2ª ronda (18-20 sep), Laver Cup Londres (25-27),
+  Rotterdam P2 (28 sep-4 oct), Alemania P2 (5-11 oct), Milano P1 (12-18 oct).
 
 - 2026-09-14 — Regla 0 (US Open): publicada la crónica de la final masculina
   `us-open-2026-final-zverev-gravity-tour` (Zverev d. Shelton 6-3 7-6(2) 5-7 6-2) y

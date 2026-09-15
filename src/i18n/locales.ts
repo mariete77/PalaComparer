@@ -103,6 +103,11 @@ const es = {
     ofertasSemana: "Ofertas de la semana",
     raquetasDestacadas: "Raquetas destacadas",
     antesDeComprar: "Antes de comprar, leete esto",
+    jugadorDiaEyebrow: "Jugador del día",
+    jugadorDiaPregunta: "¿Qué {arma} usa {nombre}?",
+    jugadorDiaVerFicha: "Ver su ficha completa",
+    jugadorDiaVerProducto: "Ver la {arma} al detalle",
+    jugadorDiaNota: "Datos verificados el {fecha}. Cada día destacamos a un jugador distinto.",
   },
   palas: {
     metaTitle: "Palas de pádel — PalaComparer",
@@ -427,6 +432,11 @@ const en = {
     ofertasSemana: "Deals of the week",
     raquetasDestacadas: "Featured rackets",
     antesDeComprar: "Before you buy, read this",
+    jugadorDiaEyebrow: "Player of the day",
+    jugadorDiaPregunta: "What {arma} does {nombre} use?",
+    jugadorDiaVerFicha: "See their full profile",
+    jugadorDiaVerProducto: "See the {arma} in detail",
+    jugadorDiaNota: "Facts verified on {fecha}. Every day we feature a different player.",
   },
   palas: {
     metaTitle: "Padel paddles — PalaComparer",

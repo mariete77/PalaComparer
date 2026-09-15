@@ -269,6 +269,24 @@ html[data-theme="light"] .prose-invert {
   border-top: 1px solid var(--hairline);
 }
 
+/* Halo cromático del módulo "Jugador del día": un resplandor del color del
+   deporte (lima pádel / naranja tenis) que asciende desde la esquina inferior
+   derecha. Sutil en reposo, gana presencia al hover de la sección. */
+.player-halo-padel {
+  background: radial-gradient(
+    120% 95% at 88% 100%,
+    rgba(195, 244, 0, 0.12) 0%,
+    rgba(195, 244, 0, 0) 62%
+  );
+}
+.player-halo-tenis {
+  background: radial-gradient(
+    120% 95% at 88% 100%,
+    rgba(251, 146, 60, 0.12) 0%,
+    rgba(251, 146, 60, 0) 62%
+  );
+}
+
 /* Primary button — flat lime */
 .btn-primary {
   background: var(--primary-container);
