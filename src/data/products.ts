@@ -3054,6 +3054,30 @@ export const PRODUCTS: Product[] = [
     descriptionEn:
       "Javi Garrido's racket and Wilson's weapon for attackers: a 370 g heavy-frame diamond with a 15K carbon face and Power Foam core for explosive power that really shows in the smash. The C2 tubular frame with I-Beam technology adds stiffness and stability, the Spin² texture maximises spin and the Duo Grid drill pattern balances power at the top with control at the bottom. It is demanding — high balance and a hard feel need a strong arm — but it rewards risk-taking play.",
   },
+  {
+    id: "starvie-triton-power-2027",
+    sport: "padel",
+    brand: "StarVie",
+    model: "Triton Power +",
+    year: 2027,
+    price: 295,
+    image: "/images/rackets/starvie-triton-power-2027.svg",
+    level: ["avanzado", "profesional"],
+    style: ["potencia"],
+    padel: {
+      shape: "diamante",
+      weight: "350-370 g",
+      balance: "alto",
+      core: "H-EVA Power",
+      faces: "18K Carbon Hybrid",
+      surface: "rugosa",
+      hardness: "dura",
+    },
+    description:
+      "El diamante de ataque de la línea Pro-Line 2027: plano 18K Carbon Hybrid sobre goma H-EVA Power de densidad dura para golpes explosivos, con Five Sides Tech (perfil rígido de cinco caras) y TriTech Core para estabilidad. Su Spin Boost Tech rugosa hace morder las víboras y su puente anatómico con mango alargado (Longer Handgrip) está pensado para revés a dos manos. Fabricada en España, exige brazo entrenado: no regala salida de bola, pero cierra los puntos.",
+    descriptionEn:
+      "The attacking diamond of StarVie's 2027 Pro-Line: an 18K Carbon Hybrid face over hard-density H-EVA Power rubber for explosive hits, with Five Sides Tech (rigid five-sided profile) and TriTech Core for stability. Its rough Spin Boost Tech makes víboras bite and its anatomic bridge with a longer handgrip is built for two-handed backhands. Made in Spain, it demands a trained arm — it gives you no free ball exit, but it closes out points.",
+  },
 ];
 
 export function getProduct(id: string) {
