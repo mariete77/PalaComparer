@@ -1,4 +1,5 @@
 @import "tailwindcss";
+@import "@blossom-carousel/react/style.css";
 
 /* ============ ProCourt Precision Design Tokens ============ */
 /* Tema base (SSR, sin JS, y data-theme="dark"): OSCURO — paleta diseñada. */
@@ -421,6 +422,99 @@ html[data-theme="light"] .prose-invert {
 .card-glow:hover {
   transform: translateY(-4px);
   box-shadow: var(--shadow-card-hover), 0 0 0 1px rgba(195,244,0,0.2);
+}
+
+/* ============ Blossom Carousel (destacados homepage) ============ */
+
+/* El paquete declara su @layer DESPUÉS de la de Tailwind, así que sus reglas
+   ganarían a cualquier utilidad. Todo el theming va aquí, sin capa. */
+
+/* Scroller como grid horizontal: los items estiran a la altura de la fila
+   (igual que el flexbox de Embla) y el scroll nativo/snap funciona igual. */
+.pc-blossom {
+  display: grid;
+  grid-auto-flow: column;
+  /* Ancho de cada columna/item: 1 con peek en móvil → 2 en ≥sm → 3 en ≥md →
+     4 en ≥lg (n tracks + gaps suman 100% en cada breakpoint, como antes). */
+  grid-auto-columns: calc(86% - 0.5rem);
+  column-gap: 1rem;
+  /* El core lee este valor al iniciar y lo gestiona con --snap-type. */
+  scroll-snap-type: x mandatory;
+}
+@media (min-width: 640px) {
+  .pc-blossom { grid-auto-columns: calc(50% - 0.5rem); }
+}
+@media (min-width: 768px) {
+  .pc-blossom { grid-auto-columns: calc(33.333% - 0.667rem); }
+}
+@media (min-width: 1024px) {
+  .pc-blossom { grid-auto-columns: calc(25% - 0.75rem); }
+}
+.pc-blossom > li {
+  scroll-snap-align: start;
+}
+/* Altura uniforme: la ProductCard (h-full) llena el item estirado. */
+.pc-blossom > li > * { height: 100%; }
+
+/* Flechas — mismo look que las del carrusel anterior (circulares, blur). */
+.pc-blossom-arrow {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  z-index: 10;
+  width: 2.25rem;
+  height: 2.25rem;
+  border-radius: 9999px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid var(--overlay-10);
+  background: color-mix(in srgb, var(--surface) 80%, transparent);
+  backdrop-filter: blur(8px);
+  color: var(--on-surface);
+  box-shadow: var(--shadow-card);
+  transition: background-color 0.2s ease, color 0.2s ease, opacity 0.2s ease;
+  cursor: pointer;
+}
+@media (min-width: 768px) {
+  .pc-blossom-arrow { width: 2.75rem; height: 2.75rem; }
+}
+.pc-blossom-arrow:hover:not(:disabled) {
+  background-color: var(--primary-container);
+  color: var(--on-primary);
+}
+.pc-blossom-arrow:disabled {
+  opacity: 0;
+  pointer-events: none;
+}
+.pc-blossom-arrow-prev { left: -0.75rem; }
+.pc-blossom-arrow-next { right: -0.75rem; }
+@media (min-width: 768px) {
+  .pc-blossom-arrow-prev { left: -1.25rem; }
+  .pc-blossom-arrow-next { right: -1.25rem; }
+}
+
+/* Dots (móvil/tablet) — marcador activo con el acento primario. Ocultos en
+   desktop (la capa del paquete pisa las utilidades responsive de Tailwind,
+   así que el corte por breakpoint va aquí). */
+.pc-blossom-dots {
+  margin-top: 1.25rem;
+  --blossom-dot-size: 0.45rem;
+  --blossom-dot-radius: 9999px;
+  --blossom-dot-color: var(--on-surface-variant);
+  --blossom-dot-opacity: 0.35;
+  --blossom-dot-hover-opacity: 0.6;
+  --blossom-dot-active-opacity: 1;
+}
+@media (min-width: 768px) {
+  .pc-blossom-dots { display: none; }
+}
+.pc-blossom-dots [data-blossom-dot-marker] {
+  transition: width 0.3s ease, opacity 0.3s ease, background-color 0.3s ease;
+}
+.pc-blossom-dots [data-blossom-dot][aria-current="true"] [data-blossom-dot-marker] {
+  width: 1.5rem;
+  background: var(--primary-container);
 }
 
 @media (prefers-reduced-motion: reduce) {

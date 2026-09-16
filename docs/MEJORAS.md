@@ -218,9 +218,29 @@ para no duplicar temas ya publicados (ej. ya existe `madrid-p1-2026-lucha-por-el
    overlays en componentes y páginas. NOTA: con el default por sistema, usuarios con OS
    claro verán la web en claro; si Mario prefiere oscuro por defecto es un cambio de 1
    línea en THEME_INIT.
-2. [ ] **Blossom Carousel en homepage** — integrar blossom-carousel para los destacados
+2. [x] **Blossom Carousel en homepage** — integrar blossom-carousel para los destacados
    de palas y raquetas (reemplazar o mejorar el ProductCarousel actual si gana en tacto
    y transiciones). Mario quiere probarlo. Verificar: build + screenshot del carousel.
+   — **HECHO 2026-09-16**: `ProductCarousel` reescrito sobre `@blossom-carousel/react`
+   1.5.2 (scroll nativo + drag con física en desktop, snap por tarjeta). Cambios: (1)
+   scroller semántico `<ul>` con grid-auto-flow column (iguala alturas como el flex de
+   Embla) y 1→2→3→4 cards por breakpoint; (2) flechas circulares con tokens ProCourt
+   vía BlossomPrev/Next (se autodeshabilitan en los extremos); (3) dots BlossomDots en
+   móvil con marcador activo en primario (ocultos ≥md con CSS propio porque la capa
+   del paquete pisa las utilidades Tailwind); (4) autoplay propio del de ofertas:
+   scroll suave cada 4,2 s que se detiene con la 1ª interacción, hover, pestaña
+   oculta o prefers-reduced-motion; (5) destacados ampliados de 4 a 8 items reales
+   (pádel: +Metalbone, Hack 04, Neuron 02, Varlion Carrera C Black Ltd; tenis: +
+   Gravity Tour Zverev, Pure Aero 98, Boom MP, EZONE 98) para que haya overflow real
+   y el drag/flechas aporten; (6) embla-carousel* desinstalado. Archivos:
+   src/components/ProductCarousel.tsx (reescrito), src/app/[locale]/page.tsx,
+   src/app/[locale]/globals.css (@import + bloque .pc-blossom*), src/i18n/locales.ts
+   (3 claves ES/EN), package.json (+@blossom-carousel/react, −embla×2),
+   scripts/verify-blossom.mts (verificación sin visión, 38 checks). Build +
+   check:translations OK; verificado en prod local ES/EN: snap delta 0 tras drag,
+   drag 624 px, flechas habilitan/deshabilitan, dots móviles, sin overflow en
+   375 px, tema claro OK, 0 errores JS. Screenshots:
+   docs/screenshots/2026-09-16-blossom-carousel{,-light}.png.
 3. [ ] **ProductCard premium** — hover con lift + sombra suave + zoom sutil de la foto,
    badge de descuento real animado cuando hay oferta (< PVP), transiciones 150-250ms
    respetando `prefers-reduced-motion`. Verificar: build + screenshot (o check de estilos).
@@ -342,6 +362,20 @@ pádel las cubre el cron de palas). Al terminar, actualizar el estado de la fila
 ---
 
 ## Notas (varias noches)
+
+- 2026-09-16 — Sin torneo en curso (US Open y Paris Major cerraron el 13; Davis Cup
+  18-20, Laver Cup 25-27, Rotterdam P2 empieza el 28) → backlog: item 2 Visual
+  "Blossom Carousel en homepage" implementado (ver sección 🎨 Visual). Detalle
+  técnico: el CSS del paquete declara su @layer DESPUÉS que Tailwind, así que sus
+  reglas pisan utilidades (ej. `md:hidden` en los dots) — el theming de Blossom va
+  en CSS propio (globals.css, bloque .pc-blossom*). OJO con ISR en local: `next
+  start` cachea la homepage 6 h (revalidate 21600); tras cambiar page.tsx hay que
+  reiniciar el server para verificar. El autoplay de ofertas es código propio
+  (hooks en ProductCarousel.tsx): si algún día Blossom saca autoplay nativo,
+  migrar. verify-blossom.mts queda en scripts/ para re-verificar tras toques
+  (arranca server propio si BASE no responde). Próxima cita Regla 0: Davis Cup
+  Qualifiers 2ª ronda (18-20 sep) — verificar qué selecciones juegan y si hay
+  raquetas de jugadores en catálogo antes de escribir.
 
 - 2026-09-15 — Sin torneo en curso (US Open y Paris Major cerraron el 13; Davis Cup
   18-20, Laver Cup 25-27, Rotterdam P2 empieza el 28) → backlog: item 12 🔝

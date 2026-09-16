@@ -219,6 +219,9 @@ const es = {
     verTodas: "Ver todas",
     verTodos: "Ver todos",
     min: "min",
+    anterior: "Anterior",
+    siguiente: "Siguiente",
+    carruselProductos: "Productos destacados",
   },
   catalog: {
     filtros: "Filtros",
@@ -548,6 +551,9 @@ const en = {
     verTodas: "See all",
     verTodos: "See all",
     min: "min",
+    anterior: "Previous",
+    siguiente: "Next",
+    carruselProductos: "Featured products",
   },
   catalog: {
     filtros: "Filters",

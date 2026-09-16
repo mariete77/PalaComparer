@@ -40,12 +40,30 @@ export default async function HomePage({
   const destacadosPadel = PRODUCTS.filter(
     (p) =>
       p.sport === "padel" &&
-      ["nox-at10-genius-18k-2026", "bullpadel-vertex-05-2026", "siux-diablo-pro-2026", "starvie-raptor-2026"].includes(p.id)
+      [
+        "nox-at10-genius-18k-2026",
+        "bullpadel-vertex-05-2026",
+        "siux-diablo-pro-2026",
+        "starvie-raptor-2026",
+        "adidas-metalbone-2026",
+        "bullpadel-hack-04-2026",
+        "bullpadel-neuron-02-2026",
+        "varlion-carrera-c-black-ltd-2025",
+      ].includes(p.id)
   );
   const destacadosTenis = PRODUCTS.filter(
     (p) =>
       p.sport === "tenis" &&
-      ["wilson-blade-98-v10-2026", "babolat-pure-aero-2026", "head-speed-mp-2026", "yonex-vcore-98-2026"].includes(p.id)
+      [
+        "wilson-blade-98-v10-2026",
+        "babolat-pure-aero-2026",
+        "head-speed-mp-2026",
+        "yonex-vcore-98-2026",
+        "head-gravity-tour-zverev-2026",
+        "babolat-pure-aero-98-2026",
+        "head-boom-mp-2026",
+        "yonex-ezone-98-2025",
+      ].includes(p.id)
   );
   const ultimasNoticias = ARTICLES.slice(0, 3);
 
