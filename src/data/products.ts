@@ -3078,6 +3078,31 @@ export const PRODUCTS: Product[] = [
     descriptionEn:
       "The attacking diamond of StarVie's 2027 Pro-Line: an 18K Carbon Hybrid face over hard-density H-EVA Power rubber for explosive hits, with Five Sides Tech (rigid five-sided profile) and TriTech Core for stability. Its rough Spin Boost Tech makes víboras bite and its anatomic bridge with a longer handgrip is built for two-handed backhands. Made in Spain, it demands a trained arm — it gives you no free ball exit, but it closes out points.",
   },
+  {
+    id: "bullpadel-elite-02-2027",
+    sport: "padel",
+    brand: "Bullpadel",
+    model: "Elite 02",
+    year: 2027,
+    price: 294.99,
+    image: "/images/rackets/bullpadel-elite-02-2027.svg",
+    level: ["avanzado"],
+    style: ["polivalente"],
+    player: "Gemma Triay",
+    padel: {
+      shape: "hibrida",
+      weight: "350-360 g",
+      balance: "medio",
+      core: "Multieva",
+      faces: "Fibrix",
+      surface: "rugosa",
+      hardness: "media",
+    },
+    description:
+      "La pala de Gemma Triay y el regreso de la línea Elite: híbrida ligera de 350-360 g con balance medio en 25,5 cm y 537 cm² de superficie, pensada para mover el punto entre defensa y red sin esfuerzo. Caras Fibrix sobre núcleo Multieva y corazón Elite Core para respuesta estable, con Total Channel en el marco para un swing más rápido y acabado rugoso 3D Grain en los efectos. Compatible con CustomWeight para ajustar el balance a gusto. La todoterreno clásica de Bullpadel en su versión más fina.",
+    descriptionEn:
+      "Gemma Triay's racket and the return of the Elite line: a light 350-360 g hybrid with a medium balance at 25.5 cm and 537 cm² of surface, built to move the point between defense and net without effort. Fibrix faces over a Multieva core and Elite Core heart for a stable response, with Total Channel in the frame for a faster swing and a rough 3D Grain finish for spin. CustomWeight-compatible so you can tune the balance to taste. Bullpadel's classic all-rounder at its sharpest.",
+  },
 ];
 
 export function getProduct(id: string) {
