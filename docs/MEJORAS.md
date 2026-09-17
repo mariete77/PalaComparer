@@ -241,9 +241,23 @@ para no duplicar temas ya publicados (ej. ya existe `madrid-p1-2026-lucha-por-el
    drag 624 px, flechas habilitan/deshabilitan, dots móviles, sin overflow en
    375 px, tema claro OK, 0 errores JS. Screenshots:
    docs/screenshots/2026-09-16-blossom-carousel{,-light}.png.
-3. [ ] **ProductCard premium** — hover con lift + sombra suave + zoom sutil de la foto,
+3. [x] **ProductCard premium** — hover con lift + sombra suave + zoom sutil de la foto,
    badge de descuento real animado cuando hay oferta (< PVP), transiciones 150-250ms
    respetando `prefers-reduced-motion`. Verificar: build + screenshot (o check de estilos).
+   — **HECHO 2026-09-17**: hover unificado a 220 ms (lift −6px + `--shadow-card-hover`,
+   que existía sin usar + zoom foto 1.06/300 ms) y **badge −X% nuevo** (lima `--primary-container`,
+   pop elástico `deal-pop` 0,5 s con delay 0,25 s, `aria-label` ES/EN) que SOLO aparece con
+   **precio real scrapeado** en stock y descuento ≥10% sobre PVP (52/129 productos del catálogo;
+   precios sintéticos nunca generan badge). Con badge, el precio del card pasa a ser el real
+   verificado y el PVP se tacha encima → badge, precio y tachado siempre cuadran. Módulo nuevo
+   `src/data/real-best-price.ts` (JSON-only, client-safe, no arrastra el generador de ofertas
+   ni products.ts al bundle). Verificado: build OK, check:translations OK, DOM+estilos computados
+   (deal-pop activa, `text-decoration: line-through` en PVP, regla `:hover` servida),
+   reduced-motion → `animation: none`, móvil 375 px sin overflow ni colisión con el botón +,
+   EN/ES OK. Archivos: src/components/ProductCard.tsx, src/data/real-best-price.ts (nuevo),
+   src/app/[locale]/globals.css, src/i18n/locales.ts. Screenshot:
+   docs/screenshots/2026-09-17-productcard-badge-descuento.png (1280×800, 57.853 colores,
+   8.879 px lima = badges renderizados).
 4. [ ] **Nav sticky con blur** — barra fija con `backdrop-blur` al hacer scroll, estado
    activo por sección, menú móvil con animación de entrada. Verificar: build + screenshot
    scrolleado y móvil (375px).
@@ -362,6 +376,17 @@ pádel las cubre el cron de palas). Al terminar, actualizar el estado de la fila
 ---
 
 ## Notas (varias noches)
+
+- 2026-09-17 — Sin torneo en curso (US Open y Paris Major cerraron el 13; **Davis Cup
+  Qualifiers 2ª ronda juega 18-20 sep** → candidato Regla 0 para mañana: verificar
+  selecciones y raquetas de jugadores en catálogo antes de escribir) → backlog: item 3
+  Visual "ProductCard premium". Detalle de datos: `getBestPrice` mezcla precios reales y
+  sintéticos; para el badge se creó `src/data/real-best-price.ts` (solo JSON scrapeados,
+  client-safe). IMPORTANTE para futuras mejoras: en 21 productos el mínimo mostrado en
+  cards SIN badge sigue siendo sintético (más bajo que el real) — si algún día se quiere
+  pureza total de precios, queda pendiente decidir qué se muestra cuando no hay precio
+  real (PVP a secas vs "desde" sintético). El umbral del badge es ≥10% real; subirlo a
+  ≥15% dejaría 50 productos con badge, bajarlo a ≥5% daría 66.
 
 - 2026-09-16 — Sin torneo en curso (US Open y Paris Major cerraron el 13; Davis Cup
   18-20, Laver Cup 25-27, Rotterdam P2 empieza el 28) → backlog: item 2 Visual

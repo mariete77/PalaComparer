@@ -247,12 +247,12 @@ html[data-theme="light"] .prose-invert {
   border: 1px solid var(--hairline);
   border-radius: 0.75rem;
   overflow: hidden;
-  transition: border-color 0.35s cubic-bezier(0.16, 1, 0.3, 1), transform 0.35s cubic-bezier(0.16, 1, 0.3, 1), box-shadow 0.35s ease;
+  transition: border-color 0.22s cubic-bezier(0.16, 1, 0.3, 1), transform 0.22s cubic-bezier(0.16, 1, 0.3, 1), box-shadow 0.22s ease;
 }
 .card-split:hover {
   border-color: rgba(195,244,0,0.3);
-  transform: translateY(-4px);
-  box-shadow: var(--shadow-card);
+  transform: translateY(-6px);
+  box-shadow: var(--shadow-card-hover);
 }
 .card-split-img {
   background: linear-gradient(to bottom, var(--surface-container-low), var(--surface-container-high));
@@ -268,6 +268,29 @@ html[data-theme="light"] .prose-invert {
 .card-split-body {
   background: var(--card-body);
   border-top: 1px solid var(--hairline);
+}
+
+/* Badge de descuento real: entra con un "pop" elástico la primera vez que
+   el card entra en viewport. El @media evita animarlo con motion reduce. */
+@keyframes deal-pop {
+  0% {
+    opacity: 0;
+    transform: scale(0.4) rotate(-8deg);
+  }
+  60% {
+    opacity: 1;
+    transform: scale(1.12) rotate(2deg);
+  }
+  100% {
+    opacity: 1;
+    transform: scale(1) rotate(0deg);
+  }
+}
+@media (prefers-reduced-motion: no-preference) {
+  .deal-badge {
+    animation: deal-pop 0.5s cubic-bezier(0.34, 1.56, 0.64, 1) both;
+    animation-delay: 0.25s;
+  }
 }
 
 /* Halo cromático del módulo "Jugador del día": un resplandor del color del

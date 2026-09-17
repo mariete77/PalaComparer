@@ -9,6 +9,7 @@ import { useGSAP } from "@gsap/react";
 import { Product } from "@/data/products";
 import { getProductImage } from "@/data/product-image";
 import { formatPrice } from "@/data/offers";
+import { getRealBestPrice, realDiscountPct } from "@/data/real-best-price";
 import { getRatings } from "@/data/ratings";
 import RatingBar from "@/components/RatingBar";
 import { useCompare } from "@/components/CompareContext";
@@ -29,6 +30,15 @@ export default function ProductCard({
   const image = getProductImage(product);
   const cardRef = useRef<HTMLDivElement>(null);
   const revealRef = useRef<HTMLDivElement>(null);
+
+  // Descuento REAL: solo si un precio scrapeado (Amazon/Decathlon/tiendas)
+  // en stock mejora el PVP. Precios sintéticos nunca generan badge.
+  const realBest = getRealBestPrice(product.id);
+  const dealPct = realDiscountPct(product.price, realBest);
+  const hasDeal = dealPct != null && dealPct >= 10;
+  // Con descuento real mostramos el precio real (verificable); sin él,
+  // el "desde" habitual (mejor oferta del pool, puede ser sintética).
+  const shownPrice = hasDeal && realBest != null ? realBest : bestPrice;
 
   // Reveal the media wrapper, leaving the inner element free for its hover transform.
   useGSAP(() => {
@@ -81,8 +91,16 @@ export default function ProductCard({
           }`}>
             {product.sport === "padel" ? t("common.padel") : t("common.tenis")}
           </span>
+          {hasDeal && dealPct != null && (
+            <span
+              className="deal-badge absolute top-3 right-14 z-10 font-display font-bold text-xs leading-none py-1.5 px-2.5 rounded-lg text-on-primary border border-primary-container/60 bg-primary-container shadow-[0_4px_14px_-4px_rgba(0,0,0,0.55)]"
+              aria-label={t("common.descuentoReal", { pct: String(dealPct) })}
+            >
+              −{dealPct}%
+            </span>
+          )}
           <div ref={revealRef} className="h-full w-full">
-            <div className="relative h-full w-full transition-transform duration-500 ease-out group-hover:scale-105">
+            <div className="relative h-full w-full transition-transform duration-300 ease-out group-hover:scale-[1.06]">
               <Image
                 src={image.src}
                 unoptimized={image.unoptimized}
@@ -129,13 +147,26 @@ export default function ProductCard({
           )}
 
           <div className="mt-auto flex justify-between items-end pt-2">
-            <div>
-              {bestPrice != null && (
-                <span className="text-muted text-[10px] block">{t("common.desde")}</span>
+            <div className="min-w-0">
+              {hasDeal ? (
+                <>
+                  <span className="text-muted text-[10px] line-through block leading-none mb-0.5">
+                    {formatPrice(product.price)}
+                  </span>
+                  <div className="font-display font-bold text-lg text-primary-strong leading-tight">
+                    {formatPrice(shownPrice as number)}
+                  </div>
+                </>
+              ) : (
+                <>
+                  {bestPrice != null && (
+                    <span className="text-muted text-[10px] block">{t("common.desde")}</span>
+                  )}
+                  <div className="font-display font-bold text-lg text-primary-strong">
+                    {bestPrice != null ? formatPrice(bestPrice) : formatPrice(product.price)}
+                  </div>
+                </>
               )}
-              <div className="font-display font-bold text-lg text-primary-strong">
-                {bestPrice != null ? formatPrice(bestPrice) : formatPrice(product.price)}
-              </div>
             </div>
             <span className="text-muted font-bold text-[11px]">{product.year}</span>
           </div>
