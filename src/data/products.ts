@@ -1564,7 +1564,7 @@ export const PRODUCTS: Product[] = [
     image: "/images/rackets/babolat-pure-aero-98-2026.svg",
     level: ["avanzado", "profesional"],
     style: ["control"],
-    player: "Carlos Alcaraz / Holger Rune",
+    player: "Carlos Alcaraz / Holger Rune / Félix Auger-Aliassime",
     tenis: {
       headSize: 98,
       weightStrung: 323,

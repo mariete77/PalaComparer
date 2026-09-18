@@ -65,6 +65,7 @@ import { metadata as usOpenFinalFemenina } from "@/content/noticias/us-open-2026
 import { metadata as usOpenFinalMasculina } from "@/content/noticias/us-open-2026-final-zverev-gravity-tour.mdx";
 import { metadata as parisMajorFinales } from "@/content/noticias/paris-major-2026-dia-de-finales-coello-tapia-galan-chingotto.mdx";
 import { metadata as parisMajorCampeones } from "@/content/noticias/paris-major-2026-campeones-coello-tapia-tetra-sanchez-ustero.mdx";
+import { metadata as davisCupEliminatorias } from "@/content/noticias/davis-cup-2026-eliminatorias-raquetas.mdx";
 
 /**
  * Traducciones EN de los metadatos de cada artículo. Las ES vienen del propio
@@ -236,6 +237,13 @@ const EN_META: Record<string, { title: string; excerpt: string; tags: string[] }
       "Zverev beat Shelton 6-3, 7-6(2), 5-7, 6-2 to claim his second Grand Slam of the year, powered by the Head Gravity Tour. The gold-and-purple limited edition HEAD launched after Roland Garros, the keys to the match, and the clash of styles against Shelton's EZONE 98.",
     tags: ["US Open", "Grand Slam", "Zverev", "Shelton", "Head", "Yonex"],
   },
+  "davis-cup-2026-eliminatorias-raquetas": {
+    title:
+      "Davis Cup 2026: qualifiers kick off — the racquets of Prague, Quebec City and Halle",
+    excerpt:
+      "The Davis Cup Qualifiers start Friday: seven ties to decide who joins Italy in Bologna's Final 8. Shelton, Auger-Aliassime, Machac and Zverev in action with racquets that are already in our catalog.",
+    tags: ["Davis Cup", "Zverev", "Shelton", "Auger-Aliassime", "Bologna", "Tennis"],
+  },
 };
 
 /**
@@ -287,6 +295,7 @@ export const ARTICLES: Article[] = [
   localize({ slug: "us-open-2026-final-zverev-gravity-tour", ...usOpenFinalMasculina }),
   localize({ slug: "paris-major-2026-dia-de-finales-coello-tapia-galan-chingotto", ...parisMajorFinales }),
   localize({ slug: "paris-major-2026-campeones-coello-tapia-tetra-sanchez-ustero", ...parisMajorCampeones }),
+  localize({ slug: "davis-cup-2026-eliminatorias-raquetas", ...davisCupEliminatorias }),
 ].sort((a, b) => b.date.localeCompare(a.date));
 
 export function getArticle(slug: string): Article | undefined {

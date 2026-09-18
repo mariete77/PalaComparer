@@ -198,6 +198,28 @@ para no duplicar temas ya publicados (ej. ya existe `madrid-p1-2026-lucha-por-el
    producto, jugador); screenshots docs/screenshots/2026-09-14-{us-open-final-zverev-
    noticia,gravity-tour-zverev-ficha,jugador-alexander-zverev}.png (1280×800, no
    en blanco: 379/501/365 colores únicos).
+12. [x] **Davis Cup Qualifiers 2026 — el fin de semana de las eliminatorias** —
+   torneo EN MARCHA (18-20 sep): 7 ties deciden quién acompaña a Italia en el Final
+   8 de Bolonia (24-29 nov). Pieza original de raquetas con las del catálogo: la
+   EZONE 98 de Shelton y la familia VCORE de Macháč en Praga (USA sin Fritz y Paul:
+   entran Tien nº13 y Damm; viernes Tien–Mensik, rematch del US Open, y
+   Shelton–Lehecka), la Pure Aero 98 de Auger-Aliassime en Québec (FAA en singles y
+   dobles, el sorteo del 17 sep dejó fuera de la hoja a Fils), la Gravity Tour de
+   Zverev en Halle y la familia TFight de Blockx en Viena. — **HECHO 2026-09-18**:
+   artículo `davis-cup-2026-eliminatorias-raquetas` (ES+EN, kind novedad, 5
+   relatedProducts con ProductRef/ProductGrid) + campo `player` de la Babolat Pure
+   Aero 98 2026 ampliado a "Carlos Alcaraz / Holger Rune / Félix Auger-Aliassime"
+   (verificado en babolat.com: "used on tour by Carlos Alcaraz, Holger Rune and
+   Felix Auger-Aliassime") → nueva página /jugadores/felix-auger-aliassime. Fuentes:
+   daviscup.com (nominaciones + formato + Final 8 Bolonia), USTA (equipo USA,
+   ranking Tien 13 / Damm 104), AFP/Dawn (bajas de Fritz y Paul; Zverev nº2),
+   tenngrand (orden de juego viernes + rematch), Tennis Canada (sorteo Québec 17
+   sep: FAA singles+dobles, Rinderknech–Halys individuales, Bonzi–Herbert dobles),
+   babolat.com + tennisgearguide (Pure Aero 98 de FAA/Fils/Alcaraz/Rune), iq.tennis
+   (FAA 98 retail frame; Macháč VCORE → SV; Lehecka Six.One 95; Mensik Blade),
+   tecnifibre.com (Blockx T-Fight desde los 17). Build + check:translations OK; /es
+   y /en 200 (noticia, listado, ficha Pure Aero 98, jugador FAA, jugadores Shelton
+   y Macháč preexistentes).
 
 
 ### 🎨 Visual (mejoras visuales)
@@ -377,6 +399,21 @@ pádel las cubre el cron de palas). Al terminar, actualizar el estado de la fila
 
 ## Notas (varias noches)
 
+- 2026-09-18 — **Regla 0 (Davis Cup Qualifiers 2ª ronda, EN MARCHA 18-20 sep)**: publicada
+  `davis-cup-2026-eliminatorias-raquetas` (ES+EN) con las raquetas del catálogo en Praga
+  (EZONE 98 de Shelton, familia VCORE de Macháč), Québec (Pure Aero 98 de FAA), Halle
+  (Gravity Tour de Zverev) y Viena (familia TFight de Blockx). Alta de Félix
+  Auger-Aliassime en el campo `player` de la Pure Aero 98 (verificado en babolat.com) →
+  página /jugadores/felix-auger-aliassime nueva. Datos CLAVE del fin de semana (para
+  futuras piezas/el cron de noticias del lunes): USA sin Fritz y Paul (entran Tien nº13
+  y Damm #104); viernes en Praga Tien–Mensik y Shelton–Lehecka; el sorteo de Québec dejó
+  a Fils fuera de la hoja (Rinderknech y Halys individuales; FAA juega singles y dobles,
+  debut de Duncan Chan); Alemania-Croacia el sábado en Halle con Zverev nº2. Laver Cup
+  Londres 25-27 sep (candidata Regla 0 para el domingo/lunes) y Rotterdam P2 desde el 28.
+  No se tocó la tabla de demanda real (todo ✓). HUECO detectado para el cron de palas:
+  ninguna pala nueva; para jugadores: Learner Tien juega una Wilson (mold no retail,
+  fuentes contradictorias: Ultra vs Blade Pro — no añadir al catálogo sin fuente oficial
+  de marca).
 - 2026-09-17 — Sin torneo en curso (US Open y Paris Major cerraron el 13; **Davis Cup
   Qualifiers 2ª ronda juega 18-20 sep** → candidato Regla 0 para mañana: verificar
   selecciones y raquetas de jugadores en catálogo antes de escribir) → backlog: item 3
