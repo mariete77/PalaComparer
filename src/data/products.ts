@@ -3103,6 +3103,31 @@ export const PRODUCTS: Product[] = [
     descriptionEn:
       "Gemma Triay's racket and the return of the Elite line: a light 350-360 g hybrid with a medium balance at 25.5 cm and 537 cm² of surface, built to move the point between defense and net without effort. Fibrix faces over a Multieva core and Elite Core heart for a stable response, with Total Channel in the frame for a faster swing and a rough 3D Grain finish for spin. CustomWeight-compatible so you can tune the balance to taste. Bullpadel's classic all-rounder at its sharpest.",
   },
+  {
+    id: "bullpadel-pearl-2026",
+    sport: "padel",
+    brand: "Bullpadel",
+    model: "Pearl W 26",
+    year: 2026,
+    price: 194.9,
+    image: "/images/rackets/bullpadel-pearl-2026.svg",
+    level: ["avanzado"],
+    style: ["potencia"],
+    player: "Bea González",
+    padel: {
+      shape: "diamante",
+      weight: "355-365 g",
+      balance: "medio",
+      core: "MultiEva",
+      faces: "Fibrix",
+      surface: "rugosa",
+      hardness: "media",
+    },
+    description:
+      "La pala de Bea González para 2026: diamante oversize de 531 cm² que busca el 'easy power' — pegada de ataque sin exigir el brazo de las palas extremas. Peso contenido de 355-365 g con balance medio-alto en 26 cm, corazón MultiEva y caras Fibrix (la mezcla de fibra de vidrio y carbono de Bullpadel) con acabado rugoso 3D Grain. Tecnologías Trinamic, Air React Channel y CustomWeight: puedes sumar hasta 12 g de placas para subir el peso o el balance a tu gusto. Ideal para jugadoras de nivel avanzado que quieren rematar sin perder manejabilidad.",
+    descriptionEn:
+      "Bea González's racket for 2026: an oversize diamond of 531 cm² built for 'easy power' — attacking punch without demanding the arm of extreme rackets. Contained weight of 355-365 g with a medium-high balance at 26 cm, a MultiEva core and Fibrix faces (Bullpadel's fiberglass-carbon blend) with a rough 3D Grain finish. Trinamic, Air React Channel and CustomWeight technologies: you can add up to 12 g of plates to tune weight or balance to taste. Ideal for advanced players who want to finish points without losing maneuverability.",
+  },
 ];
 
 export function getProduct(id: string) {
