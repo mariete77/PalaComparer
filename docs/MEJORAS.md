@@ -217,9 +217,28 @@ para no duplicar temas ya publicados (ej. ya existe `madrid-p1-2026-lucha-por-el
    sep: FAA singles+dobles, Rinderknech–Halys individuales, Bonzi–Herbert dobles),
    babolat.com + tennisgearguide (Pure Aero 98 de FAA/Fils/Alcaraz/Rune), iq.tennis
    (FAA 98 retail frame; Macháč VCORE → SV; Lehecka Six.One 95; Mensik Blade),
-   tecnifibre.com (Blockx T-Fight desde los 17). Build + check:translations OK; /es
-   y /en 200 (noticia, listado, ficha Pure Aero 98, jugador FAA, jugadores Shelton
-   y Macháč preexistentes).
+   tennistemple (Blockx T-Fight desde los 17). Build + check:translations OK; /es
+  y /en 200 (noticia, listado, ficha Pure Aero 98, jugador FAA, jugadores Shelton
+  y Macháč preexistentes).
+13. [x] **Davis Cup Qualifiers 2026 — el sábado decisivo** — el torneo sigue EN MARCHA
+  (18-20 sep) y este sábado 19 se reparten los primeros billetes al Final 8: pieza
+  de la jornada con los resultados reales del viernes (Praga 1-1: Tien d. Mensik
+  6-2 6-4 en su debut, 15 UE vs 34; Lehecka d. Shelton 6-4 6-4, 1er partido del
+  subcampeón del US Open), Québec 1-0 (Draxl d. Rinderknech 6-2 7-5, mejor victoria
+  de su carrera) y lo que se juega HOY: en Praga dobles + Mensik-Shelton y
+  Lehecka-Tien (Lehecka a 2 victorias de igualar a Rosol, 12 singles checos), en
+  Québec dobles Chan-FAA vs Bonzi-Herbert y el arranque de Alemania-Croacia en
+  Halle (14:00 local: Zverev-Dodig y Altmaier-Prizmic, 5 días después del US Open;
+  Croacia sin Čilić con Pavic-Mektic). — **HECHO 2026-09-19**: artículo
+  `davis-cup-2026-sabado-decisivo` (ES+EN, kind novedad, 3 relatedProducts con
+  ProductRef/ProductGrid: EZONE 98, Pure Aero 98, Gravity Tour Zverev). Fuentes:
+  daviscup.com (crónica Tien + dato Rosol), AP (Lehecka-Shelton), USTA (formato +
+  Delray 2025), Tennis Canada/Canadian Press (Draxl + condición de 1 punto),
+  TSN (dobles Chan-FAA vs Bonzi-Herbert), tennisuptodate (cruces del sábado),
+  tenniswatcher (Halle: horarios + 5 días + Trier 2023 + Hanfmann/Altmaier +
+  Croacia sin Čilić), tennistemple (orden de juego sábado 19), archysport
+  (Krawietz-Pütz finalistas dobles US Open). Build + check:translations OK; /es
+  y /en prerenderizados con 3 enlaces a ficha por producto y página de jugador.
 
 
 ### 🎨 Visual (mejoras visuales)
@@ -399,6 +418,21 @@ pádel las cubre el cron de palas). Al terminar, actualizar el estado de la fila
 
 ## Notas (varias noches)
 
+- 2026-09-19 — **Regla 0 (Davis Cup Qualifiers 2ª ronda, EN MARCHA 18-20 sep)**: publicada
+  `davis-cup-2026-sabado-decisivo` (ES+EN) con los resultados del viernes y la jornada
+  decisiva del sábado. Datos CLAVE verificados del viernes: Praga 1-1 (Tien d. Mensik
+  6-2 6-4, debut DC + 15 UE vs 34; Lehecka d. Shelton 6-4 6-4, Shelton sin ritmo tras
+  la final del US Open — AP), Québec 1-0 (Draxl d. Rinderknech 6-2 7-5 — Tennis Canada,
+  "career-best win"). Sábado: Praga dobles + Mensik-Shelton y Lehecka-Tien (tennisuptodate);
+  Québec dobles Chan-FAA vs Bonzi-Herbert (TSN) + reverse singles si hace falta; Halle
+  arranca 14:00 local (12:00 UTC) con Zverev-Matej Dodig y Altmaier-Prizmic (tennistemple);
+  domingo en Halle dobles + reverse desde las 12:00 (tenniswatcher). PENDIENTE de verificar
+  al cierre de esta noche: resultado FAA–Halys (partido nocturno del viernes, no publicado
+  a la hora de escribir — se formuló como condicional con fuente de Tennis Canada) y los
+  ganadores de hoy — el cron de noticias del lunes puede cerrar la ronda con los 7
+  clasificados a Bolonia. Laver Cup Londres 25-27 sep (candidata Regla 0 para el domingo/
+  lunes). Tabla de demanda real: no se tocó (todo ✓). HUECOS: ninguno nuevo; para palas
+  seguiría abierta la Gravity Tour estándar (no-Zverev) anotada el 14 sep.
 - 2026-09-18 — **Regla 0 (Davis Cup Qualifiers 2ª ronda, EN MARCHA 18-20 sep)**: publicada
   `davis-cup-2026-eliminatorias-raquetas` (ES+EN) con las raquetas del catálogo en Praga
   (EZONE 98 de Shelton, familia VCORE de Macháč), Québec (Pure Aero 98 de FAA), Halle

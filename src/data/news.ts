@@ -66,6 +66,7 @@ import { metadata as usOpenFinalMasculina } from "@/content/noticias/us-open-202
 import { metadata as parisMajorFinales } from "@/content/noticias/paris-major-2026-dia-de-finales-coello-tapia-galan-chingotto.mdx";
 import { metadata as parisMajorCampeones } from "@/content/noticias/paris-major-2026-campeones-coello-tapia-tetra-sanchez-ustero.mdx";
 import { metadata as davisCupEliminatorias } from "@/content/noticias/davis-cup-2026-eliminatorias-raquetas.mdx";
+import { metadata as davisCupSabado } from "@/content/noticias/davis-cup-2026-sabado-decisivo.mdx";
 
 /**
  * Traducciones EN de los metadatos de cada artículo. Las ES vienen del propio
@@ -244,6 +245,13 @@ const EN_META: Record<string, { title: string; excerpt: string; tags: string[] }
       "The Davis Cup Qualifiers start Friday: seven ties to decide who joins Italy in Bologna's Final 8. Shelton, Auger-Aliassime, Machac and Zverev in action with racquets that are already in our catalog.",
     tags: ["Davis Cup", "Zverev", "Shelton", "Auger-Aliassime", "Bologna", "Tennis"],
   },
+  "davis-cup-2026-sabado-decisivo": {
+    title:
+      "Davis Cup: tickets to Bologna up for grabs — Prague and Quebec City get decided, Zverev lands in Halle",
+    excerpt:
+      "Friday left Prague 1-1 (Tien beat Mensik, Lehecka stopped Shelton) and Canada 1-0 up in Quebec City, thanks to Draxl. Today the first Final 8 tickets are handed out, and Germany-Croatia opens with Zverev.",
+    tags: ["Davis Cup", "Zverev", "Shelton", "Lehecka", "Auger-Aliassime", "Bologna", "Tennis"],
+  },
 };
 
 /**
@@ -296,6 +304,7 @@ export const ARTICLES: Article[] = [
   localize({ slug: "paris-major-2026-dia-de-finales-coello-tapia-galan-chingotto", ...parisMajorFinales }),
   localize({ slug: "paris-major-2026-campeones-coello-tapia-tetra-sanchez-ustero", ...parisMajorCampeones }),
   localize({ slug: "davis-cup-2026-eliminatorias-raquetas", ...davisCupEliminatorias }),
+  localize({ slug: "davis-cup-2026-sabado-decisivo", ...davisCupSabado }),
 ].sort((a, b) => b.date.localeCompare(a.date));
 
 export function getArticle(slug: string): Article | undefined {
