@@ -3128,6 +3128,31 @@ export const PRODUCTS: Product[] = [
     descriptionEn:
       "Bea González's racket for 2026: an oversize diamond of 531 cm² built for 'easy power' — attacking punch without demanding the arm of extreme rackets. Contained weight of 355-365 g with a medium-high balance at 26 cm, a MultiEva core and Fibrix faces (Bullpadel's fiberglass-carbon blend) with a rough 3D Grain finish. Trinamic, Air React Channel and CustomWeight technologies: you can add up to 12 g of plates to tune weight or balance to taste. Ideal for advanced players who want to finish points without losing maneuverability.",
   },
+  {
+    id: "starvie-eternal-2027",
+    sport: "padel",
+    brand: "StarVie",
+    model: "Eternal",
+    year: 2027,
+    price: 330,
+    image: "/images/rackets/starvie-eternal-2027.svg",
+    level: ["avanzado", "profesional"],
+    style: ["polivalente"],
+    player: "Sanyo Gutiérrez",
+    padel: {
+      shape: "hibrida",
+      weight: "350-370 g",
+      balance: "medio",
+      core: "M-Eva Balance",
+      faces: "18K Carbon Hybrid",
+      surface: "rugosa",
+      hardness: "media",
+    },
+    description:
+      "La firma de Sanyo Gutiérrez: molde híbrido nuevo con punto dulce amplio y carácter versátil, plano 18K Carbon Hybrid sobre goma M-Eva Balance de tacto medio que reparte potencia, control y confort. Su gran novedad es el sistema Power Balance: gomas intercambiables integradas en el perfil para ajustar el balance a tu juego, junto a Aero Drive (swing más rápido), V-Force Bridge, Hexa Cell y A-Shock contra vibraciones. Rugosidad Spin Boost Tech y mango alargado, acabado en blanco, negro y dorado. Fabricada en España para nivel pro y semi-pro que quiere adaptabilidad total en pista.",
+    descriptionEn:
+      "Sanyo Gutiérrez's signature racket: a new hybrid mold with a wide sweet spot and a versatile character, an 18K Carbon Hybrid face over medium-touch M-Eva Balance rubber that balances power, control and comfort. Its big novelty is the Power Balance system: interchangeable rubbers built into the profile to tune the balance to your game, alongside Aero Drive (faster swing), V-Force Bridge, Hexa Cell and A-Shock vibration damping. Spin Boost Tech roughness and a longer handgrip, finished in white, black and gold. Made in Spain for pro and semi-pro players who want total adaptability on court.",
+  },
 ];
 
 export function getProduct(id: string) {
