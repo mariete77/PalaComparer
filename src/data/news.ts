@@ -68,6 +68,7 @@ import { metadata as parisMajorCampeones } from "@/content/noticias/paris-major-
 import { metadata as davisCupEliminatorias } from "@/content/noticias/davis-cup-2026-eliminatorias-raquetas.mdx";
 import { metadata as davisCupSabado } from "@/content/noticias/davis-cup-2026-sabado-decisivo.mdx";
 import { metadata as laverCupLondres } from "@/content/noticias/laver-cup-2026-londres-raquetas.mdx";
+import { metadata as espanaPrelistaMundial } from "@/content/noticias/espana-prelista-mundial-qatar-2026.mdx";
 
 /**
  * Traducciones EN de los metadatos de cada artículo. Las ES vienen del propio
@@ -259,6 +260,12 @@ const EN_META: Record<string, { title: string; excerpt: string; tags: string[] }
       "The O2 hosts the ninth Laver Cup from September 25 to 27: 12 players, 5 racquet brands and a Diadem as the only 'independent' frame on the roster. We break down the arsenal of Team Europe and Team World with the racquets in our catalog.",
     tags: ["Laver Cup", "Alcaraz", "Zverev", "Fritz", "Jodar", "London", "Tennis"],
   },
+  "espana-prelista-mundial-qatar-2026": {
+    title: "Spain unveils its 24-player preliminary squad for the 2026 Qatar World Cup",
+    excerpt:
+      "Spain's federation named 12 men and 12 women on September 16 for the World Championships in Doha (November 2-7). Selectors Juanjo Gutiérrez and Carolina Navarro will trim the list to 16 at an event in Madrid on September 24, with notable absences already making headlines.",
+    tags: ["Spain national team", "World Cup", "FIP World Cup", "Doha"],
+  },
 };
 
 /**
@@ -313,6 +320,7 @@ export const ARTICLES: Article[] = [
   localize({ slug: "davis-cup-2026-eliminatorias-raquetas", ...davisCupEliminatorias }),
   localize({ slug: "davis-cup-2026-sabado-decisivo", ...davisCupSabado }),
   localize({ slug: "laver-cup-2026-londres-raquetas", ...laverCupLondres }),
+  localize({ slug: "espana-prelista-mundial-qatar-2026", ...espanaPrelistaMundial }),
 ].sort((a, b) => b.date.localeCompare(a.date));
 
 export function getArticle(slug: string): Article | undefined {
