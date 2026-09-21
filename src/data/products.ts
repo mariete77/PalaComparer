@@ -1493,7 +1493,7 @@ export const PRODUCTS: Product[] = [
     image: "/images/rackets/wilson-blade-98-v10-2026.svg",
     level: ["avanzado", "profesional"],
     style: ["control"],
-    player: "Stefanos Tsitsipas",
+    player: "Stefanos Tsitsipas / Jakub Menšík",
     tenis: {
       headSize: 98,
       weightStrung: 323,
@@ -1611,7 +1611,7 @@ export const PRODUCTS: Product[] = [
     image: "/images/rackets/head-speed-mp-2026.svg",
     level: ["intermedio", "avanzado"],
     style: ["polivalente"],
-    player: "Novak Djokovic (línea Speed)",
+    player: "Novak Djokovic (línea Speed) / Rafael Jodar",
     tenis: {
       headSize: 100,
       weightStrung: 315,
@@ -1659,7 +1659,7 @@ export const PRODUCTS: Product[] = [
     image: "/images/rackets/yonex-vcore-98-2026.svg",
     level: ["avanzado"],
     style: ["control", "potencia"],
-    player: "Hubert Hurkacz / Elena Rybakina",
+    player: "Hubert Hurkacz / Elena Rybakina / Brandon Nakashima",
     tenis: {
       headSize: 98,
       weightStrung: 321,
@@ -1731,7 +1731,7 @@ export const PRODUCTS: Product[] = [
     image: "/images/rackets/head-radical-mp-auxetic.svg",
     level: ["intermedio", "avanzado"],
     style: ["polivalente"],
-    player: "Andrey Rublev",
+    player: "Andrey Rublev / Taylor Fritz",
     tenis: {
       headSize: 98,
       weightStrung: 315,

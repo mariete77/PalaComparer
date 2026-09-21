@@ -239,6 +239,31 @@ para no duplicar temas ya publicados (ej. ya existe `madrid-p1-2026-lucha-por-el
   Croacia sin Čilić), tennistemple (orden de juego sábado 19), archysport
   (Krawietz-Pütz finalistas dobles US Open). Build + check:translations OK; /es
   y /en prerenderizados con 3 enlaces a ficha por producto y página de jugador.
+14. [x] **Laver Cup Londres 2026 — las raquetas de las dos selecciones** — el torneo
+  se juega del 25 al 27 de septiembre en The O2 (empieza el viernes); previa con
+  ángulo de material: las 12 raquetas de los dos equipos (5 HEAD, 3 Wilson, 2
+  Yonex, 1 Babolat, 1 Diadem), las plantillas oficiales de lavercup.com, el 15-9
+  de San Francisco 2025 y el duelo de revancha Zverev-Fritz. — **HECHO 2026-09-21**:
+  artículo `laver-cup-2026-londres-raquetas` (ES+EN, kind novedad, 7 relatedProducts
+  con ProductRef/ProductGrid) + ampliación de 4 campos `player` verificados
+  (Blade 98 v10 +Jakub Menšík — comunicado oficial Wilson; Speed MP +Rafael
+  Jodar — tennisexpress; Radical MP +Taylor Fritz — Tennisnerd; VCORE 98
+  +Brandon Nakashima — iq.tennis/Tennisnerd) → **4 páginas de jugador nuevas**
+  (rafael-jodar, taylor-fritz, jakub-mensik, brandon-nakashima; 45 totales).
+  Fuentes: lavercup.com (plantillas, formato 13 puntos, capitanes Noah/Agassi,
+  historial SF 15-9 y Berlín 13-11, debut de Nakashima y Bublik), atptour.com
+  (Jodar: Next Gen Race líder 2.509, Nº13, Marrakech, cuartos Madrid/Roma, RG
+  27º cabo), Wikipedia (Jodar career-high nº11), Wilson (PR Blade v10),
+  tennisexpress (Jodar Speed MP 2026), Tennisnerd (Fritz Radical MP/TGT 260.3,
+  De Minaur Ultra Pro 99, Tien molde no retail, Nakashima VCORE 98, Cerúndolo
+  PT57A 18x20), iq.tennis (Nakashima VCORE 98), head.com (Cerúndolo familia
+  Prestige), diademsports.com (Bublik Project Bublik 98 "plays with"),
+  yonex.com (Nakashima Next Gen 2022 + finalista National Bank Open 2026),
+  tennis.com (Cobolli Radical Pro 2025), perfect-tennis (Ruud endosa EZONE 100),
+  tennisuptodate (Fritz-Cerúndolo US Open 3R). Build + check:translations OK;
+  15 URLs a 200 en local (noticia ES/EN, 4 jugadores ES (+2 EN), 7 fichas).
+  Screenshot: docs/screenshots/2026-09-21-laver-cup-londres-raquetas.png
+  (1280×577, 5.790 colores, título y hero renderizados).
 
 
 ### 🎨 Visual (mejoras visuales)
@@ -418,6 +443,27 @@ pádel las cubre el cron de palas). Al terminar, actualizar el estado de la fila
 
 ## Notas (varias noches)
 
+- 2026-09-21 — **Regla 0 (Laver Cup Londres 25-27 sep, arranca el viernes)**: publicada
+  `laver-cup-2026-londres-raquetas` (ES+EN) con el arsenal completo de las dos selecciones
+  y 4 páginas de jugador nuevas (Rafael Jodar, Taylor Fritz, Jakub Menšík, Brandon
+  Nakashima) vía campos `player` ampliados y verificados. Plantillas oficiales
+  (lavercup.com): Europa = Alcaraz, Zverev, Mensik, Cobolli, Jodar, Ruud; Mundo = Fritz,
+  De Minaur, Nakashima, Bublik, Tien, Cerúndolo. Capitanes Noah (Europa) y Agassi (Mundo);
+  el Mundo defiende el 15-9 de San Francisco 2025. Formato: primero a 13 puntos, 4 partidos
+  viernes + 4 sábado + hasta 4 domingo (sesiones 14:00/20:00 hora española). Raquetas
+  verificadas: Alcaraz Pure Aero 98, Zverev Gravity Tour Zverev 2026, Mensik Blade v10
+  (PR oficial Wilson), Jodar Speed MP 2026 (tennisexpress), Cobolli familia Radical (Pro
+  retail, pro stock TGT), Ruud EZONE 100 (endoso; molde DR 100), Fritz Radical MP (pro
+  stock TGT 260.3, 18x20), De Minaur Wilson Ultra Pro 99, Nakashima VCORE 98 (iq.tennis),
+  Bublik Diadem Project Bublik 98 (firma, único no gran marca; debut), Tien Wilson molde
+  NO retail, Cerúndolo Prestige PT57A pro stock (18x20, ~350 g). HUECOS para futuros
+  crons: (1) la Head Gravity Tour estándar (no-Zverev) sigue sin estar en catálogo (nota
+  del 14 sep); (2) para el cron de noticias del lunes 28: resultados del fin de semana de
+  Laver Cup (25-27) y arranque del Rotterdam P2 de Premier Padel (28 sep-4 oct); (3) la
+  Wilson Ultra Pro 99 de De Minaur y la Diadem Project Bublik 98 podrían ser altas
+  futuras si hay fuentes retail con foto verificable. Tabla de demanda real: no se tocó
+  (todo ✓); Fritz y Jodar ahora tienen página limpia, candidatos a vigilar en Search
+  Console (Laver Cup = pico de búsquedas "qué raqueta usa X").
 - 2026-09-19 — **Regla 0 (Davis Cup Qualifiers 2ª ronda, EN MARCHA 18-20 sep)**: publicada
   `davis-cup-2026-sabado-decisivo` (ES+EN) con los resultados del viernes y la jornada
   decisiva del sábado. Datos CLAVE verificados del viernes: Praga 1-1 (Tien d. Mensik

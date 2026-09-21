@@ -67,6 +67,7 @@ import { metadata as parisMajorFinales } from "@/content/noticias/paris-major-20
 import { metadata as parisMajorCampeones } from "@/content/noticias/paris-major-2026-campeones-coello-tapia-tetra-sanchez-ustero.mdx";
 import { metadata as davisCupEliminatorias } from "@/content/noticias/davis-cup-2026-eliminatorias-raquetas.mdx";
 import { metadata as davisCupSabado } from "@/content/noticias/davis-cup-2026-sabado-decisivo.mdx";
+import { metadata as laverCupLondres } from "@/content/noticias/laver-cup-2026-londres-raquetas.mdx";
 
 /**
  * Traducciones EN de los metadatos de cada artículo. Las ES vienen del propio
@@ -252,6 +253,12 @@ const EN_META: Record<string, { title: string; excerpt: string; tags: string[] }
       "Friday left Prague 1-1 (Tien beat Mensik, Lehecka stopped Shelton) and Canada 1-0 up in Quebec City, thanks to Draxl. Today the first Final 8 tickets are handed out, and Germany-Croatia opens with Zverev.",
     tags: ["Davis Cup", "Zverev", "Shelton", "Lehecka", "Auger-Aliassime", "Bologna", "Tennis"],
   },
+  "laver-cup-2026-londres-raquetas": {
+    title: "Laver Cup 2026 in London: the racquets of the two teams",
+    excerpt:
+      "The O2 hosts the ninth Laver Cup from September 25 to 27: 12 players, 5 racquet brands and a Diadem as the only 'independent' frame on the roster. We break down the arsenal of Team Europe and Team World with the racquets in our catalog.",
+    tags: ["Laver Cup", "Alcaraz", "Zverev", "Fritz", "Jodar", "London", "Tennis"],
+  },
 };
 
 /**
@@ -305,6 +312,7 @@ export const ARTICLES: Article[] = [
   localize({ slug: "paris-major-2026-campeones-coello-tapia-tetra-sanchez-ustero", ...parisMajorCampeones }),
   localize({ slug: "davis-cup-2026-eliminatorias-raquetas", ...davisCupEliminatorias }),
   localize({ slug: "davis-cup-2026-sabado-decisivo", ...davisCupSabado }),
+  localize({ slug: "laver-cup-2026-londres-raquetas", ...laverCupLondres }),
 ].sort((a, b) => b.date.localeCompare(a.date));
 
 export function getArticle(slug: string): Article | undefined {
