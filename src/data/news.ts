@@ -69,6 +69,7 @@ import { metadata as davisCupEliminatorias } from "@/content/noticias/davis-cup-
 import { metadata as davisCupSabado } from "@/content/noticias/davis-cup-2026-sabado-decisivo.mdx";
 import { metadata as laverCupLondres } from "@/content/noticias/laver-cup-2026-londres-raquetas.mdx";
 import { metadata as espanaPrelistaMundial } from "@/content/noticias/espana-prelista-mundial-qatar-2026.mdx";
+import { metadata as davisCupFinal8 } from "@/content/noticias/davis-cup-2026-final-8-bolonia-clasificados.mdx";
 
 /**
  * Traducciones EN de los metadatos de cada artículo. Las ES vienen del propio
@@ -266,6 +267,12 @@ const EN_META: Record<string, { title: string; excerpt: string; tags: string[] }
       "Spain's federation named 12 men and 12 women on September 16 for the World Championships in Doha (November 2-7). Selectors Juanjo Gutiérrez and Carolina Navarro will trim the list to 16 at an event in Madrid on September 24, with notable absences already making headlines.",
     tags: ["Spain national team", "World Cup", "FIP World Cup", "Doha"],
   },
+  "davis-cup-2026-final-8-bolonia-clasificados": {
+    title: "Davis Cup: the Bologna Final 8 field is set — Czechia knock out the USA and Spain cruise without Alcaraz",
+    excerpt:
+      "Czechia come from behind to beat the United States in Prague, Auger-Aliassime seals Canada's place at home and Spain sweep Chile without dropping a rubber. The Bologna Final 8 (November 24-29) has its eight teams.",
+    tags: ["Davis Cup", "Final 8", "Bologna", "Spain", "Zverev", "Tennis"],
+  },
 };
 
 /**
@@ -321,6 +328,7 @@ export const ARTICLES: Article[] = [
   localize({ slug: "davis-cup-2026-sabado-decisivo", ...davisCupSabado }),
   localize({ slug: "laver-cup-2026-londres-raquetas", ...laverCupLondres }),
   localize({ slug: "espana-prelista-mundial-qatar-2026", ...espanaPrelistaMundial }),
+  localize({ slug: "davis-cup-2026-final-8-bolonia-clasificados", ...davisCupFinal8 }),
 ].sort((a, b) => b.date.localeCompare(a.date));
 
 export function getArticle(slug: string): Article | undefined {

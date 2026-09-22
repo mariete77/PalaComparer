@@ -264,6 +264,24 @@ para no duplicar temas ya publicados (ej. ya existe `madrid-p1-2026-lucha-por-el
   15 URLs a 200 en local (noticia ES/EN, 4 jugadores ES (+2 EN), 7 fichas).
   Screenshot: docs/screenshots/2026-09-21-laver-cup-londres-raquetas.png
   (1280×577, 5.790 colores, título y hero renderizados).
+15. [x] **Davis Cup Qualifiers 2026 — el Final 8 de Bolonia ya tiene dueños** —
+   ronda cerrada el domingo 20 de septiembre; hoy (22 sep) la historia fresca es la
+   foto completa del cuadro: Chequia 3-2 EE.UU. (remontada en reverse singles tras
+   el 2-1 americano con dobles Harrison-Krajicek salvando 4 MPs), Canadá 3-1 Francia
+   (FAA héroe en la 1ª Davis de Québec desde 1975), Alemania 3-2 Croacia (Zverev
+   cierra el domingo d. Prizmic 6-2 6-4, una semana tras el US Open), España 4-0
+   Chile sin ceder un partido (Jodar debut 6-0 6-2 a Garín; Mérida 5-7 6-3 6-3 a
+   Tabilo; Martínez-Munar sentencian en el dobles), GB 4-0 Ecuador (1er Final 8
+   desde 2023), Corea 3-1 India (Kwon d. Nagal 6-1 6-2), Austria 3-1 Bélgica
+   (Rodionov d. Bergs 7-6(6) 6-3). Final 8 = Italia + esos 7 (Bolonia, 24-29 nov).
+   — **HECHO 2026-09-22**: artículo `davis-cup-2026-final-8-bolonia-clasificados`
+   (ES+EN, kind novedad, 5 relatedProducts con ProductRef/ProductGrid: Blade 98 v10,
+   EZONE 98, Pure Aero 98, Gravity Tour Zverev, Speed MP) + nota Rune en Grupo
+   Mundial I (d. Dimitrov 3-6 6-3 7-6(4), Pure Aero 98) + enlace a la previa de la
+   Laver Cup. Fuentes: daviscup.com, AP/ajc, worldtennismagazine, Tennis Canada,
+   tennistemple, RFI/ground.news, T13, Sunday Guardian. Build + check:translations
+   OK; /es y /en 200 con contenido verificado en DOM; listado OK; screenshot
+   docs/screenshots/2026-09-22-davis-cup-final-8.png (1280×577, 5.605 colores).
 
 
 ### 🎨 Visual (mejoras visuales)
@@ -442,6 +460,29 @@ pádel las cubre el cron de palas). Al terminar, actualizar el estado de la fila
 ---
 
 ## Notas (varias noches)
+
+- 2026-09-22 — **Regla 0 (Davis Cup Qualifiers 2ª ronda CERRADA, resultados del
+  18-20 sep)**: publicado `davis-cup-2026-final-8-bolonia-clasificados` (ES+EN) con
+  el cuadro definitivo del Final 8 de Bolonia (24-29 nov): Italia (anfitriona, busca
+  el 4º título seguido) + España, Alemania, Gran Bretaña, Austria, Canadá, Chequia y
+  Corea del Sur. Datos CLAVE verificados: Praga Chequia 3-2 USA (viernes 1-1: Tien
+  d. Mensik 6-2 6-4, Lehecka d. Shelton 6-4 6-4; sábado dobles Harrison-Krajicek
+  d. [pareja checa] salvando 4 MP → 2-1 USA; Lehecka d. Tien 6-3 7-5 y Mensik d.
+  Shelton 5-7 6-4 6-3); Québec Canadá 3-1 Francia (Draxl d. Rinderknech 6-2 7-5;
+  FAA d. Halys 7-6(5) 4-6 6-3; Bonzi-Herbert d. Chan-FAA 7-6(4) 6-3; FAA d.
+  Rinderknech 4-6 7-6(4) 6-4 clausura); Halle Alemania 3-2 Croacia (Krawietz-Pütz d.
+  Pavic-Mektic 7-5 6-2; Zverev d. Prizmic 6-2 6-4 el domingo); Santiago España 4-0
+  Chile sin ceder un partido (Jodar d. Garín 6-0 6-2, debut + 20-4 en tierra 2026;
+  Mérida d. Tabilo 5-7 6-3 6-3; dobles Martínez-Munar 6-0 6-3; Ferrer capitán; la
+  incógnita Alcaraz para noviembre); Londres GB 4-0 Ecuador (Samuel 4-6 6-4 6-1
+  debut; Fery 7-5 6-0; Patten-Skupski; Wendelken) 1er Final 8 desde 2023; Seúl Corea
+  3-1 India (Kwon d. Nagal 6-1 6-2); Viena Austria 3-1 Bélgica (Rodionov d. Bergs
+  7-6(6) 6-3). Bola extra: Grupo Mundial I, Rune (Dinamarca 3-2 Bulgaria) d.
+  Dimitrov 3-6 6-3 7-6(4) con Pure Aero 98. Tabla de demanda real: no se tocó (todo
+  ✓; Kwon Soon-woo y Rodionov no usan marcos del catálogo — no añadir sin fuente).
+  HUECOS: seguir abiertos la Gravity Tour estándar (no-Zverev) y las Wilson no
+  retail de Tien; el cron de noticias del lunes 28 tiene Laver Cup (resultados
+  25-27) y Rotterdam P2 (arranca 28 sep) como agenda natural.
 
 - 2026-09-21 — **Regla 0 (Laver Cup Londres 25-27 sep, arranca el viernes)**: publicada
   `laver-cup-2026-londres-raquetas` (ES+EN) con el arsenal completo de las dos selecciones
