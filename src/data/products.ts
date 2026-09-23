@@ -3153,6 +3153,31 @@ export const PRODUCTS: Product[] = [
     descriptionEn:
       "Sanyo Gutiérrez's signature racket: a new hybrid mold with a wide sweet spot and a versatile character, an 18K Carbon Hybrid face over medium-touch M-Eva Balance rubber that balances power, control and comfort. Its big novelty is the Power Balance system: interchangeable rubbers built into the profile to tune the balance to your game, alongside Aero Drive (faster swing), V-Force Bridge, Hexa Cell and A-Shock vibration damping. Spin Boost Tech roughness and a longer handgrip, finished in white, black and gold. Made in Spain for pro and semi-pro players who want total adaptability on court.",
   },
+  {
+    id: "bullpadel-flow-2027",
+    sport: "padel",
+    brand: "Bullpadel",
+    model: "Flow 2027",
+    year: 2027,
+    price: 269.99,
+    image: "/images/rackets/bullpadel-flow-2027.svg",
+    level: ["avanzado"],
+    style: ["potencia", "polivalente"],
+    player: "Alejandra Salazar",
+    padel: {
+      shape: "diamante",
+      weight: "350-360 g",
+      balance: "alto",
+      core: "MultiEva",
+      faces: "Fibrix",
+      surface: "rugosa",
+      hardness: "media",
+    },
+    description:
+      "La pala de Alejandra Salazar para 2027: un diamante ligero de 350-360 g con balance alto (~26 cm) pensado para atacar sin perder manejabilidad. El corazón Flow Core refuerza la rigidez torsional, las caras Fibrix sobre el núcleo MultiEva aportan un tacto intermedio con buena salida de bola, el acabado 3D Grain agarra la bola en remates y bandejas y Vibra Drive amortigua las vibraciones en cada impacto. Para jugadoras avanzadas de estilo ofensivo-polivalente que quieren la palanca del diamante sin el peso de las palas de potencia tradicionales.",
+    descriptionEn:
+      "Alejandra Salazar's racket for 2027: a light diamond of 350-360 g with a high balance (~26 cm), built to attack without sacrificing maneuverability. The Flow Core heart reinforces torsional rigidity, Fibrix faces over a MultiEva core deliver an intermediate feel with great ball exit, the 3D Grain finish grips the ball on smashes and bandejas, and Vibra Drive damps vibrations on every impact. For advanced players with an offensive-all-round style who want a diamond's leverage without the weight of traditional power rackets.",
+  },
 ];
 
 export function getProduct(id: string) {
