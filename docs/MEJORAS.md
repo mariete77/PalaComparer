@@ -279,9 +279,29 @@ para no duplicar temas ya publicados (ej. ya existe `madrid-p1-2026-lucha-por-el
    EZONE 98, Pure Aero 98, Gravity Tour Zverev, Speed MP) + nota Rune en Grupo
    Mundial I (d. Dimitrov 3-6 6-3 7-6(4), Pure Aero 98) + enlace a la previa de la
    Laver Cup. Fuentes: daviscup.com, AP/ajc, worldtennismagazine, Tennis Canada,
-   tennistemple, RFI/ground.news, T13, Sunday Guardian. Build + check:translations
-   OK; /es y /en 200 con contenido verificado en DOM; listado OK; screenshot
-   docs/screenshots/2026-09-22-davis-cup-final-8.png (1280×577, 5.605 colores).
+  tennistemple, RFI/ground.news, T13, Sunday Guardian. Build + check:translations
+  OK; /es y /en 200 con contenido verificado en DOM; listado OK; screenshot
+  docs/screenshots/2026-09-22-davis-cup-final-8.png (1280×577, 5.605 colores).
+16. [x] **FIP Platinum Lyon 2026 — las palas de los favoritos** — cuadro principal
+  EN MARCHA (23-27 sep, Palais des Sports de Gerland + All In Country Academy):
+  pieza de la jornada inaugural con el ángulo de la Race hacia las Finals de
+  Barcelona (300 pts en juego, 4º de los 5 FIP Platinum de 2026, solo Aguascalientes
+  antes del Major de Acapulco) y las palas del catálogo de los favoritos.
+  — **HECHO 2026-09-23**: artículo `fip-platinum-lyon-2026-palas-favoritos` (ES+EN,
+  kind novedad, 7 relatedProducts con ProductRef/ProductGrid: Electra Pro IT 26,
+  Axion Attack 2.0, Vertex 05 2026, Endure Pro V1, Flow Woman, Defy Pro V1,
+  Eternal 2027). Seeds verificadas (studypadel/tennistonic): Stupa-Sanz nº1,
+  Leal-Guerrero nº2, Di Nenno-Tello nº3, Momo-Campagnolo nº4 (byes a octavos);
+  femenino Salazar-Osoro nº1, Salazar defendiendo el título de 2025 en su último
+  año como profesional (58 títulos); R32 de hoy con Garrido-Sanyo vs Axelsson-
+  Guichard y Esbrí-Jofre. Fuentes: padelfip.com (estructura/premios), studypadel.com
+  (order de juego R32), tennis-tonic (22 sep, seeds + presencia francesa),
+  padel-magazine.it (Salazar última temporada). Build + check:translations OK;
+  12 URLs a 200 en local (noticia ES/EN, listado, jugadores stupaczuk/jon-sanz/
+  momo-gonzalez/sanyo-gutierrez/javi-garrido/juan-tello/alejandra-salazar,
+  fichas Electra Pro IT 26 y Eternal 2027). Screenshot:
+  docs/screenshots/2026-09-23-fip-platinum-lyon-palas-favoritos.png (1280×577,
+  5.446 colores, título y hero renderizados, verificación por píxeles sin visión).
 
 
 ### 🎨 Visual (mejoras visuales)
@@ -460,6 +480,29 @@ pádel las cubre el cron de palas). Al terminar, actualizar el estado de la fila
 ---
 
 ## Notas (varias noches)
+
+- 2026-09-23 — **Regla 0 (FIP Platinum Lyon 2026, cuadro principal EN MARCHA 23-27
+  sep)**: publicado `fip-platinum-lyon-2026-palas-favoritos` (ES+EN) con la jornada
+  inaugural y las palas del catálogo de los favoritos. Datos CLAVE verificados:
+  Lyon es el 4º de los 5 FIP Platinum de 2026 (solo Aguascalientes, la semana previa
+  al Major de Acapulco) y reparte 300 pts de la Race hacia las Finals de Barcelona
+  (Palau Sant Jordi, diciembre); 28 parejas en el cuadro masculino (22 DA + 4 Q +
+  2 WC), premio 130.000 € (8.125 € por jugador al campeón), pista cubierta en
+  Gerland + All In Country; campeones 2025 Ruiz-Esbrí (m) y Salazar-Calvo (f), nadie
+  ha repetido. Seeds: Stupa-Sanz (1), Leal-Guerrero (2), Di Nenno-Tello (3),
+  Momo-Campagnolo (4) con bye a octavos (tennistonic 22 sep); femenino Salazar-Osoro
+  (1), Ale Alonso-Dal Pozzo (2, estreno), Goenaga-Caldera (3), Rufo-Castelló (4,
+  finalistas FIP Gold São Paulo). R32 de hoy: Garrido-Sanyo vs Axelsson-Guichard y
+  Esbrí-Jofre (studypadel). Bola extra: Salazar, 40 años, última temporada y a la
+  caza de la plaza para las Finals que sería el broche (padel-magazine.it). HUECOS:
+  Leal, Guerrero, Di Nenno, Campagnolo y Osoro NO tienen ficha en el catálogo (sin
+  alta: el cron de palas decide; son candidatos con demanda potencial cuando haya
+  fuentes retail con foto). OPS: un `next-server` huérfano del 21 sep comía 96% CPU
+  y bloqueaba el puerto 3000 (curl timeouts) — matado antes de verificar; si reaparece
+  un server colgado, `pkill -f next-server` y relanzar `npm run start`. Agenda para
+  el cron de noticias del lunes 28: resultados de Lyon (finales dom 27), de la Laver
+  Cup (25-27) y arranque del Rotterdam P2 (28 sep-4 oct). Tabla de demanda real: no
+  se tocó (todo ✓; Garrido y Sanyo ya tenían página limpia preexistente).
 
 - 2026-09-22 — **Regla 0 (Davis Cup Qualifiers 2ª ronda CERRADA, resultados del
   18-20 sep)**: publicado `davis-cup-2026-final-8-bolonia-clasificados` (ES+EN) con

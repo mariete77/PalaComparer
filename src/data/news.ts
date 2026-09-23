@@ -70,6 +70,7 @@ import { metadata as davisCupSabado } from "@/content/noticias/davis-cup-2026-sa
 import { metadata as laverCupLondres } from "@/content/noticias/laver-cup-2026-londres-raquetas.mdx";
 import { metadata as espanaPrelistaMundial } from "@/content/noticias/espana-prelista-mundial-qatar-2026.mdx";
 import { metadata as davisCupFinal8 } from "@/content/noticias/davis-cup-2026-final-8-bolonia-clasificados.mdx";
+import { metadata as fipPlatinumLyon } from "@/content/noticias/fip-platinum-lyon-2026-palas-favoritos.mdx";
 
 /**
  * Traducciones EN de los metadatos de cada artículo. Las ES vienen del propio
@@ -273,6 +274,12 @@ const EN_META: Record<string, { title: string; excerpt: string; tags: string[] }
       "Czechia come from behind to beat the United States in Prague, Auger-Aliassime seals Canada's place at home and Spain sweep Chile without dropping a rubber. The Bologna Final 8 (November 24-29) has its eight teams.",
     tags: ["Davis Cup", "Final 8", "Bologna", "Spain", "Zverev", "Tennis"],
   },
+  "fip-platinum-lyon-2026-palas-favoritos": {
+    title: "FIP Platinum Lyon 2026: 300 points that could earn a Finals spot — the rackets of the favourites",
+    excerpt:
+      "The fourth FIP Platinum of the year starts its main draw in Lyon with 300 Race points on the line toward the Premier Padel Finals in Barcelona. Stupaczuk-Sanz, Di Nenno-Tello and Momo-Campagnolo lead the draw, and Alejandra Salazar defends her title in her final year as a pro.",
+    tags: ["FIP Platinum", "Lyon", "Premier Padel Finals", "Stupaczuk", "Salazar", "Padel"],
+  },
 };
 
 /**
@@ -329,6 +336,7 @@ export const ARTICLES: Article[] = [
   localize({ slug: "laver-cup-2026-londres-raquetas", ...laverCupLondres }),
   localize({ slug: "espana-prelista-mundial-qatar-2026", ...espanaPrelistaMundial }),
   localize({ slug: "davis-cup-2026-final-8-bolonia-clasificados", ...davisCupFinal8 }),
+  localize({ slug: "fip-platinum-lyon-2026-palas-favoritos", ...fipPlatinumLyon }),
 ].sort((a, b) => b.date.localeCompare(a.date));
 
 export function getArticle(slug: string): Article | undefined {
