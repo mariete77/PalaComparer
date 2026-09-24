@@ -302,6 +302,34 @@ para no duplicar temas ya publicados (ej. ya existe `madrid-p1-2026-lucha-por-el
   fichas Electra Pro IT 26 y Eternal 2027). Screenshot:
   docs/screenshots/2026-09-23-fip-platinum-lyon-palas-favoritos.png (1280×577,
   5.446 colores, título y hero renderizados, verificación por píxeles sin visión).
+17. [x] **FIP Platinum Lyon 2026 — la jornada de octavos** — torneo EN MARCHA
+  (23-27 sep, 4º de los 5 Platinum): hoy jueves 24 se juegan los 16 octavos y
+  debutan los 4 primeros cabezas de serie de cada cuadro. Pieza de jornada con
+  los RESULTADOS REALES de la primera ronda del miércoles y el orden de juego
+  oficial del jueves, con el ángulo de la sorpresa: Garrido-Sanyo (nº5)
+  eliminados en su estreno. — **HECHO 2026-09-24**: artículo
+  `fip-platinum-lyon-2026-octavos-garrido-sanyo-fuera` (ES+EN, kind novedad, 7
+  relatedProducts con ProductRef/ProductGrid: Electra Pro IT 26, Axion Attack
+  2.0, Vertex 05 2026, Endure Pro V1, Flow Woman, Defy Pro V1, Eternal 2027).
+  Resultados R32 verificados (studypadel + cuadros oficiales padelfip/
+  padelmagazine v4): **Axelsson-Guichard d. Garrido-Sanyo 3-6 6-4 6-4**
+  (confirmado por el OOP del jueves, donde la pareja francesa sale en octavos
+  vs Montiel-Santigosa), Esbrí-Jofre 6-3 6-1, Abbate-Rodríguez 6-4 6-4,
+  Rubini-Chozas 6-3 7-6, Ruiz-González Blanco 6-2 7-5, Hernández-Castaño
+  6-4 6-7 6-3, Goenaga-Collado 6-3 6-4, Moya-Leygue 6-7 7-6 6-2 a
+  Lamperti-Álvarez (remontada que cerró la jornada; por eso el OOP v4 aún
+  ponía "OR"), Montiel-Santigosa 6-2 6-3; mujeres Mansart-Dardaine (WC)
+  7-6(5) 6-4 (crónica padel-magazine.es), Collombon-Sharifova 2-6 6-1 6-3,
+  Marchetti-Arruabarrena 6-1 6-0, Fassio-Pérez 6-1 6-1, Sainz-Manquillo 6-1
+  6-1, Valenzuela-Godallier 6-2 6-3, Vano-Castillón 6-2 6-4, Guimet-Ryzhova
+  6-3 6-1, Aguilar-Escacena 6-3 6-2, Rosi-Delgado 6-3 6-3, Val López-Bahurel
+  6-4 6-3, Moriñigo-Martín 6-4 6-0. Octavos de hoy con el detalle de horarios
+  por pista del OOP oficial (Pista Central Ville de Lyon, P2 Auvergne Rhône
+  Alpes, P3 Inelys; desde las 11:00 h francesa). 16 URLs a 200 en local
+  (noticia ES/EN, listado, 7 jugadores, 7 fichas, guía formas, artículo previo).
+  Fuentes: padelmagazine.fr (OOP jueves v4 + cuadros MD/WD con marcadores),
+  studypadel.com (resultados + cruces R16), padel-magazine.es (crónica
+  Mansart-Dardaine), padelfip.com (evento/seeds). Build + check:translations OK.
 
 
 ### 🎨 Visual (mejoras visuales)
@@ -480,6 +508,30 @@ pádel las cubre el cron de palas). Al terminar, actualizar el estado de la fila
 ---
 
 ## Notas (varias noches)
+
+- 2026-09-24 — **Regla 0 (FIP Platinum Lyon 2026, EN MARCHA 23-27 sep; octavos
+  hoy jueves 24)**: publicado `fip-platinum-lyon-2026-octavos-garrido-sanyo-fuera`
+  (ES+EN) — jornada de octavos con resultados REALES de la primera ronda y el
+  orden de juego oficial del jueves. La historia del día: **Garrido-Sanyo,
+  quintos cabezas de serie, eliminados en su estreno** por Axelsson-Guichard
+  3-6 6-4 6-4 (remontada local; OOP del jueves + studypadel confirman). Todos
+  los marcadores de la R32 (12 masculinos + 14 femeninos) verificados contra
+  studypadel y los cuadros oficiales v4 de padelmagazine (con el 7-6(5) de
+  Mansart-Dardaine, que hoy se miden a las nº2 Alonso-Dal Pozzo; Collombon-
+  Sharifova remontaron 2-6 6-1 6-3). Hoy debutan tras bye los 4 primeros
+  cabezas de serie de cada cuadro; Stupa-Sanz, Di Nenno-Tello, Momo-Campagnolo
+  y Salazar-Osoro juegan con palas del catálogo (Electra Pro IT 26, Axion
+  Attack 2.0, Vertex 05 2026, Endure Pro V1, Flow Woman). La pareja del
+  artículazo de la noche es Moya-Leygue: remontada 6-7 7-6 6-2 a
+  Lamperti-Álvarez que acabó tarde (el OOP v4 aún ponía "OR"). HUECOS
+  pendientes: Leal, Guerrero, Di Nenno, Campagnolo y Osoro siguen sin ficha en
+  el catálogo (candidatos para el cron de palas con fuente retail foto);
+  Lamperti (Leygue/Moya tampoco) sin ficha — Lamperti es leyenda argentina con
+  demanda potencial ("qué pala usa Lamperti"). Próximas citas: cuartos mañana,
+  semis sábado, finales domingo 27 (cron de noticias del lunes 28: resultados
+  Lyon + Laver Cup 25-27 + arranque Rotterdam P2 el 28). Tabla de demanda
+  real: no se tocó (todo ✓). OPS: esta vez el server de verificación se paró
+  limpio (pkill -f next-server); sin huérfanos.
 
 - 2026-09-23 — **Regla 0 (FIP Platinum Lyon 2026, cuadro principal EN MARCHA 23-27
   sep)**: publicado `fip-platinum-lyon-2026-palas-favoritos` (ES+EN) con la jornada

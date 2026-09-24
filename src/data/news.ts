@@ -71,6 +71,7 @@ import { metadata as laverCupLondres } from "@/content/noticias/laver-cup-2026-l
 import { metadata as espanaPrelistaMundial } from "@/content/noticias/espana-prelista-mundial-qatar-2026.mdx";
 import { metadata as davisCupFinal8 } from "@/content/noticias/davis-cup-2026-final-8-bolonia-clasificados.mdx";
 import { metadata as fipPlatinumLyon } from "@/content/noticias/fip-platinum-lyon-2026-palas-favoritos.mdx";
+import { metadata as fipPlatinumLyonOctavos } from "@/content/noticias/fip-platinum-lyon-2026-octavos-garrido-sanyo-fuera.mdx";
 
 /**
  * Traducciones EN de los metadatos de cada artículo. Las ES vienen del propio
@@ -280,6 +281,13 @@ const EN_META: Record<string, { title: string; excerpt: string; tags: string[] }
       "The fourth FIP Platinum of the year starts its main draw in Lyon with 300 Race points on the line toward the Premier Padel Finals in Barcelona. Stupaczuk-Sanz, Di Nenno-Tello and Momo-Campagnolo lead the draw, and Alejandra Salazar defends her title in her final year as a pro.",
     tags: ["FIP Platinum", "Lyon", "Premier Padel Finals", "Stupaczuk", "Salazar", "Padel"],
   },
+  "fip-platinum-lyon-2026-octavos-garrido-sanyo-fuera": {
+    title:
+      "FIP Platinum Lyon 2026: the favourites hit the court in the round of 16 as Garrido-Sanyo fall on their debut",
+    excerpt:
+      "The first round produced the upset of the tournament: Axelsson-Guichard came from behind to beat Garrido-Sanyo 3-6 6-4 6-4. On Thursday the top four seeds —Stupaczuk-Sanz, Di Nenno-Tello, Momo-Campagnolo and Salazar-Osoro— make their debut in a round of 16 featuring 16 matches from 11:00 at the Palais des Sports de Gerland.",
+    tags: ["FIP Platinum", "Lyon", "Round of 16", "Garrido", "Salazar", "Padel"],
+  },
 };
 
 /**
@@ -337,6 +345,7 @@ export const ARTICLES: Article[] = [
   localize({ slug: "espana-prelista-mundial-qatar-2026", ...espanaPrelistaMundial }),
   localize({ slug: "davis-cup-2026-final-8-bolonia-clasificados", ...davisCupFinal8 }),
   localize({ slug: "fip-platinum-lyon-2026-palas-favoritos", ...fipPlatinumLyon }),
+  localize({ slug: "fip-platinum-lyon-2026-octavos-garrido-sanyo-fuera", ...fipPlatinumLyonOctavos }),
 ].sort((a, b) => b.date.localeCompare(a.date));
 
 export function getArticle(slug: string): Article | undefined {
