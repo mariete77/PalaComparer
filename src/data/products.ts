@@ -2913,6 +2913,31 @@ export const PRODUCTS: Product[] = [
     descriptionEn:
       "Limited-edition Siux created for the Italy Premier Padel. Competition teardrop with 12K carbon faces, 8/10 hardness EVA core and a sandy matte finish that grips the ball for spin. Versatile and explosive, aimed at elite players who dominate both defense and the smash.",
   },
+  {
+    id: "siux-pegasus-pro-2026-lava-orange",
+    sport: "padel",
+    brand: "Siux",
+    model: "Pegasus Pro Lava Orange 2026",
+    year: 2026,
+    price: 179.95,
+    image: "/images/rackets/siux-pegasus-pro-2026-lava-orange.svg",
+    level: ["avanzado", "profesional"],
+    style: ["potencia"],
+    player: "Álex Chozas",
+    padel: {
+      shape: "lagrima",
+      weight: "355-375 g",
+      balance: "medio",
+      core: "EVA Pro (dureza 9/10)",
+      faces: "Carbono 12K",
+      surface: "rugosa",
+      hardness: "dura",
+    },
+    description:
+      "La pala de Álex Chozas en la gama Pro 2026 de Siux y una de las ofensivas más equilibradas de la marca: lágrima con balance medio que permite pegar fuerte sin renunciar a una salida de bola controlada. Caras de carbono 12K y núcleo EVA Pro de dureza 9/10 para un tacto firme y reactivo, con acabado mate de relieve 3D que agarra la bola para el efecto y sistema Switch Strap para personalizar la correa.",
+    descriptionEn:
+      "Álex Chozas's racket in Siux's Pro 2026 range and one of the brand's most balanced offensive models: a teardrop with medium balance that lets you hit hard without giving up a controlled ball exit. 12K carbon faces and a 9/10 hardness EVA Pro core for a firm, reactive feel, plus a matte 3D-relief finish that grips the ball for spin and a Switch Strap system for a customisable wrist strap.",
+  },
   // ============ PÁDEL — STARVIE (BATCH 2) ============
   {
     id: "starvie-triton-power-2025",
