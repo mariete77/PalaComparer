@@ -69,6 +69,7 @@ import { metadata as davisCupEliminatorias } from "@/content/noticias/davis-cup-
 import { metadata as davisCupSabado } from "@/content/noticias/davis-cup-2026-sabado-decisivo.mdx";
 import { metadata as laverCupLondres } from "@/content/noticias/laver-cup-2026-londres-raquetas.mdx";
 import { metadata as espanaPrelistaMundial } from "@/content/noticias/espana-prelista-mundial-qatar-2026.mdx";
+import { metadata as espanaConvocatoriaMundial } from "@/content/noticias/espana-convocatoria-mundial-qatar-2026-palas.mdx";
 import { metadata as davisCupFinal8 } from "@/content/noticias/davis-cup-2026-final-8-bolonia-clasificados.mdx";
 import { metadata as fipPlatinumLyon } from "@/content/noticias/fip-platinum-lyon-2026-palas-favoritos.mdx";
 import { metadata as fipPlatinumLyonOctavos } from "@/content/noticias/fip-platinum-lyon-2026-octavos-garrido-sanyo-fuera.mdx";
@@ -269,6 +270,12 @@ const EN_META: Record<string, { title: string; excerpt: string; tags: string[] }
       "Spain's federation named 12 men and 12 women on September 16 for the World Championships in Doha (November 2-7). Selectors Juanjo Gutiérrez and Carolina Navarro will trim the list to 16 at an event in Madrid on September 24, with notable absences already making headlines.",
     tags: ["Spain national team", "World Cup", "FIP World Cup", "Doha"],
   },
+  "espana-convocatoria-mundial-qatar-2026-palas": {
+    title: "Spain's squad for Doha is set: the rackets of the 16 World Cup picks",
+    excerpt:
+      "Spain's federation confirmed the definitive squad for the World Cup in Qatar (Doha, November 2-7) on Thursday: Goñi and Marta Ortega make the cut, Salazar misses out in her final year. We break down the catalog rackets of Gutiérrez's eight and Navarro's eight.",
+    tags: ["Spain national team", "World Cup", "FIP World Cup", "Squad", "Doha"],
+  },
   "davis-cup-2026-final-8-bolonia-clasificados": {
     title: "Davis Cup: the Bologna Final 8 field is set — Czechia knock out the USA and Spain cruise without Alcaraz",
     excerpt:
@@ -343,6 +350,7 @@ export const ARTICLES: Article[] = [
   localize({ slug: "davis-cup-2026-sabado-decisivo", ...davisCupSabado }),
   localize({ slug: "laver-cup-2026-londres-raquetas", ...laverCupLondres }),
   localize({ slug: "espana-prelista-mundial-qatar-2026", ...espanaPrelistaMundial }),
+  localize({ slug: "espana-convocatoria-mundial-qatar-2026-palas", ...espanaConvocatoriaMundial }),
   localize({ slug: "davis-cup-2026-final-8-bolonia-clasificados", ...davisCupFinal8 }),
   localize({ slug: "fip-platinum-lyon-2026-palas-favoritos", ...fipPlatinumLyon }),
   localize({ slug: "fip-platinum-lyon-2026-octavos-garrido-sanyo-fuera", ...fipPlatinumLyonOctavos }),

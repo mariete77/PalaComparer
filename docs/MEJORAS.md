@@ -33,6 +33,10 @@
   agenda el **cron de noticias** (lunes a las 04:00). El cron nocturno NO las crea, salvo
   contenido de **actualidad por Regla 0** (torneo grande en curso). Si se detecta un hueco,
   añadir nota al final del backlog, no implementarlo.
+- **Cron de palas — palas de convocados al Mundial sin ficha (2026-09-25)**: Yanguas (LÕK
+  Maxx Hype Gen 2 2026), Coki Nieto (Kuikma PR Hybrid Carbon 12K, su primera firma tras
+  dejar Babolat en ene-2026) y Aimar Goñi (Nox; modelo propio AG10 apunta a 2027). Sin
+  verificar todavía: Josemaría, Ustero, Martina Calvo, Claudia Fernández y Marta Ortega.
 - Las páginas de jugador se generan solas desde el campo `player` de los productos
   (`src/data/players.ts`, soporta nombres compartidos "A / B" o "A, B, C" desde
   2026-09-04). El catálogo tiene ~122 productos.
@@ -330,6 +334,23 @@ para no duplicar temas ya publicados (ej. ya existe `madrid-p1-2026-lucha-por-el
   Fuentes: padelmagazine.fr (OOP jueves v4 + cuadros MD/WD con marcadores),
   studypadel.com (resultados + cruces R16), padel-magazine.es (crónica
   Mansart-Dardaine), padelfip.com (evento/seeds). Build + check:translations OK.
+18. [x] **Mundial de Qatar 2026 — la convocatoria definitiva y las palas de los 16** —
+  la FEP anunció AYER (jueves 24 sep, CUPRA City Garage, 13:00) la lista final
+  (8+8) para el FIP World Cup de Doha (2-7 nov, Khalifa International Tennis &
+  Squash Complex): Goñi y Marta Ortega entran, Salazar fuera en su último año.
+  Pieza de continuación de la prelista (16 sep) con el ángulo de material: las
+  8 palas del catálogo de los convocados + material verificado fuera de
+  catálogo (Yanguas LÕK Maxx Hype Gen 2, Coki Kuikma PR Hybrid, Goñi Nox).
+  — **HECHO 2026-09-25**: artículo
+  `espana-convocatoria-mundial-qatar-2026-palas` (ES+EN, kind novedad, 8
+  relatedProducts con ProductRef/ProductGrid: Coello Pro 2026, Metalbone 2026,
+  Technical Viper 3.0, Hack 05 2027, Axion Attack 2.0, Elite 02 2027, Arrow Hit
+  Light, Pearl 2026). Lista verificada en FEP (nota oficial + 25 medios),
+  elneverazo, padeladdict y El Periódico (citas de Gutiérrez, drives/reveses,
+  padrinos Ferran Torres y Fabián Ruiz, equipación, camiseta a Ceuta); Goñi nº32
+  y 6-4 6-3 a Nieto-Yanguas en París (padel-magazine), Kuikma-Nieto (Mundo
+  Deportivo 26 ene), LÕK-Yanguas (PadelPROShop/zonadepadel), Nox-Goñi (video
+  oficial Nox). Build + check:translations OK; /es y /en 200 + 8 fichas a 200.
 
 
 ### 🎨 Visual (mejoras visuales)
