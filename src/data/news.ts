@@ -68,6 +68,7 @@ import { metadata as parisMajorCampeones } from "@/content/noticias/paris-major-
 import { metadata as davisCupEliminatorias } from "@/content/noticias/davis-cup-2026-eliminatorias-raquetas.mdx";
 import { metadata as davisCupSabado } from "@/content/noticias/davis-cup-2026-sabado-decisivo.mdx";
 import { metadata as laverCupLondres } from "@/content/noticias/laver-cup-2026-londres-raquetas.mdx";
+import { metadata as laverCupDia1 } from "@/content/noticias/laver-cup-2026-dia-1-jodar-europa-3-1.mdx";
 import { metadata as espanaPrelistaMundial } from "@/content/noticias/espana-prelista-mundial-qatar-2026.mdx";
 import { metadata as espanaConvocatoriaMundial } from "@/content/noticias/espana-convocatoria-mundial-qatar-2026-palas.mdx";
 import { metadata as davisCupFinal8 } from "@/content/noticias/davis-cup-2026-final-8-bolonia-clasificados.mdx";
@@ -264,6 +265,12 @@ const EN_META: Record<string, { title: string; excerpt: string; tags: string[] }
       "The O2 hosts the ninth Laver Cup from September 25 to 27: 12 players, 5 racquet brands and a Diadem as the only 'independent' frame on the roster. We break down the arsenal of Team Europe and Team World with the racquets in our catalog.",
     tags: ["Laver Cup", "Alcaraz", "Zverev", "Fritz", "Jodar", "London", "Tennis"],
   },
+  "laver-cup-2026-dia-1-jodar-europa-3-1": {
+    title: "Laver Cup 2026, Day 1: Jódar crushes Bublik, Alcaraz & Menšík seal the doubles and Europe lead 3-1",
+    excerpt:
+      "The Madrid man debuted at The O2 with a 6-2 6-3 over the Kazakh, Ruud came from a set down to beat Cerúndolo in the Laver Breaker, and Alcaraz and Menšík won the doubles to close Friday: Europe lead 3-1 before a Saturday worth two points per win.",
+    tags: ["Laver Cup", "Alcaraz", "Jodar", "Ruud", "London", "Tennis"],
+  },
   "espana-prelista-mundial-qatar-2026": {
     title: "Spain unveils its 24-player preliminary squad for the 2026 Qatar World Cup",
     excerpt:
@@ -349,6 +356,7 @@ export const ARTICLES: Article[] = [
   localize({ slug: "davis-cup-2026-eliminatorias-raquetas", ...davisCupEliminatorias }),
   localize({ slug: "davis-cup-2026-sabado-decisivo", ...davisCupSabado }),
   localize({ slug: "laver-cup-2026-londres-raquetas", ...laverCupLondres }),
+  localize({ slug: "laver-cup-2026-dia-1-jodar-europa-3-1", ...laverCupDia1 }),
   localize({ slug: "espana-prelista-mundial-qatar-2026", ...espanaPrelistaMundial }),
   localize({ slug: "espana-convocatoria-mundial-qatar-2026-palas", ...espanaConvocatoriaMundial }),
   localize({ slug: "davis-cup-2026-final-8-bolonia-clasificados", ...davisCupFinal8 }),

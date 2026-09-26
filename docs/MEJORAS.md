@@ -59,7 +59,18 @@ Comunidad de Madrid Premier Padel P1 del 29 ago al 6 sep (cuadro en el Movistar 
 para no duplicar temas ya publicados (ej. ya existe `madrid-p1-2026-lucha-por-el-numero-uno`,
 `us-open-2026-raquetas-cuartos-final` y `paris-major-2026-previa-roland-garros`)._
 
-1. [x] **Madrid P1 2026 — las palas de los favoritos** — torneo en curso hasta el 6 de
+1. [x] **Laver Cup 2026, día 1 en el O2 (25-27 sep)** — torneo EN CURSO: el viernes cerró con
+   **3-1 para Europa** (Jódar 6-2 6-3 a Bublik en su debut; Ruud 6-7(4) 6-4 10-8 a Cerúndolo;
+   Nakashima 1-6 6-3 10-7 a Menšík; Alcaraz-Menšík 6-4 6-4 a Fritz-Bublik en dobles). Pieza
+   original con ángulo de material sobre los partidos del día 1 + previa del sábado
+   (2 pts/partido; Alcaraz al individual; Zverev/Cobolli/De Minaur/Tien por estrenarse).
+   Hechos verificados: lavercup.com, ABC, Mundo Deportivo, AS, Infobae, Eurosport.
+   — **HECHO 2026-09-26**: artículo `laver-cup-2026-dia-1-jodar-europa-3-1` (ES+EN, kind
+   novedad, 7 relatedProducts: Speed MP 2026, Pure Aero 98, Blade 98 v10, VCORE 98,
+   EZONE 98, Radical MP, Gravity Tour Zverev). Archivos: src/content/noticias/{,en/}
+   laver-cup-2026-dia-1-jodar-europa-3-1.mdx, src/data/news.ts. Build +
+   check:translations OK; HTML prerendered ES/EN con metadata y ProductGrid verificados.
+2. [x] **Madrid P1 2026 — las palas de los favoritos** — torneo en curso hasta el 6 de
    septiembre (Movistar Arena). Pieza original con ángulo propio: "Las palas del Madrid P1:
    qué juegan Tapia, Coello y Galán en el Movistar Arena", con los modelos reales presentes
    en el catálogo. Datos verificados en premierpadel.com / madridpremierpadel.com.
