@@ -69,6 +69,7 @@ import { metadata as davisCupEliminatorias } from "@/content/noticias/davis-cup-
 import { metadata as davisCupSabado } from "@/content/noticias/davis-cup-2026-sabado-decisivo.mdx";
 import { metadata as laverCupLondres } from "@/content/noticias/laver-cup-2026-londres-raquetas.mdx";
 import { metadata as laverCupDia1 } from "@/content/noticias/laver-cup-2026-dia-1-jodar-europa-3-1.mdx";
+import { metadata as laverCupDomingo } from "@/content/noticias/laver-cup-2026-domingo-decisivo-europa-7-5.mdx";
 import { metadata as espanaPrelistaMundial } from "@/content/noticias/espana-prelista-mundial-qatar-2026.mdx";
 import { metadata as espanaConvocatoriaMundial } from "@/content/noticias/espana-convocatoria-mundial-qatar-2026-palas.mdx";
 import { metadata as davisCupFinal8 } from "@/content/noticias/davis-cup-2026-final-8-bolonia-clasificados.mdx";
@@ -271,6 +272,12 @@ const EN_META: Record<string, { title: string; excerpt: string; tags: string[] }
       "The Madrid man debuted at The O2 with a 6-2 6-3 over the Kazakh, Ruud came from a set down to beat Cerúndolo in the Laver Breaker, and Alcaraz and Menšík won the doubles to close Friday: Europe lead 3-1 before a Saturday worth two points per win.",
     tags: ["Laver Cup", "Alcaraz", "Jodar", "Ruud", "London", "Tennis"],
   },
+  "laver-cup-2026-domingo-decisivo-europa-7-5": {
+    title: "Europe lead 7-5 into the decisive Sunday: De Minaur topples Zverev and Alcaraz exacts his revenge",
+    excerpt:
+      "The Australian came from behind to beat the US Open champion saving a match point (2-6, 7-6(5), 11-9), Alcaraz paid back San Francisco against Fritz in a 13-11 Laver Breaker, and Ruud-Zverev sealed Saturday with the doubles: Europe take a 7-5 lead into a Sunday worth three points per win, with the trophy on the line at The O2.",
+    tags: ["Laver Cup", "Alcaraz", "De Minaur", "Zverev", "London", "Tennis"],
+  },
   "espana-prelista-mundial-qatar-2026": {
     title: "Spain unveils its 24-player preliminary squad for the 2026 Qatar World Cup",
     excerpt:
@@ -357,6 +364,7 @@ export const ARTICLES: Article[] = [
   localize({ slug: "davis-cup-2026-sabado-decisivo", ...davisCupSabado }),
   localize({ slug: "laver-cup-2026-londres-raquetas", ...laverCupLondres }),
   localize({ slug: "laver-cup-2026-dia-1-jodar-europa-3-1", ...laverCupDia1 }),
+  localize({ slug: "laver-cup-2026-domingo-decisivo-europa-7-5", ...laverCupDomingo }),
   localize({ slug: "espana-prelista-mundial-qatar-2026", ...espanaPrelistaMundial }),
   localize({ slug: "espana-convocatoria-mundial-qatar-2026-palas", ...espanaConvocatoriaMundial }),
   localize({ slug: "davis-cup-2026-final-8-bolonia-clasificados", ...davisCupFinal8 }),

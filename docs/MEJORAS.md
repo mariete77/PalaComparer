@@ -362,6 +362,24 @@ para no duplicar temas ya publicados (ej. ya existe `madrid-p1-2026-lucha-por-el
   y 6-4 6-3 a Nieto-Yanguas en París (padel-magazine), Kuikma-Nieto (Mundo
   Deportivo 26 ene), LÕK-Yanguas (PadelPROShop/zonadepadel), Nox-Goñi (video
   oficial Nox). Build + check:translations OK; /es y /en 200 + 8 fichas a 200.
+19. [x] **Laver Cup 2026 — el domingo decisivo: Europa 7-5** — el torneo se decide HOY
+   domingo 27 (primero a 13; partidos 9-13 a 3 puntos): pieza matinal con los resultados
+   verificados de la jornada del sábado (Tien d. Cobolli 6-3 2-6 10-7 en su debut y el
+   empate global 3-3; De Minaur d. Zverev 2-6 7-6(5) 11-9 salvando un MP, el Mundo mandó
+   5-3 por primera vez; Alcaraz d. Fritz 6-3 4-6 13-11 salvándolos él, revancha de San
+   Francisco 2025; Ruud-Zverev d. Bublik-Nakashima 6-4 7-6(9) → 7-5) y la foto del
+   desenlace (Europa a 2 victorias del título, Mundo a 3; apertura con dobles 12:00
+   Londres / 13:00 España; dobles extra solo con 12-12; exhibición si solo hace falta
+   un partido). — **HECHO 2026-09-27**: artículo `laver-cup-2026-domingo-decisivo-europa-7-5`
+   (ES+EN, kind novedad, 8 relatedProducts con ProductRef/ProductGrid: Radical Pro 2026
+   [familia Cobolli], Pure Aero 98, Gravity Tour Zverev, Radical MP, VCORE 98, Blade 98
+   v10, Speed MP, EZONE 98). Fuentes: lavercup.com (scores oficiales día 2 + crónicas
+   "De Minaur stages extraordinary comeback", "Saving Match Points, Alcaraz Exacts
+   Revenge", "Tien Ties It Up" + notas del schedule: orden de partidos, regla del 13 y
+   exhibición), atptour.com, canales oficiales Laver Cup (alineaciones del domingo
+   cerradas tras el cierre del sábado). Build + check:translations OK; ES/EN
+   prerenderizados con 24 enlaces de producto cada uno y ProductGrid de 8 fichas
+   (patrón idéntico al día 1).
 
 
 ### 🎨 Visual (mejoras visuales)
@@ -540,6 +558,28 @@ pádel las cubre el cron de palas). Al terminar, actualizar el estado de la fila
 ---
 
 ## Notas (varias noches)
+
+- 2026-09-27 — **Regla 0 (Laver Cup 2026, domingo decisivo HOY 27 sep; el torneo
+  cierra esta noche)**: publicado `laver-cup-2026-domingo-decisivo-europa-7-5` (ES+EN)
+  con los 4 resultados del sábado verificados en lavercup.com (Tien d. Cobolli 6-3 2-6
+  10-7, debut en "lockdown mode" y empate global 3-3; De Minaur d. Zverev 2-6 7-6(5)
+  11-9 salvando un MP — el Mundo mandó 5-3 por primera vez; Alcaraz d. Fritz 6-3 4-6
+  13-11 salvándolos él, revancha de San Francisco 2025; Ruud-Zverev d. Bublik-Nakashima
+  6-4 7-6(9) → Europa 7-5), la aritmética del desenlace (Europa a 2 victorias del 13,
+  Mundo a 3; el domingo arranca con un dobles a las 12:00 Londres / 13:00 España +
+  tres individuales y dobles extra solo con 12-12; exhibición si el trofeo se decide
+  pronto) y el ángulo de material con 8 productos del catálogo (Radical Pro 2026 como
+  familia de Cobolli + Pure Aero 98, Gravity Tour Zverev, Radical MP, VCORE 98, Blade
+  98 v10, Speed MP, EZONE 98). Las alineaciones del domingo están cerradas (canales
+  oficiales de la Laver Cup) pero los emparejamientos no eran verificables desde
+  fuentes extraíbles → NO se inventaron parejas ni horarios de partido concretos.
+  FIP Lyon cierra hoy también (finales); sus resultados van al cron de noticias del
+  lunes (agenda: Lyon + Laver Cup + Rotterdam P2 que arranca mañana 28). Tabla de
+  demanda real: no se tocó (todo ✓). DATO SUCIO detectado: `head-radical-pro-2026`
+  tiene `player: "Ari Sánchez"` (jugadora de pádel) — campo casi seguro erróneo en una
+  raqueta de tenis HEAD; candidato a una noche de jugadores/data (verificar quién juega
+  la Radical Pro 2026 antes de corregir). HUECOS abiertos: Gravity Tour estándar
+  (no-Zverev) y la Wilson sin retail de Tien (nada nuevo).
 
 - 2026-09-24 — **Regla 0 (FIP Platinum Lyon 2026, EN MARCHA 23-27 sep; octavos
   hoy jueves 24)**: publicado `fip-platinum-lyon-2026-octavos-garrido-sanyo-fuera`
