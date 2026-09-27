@@ -3203,6 +3203,31 @@ export const PRODUCTS: Product[] = [
     descriptionEn:
       "Alejandra Salazar's racket for 2027: a light diamond of 350-360 g with a high balance (~26 cm), built to attack without sacrificing maneuverability. The Flow Core heart reinforces torsional rigidity, Fibrix faces over a MultiEva core deliver an intermediate feel with great ball exit, the 3D Grain finish grips the ball on smashes and bandejas, and Vibra Drive damps vibrations on every impact. For advanced players with an offensive-all-round style who want a diamond's leverage without the weight of traditional power rackets.",
   },
+  {
+    id: "bullpadel-wonder-2027",
+    sport: "padel",
+    brand: "Bullpadel",
+    model: "Wonder",
+    year: 2027,
+    price: 284.99,
+    image: "/images/rackets/bullpadel-wonder-2027.svg",
+    level: ["avanzado", "profesional"],
+    style: ["polivalente", "control"],
+    player: "Claudia Fernández",
+    padel: {
+      shape: "hibrida",
+      weight: "350-360 g",
+      balance: "medio",
+      core: "MultiEva",
+      faces: "Fibrix",
+      surface: "rugosa",
+      hardness: "media",
+    },
+    description:
+      "La pala de Claudia Fernández, 'La Niña Maravilla': híbrida ligera de 350-360 g con balance medio en 25 cm y 517 cm² de superficie, sorprendentemente firme en el impacto para un juego defensivo-ofensivo sin fisuras. El corazón Wonder Core compacto ordena la transmisión de energía para un golpeo controlado e intuitivo, las caras Fibrix sobre el núcleo MultiEva aportan un tacto intermedio accesible y el armazón ExoFrame refuerza el marco sin penalizar el peso. Con Air React Channel para un swing más rápido, VibraDrive contra vibraciones y acabado rugoso 3D Grain para los efectos. La todoterreno ágil de la Pro Line 2027, compatible con CustomWeight para ajustar el balance.",
+    descriptionEn:
+      "Claudia Fernández's racket, 'La Niña Maravilla' (Wonder Girl): a light hybrid of 350-360 g with a medium balance at 25 cm and a 517 cm² surface, surprisingly firm on impact for seamless defensive-offensive play. The compact Wonder Core heart channels energy cleanly for an intuitive, controlled strike, Fibrix faces over a MultiEva core deliver an accessible intermediate feel, and the ExoFrame shell reinforces the frame without adding weight. Air React Channel for a faster swing, VibraDrive to damp vibrations and a rough 3D Grain finish for spin. The agile all-rounder of Bullpadel's 2027 Pro Line, CustomWeight-compatible to tune the balance.",
+  },
 ];
 
 export function getProduct(id: string) {
