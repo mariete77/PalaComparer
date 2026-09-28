@@ -380,6 +380,27 @@ para no duplicar temas ya publicados (ej. ya existe `madrid-p1-2026-lucha-por-el
    cerradas tras el cierre del sábado). Build + check:translations OK; ES/EN
    prerenderizados con 24 enlaces de producto cada uno y ProductGrid de 8 fichas
    (patrón idéntico al día 1).
+20. [x] **Rotterdam P2 2026 — la doble carrera por el nº1 se reanuda en Holanda** —
+   torneo EN MARCHA (28 sep – 4 oct; previa estos días, cuartos el viernes 2 con Red Bull
+   TV): pieza de reanudación de temporada con ángulo de Race + material, cuadros
+   oficiales verificados en la web del torneo (Tapia-Coello 01, Galán-Chingotto 02,
+   Augsburger-Lebrón 03, Leal-Guerrero 07; mujeres Triay-Brea 01, Josemaría-González
+   02, Sánchez-Ustero 03, Fernández-Calvo 04) y el gancho fresco de los campeones del
+   FIP Platinum Lyon de ayer (Leal-Guerrero d. Stupa-Sanz 4-6 6-4 6-1; Fassio-Pérez
+   campeonas). — **HECHO 2026-09-28**: artículo `rotterdam-p2-2026-race-numero-uno-palas`
+   (ES+EN, kind novedad, 12 relatedProducts con ProductRef/ProductGrid: Coello Pro 2026,
+   AT10 Genius 18K, Metalbone 2026, Neuron 02 Edge 2027, Technical Viper 3.0, Electra
+   Pro IT 26, Axion Attack 2.0, Elite 02 2027, Vertex 05 Woman, Pearl 2026, Arrow Hit
+   Light, Wonder 2027). Datos de la Race verificados en Red Bull (rankings FIP 20.454 vs
+   18.289; Race 12.620 vs 11.350; gap 1.270 pts a caducar; 11 finales 7-4; 6 seguidas
+   desde Roma; Chingalán 64-10; París 5-3 y 7-1 en el TB; Tapia invicto en RG; mujeres
+   16.974 vs 14.017/13.889; 8 finales 5-3; récord 200 victorias de Triay; Calvo 18 años)
+   + calendario restante (Kuwait ascendido a Major, Doha sin puntos, Finals Barcelona
+   10-13 dic 1.500 pts). Fuentes: premierpadel.com (web torneo + lista oficial de
+   jugadores M/F vía browser), redbull.com (temporada hasta ahora), padelfip.com
+   (final Lyon), wikipedia (resultados 2026). Build + check:translations OK (135
+   productos); /es y /en prerenderizados con 12 fichas en ProductGrid y ProductRefs
+   + Callouts verificados en el HTML de salida.
 
 
 ### 🎨 Visual (mejoras visuales)

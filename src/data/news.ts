@@ -75,6 +75,7 @@ import { metadata as espanaConvocatoriaMundial } from "@/content/noticias/espana
 import { metadata as davisCupFinal8 } from "@/content/noticias/davis-cup-2026-final-8-bolonia-clasificados.mdx";
 import { metadata as fipPlatinumLyon } from "@/content/noticias/fip-platinum-lyon-2026-palas-favoritos.mdx";
 import { metadata as fipPlatinumLyonOctavos } from "@/content/noticias/fip-platinum-lyon-2026-octavos-garrido-sanyo-fuera.mdx";
+import { metadata as rotterdamP2Race } from "@/content/noticias/rotterdam-p2-2026-race-numero-uno-palas.mdx";
 
 /**
  * Traducciones EN de los metadatos de cada artículo. Las ES vienen del propio
@@ -309,6 +310,13 @@ const EN_META: Record<string, { title: string; excerpt: string; tags: string[] }
       "The first round produced the upset of the tournament: Axelsson-Guichard came from behind to beat Garrido-Sanyo 3-6 6-4 6-4. On Thursday the top four seeds —Stupaczuk-Sanz, Di Nenno-Tello, Momo-Campagnolo and Salazar-Osoro— make their debut in a round of 16 featuring 16 matches from 11:00 at the Palais des Sports de Gerland.",
     tags: ["FIP Platinum", "Lyon", "Round of 16", "Garrido", "Salazar", "Padel"],
   },
+  "rotterdam-p2-2026-race-numero-uno-palas": {
+    title:
+      "Rotterdam P2: the double race for world No. 1 resumes in the Netherlands — the aspirants' rackets",
+    excerpt:
+      "The CUPRA Rotterdam P2 (September 28 – October 4) restarts Premier Padel with both world No. 1 races at stake: Coello-Tapia (9 titles) against Galán-Chingotto (7) on the men's side, and six titles apiece for Triay-Brea and Josemaría-González on the women's, with Leal-Guerrero arriving fresh off their FIP Platinum Lyon title. Official draw with the top four seeds in each bracket and their rackets in our catalog.",
+    tags: ["Premier Padel", "Rotterdam P2", "Tapia", "Coello", "Galán", "Chingotto", "Ranking"],
+  },
 };
 
 /**
@@ -370,6 +378,7 @@ export const ARTICLES: Article[] = [
   localize({ slug: "davis-cup-2026-final-8-bolonia-clasificados", ...davisCupFinal8 }),
   localize({ slug: "fip-platinum-lyon-2026-palas-favoritos", ...fipPlatinumLyon }),
   localize({ slug: "fip-platinum-lyon-2026-octavos-garrido-sanyo-fuera", ...fipPlatinumLyonOctavos }),
+  localize({ slug: "rotterdam-p2-2026-race-numero-uno-palas", ...rotterdamP2Race }),
 ].sort((a, b) => b.date.localeCompare(a.date));
 
 export function getArticle(slug: string): Article | undefined {
