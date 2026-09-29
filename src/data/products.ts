@@ -3228,6 +3228,30 @@ export const PRODUCTS: Product[] = [
     descriptionEn:
       "Claudia Fernández's racket, 'La Niña Maravilla' (Wonder Girl): a light hybrid of 350-360 g with a medium balance at 25 cm and a 517 cm² surface, surprisingly firm on impact for seamless defensive-offensive play. The compact Wonder Core heart channels energy cleanly for an intuitive, controlled strike, Fibrix faces over a MultiEva core deliver an accessible intermediate feel, and the ExoFrame shell reinforces the frame without adding weight. Air React Channel for a faster swing, VibraDrive to damp vibrations and a rough 3D Grain finish for spin. The agile all-rounder of Bullpadel's 2027 Pro Line, CustomWeight-compatible to tune the balance.",
   },
+  {
+    id: "dunlop-galactica-pro-2025",
+    sport: "padel",
+    brand: "Dunlop",
+    model: "Galactica Pro",
+    year: 2025,
+    price: 159,
+    image: "/images/rackets/dunlop-galactica-pro-2025.svg",
+    level: ["avanzado"],
+    style: ["potencia", "polivalente"],
+    padel: {
+      shape: "hibrida",
+      weight: "365-375 g",
+      balance: "alto",
+      core: "Pro EVA",
+      faces: "Carbono 16K",
+      surface: "rugosa",
+      hardness: "media",
+    },
+    description:
+      "La super-premium de Dunlop para 2025: híbrida de 370 g con balance alto, cara de carbono 16K y núcleo Pro EVA para un tacto tan potente como cómodo. El refuerzo Tri-Max estabiliza el marco y agranda el punto dulce, la fibra dispuesta a 45° mejora la salida de bola y su Sonic Core Infinergy de BASF suma rebote absorbiendo vibraciones, con acabado rugoso Extra Grip para el efecto. Para el jugador avanzado que quiere control sólido sin renunciar a chispa en el remate.",
+    descriptionEn:
+      "Dunlop's 2025 super-premium: a 370 g hybrid with high balance, 16K carbon face and Pro EVA core, delivering a feel as powerful as it is comfortable. Tri-Max reinforcement stabilises the frame and enlarges the sweet spot, the 45° face lay-up improves ball exit, and BASF's Sonic Core Infinergy adds rebound while absorbing vibration — finished with a rough Extra Grip surface for spin. For the advanced player who wants solid control without giving up power on the smash.",
+  },
 ];
 
 export function getProduct(id: string) {
