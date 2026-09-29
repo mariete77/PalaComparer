@@ -401,6 +401,28 @@ para no duplicar temas ya publicados (ej. ya existe `madrid-p1-2026-lucha-por-el
    (final Lyon), wikipedia (resultados 2026). Build + check:translations OK (135
    productos); /es y /en prerenderizados con 12 fichas en ProductGrid y ProductRefs
    + Callouts verificados en el HTML de salida.
+21. [x] **Rotterdam P2 2026 — arranca el cuadro final** — torneo EN MARCHA (28 sep – 4
+   oct): el martes 29 a las 18:30 arranca la primera ronda masculina en el Ahoy. Pieza
+   de la jornada con los cruces verificados del cuadro oficial (draw PDF liberado el 27
+   sep): Goñi-Alonso vs Montiel-Santigosa (Goñi, recién convocado para el Mundial de
+   Doha, con su pareja del Paris Major), Rodríguez Martínez-Abbate vs Libaak-Alfonso,
+   Aguirre-García Rodrigo vs Tello-Arce y Lijó-Gil vs Quilez-Mouriño; la previa de la
+   mañana con **Lamperti (47 años, gira de despedida, nº111) a un partido del cuadro** y
+   la pareja local Roper-Släryd en liza; Q2 femenina con dos parejas neerlandesas a un
+   paso; el estreno de la sociedad **Di Nenno-Paquito Navarro (4º cabeza, bye a
+   octavos)** y el resto de cruces del miércoles (Stupa-Sanz, Yanguas-Nieto,
+   Leal-Guerrero frente a Goenaga-Collado, González-Campagnolo...). — **HECHO
+   2026-09-29**: artículo `rotterdam-p2-2026-cuadro-final-jornada-1` (ES+EN, kind
+   novedad, 7 relatedProducts con ProductRef/ProductGrid: EA10 Ventus [Edu Alonso],
+   Diablo Pro [Libaak], Vertex 05 [Tello], ML10 Ventus Control 3K [Lamperti], Hack 05
+   [Paquito], Electra Pro IT 26 + Axion Attack 2.0 [Stupa-Sanz]). Fuentes: cuadro
+   oficial PDF (padelspeak, release 27 sep; seeds y puntos FIP), premierpadel.com
+   (OOP en vivo + resultados Q2 del lunes: Insa-Miñano 6-4 6-1 y Moragues Moltó-Fonteny
+   6-4 7-6), studypadel.com (horarios), padelspeak (premio 264.534 €, TV, horario
+   previas 12:00 / R32 18:30), padelfip (Lamperti n. 11/11/1978), padeladdict (gira de
+   despedida). Build + check:translations OK; /es y /en prerenderizados a 200 con 24
+   enlaces de producto, los 7 ProductRefs y el ProductGrid verificados en DOM; listado
+   /es/noticias 200.
 
 
 ### 🎨 Visual (mejoras visuales)
@@ -579,6 +601,30 @@ pádel las cubre el cron de palas). Al terminar, actualizar el estado de la fila
 ---
 
 ## Notas (varias noches)
+
+- 2026-09-29 — **Regla 0 (Rotterdam P2 EN MARCHA 28 sep – 4 oct; el cuadro final
+  arranca HOY martes 29 a las 18:30 CET)**: publicado `rotterdam-p2-2026-cuadro-final-jornada-1`
+  (ES+EN) — jornada 1 del cuadro final con los cruces verificados en el draw PDF
+  oficial (liberado el domingo 27 por el torneo) y los resultados reales de la previa
+  del lunes (premierpadel.com): Insa Sotillo-Miñano Ortinez d. Martínez Espi-Fernández
+  Sansano 6-4 6-1 y Moragues Moltó-Fonteny d. Graupera-Espino Mustafa 6-4 7-6 (ambos
+  siguen vivos hoy en la Q3). El ángulo fuerte de la pieza: **Miguel Lamperti, 47 años**
+  (padelfip, n. 11/11/1978), nº111 y en su gira de despedida (padeladdict), a UN
+  partido de meterse en el cuadro (Q3 con Octavio Álvarez vs Zapata-Naranjo, séptimos
+  de previa); su ML10 Ventus Control 3K está en el catálogo. Otro dato gordo del draw:
+  el baile de parejas sigue — **Di Nenno ya no juega con Tello** (Lyon: 3º cabeza
+  juntos) y aparece como 4º cabeza de serie con **Paquito Navarro** (bye a octavos),
+  mientras Tello forma con Maxi Arce en el R32. Seeds con puntos FIP del draw:
+  Tapia-Coello 40.908, Galán-Chingotto 36.578, Augsburger-Lebrón 15.399, Di
+  Nenno-Navarro 11.346, Stupa-Sanz 11.269, Yanguas-Nieto 10.834, Leal-Guerrero 8.356,
+  González-Campagnolo 8.048. Femenino: los 8 cabezas de serie descansan (R32 con 8
+  partidos mañana miércoles). LA LAVER CUP: **Europa ganó 13-5** (domingo 27; RTVE/AS;
+  Zverev cerró la serie d. Fritz 7-6(3) 6-3) — el cron de noticias del lunes NO publicó
+  ninguna pieza con este resultado ni con las finales de Lyon: hueco abierto para el
+  cron de noticias o una noche futura. OPS: de nuevo un `next-server` huérfano (pid
+  2532111, desde el 25 sep, 100% CPU) bloqueaba el puerto 3000 — matado antes de
+  verificar; el fix documentado sigue funcionando (kill por PID, no pkill -f que se
+  mata a sí mismo).
 
 - 2026-09-27 — **Regla 0 (Laver Cup 2026, domingo decisivo HOY 27 sep; el torneo
   cierra esta noche)**: publicado `laver-cup-2026-domingo-decisivo-europa-7-5` (ES+EN)

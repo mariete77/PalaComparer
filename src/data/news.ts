@@ -76,6 +76,7 @@ import { metadata as davisCupFinal8 } from "@/content/noticias/davis-cup-2026-fi
 import { metadata as fipPlatinumLyon } from "@/content/noticias/fip-platinum-lyon-2026-palas-favoritos.mdx";
 import { metadata as fipPlatinumLyonOctavos } from "@/content/noticias/fip-platinum-lyon-2026-octavos-garrido-sanyo-fuera.mdx";
 import { metadata as rotterdamP2Race } from "@/content/noticias/rotterdam-p2-2026-race-numero-uno-palas.mdx";
+import { metadata as rotterdamP2Jornada1 } from "@/content/noticias/rotterdam-p2-2026-cuadro-final-jornada-1.mdx";
 import { metadata as juegosSudamericanos } from "@/content/noticias/juegos-sudamericanos-2026-primeros-oros-padel.mdx";
 
 /**
@@ -318,6 +319,13 @@ const EN_META: Record<string, { title: string; excerpt: string; tags: string[] }
       "The CUPRA Rotterdam P2 (September 28 – October 4) restarts Premier Padel with both world No. 1 races at stake: Coello-Tapia (9 titles) against Galán-Chingotto (7) on the men's side, and six titles apiece for Triay-Brea and Josemaría-González on the women's, with Leal-Guerrero arriving fresh off their FIP Platinum Lyon title. Official draw with the top four seeds in each bracket and their rackets in our catalog.",
     tags: ["Premier Padel", "Rotterdam P2", "Tapia", "Coello", "Galán", "Chingotto", "Ranking"],
   },
+  "rotterdam-p2-2026-cuadro-final-jornada-1": {
+    title:
+      "Rotterdam P2: the main draw gets underway — Day 1 matchups and Lamperti one win away",
+    excerpt:
+      "The CUPRA Rotterdam P2 (Sep 27 – Oct 4, Rotterdam Ahoy) opens its main draw on Tuesday at 18:30: Goñi-Alonso, Tello-Arce and Libaak-Alfonso headline the round of 32, the morning qualifying leaves Lamperti (47) one match from the draw, and Di Nenno-Paquito Navarro debut their partnership with a bye straight to the last 16. The catalog's rackets, inside.",
+    tags: ["Premier Padel", "Rotterdam P2", "Lamperti", "Tello", "Libaak", "Goñi"],
+  },
   "juegos-sudamericanos-2026-primeros-oros-padel": {
     title: "History made: Abud-Dehnike and Vilchez-Mosca win padel's first-ever South American Games gold medals",
     excerpt:
@@ -386,6 +394,7 @@ export const ARTICLES: Article[] = [
   localize({ slug: "fip-platinum-lyon-2026-palas-favoritos", ...fipPlatinumLyon }),
   localize({ slug: "fip-platinum-lyon-2026-octavos-garrido-sanyo-fuera", ...fipPlatinumLyonOctavos }),
   localize({ slug: "rotterdam-p2-2026-race-numero-uno-palas", ...rotterdamP2Race }),
+  localize({ slug: "rotterdam-p2-2026-cuadro-final-jornada-1", ...rotterdamP2Jornada1 }),
   localize({ slug: "juegos-sudamericanos-2026-primeros-oros-padel", ...juegosSudamericanos }),
 ].sort((a, b) => b.date.localeCompare(a.date));
 
