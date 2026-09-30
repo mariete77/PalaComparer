@@ -77,6 +77,7 @@ import { metadata as fipPlatinumLyon } from "@/content/noticias/fip-platinum-lyo
 import { metadata as fipPlatinumLyonOctavos } from "@/content/noticias/fip-platinum-lyon-2026-octavos-garrido-sanyo-fuera.mdx";
 import { metadata as rotterdamP2Race } from "@/content/noticias/rotterdam-p2-2026-race-numero-uno-palas.mdx";
 import { metadata as rotterdamP2Jornada1 } from "@/content/noticias/rotterdam-p2-2026-cuadro-final-jornada-1.mdx";
+import { metadata as rotterdamP2Sorpresa } from "@/content/noticias/rotterdam-p2-2026-primera-sorpresa-goni-alonso.mdx";
 import { metadata as juegosSudamericanos } from "@/content/noticias/juegos-sudamericanos-2026-primeros-oros-padel.mdx";
 
 /**
@@ -326,6 +327,13 @@ const EN_META: Record<string, { title: string; excerpt: string; tags: string[] }
       "The CUPRA Rotterdam P2 (Sep 27 – Oct 4, Rotterdam Ahoy) opens its main draw on Tuesday at 18:30: Goñi-Alonso, Tello-Arce and Libaak-Alfonso headline the round of 32, the morning qualifying leaves Lamperti (47) one match from the draw, and Di Nenno-Paquito Navarro debut their partnership with a bye straight to the last 16. The catalog's rackets, inside.",
     tags: ["Premier Padel", "Rotterdam P2", "Lamperti", "Tello", "Libaak", "Goñi"],
   },
+  "rotterdam-p2-2026-primera-sorpresa-goni-alonso": {
+    title:
+      "Rotterdam P2: Montiel-Santigosa pull off the first upset and knock out Goñi-Alonso",
+    excerpt:
+      "The CUPRA Rotterdam P2 main draw opened with a bang: Montiel-Santigosa eliminated Goñi-Alonso (7-6(9) 6-3) on their debut, while Tello-Arce, Libaak-Alfonso and Lijó-Gil delivered. Today (12:00) the first round wraps up with the debuts of Stupaczuk-Sanz, Leal-Guerrero, Yanguas-Nieto and Momo-Campagnolo, and the women's draw joining in.",
+    tags: ["Premier Padel", "Rotterdam P2", "Goñi", "Montiel", "Santigosa", "Stupaczuk", "Leal"],
+  },
   "juegos-sudamericanos-2026-primeros-oros-padel": {
     title: "History made: Abud-Dehnike and Vilchez-Mosca win padel's first-ever South American Games gold medals",
     excerpt:
@@ -396,6 +404,7 @@ export const ARTICLES: Article[] = [
   localize({ slug: "rotterdam-p2-2026-race-numero-uno-palas", ...rotterdamP2Race }),
   localize({ slug: "rotterdam-p2-2026-cuadro-final-jornada-1", ...rotterdamP2Jornada1 }),
   localize({ slug: "juegos-sudamericanos-2026-primeros-oros-padel", ...juegosSudamericanos }),
+  localize({ slug: "rotterdam-p2-2026-primera-sorpresa-goni-alonso", ...rotterdamP2Sorpresa }),
 ].sort((a, b) => b.date.localeCompare(a.date));
 
 export function getArticle(slug: string): Article | undefined {

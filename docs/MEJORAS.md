@@ -423,6 +423,28 @@ para no duplicar temas ya publicados (ej. ya existe `madrid-p1-2026-lucha-por-el
    despedida). Build + check:translations OK; /es y /en prerenderizados a 200 con 24
    enlaces de producto, los 7 ProductRefs y el ProductGrid verificados en DOM; listado
    /es/noticias 200.
+22. [x] **Rotterdam P2 2026 — la primera sorpresa del cuadro: Goñi-Alonso fuera** —
+   torneo EN MARCHA (28 sep – 4 oct): el miércoles 30 se completa la primera ronda y la
+   historia fresca de la mañana es el resultado del martes: **Montiel-Santigosa d.
+   Goñi-Alonso 7-6(9) 6-3** en su debut (primera sorpresa del cuadro; Goñi nº32, recién
+   convocado para el Mundial de Doha, segunda eliminación seguida tras Lyon). Pieza de
+   jornada con los 4 resultados verificados del martes (Libaak-Alfonso 6-3 7-5,
+   Arce-Tello 7-6(3) 7-5, Lijó-Gil 7-5 6-3), el desenlace de la Q3 (clasificados
+   Ortega-Axelsson 6-3 7-6 y Zapata-Naranjo 5-7 6-2 6-2 a Álvarez-Lamperti; Lamperti
+   fuera a un partido del cuadro en su gira de despedida), el OOP completo del miércoles
+   por pistas (debuts de Stupa-Sanz, Leal-Guerrero —campeones de Lyon—, Yanguas-Nieto y
+   Momo-Campagnolo; femenino en escena con Fassio y Pérez separadas tras su título en
+   Lyon) y que los 4 primeros cabezas de serie masculinos y femeninos debutan el jueves
+   en octavos (FAQ padeladdict confirma los byes; Di Nenno-Paquito no juega hoy).
+   — **HECHO 2026-09-30**: artículo `rotterdam-p2-2026-primera-sorpresa-goni-alonso`
+   (ES+EN, kind novedad, 6 relatedProducts con ProductRef/ProductGrid: Electra Pro IT
+   26 [Stupa], Axion Attack 2.0 [Jon Sanz], Endure V1 [Momo], Vertex 05 [Tello],
+   Diablo Pro [Libaak], ML10 Ventus Control 3K [Lamperti]). Fuentes: elneverazo
+   (resultados jornada 1 con TB + OOP jornada 2), padeladdict (crónica sorpresa +
+   FAQ byes + contexto Goñi/Lyon), StudyPadel (resultados + páginas de match Q3 con
+   marcadores y clasificados). Build + check:translations OK; /es y /en prerenderizados
+   con ProductRefs, ProductGrid y Callouts verificados; screenshot
+   docs/screenshots/2026-09-30-rotterdam-p2-primera-sorpresa.png.
 
 
 ### 🎨 Visual (mejoras visuales)
