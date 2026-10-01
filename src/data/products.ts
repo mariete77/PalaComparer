@@ -1204,6 +1204,33 @@ export const PRODUCTS: Product[] = [
       "Lamborghini BL.003 in white finish. Same carbon frame reinforced with KORIDIO and supercar aesthetics. Collector's edition with competition performance.",
   },
 
+  // ============ PÁDEL — BABOLAT 2027 ============
+  {
+    id: "babolat-viper-3-1-2027-juan-lebron",
+    sport: "padel",
+    brand: "Babolat",
+    model: "Viper 3.1",
+    year: 2027,
+    price: 389.95,
+    image: "/images/rackets/babolat-viper-3-1-2027-juan-lebron.svg",
+    level: ["avanzado", "profesional"],
+    style: ["potencia"],
+    player: "Juan Lebrón",
+    padel: {
+      shape: "diamante",
+      weight: "360-380 g",
+      balance: "alto",
+      core: "Hard EVA",
+      faces: "Carbono 3K",
+      surface: "rugosa",
+      hardness: "dura",
+    },
+    description:
+      "La nueva generación de la pala de Juan Lebrón, presentada en el Paris Major: diamante de 38 mm con balance alto (~270 mm), cara de carbono 3K y núcleo Hard EVA para la potencia más seca de la gama Viper. Estrena el Dynamic Stability System, una barra central en el corazón que estabiliza el impacto y sube la potencia en los golpes ofensivos, con rugosidad 3D Spin+ para el efecto. La colección 2027 estrena además la estética verde y rosa más llamativa de la saga — para rematadores de nivel pro que viven de la pegada.",
+    descriptionEn:
+      "The new generation of Juan Lebrón's racket, unveiled at the Paris Major: a 38 mm diamond with a high balance (~270 mm), 3K carbon face and Hard EVA core for the driest power in the Viper range. It debuts the Dynamic Stability System, a central bar in the heart that stabilises impact and boosts power on offensive shots, finished with 3D Spin+ roughness for spin. The 2027 collection also brings the boldest green-and-pink look in the saga — for pro-level smashers who live off their punch.",
+  },
+
   // ============ PÁDEL — WILSON ============
   {
     id: "wilson-bela-pro-2024",
