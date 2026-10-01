@@ -53,14 +53,26 @@
 ### 📰 Actualidad (contenido original y actual)
 
 _Por la Regla 0 del protocolo, si un torneo está en curso este item va primero. Hechos
-verificados a 2026-09-03: US Open del 23 ago al 13 sep (cuadro principal en marcha);
-Comunidad de Madrid Premier Padel P1 del 29 ago al 6 sep (cuadro en el Movistar Arena,
-1-6 sep); Paris Major del 7 al 13 sep. Antes de escribir, comprobar `src/content/noticias/`
-para no duplicar temas ya publicados (ej. ya existe `madrid-p1-2026-lucha-por-el-numero-uno`,
-`us-open-2026-raquetas-cuartos-final` y `paris-major-2026-previa-roland-garros`)._
+verificados a 2026-10-01: China Open de Pekín (ATP 500) del 30 sep al 6 oct EN MARCHA
+(Djokovic, 30-0 en la ciudad, de vuelta tras 11 años); Rotterdam P2 (Premier Padel,
+28 sep-4 oct) también en curso; le sigue el Rolex Shanghai Masters de tenis (7-18 oct).
+Antes de escribir, comprobar `src/content/noticias/` para no duplicar temas ya
+publicados (ej. ya existe `rotterdam-p2-2026-primera-sorpresa-goni-alonso` y las cinco
+piezas del Paris Major)._
 
-1. [x] **Laver Cup 2026, día 1 en el O2 (25-27 sep)** — torneo EN CURSO: el viernes cerró con
-   **3-1 para Europa** (Jódar 6-2 6-3 a Bublik en su debut; Ruud 6-7(4) 6-4 10-8 a Cerúndolo;
+1. [x] **China Open 2026 (ATP 500, EN MARCHA 30 sep-6 oct)** — historia grande y fresca:
+   Djokovic vuelve a Pekín 11 años después con 30-0 imbatido (6 títulos en 6 visitas),
+   estrena su regreso ganando a Borges 6-3 7-6(2) (primer partido desde Wimbledon) y
+   espera a Bu Yunchaokete (6-2 5-7 6-4 a Cerúndolo). Bomba del día 1: Khachanov
+   eliminó a Auger-Aliassime (2) 6-3 6-3; Sinner, campeón 2025, baja por rodilla.
+   — **HECHO 2026-10-01**: artículo `china-open-2026-djokovic-beijing-raquetas`
+   (ES+EN, kind novedad, 4 relatedProducts: Speed MP 2026, Gravity Tour Zverev 2026,
+   TFight 305S, Blade 98 v10) con las raquetas de Djokovic/Zverev/Medvedev/Menšík y
+   resultados verificados (Wikipedia cuadro, atptour.com, ESPN, Yahoo, tennisnerd).
+   Archivos: src/content/noticias/{,en/}china-open-2026-djokovic-beijing-raquetas.mdx,
+   src/data/news.ts. Build + check:translations OK.
+   2. [x] **Laver Cup 2026, día 1 en el O2 (25-27 sep)** — torneo EN CURSO: el viernes cerró con
+      **3-1 para Europa** (Jódar 6-2 6-3 a Bublik en su debut; Ruud 6-7(4) 6-4 10-8 a Cerúndolo;
    Nakashima 1-6 6-3 10-7 a Menšík; Alcaraz-Menšík 6-4 6-4 a Fritz-Bublik en dobles). Pieza
    original con ángulo de material sobre los partidos del día 1 + previa del sábado
    (2 pts/partido; Alcaraz al individual; Zverev/Cobolli/De Minaur/Tien por estrenarse).
@@ -624,6 +636,18 @@ pádel las cubre el cron de palas). Al terminar, actualizar el estado de la fila
 
 ## Notas (varias noches)
 
+- 2026-10-01 — **Regla 0 (China Open de Pekín EN MARCHA 30 sep–6 oct; el Rotterdam P2,
+  28 sep–4 oct, ya llevaba 3 piezas)**: publicado `china-open-2026-djokovic-beijing-raquetas`
+  (ES+EN, kind novedad) — ángulo: el regreso de Djokovic a Pekín 11 años después (30-0,
+  6 títulos en 6 visitas; R1 d. Borges 6-3 7-6(2) en 1h50, primer partido desde Wimbledon;
+  R2 vs Bu Yunchaokete n.104, que eliminó a Cerúndolo 6-2 5-7 6-4) + raquetas del catálogo
+  de los favoritos vivos (Speed MP 2026 = línea Djokovic; Gravity Tour 2026 = Zverev,
+  doble GS del año; TFight 305S = Medvedev; Blade 98 v10 = Menšík, verificado en
+  tennisnerd). Bombazos verificados: Khachanov d. FAA (2) 6-3 6-3; Sinner (campeón 2025)
+  baja por rodilla. Tabla de demanda real: no se tocó (todo ✓). DATO SUCIO NUEVO:
+  `head-instinct-mp-2025` tiene `player: "Daniil Medvedev"` y choca con la TFight 305S
+  ("línea de Medvedev") — verificar quién juega la Instinct MP antes de corregir (candidato
+  a noche de datos; igual que la Radical Pro padel con Ari Sánchez, aún abierta).
 - 2026-09-29 — **Regla 0 (Rotterdam P2 EN MARCHA 28 sep – 4 oct; el cuadro final
   arranca HOY martes 29 a las 18:30 CET)**: publicado `rotterdam-p2-2026-cuadro-final-jornada-1`
   (ES+EN) — jornada 1 del cuadro final con los cruces verificados en el draw PDF

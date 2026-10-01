@@ -78,6 +78,7 @@ import { metadata as fipPlatinumLyonOctavos } from "@/content/noticias/fip-plati
 import { metadata as rotterdamP2Race } from "@/content/noticias/rotterdam-p2-2026-race-numero-uno-palas.mdx";
 import { metadata as rotterdamP2Jornada1 } from "@/content/noticias/rotterdam-p2-2026-cuadro-final-jornada-1.mdx";
 import { metadata as rotterdamP2Sorpresa } from "@/content/noticias/rotterdam-p2-2026-primera-sorpresa-goni-alonso.mdx";
+import { metadata as chinaOpenDjokovic } from "@/content/noticias/china-open-2026-djokovic-beijing-raquetas.mdx";
 import { metadata as juegosSudamericanos } from "@/content/noticias/juegos-sudamericanos-2026-primeros-oros-padel.mdx";
 
 /**
@@ -334,6 +335,13 @@ const EN_META: Record<string, { title: string; excerpt: string; tags: string[] }
       "The CUPRA Rotterdam P2 main draw opened with a bang: Montiel-Santigosa eliminated Goñi-Alonso (7-6(9) 6-3) on their debut, while Tello-Arce, Libaak-Alfonso and Lijó-Gil delivered. Today (12:00) the first round wraps up with the debuts of Stupaczuk-Sanz, Leal-Guerrero, Yanguas-Nieto and Momo-Campagnolo, and the women's draw joining in.",
     tags: ["Premier Padel", "Rotterdam P2", "Goñi", "Montiel", "Santigosa", "Stupaczuk", "Leal"],
   },
+  "china-open-2026-djokovic-beijing-raquetas": {
+    title:
+      "Djokovic returns to Beijing after 11 years: a 30-0 fortress record and the racquets of the 2026 China Open",
+    excerpt:
+      "Novak Djokovic is back at the ATP 500 in Beijing — a city where he has never lost (30-0, six titles in six visits) — and opened his return by beating Borges (6-3, 7-6(2)) in his first match since Wimbledon. Second seed Auger-Aliassime is already out: here are the racquets of the favourites still alive.",
+    tags: ["ATP", "China Open", "Djokovic", "Zverev", "Medvedev", "Menšík"],
+  },
   "juegos-sudamericanos-2026-primeros-oros-padel": {
     title: "History made: Abud-Dehnike and Vilchez-Mosca win padel's first-ever South American Games gold medals",
     excerpt:
@@ -405,6 +413,7 @@ export const ARTICLES: Article[] = [
   localize({ slug: "rotterdam-p2-2026-cuadro-final-jornada-1", ...rotterdamP2Jornada1 }),
   localize({ slug: "juegos-sudamericanos-2026-primeros-oros-padel", ...juegosSudamericanos }),
   localize({ slug: "rotterdam-p2-2026-primera-sorpresa-goni-alonso", ...rotterdamP2Sorpresa }),
+  localize({ slug: "china-open-2026-djokovic-beijing-raquetas", ...chinaOpenDjokovic }),
 ].sort((a, b) => b.date.localeCompare(a.date));
 
 export function getArticle(slug: string): Article | undefined {
