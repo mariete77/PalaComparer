@@ -80,6 +80,7 @@ import { metadata as rotterdamP2Jornada1 } from "@/content/noticias/rotterdam-p2
 import { metadata as rotterdamP2Sorpresa } from "@/content/noticias/rotterdam-p2-2026-primera-sorpresa-goni-alonso.mdx";
 import { metadata as chinaOpenDjokovic } from "@/content/noticias/china-open-2026-djokovic-beijing-raquetas.mdx";
 import { metadata as juegosSudamericanos } from "@/content/noticias/juegos-sudamericanos-2026-primeros-oros-padel.mdx";
+import { metadata as rotterdamP2Cuartos } from "@/content/noticias/rotterdam-p2-2026-cuartos-libaak-alfonso-premio-envenenado.mdx";
 
 /**
  * Traducciones EN de los metadatos de cada artículo. Las ES vienen del propio
@@ -342,6 +343,13 @@ const EN_META: Record<string, { title: string; excerpt: string; tags: string[] }
       "Novak Djokovic is back at the ATP 500 in Beijing — a city where he has never lost (30-0, six titles in six visits) — and opened his return by beating Borges (6-3, 7-6(2)) in his first match since Wimbledon. Second seed Auger-Aliassime is already out: here are the racquets of the favourites still alive.",
     tags: ["ATP", "China Open", "Djokovic", "Zverev", "Medvedev", "Menšík"],
   },
+  "rotterdam-p2-2026-cuartos-libaak-alfonso-premio-envenenado": {
+    title:
+      "Rotterdam P2: Libaak-Alfonso knock out Leal-Guerrero and earn a quarterfinal date with Tapia-Coello",
+    excerpt:
+      "Libaak-Alfonso (7-5 3-6 6-4) are the only pair outside the top eight seeds in the Rotterdam P2 quarterfinals, where Tapia-Coello await. All 8 matches today from 10:30 (Red Bull TV and Movistar+): full schedule, round-of-16 results and the catalog rackets of the last eight.",
+    tags: ["Premier Padel", "Rotterdam P2", "Libaak", "Alfonso", "Leal", "Guerrero", "Tapia", "Coello"],
+  },
   "juegos-sudamericanos-2026-primeros-oros-padel": {
     title: "History made: Abud-Dehnike and Vilchez-Mosca win padel's first-ever South American Games gold medals",
     excerpt:
@@ -414,6 +422,7 @@ export const ARTICLES: Article[] = [
   localize({ slug: "juegos-sudamericanos-2026-primeros-oros-padel", ...juegosSudamericanos }),
   localize({ slug: "rotterdam-p2-2026-primera-sorpresa-goni-alonso", ...rotterdamP2Sorpresa }),
   localize({ slug: "china-open-2026-djokovic-beijing-raquetas", ...chinaOpenDjokovic }),
+  localize({ slug: "rotterdam-p2-2026-cuartos-libaak-alfonso-premio-envenenado", ...rotterdamP2Cuartos }),
 ].sort((a, b) => b.date.localeCompare(a.date));
 
 export function getArticle(slug: string): Article | undefined {

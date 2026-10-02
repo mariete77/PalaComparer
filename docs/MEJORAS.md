@@ -53,12 +53,12 @@
 ### 📰 Actualidad (contenido original y actual)
 
 _Por la Regla 0 del protocolo, si un torneo está en curso este item va primero. Hechos
-verificados a 2026-10-01: China Open de Pekín (ATP 500) del 30 sep al 6 oct EN MARCHA
-(Djokovic, 30-0 en la ciudad, de vuelta tras 11 años); Rotterdam P2 (Premier Padel,
-28 sep-4 oct) también en curso; le sigue el Rolex Shanghai Masters de tenis (7-18 oct).
-Antes de escribir, comprobar `src/content/noticias/` para no duplicar temas ya
-publicados (ej. ya existe `rotterdam-p2-2026-primera-sorpresa-goni-alonso` y las cinco
-piezas del Paris Major)._
+verificados a 2026-10-02: Rotterdam P2 (Premier Padel, 28 sep-4 oct) EN MARCHA con los
+cuartos hoy viernes 2 (Red Bull TV estrena emisión) y finales el domingo 4; China Open de
+Pekín (ATP 500, 30 sep-6 oct) EN MARCHA (Djokovic, 30-0 en la ciudad, de vuelta tras 11
+años); le sigue el Rolex Shanghai Masters de tenis (7-18 oct). Antes de escribir, comprobar
+`src/content/noticias/` para no duplicar temas ya publicados (ej. ya existe
+`rotterdam-p2-2026-primera-sorpresa-goni-alonso` y las cinco piezas del Paris Major)._
 
 1. [x] **China Open 2026 (ATP 500, EN MARCHA 30 sep-6 oct)** — historia grande y fresca:
    Djokovic vuelve a Pekín 11 años después con 30-0 imbatido (6 títulos en 6 visitas),
@@ -457,6 +457,29 @@ piezas del Paris Major)._
    marcadores y clasificados). Build + check:translations OK; /es y /en prerenderizados
    con ProductRefs, ProductGrid y Callouts verificados; screenshot
    docs/screenshots/2026-09-30-rotterdam-p2-primera-sorpresa.png.
+23. [x] **Rotterdam P2 2026 — la jornada de cuartos: Libaak-Alfonso, el único invitado
+   fuera del Top 8** — torneo EN MARCHA (28 sep-4 oct) y este viernes 2 se juegan los
+   cuartos: Red Bull TV estrena emisión en esta ronda y hay 8 partidos (4+4) desde las
+   10:30 en el Ahoy. Pieza de jornada con los RESULTADOS REALES de los octavos del
+   jueves (la sorpresa: Libaak-Alfonso d. Leal-Guerrero (7) 7-5 3-6 6-4 en +2h, única
+   pareja fuera de las 8 cabezas de serie; Tapia-Coello d. Montiel-Santigosa 6-3 6-2 en
+   su estreno como vigentes campeones; Di Nenno-Paquito 6-0 6-3 en <1h; Galán-Chingotto
+   6-0 6-2; Augsburger-Lebrón 6-1 7-6(7); Stupa-Sanz con su 2º doble 6-2 seguido;
+   Yanguas-Nieto 7-6(3) 6-4; Momo-Campagnolo 6-4 7-5; femenino: Triay-Brea 6-1 6-3,
+   Josemaría-González 6-4 6-2, Fernández-Calvo con retirada de Goenaga (cadera, 0-3),
+   Sánchez-Ustero por W.O. (baja Sainz-Saiz), Salazar-Osoro 7-5 5-7 6-1, Ortega-Araújo
+   6-3 7-5, sorpresa Riera-Bidahorria d. Guinart-Alonso (6) 6-3 6(3)-7 6-3, Jensen-Escacena
+   6-4 7-5) + el OOP de hoy por pistas y las palas del catálogo de la jornada.
+   — **HECHO 2026-10-02**: artículo `rotterdam-p2-2026-cuartos-libaak-alfonso-premio-envenenado`
+   (ES+EN, kind novedad, 10 relatedProducts con ProductRef/ProductGrid: Diablo Pro,
+   Coello Pro 2026, AT10 Genius 18K, Metalbone 2026, Neuron 02 Edge 2027, Hack 05 2027,
+   Endure V1, Electra Pro IT 26, Axion Attack 2.0, Viper 3.0 Lebrón + 5 ProductRefs
+   femeninos en el cuerpo: Elite 02 2027 [Triay], Vertex 05 Woman [Brea], Wonder 2027
+   [Fernández], Pearl 2026 [Bea], Flow 2024 [Salazar]). Fuentes: elneverazo (OOP cuartos
+   + resultados octavos + crónica Libaak-Alfonso), padeladdict (resultados octavos +
+   contexto Mundial Doha), premierpadel.com. Build + check:translations OK; /es y /en
+   prerenderizados con 15 enlaces a ficha, ProductGrid y Callouts verificados en el HTML;
+   screenshot docs/screenshots/2026-10-02-rotterdam-p2-cuartos.png.
 
 
 ### 🎨 Visual (mejoras visuales)
@@ -636,6 +659,23 @@ pádel las cubre el cron de palas). Al terminar, actualizar el estado de la fila
 
 ## Notas (varias noches)
 
+- 2026-10-02 — **Regla 0 (Rotterdam P2 EN MARCHA 28 sep-4 oct; cuartos HOY viernes 2 con
+  Red Bull TV estrenando emisión; China Open también en curso)**: publicado
+  `rotterdam-p2-2026-cuartos-libaak-alfonso-premio-envenenado` (ES+EN, kind novedad) —
+  4ª pieza del torneo. Ángulo: Libaak-Alfonso, única pareja fuera de las 8 cabezas de
+  serie en cuartos tras eliminar a los séptimos Leal-Guerrero 7-5 3-6 6-4 en +2h, con
+  Tapia-Coello de "premio" (ambos argentinos, además, pelean por la lista de Argentina
+  para el Mundial de Doha). Resultados de octavos todos verificados contra elneverazo y
+  padeladdict (incluyen W.O. de Sainz-Saiz → Sánchez-Ustero, retirada de Goenaga por
+  cadera y la sorpresa Riera-Bidahorria sobre Guinart-Alonso) + OOP de cuartos por
+  pistas/horarios. 15 enlaces a ficha en el artículo (10 en grid + 5 ProductRefs
+  femeninos). Tabla de demanda real: no se tocó (todo ✓). DATO SUCIO pendiente (del
+  1 oct): `head-instinct-mp-2025` con `player: "Daniil Medvedev"` choca con la TFight
+  305S — verificar quién juega la Instinct MP antes de corregir. HUECOS vistos hoy:
+  Gonza Alfonso (pareja de Libaak) y la pareja Di Nenno-Campagnolo siguen sin pala en
+  catálogo; Augsburger tampoco. Mañana: semis del Rotterdam P2 (sábado 3); el domingo 4
+  finales y cerraría la cobertura del torneo (el cron de noticias del lunes 5 tiene
+  agenda de sobra: finales Rotterdam + Alemania P2 9-17 oct + Shanghai Masters 7-18 oct).
 - 2026-10-01 — **Regla 0 (China Open de Pekín EN MARCHA 30 sep–6 oct; el Rotterdam P2,
   28 sep–4 oct, ya llevaba 3 piezas)**: publicado `china-open-2026-djokovic-beijing-raquetas`
   (ES+EN, kind novedad) — ángulo: el regreso de Djokovic a Pekín 11 años después (30-0,
