@@ -272,6 +272,31 @@ export const PRODUCTS: Product[] = [
     descriptionEn:
       "The gateway to Nox's AT10 range for 2026: it inherits the mold of Agustín Tapia's 2025 racket and the control DNA of the Pro Cup family, but with fiberglass faces with an aluminised finish over a 100% carbon frame and an HR3 Soft EVA core. The rubber's intermediate hardness forgives mistakes without giving up ball speed, and the EOS Flap (aerodynamics) and Pulse System (reduced vibration) technologies make it one of the most comfortable rackets in the Nox catalogue. The choice for intermediate players who want Tapia's mold without the Genius price tag.",
   },
+  {
+    id: "nox-at10-pro-cup-hard-2026",
+    sport: "padel",
+    brand: "Nox",
+    model: "AT10 Pro Cup Hard 2026 by Agustín Tapia",
+    year: 2026,
+    price: 199.99,
+    image: "/images/rackets/nox-at10-pro-cup-hard-2026.svg",
+    level: ["intermedio", "avanzado"],
+    style: ["potencia", "polivalente"],
+    player: "Agustín Tapia",
+    padel: {
+      shape: "lagrima",
+      weight: "360-375 g",
+      balance: "medio",
+      core: "HR3 Hard EVA",
+      faces: "Fibra de vidrio + Aluminio",
+      surface: "rugosa",
+      hardness: "dura",
+    },
+    description:
+      "La hermana potente de la AT10 Pro Cup Soft 2026: mismo molde lágrima de la pala de Agustín Tapia de 2025 y mismo marco 100% carbono de 38 mm, pero con núcleo HR3 Hard EVA y caras de fibra de vidrio aluminizada con acabado metalizado para un tacto firme y una salida de bola más reactiva. El EOS Flap mantiene la agilidad en el swing y el Pulse System filtra vibraciones, así que sube la pegada sin volverse incomoda. Para intermedios con golpe hecho que quieren dar el paso hacia un juego más agresivo sin pasar a una diamante exigente.",
+    descriptionEn:
+      "The powerful sibling of the AT10 Pro Cup Soft 2026: the same teardrop mold as Agustín Tapia's 2025 racket and the same 38 mm 100% carbon frame, but with an HR3 Hard EVA core and aluminised fibreglass faces with a metallic finish for a firm feel and a more reactive ball exit. EOS Flap keeps the swing agile and the Pulse System filters vibrations, so it steps up the punch without becoming uncomfortable. For intermediate players with a solid technique who want to move toward a more aggressive game without jumping to a demanding diamond.",
+  },
 
   // ============ PÁDEL — BULLPADEL ============
   {
