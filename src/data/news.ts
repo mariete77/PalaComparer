@@ -81,6 +81,7 @@ import { metadata as rotterdamP2Sorpresa } from "@/content/noticias/rotterdam-p2
 import { metadata as chinaOpenDjokovic } from "@/content/noticias/china-open-2026-djokovic-beijing-raquetas.mdx";
 import { metadata as juegosSudamericanos } from "@/content/noticias/juegos-sudamericanos-2026-primeros-oros-padel.mdx";
 import { metadata as rotterdamP2Cuartos } from "@/content/noticias/rotterdam-p2-2026-cuartos-libaak-alfonso-premio-envenenado.mdx";
+import { metadata as rotterdamP2Semis } from "@/content/noticias/rotterdam-p2-2026-semifinales-revolucion.mdx";
 
 /**
  * Traducciones EN de los metadatos de cada artículo. Las ES vienen del propio
@@ -350,6 +351,13 @@ const EN_META: Record<string, { title: string; excerpt: string; tags: string[] }
       "Libaak-Alfonso (7-5 3-6 6-4) are the only pair outside the top eight seeds in the Rotterdam P2 quarterfinals, where Tapia-Coello await. All 8 matches today from 10:30 (Red Bull TV and Movistar+): full schedule, round-of-16 results and the catalog rackets of the last eight.",
     tags: ["Premier Padel", "Rotterdam P2", "Libaak", "Alfonso", "Leal", "Guerrero", "Tapia", "Coello"],
   },
+  "rotterdam-p2-2026-semifinales-revolucion": {
+    title:
+      "Rotterdam P2: seeds 2, 3 and 4 fall in the quarters — the semi-finals line-up and the rackets",
+    excerpt:
+      "Stupa-Sanz beat Galán-Chingotto (6-4 6-4), Yanguas-Nieto beat Augsburger-Lebrón (7-6(0) 6-3) and Momo-Campagnolo came from behind to beat Di Nenno-Navarro (2-6 7-6(1) 7-5): the Rotterdam P2 quarter-finals knocked out three of the top four men's seeds. Today, four semi-finals at the Ahoy from 12:00 on Red Bull TV, with the catalog rackets of the 10 semi-finalists.",
+    tags: ["Premier Padel", "Rotterdam P2", "Stupaczuk", "Sanz", "Galán", "Chingotto", "Tapia", "Coello"],
+  },
   "juegos-sudamericanos-2026-primeros-oros-padel": {
     title: "History made: Abud-Dehnike and Vilchez-Mosca win padel's first-ever South American Games gold medals",
     excerpt:
@@ -423,6 +431,7 @@ export const ARTICLES: Article[] = [
   localize({ slug: "rotterdam-p2-2026-primera-sorpresa-goni-alonso", ...rotterdamP2Sorpresa }),
   localize({ slug: "china-open-2026-djokovic-beijing-raquetas", ...chinaOpenDjokovic }),
   localize({ slug: "rotterdam-p2-2026-cuartos-libaak-alfonso-premio-envenenado", ...rotterdamP2Cuartos }),
+  localize({ slug: "rotterdam-p2-2026-semifinales-revolucion", ...rotterdamP2Semis }),
 ].sort((a, b) => b.date.localeCompare(a.date));
 
 export function getArticle(slug: string): Article | undefined {

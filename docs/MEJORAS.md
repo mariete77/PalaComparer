@@ -53,10 +53,11 @@
 ### 📰 Actualidad (contenido original y actual)
 
 _Por la Regla 0 del protocolo, si un torneo está en curso este item va primero. Hechos
-verificados a 2026-10-02: Rotterdam P2 (Premier Padel, 28 sep-4 oct) EN MARCHA con los
-cuartos hoy viernes 2 (Red Bull TV estrena emisión) y finales el domingo 4; China Open de
-Pekín (ATP 500, 30 sep-6 oct) EN MARCHA (Djokovic, 30-0 en la ciudad, de vuelta tras 11
-años); le sigue el Rolex Shanghai Masters de tenis (7-18 oct). Antes de escribir, comprobar
+verificados a 2026-10-03: Rotterdam P2 (Premier Padel, 28 sep-4 oct) con semifinales HOY
+sábado 3 (Red Bull TV desde las 12:00) tras unos cuartos con revolución (fuera los cabezas
+de serie 2º, 3º y 4º masculinos); China Open de Pekín (ATP 500, 30 sep-6 oct) EN MARCHA
+(Djokovic, 30-0 en la ciudad, de vuelta tras 11 años); le sigue el Rolex Shanghai Masters
+de tenis (7-18 oct, entry list del 1 oct). Antes de escribir, comprobar
 `src/content/noticias/` para no duplicar temas ya publicados (ej. ya existe
 `rotterdam-p2-2026-primera-sorpresa-goni-alonso` y las cinco piezas del Paris Major)._
 
@@ -480,6 +481,28 @@ años); le sigue el Rolex Shanghai Masters de tenis (7-18 oct). Antes de escribi
    contexto Mundial Doha), premierpadel.com. Build + check:translations OK; /es y /en
    prerenderizados con 15 enlaces a ficha, ProductGrid y Callouts verificados en el HTML;
    screenshot docs/screenshots/2026-10-02-rotterdam-p2-cuartos.png.
+24. [x] **Rotterdam P2 2026 — día de semifinales: la revolución de los cuartos** — torneo
+   EN MARCHA (28 sep-4 oct) y HOY sábado 3 se juegan las semis en la Pista Central del
+   Ahoy desde las 12:00 (Red Bull TV y Movistar+; finales mañana domingo 4). Pieza
+   matinal con los RESULTADOS REALES de los cuartos del viernes — la historia: **los
+   cabezas de serie 2º, 3º y 4º masculinos eliminados** (Stupa-Sanz d. Galán-Chingotto
+   (2) 6-4 6-4, primeras semis de Premier Padel como pareja para Stupa y Sanz y
+   Galán-Chingotto sin caer antes de semis desde marzo en Cancún; Yanguas-Nieto d.
+   Augsburger-Lebrón (3) 7-6(0) 6-3 remontando un 3-5 con saque en contra; Momo-Campagnolo
+   d. Di Nenno-Navarro (4) 2-6 7-6(1) 7-5, segundas semis del curso para Momo y Lucas,
+   ante sus verdugos de Roma; Tapia-Coello d. Libaak-Alfonso 4-6 6-3 6-3 aprovechando
+   para abrir brecha en el ranking) + femenino fiel al ranking (las 4 primeras cabezas de
+   serie: Fernández-Calvo d. Jensen-Escacena 6-3 7-5, Josemaría-González d. Ortega-Araújo
+   4-6 6-3 6-2, Sánchez-Ustero d. Riera-Bidahorria 6-3 6-2, Triay-Brea d. Salazar-Osoro
+   6-0 6-4) + el OOP de hoy y las palas del catálogo de los 10 semifinalistas con ficha
+   (AT10 Genius 18K, Coello Pro, Endure V1, Electra Pro IT 26, Axion Attack 2.0, Elite
+   02 2027, Vertex 05 Woman, Arrow Hit Light, Pearl, Wonder 2027). — **HECHO 2026-10-03**:
+   artículo `rotterdam-p2-2026-semifinales-revolucion` (ES+EN, kind novedad, 10
+   relatedProducts con ProductRef/ProductGrid). Fuentes: elneverazo (resultados cuartos +
+   crónica Stupa-Sanz + OOP semis), widget oficial FIP vía sport.es (marcadores de los 8
+   cuartos), redbull.com (horario TV semis). Build + check:translations OK; /es y /en
+   prerenderizados con 10 fichas enlazadas; screenshot
+   docs/screenshots/2026-10-03-rotterdam-p2-semifinales.png.
 
 
 ### 🎨 Visual (mejoras visuales)
@@ -659,6 +682,30 @@ pádel las cubre el cron de palas). Al terminar, actualizar el estado de la fila
 
 ## Notas (varias noches)
 
+- 2026-10-03 — **Regla 0 (Rotterdam P2 EN MARCHA 28 sep-4 oct; semis HOY sábado 3 desde
+  las 12:00; China Open también en curso)**: publicado
+  `rotterdam-p2-2026-semifinales-revolucion` (ES+EN, kind novedad) — 5ª pieza del torneo,
+  la de la jornada de semis. Ángulo: la revolución de los cuartos — fuera los cabezas de
+  serie 2º (Galán-Chingotto, doble 6-4 de Stupa-Sanz; primer KO antes de semis desde
+  marzo/Cancún), 3º (Augsburger-Lebrón, 7-6(0) 6-3 de Yanguas-Nieto tras remontar 3-5 con
+  saque en contra) y 4º (Di Nenno-Navarro, 2-6 7-6(1) 7-5 de Momo-Campagnolo) — y solo
+  Tapia-Coello en pie, abriendo brecha en el ranking. Resultados de los 8 cuartos
+  verificados contra widget oficial FIP (matchscorer vía sport.es) + elneverazo
+  (resultados + crónica + OOP de semis con horarios 12:00/13:30/18:30/continuación).
+  Femenino: las 4 primeras cabezas firmes (Josemaría-González remontando 4-6 6-3 6-2).
+  Palas: 10 ProductRefs de semifinalistas con ficha en catálogo + ProductGrid de 10
+  (AT10 Genius 18K [Tapia], Coello Pro 2026 [Coello], Endure V1 [Momo], Electra Pro IT
+  26 [Stupa], Axion Attack 2.0 [Jon Sanz], Elite 02 2027 [Triay], Vertex 05 Woman [Brea],
+  Arrow Hit Light [Sánchez], Pearl [Bea], Wonder 2027 [Fernández]). Corregido a tiempo un
+  dato no verificable (títulos 2026 de Fernández) → sustituido por su hecho real: campeona
+  del London P1 (pareja más joven en ganar un Premier Padel, fuente: artículo propio).
+  Tabla de demanda real: no se tocó (todo ✓). HUECOS que siguen abiertos para el cron de
+  palas: Campagnolo, Ustero, Josemaría y Calvo siguen sin pala en catálogo (además de
+  Yanguas LÕK / Nieto Kuikma, ya conocidos). OJO datos: en octavos/cuartos el widget FIP
+  muestra tiebreaks como "61"/"60" (6-1/6-0 en el desempate); contrastar siempre con
+  elneverazo antes de publicar marcadores. Mañana: finales del Rotterdam P2 (domingo 4)
+  — el cron de noticias del lunes 5 tiene agenda de sobra (finales + Alemania P2 5-11 oct
+  + Shanghai Masters tenis 7-18 oct).
 - 2026-10-02 — **Regla 0 (Rotterdam P2 EN MARCHA 28 sep-4 oct; cuartos HOY viernes 2 con
   Red Bull TV estrenando emisión; China Open también en curso)**: publicado
   `rotterdam-p2-2026-cuartos-libaak-alfonso-premio-envenenado` (ES+EN, kind novedad) —
