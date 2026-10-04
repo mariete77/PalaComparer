@@ -53,13 +53,14 @@
 ### 📰 Actualidad (contenido original y actual)
 
 _Por la Regla 0 del protocolo, si un torneo está en curso este item va primero. Hechos
-verificados a 2026-10-03: Rotterdam P2 (Premier Padel, 28 sep-4 oct) con semifinales HOY
-sábado 3 (Red Bull TV desde las 12:00) tras unos cuartos con revolución (fuera los cabezas
-de serie 2º, 3º y 4º masculinos); China Open de Pekín (ATP 500, 30 sep-6 oct) EN MARCHA
-(Djokovic, 30-0 en la ciudad, de vuelta tras 11 años); le sigue el Rolex Shanghai Masters
-de tenis (7-18 oct, entry list del 1 oct). Antes de escribir, comprobar
-`src/content/noticias/` para no duplicar temas ya publicados (ej. ya existe
-`rotterdam-p2-2026-primera-sorpresa-goni-alonso` y las cinco piezas del Paris Major)._
+verificados a 2026-10-04: **finales del Rotterdam P2** (Premier Padel, 28 sep-4 oct) HOY
+domingo 4 — femenina 16:00 Sánchez-Ustero vs Josemaría-González, masculina no antes de
+17:30 Tapia-Coello vs Stupa-Sanz (Red Bull TV / Movistar+); el sábado, Ari Sánchez alcanzó
+las 100 finales (más joven de la historia) y Stupa-Sanz aseguraron el top 4. Le siguen
+Alemania P2 (Düsseldorf, esta semana) y el Rolex Shanghai Masters de tenis (7-18 oct).
+Antes de escribir, comprobar `src/content/noticias/` para no duplicar temas ya publicados
+(ej. ya existe `rotterdam-p2-2026-semifinales-revolucion` y las cinco piezas del Paris
+Major)._
 
 1. [x] **China Open 2026 (ATP 500, EN MARCHA 30 sep-6 oct)** — historia grande y fresca:
    Djokovic vuelve a Pekín 11 años después con 30-0 imbatido (6 títulos en 6 visitas),
@@ -503,6 +504,30 @@ de tenis (7-18 oct, entry list del 1 oct). Antes de escribir, comprobar
    cuartos), redbull.com (horario TV semis). Build + check:translations OK; /es y /en
    prerenderizados con 10 fichas enlazadas; screenshot
    docs/screenshots/2026-10-03-rotterdam-p2-semifinales.png.
+25. [x] **Rotterdam P2 2026 — día de finales: las 100 finales de Ari y el estreno de
+   Stupa-Sanz** — torneo EN MARCHA (28 sep-4 oct) y HOY domingo 4 se juegan las finales
+   (femenina 16:00, masculina no antes de 17:30, Pista Central del Ahoy). Pieza matinal
+   con los RESULTADOS REALES de las semis del sábado (Sánchez-Ustero d. Triay-Brea (1)
+   6-2 6-3 en 1h19 y **Ari Sánchez alcanza las 100 finales como profesional, la más
+   joven de la historia con 29 años** — club con Triay y Salazar, e interrumpe 3
+   derrotas seguidas ante las nº1; Josemaría-González d. Calvo-Fernández (4) 6-3 6-4,
+   7ª final de la temporada, a por el título desde Valladolid P2 junio; Tapia-Coello d.
+   Momo-Campagnolo (8) 6-1 3-6 6-1, únicos supervivientes del top 4, +1.020 pts de
+   ventaja en la FIP Race si ganan tras la caída de Chingalán; Stupa-Sanz (5) d.
+   Yanguas-Nieto (6) 6-0 6-4 en 79 min — **primera final de Premier Padel como pareja**
+   y top 4 asegurado para Alemania P2 y Milán P1; reedición de la final del FIP Gold
+   Belgrado; una semana tras caer en la final del Platinum Lyon) + OOP de hoy + palas
+   del catálogo de los 6 finalistas con ficha (AT10 Genius 18K, Coello Pro 2026, Electra
+   Pro IT 26, Axion Attack 2.0, Arrow Hit Light, Pearl 2026; Ustero y Josemaría siguen
+   sin ficha — hueco anotado). — **HECHO 2026-10-04**: artículo
+   `rotterdam-p2-2026-dia-de-finales` (ES+EN, kind novedad, 6 relatedProducts con
+   ProductRef/ProductGrid + citas de Ari y Stupa). Fuentes: premierpadel.com (nota
+   oficial 3-oct: hito 100 finales, top 4, +1.020 Race, últimos 3 enfrentamientos en
+   contra para S-U ante Triay-Brea, quotes), elneverazo (resultados semis 3-oct + finales horarios
+   + primera final de Stupa-Sanz + contexto Calvo-Fernández), padeladdict (finales,
+   horarios, TV), padelfip (evento, premios 264.534 €, OOP). Build + check:translations
+   OK; /es y /en prerenderizados a 200 con 6 fichas enlazadas y contenido verificado en
+   DOM; listado /es/noticias 200.
 
 
 ### 🎨 Visual (mejoras visuales)
@@ -682,6 +707,29 @@ pádel las cubre el cron de palas). Al terminar, actualizar el estado de la fila
 
 ## Notas (varias noches)
 
+- 2026-10-04 — **Regla 0 (Rotterdam P2 EN MARCHA 28 sep-4 oct; FINALES HOY domingo 4)**:
+  publicado `rotterdam-p2-2026-dia-de-finales` (ES+EN, kind novedad) — 6ª pieza del
+  torneo, la de la jornada decisiva. Ángulo: dos hitos en un día — **Ari Sánchez llega a
+  las 100 finales** (la más joven de la historia, 29 años; club solo con Triay y Salazar
+  entre las activas; rompe racha de 3 derrotas seguidas ante Triay-Brea: Bordeaux P2,
+  London P1, Madrid P1) tras el 6-2 6-3 en 1h19 a las nº1, y **Stupa-Sanz juegan su
+  primera final de Premier Padel como pareja** tras el 6-0 6-4 en 79 min a sus ex
+  compañeros Yanguas-Nieto (reedición de la final del FIP Gold Belgrado), con top 4
+  asegurado para Alemania P2 y Milán P1 y una semana después de caer en la final del
+  Platinum Lyon. Las 4 semis verificadas contra premierpadel.com (nota oficial 3-oct),
+  elneverazo (resultados 3-oct) y padeladdict: además, Josemaría-González d.
+  Calvo-Fernández 6-3 6-4 (7ª final del año, título desde Valladolid P2) y Tapia-Coello
+  d. Momo-Campagnolo 6-1 3-6 6-1 (únicos del top 4 en pie; +1.020 pts de Race si ganan
+  tras la caída de Chingalán en cuartos). Palas: 6 ProductRefs de finalistas con ficha
+  (AT10 Genius 18K, Coello Pro 2026, Electra Pro IT 26, Axion Attack 2.0, Arrow Hit
+  Light, Pearl 2026) + ProductGrid de 6; citas textuales de Ari y Stupa (premierpadel).
+  Tabla de demanda real: no se tocó (todo ✓). HUECOS que siguen abiertos para el cron de
+  palas: **Ustero y Josemaría sin pala en catálogo** (las dos finalistas femeninas de
+  hoy) además de Campagnolo y Calvo; Yanguas LÕK / Nieto Kuikma, ya conocidos. OJO
+  fechas Alemania P2: las fuentes difieren (premierpadel web 9-17 oct vs padelfip
+  5-11 oct vs notas previas del repo 5-11) → en el artículo se evitó dar fechas exactas
+  ("esta semana"). Mañana lunes 5: el cron de noticias tiene agenda de sobra (resultados
+  de las finales de hoy + Alemania P2 + Shanghai Masters tenis 7-18 oct).
 - 2026-10-03 — **Regla 0 (Rotterdam P2 EN MARCHA 28 sep-4 oct; semis HOY sábado 3 desde
   las 12:00; China Open también en curso)**: publicado
   `rotterdam-p2-2026-semifinales-revolucion` (ES+EN, kind novedad) — 5ª pieza del torneo,
