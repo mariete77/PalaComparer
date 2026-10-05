@@ -3304,6 +3304,31 @@ export const PRODUCTS: Product[] = [
     descriptionEn:
       "Dunlop's 2025 super-premium: a 370 g hybrid with high balance, 16K carbon face and Pro EVA core, delivering a feel as powerful as it is comfortable. Tri-Max reinforcement stabilises the frame and enlarges the sweet spot, the 45° face lay-up improves ball exit, and BASF's Sonic Core Infinergy adds rebound while absorbing vibration — finished with a rough Extra Grip surface for spin. For the advanced player who wants solid control without giving up power on the smash.",
   },
+  {
+    id: "black-crown-hurricane-pro-4-0-2026",
+    sport: "padel",
+    brand: "Black Crown",
+    model: "Hurricane Pro 4.0",
+    year: 2026,
+    price: 260,
+    image: "/images/rackets/black-crown-hurricane-pro-4-0-2026.svg",
+    level: ["avanzado", "profesional"],
+    style: ["potencia", "polivalente"],
+    player: "Marta Marrero",
+    padel: {
+      shape: "redonda",
+      weight: "355-370 g",
+      balance: "bajo",
+      core: "SC Black EVA (15º)",
+      faces: "Carbono 12K",
+      surface: "rugosa",
+      hardness: "media",
+    },
+    description:
+      "La pala de Marta Marrero para 2026 renueva el molde sin perder la esencia Hurricane: redonda oversize de 355-370 g, balance bajo y firmeza media para un golpeo estable. El mango más largo favorece el revés a dos manos, los nuevos orificios laterales en el corazón aligeran el swing, y el carbono 12K sobre goma SC Black EVA (densidad 15) reparte un 60% de potencia por un 40% de control. El acabado rugoso Hybrid Spin agarra la bola en los efectos y la tecnología Vibrolow reduce las vibraciones en el mango.",
+    descriptionEn:
+      "Marta Marrero's racket for 2026 keeps the Hurricane essence in a new mold: an oversize round of 355-370 g with low balance and a firm medium feel for a stable strike. The longer handle favours two-handed backhands, the new side holes in the heart lighten the swing, and 12K carbon over an SC Black EVA core (density 15) delivers 60% power with 40% control. The rough Hybrid Spin finish grips the ball for spin and Vibrolow technology dampens vibrations in the handle.",
+  },
 ];
 
 export function getProduct(id: string) {
