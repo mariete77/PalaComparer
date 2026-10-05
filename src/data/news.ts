@@ -83,6 +83,7 @@ import { metadata as juegosSudamericanos } from "@/content/noticias/juegos-sudam
 import { metadata as rotterdamP2Cuartos } from "@/content/noticias/rotterdam-p2-2026-cuartos-libaak-alfonso-premio-envenenado.mdx";
 import { metadata as rotterdamP2Semis } from "@/content/noticias/rotterdam-p2-2026-semifinales-revolucion.mdx";
 import { metadata as rotterdamP2Finales } from "@/content/noticias/rotterdam-p2-2026-dia-de-finales.mdx";
+import { metadata as rotterdamP2Campeones } from "@/content/noticias/rotterdam-p2-2026-campeones-coello-tapia-sanchez-ustero.mdx";
 import { metadata as chinaOpenSemis } from "@/content/noticias/china-open-2026-semifinales-djokovic-record-nadal.mdx";
 
 /**
@@ -367,6 +368,13 @@ const EN_META: Record<string, { title: string; excerpt: string; tags: string[] }
       "Sánchez-Ustero beat top seeds Triay-Brea (6-2 6-3) and Ari reached her 100th professional final, the youngest player ever to do it; Josemaría-González chase a seventh title of the year. In the men's draw, Tapia-Coello face Stupa-Sanz, who play their first Premier Padel final together after winning the battle for the top 4 (6-0 6-4 over Yanguas-Nieto). Finals today at the Ahoy from 16:00, with the catalog rackets of the finalists.",
     tags: ["Premier Padel", "Rotterdam P2", "Ari Sánchez", "Andrea Ustero", "Stupaczuk", "Jon Sanz", "Tapia", "Coello"],
   },
+  "rotterdam-p2-2026-campeones-coello-tapia-sanchez-ustero": {
+    title:
+      "Rotterdam P2: Coello-Tapia defend the crown and Ari Sánchez's 100th final ends in victory",
+    excerpt:
+      "Ari Sánchez and Andrea Ustero beat Josemaría-González 6-4 6-4 for their second consecutive title: Magic Ari won her 100th career final, the youngest player ever to reach that mark. In the men's draw, world No. 1s Tapia-Coello beat Stupa-Sanz 6-3 6-2 to defend their Rotterdam crown and claim a tenth title in 2026.",
+    tags: ["Premier Padel", "Rotterdam P2", "Ari Sánchez", "Andrea Ustero", "Tapia", "Coello", "Stupaczuk", "Jon Sanz"],
+  },
   "china-open-2026-semifinales-djokovic-record-nadal": {
     title:
       "Djokovic goes 32-0 in Beijing: Nadal's record falls and the semi-finals arrive — the racquets of the 2026 China Open",
@@ -449,6 +457,7 @@ export const ARTICLES: Article[] = [
   localize({ slug: "rotterdam-p2-2026-cuartos-libaak-alfonso-premio-envenenado", ...rotterdamP2Cuartos }),
   localize({ slug: "rotterdam-p2-2026-semifinales-revolucion", ...rotterdamP2Semis }),
   localize({ slug: "rotterdam-p2-2026-dia-de-finales", ...rotterdamP2Finales }),
+  localize({ slug: "rotterdam-p2-2026-campeones-coello-tapia-sanchez-ustero", ...rotterdamP2Campeones }),
   localize({ slug: "china-open-2026-semifinales-djokovic-record-nadal", ...chinaOpenSemis }),
 ].sort((a, b) => b.date.localeCompare(a.date));
 
