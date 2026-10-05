@@ -83,6 +83,7 @@ import { metadata as juegosSudamericanos } from "@/content/noticias/juegos-sudam
 import { metadata as rotterdamP2Cuartos } from "@/content/noticias/rotterdam-p2-2026-cuartos-libaak-alfonso-premio-envenenado.mdx";
 import { metadata as rotterdamP2Semis } from "@/content/noticias/rotterdam-p2-2026-semifinales-revolucion.mdx";
 import { metadata as rotterdamP2Finales } from "@/content/noticias/rotterdam-p2-2026-dia-de-finales.mdx";
+import { metadata as chinaOpenSemis } from "@/content/noticias/china-open-2026-semifinales-djokovic-record-nadal.mdx";
 
 /**
  * Traducciones EN de los metadatos de cada artículo. Las ES vienen del propio
@@ -366,6 +367,13 @@ const EN_META: Record<string, { title: string; excerpt: string; tags: string[] }
       "Sánchez-Ustero beat top seeds Triay-Brea (6-2 6-3) and Ari reached her 100th professional final, the youngest player ever to do it; Josemaría-González chase a seventh title of the year. In the men's draw, Tapia-Coello face Stupa-Sanz, who play their first Premier Padel final together after winning the battle for the top 4 (6-0 6-4 over Yanguas-Nieto). Finals today at the Ahoy from 16:00, with the catalog rackets of the finalists.",
     tags: ["Premier Padel", "Rotterdam P2", "Ari Sánchez", "Andrea Ustero", "Stupaczuk", "Jon Sanz", "Tapia", "Coello"],
   },
+  "china-open-2026-semifinales-djokovic-record-nadal": {
+    title:
+      "Djokovic goes 32-0 in Beijing: Nadal's record falls and the semi-finals arrive — the racquets of the 2026 China Open",
+    excerpt:
+      "The 39-year-old Serb fought past Zverev 4-6, 6-4, 6-4 and now owns the best start to a single event in Open Era men's tennis (leaving Nadal's 31-0 at Roland Garros behind). Today, the semi-finals: Djokovic-Medvedev and De Minaur-Hurkacz, with the catalog racquets of all four.",
+    tags: ["ATP", "China Open", "Djokovic", "Medvedev", "Hurkacz", "De Minaur"],
+  },
   "juegos-sudamericanos-2026-primeros-oros-padel": {
     title: "History made: Abud-Dehnike and Vilchez-Mosca win padel's first-ever South American Games gold medals",
     excerpt:
@@ -441,6 +449,7 @@ export const ARTICLES: Article[] = [
   localize({ slug: "rotterdam-p2-2026-cuartos-libaak-alfonso-premio-envenenado", ...rotterdamP2Cuartos }),
   localize({ slug: "rotterdam-p2-2026-semifinales-revolucion", ...rotterdamP2Semis }),
   localize({ slug: "rotterdam-p2-2026-dia-de-finales", ...rotterdamP2Finales }),
+  localize({ slug: "china-open-2026-semifinales-djokovic-record-nadal", ...chinaOpenSemis }),
 ].sort((a, b) => b.date.localeCompare(a.date));
 
 export function getArticle(slug: string): Article | undefined {

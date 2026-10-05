@@ -528,6 +528,25 @@ Major)._
    horarios, TV), padelfip (evento, premios 264.534 €, OOP). Build + check:translations
    OK; /es y /en prerenderizados a 200 con 6 fichas enlazadas y contenido verificado en
    DOM; listado /es/noticias 200.
+26. [x] **China Open 2026 — Djokovic rompe el récord de Nadal: las raquetas de las
+   semifinales** — torneo EN MARCHA (30 sep-6 oct) y HOY lunes 5 se juegan las semis
+   (final el martes 6): pieza matinal con los RESULTADOS REALES de los cuartos del
+   domingo y el ángulo del récord — **Djokovic d. Zverev (1) 4-6 6-4 6-4 en 2h35** y se
+   queda en solitario con el mejor arranque de un jugador en un mismo torneo de la Era
+   Open (**32-0, superando el 31-0 de Nadal en Roland Garros**; tabla: McEnroe 23-0
+   Milán, Wilander 23-0 Barcelona), a dos victorias de su 7º título en Pekín y el 1º de
+   2026. — **HECHO 2026-10-05**: artículo `china-open-2026-semifinales-djokovic-record-nadal`
+   (ES+EN, kind novedad, 4 relatedProducts con ProductRef/ProductGrid: Speed MP 2026,
+   TFight 305S, VCORE 98, Gravity Tour Zverev) + semifinales de hoy verificadas en el
+   OOP oficial (De Minaur (5)-Hurkacz no antes de 15:00 local y Djokovic (6)-Medvedev
+   (3) no antes de 19:00; ambas 6h menos en España) + Medvedev d. Cerúndolo 7-6(4) 6-3
+   (7ª seguida, sin ceder set), De Minaur d. Rublev 1-6 6-2 6-3 (candidatos a Turín) y
+   Hurkacz d. Khachanov 7-6 6-2 (el verdugo de FAA, fuera). De Minaur juega una Wilson
+   Ultra Pro 99 sin ficha en catálogo (se menciona sin enlace). Callout con Sinner
+   también fuera del Shanghai Masters (7-18 oct) por la rodilla. Fuentes: atptour.com
+   (OOP lunes + artículo del récord con la tabla oficial), Reuters (crónica Djokovic-
+   Zverev con quotes y detalle de la valla LED), tennisuptodate (cuadro completo con
+   marcadores de R32 a QF). Build + check:translations OK.
 
 
 ### 🎨 Visual (mejoras visuales)
@@ -706,6 +725,34 @@ pádel las cubre el cron de palas). Al terminar, actualizar el estado de la fila
 ---
 
 ## Notas (varias noches)
+
+- 2026-10-05 — **Regla 0 (China Open EN MARCHA 30 sep-6 oct; semis HOY lunes 5, final
+  martes 6)**: publicado `china-open-2026-semifinales-djokovic-record-nadal` (ES+EN,
+  kind novedad) — 2ª pieza del torneo (la primera fue la de la vuelta de Djokovic,
+  1 oct), con el ángulo del RÉCORD: **Djokovic d. Zverev (1) 4-6 6-4 6-4 en 2h35**
+  (19 aces del alemán, 1er cruce desde RG 2025, polémica de la valla LED con punto
+  repetido, quotes de Djokovic) → **32-0 en Pekín y mejor arranque de la Era Open en
+  un torneo, superando el 31-0 de Nadal en Roland Garros** (tabla oficial ATP:
+  McEnroe 23-0 Milán, Wilander 23-0 Barcelona). Semifinales verificadas en el OOP
+  oficial de atptour.com: De Minaur (5)-Hurkacz no antes de 15:00 local (9:00
+  España) y Djokovic (6)-Medvedev (3) no antes de 19:00 local (13:00 España) —
+  recuerda: Pekín = UTC+8, 6h menos que España en octubre. Cuartos verificados contra
+  Reuters + tennisuptodate: Medvedev d. Cerúndolo 7-6(4) 6-3 (7ª victoria seguida,
+  sin ceder un set en el torneo), De Minaur d. Rublev 1-6 6-2 6-3 (duelo de
+  candidatos a Turín) y Hurkacz d. Khachanov 7-6 6-2 (el polaco elimina al verdugo
+  de FAA, que había caído en R1). Palas: 4 relatedProducts con ProductRef/ProductGrid
+  (Speed MP 2026 [Djokovic], TFight 305S [Medvedev], VCORE 98 [Hurkacz], Gravity Tour
+  Zverev [eliminado]) + mención sin enlace de la Wilson Ultra Pro 99 de De Minaur
+  (fuera de catálogo; si algún día se da de alta, añadir su ProductRef). Bola extra:
+  Sinner también baja en el Shanghai Masters (7-18 oct) por la rodilla (ATP 2-oct /
+  Reuters 3-oct) — el Masters de Shanghái es el candidato natural de Regla 0 del
+  martes/miércoles (cuadro 7-18 oct; otra opción: Alemania P2 de Premier Padel, con
+  fechas difusas entre fuentes: premierpadel web 9-17 oct vs padelfip 5-11 oct —
+  verificar antes de escribir). Tabla de demanda real: no se tocó (todo ✓; Hurkacz ya
+  tiene página con VCORE 98 + Prestige Tour + Percept 97). HUECO anotado: la Wilson
+  Ultra Pro 99 de De Minaur no está en catálogo y De Minaur daría demanda futura
+  ("qué raqueta usa De Minaur"); el dato sucio de la Instinct MP 2025 con
+  "Daniil Medvedev" sigue abierto y choca con la TFight 305S.
 
 - 2026-10-04 — **Regla 0 (Rotterdam P2 EN MARCHA 28 sep-4 oct; FINALES HOY domingo 4)**:
   publicado `rotterdam-p2-2026-dia-de-finales` (ES+EN, kind novedad) — 6ª pieza del
