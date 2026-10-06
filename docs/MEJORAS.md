@@ -53,14 +53,15 @@
 ### 📰 Actualidad (contenido original y actual)
 
 _Por la Regla 0 del protocolo, si un torneo está en curso este item va primero. Hechos
-verificados a 2026-10-04: **finales del Rotterdam P2** (Premier Padel, 28 sep-4 oct) HOY
-domingo 4 — femenina 16:00 Sánchez-Ustero vs Josemaría-González, masculina no antes de
-17:30 Tapia-Coello vs Stupa-Sanz (Red Bull TV / Movistar+); el sábado, Ari Sánchez alcanzó
-las 100 finales (más joven de la historia) y Stupa-Sanz aseguraron el top 4. Le siguen
-Alemania P2 (Düsseldorf, esta semana) y el Rolex Shanghai Masters de tenis (7-18 oct).
-Antes de escribir, comprobar `src/content/noticias/` para no duplicar temas ya publicados
-(ej. ya existe `rotterdam-p2-2026-semifinales-revolucion` y las cinco piezas del Paris
-Major)._
+verificados a 2026-10-06: **final del China Open HOY martes 6** — Djokovic-De Minaur no
+antes de 19:00 locales / 13:00 España (seguida de la final de dobles); el lunes, Medvedev
+fue descalificado por golpear a un espectador con una pelota y Hurkacz se retiró por una
+lesión en el aductor. Después: **Rolex Shanghai Masters** (cuadro principal desde el
+miércoles 7; sin Sinner, de baja por la rodilla; Vacherot defiende título) y **Alemania
+P2** de Premier Padel (fechas por verificar antes de escribir: premierpadel web 9-17 oct
+vs padelfip 5-11 oct). Antes de escribir, comprobar `src/content/noticias/` para no
+duplicar temas ya publicados (ej. ya existen `china-open-2026-final-djokovic-de-minaur`
+y las 7 piezas del Rotterdam P2)._
 
 1. [x] **China Open 2026 (ATP 500, EN MARCHA 30 sep-6 oct)** — historia grande y fresca:
    Djokovic vuelve a Pekín 11 años después con 30-0 imbatido (6 títulos en 6 visitas),
@@ -547,6 +548,28 @@ Major)._
    (OOP lunes + artículo del récord con la tabla oficial), Reuters (crónica Djokovic-
    Zverev con quotes y detalle de la valla LED), tennisuptodate (cuadro completo con
    marcadores de R32 a QF). Build + check:translations OK.
+27. [x] **China Open 2026 — día de la final: Djokovic-De Minaur y el 34-0** — torneo EN
+   MARCHA (30 sep-6 oct; final HOY martes 6, no antes de 19:00 locales / 13:00 España,
+   seguida de la final de dobles). Pieza matinal con las DOS semifinales del lunes, ambas
+   interrumpidas: **Medvedev descalificado** por golpear hacia la grada una pelota
+   rebotada e impactar a un espectador (Djokovic dominaba 7-5 y 5-3, a tres puntos de la
+   victoria, tras 2h29 y remontando una rotura) y **Hurkacz retirado por una lesión en
+   el aductor** con De Minaur 6-4 y 3-2 (40-0; ya con molestias en cuartos ante
+   Khachanov). Final: Djokovic busca el 7º título de Pekín, el 1º de 2026 y el nº 102 de
+   su carrera (y el 34-0: nadie le ha ganado nunca allí — 33-0); De Minaur, su primera
+   final en Pekín y su 2º título del año (Rotterdam, feb); H2H 3-1 Djokovic (último
+   duelo, Wimbledon 2025) y primer cruce en una final; el ganador sale 9º de la Live
+   Race (Djokovic asciende desde el 10º; Medvedev 8º pierde los 200 puntos de Pekín). —
+   **HECHO 2026-10-06**: artículo `china-open-2026-final-djokovic-de-minaur` (ES+EN, kind
+   novedad, 4 relatedProducts con ProductRef/ProductGrid: Speed MP 2026 [Djokovic],
+   TFight 305S [Medvedev], VCORE 98 [Hurkacz], Gravity Tour Zverev [cuartos] + mención
+   sin ficha de la Wilson Ultra Pro 99 de De Minaur). Fuentes: atptour.com (notas de
+   semis ES/EN + hora de la final + reacción de Medvedev + 33-0 + título nº 102 + 146ª
+   final + Live Race), The Age/AAP, ABC, AP/Yahoo, tennistpl (aductor + quotes de
+   Hurkacz), tennis.com (stats). Build + check:translations OK; /es y /en 200 con título,
+   4 ProductRefs, ProductGrid, Callouts y enlace a guía verificados en el HTML servido;
+   screenshot `docs/screenshots/2026-10-06-china-open-final-djokovic-de-minaur.png`
+   (1272×4533; 1,77% px oscuros / 87,56% claros; 1.340 colores únicos en muestra).
 
 
 ### 🎨 Visual (mejoras visuales)
@@ -725,6 +748,38 @@ pádel las cubre el cron de palas). Al terminar, actualizar el estado de la fila
 ---
 
 ## Notas (varias noches)
+
+- 2026-10-06 — **Regla 0 (China Open EN MARCHA 30 sep-6 oct; FINAL HOY martes 6, no antes
+  de 19:00 locales / 13:00 España, seguida de la final de dobles)**: publicado
+  `china-open-2026-final-djokovic-de-minaur` (ES+EN, kind novedad) — 3ª pieza del torneo,
+  la del día de la final. Ángulo: las dos semifinales del lunes acabaron antes de tiempo.
+  (1) **Medvedev descalificado** ante Djokovic: el serbio dominaba 7-5 y 5-3 (a tres
+  puntos de la victoria, tras 2h29 y remontando una rotura) cuando una pelota rebotada
+  desde el fondo de la pista fue golpeada por Medvedev hacia la grada, impactando en el
+  rostro de un espectador que salió asistido por el personal (The Age/AP/ABC). Djokovic:
+  «Ha sido un shock... sé cómo te sientes al ser descalificado en un partido importante»;
+  Medvedev: «Lo siento muchísimo», y dijo que quiso devolverla para que no saliera de la
+  pista. Precedente que citó el propio Djokovic: su descalificación del US Open 2020.
+  Medvedev venía de ganar Hangzhou. (2) **Hurkacz se retiró por lesión en el aductor**
+  con De Minaur 6-4, 3-2 (40-0); ya notó molestias en cuartos ante Khachanov y apenas se
+  movía («estaba sufriendo desde el principio», dijo; tennistpl). FINAL: Djokovic a por
+  el 7º título de Pekín, el 1º de 2026 y el nº 102 de su carrera, con el 34-0 en juego
+  (33-0; nadie le ha ganado allí nunca; 146ª final). De Minaur: primera final en Pekín y
+  2º título del año (Rotterdam, feb). H2H 3-1 Djokovic (último duelo, Wimbledon 2025),
+  primer cruce en una final. El ganador sale 9º de la PIF ATP Live Race (Djokovic
+  asciende desde el 10º; Medvedev 8º pierde los 200 puntos de Pekín); quedan Shanghái
+  (7-18 oct) y París. Palas: 4 ProductRefs + grid (Speed MP 2026, TFight 305S, VCORE 98,
+  Gravity Tour Zverev) + la Ultra Pro 99 de De Minaur sin ficha (sigue abierto: si algún
+  día se da de alta, añadir su ProductRef). Tabla de demanda real: no se tocó (todo ✓).
+  Fuentes: atptour.com (nota semis ES/EN + hora final + reacción Medvedev + 33-0 + nº102
+  + 146ª final + Live Race), The Age/AAP, ABC, AP/Yahoo, tennistpl, tennis.com. Build +
+  check:translations OK; /es y /en 200 con título, 4 ProductRefs, ProductGrid, Callouts
+  y enlace a guía verificados en el HTML servido; screenshot
+  `docs/screenshots/2026-10-06-china-open-final-djokovic-de-minaur.png`. OPS: server de
+  verificación parado limpio (por PID, sin huérfanos). MAÑANA: Shanghái arranca su cuadro
+  principal el miércoles 7 (sin Sinner, de baja por la rodilla) y Alemania P2 sigue con
+  fechas por verificar (premierpadel web 9-17 oct vs padelfip 5-11 oct) — elegir la pieza
+  con el dato más fresco verificado.
 
 - 2026-10-05 — **Regla 0 (China Open EN MARCHA 30 sep-6 oct; semis HOY lunes 5, final
   martes 6)**: publicado `china-open-2026-semifinales-djokovic-record-nadal` (ES+EN,

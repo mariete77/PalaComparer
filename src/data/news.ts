@@ -85,6 +85,7 @@ import { metadata as rotterdamP2Semis } from "@/content/noticias/rotterdam-p2-20
 import { metadata as rotterdamP2Finales } from "@/content/noticias/rotterdam-p2-2026-dia-de-finales.mdx";
 import { metadata as rotterdamP2Campeones } from "@/content/noticias/rotterdam-p2-2026-campeones-coello-tapia-sanchez-ustero.mdx";
 import { metadata as chinaOpenSemis } from "@/content/noticias/china-open-2026-semifinales-djokovic-record-nadal.mdx";
+import { metadata as chinaOpenFinal } from "@/content/noticias/china-open-2026-final-djokovic-de-minaur.mdx";
 
 /**
  * Traducciones EN de los metadatos de cada artículo. Las ES vienen del propio
@@ -382,6 +383,13 @@ const EN_META: Record<string, { title: string; excerpt: string; tags: string[] }
       "The 39-year-old Serb fought past Zverev 4-6, 6-4, 6-4 and now owns the best start to a single event in Open Era men's tennis (leaving Nadal's 31-0 at Roland Garros behind). Today, the semi-finals: Djokovic-Medvedev and De Minaur-Hurkacz, with the catalog racquets of all four.",
     tags: ["ATP", "China Open", "Djokovic", "Medvedev", "Hurkacz", "De Minaur"],
   },
+  "china-open-2026-final-djokovic-de-minaur": {
+    title:
+      "Djokovic-De Minaur: Beijing's 34-0 on the line in the China Open final — Medvedev defaulted and the racquets",
+    excerpt:
+      "Both of Monday's semi-finals ended early: Medvedev was defaulted for hitting a spectator with a ball while Djokovic led 7-5, 5-3, and Hurkacz retired injured (6-4, 3-2). Today (7 p.m. local, 1 p.m. CEST) the final is played: a seventh Beijing crown, Djokovic's 102nd title and the Race to Turin on the line.",
+    tags: ["ATP", "China Open", "Djokovic", "De Minaur", "Medvedev", "Hurkacz"],
+  },
   "juegos-sudamericanos-2026-primeros-oros-padel": {
     title: "History made: Abud-Dehnike and Vilchez-Mosca win padel's first-ever South American Games gold medals",
     excerpt:
@@ -459,6 +467,7 @@ export const ARTICLES: Article[] = [
   localize({ slug: "rotterdam-p2-2026-dia-de-finales", ...rotterdamP2Finales }),
   localize({ slug: "rotterdam-p2-2026-campeones-coello-tapia-sanchez-ustero", ...rotterdamP2Campeones }),
   localize({ slug: "china-open-2026-semifinales-djokovic-record-nadal", ...chinaOpenSemis }),
+  localize({ slug: "china-open-2026-final-djokovic-de-minaur", ...chinaOpenFinal }),
 ].sort((a, b) => b.date.localeCompare(a.date));
 
 export function getArticle(slug: string): Article | undefined {
