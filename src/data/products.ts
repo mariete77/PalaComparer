@@ -3329,6 +3329,30 @@ export const PRODUCTS: Product[] = [
     descriptionEn:
       "Marta Marrero's racket for 2026 keeps the Hurricane essence in a new mold: an oversize round of 355-370 g with low balance and a firm medium feel for a stable strike. The longer handle favours two-handed backhands, the new side holes in the heart lighten the swing, and 12K carbon over an SC Black EVA core (density 15) delivers 60% power with 40% control. The rough Hybrid Spin finish grips the ball for spin and Vibrolow technology dampens vibrations in the handle.",
   },
+  {
+    id: "adidas-metalbone-zz-carbon-2026",
+    sport: "padel",
+    brand: "Adidas",
+    model: "Metalbone ZZ Carbon 2026",
+    year: 2026,
+    price: 299.95,
+    image: "/images/rackets/adidas-metalbone-zz-carbon-2026.svg",
+    level: ["avanzado"],
+    style: ["control"],
+    padel: {
+      shape: "redonda",
+      weight: "360-375 g",
+      balance: "medio",
+      core: "EVA Soft Performance",
+      faces: "Carbono 3K",
+      surface: "rugosa",
+      hardness: "blanda",
+    },
+    description:
+      "La primera pala de pádel firmada por Zinedine Zidane: la colaboración adidas x ZZ lleva la esencia de la línea Metalbone a un formato redondo de 360-375 g con balance centrado, caras de carbono 3K y núcleo EVA Soft Performance para un tacto cómodo y control milimétrico. La estructura octogonal Low Poly aporta rigidez extra cuando aceleras el golpe, el acabado rugoso Spin Blade Decal agarra la bola en los efectos, y su packaging de coleccionista remata una edición pensada para jugadores avanzados que quieren precisión con estilo.",
+    descriptionEn:
+      "The first padel racket signed by Zinedine Zidane: the adidas x ZZ collab brings the Metalbone essence to a round 360-375 g format with centred balance, 3K carbon faces and an EVA Soft Performance core for a comfortable feel and millimetre control. The octagonal Low Poly structure adds extra rigidity when you accelerate the swing, the rough Spin Blade Decal finish grips the ball for spin, and the collector's packaging rounds off an edition aimed at advanced players who want precision with style.",
+  },
 ];
 
 export function getProduct(id: string) {
