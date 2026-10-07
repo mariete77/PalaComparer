@@ -86,6 +86,7 @@ import { metadata as rotterdamP2Finales } from "@/content/noticias/rotterdam-p2-
 import { metadata as rotterdamP2Campeones } from "@/content/noticias/rotterdam-p2-2026-campeones-coello-tapia-sanchez-ustero.mdx";
 import { metadata as chinaOpenSemis } from "@/content/noticias/china-open-2026-semifinales-djokovic-record-nadal.mdx";
 import { metadata as chinaOpenFinal } from "@/content/noticias/china-open-2026-final-djokovic-de-minaur.mdx";
+import { metadata as chinaOpenCampeon } from "@/content/noticias/china-open-2026-djokovic-campeon-102-titulos.mdx";
 
 /**
  * Traducciones EN de los metadatos de cada artículo. Las ES vienen del propio
@@ -390,6 +391,13 @@ const EN_META: Record<string, { title: string; excerpt: string; tags: string[] }
       "Both of Monday's semi-finals ended early: Medvedev was defaulted for hitting a spectator with a ball while Djokovic led 7-5, 5-3, and Hurkacz retired injured (6-4, 3-2). Today (7 p.m. local, 1 p.m. CEST) the final is played: a seventh Beijing crown, Djokovic's 102nd title and the Race to Turin on the line.",
     tags: ["ATP", "China Open", "Djokovic", "De Minaur", "Medvedev", "Hurkacz"],
   },
+  "china-open-2026-djokovic-campeon-102-titulos": {
+    title:
+      "Djokovic wins his seventh China Open: 102 titles, an eternal 34-0 and De Minaur's retirement",
+    excerpt:
+      "The Serb takes the Beijing title (7-6[3], 0-1 ret.) after De Minaur retired with an adductor injury following a 67-minute first set without a single break. His first title of 2026, one shy of Federer and unbeaten in Beijing: 34-0. Shanghai starts today without Sinner, who has ended his season.",
+    tags: ["ATP", "China Open", "Djokovic", "De Minaur", "Sinner", "Shanghai"],
+  },
   "juegos-sudamericanos-2026-primeros-oros-padel": {
     title: "History made: Abud-Dehnike and Vilchez-Mosca win padel's first-ever South American Games gold medals",
     excerpt:
@@ -468,6 +476,7 @@ export const ARTICLES: Article[] = [
   localize({ slug: "rotterdam-p2-2026-campeones-coello-tapia-sanchez-ustero", ...rotterdamP2Campeones }),
   localize({ slug: "china-open-2026-semifinales-djokovic-record-nadal", ...chinaOpenSemis }),
   localize({ slug: "china-open-2026-final-djokovic-de-minaur", ...chinaOpenFinal }),
+  localize({ slug: "china-open-2026-djokovic-campeon-102-titulos", ...chinaOpenCampeon }),
 ].sort((a, b) => b.date.localeCompare(a.date));
 
 export function getArticle(slug: string): Article | undefined {

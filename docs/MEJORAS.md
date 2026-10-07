@@ -53,15 +53,14 @@
 ### 📰 Actualidad (contenido original y actual)
 
 _Por la Regla 0 del protocolo, si un torneo está en curso este item va primero. Hechos
-verificados a 2026-10-06: **final del China Open HOY martes 6** — Djokovic-De Minaur no
-antes de 19:00 locales / 13:00 España (seguida de la final de dobles); el lunes, Medvedev
-fue descalificado por golpear a un espectador con una pelota y Hurkacz se retiró por una
-lesión en el aductor. Después: **Rolex Shanghai Masters** (cuadro principal desde el
-miércoles 7; sin Sinner, de baja por la rodilla; Vacherot defiende título) y **Alemania
-P2** de Premier Padel (fechas por verificar antes de escribir: premierpadel web 9-17 oct
-vs padelfip 5-11 oct). Antes de escribir, comprobar `src/content/noticias/` para no
-duplicar temas ya publicados (ej. ya existen `china-open-2026-final-djokovic-de-minaur`
-y las 7 piezas del Rotterdam P2)._
+verificados a 2026-10-07: **Djokovic campeón del China Open** (7-6[3] y retirada de
+De Minaur por el aductor; 34-0 en Pekín y título nº 102; Sinner anunció el fin de su
+temporada por la rodilla). EN MARCHA: **Rolex Shanghai Masters** (cuadro principal desde
+hoy 7 hasta el 18; cuadro y OOP en rolexshanghaimasters.com / atptour.com) y **Germany
+P2 de Düsseldorf** (hasta el domingo 11; R16 y cuartos el 8-9, finales el 10-11; cuadros
+y OOP en padelfip.com/events/germany-p2-2026). Antes de escribir, comprobar
+`src/content/noticias/` para no duplicar temas (ya hay 4 piezas del China Open y ninguna
+del Germany P2)._
 
 1. [x] **China Open 2026 (ATP 500, EN MARCHA 30 sep-6 oct)** — historia grande y fresca:
    Djokovic vuelve a Pekín 11 años después con 30-0 imbatido (6 títulos en 6 visitas),
@@ -571,6 +570,26 @@ y las 7 piezas del Rotterdam P2)._
    screenshot `docs/screenshots/2026-10-06-china-open-final-djokovic-de-minaur.png`
    (1272×4533; 1,77% px oscuros / 87,56% claros; 1.340 colores únicos en muestra).
 
+28. [x] **China Open 2026 — Djokovic campeón: 102 títulos y el 34-0 eterno** — cierre del
+   torneo (final jugada ayer martes 6): pieza de resultados con el séptimo título de Pekín
+   (34-0 en 34 partidos; título nº 102, a uno de Federer y a 7 de Connors; 21ª temporada
+   seguida con al menos un trofeo; primer campeón de 39+ desde Rosewall), la retirada de
+   De Minaur por el aductor (7-6[3], 0-1; quotes de ambos y «mi plan es ir a Shanghái y
+   hacerme las pruebas»), el fin de temporada de Sinner (rodilla) y el arranque hoy del
+   Shanghai Masters (cuadro de Djokovic 10º con bye, Vacherot y Alcaraz). — **HECHO
+   2026-10-07**: artículo `china-open-2026-djokovic-campeon-102-titulos` (ES+EN, kind
+   novedad, 4 relatedProducts con ProductRef/ProductGrid: Speed MP 2026 [Djokovic],
+   TFight 305S [Medvedev], VCORE 98 [Hurkacz], Gravity Tour Zverev). Fuentes: Wikipedia
+   (7-6[3], 0-1 ret.), MARCA (102 títulos a uno de Federer; abdomen; marca de Rosewall),
+   365scores (67 min sin breaks; ingle/muslo), AFP/japantoday (quotes never-die spirit y
+   visualise; 21ª temporada), ATP (reacción de De Minaur: aductor + scans + 40-19),
+   theScore/AP, tennis365/tennishead/Reuters/Express (cuadro de Shanghái; Sinner cierra
+   temporada). Build + check:translations OK (139 productos); /es y /en 200 con título,
+   4 ProductRefs, ProductGrid, Callouts y enlaces (semifinales + /jugadores/novak-djokovic)
+   verificados en el DOM; pieza primera en /es/noticias; screenshot
+   docs/screenshots/2026-10-07-china-open-campeon-djokovic.png (1272×4559; 23.568 colores
+   en la muestra; 85% claros).
+
 
 ### 🎨 Visual (mejoras visuales)
 
@@ -748,6 +767,31 @@ pádel las cubre el cron de palas). Al terminar, actualizar el estado de la fila
 ---
 
 ## Notas (varias noches)
+
+- 2026-10-07 — **Regla 0 (China Open CERRADO: final jugada ayer; EN MARCHA: Shanghai
+  Masters desde hoy y Germany P2 de pádel hasta el domingo)**: publicado
+  `china-open-2026-djokovic-campeon-102-titulos` (ES+EN, kind novedad) — 4ª y última
+  pieza del torneo, la del cierre. Datos clave verificados: **Djokovic campeón por 7ª
+  vez en Pekín** tras la retirada de De Minaur (7-6[3], 0-1 ret.: el australiano ganó el
+  1er juego del 2º set y no pudo seguir); primer set de 67 min sin breaks; fisios para
+  ambos (abdomen del serbio — factura de Zverev/Medvedev — y aductor/muslo izquierdo del
+  australiano). Récords: **34-0** en Pekín (34 partidos); **título nº 102** (a uno de
+  Federer, 103; Connors 109); primer título de 2026 y **21ª temporada seguida** con al
+  menos un trofeo; **primer campeón de 39 años o más desde Rosewall (Hong Kong 1977)**.
+  Quote Djokovic: «la garra, la dedicación y ese espíritu de no morir nunca»; «siempre
+  me visualizo con el trofeo, sobre todo aquí en Pekín». De Minaur: «mi plan es ir a
+  Shanghái y hacerme las pruebas» (sigue en el cuadro; espera a Cina o Molcan).
+  **Sinner puso fin a su temporada** (rodilla; no juega desde Wimbledon) — va como
+  Callout en la pieza. Shanghái (cuadro desde hoy, 7-18 oct): Vacherot defiende, Alcaraz
+  (campeón en Tokio) lidera la mitad baja; Djokovic 10º cabeza con bye a 2ª ronda
+  (Hurkacz/Duckworth; Musetti proyectado R3) y jugará «según cómo se sienta». Palas:
+  4 ProductRefs + ProductGrid (Speed MP 2026, TFight 305S, VCORE 98, Gravity Tour
+  Zverev) + mención sin ficha de la Ultra Pro 99 de De Minaur. Tabla de demanda real:
+  no se tocó (todo ✓). HUECOS que siguen abiertos para el cron de palas: Ustero,
+  Josemaría, Campagnolo y Calvo (Rotterdam) y la Ultra Pro 99 de De Minaur.
+  MAÑANA: elegir entre Shanghái (R1-R2 en juego) y Germany P2 (R16 el jueves; noche de
+  resultados del miércoles). OPS: server de verificación parado limpio (kill por sesión
+  de proceso; puerto 3000 libre; sin huérfanos).
 
 - 2026-10-06 — **Regla 0 (China Open EN MARCHA 30 sep-6 oct; FINAL HOY martes 6, no antes
   de 19:00 locales / 13:00 España, seguida de la final de dobles)**: publicado
