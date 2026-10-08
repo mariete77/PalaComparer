@@ -87,6 +87,7 @@ import { metadata as rotterdamP2Campeones } from "@/content/noticias/rotterdam-p
 import { metadata as chinaOpenSemis } from "@/content/noticias/china-open-2026-semifinales-djokovic-record-nadal.mdx";
 import { metadata as chinaOpenFinal } from "@/content/noticias/china-open-2026-final-djokovic-de-minaur.mdx";
 import { metadata as chinaOpenCampeon } from "@/content/noticias/china-open-2026-djokovic-campeon-102-titulos.mdx";
+import { metadata as germanyP2Octavos } from "@/content/noticias/germany-p2-2026-octavos-libaak-alfonso-mundial.mdx";
 
 /**
  * Traducciones EN de los metadatos de cada artículo. Las ES vienen del propio
@@ -404,6 +405,13 @@ const EN_META: Record<string, { title: string; excerpt: string; tags: string[] }
       "Padel debuts as an official sport at the XIII South American Games in Santa Fe 2026 with a sold-out Estadio Invencible in Rafaela: gold for Abud-Dehnike (Paraguay) and Vilchez-Mosca (Argentina) in the discipline's first finals at the event.",
     tags: ["South American Games", "Santa Fe 2026", "Argentina", "Paraguay", "FIP"],
   },
+  "germany-p2-2026-octavos-libaak-alfonso-mundial": {
+    title:
+      "Germany P2: Libaak-Alfonso's World Cup comeback and the top seeds' round-of-16 debuts",
+    excerpt:
+      "Libaak-Alfonso came from a set down against Leal-Guerrero (3-6, 7-6(2), 7-5) on the same day Argentina announced their Doha World Cup squad, and today they chase the quarterfinals against Solano-Pereyra. All 16 round-of-16 matches (8 men's, 8 women's) start at 09:00 with the debuts of Tapia-Coello, Galán-Chingotto, Lebrón-Augsburger, Stupa-Sanz, Triay-Brea and Sánchez-Ustero, among others: every pairing, the first-round results and the catalog rackets.",
+    tags: ["Premier Padel", "Germany P2", "Libaak", "Alfonso", "Tapia", "Coello", "Doha World Cup", "Düsseldorf"],
+  },
 };
 
 /**
@@ -477,6 +485,7 @@ export const ARTICLES: Article[] = [
   localize({ slug: "china-open-2026-semifinales-djokovic-record-nadal", ...chinaOpenSemis }),
   localize({ slug: "china-open-2026-final-djokovic-de-minaur", ...chinaOpenFinal }),
   localize({ slug: "china-open-2026-djokovic-campeon-102-titulos", ...chinaOpenCampeon }),
+  localize({ slug: "germany-p2-2026-octavos-libaak-alfonso-mundial", ...germanyP2Octavos }),
 ].sort((a, b) => b.date.localeCompare(a.date));
 
 export function getArticle(slug: string): Article | undefined {

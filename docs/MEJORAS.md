@@ -53,14 +53,14 @@
 ### 📰 Actualidad (contenido original y actual)
 
 _Por la Regla 0 del protocolo, si un torneo está en curso este item va primero. Hechos
-verificados a 2026-10-07: **Djokovic campeón del China Open** (7-6[3] y retirada de
-De Minaur por el aductor; 34-0 en Pekín y título nº 102; Sinner anunció el fin de su
-temporada por la rodilla). EN MARCHA: **Rolex Shanghai Masters** (cuadro principal desde
-hoy 7 hasta el 18; cuadro y OOP en rolexshanghaimasters.com / atptour.com) y **Germany
-P2 de Düsseldorf** (hasta el domingo 11; R16 y cuartos el 8-9, finales el 10-11; cuadros
-y OOP en padelfip.com/events/germany-p2-2026). Antes de escribir, comprobar
-`src/content/noticias/` para no duplicar temas (ya hay 4 piezas del China Open y ninguna
-del Germany P2)._
+verificados a 2026-10-08: **Germany P2 de Düsseldorf EN MARCHA** (4-11 oct, 2ª edición
+en el CASTELLO; hoy jornada completa de octavos: 8 masculinos + 8 femeninos desde las
+09:00 con el estreno de los top-4 masculinos y las top-8 femeninas; cuartos el viernes 9
+desde las 10:00, finales el domingo 11 desde las 14:00; cuadros y OOP por días en el
+widget de premierpadel.com y padelfip.com/events/germany-p2-2026; ya hay 1 pieza del
+torneo, la de hoy). También EN MARCHA: **Rolex Shanghai Masters** (cuadro desde el 7
+hasta el 18; primeras rondas en juego — candidato Regla 0 para los próximos días). Antes
+de escribir, comprobar `src/content/noticias/` para no duplicar temas._
 
 1. [x] **China Open 2026 (ATP 500, EN MARCHA 30 sep-6 oct)** — historia grande y fresca:
    Djokovic vuelve a Pekín 11 años después con 30-0 imbatido (6 títulos en 6 visitas),
@@ -590,6 +590,27 @@ del Germany P2)._
    docs/screenshots/2026-10-07-china-open-campeon-djokovic.png (1272×4559; 23.568 colores
    en la muestra; 85% claros).
 
+29. [x] **Germany P2 2026 — la jornada de octavos: el día redondo de Libaak-Alfonso** —
+   torneo EN MARCHA (4-11 oct, CASTELLO Düsseldorf, 2ª edición): pieza de la jornada
+   grande de octavos (16 partidos, 8M+8F, desde las 09:00) con los RESULTADOS REALES de
+   la primera ronda cerrada el miércoles: remontada de **Libaak-Alfonso** ante
+   Leal-Guerrero (7) 3-6 7-6(2) 7-5 en 2h23 el mismo día en que la APA anunció la lista
+   argentina para el Mundial de Doha (los 8 convocados juegan hoy); la historia 'lucky
+   loser' de Montiel-Santigosa; Momo-Campagnolo (8) fuera ante Arce-Tello; 3 parejas de
+   la previa en octavos. — **HECHO 2026-10-08**: artículo
+   `germany-p2-2026-octavos-libaak-alfonso-mundial` (ES+EN, kind novedad, 13
+   relatedProducts con ProductRef/ProductGrid). Fuentes: widget oficial de Premier Padel
+   (resultados por jornadas), premierpadel.com (notas PP de Montiel-Santigosa y
+   Libaak-Alfonso), padelfip.com (ficha del torneo: 264.534 €, sede, horarios, cuadros),
+   elneverazo (horarios y dónde ver), padel-post, studypadel, sport.es, MD, padel-magazine
+   (lista argentina completa). Build + check:translations OK (140 productos); /es y /en
+   200 con 41 enlaces a ficha (20 productos distintos), 2 Callouts y enlace interno
+   verificado (convocatoria Mundial 200); listado /es/noticias OK. Screenshot
+   docs/screenshots/2026-10-08-germany-p2-octavos.png (1272×7528; 17.446 colores en la
+   muestra; verificación por píxeles: 1,79% px de texto oscuro en cabecera y 0,34% en
+   banda media). **Fix de paso**: los enlaces internos del artículo se escribieron al
+   final sin prefijo de locale (el renderer ya lo añade) — ver item 27 de SEO.
+
 
 ### 🎨 Visual (mejoras visuales)
 
@@ -764,9 +785,42 @@ pádel las cubre el cron de palas). Al terminar, actualizar el estado de la fila
     para agentes de IA (resumen del sitio, fichas destacadas, notas). Verificar: build +
     curl de `/llms.txt`.
 
+27. [ ] **Arreglar enlaces internos con doble prefijo de locale (404s)** — el renderer
+    de MDX ya añade el locale a los enlaces internos del cuerpo, así que los artículos
+    que enlazan con `/es/noticias/...` o `/en/noticias/...` se renderizan como
+    `/es/es/...` → **404** (comprobado con curl en el Rotterdam dia-de-finales). Revisar
+    TODOS los MDX de `src/content/noticias/` (y `en/`) — a 2026-10-08 hay 24 ficheros
+    afectados — y dejar los enlaces internos sin
+    prefijo (`/noticias/...`, `/jugadores/...`, etc.). Verificar con curl que cada enlace
+    interno da 200. Los artículos nuevos ya nacen con el formato correcto.
+
 ---
 
 ## Notas (varias noches)
+
+- 2026-10-08 — **Regla 0 (Germany P2 EN MARCHA 4-11 oct; HOY los 16 octavos — 8M+8F
+  desde las 09:00 — con el estreno de los top-4 masculinos y las top-8 femeninas)**:
+  publicado `germany-p2-2026-octavos-libaak-alfonso-mundial` (ES+EN, kind novedad) —
+  1ª pieza del torneo (2ª edición del CUPRA Germany P2 en el CASTELLO Düsseldorf).
+  Ángulo doble: (1) el día redondo de **Libaak-Alfonso** — remontada 3-6 7-6(2) 7-5
+  ante Leal-Guerrero (7) en 2h23 (quiebre en el 11º juego del tercero; 2ª semana seguida
+  ganándoles) el mismo día en que la APA anunció la lista argentina para el Mundial de
+  Doha (2-7 nov): Tapia, Chingotto, Augsburger, Stupaczuk, Di Nenno, Libaak, Arce y
+  Alfonso — **los ocho juegan hoy los octavos**; primera convocatoria de Alfonso, Libaak
+  héroe de la final de 2024; (2) la primera ronda: Montiel-Santigosa (LL tras la baja
+  de Coki Nieto-Yanguas) ganando de noche a Bergamini-Bautista tras perder la previa por
+  la mañana; Momo-Campagnolo (8) fuera ante Arce-Tello (9) 7-5 7-6; Esbrí-Jofre 4-6 6-3
+  7-6 a Goenaga-Collado; Paquito-Di Nenno 6-4 6-4 a Goñi-Alonso; Garrido-De Pascual
+  debutan ganando; 3 parejas de la previa en octavos (Geens-Moragues, Solano-Pereyra,
+  Martínez-Hernández); alemanas fuera en casa; femenino: remontada de Eugenio-Velasco
+  ante Collombon-Sharifova y Escacena-Aguilar desde la previa. Método útil: en el widget
+  oficial de Premier Padel se pueden seleccionar fechas pasadas y muestra ronda, ganador
+  y marcador ('COMPLETADO' + tiempos) — así se reconstruyó TODO el cuadro sin depender
+  de prensa. **Hallazgo anotado en backlog (item 27)**: los artículos viejos que enlazan
+  con `/es/noticias/...` renderizan `/es/es/...` → 404 (el renderer ya añade el locale;
+  los nuevos van sin prefijo). MAÑANA: viernes 9 = cuartos del Germany P2 (desde las
+  10:00, Red Bull TV) y/o Shanghai Masters (R2/R3). OPS: server de verificación parado
+  limpio (por puerto + PID; 3000 libre, sin huérfanos).
 
 - 2026-10-07 — **Regla 0 (China Open CERRADO: final jugada ayer; EN MARCHA: Shanghai
   Masters desde hoy y Germany P2 de pádel hasta el domingo)**: publicado
