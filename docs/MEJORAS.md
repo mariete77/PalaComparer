@@ -53,14 +53,15 @@
 ### 📰 Actualidad (contenido original y actual)
 
 _Por la Regla 0 del protocolo, si un torneo está en curso este item va primero. Hechos
-verificados a 2026-10-08: **Germany P2 de Düsseldorf EN MARCHA** (4-11 oct, 2ª edición
-en el CASTELLO; hoy jornada completa de octavos: 8 masculinos + 8 femeninos desde las
-09:00 con el estreno de los top-4 masculinos y las top-8 femeninas; cuartos el viernes 9
-desde las 10:00, finales el domingo 11 desde las 14:00; cuadros y OOP por días en el
-widget de premierpadel.com y padelfip.com/events/germany-p2-2026; ya hay 1 pieza del
-torneo, la de hoy). También EN MARCHA: **Rolex Shanghai Masters** (cuadro desde el 7
-hasta el 18; primeras rondas en juego — candidato Regla 0 para los próximos días). Antes
-de escribir, comprobar `src/content/noticias/` para no duplicar temas._
+verificados a 2026-10-09: **Germany P2 de Düsseldorf EN MARCHA** (4-11 oct, 2ª edición en
+el CASTELLO; hoy viernes 9 los cuartos desde las 10:00 con Red Bull TV; finales el domingo
+11 desde las 14:00; la pieza de ayer cubrió los octavos). Y **Rolex Shanghai Masters EN
+MARCHA** (7-18 oct; primera jornada de segunda ronda hoy viernes y resto el sábado; hoy
+estrenos de Zverev, Shelton y Djokovic — duelo nocturno Djokovic-Hurkacz; el sábado,
+Alcaraz, Medvedev, Fritz y Tsitsipas; primera pieza del torneo publicada esta noche).
+Próximos candidatos: resto de la segunda ronda de Shanghái (sábado) y cuartos/semis del
+Germany P2 (viernes noche y sábado). Antes de escribir, comprobar
+`src/content/noticias/` para no duplicar temas._
 
 1. [x] **China Open 2026 (ATP 500, EN MARCHA 30 sep-6 oct)** — historia grande y fresca:
    Djokovic vuelve a Pekín 11 años después con 30-0 imbatido (6 títulos en 6 visitas),
@@ -611,6 +612,28 @@ de escribir, comprobar `src/content/noticias/` para no duplicar temas._
    banda media). **Fix de paso**: los enlaces internos del artículo se escribieron al
    final sin prefijo de locale (el renderer ya lo añade) — ver item 27 de SEO.
 
+30. [x] **Shanghai Masters 2026 — el arranque de la segunda ronda** — torneo EN MARCHA
+   (7-18 oct): primera pieza del torneo con el ángulo de los estrenos (Djokovic-Hurkacz
+   cierran la Pista Central en la sesión nocturna) y las raquetas del catálogo del
+   cuadro. — **HECHO 2026-10-09**: artículo
+   `shanghai-masters-2026-segunda-ronda-djokovic-hurkacz` (ES+EN, kind novedad, 8
+   relatedProducts con ProductRef/ProductGrid: Speed MP 2026, Gravity Tour Zverev 2026,
+   EZONE 98, VCORE 98, Radical MP Auxetic, Percept 97, Blade 98 v10, Pure Aero 98).
+   Datos verificados: OOP oficial del viernes (atptour.com — Shelton, Zverev,
+   Djokovic-Hurkacz NB18:00 y Musetti en la Pista Central), primera ronda del torneo
+   (Hurkacz 19 aces a Duckworth 6-3 7-6(4); Tsitsipas desde la previa 6-3 7-5 a
+   Coppejans, 6-0 en debuts en Shanghái y nº38 live; Berrettini 23 aces y 0 bolas de
+   break; Rune fuera ante Altmaier 1-6 7-6(5) 6-4; Hanfmann triple desempate; Wu y Yi
+   Zhou en casa; Arnaldi 6-3 6-1 a Tomic en 52'), quotes de las previas de
+   Djokovic/Zverev/Alcaraz/Hurkacz y estructura de la R2 (9-10 oct). Fuentes:
+   atptour.com, olympics.com, tennistemple, perfect-tennis, tennistonic, tennismajors.
+   Build + check:translations OK (140 productos ES+EN); /es y /en a 200 (artículo,
+   listado, jugador y enlace a Pekín) + 8 fichas de producto a 200; 8 productos únicos
+   enlazados en el DOM, sin dobles prefijos de locale. Screenshot
+   `docs/screenshots/2026-10-09-shanghai-masters-r2.png` (1272×5960; cabecera con 2,68%
+   px de texto oscuro y 6.101 colores; cierre con 32.497 colores — grid de producto
+   renderizado).
+
 
 ### 🎨 Visual (mejoras visuales)
 
@@ -797,6 +820,30 @@ pádel las cubre el cron de palas). Al terminar, actualizar el estado de la fila
 ---
 
 ## Notas (varias noches)
+
+- 2026-10-09 — **Regla 0 (Shanghai Masters EN MARCHA: primera jornada de la segunda
+  ronda; Germany P2 EN MARCHA con los cuartos hoy viernes)**: publicado
+  `shanghai-masters-2026-segunda-ronda-djokovic-hurkacz` (ES+EN, kind novedad) — 1ª
+  pieza de este torneo (el Germany P2 de pádel lleva 1, la de ayer). Ángulo doble: (1)
+  la segunda ronda arranca con los estrenos de Zverev (1), Shelton (3) y Djokovic (10)
+  — el serbio, recién coronado en Pekín (título 102), cierra la sesión nocturna ante
+  Hurkacz, campeón 2023, con 0-8 en el cara a cara y 19 aces el jueves; (2) las
+  raquetas del catálogo de los favoritos (8 ProductRefs + grid). Primera ronda
+  verificada: Rune fuera (Altmaier 1-6 7-6(5) 6-4; regreso tras casi un año del
+  Aquiles y palabras de Alcaraz), Tsitsipas desde la previa (6-3 7-5 a Coppejans;
+  6-0 en debuts en Shanghái; nº38 live; el sábado ante Darderi), Berrettini 23 aces,
+  Hanfmann triple desempate, Wu y Yi Zhou ganan en casa, Arnaldi 52' a Tomic, J.M.
+  Cerúndolo y Struff esperan a Alcaraz y Medvedev. Método útil: el OOP íntegro del
+  viernes estaba en el artículo "What is the Shanghai tennis schedule?" de atptour.com
+  (16 partidos, 4 pistas); las previas de atptour.com dieron las quotes de
+  Djokovic/Zverev/Alcaraz. Fuentes: atptour.com, olympics.com, tennistemple,
+  perfect-tennis, tennistonic, tennismajors. La segunda ronda se completa el SÁBADO:
+  Alcaraz-J.M. Cerúndolo, Medvedev-Struff, Fritz-Arnaldi, Tsitsipas-Darderi. Germany
+  P2: cuartos hoy (10:00, Red Bull TV) — candidata a pieza de mañana. HUECOS: siguen
+  sin ficha Ustero, Josemaría, Campagnolo, Calvo y la Ultra Pro 99 de De Minaur (cron
+  de palas); Vacherot (defensor del título en Shanghái) no apareció en las jornadas
+  verificadas — comprobar antes de mencionarlo. OPS: server arrancado y parado limpio
+  (PID 2836925; puerto 3000 libre tras el cierre).
 
 - 2026-10-08 — **Regla 0 (Germany P2 EN MARCHA 4-11 oct; HOY los 16 octavos — 8M+8F
   desde las 09:00 — con el estreno de los top-4 masculinos y las top-8 femeninas)**:
