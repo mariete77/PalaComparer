@@ -3280,6 +3280,32 @@ export const PRODUCTS: Product[] = [
     descriptionEn:
       "Claudia Fernández's racket, 'La Niña Maravilla' (Wonder Girl): a light hybrid of 350-360 g with a medium balance at 25 cm and a 517 cm² surface, surprisingly firm on impact for seamless defensive-offensive play. The compact Wonder Core heart channels energy cleanly for an intuitive, controlled strike, Fibrix faces over a MultiEva core deliver an accessible intermediate feel, and the ExoFrame shell reinforces the frame without adding weight. Air React Channel for a faster swing, VibraDrive to damp vibrations and a rough 3D Grain finish for spin. The agile all-rounder of Bullpadel's 2027 Pro Line, CustomWeight-compatible to tune the balance.",
   },
+  // ============ PÁDEL — BULLPADEL XPLO 02 2027 (D. NENNO) ============
+  {
+    id: "bullpadel-xplo-02-2027",
+    sport: "padel",
+    brand: "Bullpadel",
+    model: "XPLO 02",
+    year: 2027,
+    price: 329.95,
+    image: "/images/rackets/bullpadel-xplo-02-2027.svg",
+    level: ["avanzado", "profesional"],
+    style: ["potencia"],
+    player: "Martín Di Nenno",
+    padel: {
+      shape: "diamante",
+      weight: "365-375 g",
+      balance: "alto",
+      core: "Multieva",
+      faces: "X-Tend Carbon 3K",
+      surface: "rugosa",
+      hardness: "dura",
+    },
+    description:
+      "La pala de Martín Di Nenno para 2027 y la XPLO más extrema que ha creado Bullpadel: 'la potencia tiene un nuevo nombre'. Cabeza geométrica de 38 mm con balance muy alto (~27 cm) y 507 cm² de superficie, para concentrar toda la energía en el remate. El corazón XPLO Core² con refuerzos diagonales, el marco Wave System² y el canal Air Power (segunda generación, un 50% más amplio) aceleran el swing, mientras las caras X-Tend Carbon 3K sobre el núcleo Multieva devuelven una respuesta explosiva, seca y directa. Acabado rugoso 3D Grain, grip Hesacore contra vibraciones, perforado Smart Holes y sistema CustomWeight para ajustar el balance. Exige brazo hecho: es una máquina ofensiva pura.",
+    descriptionEn:
+      "Martín Di Nenno's racket for 2027 and the most extreme XPLO Bullpadel has ever built: 'power has a new name'. A 38 mm geometric head with very high balance (~27 cm) and a 507 cm² hitting surface, concentrating all the energy into the smash. The XPLO Core² heart with diagonal reinforcements, the Wave System² frame and the second-generation Air Power channel (50% wider) speed up the swing, while X-Tend Carbon 3K faces over a Multieva core deliver an explosive, dry, direct response. Rough 3D Grain finish, Hesacore grip against vibration, Smart Holes drilling and the CustomWeight system to fine-tune balance. It demands a trained arm: pure offensive machinery.",
+  },
   {
     id: "dunlop-galactica-pro-2025",
     sport: "padel",

@@ -229,12 +229,6 @@
       "source": "https://www.amazon.es/s?k=wilson+bela+pro+2024",
       "licence": "pendiente"
     },
-    "wilson-bela-v3-2026": {
-      "src": "/images/rackets/real/wilson-bela-v3-2026.jpg",
-      "credit": "© Wilson Sporting Goods",
-      "source": "https://www.wilson.com/es-es/product/bela-v3-padel-wr18650",
-      "licence": "pendiente"
-    },
     "wilson-endure-pro-v1-2026": {
       "src": "/images/rackets/real/wilson-endure-pro-v1-2026.png",
       "credit": "© PadelProShop",
@@ -542,6 +536,12 @@
       "src": "/images/rackets/real/bullpadel-xplo-premier-padel-2026.png",
       "credit": "© PadelProShop",
       "source": "https://padelproshop.com/products/pala-bullpadel-xplo-premier-padel-2026",
+      "licence": "pendiente"
+    },
+    "bullpadel-xplo-02-2027": {
+      "src": "/images/rackets/real/bullpadel-xplo-02-2027.jpg",
+      "credit": "Padel Nuestro",
+      "source": "https://www.padelnuestro.com/pala-bullpadel-xplo-27-497244-160644-p",
       "licence": "pendiente"
     },
     "bullpadel-vertex-05-geo-premier-padel-2026": {
