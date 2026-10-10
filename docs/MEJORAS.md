@@ -53,15 +53,13 @@
 ### 📰 Actualidad (contenido original y actual)
 
 _Por la Regla 0 del protocolo, si un torneo está en curso este item va primero. Hechos
-verificados a 2026-10-09: **Germany P2 de Düsseldorf EN MARCHA** (4-11 oct, 2ª edición en
-el CASTELLO; hoy viernes 9 los cuartos desde las 10:00 con Red Bull TV; finales el domingo
-11 desde las 14:00; la pieza de ayer cubrió los octavos). Y **Rolex Shanghai Masters EN
-MARCHA** (7-18 oct; primera jornada de segunda ronda hoy viernes y resto el sábado; hoy
-estrenos de Zverev, Shelton y Djokovic — duelo nocturno Djokovic-Hurkacz; el sábado,
-Alcaraz, Medvedev, Fritz y Tsitsipas; primera pieza del torneo publicada esta noche).
-Próximos candidatos: resto de la segunda ronda de Shanghái (sábado) y cuartos/semis del
-Germany P2 (viernes noche y sábado). Antes de escribir, comprobar
-`src/content/noticias/` para no duplicar temas._
+verificados a 2026-10-10: **Rolex Shanghai Masters EN MARCHA** (7-18 oct): ayer viernes
+Hurkacz eliminó a Djokovic (6-4, 6-3, primer triunfo en 9 duelos) y cayeron Rublev,
+Cobolli y Musetti; hoy sábado se completa la 2ª ronda (debuts de Alcaraz, Medvedev,
+Fritz y Tsitsipas) y el domingo arrancan los octavos. **Germany P2 de Düsseldorf**
+(4-11 oct): semis hoy sábado y finales el domingo 11 desde las 14:00 (Red Bull TV).
+Próximos candidatos: octavos de Shanghái (domingo) y finales del Germany P2 (domingo
+11). Antes de escribir, comprobar `src/content/noticias/` para no duplicar temas._
 
 1. [x] **China Open 2026 (ATP 500, EN MARCHA 30 sep-6 oct)** — historia grande y fresca:
    Djokovic vuelve a Pekín 11 años después con 30-0 imbatido (6 títulos en 6 visitas),
@@ -633,6 +631,25 @@ Germany P2 (viernes noche y sábado). Antes de escribir, comprobar
    `docs/screenshots/2026-10-09-shanghai-masters-r2.png` (1272×5960; cabecera con 2,68%
    px de texto oscuro y 6.101 colores; cierre con 32.497 colores — grid de producto
    renderizado).
+
+31. [x] **Shanghai Masters 2026 — la noche de Hurkacz: Djokovic fuera y los estrenos del
+   sábado** — torneo EN MARCHA (7-18 oct): segunda pieza del torneo, la de resultados.
+   — **HECHO 2026-10-10**: artículo `shanghai-masters-2026-hurkacz-elimina-djokovic`
+   (ES+EN, kind novedad, 8 relatedProducts con ProductRef/ProductGrid: VCORE 98,
+   Gravity Tour Zverev 2026, EZONE 98, Percept 97, Blade 98 v10, Pure Aero 98, TFight
+   305S, Radical MP Auxetic). Resultados del viernes 9 verificados contra atptour.com
+   (marcador oficial por partido) + AFP/Reuters (Hurkacz d. Djokovic 6-4 6-3 en 87',
+   13 aces, salvó 2/2 bolas de break, primera victoria en 9 intentos, H2H 0-8→1-8;
+   doble falta de Djokovic en el 4º juego del 2º set; 6º partido en 10 días; quotes
+   textuales de Djokovic; Zverev 6-4 7-6(4) a Wu "survived a stumble"; Shelton 6-3
+   7-6(6) a Altmaier en su 24º cumpleaños; Sakamoto (Q) d. Rublev 6-4 6-4; Mannarino
+   d. Cobolli (6) 6-1 4-6 6-3; Yi Zhou (WC) d. Musetti (24) 7-6(3) 3-6 7-6(6);
+   Khachanov 7-6 6-7 7-6 a Fery en 3h29; Gea d. Humbert (30); Menšík, Nakashima,
+   Bublik, Tiafoe, F. Cerúndolo, Davidovich y Halys; De Minaur por walkover de
+   Molcan) + previa del sábado (Alcaraz-J.M. Cerúndolo, Medvedev-Struff, Fritz-
+   Arnaldi, Tsitsipas-Darderi, Vacherot-Báez) con raquetas del catálogo. Build +
+   check:translations OK; /es y /en 200 (artículo + listado) con 8 fichas enlazadas.
+   Sin screenshot (sin cambio visual: solo contenido).
 
 
 ### 🎨 Visual (mejoras visuales)

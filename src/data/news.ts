@@ -89,6 +89,7 @@ import { metadata as chinaOpenFinal } from "@/content/noticias/china-open-2026-f
 import { metadata as chinaOpenCampeon } from "@/content/noticias/china-open-2026-djokovic-campeon-102-titulos.mdx";
 import { metadata as germanyP2Octavos } from "@/content/noticias/germany-p2-2026-octavos-libaak-alfonso-mundial.mdx";
 import { metadata as shanghaiSegundaRonda } from "@/content/noticias/shanghai-masters-2026-segunda-ronda-djokovic-hurkacz.mdx";
+import { metadata as shanghaiHurkaczDjokovic } from "@/content/noticias/shanghai-masters-2026-hurkacz-elimina-djokovic.mdx";
 
 /**
  * Traducciones EN de los metadatos de cada artículo. Las ES vienen del propio
@@ -420,6 +421,12 @@ const EN_META: Record<string, { title: string; excerpt: string; tags: string[] }
       "Fresh from his 102nd title in Beijing, the Serb faces fellow former champion Hubert Hurkacz (0-8 down in their head-to-head) in Friday's night session. Zverev and Shelton also start their campaigns on a 16-match day; Alcaraz, Medvedev and Fritz wait until Saturday. Plus: Rune fell in the first round and the catalog rackets of the favourites.",
     tags: ["Shanghai Masters", "ATP", "Djokovic", "Hurkacz", "Zverev", "Shelton", "Alcaraz", "Rackets"],
   },
+  "shanghai-masters-2026-hurkacz-elimina-djokovic": {
+    title: "Hurkacz breaks the 0-8 hoodoo and knocks Djokovic out of the Shanghai Masters",
+    excerpt:
+      "The Pole, champion in 2023, claimed his first win in nine meetings against the Serb (6-4, 6-3) with 13 aces. Zverev and Shelton also advance on a Friday of upsets —Rublev, Cobolli and Musetti out— while Alcaraz, Medvedev, Fritz and Tsitsipas make their debuts on Saturday.",
+    tags: ["Shanghai Masters", "ATP", "Hurkacz", "Djokovic", "Zverev", "Shelton", "Alcaraz", "Rackets"],
+  },
 };
 
 /**
@@ -495,6 +502,7 @@ export const ARTICLES: Article[] = [
   localize({ slug: "china-open-2026-djokovic-campeon-102-titulos", ...chinaOpenCampeon }),
   localize({ slug: "germany-p2-2026-octavos-libaak-alfonso-mundial", ...germanyP2Octavos }),
   localize({ slug: "shanghai-masters-2026-segunda-ronda-djokovic-hurkacz", ...shanghaiSegundaRonda }),
+  localize({ slug: "shanghai-masters-2026-hurkacz-elimina-djokovic", ...shanghaiHurkaczDjokovic }),
 ].sort((a, b) => b.date.localeCompare(a.date));
 
 export function getArticle(slug: string): Article | undefined {
