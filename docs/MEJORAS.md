@@ -53,13 +53,19 @@
 ### 📰 Actualidad (contenido original y actual)
 
 _Por la Regla 0 del protocolo, si un torneo está en curso este item va primero. Hechos
-verificados a 2026-10-10: **Rolex Shanghai Masters EN MARCHA** (7-18 oct): ayer viernes
-Hurkacz eliminó a Djokovic (6-4, 6-3, primer triunfo en 9 duelos) y cayeron Rublev,
-Cobolli y Musetti; hoy sábado se completa la 2ª ronda (debuts de Alcaraz, Medvedev,
-Fritz y Tsitsipas) y el domingo arrancan los octavos. **Germany P2 de Düsseldorf**
-(4-11 oct): semis hoy sábado y finales el domingo 11 desde las 14:00 (Red Bull TV).
-Próximos candidatos: octavos de Shanghái (domingo) y finales del Germany P2 (domingo
-11). Antes de escribir, comprobar `src/content/noticias/` para no duplicar temas._
+verificados a 2026-10-11: **Germany P2 de Düsseldorf (4-11 oct) CIERRA hoy** con las
+finales en el Castello (femenina 14:00, masculina no antes de 16:00, hora española;
+Red Bull TV): Sánchez-Ustero vs Calvo-Fernández y Tapia-Coello vs Stupa-Sanz, que
+reedita la final de Rotterdam del domingo pasado (6-3 6-2, 10º título del año de los
+Golden Boys). Semis de ayer verificadas (elneverazo/padel-magazine/studypadel):
+Tapia-Coello 6-2 6-3 a Lebrón-Augsburger (1h05), Stupa-Sanz 7-6(3) 6-4 a
+Galán-Chingotto (1h56), Ustero-Sánchez 7-5 3-6 7-5 a Triay-Brea y Calvo-Fernández
+6-4 5-7 7-6(5) a Josemaría-González en 3h07 (2 bolas de partido salvadas). **Rolex
+Shanghai Masters EN MARCHA** (7-18 oct): los OCTAVOS se juegan hoy domingo 11 — la
+2ª ronda se completó el sábado con los estrenos de Alcaraz, Medvedev, Fritz,
+Tsitsipas y Vacherot-Báez: VERIFICAR resultados del sábado antes de escribir la
+pieza del lunes. Próximo candidato: los octavos de Shanghái (lunes 12 por la
+mañana). Antes de escribir, comprobar `src/content/noticias/` para no duplicar temas._
 
 1. [x] **China Open 2026 (ATP 500, EN MARCHA 30 sep-6 oct)** — historia grande y fresca:
    Djokovic vuelve a Pekín 11 años después con 30-0 imbatido (6 títulos en 6 visitas),
@@ -650,6 +656,36 @@ Próximos candidatos: octavos de Shanghái (domingo) y finales del Germany P2 (d
    Arnaldi, Tsitsipas-Darderi, Vacherot-Báez) con raquetas del catálogo. Build +
    check:translations OK; /es y /en 200 (artículo + listado) con 8 fichas enlazadas.
    Sin screenshot (sin cambio visual: solo contenido).
+32. [x] **Germany P2 2026 — día de finales: la revancha de Rotterdam y el triplete en
+   juego** — torneo EN MARCHA (4-11 oct, Castello Düsseldorf, 264.534 €) y HOY domingo
+   11 se juegan las finales (femenina 14:00, masculina no antes de 16:00, hora
+   española; Red Bull TV): pieza matinal de cierre del torneo con los RESULTADOS
+   REALES de las semis del sábado (Tapia-Coello d. Lebrón-Augsburger 6-2 6-3 en 1h05,
+   camino en el torneo 6-2 6-3 a Diestro-Sintes y 6-2 7-5 a Alfonso-Libaak, 3ª final
+   seguida tras París y Rotterdam y 69-7 en 2026; Stupa-Sanz d. Galán-Chingotto
+   7-6(3) 6-4 en 1h56 — 2ª victoria consecutiva sobre los números dos y los
+   defensores del título alemán de 2025 out; Ustero-Sánchez d. Triay-Brea 7-5 3-6
+   7-5, 3ª vez esta temporada que eliminan a las nº1 en semis, y Calvo-Fernández d.
+   Josemaría-González 6-4 5-7 7-6(5) en 3h07 salvando 2 bolas de partido, revancha
+   de las semis de Rotterdam) y el ángulo central: la final masculina REEDITA la de
+   Rotterdam de hace una semana (Tapia-Coello d. Stupa-Sanz 6-3 6-2, 10º título del
+   año; H2H 1-0 como pareja) — 11º título/triplete europeo en juego para los Golden
+   Boys y primer título como pareja para Stupa-Sanz tras 3 finales seguidas (Lyon,
+   Rotterdam, Düsseldorf). — **HECHO 2026-10-11**: artículo
+   `germany-p2-2026-dia-de-finales` (ES+EN, kind novedad, 6 relatedProducts con
+   ProductRef/ProductGrid: AT10 Genius 18K [Tapia], Coello Pro 2026 [Coello], Electra
+   Pro IT 26 [Stupa], Axion Attack 2.0 [Jon Sanz], Arrow Hit Light [Ari], Wonder 2027
+   [Claudia Fernández]; Ustero y Calvo siguen sin ficha — hueco anotado). Fuentes:
+   elneverazo (resultados semis + OOP finales 14:00/NB 16:00 + TV: Red Bull TV desde
+   cuartos, Canal+ en NLD/FRA/BEL/POL/CHE/CZE/SVK, YouTube oficial, Disney+ LATAM),
+   padel-magazine.co.uk (1h05 de Tapia-Coello + 3h07 y 2 MP salvados de
+   Calvo-Fernández), studypadel (marcadores, duración 1h56 de Stupa-Sanz),
+   tennistonic (69-7 y camino de Tapia-Coello), Wikipedia (premios 264.534 €, 19º
+   torneo de la temporada, H2H Coello-Tapia 1-0 vs Sanz-Stupaczuk). Build +
+   check:translations OK (141 productos); /es y /en 200 con título, 6 fichas
+   enlazadas (18 enlaces), 2 Callouts, ProductGrid con fotos reales y enlaces
+   internos sin doble prefijo verificados en DOM; primera en /es/noticias. Sin
+   screenshot (sin cambio visual: solo contenido).
 
 
 ### 🎨 Visual (mejoras visuales)
@@ -837,6 +873,36 @@ pádel las cubre el cron de palas). Al terminar, actualizar el estado de la fila
 ---
 
 ## Notas (varias noches)
+
+- 2026-10-11 — **Regla 0 (Germany P2 EN MARCHA 4-11 oct; FINALES HOY domingo 11
+  desde las 14:00 h españolas; Shanghai Masters también en curso)**: publicado
+  `germany-p2-2026-dia-de-finales` (ES+EN, kind novedad) — pieza de cierre del
+  torneo con las 4 semis del sábado verificadas (elneverazo + padel-magazine +
+  studypadel): Tapia-Coello d. Lebrón-Augsburger 6-2 6-3 en 1h05 (3ª final seguida
+  tras París y Rotterdam, 69-7 en 2026); Stupa-Sanz d. Galán-Chingotto 7-6(3) 6-4
+  en 1h56 (2ª victoria consecutiva sobre ellos; sin reedición para los campeones
+  alemanes de 2025); Ustero-Sánchez d. Triay-Brea 7-5 3-6 7-5 (3ª vez esta
+  temporada que eliminan a las nº1 en semis, tras Valladolid y Rotterdam);
+  Calvo-Fernández d. Josemaría-González 6-4 5-7 7-6(5) en 3h07 (2 bolas de partido
+  salvadas; revancha de las semis de Rotterdam). Ángulo central: la final
+  masculina reedita exactamente la de Rotterdam (Tapia-Coello d. Stupa-Sanz 6-3
+  6-2 la semana pasada, 10º título del año; H2H 1-0 como pareja) con el 11º
+  título/triplete europeo en juego para los Golden Boys y el primer título como
+  pareja para Stupa-Sanz tras 3 finales seguidas (Lyon, Rotterdam, Düsseldorf).
+  OOP finales verificado en elneverazo: femenina 14:00 (09:00 ARG), masculina no
+  antes de 16:00 (11:00 ARG); TV: Red Bull TV desde cuartos (Canal+ en
+  FRA/NLD/BEL/POL/CHE/CZE/SVK, etc.), YouTube oficial de Premier Padel, Disney+ en
+  LATAM — en España, Red Bull TV gratis. Palas: 6 ProductRefs + grid (AT10 Genius
+  18K [Tapia], Coello Pro 2026 [Coello], Electra Pro IT 26 [Stupa], Axion Attack
+  2.0 [Jon Sanz], Arrow Hit Light [Ari], Wonder 2027 [Claudia Fernández — OJO: la
+  Wonder es Bullpadel, no Nox]). HUECOS que siguen abiertos para el cron de palas:
+  **Ustero y Calvo** (las dos finalistas femeninas de hoy) además de Josemaría,
+  Campagnolo y la Ultra Pro 99 de De Minaur. MAÑANA: Shanghai Masters — los
+  octavos se juegan hoy domingo; la pieza del lunes necesita los RESULTADOS DE LA
+  R2 DEL SÁBADO (Alcaraz-J.M. Cerúndolo, Medvedev-Struff, Fritz-Arnaldi,
+  Tsitsipas-Darderi, Vacherot-Báez) aún sin verificar. Tabla de demanda real: no
+  se tocó (todo ✓). OPS: server de verificación parado limpio (kill por PID;
+  puerto 3000 libre, sin huérfanos).
 
 - 2026-10-09 — **Regla 0 (Shanghai Masters EN MARCHA: primera jornada de la segunda
   ronda; Germany P2 EN MARCHA con los cuartos hoy viernes)**: publicado

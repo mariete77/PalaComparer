@@ -90,6 +90,7 @@ import { metadata as chinaOpenCampeon } from "@/content/noticias/china-open-2026
 import { metadata as germanyP2Octavos } from "@/content/noticias/germany-p2-2026-octavos-libaak-alfonso-mundial.mdx";
 import { metadata as shanghaiSegundaRonda } from "@/content/noticias/shanghai-masters-2026-segunda-ronda-djokovic-hurkacz.mdx";
 import { metadata as shanghaiHurkaczDjokovic } from "@/content/noticias/shanghai-masters-2026-hurkacz-elimina-djokovic.mdx";
+import { metadata as germanyP2Finales } from "@/content/noticias/germany-p2-2026-dia-de-finales.mdx";
 
 /**
  * Traducciones EN de los metadatos de cada artículo. Las ES vienen del propio
@@ -427,6 +428,12 @@ const EN_META: Record<string, { title: string; excerpt: string; tags: string[] }
       "The Pole, champion in 2023, claimed his first win in nine meetings against the Serb (6-4, 6-3) with 13 aces. Zverev and Shelton also advance on a Friday of upsets —Rublev, Cobolli and Musetti out— while Alcaraz, Medvedev, Fritz and Tsitsipas make their debuts on Saturday.",
     tags: ["Shanghai Masters", "ATP", "Hurkacz", "Djokovic", "Zverev", "Shelton", "Alcaraz", "Rackets"],
   },
+  "germany-p2-2026-dia-de-finales": {
+    title: "Germany P2 finals day: the Rotterdam rematch and a three-peat on the line",
+    excerpt:
+      "Tapia-Coello (6-2 6-3 over Lebrón-Augsburger) and Stupa-Sanz (7-6(3) 6-4 over Galán-Chingotto) replay last week's Rotterdam final; in the women's draw, Sánchez-Ustero beat No. 1s Triay-Brea 7-5 3-6 7-5 and meet Calvo-Fernández, who came back from two match points down to beat Josemaría-González (6-4 5-7 7-6(5), 3h07). Finals today at the Castello Düsseldorf from 14:00, with the catalog rackets of the finalists.",
+    tags: ["Premier Padel", "Germany P2", "Tapia", "Coello", "Stupaczuk", "Jon Sanz", "Sánchez", "Ustero"],
+  },
 };
 
 /**
@@ -503,6 +510,7 @@ export const ARTICLES: Article[] = [
   localize({ slug: "germany-p2-2026-octavos-libaak-alfonso-mundial", ...germanyP2Octavos }),
   localize({ slug: "shanghai-masters-2026-segunda-ronda-djokovic-hurkacz", ...shanghaiSegundaRonda }),
   localize({ slug: "shanghai-masters-2026-hurkacz-elimina-djokovic", ...shanghaiHurkaczDjokovic }),
+  localize({ slug: "germany-p2-2026-dia-de-finales", ...germanyP2Finales }),
 ].sort((a, b) => b.date.localeCompare(a.date));
 
 export function getArticle(slug: string): Article | undefined {
