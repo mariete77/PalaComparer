@@ -3379,6 +3379,31 @@ export const PRODUCTS: Product[] = [
     descriptionEn:
       "The first padel racket signed by Zinedine Zidane: the adidas x ZZ collab brings the Metalbone essence to a round 360-375 g format with centred balance, 3K carbon faces and an EVA Soft Performance core for a comfortable feel and millimetre control. The octagonal Low Poly structure adds extra rigidity when you accelerate the swing, the rough Spin Blade Decal finish grips the ball for spin, and the collector's packaging rounds off an edition aimed at advanced players who want precision with style.",
   },
+  {
+    id: "bullpadel-hack-05-comfort-2027",
+    sport: "padel",
+    brand: "Bullpadel",
+    model: "Hack 05 Comfort",
+    year: 2027,
+    price: 259.95,
+    image: "/images/rackets/bullpadel-hack-05-comfort-2027.svg",
+    level: ["avanzado", "profesional"],
+    style: ["potencia", "polivalente"],
+    player: "Paquito Navarro",
+    padel: {
+      shape: "diamante",
+      weight: "360-370 g",
+      balance: "alto",
+      core: "MultiEVA",
+      faces: "Fibrix (fibra de vidrio + carbono)",
+      surface: "rugosa",
+      hardness: "media",
+    },
+    description:
+      "La versión Comfort de la Hack del décimo aniversario: mismo diamante de balance alto (~26,5 cm) y ADN ofensivo que la Hack 05 de Paquito Navarro, pero con marco Fibrix —fibra híbrida más flexible que el carbono— y núcleo MultiEVA de doble densidad para un tacto intermedio que cuida el brazo. Pesa 360-370 g, unos cinco menos que la estándar, y conserva la rugosidad 3D Grain sobre 522 cm² con las tecnologías Air Power, ExoAir, VibraDrive, Ease Vibe y Custom Weight para ajustar el balance a tu juego.",
+    descriptionEn:
+      "The Comfort version of the tenth-anniversary Hack: same high-balance diamond (26.5 cm) and offensive DNA as Paquito Navarro's Hack 05, but with a Fibrix frame — a hybrid fibre more flexible than carbon — and a dual-density MultiEVA core for an intermediate feel that protects the arm. It weighs 360-370 g, about five less than the standard model, and keeps the 3D Grain roughness over 522 cm² with Air Power, ExoAir, VibraDrive, Ease Vibe and Custom Weight technologies to fine-tune the balance.",
+  },
 ];
 
 export function getProduct(id: string) {
