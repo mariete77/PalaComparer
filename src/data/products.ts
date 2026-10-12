@@ -1734,7 +1734,7 @@ export const PRODUCTS: Product[] = [
     image: "/images/rackets/yonex-ezone-98-2025.svg",
     level: ["intermedio", "avanzado"],
     style: ["polivalente"],
-    player: "Ben Shelton / Jessica Pegula",
+    player: "Ben Shelton / Jessica Pegula / Arthur Gea",
     tenis: {
       headSize: 98,
       weightStrung: 320,

@@ -53,19 +53,20 @@
 ### 📰 Actualidad (contenido original y actual)
 
 _Por la Regla 0 del protocolo, si un torneo está en curso este item va primero. Hechos
-verificados a 2026-10-11: **Germany P2 de Düsseldorf (4-11 oct) CIERRA hoy** con las
-finales en el Castello (femenina 14:00, masculina no antes de 16:00, hora española;
-Red Bull TV): Sánchez-Ustero vs Calvo-Fernández y Tapia-Coello vs Stupa-Sanz, que
-reedita la final de Rotterdam del domingo pasado (6-3 6-2, 10º título del año de los
-Golden Boys). Semis de ayer verificadas (elneverazo/padel-magazine/studypadel):
-Tapia-Coello 6-2 6-3 a Lebrón-Augsburger (1h05), Stupa-Sanz 7-6(3) 6-4 a
-Galán-Chingotto (1h56), Ustero-Sánchez 7-5 3-6 7-5 a Triay-Brea y Calvo-Fernández
-6-4 5-7 7-6(5) a Josemaría-González en 3h07 (2 bolas de partido salvadas). **Rolex
-Shanghai Masters EN MARCHA** (7-18 oct): los OCTAVOS se juegan hoy domingo 11 — la
-2ª ronda se completó el sábado con los estrenos de Alcaraz, Medvedev, Fritz,
-Tsitsipas y Vacherot-Báez: VERIFICAR resultados del sábado antes de escribir la
-pieza del lunes. Próximo candidato: los octavos de Shanghái (lunes 12 por la
-mañana). Antes de escribir, comprobar `src/content/noticias/` para no duplicar temas._
+verificados a 2026-10-12: **Rolex Shanghai Masters EN MARCHA** (7-18 oct) — el domingo
+11 se jugó la 1ª mitad de los dieciseisavos (R32) con resultados VERIFICADOS contra
+atptour.com/AP/tennisnow: Gea d. Shelton (3) 7-6(5) 7-6(3) (primer top-10 del francés),
+Davidovich Fokina (25) d. Tiafoe (7) 7-6(4) 4-6 7-6(6) salvando MP, Zverev (1) d. Halys
+6-4 6-7(8) 6-3 (19 aces, victoria 60 de 2026), Bublik d. Nakashima (16) 6-7(7) 6-3
+7-6(5) (→ Zverev-Bublik en octavos), Menšík (13) d. F. Cerúndolo 6-3 3-6 6-2 (→
+Gea-Menšík), Hurkacz d. Zhou 6-2 3-6 6-3, de Minaur (9) d. Sakamoto 7-6(6) 6-4,
+Khachanov (26) d. Mannarino 6-2 6-4. HOY lunes 12 se completa el cuadro (Alcaraz-Bergs,
+Medvedev-Svrcina, Tsitsipas-Fritz, Paul-Vacherot, Carreño-FAA, Tien-Ruud, Lehecka-Jodar,
+Fils-van de Zandschulp; OOP oficial atptour.com). Octavos (R16) martes 13-miércoles 14,
+cuartos jueves 15, final domingo 18. Sinner: temporada cerrada (rodilla derecha). Pádel:
+**Milano P1** (10-18 oct) EN MARCHA y arranca el **Wuhan Open (WTA 1000, 12-18 oct)**;
+el China Open femenino (WTA 1000) cerró ayer domingo 11. Antes de escribir, comprobar
+`src/content/noticias/` para no duplicar temas._
 
 1. [x] **China Open 2026 (ATP 500, EN MARCHA 30 sep-6 oct)** — historia grande y fresca:
    Djokovic vuelve a Pekín 11 años después con 30-0 imbatido (6 títulos en 6 visitas),
@@ -686,6 +687,24 @@ mañana). Antes de escribir, comprobar `src/content/noticias/` para no duplicar 
    enlazadas (18 enlaces), 2 Callouts, ProductGrid con fotos reales y enlaces
    internos sin doble prefijo verificados en DOM; primera en /es/noticias. Sin
    screenshot (sin cambio visual: solo contenido).
+33. [x] **Shanghai Masters 2026 — Gea elimina a Shelton y 'Foki' saca a Tiafoe** — torneo
+   EN MARCHA (7-18 oct): tercera pieza del torneo, resultados de la 1ª mitad de los
+   dieciseisavos (R32, domingo 11) con el ángulo de la caída de las dos estrellas
+   americanas + lo que se juega hoy lunes + raquetas del catálogo. — **HECHO
+   2026-10-12**: artículo `shanghai-masters-2026-gea-elimina-shelton` (ES+EN, kind
+   novedad, 9 relatedProducts con ProductRef/ProductGrid: EZONE 98 [Gea/Shelton],
+   Gravity Tour Zverev, VCORE 98, Blade 98 v10 [Menšík], Percept 97 [Tiafoe], Pure
+   Aero 98 [Alcaraz], TFight 305S [Medvedev], Radical MP [Fritz], Speed MP 2026
+   [Jodar]) + campo `player` de la Yonex EZONE 98 2025 ampliado a "Ben Shelton /
+   Jessica Pegula / Arthur Gea" (raqueta de Gea verificada en iq.tennis, chequeado
+   8 sep 2026) → **nueva página /jugadores/arthur-gea**. Resultados verificados
+   contra atptour.com (results + daily-schedule oficiales), AP (marcadores +
+   Zverev-Bublik + Sinner fuera de la temporada), tennisnow (Gea: 1er top-10,
+   12-14 desde julio, título en Los Cabos, quotes de Shelton; Zverev 19 aces),
+   IANS (60ª victoria, 3ª vez que pasa de 60: 2018/2024) y rolexshanghaimasters.
+   com. Build + check:translations OK; /es y /en 200 (artículo + listado +
+   jugador) con 9 fichas enlazadas; screenshot
+   docs/screenshots/2026-10-12-shanghai-gea-shelton.png.
 
 
 ### 🎨 Visual (mejoras visuales)
@@ -811,6 +830,7 @@ Búsquedas que ya traen clics; cada una debe tener página limpia del tipo
 - **pala pádel diamante o lágrima (4)** → guías de formas; pendiente de enlazar desde /palas (item 20)
 - **comparador de palas de padel (2)** → `/comparar` ✓
 - **adidas metalbone (1)** → ficha Metalbone ✓
+- **arthur gea racket / qué raqueta usa gea (nueva demanda, oct 2026)** → `/jugadores/arthur-gea` ✓ creada 2026-10-12 (Yonex EZONE 98 — iq.tennis 8 sep 2026; primer top-10 en el Shanghái Masters)
 
 **Protocolo: el cron nocturno vigila esta tabla.** Si un jugador con demanda no tiene
 página limpia o su modelo carece de specs reales → esa es la tarea de la noche

@@ -90,6 +90,7 @@ import { metadata as chinaOpenCampeon } from "@/content/noticias/china-open-2026
 import { metadata as germanyP2Octavos } from "@/content/noticias/germany-p2-2026-octavos-libaak-alfonso-mundial.mdx";
 import { metadata as shanghaiSegundaRonda } from "@/content/noticias/shanghai-masters-2026-segunda-ronda-djokovic-hurkacz.mdx";
 import { metadata as shanghaiHurkaczDjokovic } from "@/content/noticias/shanghai-masters-2026-hurkacz-elimina-djokovic.mdx";
+import { metadata as shanghaiGeaEliminaShelton } from "@/content/noticias/shanghai-masters-2026-gea-elimina-shelton.mdx";
 import { metadata as germanyP2Finales } from "@/content/noticias/germany-p2-2026-dia-de-finales.mdx";
 
 /**
@@ -428,6 +429,12 @@ const EN_META: Record<string, { title: string; excerpt: string; tags: string[] }
       "The Pole, champion in 2023, claimed his first win in nine meetings against the Serb (6-4, 6-3) with 13 aces. Zverev and Shelton also advance on a Friday of upsets —Rublev, Cobolli and Musetti out— while Alcaraz, Medvedev, Fritz and Tsitsipas make their debuts on Saturday.",
     tags: ["Shanghai Masters", "ATP", "Hurkacz", "Djokovic", "Zverev", "Shelton", "Alcaraz", "Rackets"],
   },
+  "shanghai-masters-2026-gea-elimina-shelton": {
+    title: "Gea knocks out Shelton and Davidovich Fokina ousts Tiafoe: Shanghai loses two American stars",
+    excerpt:
+      "The 21-year-old Frenchman, ranked 56th, claims his first Top 10 win (7-6(5), 7-6(3)) and will face Mensik in the round of 16; 'Foki' battles past Tiafoe 7-6(4), 4-6, 7-6(6) with match points against him. Zverev, with 19 aces, reaches 60 wins for the season and will play Bublik.",
+    tags: ["Shanghai Masters", "ATP", "Gea", "Shelton", "Davidovich Fokina", "Tiafoe", "Zverev", "Rackets"],
+  },
   "germany-p2-2026-dia-de-finales": {
     title: "Germany P2 finals day: the Rotterdam rematch and a three-peat on the line",
     excerpt:
@@ -510,6 +517,7 @@ export const ARTICLES: Article[] = [
   localize({ slug: "germany-p2-2026-octavos-libaak-alfonso-mundial", ...germanyP2Octavos }),
   localize({ slug: "shanghai-masters-2026-segunda-ronda-djokovic-hurkacz", ...shanghaiSegundaRonda }),
   localize({ slug: "shanghai-masters-2026-hurkacz-elimina-djokovic", ...shanghaiHurkaczDjokovic }),
+  localize({ slug: "shanghai-masters-2026-gea-elimina-shelton", ...shanghaiGeaEliminaShelton }),
   localize({ slug: "germany-p2-2026-dia-de-finales", ...germanyP2Finales }),
 ].sort((a, b) => b.date.localeCompare(a.date));
 
