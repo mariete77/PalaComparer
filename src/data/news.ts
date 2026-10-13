@@ -93,6 +93,7 @@ import { metadata as shanghaiHurkaczDjokovic } from "@/content/noticias/shanghai
 import { metadata as shanghaiGeaEliminaShelton } from "@/content/noticias/shanghai-masters-2026-gea-elimina-shelton.mdx";
 import { metadata as germanyP2Finales } from "@/content/noticias/germany-p2-2026-dia-de-finales.mdx";
 import { metadata as germanyP2Campeones } from "@/content/noticias/germany-p2-2026-campeones-coello-tapia-calvo-fernandez.mdx";
+import { metadata as shanghaiOctavosFavoritosFuera } from "@/content/noticias/shanghai-masters-2026-octavos-favoritos-fuera.mdx";
 
 /**
  * Traducciones EN de los metadatos de cada artículo. Las ES vienen del propio
@@ -449,6 +450,13 @@ const EN_META: Record<string, { title: string; excerpt: string; tags: string[] }
       "The world No. 1s beat Stupa-Sanz 6-2 7-6(5) for their 11th title of 2026, a third consecutive one after the Paris Major and Rotterdam; in the women's draw, Calvo-Fernández (6-3 6-0 in 1h08) avenge their Paris Major final loss to Sánchez-Ustero and claim their second title as a pair.",
     tags: ["Premier Padel", "Germany P2", "Tapia", "Coello", "Calvo", "Fernández", "Stupaczuk", "Jon Sanz"],
   },
+  "shanghai-masters-2026-octavos-favoritos-fuera": {
+    title:
+      "Bergs stuns Alcaraz and Shanghai's round of 16 opens without its big favourite: rackets of the survivors as Tsitsipas awaits Medvedev",
+    excerpt:
+      "The No. 39-ranked Belgian wins 7-5, 7-6(4) against the second seed in the tournament's biggest upset, on a Monday that also took out Fritz, Fils, Lehecka, Tien and defending champion Vacherot. Today: De Minaur–Khachanov, Gea–Mensik, Zverev–Bublik and Davidovich Fokina–Hurkacz; tomorrow: the Tsitsipas–Medvedev meeting.",
+    tags: ["Shanghai Masters", "ATP", "Alcaraz", "Bergs", "Zverev", "Tsitsipas", "Round of 16", "Rackets"],
+  },
 };
 
 /**
@@ -528,6 +536,7 @@ export const ARTICLES: Article[] = [
   localize({ slug: "shanghai-masters-2026-gea-elimina-shelton", ...shanghaiGeaEliminaShelton }),
   localize({ slug: "germany-p2-2026-dia-de-finales", ...germanyP2Finales }),
   localize({ slug: "germany-p2-2026-campeones-coello-tapia-calvo-fernandez", ...germanyP2Campeones }),
+  localize({ slug: "shanghai-masters-2026-octavos-favoritos-fuera", ...shanghaiOctavosFavoritosFuera }),
 ].sort((a, b) => b.date.localeCompare(a.date));
 
 export function getArticle(slug: string): Article | undefined {

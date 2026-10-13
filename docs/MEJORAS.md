@@ -53,19 +53,24 @@
 ### 📰 Actualidad (contenido original y actual)
 
 _Por la Regla 0 del protocolo, si un torneo está en curso este item va primero. Hechos
-verificados a 2026-10-12: **Rolex Shanghai Masters EN MARCHA** (7-18 oct) — el domingo
-11 se jugó la 1ª mitad de los dieciseisavos (R32) con resultados VERIFICADOS contra
-atptour.com/AP/tennisnow: Gea d. Shelton (3) 7-6(5) 7-6(3) (primer top-10 del francés),
-Davidovich Fokina (25) d. Tiafoe (7) 7-6(4) 4-6 7-6(6) salvando MP, Zverev (1) d. Halys
-6-4 6-7(8) 6-3 (19 aces, victoria 60 de 2026), Bublik d. Nakashima (16) 6-7(7) 6-3
-7-6(5) (→ Zverev-Bublik en octavos), Menšík (13) d. F. Cerúndolo 6-3 3-6 6-2 (→
-Gea-Menšík), Hurkacz d. Zhou 6-2 3-6 6-3, de Minaur (9) d. Sakamoto 7-6(6) 6-4,
-Khachanov (26) d. Mannarino 6-2 6-4. HOY lunes 12 se completa el cuadro (Alcaraz-Bergs,
-Medvedev-Svrcina, Tsitsipas-Fritz, Paul-Vacherot, Carreño-FAA, Tien-Ruud, Lehecka-Jodar,
-Fils-van de Zandschulp; OOP oficial atptour.com). Octavos (R16) martes 13-miércoles 14,
-cuartos jueves 15, final domingo 18. Sinner: temporada cerrada (rodilla derecha). Pádel:
-**Milano P1** (10-18 oct) EN MARCHA y arranca el **Wuhan Open (WTA 1000, 12-18 oct)**;
-el China Open femenino (WTA 1000) cerró ayer domingo 11. Antes de escribir, comprobar
+verificados a 2026-10-13: **Rolex Shanghai Masters EN MARCHA (7-18 oct), hoy jornada de
+octavos (R16) de la mitad alta** — lunes 12 completó el cuadro con la BOMBA: Bergs d.
+Alcaraz (2) 7-5 7-6(4) (nº39, 9º ace en la 1ª bola de partido, mayor triunfo de su
+carrera; ABC/AP/enca), Tsitsipas d. Fritz (11) 3-6 7-5 6-3, Paul (15) d. Vacherot (17)
+6-4 6-2 (el campeón defensor de 2025, que entró como nº204, fuera), vdZ d. Fils (8)
+7-5 6-4, Ruud (20) d. Tien (14) 6-4 7-6(3), FAA (4) d. Carreño 6-3 4-6 6-1, Jodar (12)
+d. Lehecka (22) 4-6 7-6(2) 6-4 (40-16, 11º live Race), Medvedev (5) d. Svrcina 6-2 6-3.
+Octavos HOY martes 13: De Miñaur (9)-Khachanov (26), Gea-Menšík (13), noche Zverev
+(1)-Bublik (19) y Davidovich-Hurkacz (puntodebreak OOP); MAÑANA miércoles 14:
+Bergs-Paul (15), Jodar-vdZ, Ruud (20)-FAA (4) y Tsitsipas-Medvedev (5) (gazzetta).
+Cuartos jueves 15, final domingo 18. **Zverev ya es matemáticamente nº1 mundial del
+año 2026** (atptour 11 oct: 1er alemán + más veterano en estrenarse, 29a11m). Sinner:
+temporada cerrada (rodilla derecha). Pádel: **Milano P1 EN MARCHA (12-18 oct, Allianz
+Cloud; oficial milanopremierpadel.com + FIP + Red Bull TV desde cuartos — OJO:
+premierpadel.com homepage muestra fechas 22-30 oct, verificar antes de escribir pieza
+de Milán)** y **Wuhan Open (WTA 1000, 12-18 oct)** en marcha. Raquetas verificadas hoy:
+Khachanov juega **Wilson Defyer 98** (iq.tennis 2026) y Davidovich **Head Extreme MP**
+con Lynx Tour (iq.tennis 2026) — ningún molde en catálogo. Antes de escribir, comprobar
 `src/content/noticias/` para no duplicar temas._
 
 1. [x] **China Open 2026 (ATP 500, EN MARCHA 30 sep-6 oct)** — historia grande y fresca:
@@ -893,6 +898,34 @@ pádel las cubre el cron de palas). Al terminar, actualizar el estado de la fila
 ---
 
 ## Notas (varias noches)
+
+- 2026-10-13 — **Regla 0 (Shanghai Masters EN MARCHA 7-18 oct; jornada de octavos HOY;
+  Milano P1 y Wuhan Open también en curso)**: publicado
+  `shanghai-masters-2026-octavos-favoritos-fuera` (ES+EN, kind novedad, 7
+  relatedProducts con ProductRef/ProductGrid: Gravity Tour Zverev, TFight 305S, Blade
+  98 v10, VCORE 98, EZONE 98, Speed MP, Pure Aero 98). Ángulo: la noche que se llevó a
+  los favoritos — **Bergs d. Alcaraz (2) 7-5 7-6(4)** (nº39, 9º ace en la 1ª bola de
+  partido, la mayor victoria de su carrera; quote de Bergs traducida; Alcaraz venía de
+  ganar Tokio el 6 oct tras meses de baja), Tsitsipas d. Fritz (11) 3-6 7-5 6-3,
+  Paul (15) d. Vacherot (17) 6-4 6-2 (el campeón defensor, que entró en 2025 como
+  nº204, fuera), vdZ d. Fils (8) 7-5 6-4, Ruud (20) d. Tien (14) 6-4 7-6(3), FAA (4)
+  d. Carreño 6-3 4-6 6-1, Jodar (12) d. Lehecka (22) 4-6 7-6(2) 6-4 (40-16 y 11º de la
+  live Race), Medvedev (5) d. Svrcina 6-2 6-3 — + OOP de hoy (De Miñaur-Khachanov,
+  Gea-Menšík, Zverev-Bublik, Davidovich-Hurkacz; puntodebreak) y de mañana
+  (Tsitsipas-Medvedev confirmado por gazzetta) + **Zverev nº1 mundial del año 2026**
+  (atptour 11 oct: 1er alemán y más veterano en estrenarse). Fuentes: ABC/AP, Newsday,
+  enca, perfect-tennis, puntodebreak, atptour, gazzetta, tennistemple, iq.tennis.
+  Tabla de demanda real: no se tocó (todo ✓; Gea ya tenía página de ayer). DATOS NUEVOS
+  de gear sin ficha en catálogo (anotados para el cron de palas): **Wilson Defyer 98 de
+  Khachanov** e **Head Extreme MP de Davidovich** (ambos iq.tennis 2026; no hay molde
+  retail en catálogo). HUECOS conocidos que siguen: Ultra Pro 99 de De Miñaur y Diadem
+  Project Bublik 98. OJO MILANO P1: fechas conflictivas entre fuentes (oficial
+  milanopremierpadel.com + FIP + Red Bull: 12-18 oct; homepage de premierpadel.com:
+  22-30 oct) — verificar antes de escribir cualquier pieza sobre Milán. Build +
+  check:translations OK; /es y /en 200 con título, 7 ProductRefs ×3 (ref + grid +
+  imagen), Callouts, JSON-LD Article y enlaces internos sin doble prefijo verificados
+  en HTML servido; listado /es/noticias incluye el slug. Sin screenshot (cambio de
+  contenido, no visual).
 
 - 2026-10-11 — **Regla 0 (Germany P2 EN MARCHA 4-11 oct; FINALES HOY domingo 11
   desde las 14:00 h españolas; Shanghai Masters también en curso)**: publicado
