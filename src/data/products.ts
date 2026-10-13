@@ -3404,6 +3404,32 @@ export const PRODUCTS: Product[] = [
     descriptionEn:
       "The Comfort version of the tenth-anniversary Hack: same high-balance diamond (26.5 cm) and offensive DNA as Paquito Navarro's Hack 05, but with a Fibrix frame — a hybrid fibre more flexible than carbon — and a dual-density MultiEVA core for an intermediate feel that protects the arm. It weighs 360-370 g, about five less than the standard model, and keeps the 3D Grain roughness over 522 cm² with Air Power, ExoAir, VibraDrive, Ease Vibe and Custom Weight technologies to fine-tune the balance.",
   },
+  // ============ PÁDEL — NOX AT10 PRO CUP 2027 ============
+  {
+    id: "nox-at10-pro-cup-hard-2027",
+    sport: "padel",
+    brand: "Nox",
+    model: "AT10 Pro Cup Hard 2027 by Agustín Tapia",
+    year: 2027,
+    price: 199.99,
+    image: "/images/rackets/nox-at10-pro-cup-hard-2027.svg",
+    level: ["intermedio", "avanzado"],
+    style: ["potencia", "polivalente"],
+    player: "Agustín Tapia",
+    padel: {
+      shape: "lagrima",
+      weight: "360-375 g",
+      balance: "medio",
+      core: "HR3 Hard EVA",
+      faces: "Fibra de vidrio aluminizada",
+      surface: "rugosa",
+      hardness: "dura",
+    },
+    description:
+      "La renovación 2027 de la Classic Series de Nox: el lágrima de 360-375 g con balance medio y marco 100% carbono que popularizó el molde de Agustín Tapia en 2025, ahora con caras de fibra de vidrio aluminizada y el nuevo acabado Exclusive Spin sectorizado, que combina relieve 3D y arena de silicio por zonas para ganar agarre en los efectos. El núcleo HR3 Hard EVA conserva ese tacto firme y reactivo que la distingue de su hermana Soft, el Pulse System filtra vibraciones y el EOS Flap mantiene la agilidad en el swing. La forma más accesible de jugar con el molde de Tapia en la colección 2027, sin pagar la gama Genius.",
+    descriptionEn:
+      "The 2027 refresh of Nox's Classic Series: the 360-375 g teardrop with medium balance and 100% carbon frame that made Agustín Tapia's mold famous in 2025, now with aluminised fibreglass faces and the new sectorised Exclusive Spin finish, which combines 3D relief and silicon sand in zones for extra grip on spin. The HR3 Hard EVA core keeps the firm, reactive feel that sets it apart from its Soft sibling, the Pulse System filters vibrations and the EOS Flap keeps the swing agile. The most accessible way to play with Tapia's mold in the 2027 collection, without paying for the Genius range.",
+  },
 ];
 
 export function getProduct(id: string) {
