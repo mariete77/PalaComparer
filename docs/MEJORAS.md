@@ -73,6 +73,20 @@ Khachanov juega **Wilson Defyer 98** (iq.tennis 2026) y Davidovich **Head Extrem
 con Lynx Tour (iq.tennis 2026) — ningún molde en catálogo. Antes de escribir, comprobar
 `src/content/noticias/` para no duplicar temas._
 
+1. [x] **Milano P1 2026 (Premier Padel, EN MARCHA 12-18 oct, Allianz Cloud)** — pieza
+   Regla 0 de HOY (miércoles 14 = 2ª jornada de dieciseisavos): ángulo de material "los
+   cabezas de serie debutan en el Allianz Cloud" + repaso del cuadro. Datos verificados en
+   el PDF oficial del cuadro (milanopremierpadel.com + padelfip.com): men 48 parejas /
+   women 28, top-4 femeninas exentas (debutan en octavos del jueves), seeds y puntos FIP
+   (Tapia-Coello 39.822 / Galán-Chingotto 35.446; top femenino Triay-Brea 31.902), premios
+   479.068 €, 1.000 pts al campeón, martes: fuera Jofre-Esbrí (12) ante Diestro-Sintes,
+   Salazar-Osoro 6-0 6-3 y Velasco-Eugenio eliminan a Guinart-Alonso (7). — **HECHO
+   2026-10-14**: artículo `milano-p1-2026-palas-cabezas-de-serie` (ES+EN, kind novedad,
+   8 relatedProducts: AT10 Genius 18K, Coello Pro, Metalbone, Neuron 02, Electra Pro IT 26,
+   Viper 3.0, Arrow HIT Light, Elite 02). Archivos:
+   src/content/noticias/{,en/}milano-p1-2026-palas-cabezas-de-serie.mdx, src/data/news.ts.
+   Build + check:translations OK.
+
 1. [x] **China Open 2026 (ATP 500, EN MARCHA 30 sep-6 oct)** — historia grande y fresca:
    Djokovic vuelve a Pekín 11 años después con 30-0 imbatido (6 títulos en 6 visitas),
    estrena su regreso ganando a Borges 6-3 7-6(2) (primer partido desde Wimbledon) y
@@ -898,6 +912,15 @@ pádel las cubre el cron de palas). Al terminar, actualizar el estado de la fila
 ---
 
 ## Notas (varias noches)
+
+- 2026-10-14 — **Regla 0 (Milano P1 EN MARCHA; Shanghai Masters sigue hasta el 18)**:
+  publicado `milano-p1-2026-palas-cabezas-de-serie` (ES+EN) con el debut de los cuatro
+  primeros cabezas de serie del miércoles y las palas del cuadro. Estado para el cron de
+  noticias del lunes: final de Milán domingo 18 (15:00 local) y final de Shanghai el 18;
+  octavos de Milán jueves 15 (debutan Triay-Brea, Josemaría-Bea González, Sánchez-Ustero
+  y Fernández-Calvo), cuartos viernes 16 (desde 9:00), semifinales sábado 17 (desde 14:00).
+  HUECOS: ninguno nuevo; para el cron de palas sigue abierta la Gravity Tour estándar
+  (no-Zverev) anotada el 14 sep. Tabla de demanda real: no se tocó (todo ✓).
 
 - 2026-10-13 — **Regla 0 (Shanghai Masters EN MARCHA 7-18 oct; jornada de octavos HOY;
   Milano P1 y Wuhan Open también en curso)**: publicado
