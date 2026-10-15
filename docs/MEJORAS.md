@@ -73,6 +73,37 @@ Khachanov juega **Wilson Defyer 98** (iq.tennis 2026) y Davidovich **Head Extrem
 con Lynx Tour (iq.tennis 2026) — ningún molde en catálogo. Antes de escribir, comprobar
 `src/content/noticias/` para no duplicar temas._
 
+Hechos verificados a 2026-10-15 (para la noche del 15→16): **Milano P1 EN MARCHA hasta
+el 18** — los octavos son hoy jueves 15 (artículo hecho, ver item siguiente); el viernes
+16 se juegan los cuartos y el sábado 17 las semifinales, con el posible Galán-Chingotto
+vs Lebrón-Augsburger (misma mitad del cuadro) en el horizonte — la noche del 16→17 debería
+escribir cuartos/semis. **Shanghai Masters EN MARCHA (7-18 oct)**: cuartos hoy jueves 15,
+semis el viernes 16 y final el domingo 18 — verificar resultados en atptour.com /
+puntodebreak antes de escribir. Tabla de demanda real: todo ✓.
+
+1. [x] **Milano P1 2026 — jornada de octavos (EN MARCHA 12-18 oct, Allianz Cloud)** —
+   pieza Regla 0 de HOY jueves 15: los 15 octavos entre central y pista 1 desde las 9:30
+   (OOP oficial FIP), debut de las cuatro primeras parejas femeninas y ángulo de material
+   doble: **el fortín de Galán** (4 ediciones, 4 finales y 3 títulos en Milán: 2022 y 2023
+   con Lebrón, subcampeón en 2024, campeón en 2025 con Chingotto) ante la pareja
+   revelación Gil-Valenzuela, y **las seis campeonas del torneo** (Brea/Bea González 2023,
+   Triay/Claudia Fernández 2024, Ari Sánchez/Josemaría 2025) repartidas en las cuatro
+   primeras parejas de hoy. — **HECHO 2026-10-15**: artículo
+   `milano-p1-2026-octavos-fortin-galan` (ES+EN, kind novedad, 11 relatedProducts: AT10
+   Genius 18K, Coello Pro, Metalbone 2026, Neuron 02, Viper 3.0, EA10 Ventus, Electra Pro
+   IT 26, Elite 02 2027, Vertex 05 Woman, Arrow HIT Light, Wonder 2027). Datos verificados:
+   nota oficial premierpadel.com del miércoles (los cuatro primeros seeds 2-0; Gil-Valenzuela
+   d. Tello-Arce 2-6 6-3 7-6 en 2h18; Icardo vuelve tras París/Róterdam/Alemania;
+   Borrero-Navarro fuera por lesión de Navarro → Ortega-Araújo (5) a cuartos), OOP oficial
+   del jueves 15 (PDF FIP), artículo FIP "día 3" (horarios: Josemaría-Bea no antes de
+   18:00; italianas Dal Pozzo y Orsi en liza) y padeladdict (historial de campeones
+   2022-2025, Galán en las 4 finales, Lebrón 2 semis seguidas en Milán, 9:30 CEST / 04:30
+   ARG, pista 1 no antes de 17:00). Archivos: src/content/noticias/{,en/}
+   milano-p1-2026-octavos-fortin-galan.mdx, src/data/news.ts. Build +
+   check:translations OK; /es y /en a 200 en local con 33 enlaces a producto y el listado
+   verificados; screenshot docs/screenshots/2026-10-15-milano-p1-octavos-fortin-galan.png
+   (1080×486, 5.498 colores únicos, sin visión: verificado por píxeles).
+
 1. [x] **Milano P1 2026 (Premier Padel, EN MARCHA 12-18 oct, Allianz Cloud)** — pieza
    Regla 0 de HOY (miércoles 14 = 2ª jornada de dieciseisavos): ángulo de material "los
    cabezas de serie debutan en el Allianz Cloud" + repaso del cuadro. Datos verificados en

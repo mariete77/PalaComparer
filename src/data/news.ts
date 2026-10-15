@@ -95,6 +95,7 @@ import { metadata as germanyP2Finales } from "@/content/noticias/germany-p2-2026
 import { metadata as germanyP2Campeones } from "@/content/noticias/germany-p2-2026-campeones-coello-tapia-calvo-fernandez.mdx";
 import { metadata as shanghaiOctavosFavoritosFuera } from "@/content/noticias/shanghai-masters-2026-octavos-favoritos-fuera.mdx";
 import { metadata as milanoP1Cabezas } from "@/content/noticias/milano-p1-2026-palas-cabezas-de-serie.mdx";
+import { metadata as milanoP1Octavos } from "@/content/noticias/milano-p1-2026-octavos-fortin-galan.mdx";
 
 /**
  * Traducciones EN de los metadatos de cada artículo. Las ES vienen del propio
@@ -458,6 +459,13 @@ const EN_META: Record<string, { title: string; excerpt: string; tags: string[] }
       "The Oysho Milano P1 (October 12-18, Allianz Cloud, €479,068) completes its round of 32 today with the debuts of the top four men's seeds — Tapia-Coello, Galán-Chingotto, Augsburger-Lebrón and Stupa-Sanz. A look at the draw after Tuesday's early scare, and the real rackets of the favourites, all listed in our catalog.",
     tags: ["Premier Padel", "Milano P1", "Tapia", "Coello", "Galán", "Chingotto", "Triay", "Ari Sánchez"],
   },
+  "milano-p1-2026-octavos-fortin-galan": {
+    title:
+      "Milano P1 2026: Galán's fortress and the six champions on round-of-16 day at the Allianz Cloud",
+    excerpt:
+      "Thursday brings all 15 round-of-16 matches at the Oysho Milano P1 from 9:30, with the women's top four pairs debuting: all six past champions in Milan play on the same day. Galán, with three titles from four finals, defends his court against the breakthrough pair, Gil-Valenzuela.",
+    tags: ["Premier Padel", "Milano P1", "Galán", "Chingotto", "Tapia", "Coello", "Triay", "Brea", "Ari Sánchez"],
+  },
   "shanghai-masters-2026-octavos-favoritos-fuera": {
     title:
       "Bergs stuns Alcaraz and Shanghai's round of 16 opens without its big favourite: rackets of the survivors as Tsitsipas awaits Medvedev",
@@ -546,6 +554,7 @@ export const ARTICLES: Article[] = [
   localize({ slug: "germany-p2-2026-campeones-coello-tapia-calvo-fernandez", ...germanyP2Campeones }),
   localize({ slug: "shanghai-masters-2026-octavos-favoritos-fuera", ...shanghaiOctavosFavoritosFuera }),
   localize({ slug: "milano-p1-2026-palas-cabezas-de-serie", ...milanoP1Cabezas }),
+  localize({ slug: "milano-p1-2026-octavos-fortin-galan", ...milanoP1Octavos }),
 ].sort((a, b) => b.date.localeCompare(a.date));
 
 export function getArticle(slug: string): Article | undefined {
