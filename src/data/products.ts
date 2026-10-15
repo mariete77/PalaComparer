@@ -3231,6 +3231,30 @@ export const PRODUCTS: Product[] = [
       "Sanyo Gutiérrez's signature racket: a new hybrid mold with a wide sweet spot and a versatile character, an 18K Carbon Hybrid face over medium-touch M-Eva Balance rubber that balances power, control and comfort. Its big novelty is the Power Balance system: interchangeable rubbers built into the profile to tune the balance to your game, alongside Aero Drive (faster swing), V-Force Bridge, Hexa Cell and A-Shock vibration damping. Spin Boost Tech roughness and a longer handgrip, finished in white, black and gold. Made in Spain for pro and semi-pro players who want total adaptability on court.",
   },
   {
+    id: "starvie-metheora-plus-2027",
+    sport: "padel",
+    brand: "StarVie",
+    model: "Metheora+",
+    year: 2027,
+    price: 270,
+    image: "/images/rackets/starvie-metheora-plus-2027.svg",
+    level: ["intermedio"],
+    style: ["polivalente"],
+    padel: {
+      shape: "hibrida",
+      weight: "350-370 g",
+      balance: "medio",
+      core: "M-Eva Balance",
+      faces: "12K Carbon Hyper",
+      surface: "rugosa",
+      hardness: "media",
+    },
+    description:
+      "La Metheora+ renueva el clásico de StarVie con un molde híbrido nuevo y balance medio, pensado para jugar versátil: punto dulce amplio y transición cómoda entre defensa y ataque. El plano 12K Carbon Hyper es más ligero y sensible que el 18K y ensancha la zona de golpeo, sobre goma M-Eva Balance de tacto firme y equilibrado. Precision Bridge y Core Axis refuerzan el corazón, la superficie rugosa Spin Boost Tech muerde para generar efecto y el Longer Handgrip con Z-shock remata el confort. Fabricada en España para jugadores intermedios que buscan una pala adaptable.",
+    descriptionEn:
+      "The Metheora+ renews StarVie's classic with a new hybrid mould and medium balance built for versatile play: a wide sweet spot and comfortable transitions between defence and attack. Its 12K Carbon Hyper face is lighter and more sensitive than 18K and widens the hitting zone, over an M-Eva Balance rubber with a firm, balanced touch. Precision Bridge and Core Axis reinforce the heart, the rough Spin Boost Tech surface bites to generate spin, and the Longer Handgrip with Z-shock rounds off the comfort. Made in Spain for intermediate players looking for an adaptable racket.",
+  },
+  {
     id: "bullpadel-flow-2027",
     sport: "padel",
     brand: "Bullpadel",
