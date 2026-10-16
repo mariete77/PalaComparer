@@ -96,6 +96,7 @@ import { metadata as germanyP2Campeones } from "@/content/noticias/germany-p2-20
 import { metadata as shanghaiOctavosFavoritosFuera } from "@/content/noticias/shanghai-masters-2026-octavos-favoritos-fuera.mdx";
 import { metadata as milanoP1Cabezas } from "@/content/noticias/milano-p1-2026-palas-cabezas-de-serie.mdx";
 import { metadata as milanoP1Octavos } from "@/content/noticias/milano-p1-2026-octavos-fortin-galan.mdx";
+import { metadata as shanghaiCuartosJodar } from "@/content/noticias/shanghai-masters-2026-zverev-semis-jodar-medvedev.mdx";
 
 /**
  * Traducciones EN de los metadatos de cada artículo. Las ES vienen del propio
@@ -473,6 +474,13 @@ const EN_META: Record<string, { title: string; excerpt: string; tags: string[] }
       "The No. 39-ranked Belgian wins 7-5, 7-6(4) against the second seed in the tournament's biggest upset, on a Monday that also took out Fritz, Fils, Lehecka, Tien and defending champion Vacherot. Today: De Minaur–Khachanov, Gea–Mensik, Zverev–Bublik and Davidovich Fokina–Hurkacz; tomorrow: the Tsitsipas–Medvedev meeting.",
     tags: ["Shanghai Masters", "ATP", "Alcaraz", "Bergs", "Zverev", "Tsitsipas", "Round of 16", "Rackets"],
   },
+  "shanghai-masters-2026-zverev-semis-jodar-medvedev": {
+    title:
+      "Shanghai Masters: Zverev reaches the semi-finals; on Friday, Jodar and Medvedev chase the other two",
+    excerpt:
+      "The German books his third Shanghai semi-final (6-4, 6-4 over De Minaur, with 10 aces) and will face Davidovich Fokina, who advanced after Gea retired injured. Two quarter-finals remain on Friday: Jodar, aged 20, chases the youngest semi-final spot in tournament history; Medvedev, the only former champion left, leads his head-to-head with Paul 4-1.",
+    tags: ["Shanghai Masters", "ATP", "Zverev", "Davidovich Fokina", "Jodar", "Medvedev", "Tommy Paul", "Rackets"],
+  },
 };
 
 /**
@@ -555,6 +563,7 @@ export const ARTICLES: Article[] = [
   localize({ slug: "shanghai-masters-2026-octavos-favoritos-fuera", ...shanghaiOctavosFavoritosFuera }),
   localize({ slug: "milano-p1-2026-palas-cabezas-de-serie", ...milanoP1Cabezas }),
   localize({ slug: "milano-p1-2026-octavos-fortin-galan", ...milanoP1Octavos }),
+  localize({ slug: "shanghai-masters-2026-zverev-semis-jodar-medvedev", ...shanghaiCuartosJodar }),
 ].sort((a, b) => b.date.localeCompare(a.date));
 
 export function getArticle(slug: string): Article | undefined {

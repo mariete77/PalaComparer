@@ -1711,7 +1711,7 @@ export const PRODUCTS: Product[] = [
     image: "/images/rackets/yonex-vcore-98-2026.svg",
     level: ["avanzado"],
     style: ["control", "potencia"],
-    player: "Hubert Hurkacz / Elena Rybakina / Brandon Nakashima",
+    player: "Hubert Hurkacz / Elena Rybakina / Brandon Nakashima / Tommy Paul",
     tenis: {
       headSize: 98,
       weightStrung: 321,

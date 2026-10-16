@@ -81,6 +81,40 @@ escribir cuartos/semis. **Shanghai Masters EN MARCHA (7-18 oct)**: cuartos hoy j
 semis el viernes 16 y final el domingo 18 — verificar resultados en atptour.com /
 puntodebreak antes de escribir. Tabla de demanda real: todo ✓.
 
+Hechos verificados a 2026-10-16 (para la noche del 16→17): **Shanghai Masters (7-18 oct)** —
+los cuartos van repartidos: el jueves jugó la mitad alta (Zverev d. De Miñaur 6-4 6-4 en 78
+min; Davidovich d. Gea 4-1 RET por lesión en el psoas) y HOY viernes se juegan los otros dos
+(Jodar–Ruud no antes de 14:30 local / 08:30 España; Medvedev–Paul no antes de 18:00 / 12:00 —
+OOP oficial rolexshanghaimasters.com). **Primera semifinal ya firme: Zverev–Davidovich, sábado
+17; final domingo 18.** La pieza de mañana = previa de las semis con los resultados de hoy
+(verificar en atptour.com antes de escribir). **Milano P1 (12-18 oct)**: ayer se completaron los
+octavos (Tapia-Coello, Galán-Chingotto —dobles 6-1—, Lebrón-Augsburger, Stupa-Sanz,
+Alfonso-Libaak, Guerrero-Leal, Garrido-De Pascual y Momo-Campagnolo, a cuartos; fuera
+Di Nenno-Paquito y Yanguas-Lijó; resultados completos en elneverazo) y hoy viernes se juegan
+los cuartos — candidata natural de Regla 0 para la noche del 16→17 (cuartos/semis; semis sábado
+17, final domingo 18). Tabla de demanda real: todo ✓; Tommy Paul estrena página.
+
+1. [x] **Shanghai Masters 2026 — cuartos partidos: Zverev ya está en semis (EN MARCHA 7-18 oct)** —
+   pieza Regla 0 de HOY viernes 16: el jueves se jugó la mitad alta (Zverev d. De Miñaur 6-4 6-4,
+   78 min, 10 aces; Davidovich d. Gea por retirada a 4-1) y este viernes se deciden las otras dos
+   plazas: Jodar busca con 20 años ser el semifinalista más joven de la historia del torneo ante
+   Ruud, y Medvedev —único ex campeón vivo, H2H 4-1— mide a Paul. — **HECHO 2026-10-16**:
+   artículo `shanghai-masters-2026-zverev-semis-jodar-medvedev` (ES+EN, kind novedad, 5
+   relatedProducts: Gravity Tour Zverev, Speed MP 2026, TFight 305S, VCORE 98, EZONE 98) + alta
+   verificada de **Tommy Paul** en el campo `player` de la VCORE 98 2026 (yonex.com «Equipment
+   Used: VCORE 98» + tennisexpress, 8th gen) → nueva página /jugadores/tommy-paul. Datos:
+   crónica oficial ATP (78 min, 10 aces, 80% de puntos con el primer saque 35/44, H2H 9-4,
+   retirada de Gea por psoas a 4-1, 4ª semifinal de Masters 1000 de Foki), Talking Points ATP
+   del viernes (Jodar: más joven de la historia con 20a1m si gana [récord de Tsitsipas, 21a2m];
+   nº9 de la Race si gana; 41-16; 9-2 ante top-30 desde julio. Ruud: completa los cuartos en
+   los 9 Masters 1000; primer escandinavo en semis de Shanghái si gana. Medvedev: 17-5 en
+   Shanghái, 10-1 en China, 70ª semifinal ATP / 19ª de Masters 1000. Paul: tercer americano en
+   semis de Shanghái si gana; 16-33 vs top-10 pero ganó a Zverev en Cincinnati) y calendario
+   oficial (semis sábado 17; final domingo 18). Archivos: src/content/noticias/{,en/}
+   shanghai-masters-2026-zverev-semis-jodar-medvedev.mdx, src/data/news.ts,
+   src/data/products.ts. Build + check:translations OK; /es y /en 200 con enlaces verificados;
+   screenshot docs/screenshots/2026-10-16-shanghai-cuartos.png.
+
 1. [x] **Milano P1 2026 — jornada de octavos (EN MARCHA 12-18 oct, Allianz Cloud)** —
    pieza Regla 0 de HOY jueves 15: los 15 octavos entre central y pista 1 desde las 9:30
    (OOP oficial FIP), debut de las cuatro primeras parejas femeninas y ángulo de material
@@ -943,6 +977,20 @@ pádel las cubre el cron de palas). Al terminar, actualizar el estado de la fila
 ---
 
 ## Notas (varias noches)
+
+- 2026-10-16 — **Regla 0 (Shanghai Masters: cuartos partidos; Milano P1 también en marcha)**:
+  publicada `shanghai-masters-2026-zverev-semis-jodar-medvedev` (ES+EN) con los cuartos del
+  jueves (Zverev a semifinales por primera vez desde 2019; Davidovich por la retirada de Gea)
+  y la previa de los dos cuartos de hoy (Jodar–Ruud, Medvedev–Paul). Alta verificada de
+  **Tommy Paul** en la VCORE 98 2026 (yonex.com + tennisexpress) → /jugadores/tommy-paul.
+  **Calendario real confirmado**: los cuartos de Shanghái se repartieron jueves/viernes (la
+  nota del 15 decía "cuartos jueves": era solo la mitad alta); semis sábado 17 con
+  Zverev–Davidovich; final domingo 18. **Milano P1**: octavos completados el jueves
+  (Tapia-Coello, Galán-Chingotto —dobles 6-1—, Lebrón-Augsburger y Stupa-Sanz entre los 8
+  cuartofinalistas de hoy viernes) — candidata a Regla 0 de la noche del 16→17. HUECOS que
+  siguen: Ultra Pro 99 de De Miñaur, Diadem Project Bublik 98, Defyer 98 de Khachanov,
+  Extreme MP de Davidovich, EZONE 100 de Ruud y Gravity Tour estándar (no-Zverev). Tabla de
+  demanda real: no se tocó (todo ✓; Paul, nuevo candidato a vigilar en Search Console).
 
 - 2026-10-14 — **Regla 0 (Milano P1 EN MARCHA; Shanghai Masters sigue hasta el 18)**:
   publicado `milano-p1-2026-palas-cabezas-de-serie` (ES+EN) con el debut de los cuatro
