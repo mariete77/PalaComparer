@@ -97,6 +97,7 @@ import { metadata as shanghaiOctavosFavoritosFuera } from "@/content/noticias/sh
 import { metadata as milanoP1Cabezas } from "@/content/noticias/milano-p1-2026-palas-cabezas-de-serie.mdx";
 import { metadata as milanoP1Octavos } from "@/content/noticias/milano-p1-2026-octavos-fortin-galan.mdx";
 import { metadata as shanghaiCuartosJodar } from "@/content/noticias/shanghai-masters-2026-zverev-semis-jodar-medvedev.mdx";
+import { metadata as milanoP1Cuartos } from "@/content/noticias/milano-p1-2026-cuartos-galan-lebron.mdx";
 
 /**
  * Traducciones EN de los metadatos de cada artículo. Las ES vienen del propio
@@ -481,6 +482,13 @@ const EN_META: Record<string, { title: string; excerpt: string; tags: string[] }
       "The German books his third Shanghai semi-final (6-4, 6-4 over De Minaur, with 10 aces) and will face Davidovich Fokina, who advanced after Gea retired injured. Two quarter-finals remain on Friday: Jodar, aged 20, chases the youngest semi-final spot in tournament history; Medvedev, the only former champion left, leads his head-to-head with Paul 4-1.",
     tags: ["Shanghai Masters", "ATP", "Zverev", "Davidovich Fokina", "Jodar", "Medvedev", "Tommy Paul", "Rackets"],
   },
+  "milano-p1-2026-cuartos-galan-lebron": {
+    title:
+      "Milano P1: quarter-finals without upsets, and a Galán-Lebrón clash of champions in the semis",
+    excerpt:
+      "The top eight seeds all made it through at the Allianz Cloud. Tapia-Coello took their Pretoria revenge in 59 minutes (6-2 6-2) and chase a fourth straight title against Stupa-Sanz; defending champions Galán and Chingotto face Lebrón and Augsburger. In the women's draw, Triay-Brea meet Sánchez-Ustero again and Calvo-Fernández take on Josemaría-Bea.",
+    tags: ["Premier Padel", "Milano P1", "Galán", "Lebrón", "Tapia", "Coello", "Triay", "Brea", "Calvo", "Fernández"],
+  },
 };
 
 /**
@@ -564,6 +572,7 @@ export const ARTICLES: Article[] = [
   localize({ slug: "milano-p1-2026-palas-cabezas-de-serie", ...milanoP1Cabezas }),
   localize({ slug: "milano-p1-2026-octavos-fortin-galan", ...milanoP1Octavos }),
   localize({ slug: "shanghai-masters-2026-zverev-semis-jodar-medvedev", ...shanghaiCuartosJodar }),
+  localize({ slug: "milano-p1-2026-cuartos-galan-lebron", ...milanoP1Cuartos }),
 ].sort((a, b) => b.date.localeCompare(a.date));
 
 export function getArticle(slug: string): Article | undefined {

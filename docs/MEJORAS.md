@@ -94,6 +94,38 @@ Di Nenno-Paquito y Yanguas-Lijó; resultados completos en elneverazo) y hoy vier
 los cuartos — candidata natural de Regla 0 para la noche del 16→17 (cuartos/semis; semis sábado
 17, final domingo 18). Tabla de demanda real: todo ✓; Tommy Paul estrena página.
 
+Hechos verificados a 2026-10-17 (para la noche del 17→18): **Milano P1 (12-18 oct)** — cuartos
+del viernes 16 sin sorpresas (las 8 primeras cabezas de serie a semis: Tapia-Coello 6-2 6-2 a
+Guerrero-Leal en 59′, Stupa-Sanz 6-3 6-4 a Momo-Campagnolo, Galán-Chingotto 6-3 7-6(4) a
+Alfonso-Libaak, Lebrón-Augsburger 7-6(1) 6-3 a Garrido-De Pascual; Triay-Brea 6-2 7-6(4) a
+Velasco-Eugenio, Sánchez-Ustero 6-4 6-3 a Salazar-Osoro [despedida de Salazar en Italia],
+Calvo-Fernández 6-1 6-2 a Ortega-Araújo, Josemaría-Bea 6-1 RET por lesión de Icardo).
+Semifinales HOY sábado 17 desde las 14:00 (Triay-Brea–Sánchez/Ustero; Tapia-Coello–Stupa/Sanz;
+no antes de 18:00 Fernández-Calvo–Josemaría/Bea; Augsburger-Lebrón–Galán/Chingotto); final
+domingo 18 a las 15:00 — la noche del 17→18 debe cerrar el torneo (previa de finales con las
+semis del sábado ya resueltas). **Shanghai Masters** — semis HOY sábado 17: Zverev–Davidovich
+Fokina y Medvedev–Jodar (el español batió a Ruud 4-6 6-4 6-3 y el ruso a Paul 6-3 1-6 6-3;
+final domingo 18) — verificar en atptour.com antes de escribir. Tabla de demanda real: todo ✓.
+
+1. [x] **Milano P1 2026 — cuartos resueltos y semifinales de campeones (EN MARCHA 12-18 oct)** —
+   pieza Regla 0 de HOY sábado 17: jornada de cuartos sin sobresaltos y semifinales 'perfectas'
+   (las 8 primeras cabezas de serie), con el duelo Galán–Lebrón (los dos jugadores más laureados
+   de Milán: 3 y 2 títulos) y Tapia-Coello persiguiendo el cuarto título seguido ante Stupa-Sanz. —
+   **HECHO 2026-10-17**: artículo `milano-p1-2026-cuartos-galan-lebron` (ES+EN, kind novedad, 12
+   relatedProducts: AT10 Genius 18K, Coello Pro, Electra Pro IT 26, Axion Attack 2.0, Metalbone
+   2026, Neuron 02, Viper 3.0 Lebrón, Arrow HIT Light, Elite 02 2027, Vertex 05 Woman, Wonder 2027,
+   Pearl 2026). Datos verificados: nota oficial premierpadel.com del 16 oct (Calvo-Fernández vs sus
+   excompañeras, 6-1 6-2 en 1h07; Salazar, último partido como profesional en Italia + trofeo
+   «gracias»; 59′ de Tapia-Coello; Sánchez-Ustero 2 títulos en los últimos 3 torneos), padeladdict
+   (resultados de cuartos y «nuevo Lebrón vs Galán») y elneverazo (dígitos de tie-breaks + OOP de
+   semis). Contexto interno ya verificado: Stupa-Sanz suman 3 finales seguidas perdidas
+   (Lyon/Róterdam/Düsseldorf) y son los verdugos de Chingalán en cuartos de Róterdam y semis de
+   Düsseldorf; Tapia-Coello llevan 11 títulos de 2026 y 70-7. Archivos: src/content/noticias/{,en/}
+   milano-p1-2026-cuartos-galan-lebron.mdx, src/data/news.ts. Build + check:translations OK; /es y
+   /en a 200; 12 páginas /jugadores y enlaces internos y de producto verificados a 200; screenshot
+   docs/screenshots/2026-10-17-milano-p1-cuartos-galan-lebron.png (1080×486, 33.224 colores
+   únicos, sin visión: verificado por DOM + píxeles).
+
 1. [x] **Shanghai Masters 2026 — cuartos partidos: Zverev ya está en semis (EN MARCHA 7-18 oct)** —
    pieza Regla 0 de HOY viernes 16: el jueves se jugó la mitad alta (Zverev d. De Miñaur 6-4 6-4,
    78 min, 10 aces; Davidovich d. Gea por retirada a 4-1) y este viernes se deciden las otras dos
