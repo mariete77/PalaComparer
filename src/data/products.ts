@@ -3454,6 +3454,32 @@ export const PRODUCTS: Product[] = [
     descriptionEn:
       "The 2027 refresh of Nox's Classic Series: the 360-375 g teardrop with medium balance and 100% carbon frame that made Agustín Tapia's mold famous in 2025, now with aluminised fibreglass faces and the new sectorised Exclusive Spin finish, which combines 3D relief and silicon sand in zones for extra grip on spin. The HR3 Hard EVA core keeps the firm, reactive feel that sets it apart from its Soft sibling, the Pulse System filters vibrations and the EOS Flap keeps the swing agile. The most accessible way to play with Tapia's mold in the 2027 collection, without paying for the Genius range.",
   },
+  // ============ PÁDEL — NOX VK10 (ARANZAZU OSORO) ============
+  {
+    id: "nox-vk10-ventus-control-12k-2026",
+    sport: "padel",
+    brand: "Nox",
+    model: "VK10 Ventus Control 12K by Aranzazu Osoro",
+    year: 2026,
+    price: 299.99,
+    image: "/images/rackets/nox-vk10-ventus-control-12k-2026.svg",
+    level: ["avanzado", "profesional"],
+    style: ["control"],
+    player: "Aranzazu Osoro",
+    padel: {
+      shape: "redonda",
+      weight: "360-375 g",
+      balance: "bajo",
+      core: "MLD Black Eva",
+      faces: "Carbono 12K",
+      surface: "rugosa",
+      hardness: "media",
+    },
+    description:
+      "La pala de Aranzazu Osoro, «la Vikinga», en la colección Luxury 2026 de Nox: molde nuevo más aerodinámico y formato redondo con balance bajo (~251 mm), el punto dulce más amplio de la gama y control total desde el fondo de la pista. Caras de carbono 12K sobre núcleo MLD Black Eva multicapa —densidades distintas para que la bola salga fácil en defensa y con pegada en el remate—, superficie Dual Spin de doble rugosidad (relieve 3D + arenado) y Pulse System para filtrar vibraciones. Con 360-375 g es de las palas de jugador más manejables de Nox: control y colocación para jugadores avanzados que dominan el punto a base de paciencia.",
+    descriptionEn:
+      "Aranzazu Osoro's racket — 'La Vikinga' — in Nox's 2026 Luxury collection: a new, more aerodynamic mould in a round shape with a low balance (~251 mm), the widest sweet spot in the range and total control from the back of the court. 12K carbon faces over a multi-layer MLD Black Eva core — different densities so the ball flows easily in defence and punches on the smash — plus a Dual Spin surface with double roughness (3D relief + sand finish) and Pulse System to filter vibrations. At 360-375 g it is one of the most manageable player rackets in Nox's catalogue: control and placement for advanced players who win points through patience.",
+  },
 ];
 
 export function getProduct(id: string) {
