@@ -98,6 +98,7 @@ import { metadata as milanoP1Cabezas } from "@/content/noticias/milano-p1-2026-p
 import { metadata as milanoP1Octavos } from "@/content/noticias/milano-p1-2026-octavos-fortin-galan.mdx";
 import { metadata as shanghaiCuartosJodar } from "@/content/noticias/shanghai-masters-2026-zverev-semis-jodar-medvedev.mdx";
 import { metadata as milanoP1Cuartos } from "@/content/noticias/milano-p1-2026-cuartos-galan-lebron.mdx";
+import { metadata as milanoP1Finales } from "@/content/noticias/milano-p1-2026-dia-de-finales.mdx";
 
 /**
  * Traducciones EN de los metadatos de cada artículo. Las ES vienen del propio
@@ -489,6 +490,13 @@ const EN_META: Record<string, { title: string; excerpt: string; tags: string[] }
       "The top eight seeds all made it through at the Allianz Cloud. Tapia-Coello took their Pretoria revenge in 59 minutes (6-2 6-2) and chase a fourth straight title against Stupa-Sanz; defending champions Galán and Chingotto face Lebrón and Augsburger. In the women's draw, Triay-Brea meet Sánchez-Ustero again and Calvo-Fernández take on Josemaría-Bea.",
     tags: ["Premier Padel", "Milano P1", "Galán", "Lebrón", "Tapia", "Coello", "Triay", "Brea", "Calvo", "Fernández"],
   },
+  "milano-p1-2026-dia-de-finales": {
+    title:
+      "Milano P1: finals day with a Brussels rematch and the women's No. 1 spot up in the air",
+    excerpt:
+      "Lebrón and Augsburger came back from 0-6 against Galán-Chingotto (0-6 6-2 6-2) and today meet Tapia-Coello, who chase a fourth straight title after Coello's historic 300th win. In the women's draw, Ari-Ustero's fourth consecutive final against Josemaría-Bea, a rematch of the Rotterdam final, with the ranking lead on the line. Finals today from 15:00 at the Allianz Cloud.",
+    tags: ["Premier Padel", "Milano P1", "Tapia", "Coello", "Lebrón", "Augsburger", "Ari Sánchez", "Josemaría", "Bea González"],
+  },
 };
 
 /**
@@ -573,6 +581,7 @@ export const ARTICLES: Article[] = [
   localize({ slug: "milano-p1-2026-octavos-fortin-galan", ...milanoP1Octavos }),
   localize({ slug: "shanghai-masters-2026-zverev-semis-jodar-medvedev", ...shanghaiCuartosJodar }),
   localize({ slug: "milano-p1-2026-cuartos-galan-lebron", ...milanoP1Cuartos }),
+  localize({ slug: "milano-p1-2026-dia-de-finales", ...milanoP1Finales }),
 ].sort((a, b) => b.date.localeCompare(a.date));
 
 export function getArticle(slug: string): Article | undefined {

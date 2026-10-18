@@ -107,6 +107,39 @@ semis del sábado ya resueltas). **Shanghai Masters** — semis HOY sábado 17: 
 Fokina y Medvedev–Jodar (el español batió a Ruud 4-6 6-4 6-3 y el ruso a Paul 6-3 1-6 6-3;
 final domingo 18) — verificar en atptour.com antes de escribir. Tabla de demanda real: todo ✓.
 
+Hechos verificados a 2026-10-18 (para la noche del 18→19): **Milano P1 CERRADO HOY domingo 18**
+(previa de finales publicada; ver item marcado abajo). Las finales se juegan hoy 15:00 CEST:
+femenina primero (Sánchez-Ustero vs Josemaría-Bea) y masculina después (Tapia-Coello vs
+Augsburger-Lebrón). Semis del sábado 17 verificadas: Lebrón-Augsburger d. Galán-Chingotto
+**0-6 6-2 6-2** (74% puntos de los nº2 en el 1er set, luego 72%/67% para Lebrón-Augsburger;
+padel-magazine), Tapia-Coello d. Stupa-Sanz **6-4 6-3** (1h18; 17 victorias seguidas y **300
+victorias de Coello en Premier Padel, primero de la historia**; padel-magazine), Ari-Ustero d.
+Triay-Brea **6-1 6-4** (1h15; 3ª seguida ante las nº1; marca), Josemaría-Bea d. Fernández-Calvo
+**6-2 7-6** con match point de +2 minutos cerrado con remate de Paula (padel-magazine). Extra:
+Lebrón-Augsburger solo tienen 1 título juntos (Brussels P2, abril, remontando la final a
+Tapia-Coello 2-6 6-3 6-3 — única pareja que les ha ganado una final); Milán = 2 títulos de
+Lebrón (2022, 2023 con Galán). Próximo torneo: **Kuwait Major 23-31 oct** — la noche del 19→20
+puede cubrir los campeones de Milán (verificar en premierpadel.com) o seguir backlog si aún no
+hay resultados. **Shanghai Masters final HOY domingo 18** (Zverev–Davidovich vs
+Medvedev–Jodar; verificar ganador para posible pieza tenis). Tabla de demanda real: todo ✓.
+
+1. [x] **Milano P1 2026 — día de finales: revancha de Bruselas y corona femenina (CERRADO 18 oct)** —
+   pieza Regla 0 de HOY domingo 18: previa de las dos finales del Allianz Cloud. Ángulo: la remontada
+   0-6 6-2 6-2 de Lebrón-Augsburger sobre Galán-Chingotto con la revancha de la final de Bruselas
+   ante Tapia-Coello (4º título seguido en juego, 12º del año, Coello recién estrenando las 300
+   victorias en Premier Padel); en femenino, 4ª final consecutiva de Ari-Ustero vs Josemaría-Bea
+   (revancha de Róterdam) con el nº1 de fin de año en juego entre tres parejas. —
+   **HECHO 2026-10-18**: artículo `milano-p1-2026-dia-de-finales` (ES+EN, kind novedad, 5
+   relatedProducts: AT10 Genius 18K, Coello Pro, Viper 3.0 Lebrón, Arrow HIT Light, Pearl 2026).
+   Datos verificados: padel-magazine (semis + quotes + 300 de Coello), marca (Ari-Ustero 6-1 6-4,
+   tres parejas con opciones de nº1), studypadel (marcadores), allianzcloud.it/ticketone (final
+   femenina HOY 15:00, masculina después), padel.com (Brussels P2: único título juntos, remontada
+   2-6 6-3 6-3 a Tapia-Coello). Archivos: src/content/noticias/{,en/}
+   milano-p1-2026-dia-de-finales.mdx, src/data/news.ts. Build + check:translations OK; /es y /en a
+   200; enlaces internos y productos verificados a 200; screenshot
+   docs/screenshots/2026-10-18-milano-p1-dia-de-finales.png (1080×486, 33.819 colores únicos, sin
+   visión: verificado por DOM + píxeles).
+
 1. [x] **Milano P1 2026 — cuartos resueltos y semifinales de campeones (EN MARCHA 12-18 oct)** —
    pieza Regla 0 de HOY sábado 17: jornada de cuartos sin sobresaltos y semifinales 'perfectas'
    (las 8 primeras cabezas de serie), con el duelo Galán–Lebrón (los dos jugadores más laureados
