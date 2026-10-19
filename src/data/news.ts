@@ -100,6 +100,7 @@ import { metadata as shanghaiCuartosJodar } from "@/content/noticias/shanghai-ma
 import { metadata as milanoP1Cuartos } from "@/content/noticias/milano-p1-2026-cuartos-galan-lebron.mdx";
 import { metadata as milanoP1Finales } from "@/content/noticias/milano-p1-2026-dia-de-finales.mdx";
 import { metadata as milanoP1Campeones } from "@/content/noticias/milano-p1-2026-campeones-tapia-coello-sanchez-ustero.mdx";
+import { metadata as nox2027Coleccion } from "@/content/noticias/nox-2027-coleccion-17-palas-precios.mdx";
 
 /**
  * Traducciones EN de los metadatos de cada artículo. Las ES vienen del propio
@@ -505,6 +506,13 @@ const EN_META: Record<string, { title: string; excerpt: string; tags: string[] }
       "The world No. 1s came back against Lebrón-Augsburger (4-6 6-3 6-2) to close the European swing with a fourth straight title, their twelfth of 2026. In the women's draw, Ari Sánchez and Andrea Ustero rallied from 2-5 down against Josemaría-Bea (7-6 6-3) for their fifth title of the season: with 58 trophies, Ari now stands alongside Gemma Triay and Alejandra Salazar as the most decorated player in professional women's padel.",
     tags: ["Premier Padel", "Milano P1", "Tapia", "Coello", "Lebrón", "Augsburger", "Ari Sánchez", "Josemaría", "Bea González"],
   },
+  "nox-2027-coleccion-17-palas-precios": {
+    title:
+      "NOX unveils its 2027 collection: 17 rackets, from Tapia's €389.99 Genius to the €124.99 Equation",
+    excerpt:
+      "The Spanish brand rolls out its '100% Pure Padel' range with five Agustín Tapia Genius models at the top, five Ventus, three Lamperti ML10 Pro Cups and two Equation Advanced rackets. Teardrop, diamond and round shapes; aluminised fibreglass, 12K, 18K Alum faces and HR3/MLD Black EVA cores. A full breakdown of all 17 rackets, their prices and who each one is for.",
+    tags: ["NOX", "2027 Rackets", "Agustín Tapia", "Miguel Lamperti", "Launches"],
+  },
 };
 
 /**
@@ -591,6 +599,7 @@ export const ARTICLES: Article[] = [
   localize({ slug: "milano-p1-2026-cuartos-galan-lebron", ...milanoP1Cuartos }),
   localize({ slug: "milano-p1-2026-dia-de-finales", ...milanoP1Finales }),
   localize({ slug: "milano-p1-2026-campeones-tapia-coello-sanchez-ustero", ...milanoP1Campeones }),
+  localize({ slug: "nox-2027-coleccion-17-palas-precios", ...nox2027Coleccion }),
 ].sort((a, b) => b.date.localeCompare(a.date));
 
 export function getArticle(slug: string): Article | undefined {
