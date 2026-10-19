@@ -123,6 +123,40 @@ puede cubrir los campeones de Milán (verificar en premierpadel.com) o seguir ba
 hay resultados. **Shanghai Masters final HOY domingo 18** (Zverev–Davidovich vs
 Medvedev–Jodar; verificar ganador para posible pieza tenis). Tabla de demanda real: todo ✓.
 
+Hechos verificados a 2026-10-19 (para la noche del 19→20): **Milano P1 CERRADO — campeones
+publicados (ver item marcado abajo)**. Finales del domingo 18: Tapia-Coello d. Lebrón-Augsburger
+**4-6 6-3 6-2** (4º título seguido, 12º de 2026, 18 victorias consecutivas; décimo duelo del año
+entre ambas: 9-1; elneverazo/padel-magazine/tennistonic); Ari-Ustero d. Josemaría-Bea
+**7-6(3) 6-3** en 1h49 remontando un 2-5 en el primer set (5º título del año, 3º en los últimos 4
+torneos; recortan a 1.980 puntos el nº1 femenino; **Ari Sánchez = 58 títulos, iguala a Gemma Triay
+y Alejandra Salazar como la más ganadora de la historia del pádel femenino**; padel-magazine).
+**Shanghai Masters CERRADO**: Davidovich Fokina d. Jodar **1-6 7-6(5) 6-4** (primer Masters 1000
+del malagueño, salvó bola de partido ante Tiafoe en 3R; Jodar se queda a las puertas del top-10,
+11º; atptour.com). **Próximo: Kuwait Major 26-31 oct** (subido de P1 a Major solo 2026; arranca
+lunes que viene — la noche del 20→21 puede cubrir previa/1ª jornada). Esta semana ATP: Almaty,
+Bruselas y Lyon (250) + Viena 500. Tabla de demanda real: todo ✓.
+
+1. [x] **Milano P1 2026 — campeones: póker de Tapia-Coello y Ari Sánchez iguala a las mayores
+   ganadoras de la historia (CERRADO 18 oct)** — pieza Regla 0 de HOY lunes 19: resultados de las
+   dos finales del Allianz Cloud. Ángulo: la remontada de los nº1 tras ceder el primer set contra
+   Lebrón-Augsburger (33 winners de los nº3 en la 1ª manga, giro en el 3er juego de la 2ª con tres
+   bolas de break salvadas) y el título histórico nº58 de Ari Sánchez que le iguala con Gemma Triay
+   y Alejandra Salazar al frente del palmarés femenino, con la pelea por el nº1 recortada a 1.980
+   puntos de cara a Kuwait Major. — **HECHO 2026-10-19**: artículo
+   `milano-p1-2026-campeones-tapia-coello-sanchez-ustero` (ES+EN, kind novedad, 5 relatedProducts:
+   AT10 Genius 18K, Coello Pro, Viper 3.0 Lebrón, Arrow HIT Light, Pearl 2026). Datos verificados:
+   elneverazo (crónica completa de la final masculina: giro 180º tras salvar 3 bolas de break,
+   4 EF de Tapia-Coello en la 2ª manga por 10, décimo duelo del año 9-1), padel-magazine (final
+   femenina 7-6(3) 6-3 en 1h49, remontada del 2-5, quotes de Ari sobre el récord y sus padres,
+   58 títulos = Triay y Salazar, gap 1.980 puntos), tennistonic (4º título seguido, 12º del año,
+   75-7, marcadores), premierpadel.com/es (portada: "Coello-Tapia and Sánchez-Ustero End the
+   European Swing Conquering the Milano P1"), padelfip.com (Kuwait P1→Major solo 2026, 2.000 pts).
+   Archivos: src/content/noticias/{,en/}
+   milano-p1-2026-campeones-tapia-coello-sanchez-ustero.mdx, src/data/news.ts. Build +
+   check:translations OK; /es y /en generadas y verificadas (h1, 0 leaks MDX, enlaces internos
+   sin doble prefijo /en/en, 15 enlaces de producto por locale); sin screenshot (pieza de texto
+   sin cambios visuales en UI).
+
 1. [x] **Milano P1 2026 — día de finales: revancha de Bruselas y corona femenina (CERRADO 18 oct)** —
    pieza Regla 0 de HOY domingo 18: previa de las dos finales del Allianz Cloud. Ángulo: la remontada
    0-6 6-2 6-2 de Lebrón-Augsburger sobre Galán-Chingotto con la revancha de la final de Bruselas

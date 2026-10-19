@@ -99,6 +99,7 @@ import { metadata as milanoP1Octavos } from "@/content/noticias/milano-p1-2026-o
 import { metadata as shanghaiCuartosJodar } from "@/content/noticias/shanghai-masters-2026-zverev-semis-jodar-medvedev.mdx";
 import { metadata as milanoP1Cuartos } from "@/content/noticias/milano-p1-2026-cuartos-galan-lebron.mdx";
 import { metadata as milanoP1Finales } from "@/content/noticias/milano-p1-2026-dia-de-finales.mdx";
+import { metadata as milanoP1Campeones } from "@/content/noticias/milano-p1-2026-campeones-tapia-coello-sanchez-ustero.mdx";
 
 /**
  * Traducciones EN de los metadatos de cada artículo. Las ES vienen del propio
@@ -497,6 +498,13 @@ const EN_META: Record<string, { title: string; excerpt: string; tags: string[] }
       "Lebrón and Augsburger came back from 0-6 against Galán-Chingotto (0-6 6-2 6-2) and today meet Tapia-Coello, who chase a fourth straight title after Coello's historic 300th win. In the women's draw, Ari-Ustero's fourth consecutive final against Josemaría-Bea, a rematch of the Rotterdam final, with the ranking lead on the line. Finals today from 15:00 at the Allianz Cloud.",
     tags: ["Premier Padel", "Milano P1", "Tapia", "Coello", "Lebrón", "Augsburger", "Ari Sánchez", "Josemaría", "Bea González"],
   },
+  "milano-p1-2026-campeones-tapia-coello-sanchez-ustero": {
+    title:
+      "Milano P1: Tapia-Coello complete the poker, Ari Sánchez joins the greatest winners of all time",
+    excerpt:
+      "The world No. 1s came back against Lebrón-Augsburger (4-6 6-3 6-2) to close the European swing with a fourth straight title, their twelfth of 2026. In the women's draw, Ari Sánchez and Andrea Ustero rallied from 2-5 down against Josemaría-Bea (7-6 6-3) for their fifth title of the season: with 58 trophies, Ari now stands alongside Gemma Triay and Alejandra Salazar as the most decorated player in professional women's padel.",
+    tags: ["Premier Padel", "Milano P1", "Tapia", "Coello", "Lebrón", "Augsburger", "Ari Sánchez", "Josemaría", "Bea González"],
+  },
 };
 
 /**
@@ -582,6 +590,7 @@ export const ARTICLES: Article[] = [
   localize({ slug: "shanghai-masters-2026-zverev-semis-jodar-medvedev", ...shanghaiCuartosJodar }),
   localize({ slug: "milano-p1-2026-cuartos-galan-lebron", ...milanoP1Cuartos }),
   localize({ slug: "milano-p1-2026-dia-de-finales", ...milanoP1Finales }),
+  localize({ slug: "milano-p1-2026-campeones-tapia-coello-sanchez-ustero", ...milanoP1Campeones }),
 ].sort((a, b) => b.date.localeCompare(a.date));
 
 export function getArticle(slug: string): Article | undefined {
