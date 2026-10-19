@@ -3480,6 +3480,30 @@ export const PRODUCTS: Product[] = [
     descriptionEn:
       "Aranzazu Osoro's racket — 'La Vikinga' — in Nox's 2026 Luxury collection: a new, more aerodynamic mould in a round shape with a low balance (~251 mm), the widest sweet spot in the range and total control from the back of the court. 12K carbon faces over a multi-layer MLD Black Eva core — different densities so the ball flows easily in defence and punches on the smash — plus a Dual Spin surface with double roughness (3D relief + sand finish) and Pulse System to filter vibrations. At 360-375 g it is one of the most manageable player rackets in Nox's catalogue: control and placement for advanced players who win points through patience.",
   },
+  {
+    id: "siux-obsidian-pro-black-2027",
+    sport: "padel",
+    brand: "Siux",
+    model: "Obsidian Pro Black 2027",
+    year: 2027,
+    price: 359.95,
+    image: "/images/rackets/siux-obsidian-pro-black-2027.svg",
+    level: ["avanzado", "profesional"],
+    style: ["control"],
+    padel: {
+      shape: "lagrima",
+      weight: "355-375 g",
+      balance: "bajo",
+      core: "EVA Soft",
+      faces: "Carbono 16K",
+      surface: "rugosa",
+      hardness: "blanda",
+    },
+    description:
+      "La nueva referencia de control de Siux: la Obsidian Pro Black 2027 estrena molde en forma de lágrima situado entre la Trilogy y la Diablo, con balance bajo y el punto dulce más grande de toda la colección 2027 (92 cm²) para un tacto 5/10. Caras de carbono 16K sobre núcleo EVA Soft y acabado satinado con textura 3D que agarra la bola para trabajar efectos y colocar con precisión. Más palanca que una redonda a la hora de definir, con la manejabilidad de una pala de control pura: toma el relevo de la Trilogy como la pala de control de la marca.",
+    descriptionEn:
+      "Siux's new control benchmark: the Obsidian Pro Black 2027 debuts a fresh tear-drop mould sitting between the Trilogy and the Diablo, with a low balance and the biggest sweet spot of the entire 2027 collection (92 cm²) for a 5/10 feel. 16K carbon faces over an EVA Soft core and a satin finish with 3D texture that grips the ball for spin and precise placement. More leverage than a round shape when it's time to finish the point, with the handling of a pure control racket — it takes over from the Trilogy as the brand's control reference.",
+  },
 ];
 
 export function getProduct(id: string) {
