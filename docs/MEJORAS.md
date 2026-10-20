@@ -136,6 +136,46 @@ del malagueño, salvó bola de partido ante Tiafoe en 3R; Jodar se queda a las p
 lunes que viene — la noche del 20→21 puede cubrir previa/1ª jornada). Esta semana ATP: Almaty,
 Bruselas y Lyon (250) + Viena 500. Tabla de demanda real: todo ✓.
 
+Hechos verificados a 2026-10-20 (para la noche del 20→21): **Shanghai Masters CERRADO — pieza de
+campeones publicada (ver item marcado abajo)**. La final del domingo 18: Davidovich Fokina d.
+Jodar **1-6 7-6(5) 6-4 en 2h28** (atptour.com oficial: primer Masters 1000 del malagueño y título
+más grande de su carrera; tercera remontada por set en contra de la semana tras Tiafoe —bola de
+partido salvada en 3R—, Hurkacz en cuartos y Zverev en semis 5-7 6-4 6-3 con dos MPs salvadas por
+el alemán; +13 puestos al nº13, mejor ranking de su carrera; 10 victorias seguidas en China tras
+Chengdu; perdidas sus 5 primeras finales, ganadas las 3 últimas: Mallorca, Chengdu, Shanghái).
+Jodar: primera final de Masters 1000 con 20 años (empezó 2026 en el nº168), tumbó a Medvedev en
+semis 6-3 6-4 (3 MPs salvadas por el ruso al saque con 3-5), nº11 = mejor ranking, **9º de la
+Race a Turín**, dentro de puestos de clasificación. Zverev ya nº1 de fin de año; Viena (500) desde
+el 26 con Zverev y Alcaraz en cuadro. Dobles: Miedler-Oberleitner 6-3 6-4 a Cabral-Tracy.
+**Pádel: SIN torneo en curso** (Kuwait Major 26-31 oct, arranca el lunes 26 — previa/registro
+cerrado; pieza natural de la noche del 25→26 o 26→27 con el cuadro). Premier Padel homepage
+muestra "MILANO P1 22-30 oct": es la edición de 2025 NO actualizada en portada; FIP/Kuwait =
+fuente buena. Esta semana ATP: Almaty/Bruselas/Lyon (250, esta semana) y Viena/Basilea (500, desde
+el 26); WTA: Ningbo 500 y Osaka 250. Tabla de demanda real: todo ✓.
+
+1. [x] **Shanghai Masters 2026 — Davidovich Fokina campeón: la remontada de su vida y Jodar a las
+   puertas del top-10 (CERRADO 18 oct)** — pieza Regla 0 de HOY martes 20: la última historia
+   grande sin cubrir del swing asiático. Ángulo: la final 100% española (1-6 7-6(5) 6-4) como
+   colofón de la semana de fugas del malagueño (MP salvada ante Tiafoe, remontadas ante Hurkacz y
+   Zverev) y el Jodar que se queda a un título del top-10 con 20 años y sale 9º de la Race a
+   Turín. — **HECHO 2026-10-20**: artículo
+   `shanghai-masters-2026-davidovich-fokina-campeon` (ES+EN, kind novedad, 5 relatedProducts:
+   Speed MP 2026, Gravity Tour Zverev, TFight 305S, Percept 97, VCORE 98). Datos verificados:
+   atptour.com (crónica oficial de la final con quotes de Davidovich/Fils/estadísticas; nota de
+   resultados del 18 oct; resultados oficiales con duración 2:27:38 y TB 7-6(5); artículo previo
+   de semis), rolexshanghaimasters.com (results oficiales), AP (dos crónicas), ABC/AP semis
+   (Davidovich d. Zverev 5-7 6-4 6-3 con 2 MPs salvadas; Jodar d. Medvedev 6-3 6-4 con 3 MPs
+   salvadas al saque 3-5), RTHK/AFP (quotes Medvedev "he's top 10", medical timeout Jodar,
+   doble falta para el 4-3). Fuentes raquetas: catálogo (5 fichas con foto real verificadas en
+   real-images.json); Extreme MP de Davidovich mencionada SIN enlace (no hay molde retail en
+   catálogo, verificado grep — solo Extreme de pádel). Archivos:
+   src/content/noticias/{,en/}shanghai-masters-2026-davidovich-fokina-campeon.mdx,
+   src/data/news.ts. Build + check:translations OK; /es y /en a 200 con 5 fichas enlazadas
+   por locale + 4 enlaces internos a artículos previos de Shanghái verificados a 200; sin
+   dobles prefijos; screenshot docs/screenshots/2026-10-20-shanghai-davidovich-campeon.png
+   (1280×577, 2.671 colores únicos en muestra, h1 renderizado en y=260 verificado por DOM,
+   sin visión: verificado por píxeles + DOM).
+
 1. [x] **Milano P1 2026 — campeones: póker de Tapia-Coello y Ari Sánchez iguala a las mayores
    ganadoras de la historia (CERRADO 18 oct)** — pieza Regla 0 de HOY lunes 19: resultados de las
    dos finales del Allianz Cloud. Ángulo: la remontada de los nº1 tras ceder el primer set contra

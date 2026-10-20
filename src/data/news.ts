@@ -97,6 +97,7 @@ import { metadata as shanghaiOctavosFavoritosFuera } from "@/content/noticias/sh
 import { metadata as milanoP1Cabezas } from "@/content/noticias/milano-p1-2026-palas-cabezas-de-serie.mdx";
 import { metadata as milanoP1Octavos } from "@/content/noticias/milano-p1-2026-octavos-fortin-galan.mdx";
 import { metadata as shanghaiCuartosJodar } from "@/content/noticias/shanghai-masters-2026-zverev-semis-jodar-medvedev.mdx";
+import { metadata as shanghaiDavidovichCampeon } from "@/content/noticias/shanghai-masters-2026-davidovich-fokina-campeon.mdx";
 import { metadata as milanoP1Cuartos } from "@/content/noticias/milano-p1-2026-cuartos-galan-lebron.mdx";
 import { metadata as milanoP1Finales } from "@/content/noticias/milano-p1-2026-dia-de-finales.mdx";
 import { metadata as milanoP1Campeones } from "@/content/noticias/milano-p1-2026-campeones-tapia-coello-sanchez-ustero.mdx";
@@ -485,6 +486,13 @@ const EN_META: Record<string, { title: string; excerpt: string; tags: string[] }
       "The German books his third Shanghai semi-final (6-4, 6-4 over De Minaur, with 10 aces) and will face Davidovich Fokina, who advanced after Gea retired injured. Two quarter-finals remain on Friday: Jodar, aged 20, chases the youngest semi-final spot in tournament history; Medvedev, the only former champion left, leads his head-to-head with Paul 4-1.",
     tags: ["Shanghai Masters", "ATP", "Zverev", "Davidovich Fokina", "Jodar", "Medvedev", "Tommy Paul", "Rackets"],
   },
+  "shanghai-masters-2026-davidovich-fokina-campeon": {
+    title:
+      "Shanghai Masters: Davidovich Fokina comes back on Jodar to crown his first Masters 1000",
+    excerpt:
+      "The Spaniard trailed by a set and a break (1-6, 2-3) but won 1-6, 7-6(5), 6-4 in 2:28 to lift the biggest trophy of his career, his third of the year after Mallorca and Chengdu. A week of escapes: a match point saved against Tiafoe and comebacks against Hurkacz and Zverev. Jodar, 20, narrowly misses the Top 10 and leaves China ninth in the Race to Turin.",
+    tags: ["Shanghai Masters", "ATP", "Davidovich Fokina", "Jodar", "Zverev", "Medvedev", "Masters 1000", "Rackets"],
+  },
   "milano-p1-2026-cuartos-galan-lebron": {
     title:
       "Milano P1: quarter-finals without upsets, and a Galán-Lebrón clash of champions in the semis",
@@ -596,6 +604,7 @@ export const ARTICLES: Article[] = [
   localize({ slug: "milano-p1-2026-palas-cabezas-de-serie", ...milanoP1Cabezas }),
   localize({ slug: "milano-p1-2026-octavos-fortin-galan", ...milanoP1Octavos }),
   localize({ slug: "shanghai-masters-2026-zverev-semis-jodar-medvedev", ...shanghaiCuartosJodar }),
+  localize({ slug: "shanghai-masters-2026-davidovich-fokina-campeon", ...shanghaiDavidovichCampeon }),
   localize({ slug: "milano-p1-2026-cuartos-galan-lebron", ...milanoP1Cuartos }),
   localize({ slug: "milano-p1-2026-dia-de-finales", ...milanoP1Finales }),
   localize({ slug: "milano-p1-2026-campeones-tapia-coello-sanchez-ustero", ...milanoP1Campeones }),
