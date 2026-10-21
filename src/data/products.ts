@@ -3504,6 +3504,31 @@ export const PRODUCTS: Product[] = [
     descriptionEn:
       "Siux's new control benchmark: the Obsidian Pro Black 2027 debuts a fresh tear-drop mould sitting between the Trilogy and the Diablo, with a low balance and the biggest sweet spot of the entire 2027 collection (92 cm²) for a 5/10 feel. 16K carbon faces over an EVA Soft core and a satin finish with 3D texture that grips the ball for spin and precise placement. More leverage than a round shape when it's time to finish the point, with the handling of a pure control racket — it takes over from the Trilogy as the brand's control reference.",
   },
+  {
+    id: "starvie-triton-t-one-2027",
+    sport: "padel",
+    brand: "StarVie",
+    model: "Tritón T-One",
+    year: 2027,
+    price: 279,
+    image: "/images/rackets/starvie-triton-t-one-2027.svg",
+    level: ["avanzado", "profesional"],
+    style: ["potencia", "polivalente"],
+    player: "Tamara Icardo",
+    padel: {
+      shape: "diamante",
+      weight: "347-366 g",
+      balance: "medio",
+      core: "M-Eva Balance",
+      faces: "18K Carbon Hybrid",
+      surface: "rugosa",
+      hardness: "media",
+    },
+    description:
+      "La pala signature de Tamara Icardo: T-One juega con las siglas de \u201cTamara One\u201d y es el primer molde diamante ligero de la gama Super Pro, con rango de peso de 347-366 g y balance medio para definir el punto sin renunciar al control. Plano 18K Carbon Hybrid sobre goma M-Eva Balance de tacto medio, con el sistema Power Balance de gomas intercambiables en el perfil (se venden aparte) para ajustar el balance a tu juego. Air Booster acelera el swing, Tri-Force Core estabiliza el corazón, Hexa Cell refuerza el marco y A-Shock amortigua las vibraciones. Fabricada en España para jugadoras avanzadas y profesionales de perfil versátil-ofensivo.",
+    descriptionEn:
+      "Tamara Icardo's signature racket: T-One plays on the initials of \u201cTamara One\u201d and is the first lightweight diamond mold in the Super Pro range, with a 347-366 g weight range and medium balance to finish points without giving up control. An 18K Carbon Hybrid face over medium-touch M-Eva Balance rubber, with the Power Balance system of interchangeable rubbers in the profile (sold separately) to tune the balance to your game. Air Booster speeds up the swing, Tri-Force Core stabilizes the heart, Hexa Cell reinforces the frame and A-Shock damps vibrations. Made in Spain for advanced and professional female players with a versatile-offensive profile.",
+  },
 ];
 
 export function getProduct(id: string) {
