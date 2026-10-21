@@ -988,9 +988,23 @@ el 26); WTA: Ningbo 500 y Osaka 250. Tabla de demanda real: todo ✓.
    src/app/[locale]/globals.css, src/i18n/locales.ts. Screenshot:
    docs/screenshots/2026-09-17-productcard-badge-descuento.png (1280×800, 57.853 colores,
    8.879 px lima = badges renderizados).
-4. [ ] **Nav sticky con blur** — barra fija con `backdrop-blur` al hacer scroll, estado
+4. [x] **Nav sticky con blur** — barra fija con `backdrop-blur` al hacer scroll, estado
    activo por sección, menú móvil con animación de entrada. Verificar: build + screenshot
-   scrolleado y móvil (375px).
+   scrolleado y móvil (375px). — **HECHO 2026-10-21**: la cápsula ya era fixed+blur; se
+   añadió (1) **estado activo por ruta** con `usePathname` + `stripLocale`: enlace activo
+   en lima (`text-primary-strong`), `aria-current="page"` y subrayado animado
+   (`.nav-link::after` scaleX 0→1, hover al 50%; también en el drawer móvil); (2)
+   **estado scrolleado**: >8px de scroll compacta la barra 64→56px, sube alpha del fondo
+   0.7→0.85, blur 12→24px y refuerza borde (transición 300ms); (3) **drawer móvil
+   animado**: entrada/salida reales (overlay fade + panel slide con easing de salida,
+   desmontaje retrasado 220ms), cierre con Escape, bloqueo de scroll y devolución de
+   foco; hamburger con `aria-expanded` y micro-hover. Archivos:
+   src/components/Nav.tsx, src/app/[locale]/globals.css. Verificado sin visión:
+   build + check:translations OK; DOM/estilos computados (activo ES y EN, 404/producto
+   sin activo falso, scroll 800 → navH 56 + blur(24px), drawer con animaciones
+   `drawer-slide`/`drawer-fade` aplicadas, body overflow hidden al abrir, Escape cierra,
+   sin overflow horizontal en 375px). Screenshots:
+   docs/screenshots/2026-10-21-nav-{scrolled-activo,drawer-movil}.png.
 5. [ ] **Scroll-reveal CSS-only** — aparición escalonada de secciones en homepage
    (hero → marquee → pilares → destacados → noticias → ofertas) con animaciones CSS puras
    (sin librerías) y respeto a `prefers-reduced-motion`. Verificar: build + screenshot.

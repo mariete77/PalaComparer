@@ -407,6 +407,51 @@ html[data-theme="light"] .prose-invert {
   backdrop-filter: blur(4px);
 }
 
+/* ---- Nav sticky: subrayado animado del enlace activo ---- */
+.nav-link::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: -6px;
+  height: 2px;
+  border-radius: 2px;
+  background: var(--primary-strong);
+  transform: scaleX(0);
+  transform-origin: left center;
+  transition: transform 0.25s cubic-bezier(0.22, 1, 0.36, 1);
+}
+.nav-link:hover::after {
+  transform: scaleX(0.5);
+}
+.nav-link.active::after {
+  transform: scaleX(1);
+}
+
+/* ---- Mobile drawer: entrada y salida animadas ---- */
+@media (prefers-reduced-motion: no-preference) {
+  .drawer-overlay-in {
+    animation: drawer-fade 0.22s ease-out both;
+  }
+  .drawer-overlay-out {
+    animation: drawer-fade 0.22s ease-in both reverse;
+  }
+  .drawer-panel-in {
+    animation: drawer-slide 0.26s cubic-bezier(0.16, 1, 0.3, 1) both;
+  }
+  .drawer-panel-out {
+    animation: drawer-slide 0.22s ease-in both reverse;
+  }
+}
+@keyframes drawer-fade {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+@keyframes drawer-slide {
+  from { transform: translateX(100%); }
+  to { transform: translateX(0); }
+}
+
 /* Filter pill */
 .pill {
   background: var(--surface-container-high);
