@@ -153,6 +153,38 @@ muestra "MILANO P1 22-30 oct": es la edición de 2025 NO actualizada en portada;
 fuente buena. Esta semana ATP: Almaty/Bruselas/Lyon (250, esta semana) y Viena/Basilea (500, desde
 el 26); WTA: Ningbo 500 y Osaka 250. Tabla de demanda real: todo ✓.
 
+Hechos verificados a 2026-10-22 (para la noche del 22→23): **SIN torneo EN MARCHA** (pádel:
+Kuwait Major 26-31 oct, arranca el lunes — pieza natural de la noche del 25→26 o 26→27 con
+el cuadro; ATP esta semana: Almaty/Bruselas/Lyon 250 con cuadros ya en cuartos, sin nombres
+top cubribles con catálogo; Viena/Basilea 500 desde el lunes 26 — **Alcaraz WC en Viena y
+Djokovic WC en Basilea, pieza fuerte para la noche del 25→26 o 26→27**). La historia grande
+y fresca de HOY (Regla 0): **FIP + Premier Padel hacen oficial el 20 de octubre como World
+Padel Day** con campaña para Brisbane 2032 (anuncio 20 oct desde Lausana, premierpadel.com
+oficial): 40M jugadores amateur en 191 países, 47% mujeres, 91.000 pistas, FIP Tour en 59
+países, Promises 36, retransmisión en 244 territorios, €8.600M al PIB mundial 2026 y 236.000
+empleos (OpenEconomics); Padel Invitational UBS en la Ópera de Sídney 15-16 ago (pista
+temporal con Pat Rafter); Olympic inclusion AÚN NO decidida (el COI decide; matiz cubierto en
+la pieza). Tabla de demanda real: todo ✓.
+
+1. [x] **World Padel Day: la FIP hace oficial el 20 de octubre y el pádel mira a Brisbane 2032
+   (historia del 20 oct)** — pieza Regla 0 de HOY jueves 22: el deporte estrena día oficial con
+   la campaña olímpica de la FIP. Ángulo propio: "de 40 millones de jugadores a tu primera
+   pala" — los números del World Padel Report 2026 cruzados con el catálogo (la puerta de
+   entrada más barata heredando el ADN de Tapia, palas de las jugadoras del 47%). —
+   **HECHO 2026-10-22**: artículo `world-padel-day-2026-fip-brisbane-2032` (ES+EN, kind
+   novedad, 6 relatedProducts: AT10 Genius Ultra Light, RX Series 2026, Bolt 2026, Metalbone
+   Carbon 2026, Arrow HIT Light, Vertex 05 GEO Premier Pádel). Datos verificados: nota oficial
+   premierpadel.com (cifras del informe, quote de Carraro, Padel Invitational en la Ópera de
+   Sídney, €8.600M/236.000 empleos, "Padel is ready for Brisbane 2032") + contraste de fuentes
+   (tiebreaknews, actu-padel, padelmesh) para el matiz de que la plaza olímpica NO está
+   decidida. Todos los precios/cifras del catálogo verificados en products.ts; Kuwait Major
+   26-31 oct y su ascenso P1→Major ya verificados en noches previas. Archivos:
+   src/content/noticias/{,en/}world-padel-day-2026-fip-brisbane-2032.mdx, src/data/news.ts.
+   Build + check:translations OK; /es y /en a 200 con 9 fichas de producto enlazadas por
+   locale, guías y noticias internas verificadas en el HTML prerendered (sin dobles prefijos);
+   screenshot docs/screenshots/2026-10-22-world-padel-day.png (1080×486, 61.613 colores
+   únicos, h1 renderizado en y=193 verificado por DOM, sin visión: verificado por píxeles+DOM).
+
 1. [x] **Shanghai Masters 2026 — Davidovich Fokina campeón: la remontada de su vida y Jodar a las
    puertas del top-10 (CERRADO 18 oct)** — pieza Regla 0 de HOY martes 20: la última historia
    grande sin cubrir del swing asiático. Ángulo: la final 100% española (1-6 7-6(5) 6-4) como

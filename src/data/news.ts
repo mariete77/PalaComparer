@@ -102,6 +102,7 @@ import { metadata as milanoP1Cuartos } from "@/content/noticias/milano-p1-2026-c
 import { metadata as milanoP1Finales } from "@/content/noticias/milano-p1-2026-dia-de-finales.mdx";
 import { metadata as milanoP1Campeones } from "@/content/noticias/milano-p1-2026-campeones-tapia-coello-sanchez-ustero.mdx";
 import { metadata as nox2027Coleccion } from "@/content/noticias/nox-2027-coleccion-17-palas-precios.mdx";
+import { metadata as worldPadelDay } from "@/content/noticias/world-padel-day-2026-fip-brisbane-2032.mdx";
 
 /**
  * Traducciones EN de los metadatos de cada artículo. Las ES vienen del propio
@@ -493,6 +494,12 @@ const EN_META: Record<string, { title: string; excerpt: string; tags: string[] }
       "The Spaniard trailed by a set and a break (1-6, 2-3) but won 1-6, 7-6(5), 6-4 in 2:28 to lift the biggest trophy of his career, his third of the year after Mallorca and Chengdu. A week of escapes: a match point saved against Tiafoe and comebacks against Hurkacz and Zverev. Jodar, 20, narrowly misses the Top 10 and leaves China ninth in the Race to Turin.",
     tags: ["Shanghai Masters", "ATP", "Davidovich Fokina", "Jodar", "Zverev", "Medvedev", "Masters 1000", "Rackets"],
   },
+  "world-padel-day-2026-fip-brisbane-2032": {
+    title: "World Padel Day: padel gets its own day and sets its sights on Brisbane 2032",
+    excerpt:
+      "FIP and Premier Padel have officially recognised 20 October as World Padel Day, launching a campaign for padel's inclusion in the Brisbane 2032 Olympics. We break down the numbers behind a sport of 40 million players — and how to pick your first paddle if you're one of the newcomers.",
+    tags: ["World Padel Day", "FIP", "Brisbane 2032", "Premier Padel"],
+  },
   "milano-p1-2026-cuartos-galan-lebron": {
     title:
       "Milano P1: quarter-finals without upsets, and a Galán-Lebrón clash of champions in the semis",
@@ -609,6 +616,7 @@ export const ARTICLES: Article[] = [
   localize({ slug: "milano-p1-2026-dia-de-finales", ...milanoP1Finales }),
   localize({ slug: "milano-p1-2026-campeones-tapia-coello-sanchez-ustero", ...milanoP1Campeones }),
   localize({ slug: "nox-2027-coleccion-17-palas-precios", ...nox2027Coleccion }),
+  localize({ slug: "world-padel-day-2026-fip-brisbane-2032", ...worldPadelDay }),
 ].sort((a, b) => b.date.localeCompare(a.date));
 
 export function getArticle(slug: string): Article | undefined {
