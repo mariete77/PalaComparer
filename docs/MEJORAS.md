@@ -1037,9 +1037,26 @@ la pieza). Tabla de demanda real: todo ✓.
    `drawer-slide`/`drawer-fade` aplicadas, body overflow hidden al abrir, Escape cierra,
    sin overflow horizontal en 375px). Screenshots:
    docs/screenshots/2026-10-21-nav-{scrolled-activo,drawer-movil}.png.
-5. [ ] **Scroll-reveal CSS-only** — aparición escalonada de secciones en homepage
+5. [x] **Scroll-reveal CSS-only** — aparición escalonada de secciones en homepage
    (hero → marquee → pilares → destacados → noticias → ofertas) con animaciones CSS puras
    (sin librerías) y respeto a `prefers-reduced-motion`. Verificar: build + screenshot.
+   — **HECHO 2026-10-23**: implementado con **animaciones scroll-driven nativas**
+   (`animation-timeline: view()`, Chrome ≥115 y derivados) — 0 JS, 0 librerías, 0 bundle.
+   Añadido en globals.css: keyframe `pc-reveal-up` (fade + 28px rise) con la clase
+   `.pc-reveal` (rango `entry 0% → entry 55%`) y `.pc-reveal-group > *` (rangos
+   desplazados por `:nth-child` → escalonado real de cards de noticias y filas de
+   pilares, atado al scroll). Aplicado en page.tsx a: marquee, jugador del día,
+   pilares (+ grupo), ofertas, pádel destacado, tenis destacado y noticias (+ grupo);
+   el Hero se queda fuera (ya tiene su ciclo de entrada ligado al video). Guardas:
+   `@supports (animation-timeline: view())` (navegadores sin soporte ven contenido
+   estático — nunca oculto, el HTML prerenderizado no lleva opacity) y
+   `prefers-reduced-motion: no-preference` (reduced → `animation: none`, opacity 1).
+   Verificado sin visión: build OK, check:translations OK; /es y /en a 200 con 7
+   `.pc-reveal` + 2 `.pc-reveal-group` servidos; navegador real: `animationTimeline:
+   view()` computado, opacity 0 → 0.14 (mid) → 1 (bottom), marquee 1 al entrar,
+   reduced-motion → estático visible, 0 overflow horizontal en desktop. Screenshot
+   `docs/screenshots/2026-10-23-scroll-reveal-homepage.png` (1080×486, sección de
+   ofertas a opacity 0.60 en pleno revelado, 1.753 colores únicos).
 6. [ ] **Comparador mejorado** — tabla con fila/columna sticky, chip verde en el mejor
    precio de cada producto, toggle de mostrar/ocultar specs. Verificar: build + screenshot
    de `/comparar`.
@@ -1162,6 +1179,20 @@ pádel las cubre el cron de palas). Al terminar, actualizar el estado de la fila
 ---
 
 ## Notas (varias noches)
+
+- 2026-10-23 — **Sin torneo en curso** (pádel: Kuwait Major 26-31 oct, arranca el lunes —
+  pieza natural de la noche del 25→26 o 26→27 con el cuadro; ATP 250 de Almaty/Bruselas/
+  Lyon sin nombres cubribles con catálogo; Viena/Basilea 500 desde el lunes 26 con
+  **Alcaraz WC en Viena y Djokovic WC en Basilea** — pieza fuerte para la noche del 25→26
+  o 26→27 junto con la previa del Kuwait Major; World Padel Day ya cubierto el 22) →
+  backlog: item 5 Visual **Scroll-reveal CSS-only** implementado (ver sección 🎨 Visual).
+  Técnica: `animation-timeline: view()` nativa — el keyframe es `linear` y el easing
+  visual viene de la curva del rango de entrada (no hace falta cubic-bezier); el
+  escalonado de `.pc-reveal-group > *` usa `:nth-child` con `animation-range`
+  desplazados, que es atado al scroll real (no delays). OPS: otro `next-server`
+  huérfano (PID 3142551, del 21 oct) bloqueaba el puerto 3000 — matado por PID
+  (kill, luego kill -9); relanzado `npm run start` para verificar. Recordar PARAR
+  el server al terminar la noche.
 
 - 2026-10-16 — **Regla 0 (Shanghai Masters: cuartos partidos; Milano P1 también en marcha)**:
   publicada `shanghai-masters-2026-zverev-semis-jodar-medvedev` (ES+EN) con los cuartos del

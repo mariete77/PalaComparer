@@ -113,37 +113,41 @@ export default async function HomePage({
       />
 
       {/* Store marquee */}
-      <StoreMarquee />
+      <div className="pc-reveal">
+        <StoreMarquee />
+      </div>
 
       {/* JUGADOR DEL DÍA — rotación diaria con datos verificados */}
-      <PlayerOfTheDay
-        feature={daily.feature}
-        product={daily.product}
-        locale={locale}
-        labels={{
-          eyebrow: t("home.jugadorDiaEyebrow"),
-          pregunta: t("home.jugadorDiaPregunta", {
-            arma: daily.product.sport === "padel" ? t("common.padelLower") : t("common.tenisLower"),
-            nombre: daily.feature.name,
-          }),
-          verFicha: t("home.jugadorDiaVerFicha"),
-          verProducto: t("home.jugadorDiaVerProducto", {
-            arma: daily.product.sport === "padel" ? t("common.padelLower") : t("common.tenisLower"),
-          }),
-          nota: t("home.jugadorDiaNota", { fecha: factDate(daily.feature.facts[0].since, locale) }),
-          desde: t("common.desde"),
-          padel: t("common.padel"),
-          tenis: t("common.tenis"),
-        }}
-      />
+      <div className="pc-reveal">
+        <PlayerOfTheDay
+          feature={daily.feature}
+          product={daily.product}
+          locale={locale}
+          labels={{
+            eyebrow: t("home.jugadorDiaEyebrow"),
+            pregunta: t("home.jugadorDiaPregunta", {
+              arma: daily.product.sport === "padel" ? t("common.padelLower") : t("common.tenisLower"),
+              nombre: daily.feature.name,
+            }),
+            verFicha: t("home.jugadorDiaVerFicha"),
+            verProducto: t("home.jugadorDiaVerProducto", {
+              arma: daily.product.sport === "padel" ? t("common.padelLower") : t("common.tenisLower"),
+            }),
+            nota: t("home.jugadorDiaNota", { fecha: factDate(daily.feature.facts[0].since, locale) }),
+            desde: t("common.desde"),
+            padel: t("common.padel"),
+            tenis: t("common.tenis"),
+          }}
+        />
+      </div>
 
       {/* PILARES */}
-      <section className="mx-auto max-w-7xl px-6 py-20 md:py-28">
+      <section className="mx-auto max-w-7xl px-6 py-20 md:py-28 pc-reveal">
         <div className="grid gap-8 md:grid-cols-12 md:gap-12">
           <h2 className="font-display text-2xl font-bold leading-tight tracking-tight sm:text-3xl md:col-span-4">
             {t("home.pilarTitulo")}
           </h2>
-          <dl className="divide-y divide-overlay-10 border-t border-overlay-10 md:col-span-7 md:col-start-6">
+          <dl className="divide-y divide-overlay-10 border-t border-overlay-10 md:col-span-7 md:col-start-6 pc-reveal-group">
             {pilares.map((p) => (
               <div key={p.title} className="grid gap-1 py-5 sm:grid-cols-[13rem_1fr] sm:gap-8">
                 <dt className="font-display font-semibold text-primary-strong">
@@ -157,7 +161,7 @@ export default async function HomePage({
       </section>
 
       {/* OFERTAS DE LA SEMANA — las 4 con mayor descuento real */}
-      <section className="max-w-7xl mx-auto px-6 mb-20 md:mb-28">
+      <section className="max-w-7xl mx-auto px-6 mb-20 md:mb-28 pc-reveal">
         <div className="flex items-end justify-between gap-4 mb-8">
           <h2 className="font-display text-3xl font-bold tracking-tight">
             {t("home.ofertasSemana")}
@@ -177,7 +181,7 @@ export default async function HomePage({
       </section>
 
       {/* PADEL DESTACADO */}
-      <section className="max-w-7xl mx-auto px-6 mb-20 md:mb-28">
+      <section className="max-w-7xl mx-auto px-6 mb-20 md:mb-28 pc-reveal">
         <div className="flex items-end justify-between gap-4 mb-8">
           <h2 className="font-display text-3xl font-bold tracking-tight">
             {t("home.palasDelMomento")}
@@ -196,7 +200,7 @@ export default async function HomePage({
       </section>
 
       {/* TENIS DESTACADO */}
-      <section className="max-w-7xl mx-auto px-6 mb-20 md:mb-28">
+      <section className="max-w-7xl mx-auto px-6 mb-20 md:mb-28 pc-reveal">
         <div className="flex items-end justify-between gap-4 mb-8">
           <h2 className="font-display text-3xl font-bold tracking-tight">
             {t("home.raquetasDestacadas")}
@@ -215,7 +219,7 @@ export default async function HomePage({
       </section>
 
       {/* NOTICIAS — editorial layout */}
-      <section className="max-w-7xl mx-auto px-6 mb-24">
+      <section className="max-w-7xl mx-auto px-6 mb-24 pc-reveal">
         <div className="flex items-end justify-between gap-4 mb-8">
           <h2 className="font-display text-3xl font-bold tracking-tight">
             {t("home.antesDeComprar")}
@@ -224,7 +228,7 @@ export default async function HomePage({
             {t("common.verTodas")}
           </Link>
         </div>
-        <div className="grid md:grid-cols-3 gap-6">
+        <div className="grid md:grid-cols-3 gap-6 pc-reveal-group">
           {ultimasNoticias.map((a) => (
             <Link
               key={a.slug}
