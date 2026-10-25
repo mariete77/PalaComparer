@@ -166,6 +166,47 @@ empleos (OpenEconomics); Padel Invitational UBS en la Ópera de Sídney 15-16 ag
 temporal con Pat Rafter); Olympic inclusion AÚN NO decidida (el COI decide; matiz cubierto en
 la pieza). Tabla de demanda real: todo ✓.
 
+Hechos verificados a 2026-10-25 (para la noche del 25→26): **Kuwait Major EN MARCHA
+(25-31 oct, Rafa Nadal Academy Kuwait)** — pieza de previa+cuadro publicada (ver item
+marcado abajo). Verificado en FIP oficial (padelfip.com/events/kuwait-major-2026: cuadro
+principal 25-31 oct, hombres 1ª ronda HOY domingo 25 desde las 14:00, mujeres estreno
+lunes 26 12:00; octavos miérc 28, cuartos juev 29, semis vier 30 14:00, final sáb 31
+16:00; premio €1.044.849; 48 parejas masc + 40 fem; indoor, estructuras MejorSet, turf
+MONDO, bolas Bullpadel Next Pro), EFE/diariosigloxxi (ascenso P1→Major por aplazamiento
+de Doha; sede ya acogió Kuwait P1 2024 y FIP World Cup Pairs 2025), Premier Padel
+premierpadel.com (nota oficial "The Battle for No. 1... Arrives in Kuwait": Galán-Chingotto
+BAJA confirmada por lesión del madrileño; Coello-Tapia 4 títulos seguidos París-Róterdam-
+Düsseldorf-Milán; féminas: Ari-Ustero 3 de los últimos 4 títulos, a 1.980 pts de Triay-Brea
+con 6.500 aún en juego), tennistonic (cuadro: Tapia-Coello 1, Lebrón-Augsburger 3 MISMA
+mitad → semis posibles; Stupa-Sanz 4 y Guerrero-Leal 7 en la baja; posibles cuartos
+Paquito-Di Nenno 5 vs Lebrón-Augsburger; Coki-Yanguas 6 en zona Coello; en féminas Triay-
+Brea 1, Josemaría-Bea 2, Ari-Ustero 3, Fernández-Calvo 4), redbull.com (Red Bull TV emite
+el Kuwait Major 26-31 en directo). ATP esta semana: Viena 500 (Alcaraz debuta martes ante
+Khachanov — as.com; Zverev en cuadro) y Basilea 500 desde el lunes (Wawrinka se retira
+allí; Jódar y Davidovich en cuadro, podrían cruzarse en cuartos — as.com/marca). Piezas
+naturales próximas noches: cuartos/semis Kuwait (29-30 oct), final Kuwait (31 oct), Viena/
+Basilea con raquetas del catálogo si hay nombres cubribles. Tabla de demanda real: todo ✓.
+
+1. [x] **Kuwait Major 2026: baja Galán-Chingotto, Coello-Tapia lanzados — y las palas de
+   los favoritos (torneo EN MARCHA 25-31 oct)** — pieza Regla 0 de HOY domingo 25: primer
+   día del cuadro masculino en la Rafa Nadal Academy Kuwait y la noticia fuerte es la baja
+   de los nº2. Ángulo propio: el Major crecido a última hora (2.000 pts, €1.044.849,
+   promovido de P1 por el aplazamiento de Doha) + el cuadro tras la baja (mitad caliente
+   Tapia-Coello/Lebrón-Augsburger) + las palas reales de todos los favoritos, fichadas en
+   el catálogo (8 relatedProducts, incluida la nueva Viper 3.1 2027 de Lebrón). —
+   **HECHO 2026-10-25**: artículo `kuwait-major-2026-palas-favoritos` (ES+EN, kind novedad,
+   8 relatedProducts: AT10 Genius 18K, Coello Pro, Viper 3.1 2027 Lebrón, Electra Pro IT 26,
+   Axion Attack 2.0, Hack 05 2027, XPLO 02 2027, Elite 02 2027). Datos verificados: FIP
+   oficial (fechas, premio, formato, sede, bolas, indoor), premierpadel.com (baja
+   Galán-Chingotto, racha Coello-Tapia, batalla nº1 femenina con cifras exactas),
+   tennistonic (cuadro y semillas), EFE (ascenso P1→Major), Red Bull TV (emisión).
+   Todos los precios del catálogo verificados en products.ts. Archivos:
+   src/content/noticias/{,en/}kuwait-major-2026-palas-favoritos.mdx, src/data/news.ts.
+   Build OK (568 páginas) + check:translations OK; /es y /en a 200; 33 enlaces a fichas de
+   producto renderizados por locale, 2 callouts, H1 en y=276 verificado por DOM; screenshot
+   docs/screenshots/2026-10-25-kuwait-major.png (1080×486, 37.895 colores únicos, sin
+   visión: verificado por píxeles+DOM).
+
 1. [x] **World Padel Day: la FIP hace oficial el 20 de octubre y el pádel mira a Brisbane 2032
    (historia del 20 oct)** — pieza Regla 0 de HOY jueves 22: el deporte estrena día oficial con
    la campaña olímpica de la FIP. Ángulo propio: "de 40 millones de jugadores a tu primera

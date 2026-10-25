@@ -103,6 +103,7 @@ import { metadata as milanoP1Finales } from "@/content/noticias/milano-p1-2026-d
 import { metadata as milanoP1Campeones } from "@/content/noticias/milano-p1-2026-campeones-tapia-coello-sanchez-ustero.mdx";
 import { metadata as nox2027Coleccion } from "@/content/noticias/nox-2027-coleccion-17-palas-precios.mdx";
 import { metadata as worldPadelDay } from "@/content/noticias/world-padel-day-2026-fip-brisbane-2032.mdx";
+import { metadata as kuwaitMajorPalas } from "@/content/noticias/kuwait-major-2026-palas-favoritos.mdx";
 
 /**
  * Traducciones EN de los metadatos de cada artículo. Las ES vienen del propio
@@ -500,6 +501,13 @@ const EN_META: Record<string, { title: string; excerpt: string; tags: string[] }
       "FIP and Premier Padel have officially recognised 20 October as World Padel Day, launching a campaign for padel's inclusion in the Brisbane 2032 Olympics. We break down the numbers behind a sport of 40 million players — and how to pick your first paddle if you're one of the newcomers.",
     tags: ["World Padel Day", "FIP", "Brisbane 2032", "Premier Padel"],
   },
+  "kuwait-major-2026-palas-favoritos": {
+    title:
+      "Kuwait Major 2026: Galán-Chingotto out, Coello-Tapia clear favourites — the contenders' rackets",
+    excerpt:
+      "The Kuwait Major (October 25-31, Rafa Nadal Academy Kuwait) hands out 2,000 points and €1,044,849 in its first edition as a Major, promoted from P1 after Doha's postponement — and it starts without the injured Galán-Chingotto. Coello-Tapia arrive on a four-title streak, with Lebrón-Augsburger and Stupa-Sanz chasing. All their rackets, in the catalog.",
+    tags: ["Premier Padel", "Kuwait Major", "Tapia", "Coello", "Lebrón", "Stupaczuk", "Triay", "Brea", "Ari Sánchez"],
+  },
   "milano-p1-2026-cuartos-galan-lebron": {
     title:
       "Milano P1: quarter-finals without upsets, and a Galán-Lebrón clash of champions in the semis",
@@ -617,6 +625,7 @@ export const ARTICLES: Article[] = [
   localize({ slug: "milano-p1-2026-campeones-tapia-coello-sanchez-ustero", ...milanoP1Campeones }),
   localize({ slug: "nox-2027-coleccion-17-palas-precios", ...nox2027Coleccion }),
   localize({ slug: "world-padel-day-2026-fip-brisbane-2032", ...worldPadelDay }),
+  localize({ slug: "kuwait-major-2026-palas-favoritos", ...kuwaitMajorPalas }),
 ].sort((a, b) => b.date.localeCompare(a.date));
 
 export function getArticle(slug: string): Article | undefined {
