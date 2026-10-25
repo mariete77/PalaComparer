@@ -3529,6 +3529,31 @@ export const PRODUCTS: Product[] = [
     descriptionEn:
       "Tamara Icardo's signature racket: T-One plays on the initials of \u201cTamara One\u201d and is the first lightweight diamond mold in the Super Pro range, with a 347-366 g weight range and medium balance to finish points without giving up control. An 18K Carbon Hybrid face over medium-touch M-Eva Balance rubber, with the Power Balance system of interchangeable rubbers in the profile (sold separately) to tune the balance to your game. Air Booster speeds up the swing, Tri-Force Core stabilizes the heart, Hexa Cell reinforces the frame and A-Shock damps vibrations. Made in Spain for advanced and professional female players with a versatile-offensive profile.",
   },
+  {
+    id: "siux-fenix-pro-black-2027",
+    sport: "padel",
+    brand: "Siux",
+    model: "Fenix Pro Black 2027",
+    year: 2027,
+    price: 359.95,
+    image: "/images/rackets/siux-fenix-pro-black-2027.svg",
+    level: ["avanzado", "profesional"],
+    style: ["potencia"],
+    player: "Leo Augsburger",
+    padel: {
+      shape: "diamante",
+      weight: "355-375 g",
+      balance: "alto",
+      core: "EVA Hard",
+      faces: "Carbono 3K SC Power",
+      surface: "3D",
+      hardness: "dura",
+    },
+    description:
+      "La pala de Leo Augsburger para 2027 y el extremo más ofensivo de la colección Siux: diamante, balance alto y tacto 10/10 para máxima palanca y contundencia en el remate. Caras de 3K Carbon SC Power sobre núcleo EVA Hard, una estructura firme y reactiva que exige buena técnica pero devuelve toda la energía del golpe bien ejecutado. La versión Black estrena acabado satinado minimalista con textura 3D; la Purple, brillante, ofrece prestaciones idénticas.",
+    descriptionEn:
+      "Leo Augsburger's 2027 racket and the most offensive end of the Siux collection: diamond shape, high balance and a 10/10 hard feel for maximum leverage and smash power. 3K Carbon SC Power faces over an EVA Hard core, a firm, reactive structure that demands good technique but returns every ounce of a well-struck ball. The Black version debuts a minimalist satin finish with 3D texture; the glossy Purple edition performs identically.",
+  },
 ];
 
 export function getProduct(id: string) {
