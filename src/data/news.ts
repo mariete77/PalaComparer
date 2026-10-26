@@ -104,6 +104,8 @@ import { metadata as milanoP1Campeones } from "@/content/noticias/milano-p1-2026
 import { metadata as nox2027Coleccion } from "@/content/noticias/nox-2027-coleccion-17-palas-precios.mdx";
 import { metadata as worldPadelDay } from "@/content/noticias/world-padel-day-2026-fip-brisbane-2032.mdx";
 import { metadata as kuwaitMajorPalas } from "@/content/noticias/kuwait-major-2026-palas-favoritos.mdx";
+import { metadata as atp500ViennaBasel } from "@/content/noticias/atp-500-viena-basilea-2026-alcaraz-djokovic.mdx";
+import { metadata as kuwaitJornada1 } from "@/content/noticias/kuwait-major-2026-jornada-1-resultados.mdx";
 
 /**
  * Traducciones EN de los metadatos de cada artículo. Las ES vienen del propio
@@ -508,6 +510,20 @@ const EN_META: Record<string, { title: string; excerpt: string; tags: string[] }
       "The Kuwait Major (October 25-31, Rafa Nadal Academy Kuwait) hands out 2,000 points and €1,044,849 in its first edition as a Major, promoted from P1 after Doha's postponement — and it starts without the injured Galán-Chingotto. Coello-Tapia arrive on a four-title streak, with Lebrón-Augsburger and Stupa-Sanz chasing. All their rackets, in the catalog.",
     tags: ["Premier Padel", "Kuwait Major", "Tapia", "Coello", "Lebrón", "Stupaczuk", "Triay", "Brea", "Ari Sánchez"],
   },
+  "atp-500-viena-basilea-2026-alcaraz-djokovic": {
+    title:
+      "Double ATP 500 week: Alcaraz returns in Vienna, Djokovic chases title No. 103 in Basel — and Wawrinka says goodbye",
+    excerpt:
+      "Vienna and Basel begin Monday, October 26 with two luxury wild cards: Alcaraz opens against Khachanov (6-0 head-to-head) chasing his fourth title of the year, while Djokovic returns to the event he won in 2009 to pursue the 103rd title that would tie Federer. At home, Stan Wawrinka plays the final tournament of his career. The rackets of all of them, catalogued with real specs.",
+    tags: ["ATP 500", "Vienna", "Basel", "Alcaraz", "Djokovic", "Wawrinka", "Zverev", "Shelton"],
+  },
+  "kuwait-major-2026-jornada-1-resultados": {
+    title:
+      "Kuwait Major, day 1: comebacks, wild cards on the canvas and the seeds still waiting",
+    excerpt:
+      "The Kuwait Major men's draw opened with 16 first-round matches and no seeded casualties — the top pairs are still unbeaten until Monday. Rubini-Chozas and Ortega-Axelsson pulled off the comebacks of the day, Kuwait's three wild cards fell heavily and Ruiz-López took out Aguirre-Lijó. Monday brings Stupaczuk-Sanz's debut and the start of the women's draw.",
+    tags: ["Premier Padel", "Kuwait Major", "Stupaczuk", "Jon Sanz", "Di Nenno", "Paquito Navarro", "Results"],
+  },
   "milano-p1-2026-cuartos-galan-lebron": {
     title:
       "Milano P1: quarter-finals without upsets, and a Galán-Lebrón clash of champions in the semis",
@@ -626,6 +642,8 @@ export const ARTICLES: Article[] = [
   localize({ slug: "nox-2027-coleccion-17-palas-precios", ...nox2027Coleccion }),
   localize({ slug: "world-padel-day-2026-fip-brisbane-2032", ...worldPadelDay }),
   localize({ slug: "kuwait-major-2026-palas-favoritos", ...kuwaitMajorPalas }),
+  localize({ slug: "atp-500-viena-basilea-2026-alcaraz-djokovic", ...atp500ViennaBasel }),
+  localize({ slug: "kuwait-major-2026-jornada-1-resultados", ...kuwaitJornada1 }),
 ].sort((a, b) => b.date.localeCompare(a.date));
 
 export function getArticle(slug: string): Article | undefined {
