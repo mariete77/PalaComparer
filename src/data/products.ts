@@ -3554,6 +3554,31 @@ export const PRODUCTS: Product[] = [
     descriptionEn:
       "Leo Augsburger's 2027 racket and the most offensive end of the Siux collection: diamond shape, high balance and a 10/10 hard feel for maximum leverage and smash power. 3K Carbon SC Power faces over an EVA Hard core, a firm, reactive structure that demands good technique but returns every ounce of a well-struck ball. The Black version debuts a minimalist satin finish with 3D texture; the glossy Purple edition performs identically.",
   },
+  {
+    id: "bullpadel-pearl-2027",
+    sport: "padel",
+    brand: "Bullpadel",
+    model: "Pearl 2027",
+    year: 2027,
+    price: 294.9,
+    image: "/images/rackets/bullpadel-pearl-2027.svg",
+    level: ["avanzado", "profesional"],
+    style: ["potencia"],
+    player: "Bea González",
+    padel: {
+      shape: "diamante",
+      weight: "355-365 g",
+      balance: "medio",
+      core: "MultiEva",
+      faces: "Fibrix",
+      surface: "rugosa",
+      hardness: "media",
+    },
+    description:
+      "La nueva pala de Bea González para 2027, nacida en Bullpadel-Lab con una idea clara: que la potencia sea fácil. Diamante de 535 cm² con balance contenido (~26 cm) y solo 355-365 g, pensado para acelerar el juego sin exigir el brazo de las palas extremas. Corazón Pearl Core de geometría triangular invertida, caras Fibrix sobre núcleo MultiEva y acabado rugoso 3D Grain. Air Power y Air React Channel en el marco para un swing más rápido, más Vibradrive, Ease Vibe y puño Hesacore de serie. 'La Perla de El Palo' para jugadoras que toman la iniciativa.",
+    descriptionEn:
+      "Bea González's new racket for 2027, born in the Bullpadel-Lab around one idea: making power easy. A 535 cm² diamond with a contained balance (~26 cm) and just 355-365 g, built to speed the game up without demanding the arm of extreme rackets. Pearl Core heart with inverted triangular geometry, Fibrix faces over a MultiEva core and a rough 3D Grain finish. Air Power and Air React Channel in the frame for a faster swing, plus Vibradrive, Ease Vibe and a stock Hesacore grip. 'La Perla de El Palo' for players who take the initiative.",
+  },
 ];
 
 export function getProduct(id: string) {
