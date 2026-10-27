@@ -187,6 +187,47 @@ allí; Jódar y Davidovich en cuadro, podrían cruzarse en cuartos — as.com/ma
 naturales próximas noches: cuartos/semis Kuwait (29-30 oct), final Kuwait (31 oct), Viena/
 Basilea con raquetas del catálogo si hay nombres cubribles. Tabla de demanda real: todo ✓.
 
+Hechos verificados a 2026-10-27 (para la noche del 27→28): **Kuwait Major EN MARCHA
+(25-31 oct)** — jornada 2 del lunes 26 completada (artículo publicado, ver item marcado):
+primera víctima de peso Momo González-Campagnolo (CS8) ante Sintes-Zamora 4-6 3-6 5-7 en
+dieciseisavos; debuts con victoria de Stupa-Sanz (6-2 7-6(3)), Di Nenno-Paquito (6-2 6-3)
+y Guerrero-Leal (3 sets); Libaak-Alfonso 6-2 6-0; caen los verdugos de Aguirre-Lijó
+(Ruiz-López ante Javi García-Álex Ruiz). Cuadro FEMENINO 1ª ronda: fuera Collombon-
+Sharifova ante Aguilar-Escacena; Carrascosa-Fernández (previa) ganan de nuevo; wild cards
+locales Al Qenaei-Guimet y Hasan-Atencia fuera; Manquillo-Lucía Sainz cómodas. HOY martes
+27 (OOP elneverazo): 2ª jornada de dieciseisavos MASCULINOS — debuts Coello-Tapia (1) vs
+Abbate-Dal Bianco (no antes 18:00 ES), Lebrón-Augsburger (3) vs Belluati-Abud (16:00 ES),
+Coki Nieto-Yanguas (6) vs Solano-Pereyra (14:00 ES), Tello-Arce, Bautista-Bergamini,
+Goenaga-Collado vs Garrido-De Pascual; FEMENINO dieciseisavos COMPLETOS hoy (Salazar-Osoro
+vs Bidahorria-Riera, Ortega-Araújo, Icardo-Jensen, Castelló-Rodríguez, Llaguno, Virseda,
+Godallier-Peralta, Jensen...; Triay-Brea, Josemaría-Bea, Ari-Ustero y Fernández-Calvo
+exentas a octavos). Miércoles 28 = octavos completos (ambos cuadros), jueves 29 cuartos,
+viernes 30 semis, sábado 31 final 16:00. Pieza natural de la próxima noche: octavos del
+miércoles con las favoritas ya en pista. Viena 500 también en marcha (Alcaraz debuta
+martes vs Khachanov) — verificar resultado antes de escribir; Basilea con Djokovic WC.
+Tabla de demanda real: todo ✓.
+
+1. [x] **Kuwait Major, jornada 2: Sintes-Zamora tumban a Momo-Campagnolo (CS8) y rompen
+   la parte baja del cuadro; este martes debutan Coello-Tapia y Lebrón-Augsburger (torneo
+   EN MARCHA 25-31 oct)** — pieza Regla 0 de HOY martes 27: resultados del lunes 26 +
+   previa del debut de los nº1. Ángulo propio: la primera víctima de privilegio del torneo
+   (Sintes-Zamora ganan 6-4 3-6 7-5 — golpean primero y aguantan el tercero) abre el cuadro
+   bajo sin el bloque CS8 + la tarde de los ilusionados (Hernández-Castaño tumban a los
+   CS15) + cuadro femenino arrancado con la baja de Collombon y el desgaste
+   de la previa (Dubins-Luttikhuis, del maratón de 3h27, sin fuerzas) + OOP del martes con
+   Coello-Tapia/Lebrón-Augsburger/Coki-Yanguas y dieciseisavos femeninos completos. —
+   **HECHO 2026-10-27**: artículo `kuwait-major-2026-sintes-zamora-sorpresa` (ES+EN, kind
+   novedad, 5 relatedProducts: AT10 Genius 18K, Coello Pro, Viper 3.1 2027 Lebrón, Electra
+   Pro IT 26, Hack 05 2027). Datos verificados: elneverazo (resultados completos jornada 2
+   masculina y femenina + OOP del martes con horarios ES/AR + nota de la sorpresa Sintes-
+   Zamora), padelfip.com (ficha oficial torneo), premierpadel.com (portada Kuwait).
+   Enlaces internos: jornada-1 y palas-favoritos (ES+EN), 2 guías, 5 fichas producto por
+   locale renderizadas en HTML prerendered sin dobles prefijos. Archivos:
+   src/content/noticias/{,en/}kuwait-major-2026-sintes-zamora-sorpresa.mdx,
+   src/data/news.ts. Build OK + check:translations OK (148 productos); /es y /en a 200;
+   screenshot docs/screenshots/2026-10-27-kuwait-sintes-zamora.png (1080×486, 37.231
+   colores únicos, H1 verificado por DOM — sin visión: píxeles+DOM).
+
 1. [x] **Kuwait Major 2026: baja Galán-Chingotto, Coello-Tapia lanzados — y las palas de
    los favoritos (torneo EN MARCHA 25-31 oct)** — pieza Regla 0 de HOY domingo 25: primer
    día del cuadro masculino en la Rafa Nadal Academy Kuwait y la noticia fuerte es la baja

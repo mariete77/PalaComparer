@@ -106,6 +106,7 @@ import { metadata as worldPadelDay } from "@/content/noticias/world-padel-day-20
 import { metadata as kuwaitMajorPalas } from "@/content/noticias/kuwait-major-2026-palas-favoritos.mdx";
 import { metadata as atp500ViennaBasel } from "@/content/noticias/atp-500-viena-basilea-2026-alcaraz-djokovic.mdx";
 import { metadata as kuwaitJornada1 } from "@/content/noticias/kuwait-major-2026-jornada-1-resultados.mdx";
+import { metadata as kuwaitSintesZamora } from "@/content/noticias/kuwait-major-2026-sintes-zamora-sorpresa.mdx";
 
 /**
  * Traducciones EN de los metadatos de cada artículo. Las ES vienen del propio
@@ -524,6 +525,13 @@ const EN_META: Record<string, { title: string; excerpt: string; tags: string[] }
       "The Kuwait Major men's draw opened with 16 first-round matches and no seeded casualties — the top pairs are still unbeaten until Monday. Rubini-Chozas and Ortega-Axelsson pulled off the comebacks of the day, Kuwait's three wild cards fell heavily and Ruiz-López took out Aguirre-Lijó. Monday brings Stupaczuk-Sanz's debut and the start of the women's draw.",
     tags: ["Premier Padel", "Kuwait Major", "Stupaczuk", "Jon Sanz", "Di Nenno", "Paquito Navarro", "Results"],
   },
+  "kuwait-major-2026-sintes-zamora-sorpresa": {
+    title:
+      "Kuwait Major: Sintes and Zamora take out Momo-Campagnolo and break the draw open — Coello-Tapia and Lebrón-Augsburger debut this Tuesday",
+    excerpt:
+      "The Kuwait Major's second day delivered its first big casualty: Marc Sintes and Coquito Zamora knocked out eighth seeds Momo González-Campagnolo in three sets. Stupaczuk-Sanz, Di Nenno-Paquito and Guerrero-Leal all won their openers, and the women's draw began with Collombon's exit. Tuesday raises the stakes: Coello-Tapia and Lebrón-Augsburger make their debuts on centre court.",
+    tags: ["Premier Padel", "Kuwait Major", "Coello", "Tapia", "Lebrón", "Momo González", "Sintes", "Results"],
+  },
   "milano-p1-2026-cuartos-galan-lebron": {
     title:
       "Milano P1: quarter-finals without upsets, and a Galán-Lebrón clash of champions in the semis",
@@ -644,6 +652,7 @@ export const ARTICLES: Article[] = [
   localize({ slug: "kuwait-major-2026-palas-favoritos", ...kuwaitMajorPalas }),
   localize({ slug: "atp-500-viena-basilea-2026-alcaraz-djokovic", ...atp500ViennaBasel }),
   localize({ slug: "kuwait-major-2026-jornada-1-resultados", ...kuwaitJornada1 }),
+  localize({ slug: "kuwait-major-2026-sintes-zamora-sorpresa", ...kuwaitSintesZamora }),
 ].sort((a, b) => b.date.localeCompare(a.date));
 
 export function getArticle(slug: string): Article | undefined {
