@@ -107,6 +107,7 @@ import { metadata as kuwaitMajorPalas } from "@/content/noticias/kuwait-major-20
 import { metadata as atp500ViennaBasel } from "@/content/noticias/atp-500-viena-basilea-2026-alcaraz-djokovic.mdx";
 import { metadata as kuwaitJornada1 } from "@/content/noticias/kuwait-major-2026-jornada-1-resultados.mdx";
 import { metadata as kuwaitSintesZamora } from "@/content/noticias/kuwait-major-2026-sintes-zamora-sorpresa.mdx";
+import { metadata as kuwaitOctavosFavoritas } from "@/content/noticias/kuwait-major-2026-bidahorria-riera-favoritas-octavos.mdx";
 
 /**
  * Traducciones EN de los metadatos de cada artículo. Las ES vienen del propio
@@ -532,6 +533,13 @@ const EN_META: Record<string, { title: string; excerpt: string; tags: string[] }
       "The Kuwait Major's second day delivered its first big casualty: Marc Sintes and Coquito Zamora knocked out eighth seeds Momo González-Campagnolo in three sets. Stupaczuk-Sanz, Di Nenno-Paquito and Guerrero-Leal all won their openers, and the women's draw began with Collombon's exit. Tuesday raises the stakes: Coello-Tapia and Lebrón-Augsburger make their debuts on centre court.",
     tags: ["Premier Padel", "Kuwait Major", "Coello", "Tapia", "Lebrón", "Momo González", "Sintes", "Results"],
   },
+  "kuwait-major-2026-bidahorria-riera-favoritas-octavos": {
+    title:
+      "Kuwait Major: Bidahorria and Riera take out Salazar-Osoro, Coello-Tapia wrap in 54 minutes — the favourites debut today",
+    excerpt:
+      "The Kuwait Major's third day landed its biggest blow on the women's draw: Julieta Bidahorria and Virginia Riera ousted eighth seeds Salazar-Osoro in over two hours. In the men's debuts, Coello-Tapia signed a 6-3 6-0 in 54 minutes and Lebrón-Augsburger handled comeback artists Belluati-Abud. Wednesday brings the round of 16 with the world's four best women's pairs making their first appearance.",
+    tags: ["Premier Padel", "Kuwait Major", "Coello", "Tapia", "Lebrón", "Bidahorria", "Riera", "Round of 16"],
+  },
   "milano-p1-2026-cuartos-galan-lebron": {
     title:
       "Milano P1: quarter-finals without upsets, and a Galán-Lebrón clash of champions in the semis",
@@ -653,6 +661,7 @@ export const ARTICLES: Article[] = [
   localize({ slug: "atp-500-viena-basilea-2026-alcaraz-djokovic", ...atp500ViennaBasel }),
   localize({ slug: "kuwait-major-2026-jornada-1-resultados", ...kuwaitJornada1 }),
   localize({ slug: "kuwait-major-2026-sintes-zamora-sorpresa", ...kuwaitSintesZamora }),
+  localize({ slug: "kuwait-major-2026-bidahorria-riera-favoritas-octavos", ...kuwaitOctavosFavoritas }),
 ].sort((a, b) => b.date.localeCompare(a.date));
 
 export function getArticle(slug: string): Article | undefined {

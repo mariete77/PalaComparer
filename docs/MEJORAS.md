@@ -207,6 +207,58 @@ miércoles con las favoritas ya en pista. Viena 500 también en marcha (Alcaraz 
 martes vs Khachanov) — verificar resultado antes de escribir; Basilea con Djokovic WC.
 Tabla de demanda real: todo ✓.
 
+Hechos verificados a 2026-10-28 (para la noche del 28→29): **Kuwait Major EN MARCHA
+(25-31 oct)** — jornada 3 del martes 27 completada (artículo publicado, ver item
+marcado): sorpresa femenina Bidahorria-Riera (nº21, 3 títulos FIP Tour juntos este
+año: Nairobi/Sevilla/Ámsterdam; Riera 8 títulos en 2026) tumban a Salazar-Osoro (8)
+6-2 2-6 6-1 en 2h05 — golpe duro a sus aspiraciones de Finals (les quedan Dubai P1
+y Mexico Major); debuts masculinos sin sustos: Coello-Tapia 6-3 6-0 a Abbate-Dal
+Bianco en 54′ (título = 4ª temporada seguida como nº1), Lebrón-Augsburger 6-4 6-3
+a Belluati-Abud en 1h18, Coki-Yanguas sufre 3 sets (6-3 3-6 6-4) con Nieto de
+vuelta tras lesión; caen Garrido-De Pascual (16) ante Goenaga-Collado 6-2 7-6(4);
+Tello-Arce y Bautista-Bergamini pasan; Ortega-Araújo 6-1 6-0 en 42′, Virseda-Fassio
+e Icardo-Jensen cómodas, fuera Castelló-Rodríguez (16). HOY miércoles 28 octavos
+completos (OOP elneverazo): femenino debuta el top-4 (Triay-Brea 1 vs Talaván-Saiz;
+Josemaría-Bea 2 vs Montes-Barrera; Ari-Ustero 3 vs Fassio-Virseda; Calvo-Fernández
+4 vs Velasco-Eugenio) + masculinos Stupa-Sanz vs Jofre-Esbrí, Libaak-Alfonso vs
+Lebrón-Augsburger (16:00 ES), Coello-Tapia vs Goenaga-Collado (18:00 ES), Sintes-
+Zamora vs Javi García-Álex Ruiz, Bautista-Bergamini (10) vs Coki-Yanguas (6);
+último día gratis en YouTube (desde cuartos → Red Bull TV). Jueves 29 cuartos,
+viernes 30 semis, sábado 31 final 16:00. Viena 500: Alcaraz debuta martes vs
+Khachanov — verificar resultado si se cubre. Pieza natural próxima noche: cuartos
+del jueves con los octavos de hoy resueltos. Tabla de demanda real: todo ✓.
+
+1. [x] **Kuwait Major, jornada 3: Bidahorria-Riera tumban a Salazar-Osoro y
+   Coello-Tapia firma 54 minutos — hoy debutan las cuatro mejores parejas
+   femeninas (torneo EN MARCHA 25-31 oct)** — pieza Regla 0 de HOY miércoles 28:
+   resultados del martes 27 + previa de los octavos. Ángulo propio: el golpe
+   argentino del FIP Tour al cuadro femenino (la pareja nº21 con 3 títulos en el
+   circuito secundario que rompe la pelea por las Finals) + los debuts
+   exprés de los favoritos (54′ de Coello-Tapia con el nº1 de fin de año a la
+   vista) + el estreno del top-4 femenino hoy con 2.000 puntos en juego. —
+   **HECHO 2026-10-28**: artículo `kuwait-major-2026-bidahorria-riera-favoritas-octavos`
+   (ES+EN, kind novedad, 7 relatedProducts: AT10 Genius 18K, Coello Pro, Viper 3.1
+   2027 Lebrón, Fenix Pro Black 2027, Diablo Pro 2026 Libaak, Arrow HIT Light, Pearl
+   2027). Datos verificados: premierpadel.com (nota oficial del 27: Bidahorria-Riera
+   6-2 2-6 6-1 2h05, contexto FIP Tour 3 títulos + 8 de Riera, Finals de Salazar-
+   Osoro, 54′ Coello-Tapia con nº1 4 temporadas, 1h18 Lebrón-Augsburger, Nieto
+   vuelve, cuadro top-4 femenino con 4 de 6 Majors de Triay-Brea), widget oficial
+   matchscorerlive vía sport.es (marcadores y duraciones jornada completa: Solano-
+   Pereyra 2h10, Goenaga-Collado 1h40, Tello-Arce 1h58, Bautista-Bergamini 1h28,
+   Perino-Domínguez 2h27, Ortega-Araújo 42′, Castelló 2h34, Velasco-Eugenio 3h03),
+   elneverazo (OOP octavos con horarios). Enlaces internos: sintes-zamora y
+   jornada-1 (ES+EN), 2 guías, 7 fichas producto por locale. **Extra fix:
+   bug /en/en/** en MdxLink detectado al verificar (los MDX EN escriben links
+   `/en/...` y el componente re-prefijaba el locale → `/en/en/guias/...` en todos
+   los artículos EN ya publicados); corregido con `stripLocale` antes de `lp()`,
+   verificado 0 dobles prefijos en todo el site EN tras rebuild. Archivos:
+   src/content/noticias/{,en/}kuwait-major-2026-bidahorria-riera-favoritas-octavos.mdx,
+   src/data/news.ts, src/components/MdxLink.tsx. Build OK (582 páginas) +
+   check:translations OK (149 productos); /es y /en a 200; 14 enlaces producto
+   por locale; screenshot docs/screenshots/2026-10-28-kuwait-octavos-favoritas.png
+   (1080×486, 2.439 colores únicos, H1 en y=246 verificado por DOM — sin visión:
+   verificado por píxeles+DOM).
+
 1. [x] **Kuwait Major, jornada 2: Sintes-Zamora tumban a Momo-Campagnolo (CS8) y rompen
    la parte baja del cuadro; este martes debutan Coello-Tapia y Lebrón-Augsburger (torneo
    EN MARCHA 25-31 oct)** — pieza Regla 0 de HOY martes 27: resultados del lunes 26 +
