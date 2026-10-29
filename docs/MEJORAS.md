@@ -52,6 +52,28 @@
 
 ### 📰 Actualidad (contenido original y actual)
 
+Hechos verificados a 2026-10-29 (para la noche del 29→30): **Kuwait Major EN MARCHA
+(25-31 oct)** — octavos del miércoles 28 completados (artículo publicado, ver item
+marcado): BOMBA masculina Libaak-Alfonso (nº30) remontan a Lebrón-Augsburger (3)
+4-6 7-5 6-1 — segunda vez esta temporada que les eliminan (ya en octavos del Madrid
+P1 7-6 7-5, verificado elneverazo); Sintes-Zamora barren a Javi García-Álex Ruiz
+6-3 7-5 y estrenan casillero de cuartos de Major; Coello-Tapia 6-2 6-1 a
+Goenaga-Collado; Bautista-Bergamini (10) remonta a Coki-Yanguas (6) 1-6 6-4 6-2;
+Di Nenno-Paquito 6-3 6-0; Stupa-Sanz 6-2 7-5 a Jofre-Esbrí; Edu Alonso-Aimar Goñi
+tumban a Guerrero-Leal 6-4 6-4; Tello-Arce 6-3 3-6 6-1 a Perino-Domínguez.
+Femenino: top-4 entero en cuartos — Triay-Brea 6-0 6-1, Josemaría-Bea 6-1 6-0,
+Ari-Ustero 6-2 6-1, Calvo-Fernández remonta a Velasco-Eugenio; Rufo-Iglesias
+apaga el sueño de Bidahorria-Riera 6-2 6-2; Nuria Rodríguez-Dal Pozzo y Ortega-
+Araújo también dentro. HOY jueves 29 CUARTOS (OOP elneverazo/studypadel): Tello-
+Arce (9) vs Sintes-Zamora (07:00 ES), Josemaría-Bea vs Rufo-Iglesias, Stupa-Sanz
+(4) vs Alonso-Goñi, Triay-Brea vs Rodríguez-Dal Pozzo, Fernández-Calvo vs Ortega-
+Araújo, Di Nenno-Paquito (5) vs Libaak-Alfonso (~12:30 ES), Ari-Ustero vs Icardo-
+Jensen, Coello-Tapia (1) vs Bautista-Bergamini (~14:00 ES). Viernes 30 semis,
+sábado 31 final 16:00, todo en Red Bull TV (YouTube ya cerrado). Pieza natural
+próxima noche: semifinales del viernes con los cuartos de hoy resueltos. Viena/
+Basilea 500 terminan viernes/domingo — si Alcaraz o Djokovic llegan a final,
+candidato a pieza del sábado. Tabla de demanda real: todo ✓.
+
 _Por la Regla 0 del protocolo, si un torneo está en curso este item va primero. Hechos
 verificados a 2026-10-13: **Rolex Shanghai Masters EN MARCHA (7-18 oct), hoy jornada de
 octavos (R16) de la mitad alta** — lunes 12 completó el cuadro con la BOMBA: Bergs d.
@@ -227,6 +249,29 @@ Zamora vs Javi García-Álex Ruiz, Bautista-Bergamini (10) vs Coki-Yanguas (6);
 viernes 30 semis, sábado 31 final 16:00. Viena 500: Alcaraz debuta martes vs
 Khachanov — verificar resultado si se cubre. Pieza natural próxima noche: cuartos
 del jueves con los octavos de hoy resueltos. Tabla de demanda real: todo ✓.
+
+1. [x] **Kuwait Major, cuartos: Libaak y Alfonso repiten la dosis a Lebrón-Augsburger
+   (4-6 7-5 6-1) y Sintes-Zamora sigue soñando (torneo EN MARCHA 25-31 oct)** —
+   pieza Regla 0 de HOY jueves 29: resultados de los octavos del miércoles +
+   previa de los cuartos de hoy. Ángulo propio: la segunda eliminación de
+   Lebrón-Augsburger a manos de Libaak-Alfonso en la temporada (Madrid P1 y
+   Kuwait) como eje, los primeros cuartos de Major de Sintes-Zamora, y las palas
+   de los 8 supervivientes masculinos + top-4 femenino fichadas en el catálogo. —
+   **HECHO 2026-10-29**: artículo `kuwait-major-2026-cuartos-libaak-alfonso-reyes`
+   (ES+EN, kind novedad, 12 relatedProducts: Diablo Pro 2026 Libaak, AT10 Genius
+   18K Tapia, Coello Pro 2026, XPLO 02 Di Nenno, Hack 05 Paquito, Electra Stupa
+   Pro ST4, Axion Attack 2.0 Sanz, Vertex 05 Tello, EA10 Ventus Attack Edu
+   Alonso, Elite 02 Triay, Pearl 2027 Bea, Tritón T-One Icardo). Datos
+   verificados: elneverazo (octavos completos masculino y femenino), studypadel
+   (cuadro de cuartos con rankings), premierpadel.com home ("Libaak-Alfonso
+   Defeat Lebrón-Augsburger Again"), elneverazo Madrid P1 (primer 7-6 7-5).
+   Enlaces internos: bidahorria-riera y sintes-zamora (ES+EN), 2 guías, 13
+   fichas producto por locale. Archivos:
+   src/content/noticias/{,en/}kuwait-major-2026-cuartos-libaak-alfonso-reyes.mdx,
+   src/data/news.ts. Build OK (582 páginas) + check:translations OK (149
+   productos); /es y /en a 200; screenshot
+   docs/screenshots/2026-10-29-kuwait-major-2026-cuartos.png (verificado por
+   DOM: H1+4 H2, Callout final, 25 enlaces producto, scrollH 4523).
 
 1. [x] **Kuwait Major, jornada 3: Bidahorria-Riera tumban a Salazar-Osoro y
    Coello-Tapia firma 54 minutos — hoy debutan las cuatro mejores parejas
