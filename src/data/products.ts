@@ -3579,6 +3579,30 @@ export const PRODUCTS: Product[] = [
     descriptionEn:
       "Bea González's new racket for 2027, born in the Bullpadel-Lab around one idea: making power easy. A 535 cm² diamond with a contained balance (~26 cm) and just 355-365 g, built to speed the game up without demanding the arm of extreme rackets. Pearl Core heart with inverted triangular geometry, Fibrix faces over a MultiEva core and a rough 3D Grain finish. Air Power and Air React Channel in the frame for a faster swing, plus Vibradrive, Ease Vibe and a stock Hesacore grip. 'La Perla de El Palo' for players who take the initiative.",
   },
+  {
+    id: "starvie-astrum-2027",
+    sport: "padel",
+    brand: "StarVie",
+    model: "Astrum+ Black",
+    year: 2027,
+    price: 249.9,
+    image: "/images/rackets/starvie-astrum-2027.svg",
+    level: ["intermedio"],
+    style: ["polivalente"],
+    padel: {
+      shape: "lagrima",
+      weight: "350-370 g",
+      balance: "medio",
+      core: "M-Eva Balance",
+      faces: "12K Carbon Hyper",
+      surface: "rugosa",
+      hardness: "media",
+    },
+    description:
+      "La puerta de entrada a la gama premium de StarVie, fabricada en España: la Astrum+ Black 2027 combina forma lágrima y balance medio para un juego versátil que no sacrifica definición. Su plano de 12K Carbon Hyper aporta ligereza y sensibilidad ampliando el punto dulce, sobre un núcleo M-Eva Balance de tacto medio. Monta la tecnología de las palas pro de la marca — Air Booster aerodinámico para acelerar el swing, Shock Shield contra las vibraciones y el marco rígido Five Sides Tech — en acabado blanco, negro y gris. Pensada para intermedios que quieren progresar sin dar el salto a una Super Pro.",
+    descriptionEn:
+      "The gateway to StarVie's premium range, made in Spain: the Astrum+ Black 2027 pairs a tear-drop shape with a medium balance for versatile play that doesn't give up finishing power. Its 12K Carbon Hyper face adds lightness and feel while widening the sweet spot, over a medium-touch M-Eva Balance core. It carries tech from the brand's pro rackets — the Air Booster aerodynamic system to speed up the swing, Shock Shield vibration dampening and the rigid Five Sides Tech frame — in a white, black and grey finish. Aimed at intermediates looking to progress without jumping straight to a Super Pro.",
+  },
 ];
 
 export function getProduct(id: string) {
