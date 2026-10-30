@@ -109,6 +109,7 @@ import { metadata as kuwaitJornada1 } from "@/content/noticias/kuwait-major-2026
 import { metadata as kuwaitSintesZamora } from "@/content/noticias/kuwait-major-2026-sintes-zamora-sorpresa.mdx";
 import { metadata as kuwaitOctavosFavoritas } from "@/content/noticias/kuwait-major-2026-bidahorria-riera-favoritas-octavos.mdx";
 import { metadata as kuwaitCuartos } from "@/content/noticias/kuwait-major-2026-cuartos-libaak-alfonso-reyes.mdx";
+import { metadata as kuwaitSemis } from "@/content/noticias/kuwait-major-2026-semifinales-libaak-alfonso-coello-tapia.mdx";
 
 /**
  * Traducciones EN de los metadatos de cada artículo. Las ES vienen del propio
@@ -548,6 +549,13 @@ const EN_META: Record<string, { title: string; excerpt: string; tags: string[] }
       "The Kuwait Major round of 16 delivered the bomb: Tino Libaak and Gonzalo Alfonso came back on Lebrón-Augsburger (4-6, 7-5, 6-1), the second time this season they knock them out after the Madrid P1. Sintes and Zamora reached a Major quarter-final for the first time. Thursday decides the semi-finalists: the rackets of the eight survivors, catalogued.",
     tags: ["Premier Padel", "Kuwait Major", "Libaak", "Alfonso", "Lebrón", "Coello", "Tapia", "Stupaczuk", "Sintes", "Quarter-finals"],
   },
+  "kuwait-major-2026-semifinales-libaak-alfonso-coello-tapia": {
+    title:
+      "Kuwait Major semi-finals: Libaak and Alfonso, from two upsets to a date with Coello-Tapia",
+    excerpt:
+      "The Kuwait Major quarter-finals confirmed the revolution: Tino Libaak and Gonzalo Alfonso took down their second big-name victims in 48 hours (Di Nenno-Paquito, 7-6, 6-1) and today they face Coello-Tapia. Three pairs reach a Major semi-final for the first time while the women's top four repeat for the fourth straight tournament: schedule and rackets of the survivors.",
+    tags: ["Premier Padel", "Kuwait Major", "Semi-finals", "Libaak", "Alfonso", "Coello", "Tapia", "Tello", "Goñi", "Triay", "Ari Sánchez"],
+  },
   "milano-p1-2026-cuartos-galan-lebron": {
     title:
       "Milano P1: quarter-finals without upsets, and a Galán-Lebrón clash of champions in the semis",
@@ -671,6 +679,7 @@ export const ARTICLES: Article[] = [
   localize({ slug: "kuwait-major-2026-sintes-zamora-sorpresa", ...kuwaitSintesZamora }),
   localize({ slug: "kuwait-major-2026-bidahorria-riera-favoritas-octavos", ...kuwaitOctavosFavoritas }),
   localize({ slug: "kuwait-major-2026-cuartos-libaak-alfonso-reyes", ...kuwaitCuartos }),
+  localize({ slug: "kuwait-major-2026-semifinales-libaak-alfonso-coello-tapia", ...kuwaitSemis }),
 ].sort((a, b) => b.date.localeCompare(a.date));
 
 export function getArticle(slug: string): Article | undefined {

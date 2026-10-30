@@ -52,6 +52,32 @@
 
 ### 📰 Actualidad (contenido original y actual)
 
+Hechos verificados a 2026-10-30 (para la noche del 30→31): **Kuwait Major EN MARCHA
+(25-31 oct)** — cuartos del jueves 29 completados (artículo publicado, ver item
+marcado): **Libaak-Alfonso (12) tumban a Di Nenno-Paquito (5) 7-6(5) 6-1** remontando
+un 2-5 en el tie-break del 1er set (nota oficial premierpadel): primera semi de Major
+de la pareja (2ª juntos tras Madrid P1), ≥780 pts FIP Race asegurados, primera
+victoria de Alfonso sobre Navarro (0-3 previo); Libaak y Arce juegan el Mundial FIP
+con Argentina la semana que viene. Alonso-Goñi (11) aplastan a Stupa-Sanz (4) 6-1 6-2
+en 54' (partido más corto del día, 1ª semi desde Asunción en mayo); Tello-Arce (9)
+cierran el sueño de Sintes-Zamora —pareja de ranking más baja en unos cuartos de
+Major— 6-4 6-2 en 1h07 (Tello vuelve a una semi de Major 4 años después: París 2022,
+final con Chingotto); Coello-Tapia (1) 6-1 6-4 a Bautista-Bergamini (11) — si llegan
+a la final, nº1 de fin de año 4ª temporada seguida casi asegurado. Femenino: top-4
+entero en semis por 4º torneo seguido — Ari-Ustero (3) sufre casi 3h vs Icardo-Jensen
+(campeonas Bordeaux P2): 1-3 y 4 bolas de rotura salvadas en el 3er set, 3-6 6-4 7-5;
+Josemaría-Bea (2) 6-2 6-4 a Rufo-Iglesias (13); Triay-Brea (1) 6-1 6-0 a Dal Pozzo-
+Rodríguez (12); Calvo-Fernández (4) 6-1 6-0 a Ortega-Araújo (5), semis en los 8
+torneos que llevan juntas. Semis HOY viernes 30 (OOP premierpadel, GMT+3): 14:00
+local (12:00 ES) Sánchez-Ustero vs Josemaría-Bea; nb 16:00 (14:00 ES) Alonso-Goñi vs
+Tello-Arce —finalista debutante garantizada—; nb 18:00 (16:00 ES) Triay-Brea vs
+Calvo-Fernández; nb 20:00 (18:00 ES) Coello-Tapia vs Libaak-Alfonso (5º duelo entre
+ambos). Final sábado 31 a las 16:00 ES, Red Bull TV, 2.000 pts y 1.044.849 €. Pieza
+natural próxima noche: resultados de las semis del viernes + previa de la final del
+sábado. Viena/Basilea 500 cierran este fin de semana — verificar si Alcaraz (Viena)
+o Djokovic (Basilea) llegan a final → posible pieza tenis del sábado. Tabla de
+demanda real: todo ✓.
+
 Hechos verificados a 2026-10-29 (para la noche del 29→30): **Kuwait Major EN MARCHA
 (25-31 oct)** — octavos del miércoles 28 completados (artículo publicado, ver item
 marcado): BOMBA masculina Libaak-Alfonso (nº30) remontan a Lebrón-Augsburger (3)
@@ -249,6 +275,29 @@ Zamora vs Javi García-Álex Ruiz, Bautista-Bergamini (10) vs Coki-Yanguas (6);
 viernes 30 semis, sábado 31 final 16:00. Viena 500: Alcaraz debuta martes vs
 Khachanov — verificar resultado si se cubre. Pieza natural próxima noche: cuartos
 del jueves con los octavos de hoy resueltos. Tabla de demanda real: todo ✓.
+
+1. [x] **Kuwait Major, semifinales: Libaak y Alfonso, de dos bombas a la cita con
+   Coello-Tapia (torneo EN MARCHA 25-31 oct)** — pieza Regla 0 de HOY viernes 30:
+   resultados de los cuartos del jueves + previa de las semifinales de hoy. Ángulo
+   propio: la semana de la vida de Libaak-Alfonso (Lebrón-Augsburger en octavos y
+   Di Nenno-Paquito en cuartos, remontando un 2-5 en el tie-break) con la cita de
+   hoy ante Coello-Tapia como eje, la semi Alonso-Goñi vs Tello-Arce con finalista
+   debutante garantizada, y el top-4 femenino en semis por 4º torneo seguido.
+   — **HECHO 2026-10-30**: artículo `kuwait-major-2026-semifinales-libaak-alfonso-
+   coello-tapia` (ES+EN, kind novedad, 12 relatedProducts: Diablo Pro 2026 Libaak,
+   AT10 Genius 18K Tapia, Coello Pro 2026, Vertex 05 Tello, EA10 Ventus Attack Edu
+   Alonso, Electra Stupa Pro ST4, Elite 02 Triay, Vertex 05 Woman Brea, Arrow HIT
+   Light Ari, Pearl 2027 Bea, Wonder 2027 Claudia, Tritón T-One Icardo). Datos
+   verificados: premierpadel.com (nota oficial cuartos 29 oct: marcadores,
+   duraciones, contexto Finals/Mundial FIP, OOP semis) + elneverazo (7-6(5) 6-1
+   Di Nenno-Paquito). Enlaces internos: cuartos y sintes-zamora (ES+EN), 2 guías,
+   13 fichas producto por locale. Archivos:
+   src/content/noticias/{,en/}kuwait-major-2026-semifinales-libaak-alfonso-coello-tapia.mdx,
+   src/data/news.ts. Build OK (588 páginas, +6) + check:translations OK (150
+   productos); /es y /en a 200; screenshot
+   docs/screenshots/2026-10-30-kuwait-major-2026-semifinales.png (1080×486, 2.694
+   colores únicos, verificado por DOM: H1+4 H2, Callout, 12/24 fichas producto,
+   0 dobles prefijos /en/en/, scrollH ~4.560).
 
 1. [x] **Kuwait Major, cuartos: Libaak y Alfonso repiten la dosis a Lebrón-Augsburger
    (4-6 7-5 6-1) y Sintes-Zamora sigue soñando (torneo EN MARCHA 25-31 oct)** —
