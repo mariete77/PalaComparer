@@ -1189,6 +1189,33 @@ del jueves con los octavos de hoy resueltos. Tabla de demanda real: todo ✓.
    jugador) con 9 fichas enlazadas; screenshot
    docs/screenshots/2026-10-12-shanghai-gea-shelton.png.
 
+**Mundial de Pádel de Doha (FIP World Cup) — EN MARCHA del 2 al 7 de noviembre.** Hechos
+verificados a 2026-11-03 (jornada 1 completa, fuentes: padelfip.com «Día 1 masculino»,
+padeladdict «Resultados de la primera jornada», sport.es y marca para la baja de Galán):
+España pleno 3-0 en las dos categorías. Masculino (Grupo B, España-Suecia 3-0): Coello-
+Paquito 6-3 6-2 a Vásquez/Windahl; Yanguas-Goñi 6-7 7-5 6-2 a Axelsson/Släryd (susto y
+debut mundialista de Goñi); Lebrón-Sanz 6-0 6-2 a Olsson/Frost. Paraguay 3-0 a EAU (rival
+de hoy). Femenino (Grupo A, España-Alemania 3-0): Fernández-Bea 6-0 6-1, Josemaría-Calvo
+6-1 6-0, Triay-Ortega doble 6-0 — solo 2 juegos cedidos en 6 sets. Argentina 3-0 Australia
+sin ceder un set (Augsburger-Di Nenno doble 6-0) y 3-0 Chile en femenino (Vílchez, 16 años).
+Países Bajos 2-1 Francia y Alemania 2-1 Chile, avisos del día. Grupos, formato (4 grupos de
+4, top-2 a cuartos, eliminatoria al mejor de 3 partidos), 1,2 M€ en premios, cuartos jueves
+5, semis viernes 6, finales sábado 7; Movistar Plus+ en España, YouTube FIP y Red Bull TV.
+Galán causó baja por lesión el 30-oct y entró Javi Leal. Hoy jornada 2: España-Gran Bretaña
+(12:00 ES) y España-Paraguay (16:00 ES), Argentina-Países Bajos.
+
+- [x] **Actualidad Mundial de Doha — jornada 1 (2026-11-03)**: artículo ES+EN
+  `mundial-padel-doha-2026-jornada-1-espana-suecia` (kind novedad, 6 min, 8
+  relatedProducts con ProductRef: Coello Pro 2026, Hack 05 2027, Viper 3.0 Lebrón,
+  Axion Attack 2.0, Elite 02 2027, Pearl 2027, Wonder 2027, Arrow Hit Light 2026).
+  Ángulo: el 3-0 que escondió el susto de Goñi + Argentina sin ceder set + Países Bajos
+  y Alemania avisando + previa de la jornada 2 y las palas de la selección. Sin duplicar
+  `espana-convocatoria-mundial-qatar-2026-palas` ni `espana-prelista-mundial-qatar-2026`.
+  Build + check:translations OK; /es y /en 200 con 7 H2 y listado con la pieza primera;
+  screenshot `docs/screenshots/2026-11-03-mundial-doha-dia-1.png`.
+  Próxima noche natural: jornada 2 (España-Paraguay / España-Gran Bretaña) y avance de
+  cuartos del jueves.
+
 
 ### 🎨 Visual (mejoras visuales)
 

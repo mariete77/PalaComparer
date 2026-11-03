@@ -110,6 +110,7 @@ import { metadata as kuwaitSintesZamora } from "@/content/noticias/kuwait-major-
 import { metadata as kuwaitOctavosFavoritas } from "@/content/noticias/kuwait-major-2026-bidahorria-riera-favoritas-octavos.mdx";
 import { metadata as kuwaitCuartos } from "@/content/noticias/kuwait-major-2026-cuartos-libaak-alfonso-reyes.mdx";
 import { metadata as kuwaitSemis } from "@/content/noticias/kuwait-major-2026-semifinales-libaak-alfonso-coello-tapia.mdx";
+import { metadata as mundialDohaDia1 } from "@/content/noticias/mundial-padel-doha-2026-jornada-1-espana-suecia.mdx";
 
 /**
  * Traducciones EN de los metadatos de cada artículo. Las ES vienen del propio
@@ -584,6 +585,13 @@ const EN_META: Record<string, { title: string; excerpt: string; tags: string[] }
       "The Spanish brand rolls out its '100% Pure Padel' range with five Agustín Tapia Genius models at the top, five Ventus, three Lamperti ML10 Pro Cups and two Equation Advanced rackets. Teardrop, diamond and round shapes; aluminised fibreglass, 12K, 18K Alum faces and HR3/MLD Black EVA cores. A full breakdown of all 17 rackets, their prices and who each one is for.",
     tags: ["NOX", "2027 Rackets", "Agustín Tapia", "Miguel Lamperti", "Launches"],
   },
+  "mundial-padel-doha-2026-jornada-1-espana-suecia": {
+    title:
+      "Doha World Cup, day 1: Spain win 3-0 and 3-0 — but Goñi and Yanguas sound a warning",
+    excerpt:
+      "Spain opened the World Championships with a perfect day: 3-0 over Sweden in the men's draw and 3-0 over Germany in the women's, where the defending champions dropped only two games. Aimar Goñi's World Cup debut needed a comeback from a set down, while Argentina swept Australia without losing a set. Full results, analysis and the squad's rackets.",
+    tags: ["World Cup", "FIP World Cup", "Doha", "Spain", "Argentina", "Coello", "Goñi", "Triay"],
+  },
 };
 
 /**
@@ -680,6 +688,7 @@ export const ARTICLES: Article[] = [
   localize({ slug: "kuwait-major-2026-bidahorria-riera-favoritas-octavos", ...kuwaitOctavosFavoritas }),
   localize({ slug: "kuwait-major-2026-cuartos-libaak-alfonso-reyes", ...kuwaitCuartos }),
   localize({ slug: "kuwait-major-2026-semifinales-libaak-alfonso-coello-tapia", ...kuwaitSemis }),
+  localize({ slug: "mundial-padel-doha-2026-jornada-1-espana-suecia", ...mundialDohaDia1 }),
 ].sort((a, b) => b.date.localeCompare(a.date));
 
 export function getArticle(slug: string): Article | undefined {
