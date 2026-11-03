@@ -3603,6 +3603,30 @@ export const PRODUCTS: Product[] = [
     descriptionEn:
       "The gateway to StarVie's premium range, made in Spain: the Astrum+ Black 2027 pairs a tear-drop shape with a medium balance for versatile play that doesn't give up finishing power. Its 12K Carbon Hyper face adds lightness and feel while widening the sweet spot, over a medium-touch M-Eva Balance core. It carries tech from the brand's pro rackets — the Air Booster aerodynamic system to speed up the swing, Shock Shield vibration dampening and the rigid Five Sides Tech frame — in a white, black and grey finish. Aimed at intermediates looking to progress without jumping straight to a Super Pro.",
   },
+  {
+    id: "starvie-black-titan-blue-2027",
+    sport: "padel",
+    brand: "StarVie",
+    model: "Black Titan Blue",
+    year: 2027,
+    price: 279,
+    image: "/images/rackets/starvie-black-titan-blue-2027.svg",
+    level: ["avanzado", "profesional"],
+    style: ["potencia"],
+    padel: {
+      shape: "hibrida",
+      weight: "350-370 g",
+      balance: "alto",
+      core: "H-Eva Power",
+      faces: "24K Carbon Master",
+      surface: "rugosa",
+      hardness: "dura",
+    },
+    description:
+      "La artillería de la gama Super Pro de StarVie estrena molde híbrido en 2027: abandona el diamante puro para rascar algo de punto dulce sin soltar el balance alto ni los 350-370 g que hacen daño por arriba. Plano de 24K Carbon Master con relieve Spin Boost Tech y núcleo H-Eva Power azul, una dureza ligeramente rebajada respecto a 2026 que acerca el golpe sin quitarle pegada. Estrella Dynamic Star de 5 g y 7,3 g para mover el balance, Anti-Vibe contra las vibraciones y marco Five Sides Tech: pala de remate para brazos sanos y jugadores con el gesto ya hecho.",
+    descriptionEn:
+      "The heavy artillery of StarVie's Super Pro range gets a new hybrid mould for 2027: it leaves the pure diamond behind to claw back a little sweet spot without giving up the high balance or the 350-370 g that do damage overhead. A 24K Carbon Master face with Spin Boost Tech texture over a blue H-Eva Power core — a slightly softened hardness compared with 2026 that brings the contact closer without losing punch. Dynamic Star weights of 5 g and 7.3 g to shift the balance, Anti-Vibe dampening and a Five Sides Tech frame: a finishing racket for healthy arms and players who already own the technique.",
+  },
 ];
 
 export function getProduct(id: string) {
