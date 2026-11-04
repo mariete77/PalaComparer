@@ -52,6 +52,29 @@
 
 ### 📰 Actualidad (contenido original y actual)
 
+Hechos verificados a 2026-11-04 (para la noche del 4→5): **Mundial de Pádel de Doha EN MARCHA
+(2-7 nov, Khalifa International Tennis & Squash Complex)** — fase de grupos cerrada hoy
+miércoles con los 8 partidos de cada cuadro a la misma hora (mujeres 12:00 ES / hombres
+16:00 ES; OOP elneverazo). Estado tras la jornada 2 (martes 3), artículo publicado (ver item
+marcado): **España 3-0 Paraguay** (Yanguas-Leal 6-4 6-3 —debut mundialista de Leal, entró por
+la lesión de Galán—, Paquito-Lebrón 6-0 6-2 a Petit-Popovich, Goñi-Coello 6-1 6-3 a
+Miranda-Rodríguez) y **España 3-0 Gran Bretaña** (Ustero-Calvo 6-0 6-0 a Norton-Jackson,
+Ortega-Bea 6-1 6-1 a Gibson-Nicholas, Josemaría-Ari 6-0 6-1 a Phillips-Tordoff; 5 juegos
+cedidos en 12 sets en dos eliminatorias). Clasificación oficial (studypadel): Masc B España
+2-0 (12-1 sets), Suecia 1-1 (7-6), Paraguay 1-1 (6-7), EAU 0-2 (1-12) → **España ya es
+matemáticamente primera**; Fem A España 2-0 (12-0), Brasil 1-1 (8-5), Alemania 1-1 (4-8), GB
+0-2 (1-12) → el liderato se decide hoy vs Brasil (solo un 0-3 dejaría a España segunda).
+**Alemania remontó a Brasil 2-1** (Brasil ganó el 1º 6-1 6-0 y perdió los dos siguientes 6-2
+6-2 y 6-1 6-1: 24-6 en juegos). Argentina 3-0 Países Bajos (Tapia-Libaak 6-4 6-2 —debut de
+Tapia en el torneo—, Stupa-Arce 6-1 6-3, Augsburger-Chingotto 6-3 6-4); Francia 3-0 Australia;
+Chile 2-1 Catar; Portugal 3-0 Alemania; Italia 3-0 México; Brasil 3-0 EEUU; Suecia 3-0 EAU.
+Hoy: España-Brasil (12:00, Grand Stand 1, Red Bull TV), España-EAU (16:00, GS2), Argentina-
+Francia (GS2 12:00 fem / P5 16:00 masc), Suecia-Paraguay (central 16:00, decide el 2º billete
+del B), Italia-Brasil (P6) y Portugal-Chile (P7). Cuartos jueves 5, semis viernes 6, finales
+sábado 7; 1,2 M€; Movistar Plus+ desde cuartos, Red Bull TV (central + pista 1) y YouTube FIP.
+Pieza natural próxima noche (5→6): cuartos con los cruces ya definidos. Tabla de demanda
+real: todo ✓.
+
 Hechos verificados a 2026-10-30 (para la noche del 30→31): **Kuwait Major EN MARCHA
 (25-31 oct)** — cuartos del jueves 29 completados (artículo publicado, ver item
 marcado): **Libaak-Alfonso (12) tumban a Di Nenno-Paquito (5) 7-6(5) 6-1** remontando
@@ -275,6 +298,31 @@ Zamora vs Javi García-Álex Ruiz, Bautista-Bergamini (10) vs Coki-Yanguas (6);
 viernes 30 semis, sábado 31 final 16:00. Viena 500: Alcaraz debuta martes vs
 Khachanov — verificar resultado si se cubre. Pieza natural próxima noche: cuartos
 del jueves con los octavos de hoy resueltos. Tabla de demanda real: todo ✓.
+
+1. [x] **Mundial de Doha, jornada 2: España ya está en cuartos y hoy se juega el liderato
+   femenino contra Brasil** — pieza Regla 0 de HOY miércoles 4: resultados del martes 3 +
+   previa de la jornada que cierra los grupos. Ángulo propio: el contraste de los dos
+   equipos españoles (las campeonas han cedido 5 juegos en 12 sets y ya han rotado a las
+   ocho; los hombres, un solo set y Coki Nieto como única pieza sin jugar), el estreno
+   mundialista de Javi Leal como recambio de Galán abriendo eliminatoria con Yanguas, y la
+   remontada de Alemania a Brasil (24-6 en juegos en los dos últimos partidos) que convierte
+   el España-Brasil de hoy en la final del Grupo A. Cierre de material con las palas de
+   Argentina (Tapia-Libaak debutaron juntos) como rival que espera en el cuadro alto. —
+   **HECHO 2026-11-04**: artículo
+   `mundial-padel-doha-2026-jornada-2-liderato-brasil-emiratos` (ES+EN, kind novedad, 6
+   relatedProducts: Electra Pro IT 26, Neuron 02 2026, Fenix Pro Black 2027, AT10 Genius 18K
+   2026, Diablo Pro 2026, XPLO 02 2027). Datos verificados: Europa Press (crónica 3-nov con
+   los tres marcadores de cada eliminatoria y el 3-0 femenino), studypadel (clasificaciones
+   oficiales de los 8 grupos, marcadores de Argentina-Países Bajos y EAU-Suecia, y páginas de
+   los ties), elneverazo (OOP completo del miércoles 4 por pistas y TV), padelblue (grupos,
+   formato y premios). Todos los precios y fotos de los 6 productos comprobados en
+   products.ts y real-images.json. Enlaces internos sin prefijo de locale (ES) y con
+   `/en/...` (EN), sin dobles prefijos verificados en el HTML servido. Archivos:
+   src/content/noticias/{,en/}mundial-padel-doha-2026-jornada-2-liderato-brasil-emiratos.mdx,
+   src/data/news.ts. Build OK + check:translations OK (151 productos); /es y /en a 200 con
+   H1 + 5 H2 + Callout + 6 fichas de producto por locale; primera en /es/noticias;
+   screenshot docs/screenshots/2026-11-04-mundial-doha-jornada-2.png (1080×486, 34.403
+   colores únicos, H1 en y=230 verificado por DOM — sin visión: píxeles + DOM).
 
 1. [x] **Kuwait Major, semifinales: Libaak y Alfonso, de dos bombas a la cita con
    Coello-Tapia (torneo EN MARCHA 25-31 oct)** — pieza Regla 0 de HOY viernes 30:

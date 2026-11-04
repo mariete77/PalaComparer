@@ -111,6 +111,7 @@ import { metadata as kuwaitOctavosFavoritas } from "@/content/noticias/kuwait-ma
 import { metadata as kuwaitCuartos } from "@/content/noticias/kuwait-major-2026-cuartos-libaak-alfonso-reyes.mdx";
 import { metadata as kuwaitSemis } from "@/content/noticias/kuwait-major-2026-semifinales-libaak-alfonso-coello-tapia.mdx";
 import { metadata as mundialDohaDia1 } from "@/content/noticias/mundial-padel-doha-2026-jornada-1-espana-suecia.mdx";
+import { metadata as mundialDohaDia2 } from "@/content/noticias/mundial-padel-doha-2026-jornada-2-liderato-brasil-emiratos.mdx";
 
 /**
  * Traducciones EN de los metadatos de cada artículo. Las ES vienen del propio
@@ -592,6 +593,13 @@ const EN_META: Record<string, { title: string; excerpt: string; tags: string[] }
       "Spain opened the World Championships with a perfect day: 3-0 over Sweden in the men's draw and 3-0 over Germany in the women's, where the defending champions dropped only two games. Aimar Goñi's World Cup debut needed a comeback from a set down, while Argentina swept Australia without losing a set. Full results, analysis and the squad's rackets.",
     tags: ["World Cup", "FIP World Cup", "Doha", "Spain", "Argentina", "Coello", "Goñi", "Triay"],
   },
+  "mundial-padel-doha-2026-jornada-2-liderato-brasil-emiratos": {
+    title:
+      "Doha World Cup, day 2: Spain are into the quarter-finals — and today decides who tops the women's group",
+    excerpt:
+      "Spain made it two clean sweeps in Doha (3-0 over Paraguay and 3-0 over Great Britain) and have their quarter-final place. The defending champions have dropped five games in twelve sets; the men, a single set. Javi Leal, Galán's replacement, won his first point and Germany blew Group A open by beating Brazil. Today: Spain v Brazil (12:00) and Spain v UAE (16:00).",
+    tags: ["World Cup", "FIP World Cup", "Doha", "Spain", "Brazil", "Javi Leal", "Tapia", "Argentina"],
+  },
 };
 
 /**
@@ -689,6 +697,7 @@ export const ARTICLES: Article[] = [
   localize({ slug: "kuwait-major-2026-cuartos-libaak-alfonso-reyes", ...kuwaitCuartos }),
   localize({ slug: "kuwait-major-2026-semifinales-libaak-alfonso-coello-tapia", ...kuwaitSemis }),
   localize({ slug: "mundial-padel-doha-2026-jornada-1-espana-suecia", ...mundialDohaDia1 }),
+  localize({ slug: "mundial-padel-doha-2026-jornada-2-liderato-brasil-emiratos", ...mundialDohaDia2 }),
 ].sort((a, b) => b.date.localeCompare(a.date));
 
 export function getArticle(slug: string): Article | undefined {
