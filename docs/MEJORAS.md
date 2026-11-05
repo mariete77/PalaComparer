@@ -52,6 +52,28 @@
 
 ### 📰 Actualidad (contenido original y actual)
 
+Hechos verificados a 2026-11-05 (para la noche del 5→6): **Mundial de Pádel de Doha — fase de
+grupos cerrada, cuartos HOY jueves 5**. Fuentes: mundo deportivo (04-nov 22:36), sport.es,
+padelblue (grupos), red bull. Cuadros: Mujeres A España/Brasil/Alemania/GB · B Argentina/
+Francia/Chile/Bélgica · C Italia/Suecia/Egipto/Indonesia · D Portugal/Países Bajos/EEUU/
+Paraguay. Hombres A Argentina/Francia/Australia/Países Bajos · B España/EAU/Suecia/Paraguay ·
+C Portugal/Chile/Catar/Alemania · D Italia/Brasil/EEUU/México. **Cruces de cuartos (MD):**
+fem España-Suecia (12:00 ES, Grand Stand 1), Argentina-Portugal, Países Bajos-Francia,
+Italia-Brasil; masc España-Brasil (desde 16:00 ES), Argentina-Alemania, Portugal-Países Bajos,
+Italia-Suecia. Jornada 3 (mié 4): España 3-0 Brasil fem (Ari-Ortega 6-1 6-1 a Piltcher-Giusti;
+Triay-Fernández 6-0 6-0 a Hossen-Acunha; Calvo-Ustero 6-2 6-0 a Cirne-Abbud; los tres partidos
+en menos de una hora) y 3-0 EAU masc (Lebrón-Leal 6-0 6-1; Paquito-Sanz 6-0 6-2; Yanguas-Coki
+6-1 6-1, debut de Coki). Argentina 3-0 Francia fem (Brea-Jensen 6-0 6-0; Osoro-Fassio 6-2 6-2;
+Riera-Bidahorria 6-1 6-1) y 3-0 masc con susto: Tapia-Libaak 5-7 6-3 6-4 a Fonteny-Joris en
+1h46; Stupa-Chingotto 6-2 6-1; Alfonso-Di Nenno cerraron. España: 9 partidos y 9 sets... en
+femenino 18 sets ganados y solo 9 juegos cedidos; masculino 9 partidos y 1 set cedido.
+Países Bajos tumbó a Portugal en el grupo femenino (sorpresa de la jornada). Semis viernes 6
+(12:00/16:00), finales sábado 7 (tercer puesto mañana, finales 12:00 y 16:00); 1,2 M€;
+Movistar Plus+ desde cuartos, Red Bull TV y YouTube FIP. Récord del torneo: Ornella Beltramino
+(EEUU, Miami), 13 años 1 mes 27 días, debutante más joven en un Mundial absoluto. España y
+Argentina en mitades distintas del cuadro → solo pueden cruzarse en la final. Pieza natural
+próxima noche (6→7): semis del viernes + previa de las dos finales del sábado.
+
 Hechos verificados a 2026-11-04 (para la noche del 4→5): **Mundial de Pádel de Doha EN MARCHA
 (2-7 nov, Khalifa International Tennis & Squash Complex)** — fase de grupos cerrada hoy
 miércoles con los 8 partidos de cada cuadro a la misma hora (mujeres 12:00 ES / hombres
@@ -1263,6 +1285,25 @@ Galán causó baja por lesión el 30-oct y entró Javi Leal. Hoy jornada 2: Espa
   screenshot `docs/screenshots/2026-11-03-mundial-doha-dia-1.png`.
   Próxima noche natural: jornada 2 (España-Paraguay / España-Gran Bretaña) y avance de
   cuartos del jueves.
+
+- [x] **Actualidad Mundial de Doha — jornada 2 (2026-11-04)**: artículo ES+EN
+  `mundial-padel-doha-2026-jornada-2-liderato-brasil-emiratos`. Ángulo: el pleno español
+  (5 juegos cedidos en 12 sets), el debut de Leal como titular, la remontada de Alemania
+  sobre Brasil y las cuentas del liderato. Build OK.
+
+- [x] **Actualidad Mundial de Doha — cuartos (2026-11-05)**: artículo ES+EN
+  `mundial-padel-doha-2026-cuartos-cruces-y-palas` (kind novedad, 7 min, 8
+  relatedProducts). Ángulo propio: los ocho cruces ya definidos (4 fem + 4 masc), las
+  cuentas de España (18 sets y 9 juegos cedidos en femenino; 1 set en 9 partidos en
+  masculino), el susto de Tapia-Libaak ante Fonteny-Joris y —la pieza diferencial— la
+  tesis de material: Tapia y Coello, los dos nº1, juegan **lágrima**, no diamante, con
+  specs reales del catálogo (AT10 Genius 18K, Coello Pro 2026) frente a los diamantes de
+  Lebrón (Viper 3.1), Paquito (Hack 05), Augsburger (Fenix Pro Black 2027) y Di Nenno
+  (XPLO 02). Cierra con el récord de Ornella Beltramino (13 años) y enlace a la guía de
+  formas. Sin duplicar las piezas de jornada 1 y 2.
+  Build + check:translations OK; /es y /en 200, 8 H2 + 9 enlaces a producto, sin `/en/en/`
+  ni `/es/es/`; listado y sitemap con la pieza. Screenshot
+  `docs/screenshots/2026-11-05-mundial-doha-cuartos.png`.
 
 
 ### 🎨 Visual (mejoras visuales)

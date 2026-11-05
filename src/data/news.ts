@@ -112,6 +112,7 @@ import { metadata as kuwaitCuartos } from "@/content/noticias/kuwait-major-2026-
 import { metadata as kuwaitSemis } from "@/content/noticias/kuwait-major-2026-semifinales-libaak-alfonso-coello-tapia.mdx";
 import { metadata as mundialDohaDia1 } from "@/content/noticias/mundial-padel-doha-2026-jornada-1-espana-suecia.mdx";
 import { metadata as mundialDohaDia2 } from "@/content/noticias/mundial-padel-doha-2026-jornada-2-liderato-brasil-emiratos.mdx";
+import { metadata as mundialDohaCuartos } from "@/content/noticias/mundial-padel-doha-2026-cuartos-cruces-y-palas.mdx";
 
 /**
  * Traducciones EN de los metadatos de cada artículo. Las ES vienen del propio
@@ -600,6 +601,13 @@ const EN_META: Record<string, { title: string; excerpt: string; tags: string[] }
       "Spain made it two clean sweeps in Doha (3-0 over Paraguay and 3-0 over Great Britain) and have their quarter-final place. The defending champions have dropped five games in twelve sets; the men, a single set. Javi Leal, Galán's replacement, won his first point and Germany blew Group A open by beating Brazil. Today: Spain v Brazil (12:00) and Spain v UAE (16:00).",
     tags: ["World Cup", "FIP World Cup", "Doha", "Spain", "Brazil", "Javi Leal", "Tapia", "Argentina"],
   },
+  "mundial-padel-doha-2026-cuartos-cruces-y-palas": {
+    title:
+      "Doha World Cup quarter-finals: the eight ties, Spain's numbers and the rackets that actually win",
+    excerpt:
+      "The group stage closed with Spain and Argentina unbeaten in both draws and the knockout rounds start today: Sweden and Brazil await the Spanish teams, Germany and Portugal the Argentinians. A breakdown of all eight ties, the numbers behind the two powers, and one equipment detail almost nobody looks at — both world No. 1s play with a teardrop.",
+    tags: ["World Cup", "FIP World Cup", "Doha", "Spain", "Argentina", "Tapia", "Coello", "Lebrón"],
+  },
 };
 
 /**
@@ -698,6 +706,7 @@ export const ARTICLES: Article[] = [
   localize({ slug: "kuwait-major-2026-semifinales-libaak-alfonso-coello-tapia", ...kuwaitSemis }),
   localize({ slug: "mundial-padel-doha-2026-jornada-1-espana-suecia", ...mundialDohaDia1 }),
   localize({ slug: "mundial-padel-doha-2026-jornada-2-liderato-brasil-emiratos", ...mundialDohaDia2 }),
+  localize({ slug: "mundial-padel-doha-2026-cuartos-cruces-y-palas", ...mundialDohaCuartos }),
 ].sort((a, b) => b.date.localeCompare(a.date));
 
 export function getArticle(slug: string): Article | undefined {
