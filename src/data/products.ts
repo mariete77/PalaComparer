@@ -3627,6 +3627,31 @@ export const PRODUCTS: Product[] = [
     descriptionEn:
       "The heavy artillery of StarVie's Super Pro range gets a new hybrid mould for 2027: it leaves the pure diamond behind to claw back a little sweet spot without giving up the high balance or the 350-370 g that do damage overhead. A 24K Carbon Master face with Spin Boost Tech texture over a blue H-Eva Power core — a slightly softened hardness compared with 2026 that brings the contact closer without losing punch. Dynamic Star weights of 5 g and 7.3 g to shift the balance, Anti-Vibe dampening and a Five Sides Tech frame: a finishing racket for healthy arms and players who already own the technique.",
   },
+  // ============ PÁDEL — BULLPADEL HACK 05 HYBRID 2027 ============
+  {
+    id: "bullpadel-hack-05-hybrid-2027",
+    sport: "padel",
+    brand: "Bullpadel",
+    model: "Hack 05 Hybrid",
+    year: 2027,
+    price: 349.95,
+    image: "/images/rackets/bullpadel-hack-05-hybrid-2027.svg",
+    level: ["avanzado", "profesional"],
+    style: ["polivalente"],
+    padel: {
+      shape: "hibrida",
+      weight: "365-375 g",
+      balance: "medio",
+      core: "MultiEVA",
+      faces: "Aluminized Carbon 18K",
+      surface: "rugosa",
+      hardness: "media",
+    },
+    description:
+      "El formato híbrido de la Hack del décimo aniversario: baja el balance hasta unos 25 cm y redondea la cabeza para ganar manejabilidad y velocidad de reacción, sin soltar la pegada dinámica de la saga. Mantiene el corazón HackCore con estructura Hexacore, el marco de Aluminized Carbon 18K con tecnología TriCarbon y el núcleo MultiEVA, más 529 cm² de superficie y rugosidad 3D Grain para el efecto. Air Power aligera el swing y VibraDrive mejora la transmisión de energía entre marco y núcleo, mientras Ease Vibe y Custom Weight cuidan vibraciones y ajuste de peso. Pensada para el jugador avanzado o profesional de perfil defensivo que quiere contraatacar sin renunciar a la firmeza.",
+    descriptionEn:
+      "The hybrid format of the tenth-anniversary Hack: the balance drops to around 25 cm and the head is rounded off for easier handling and faster reactions, without losing the line's dynamic punch. It keeps the HackCore heart with Hexacore structure, an Aluminized Carbon 18K frame built with TriCarbon technology and a MultiEVA core, plus 529 cm² of hitting surface and 3D Grain roughness for spin. Air Power lightens the swing and VibraDrive improves energy transfer between frame and core, while Ease Vibe and Custom Weight take care of vibration damping and weight tuning. Built for advanced or pro players with a defensive profile who want to counter-attack without giving up solidity.",
+  },
 ];
 
 export function getProduct(id: string) {
