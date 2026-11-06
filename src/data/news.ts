@@ -113,6 +113,7 @@ import { metadata as kuwaitSemis } from "@/content/noticias/kuwait-major-2026-se
 import { metadata as mundialDohaDia1 } from "@/content/noticias/mundial-padel-doha-2026-jornada-1-espana-suecia.mdx";
 import { metadata as mundialDohaDia2 } from "@/content/noticias/mundial-padel-doha-2026-jornada-2-liderato-brasil-emiratos.mdx";
 import { metadata as mundialDohaCuartos } from "@/content/noticias/mundial-padel-doha-2026-cuartos-cruces-y-palas.mdx";
+import { metadata as mundialDohaSemis } from "@/content/noticias/mundial-padel-doha-2026-semifinales-parejas.mdx";
 
 /**
  * Traducciones EN de los metadatos de cada artículo. Las ES vienen del propio
@@ -608,6 +609,12 @@ const EN_META: Record<string, { title: string; excerpt: string; tags: string[] }
       "The group stage closed with Spain and Argentina unbeaten in both draws and the knockout rounds start today: Sweden and Brazil await the Spanish teams, Germany and Portugal the Argentinians. A breakdown of all eight ties, the numbers behind the two powers, and one equipment detail almost nobody looks at — both world No. 1s play with a teardrop.",
     tags: ["World Cup", "FIP World Cup", "Doha", "Spain", "Argentina", "Tapia", "Coello", "Lebrón"],
   },
+  "mundial-padel-doha-2026-semifinales-parejas": {
+    title: "Doha semi-finals: the pairings that only exist at a World Cup",
+    excerpt:
+      "Spain v Portugal and Argentina v Italy in the men's draw, Spain v France and Argentina v Italy in the women's. The quarter-finals gave us Jon Sanz back alongside Coki Nieto, Coello playing next to a debutant and Josemaría finally partnering Bea: the World Cup takes the tour's pairings apart and puts them back together differently.",
+    tags: ["World Cup", "FIP World Cup", "Doha", "Spain", "Argentina", "Jon Sanz", "Coello", "Bea González"],
+  },
 };
 
 /**
@@ -707,6 +714,7 @@ export const ARTICLES: Article[] = [
   localize({ slug: "mundial-padel-doha-2026-jornada-1-espana-suecia", ...mundialDohaDia1 }),
   localize({ slug: "mundial-padel-doha-2026-jornada-2-liderato-brasil-emiratos", ...mundialDohaDia2 }),
   localize({ slug: "mundial-padel-doha-2026-cuartos-cruces-y-palas", ...mundialDohaCuartos }),
+  localize({ slug: "mundial-padel-doha-2026-semifinales-parejas", ...mundialDohaSemis }),
 ].sort((a, b) => b.date.localeCompare(a.date));
 
 export function getArticle(slug: string): Article | undefined {

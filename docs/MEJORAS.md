@@ -52,6 +52,28 @@
 
 ### 📰 Actualidad (contenido original y actual)
 
+Hechos verificados a 2026-11-06 (para la noche del 6→7): **Mundial de Pádel de Doha — cuartos
+resueltos el jueves 5, semifinales HOY viernes 6**. Fuentes: padeladdict (resultados cuartos
+05-nov + semis 06-nov), sport.es (04/05-nov). **Cuartos masculinos:** España 2-0 Brasil sin
+jugar el tercer punto (Coki Nieto/Jon Sanz 6-2 6-2; Javi Leal/Arturo Coello 6-2 6-1; Lebrón y
+Goñi no jugaron); Argentina 3-0 Alemania sin ceder set (Chingotto/Alfonso 6-1 6-1;
+Augsburger/Di Nenno 6-0 6-4; Stupaczuk/Arce 6-3 6-0); Italia 2-0 Suecia remontando sus dos
+primeros partidos; Portugal 2-0 Países Bajos. **Cuartos femeninos:** España 3-0 Suecia
+(Josemaría/Bea 6-0 6-1 — primera vez juntas en el torneo; Ortega/Calvo 6-0 6-2; Ustero/Ari
+6-1 6-2), sin ceder un set en todo el torneo; Argentina 3-0 Portugal (Brea/Jensen doble 6-0;
+Osoro/Fassio 6-1 6-3; Riera/Bidahorria 6-2 6-0); Francia 2-0 Países Bajos (sorpresa: las
+neerlandesas habían ganado su grupo con pleno) e Italia 2-0 Brasil. **Semifinales hoy:** fem
+12:00 ES (España-Francia pista central; Argentina-Italia Grand Stand 1) · masc no antes 16:00
+ES (Argentina-Italia central; España-Portugal Grand Stand 1). Finales sábado 7: tercer puesto
+por la mañana, femenina 12:00, masculina 16:00; 1,2 M€; Movistar Plus+ en España, Red Bull TV
+y YouTube FIP fuera. España defiende corona femenina (2024) y Argentina es la vigente campeona
+masculina. Galán causó baja por lesión (30-oct) y entró Javi Leal. Sanz dejó a Coki en agosto
+para jugar con Stupaczuk desde el P1 de Madrid; en Doha Sanz vuelve con Coki y Stupa juega con
+Arce — pueden cruzarse solo en la final (Sanz lo dijo esta semana). Chingotto-Galán son la 3ª
+pareja del ranking y ganaron el P1 de Madrid 2026, pero no pueden jugar juntos en el Mundial.
+Pieza natural próxima noche (7→8): finales del sábado (resultados) o previa del Dubai P1
+(7-14 nov, primer día de cuadro).
+
 Hechos verificados a 2026-11-05 (para la noche del 5→6): **Mundial de Pádel de Doha — fase de
 grupos cerrada, cuartos HOY jueves 5**. Fuentes: mundo deportivo (04-nov 22:36), sport.es,
 padelblue (grupos), red bull. Cuadros: Mujeres A España/Brasil/Alemania/GB · B Argentina/
@@ -1304,6 +1326,22 @@ Galán causó baja por lesión el 30-oct y entró Javi Leal. Hoy jornada 2: Espa
   Build + check:translations OK; /es y /en 200, 8 H2 + 9 enlaces a producto, sin `/en/en/`
   ni `/es/es/`; listado y sitemap con la pieza. Screenshot
   `docs/screenshots/2026-11-05-mundial-doha-cuartos.png`.
+
+- [x] **Actualidad Mundial de Doha — semifinales (2026-11-06)**: artículo ES+EN
+  `mundial-padel-doha-2026-semifinales-parejas` (kind novedad, 7 min, 8 relatedProducts).
+  Ángulo propio y distinto al de cuartos: **las parejas que solo existen en un Mundial**.
+  Los cuartos del jueves ya resueltos con marcadores reales (España 2-0 Brasil sin jugar el
+  tercer punto; Argentina 3-0 Alemania; Italia y Portugal 2-0), el reencuentro Sanz-Coki
+  (se separaron en agosto, Stupa juega con Arce y solo pueden cruzarse en la final),
+  Josemaría-Bea juntas por primera vez en el torneo (6-0 6-1), Coello jugando con el
+  debutante Javi Leal y la paradoja de Chingotto-Galán (3ª pareja del ranking, no pueden
+  jugar juntos por nacionalidad y Galán está lesionado). Cierra con las cuatro semis, un
+  bloque de material sin repetir la tesis de cuartos (la pala no cambia al cambiar de
+  compañero) y enlace a la guía de formas. Sin duplicar jornadas 1, 2 ni cuartos.
+  Build + check:translations OK (152 productos); /es y /en 200; 8 H2 de contenido, 16
+  enlaces a producto, 0 enlaces `/es/es/`; listado con la pieza primera; screenshot
+  `docs/screenshots/2026-11-06-mundial-doha-semifinales.png`.
+  Próxima noche natural: finales del sábado 7 (resultados) o arranque del Dubai P1.
 
 
 ### 🎨 Visual (mejoras visuales)
