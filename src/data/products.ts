@@ -323,6 +323,31 @@ export const PRODUCTS: Product[] = [
       "La pala de Juan Tello y el buque insignia de potencia de Bullpadel. Diamante de 38 mm con balance en 25,4 y 530 cm² de superficie de golpeo. Núcleo Multieva de tres capas y acabado Top Spin para efectos.",
   },
   {
+    id: "bullpadel-vertex-05-2027",
+    sport: "padel",
+    brand: "Bullpadel",
+    model: "Vertex 05",
+    year: 2027,
+    price: 349.9,
+    image: "/images/rackets/bullpadel-vertex-05-2027.svg",
+    level: ["avanzado", "profesional"],
+    style: ["polivalente"],
+    player: "Juan Tello",
+    padel: {
+      shape: "diamante",
+      weight: "365-375 g",
+      balance: "alto",
+      core: "MultiEVA",
+      faces: "X-Tend Carbon 12K",
+      surface: "rugosa",
+      hardness: "media",
+    },
+    description:
+      "La Vertex 05 de la temporada 2027, la pala que defiende Juan Tello. Mantiene el diamante y el balance en 25,5 cm, pero estrena el corazón Vertex Core⁵: un puente triangular en diagonal que reparte mejor las fuerzas entre las aristas y abre el punto dulce en el centro de la cara, donde antes era más estrecho. Marco X-Tend Carbon 12K sobre núcleo MultiEVA, 530 cm² de superficie y acabado Top Spin arenado para el efecto. Curv:Aktiv y Air Power aligeran el swing (el swingweight baja respecto a la 2026) y VibraDrive, Ease Vibe y Custom Weight rematan la transmisión de energía, el filtrado de vibraciones y el ajuste de peso. Una diamante menos salvaje que la Hack y más fácil de mover que la generación anterior.",
+    descriptionEn:
+      "The 2027-season Vertex 05, the racket Juan Tello plays with. It keeps the diamond head and the 25.5 cm balance but debuts the Vertex Core⁵ heart: a triangular diagonal bridge that spreads forces more evenly across the edges and opens the sweet spot in the middle of the face, where the previous shape was tighter. X-Tend Carbon 12K frame over a MultiEVA core, a 530 cm² hitting surface and a sanded Top Spin finish for spin. Curv:Aktiv and Air Power keep the swing light (swingweight drops versus the 2026 frame), while VibraDrive, Ease Vibe and Custom Weight handle energy transfer, vibration filtering and weight tuning. A diamond that is calmer than the Hack and easier to move than the previous generation.",
+  },
+  {
     id: "bullpadel-vertex-05-woman-2026",
     sport: "padel",
     brand: "Bullpadel",
