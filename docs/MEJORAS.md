@@ -52,6 +52,28 @@
 
 ### 📰 Actualidad (contenido original y actual)
 
+Hechos verificados a 2026-11-08 (para la noche del 7→8): **Mundial de Pádel de Doha — FINALES
+DEL SÁBADO 7 COMPLETADAS**. Fuentes: bolapadel (crónica de las dos finales con marcadores,
+tiempos y datos de contexto), beIN Sports ES (crónica + palmarés), Padel Magazine (análisis
+del partido decisivo), MARCA (directo), studypadel (cuadro). **Final masculina: España 2-1
+Argentina** → 5º Mundial masculino (1998, 2008, 2010, 2021 y 2026), primero desde 2021 —
+también en Doha —; Argentina buscaba el tercero seguido y suma 12 títulos. P1: Lebrón-Goñi
+5-7 7-5 6-2 a Di Nenno-Augsburger en 1h59 (4-2 abajo en el 2º set; tercera remontada de Goñi
+tras Suecia y Portugal, las tres perdiendo el primer set; Lebrón y Augsburger son pareja en
+el circuito). P2: Tapia-Chingotto 6-1 6-2 a Paquito-Sanz en 54' (primera derrota de España en
+todo el torneo). P3: Coello-Coki Nieto 6-3 6-2 a Libaak-Alfonso en 1h19 (en 2024 esa misma
+pareja ganó 6-1 6-2 su partido y Argentina se llevó la serie). Galán, baja por lesión tres
+días antes; entró Javi Leal. Seleccionador: Juanjo Gutiérrez. Coello venía de ganar el Major
+de Kuwait con Tapia. **Final femenina: España 2-0 Argentina** → 10º Mundial, 7º consecutivo,
+primero de Carolina Navarro como seleccionadora: Ari Sánchez-Ustero 6-3 6-3 a Osoro-Fassio;
+Josemaría-Triay 6-2 6-7 6-3 a Brea-Jensen en 2h23 (único set que cedió España en el torneo;
+Triay ganó a Brea, su pareja, una semana después de ganar Kuwait juntas); Bea González y
+Claudia Fernández no jugaron. Calendario: el **Dubai P1** va esta semana, pero las fuentes
+oficiales se contradicen (FIP y studypadel: 8-15 nov; premierpadel.com muestra 7-14 en la home
+y 8-15 en la ficha) → no publicar fechas cerradas. **Hueco de catálogo**: Coki Nieto, Aimar
+Goñi, Paula Josemaría y Andrea Ustero siguen sin ficha de producto (página de jugador sin
+pala asociada).
+
 Hechos verificados a 2026-11-06 (para la noche del 6→7): **Mundial de Pádel de Doha — cuartos
 resueltos el jueves 5, semifinales HOY viernes 6**. Fuentes: padeladdict (resultados cuartos
 05-nov + semis 06-nov), sport.es (04/05-nov). **Cuartos masculinos:** España 2-0 Brasil sin
@@ -342,6 +364,31 @@ Zamora vs Javi García-Álex Ruiz, Bautista-Bergamini (10) vs Coki-Yanguas (6);
 viernes 30 semis, sábado 31 final 16:00. Viena 500: Alcaraz debuta martes vs
 Khachanov — verificar resultado si se cubre. Pieza natural próxima noche: cuartos
 del jueves con los octavos de hoy resueltos. Tabla de demanda real: todo ✓.
+
+1. [x] **Mundial de Doha, las dos finales: España recupera el trono masculino y firma el
+   doblete (2-1 y 2-0 a Argentina)** — pieza Regla 0 de HOY sábado 7, publicada el domingo 8.
+   Ángulo propio: crónica partido a partido de las dos finales (la remontada de Lebrón-Goñi
+   desde set y break abajo, el 6-1 6-2 de Tapia-Chingotto que igualó la serie y el 6-3 6-2 de
+   Coello-Coki en el decisivo) más una sección de material «la final, pala a pala» con 9
+   ProductRef del catálogo (Coello Pro 2026, Viper 3.0 FW, Hack 04, Axion Attack 2.0, AT10
+   Genius 18K, Neuron 02, Diablo Pro, Arrow HIT Light y Pearl W 26) y un Callout que declara
+   el hueco de Coki, Goñi, Josemaría y Ustero sin ficha. Cierre con «lo que deja Doha»
+   (irrupción de Goñi, rotación de Gutiérrez sin Galán, dudas de Argentina con Stupaczuk y
+   el Dubai P1 de esta semana, sin fechas cerradas por la contradicción de las fuentes).
+   — **HECHO 2026-11-08**: artículo
+   `mundial-padel-doha-2026-final-espana-campeona` (ES+EN, kind novedad, readingMinutes 6, 9
+   relatedProducts). Datos verificados: bolapadel (marcadores, tiempos, el 4-2 del primer
+   partido, las tres remontadas de Goñi, el único set cedido por España, Triay-Brea y Kuwait),
+   beIN Sports ES (palmarés 1998/2008/2010/2021 y los 12 títulos argentinos), Padel Magazine
+   (5-1 → 5-2 y cierre con break en el tercer partido), studypadel (cuadro). Se eliminaron dos
+   afirmaciones no verificables antes de commitear («Tapia invicto en todo el torneo» y Sanz
+   con Coki «como en 2024»). Enlaces internos sin prefijo de locale (ES). Archivos:
+   src/content/noticias/mundial-padel-doha-2026-final-espana-campeona.mdx,
+   src/content/noticias/en/mundial-padel-doha-2026-final-espana-campeona.mdx, src/data/news.ts,
+   docs/MEJORAS.md. Build OK + check:translations OK (153 productos); /es y /en a 200 con H1 +
+   6 H2 + 2 Callouts + 9 fichas de producto por locale; primera en /es/noticias; en sitemap;
+   screenshot docs/screenshots/2026-11-08-mundial-doha-final-espana-campeona.png (1080×486,
+   36.437 colores únicos — verificado por DOM/píxeles, sin visión).
 
 1. [x] **Mundial de Doha, jornada 2: España ya está en cuartos y hoy se juega el liderato
    femenino contra Brasil** — pieza Regla 0 de HOY miércoles 4: resultados del martes 3 +
@@ -1561,6 +1608,16 @@ pádel las cubre el cron de palas). Al terminar, actualizar el estado de la fila
 ---
 
 ## Notas (varias noches)
+
+- 2026-11-08 — **Mundial de Doha cerrado** (España campeona en las dos categorías). Pendiente
+  para el **cron de palas** (no lo toca el nocturno): cuatro protagonistas del doblete siguen
+  sin ficha de producto — **Coki Nieto** (Kuikma desde enero de 2026, sin modelo verificado en
+  catálogo), **Aimar Goñi** (Nox; su modelo propio apuntaba a 2027), **Paula Josemaría** y
+  **Andrea Ustero**. Sus páginas /jugadores existen pero sin pala asociada; el artículo de la
+  final lo declara en un Callout. También queda el **Dubai P1** (esta semana) como pieza de
+  Regla 0 si el cron de noticias del lunes no lo cubre. Ojo: las fuentes oficiales se
+  contradicen con las fechas (FIP 8-15 nov; premierpadel.com 7-14 en home y 8-15 en la ficha)
+  — verificar antes de publicar calendario.
 
 - 2026-10-23 — **Sin torneo en curso** (pádel: Kuwait Major 26-31 oct, arranca el lunes —
   pieza natural de la noche del 25→26 o 26→27 con el cuadro; ATP 250 de Almaty/Bruselas/
