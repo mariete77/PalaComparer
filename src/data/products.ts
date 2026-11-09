@@ -3677,6 +3677,31 @@ export const PRODUCTS: Product[] = [
     descriptionEn:
       "The hybrid format of the tenth-anniversary Hack: the balance drops to around 25 cm and the head is rounded off for easier handling and faster reactions, without losing the line's dynamic punch. It keeps the HackCore heart with Hexacore structure, an Aluminized Carbon 18K frame built with TriCarbon technology and a MultiEVA core, plus 529 cm² of hitting surface and 3D Grain roughness for spin. Air Power lightens the swing and VibraDrive improves energy transfer between frame and core, while Ease Vibe and Custom Weight take care of vibration damping and weight tuning. Built for advanced or pro players with a defensive profile who want to counter-attack without giving up solidity.",
   },
+  // ============ PÁDEL — JOMA BLAST PRO HARD 2027 ============
+  {
+    id: "joma-blast-pro-hard-2027",
+    sport: "padel",
+    brand: "Joma",
+    model: "Blast Pro Hard",
+    year: 2027,
+    price: 180,
+    image: "/images/rackets/joma-blast-pro-hard-2027.svg",
+    level: ["avanzado"],
+    style: ["potencia", "polivalente"],
+    padel: {
+      shape: "hibrida",
+      weight: "360-370 g",
+      balance: "alto",
+      core: "EVA Black Hard",
+      faces: "Carbono 12K",
+      surface: "rugosa",
+      hardness: "dura",
+    },
+    description:
+      "La pala de competición de Joma para 2027: molde híbrido con balance medio-alto, pensado para pegar sin perder precisión cuando toca defender. Monta caras de carbono 12K sobre marco Dualtech Frame y un núcleo EVA Black Hard de alta densidad, que da una respuesta firme y seca en el remate. Acabado Joma 3D Spin con relieve y efecto arena para rascar efecto, hendiduras Aerobump Tech en el marco para mejorar la aerodinámica y corazón abierto que aligera el swing. 360-370 g y perfil de 38 mm: una pala exigente, para jugadores avanzados con el gesto ya hecho.",
+    descriptionEn:
+      "Joma's 2027 competition racket: a hybrid mould with a medium-high balance, built to hit hard without losing precision when it's time to defend. 12K carbon faces sit on a Dualtech Frame with a high-density EVA Black Hard core that delivers a firm, dry response on the smash. The Joma 3D Spin finish adds sand-textured relief for spin, Aerobump Tech grooves in the frame improve aerodynamics and the open heart lightens the swing. 360-370 g with a 38 mm profile: a demanding racket for advanced players whose technique is already in place.",
+  },
 ];
 
 export function getProduct(id: string) {

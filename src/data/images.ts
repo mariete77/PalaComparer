@@ -19,6 +19,7 @@ const BRAND_COLORS: Record<string, { primary: string; accent: string }> = {
   "Drop Shot": { primary: "#1d4ed8", accent: "#60a5fa" },
   "Royal Padel": { primary: "#be123c", accent: "#f43f5e" },
   Kombat: { primary: "#ea580c", accent: "#fb923c" },
+  Joma: { primary: "#e30613", accent: "#facc15" },
 };
 
 function padelShapePath(shape: string): string {
