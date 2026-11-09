@@ -116,6 +116,7 @@ import { metadata as mundialDohaCuartos } from "@/content/noticias/mundial-padel
 import { metadata as mundialDohaSemis } from "@/content/noticias/mundial-padel-doha-2026-semifinales-parejas.mdx";
 import { metadata as mundialDohaFinal } from "@/content/noticias/mundial-padel-doha-2026-final-espana-campeona.mdx";
 import { metadata as dubaiP1Cuadro } from "@/content/noticias/dubai-p1-2026-cuadro-sin-galan-chingotto.mdx";
+import { metadata as galanChingalan2027 } from "@/content/noticias/galan-chingalan-2027-equipo-nuevo-lesion-mano.mdx";
 
 /**
  * Traducciones EN de los metadatos de cada artículo. Las ES vienen del propio
@@ -631,6 +632,13 @@ const EN_META: Record<string, { title: string; excerpt: string; tags: string[] }
       "The last P1 of the season (November 8-15, Hamdan Sports Complex) starts without the world No. 2 pair: Galán is still recovering and Chingotto is left without a tournament. Tapia-Coello, who sealed the year-end No. 1 in Kuwait with their fifth straight title, lead a draw where the 16 seeds do not debut until Wednesday. In the women's event, Triay-Brea have the throne within reach.",
     tags: ["Premier Padel", "Dubai P1", "Tapia", "Coello", "Galán", "Chingotto", "Lebrón", "Triay", "Brea", "Ari Sánchez"],
   },
+  "galan-chingalan-2027-equipo-nuevo-lesion-mano": {
+    title:
+      "Galán confirms Chingalán stays together for 2027: a new team and an injury with no return date",
+    excerpt:
+      "Out of the Kuwait Major, the World Cup and the Dubai P1 with a ligament tear in the fourth finger of his right hand, the Madrid native tells MARCA he will stay with Fede Chingotto in 2027 and that they are building a new structure. Surgery is still on the table and there is no timeline for his return.",
+    tags: ["Premier Padel", "Ale Galán", "Chingotto", "Chingalán", "Injury", "World Cup", "Paris Major", "Barcelona Finals"],
+  },
 };
 
 /**
@@ -733,6 +741,7 @@ export const ARTICLES: Article[] = [
   localize({ slug: "mundial-padel-doha-2026-semifinales-parejas", ...mundialDohaSemis }),
   localize({ slug: "mundial-padel-doha-2026-final-espana-campeona", ...mundialDohaFinal }),
   localize({ slug: "dubai-p1-2026-cuadro-sin-galan-chingotto", ...dubaiP1Cuadro }),
+  localize({ slug: "galan-chingalan-2027-equipo-nuevo-lesion-mano", ...galanChingalan2027 }),
 ].sort((a, b) => b.date.localeCompare(a.date));
 
 export function getArticle(slug: string): Article | undefined {
