@@ -115,6 +115,7 @@ import { metadata as mundialDohaDia2 } from "@/content/noticias/mundial-padel-do
 import { metadata as mundialDohaCuartos } from "@/content/noticias/mundial-padel-doha-2026-cuartos-cruces-y-palas.mdx";
 import { metadata as mundialDohaSemis } from "@/content/noticias/mundial-padel-doha-2026-semifinales-parejas.mdx";
 import { metadata as mundialDohaFinal } from "@/content/noticias/mundial-padel-doha-2026-final-espana-campeona.mdx";
+import { metadata as dubaiP1Cuadro } from "@/content/noticias/dubai-p1-2026-cuadro-sin-galan-chingotto.mdx";
 
 /**
  * Traducciones EN de los metadatos de cada artículo. Las ES vienen del propio
@@ -623,6 +624,13 @@ const EN_META: Record<string, { title: string; excerpt: string; tags: string[] }
       "Lebrón and Goñi came back, Coello and Coki Nieto closed it out and Spain won their fifth men's World Championship (2-1) four years on. The women won too (2-0) for a seventh straight title. Both finals, and the rackets on court.",
     tags: ["World Cup", "FIP World Cup", "Doha", "Spain", "Argentina", "Coello", "Lebrón", "Goñi", "Triay"],
   },
+  "dubai-p1-2026-cuadro-sin-galan-chingotto": {
+    title:
+      "Dubai P1 2026: the draw opens up without Galán and Chingotto, with Tapia-Coello already crowned No. 1",
+    excerpt:
+      "The last P1 of the season (November 8-15, Hamdan Sports Complex) starts without the world No. 2 pair: Galán is still recovering and Chingotto is left without a tournament. Tapia-Coello, who sealed the year-end No. 1 in Kuwait with their fifth straight title, lead a draw where the 16 seeds do not debut until Wednesday. In the women's event, Triay-Brea have the throne within reach.",
+    tags: ["Premier Padel", "Dubai P1", "Tapia", "Coello", "Galán", "Chingotto", "Lebrón", "Triay", "Brea", "Ari Sánchez"],
+  },
 };
 
 /**
@@ -724,6 +732,7 @@ export const ARTICLES: Article[] = [
   localize({ slug: "mundial-padel-doha-2026-cuartos-cruces-y-palas", ...mundialDohaCuartos }),
   localize({ slug: "mundial-padel-doha-2026-semifinales-parejas", ...mundialDohaSemis }),
   localize({ slug: "mundial-padel-doha-2026-final-espana-campeona", ...mundialDohaFinal }),
+  localize({ slug: "dubai-p1-2026-cuadro-sin-galan-chingotto", ...dubaiP1Cuadro }),
 ].sort((a, b) => b.date.localeCompare(a.date));
 
 export function getArticle(slug: string): Article | undefined {

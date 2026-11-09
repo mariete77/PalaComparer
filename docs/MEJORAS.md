@@ -52,6 +52,30 @@
 
 ### 📰 Actualidad (contenido original y actual)
 
+Hechos verificados a 2026-11-09 (para la noche del 9→10): **Dubai P1 EN MARCHA (8-15 nov,
+Hamdan Sports Complex)**. Fuentes: premierpadel.com (ficha del torneo y calendario de días
+8→15 nov), FIP (calendario: 08-15 nov), Instagram/Facebook oficiales de Emaar Dubai Premier
+Padel P1 (sede y fechas) y elneverazo (crónica del sorteo, 8-nov). **La contradicción de
+fechas queda resuelta: 8-15 de noviembre** (la home de premierpadel.com mostraba 7-14 y la
+ficha de la FIP 08-15; los días de juego publicados van del 8 al 15). Sorteo del cuadro
+final el domingo 8. **Bajas: Ale Galán (sigue sin recuperarse; tampoco jugó el Mundial, entró
+Javi Leal) y Fede Chingotto** — la pareja dos del ranking se pierde el torneo, como ya pasó
+en Kuwait. **Masculino, cabezas de serie: 1 Tapia-Coello (ya son número uno del año,
+asegurado en Kuwait con su 5º título seguido: París, Róterdam, Düsseldorf, Milán y Kuwait),
+2 Lebrón-Augsburger, 3 Stupaczuk-Jon Sanz, 4 Paquito Navarro-Di Nenno**. Las 16 parejas
+cabezas de serie están exentas de los treintaidosavos y debutan el **miércoles 11** en
+dieciseisavos. Mitad de Tapia-Coello: Yanguas-Coki Nieto, Guerrero-Leal, Libaak-Alfonso,
+Bautista-Bergamini, De Pascual-Garrido, Maxi Sánchez-Sanyo. Mitad de Lebrón-Augsburger:
+Momo-Campagnolo, Tello-Arce, Alonso-Goñi, Jofre-Esbrí, Álex Ruiz-Javi García,
+Barahona-Piotto. **Femenino: 1 Brea-Triay (cerca de asegurar el nº1 del año; ganaron Kuwait
+remontando), 2 Bea-Josemaría, 3 Ari Sánchez-Ustero (3 de los últimos 4: París, Róterdam y
+Milán), 4 Claudia Fernández-Martina Calvo**; las cuatro exentas de dieciseisavos y debutan
+el **jueves 12** en octavos. TV: **Red Bull TV desde cuartos hasta la final; previos en
+YouTube de Premier Padel**. Es el **último P1 de la temporada**: después, Mexico Major
+(23-29 nov) y Finals Barcelona (10-13 dic). Publicada la previa de hoy (ver item marcado).
+Pieza natural próxima noche (10→11): jornada de treintaidosavos del martes 10 con las
+parejas no cabezas de serie, o previa de los debuts del miércoles.
+
 Hechos verificados a 2026-11-08 (para la noche del 7→8): **Mundial de Pádel de Doha — FINALES
 DEL SÁBADO 7 COMPLETADAS**. Fuentes: bolapadel (crónica de las dos finales con marcadores,
 tiempos y datos de contexto), beIN Sports ES (crónica + palmarés), Padel Magazine (análisis
@@ -1389,6 +1413,25 @@ Galán causó baja por lesión el 30-oct y entró Javi Leal. Hoy jornada 2: Espa
   enlaces a producto, 0 enlaces `/es/es/`; listado con la pieza primera; screenshot
   `docs/screenshots/2026-11-06-mundial-doha-semifinales.png`.
   Próxima noche natural: finales del sábado 7 (resultados) o arranque del Dubai P1.
+
+- [x] **Actualidad Dubai P1 — previa del cuadro (2026-11-09)**: artículo ES+EN
+  `dubai-p1-2026-cuadro-sin-galan-chingotto` (kind novedad, 5 min, 12 relatedProducts).
+  Ángulo propio: **el último P1 de la temporada arranca sin la pareja dos** (Galán sigue
+  lesionado y Chingotto se queda sin torneo, como en Kuwait) mientras Tapia-Coello llegan con
+  el nº1 del año ya asegurado y cinco títulos seguidos; el cuadro masculino con los 16
+  cabezas de serie exentos hasta el miércoles 11 y las dos mitades; el femenino con
+  Triay-Brea a un paso del trono y el top-4 exento hasta el jueves 12; sección de material
+  con 12 ProductRef (8 en el grid final) y el hueco declarado de Augsburger sin ficha; y
+  calendario/televisión (Red Bull TV desde cuartos, previos en YouTube). Datos del sorteo:
+  elneverazo (8-nov); fechas y sede: FIP + premierpadel.com + perfiles oficiales del torneo
+  (**8-15 nov, Hamdan Sports Complex** — resuelve la contradicción 7-14/8-15 que quedó
+  abierta el 8-nov). Sin duplicar la previa de Kuwait (allí el eje era la baja y las palas;
+  aquí el eje es el cuadro y el reparto de cabezas de serie).
+  Build OK + check:translations OK (153 productos); /es y /en a 200 con H1 propio, 6 H2 de
+  contenido + 2 estructurales, 12 enlaces a producto por locale y 0 enlaces `/es/es/` o
+  `/en/en/`; la pieza sale en /es/noticias, en la home y en sitemap; JSON-LD Article OK.
+  Screenshot `docs/screenshots/2026-11-09-dubai-p1-previa.png` (1080×486, 34.655 colores
+  únicos — verificado por DOM/píxeles, sin visión).
 
 
 ### 🎨 Visual (mejoras visuales)
