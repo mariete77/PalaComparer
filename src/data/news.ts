@@ -117,6 +117,7 @@ import { metadata as mundialDohaSemis } from "@/content/noticias/mundial-padel-d
 import { metadata as mundialDohaFinal } from "@/content/noticias/mundial-padel-doha-2026-final-espana-campeona.mdx";
 import { metadata as dubaiP1Cuadro } from "@/content/noticias/dubai-p1-2026-cuadro-sin-galan-chingotto.mdx";
 import { metadata as galanChingalan2027 } from "@/content/noticias/galan-chingalan-2027-equipo-nuevo-lesion-mano.mdx";
+import { metadata as dubaiP1Duenos } from "@/content/noticias/dubai-p1-2026-duenos-del-torneo.mdx";
 
 /**
  * Traducciones EN de los metadatos de cada artículo. Las ES vienen del propio
@@ -632,6 +633,13 @@ const EN_META: Record<string, { title: string; excerpt: string; tags: string[] }
       "The last P1 of the season (November 8-15, Hamdan Sports Complex) starts without the world No. 2 pair: Galán is still recovering and Chingotto is left without a tournament. Tapia-Coello, who sealed the year-end No. 1 in Kuwait with their fifth straight title, lead a draw where the 16 seeds do not debut until Wednesday. In the women's event, Triay-Brea have the throne within reach.",
     tags: ["Premier Padel", "Dubai P1", "Tapia", "Coello", "Galán", "Chingotto", "Lebrón", "Triay", "Brea", "Ari Sánchez"],
   },
+  "dubai-p1-2026-duenos-del-torneo": {
+    title:
+      "Dubai P1 2026: Tapia-Coello chase the treble, Bea González a third title with a third partner",
+    excerpt:
+      "The last P1 of the season (November 8-15, €479,068) belongs to one pair on the men's side: Coello and Tapia have won both editions played so far. In the women's draw, Bea González has won both too — with Delfi Brea in 2024 and Claudia Fernández in 2025. This year she defends the streak with Paula Josemaría, while Brea-Triay arrive as world No. 1 with a 2,780-point lead in the Race.",
+    tags: ["Premier Padel", "Dubai P1", "Tapia", "Coello", "Bea González", "Josemaría", "Triay", "Brea", "Ari Sánchez"],
+  },
   "galan-chingalan-2027-equipo-nuevo-lesion-mano": {
     title:
       "Galán confirms Chingalán stays together for 2027: a new team and an injury with no return date",
@@ -742,6 +750,7 @@ export const ARTICLES: Article[] = [
   localize({ slug: "mundial-padel-doha-2026-final-espana-campeona", ...mundialDohaFinal }),
   localize({ slug: "dubai-p1-2026-cuadro-sin-galan-chingotto", ...dubaiP1Cuadro }),
   localize({ slug: "galan-chingalan-2027-equipo-nuevo-lesion-mano", ...galanChingalan2027 }),
+  localize({ slug: "dubai-p1-2026-duenos-del-torneo", ...dubaiP1Duenos }),
 ].sort((a, b) => b.date.localeCompare(a.date));
 
 export function getArticle(slug: string): Article | undefined {

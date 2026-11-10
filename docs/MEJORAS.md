@@ -52,6 +52,24 @@
 
 ### 📰 Actualidad (contenido original y actual)
 
+Hechos verificados a 2026-11-10 (para la noche del 10→11): **Dubai P1 EN MARCHA (8-15 nov)**.
+Hoy martes 10 se juegan las primeras rondas con las parejas que no son cabezas de serie
+(studypadel: ronda de 64 y de 32 programadas); los 16 cabezas de serie masculinos debutan el
+miércoles 11 en dieciseisavos y el top-4 femenino entra directo en octavos. Publicada la pieza
+de autor de hoy (ver item marcado). Datos verificados: **palmarés de Dubái** — Coello-Tapia
+2024 y 2025 (final 2025 6-3 6-4 a Galán-Chingotto, 11º título de su temporada: padeladdict),
+Fernández-González 2025 (6-1 7-5 a Brea-Triay: padeladdict) y Brea-González 2024 (studypadel +
+padelfip); **ficha del torneo**: 479.068 € en premios, 1.000 pts al campeón, último P1 de la
+temporada (studypadel); **premios por edición**: 470.000 € (2024), 474.500 € (2025), 479.068 €
+(2026) (studypadel); **Kuwait** — 7º título de Triay-Brea en 2026, 59º de Triay (la más
+laureada), 13º de Coello-Tapia en 2026, ventaja de 2.780 puntos en la FIP Race con 4.500 aún
+en juego (redbull.com); **Bea-Josemaría**: 6 títulos en 2026, último el P2 de Valladolid del
+28-jun, racha de 5 trofeos seguidos (la más larga del femenino), cruces de octavos
+Collombon-Sharifova / Fassio-Virseda, y Brea-Triay vs Saiz-Talavan o dos clasificadas, con los
+cuartos teóricos 1-6, 8-4, 3-5 y 7-2 (padel-magazine + padelfip).
+Pieza natural próxima noche (11→12): debuts de los cabezas de serie masculinos del miércoles 11
+—verificar OOP y resultados en premierpadel.com / studypadel antes de escribir.
+
 Hechos verificados a 2026-11-09 (para la noche del 9→10): **Dubai P1 EN MARCHA (8-15 nov,
 Hamdan Sports Complex)**. Fuentes: premierpadel.com (ficha del torneo y calendario de días
 8→15 nov), FIP (calendario: 08-15 nov), Instagram/Facebook oficiales de Emaar Dubai Premier
@@ -1432,6 +1450,24 @@ Galán causó baja por lesión el 30-oct y entró Javi Leal. Hoy jornada 2: Espa
   `/en/en/`; la pieza sale en /es/noticias, en la home y en sitemap; JSON-LD Article OK.
   Screenshot `docs/screenshots/2026-11-09-dubai-p1-previa.png` (1080×486, 34.655 colores
   únicos — verificado por DOM/píxeles, sin visión).
+
+- [x] **Actualidad Dubai P1 — los dueños del torneo (2026-11-10)**: artículo ES+EN
+  `dubai-p1-2026-duenos-del-torneo` (kind novedad, 6 min, 8 relatedProducts). Ángulo propio:
+  **el P1 emiratí solo tiene dos ediciones y un dueño en cada cuadro**. Coello-Tapia ganaron
+  2024 y 2025 (la final de 2025, 6-3 6-4 a Galán-Chingotto y sin ceder una bola de break en el
+  segundo set) y llegan con 5 títulos seguidos, 13 en 2026 y el nº1 del año cerrado: ganar el
+  domingo sería su sexto consecutivo. En femenino, Bea González ha ganado las dos ediciones con
+  parejas distintas (Brea 2024, Claudia Fernández 2025) y busca la tercera con Josemaría, aunque
+  no gana desde el P2 de Valladolid (28-jun) tras dejar escapar Málaga, París, Róterdam y Milán.
+  Cierra el círculo la otra mitad de la historia: Brea, campeona en 2024 y finalista en 2025,
+  hoy nº1 con 2.780 puntos de ventaja y 4.500 en juego. Incluye el cuadro femenino con los
+  cruces teóricos de cuartos, la progresión del prize money (470.000 → 474.500 → 479.068 €) y el
+  bloque de material. Sin duplicar la previa del 9-nov (allí el eje era la baja de
+  Galán-Chingotto y el reparto de cabezas de serie; aquí el palmarés y las rachas).
+  Build OK + check:translations OK (153 productos); /es y /en a 200 con H1 propio, 6 H2 de
+  contenido + los estructurales, 8 enlaces a producto por locale y los dos callouts; la pieza
+  aparece en /es/noticias. Screenshot `docs/screenshots/2026-11-10-dubai-p1-duenos.png`
+  (1080×750, 5.114 colores únicos — verificado por DOM/píxeles, sin visión).
 
 
 ### 🎨 Visual (mejoras visuales)
