@@ -118,6 +118,7 @@ import { metadata as mundialDohaFinal } from "@/content/noticias/mundial-padel-d
 import { metadata as dubaiP1Cuadro } from "@/content/noticias/dubai-p1-2026-cuadro-sin-galan-chingotto.mdx";
 import { metadata as galanChingalan2027 } from "@/content/noticias/galan-chingalan-2027-equipo-nuevo-lesion-mano.mdx";
 import { metadata as dubaiP1Duenos } from "@/content/noticias/dubai-p1-2026-duenos-del-torneo.mdx";
+import { metadata as dubaiP1TapiaBaja } from "@/content/noticias/dubai-p1-2026-tapia-coello-baja-cuadro-abierto.mdx";
 
 /**
  * Traducciones EN de los metadatos de cada artículo. Las ES vienen del propio
@@ -640,6 +641,13 @@ const EN_META: Record<string, { title: string; excerpt: string; tags: string[] }
       "The last P1 of the season (November 8-15, €479,068) belongs to one pair on the men's side: Coello and Tapia have won both editions played so far. In the women's draw, Bea González has won both too — with Delfi Brea in 2024 and Claudia Fernández in 2025. This year she defends the streak with Paula Josemaría, while Brea-Triay arrive as world No. 1 with a 2,780-point lead in the Race.",
     tags: ["Premier Padel", "Dubai P1", "Tapia", "Coello", "Bea González", "Josemaría", "Triay", "Brea", "Ari Sánchez"],
   },
+  "dubai-p1-2026-tapia-coello-baja-cuadro-abierto": {
+    title:
+      "Dubai P1 2026: Tapia and Coello pull out and the draw loses its top two pairs",
+    excerpt:
+      "Agustín Tapia is injured and Coello-Tapia have withdrawn from the Dubai P1 before playing a match, a day after Galán and Chingotto also pulled out. The last P1 of the season (€479,068, 1,000 points) is guaranteed a brand-new champion: Lebrón-Augsburger and Stupaczuk-Sanz take over the bill. Draw, Tuesday's results, Wednesday's order of play and the rackets of the new favourites.",
+    tags: ["Premier Padel", "Dubai P1", "Tapia", "Coello", "Lebrón", "Stupaczuk", "Di Nenno", "Libaak"],
+  },
   "galan-chingalan-2027-equipo-nuevo-lesion-mano": {
     title:
       "Galán confirms Chingalán stays together for 2027: a new team and an injury with no return date",
@@ -751,6 +759,7 @@ export const ARTICLES: Article[] = [
   localize({ slug: "dubai-p1-2026-cuadro-sin-galan-chingotto", ...dubaiP1Cuadro }),
   localize({ slug: "galan-chingalan-2027-equipo-nuevo-lesion-mano", ...galanChingalan2027 }),
   localize({ slug: "dubai-p1-2026-duenos-del-torneo", ...dubaiP1Duenos }),
+  localize({ slug: "dubai-p1-2026-tapia-coello-baja-cuadro-abierto", ...dubaiP1TapiaBaja }),
 ].sort((a, b) => b.date.localeCompare(a.date));
 
 export function getArticle(slug: string): Article | undefined {

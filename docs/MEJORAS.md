@@ -52,6 +52,29 @@
 
 ### 📰 Actualidad (contenido original y actual)
 
+Hechos verificados a 2026-11-11 (para la noche del 11→12): **Dubai P1 EN MARCHA (8-15 nov,
+Hamdan Sports Complex)**. **BOMBAZO: Coello-Tapia se retiran antes de su primer partido por la
+lesión de Tapia** — anuncio del martes 10, «por recomendación de su equipo médico», sin alcance
+ni plazos; su plaza la ocupa una pareja lucky loser de la previa, que se mide a Chozas-Rubini no
+antes de las 16:00 ES del miércoles (padeladdict, artículo propio 10-nov; padelearnings lo
+confirma en su FAQ: «withdrew before their first match because Tapia is injured»). Con
+Galán-Chingotto ya fuera (mano de Galán; Chingotto no quiso jugar con suplente: Mundo Deportivo
+6-nov, Tennis Tonic), **el Dubái P1 tendrá campeón inédito por primera vez en sus tres ediciones**
+(padelearnings). Nuevo orden de cabezas: 2 Lebrón-Augsburger, 3 Stupaczuk-Sanz, 4 Di
+Nenno-Paquito (Mundo Deportivo 9-nov). **Martes 10 (treintaidosavos masculinos + 1ª jornada de
+dieciseisavos femeninos)**: Rufo-Iglesias 6-3 2-6 6-2 a Salazar-Osoro (8ªs), primer golpe del
+torneo; Chozas-Rubini 6-2 6-4 a Pincho-Cepero y esperan al lucky loser; Sintes-Zamora siguen de
+dulce y ya esperan a Coki-Yanguas (padeladdict, resultados 11-nov). **OJO con elneverazo**: su
+crónica de «treintaidosavos del Dubai P1» es de **2024** (enlaces al Mundial 2024, Bela, Chingotto
+con Galán) — no usar. **Miércoles 11**: 22 partidos (16 masc + 6 fem) desde las 12:00 Dubái /
+09:00 ES; debuts de Di Nenno-Paquito (vs Aragón-Roglán), Lebrón-Augsburger (vs Castaño-Pol
+Hernández), Stupa-Sanz (vs Ayats-Emilio Sánchez), Coki-Yanguas (vs Sintes-Zamora),
+Libaak-Alfonso (vs Aguirre-Lijó) y Guerrero-Leal (vs Calleja-Romera) (padeladdict OOP 11-nov).
+Premios: 479.068 €, 1.000 pts, 26.000 €/jugador masc y 17.000 €/jugador fem (padelearnings).
+Pieza natural próxima noche (12→13): octavos del jueves 12, con el debut del top-4 femenino
+(Brea-Triay, Josemaría-Bea, Ari-Ustero, Fernández-Calvo) y los resultados de los debuts
+masculinos del miércoles.
+
 Hechos verificados a 2026-11-10 (para la noche del 10→11): **Dubai P1 EN MARCHA (8-15 nov)**.
 Hoy martes 10 se juegan las primeras rondas con las parejas que no son cabezas de serie
 (studypadel: ronda de 64 y de 32 programadas); los 16 cabezas de serie masculinos debutan el
@@ -1468,6 +1491,25 @@ Galán causó baja por lesión el 30-oct y entró Javi Leal. Hoy jornada 2: Espa
   contenido + los estructurales, 8 enlaces a producto por locale y los dos callouts; la pieza
   aparece en /es/noticias. Screenshot `docs/screenshots/2026-11-10-dubai-p1-duenos.png`
   (1080×750, 5.114 colores únicos — verificado por DOM/píxeles, sin visión).
+
+- [x] **Actualidad Dubai P1 — Tapia y Coello se caen del cuadro (2026-11-11)**: artículo ES+EN
+  `dubai-p1-2026-tapia-coello-baja-cuadro-abierto` (kind novedad, 5 min, 9 relatedProducts).
+  Ángulo propio: **el último P1 de la temporada se queda sin sus dos primeras parejas y tendrá
+  campeón inédito** — Tapia es baja por lesión y Coello se retira con él, un día después de que
+  Galán-Chingotto también se cayeran. Incluye lo que se sabe y lo que no (el comunicado no da
+  alcance ni plazos), el cuadro que queda (Lebrón-Augsburger como mejor pareja, Stupaczuk-Sanz
+  referencia de la mitad alta, Di Nenno-Paquito cuartos, Libaak-Alfonso liberados sin el muro de
+  octavos, Leal-Guerrero entrando de rebote como sextos), las **palas de los que heredan el
+  cartel** (Viper 3.1, Siux Fénix Pro Black, Electra Pro IT 26, Axion Attack 2.0, Xplo 02, Hack 05,
+  Diablo Pro), los resultados del martes (Rufo-Iglesias a Salazar-Osoro) y el orden de juego del
+  miércoles con los debuts. Añadido un callout de actualización a la previa del 10-nov
+  (`dubai-p1-2026-duenos-del-torneo`), que daba a Coello-Tapia dentro del cuadro. Fuentes:
+  padeladdict (baja 10-nov + resultados y OOP 11-nov), padelearnings (FAQ y reparto de premios),
+  Mundo Deportivo y Tennis Tonic (baja de Galán-Chingotto y nuevo orden de cabezas).
+  Build OK + check:translations OK (154 productos); /es y /en a 200 con título y H1 propios,
+  6 H2 de contenido + 2 estructurales, 9 enlaces a producto por locale y 0 fugas de
+  `ProductRef`/`undefined` en el DOM. Screenshot `docs/screenshots/2026-11-11-dubai-p1-tapia-baja.png`
+  (1080×486, 38.099 colores únicos — verificado por DOM/píxeles, sin visión).
 
 
 ### 🎨 Visual (mejoras visuales)
