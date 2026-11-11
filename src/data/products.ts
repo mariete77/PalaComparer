@@ -3280,6 +3280,30 @@ export const PRODUCTS: Product[] = [
       "The Metheora+ renews StarVie's classic with a new hybrid mould and medium balance built for versatile play: a wide sweet spot and comfortable transitions between defence and attack. Its 12K Carbon Hyper face is lighter and more sensitive than 18K and widens the hitting zone, over an M-Eva Balance rubber with a firm, balanced touch. Precision Bridge and Core Axis reinforce the heart, the rough Spin Boost Tech surface bites to generate spin, and the Longer Handgrip with Z-shock rounds off the comfort. Made in Spain for intermediate players looking for an adaptable racket.",
   },
   {
+    id: "starvie-phantom-2027",
+    sport: "padel",
+    brand: "StarVie",
+    model: "Phantom",
+    year: 2027,
+    price: 229,
+    image: "/images/rackets/starvie-phantom-2027.svg",
+    level: ["intermedio"],
+    style: ["control"],
+    padel: {
+      shape: "redonda",
+      weight: "347-365 g",
+      balance: "bajo",
+      core: "S-Eva Flex",
+      faces: "12K Carbon Hyper",
+      surface: "rugosa",
+      hardness: "blanda",
+    },
+    description:
+      "Molde redondo nuevo en la colección 2027 de StarVie y la única de las doce con goma blanda S-EVA Flex: la Phantom es la pala de control de la gama Premium, con balance bajo y 347-365 g para moverla sin esfuerzo en defensa y en la volea de bloqueo. El plano 12K Carbon Hyper amplía el punto dulce sin endurecer el golpe, y el perfil de 38 mm mantiene la estructura firme. Precision Bridge y CoreAxis refuerzan el corazón, Reactive Holes aligera y ordena la respuesta, y Spin Boost Tech con superficie 3D rugosa ayuda a rascar efecto; Longer Handgrip y Z-Shock rematan el confort. La opción más amable para quien prioriza colocación y cuida el codo.",
+    descriptionEn:
+      "A new round mould in StarVie's 2027 collection and the only one of the twelve with soft S-EVA Flex rubber: the Phantom is the Premium range's control racket, with low balance and 347-365 g so it moves effortlessly in defence and on blocking volleys. The 12K Carbon Hyper face widens the sweet spot without stiffening the feel, and the 38 mm profile keeps the frame solid. Precision Bridge and CoreAxis reinforce the heart, Reactive Holes lighten and tidy the response, and Spin Boost Tech with its 3D rough surface helps bite the ball; Longer Handgrip and Z-Shock round off the comfort. The friendliest option for players who prioritise placement and look after their elbow.",
+  },
+  {
     id: "bullpadel-flow-2027",
     sport: "padel",
     brand: "Bullpadel",

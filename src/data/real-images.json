@@ -1,6 +1,12 @@
 {
   "$comment": "Manifiesto de fotos reales. Lo escribe `npm run import:images` a partir de scripts/image-sources.json. Clave = id de producto.",
   "images": {
+    "starvie-phantom-2027": {
+      "src": "/images/rackets/real/starvie-phantom-2027.png",
+      "credit": "© StarVie / PadelPROShop",
+      "source": "https://padelproshop.com/products/pala-starvie-phantom-2027",
+      "licence": "pendiente"
+    },
     "adidas-drive-2024": {
       "src": "/images/rackets/real/adidas-drive-2024.jpg",
       "credit": "© Amazon ES",

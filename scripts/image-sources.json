@@ -1,6 +1,11 @@
 {
   "$comment": "Fotos reales por producto. Clave = id en src/data/products.ts. Rellena 'url' con una imagen que tengas derecho a usar y ejecuta `npm run import:images`. Las entradas con url vacía se ignoran. Regenera esta plantilla con `npm run images:scaffold`.",
   "$licence": "El campo 'licence' registra la situación de derechos: 'pendiente' (por defecto: en uso pero sin permiso del titular), 'prensa' (material de prensa del fabricante), 'feed' (feed de afiliación) o 'propia'. El importador te resume cuántas quedan pendientes.",
+  "starvie-phantom-2027": {
+    "url": "https://cdn.shopify.com/s/files/1/0763/9577/4257/files/PHANTON1.1.webp?v=1788529066",
+    "credit": "© StarVie / PadelPROShop",
+    "source": "https://padelproshop.com/products/pala-starvie-phantom-2027"
+  },
   "adidas-drive-2024": {
     "url": "https://m.media-amazon.com/images/I/71bYArDYHTL._AC_SL1500_.jpg",
     "credit": "© Amazon ES",
