@@ -119,6 +119,7 @@ import { metadata as dubaiP1Cuadro } from "@/content/noticias/dubai-p1-2026-cuad
 import { metadata as galanChingalan2027 } from "@/content/noticias/galan-chingalan-2027-equipo-nuevo-lesion-mano.mdx";
 import { metadata as dubaiP1Duenos } from "@/content/noticias/dubai-p1-2026-duenos-del-torneo.mdx";
 import { metadata as dubaiP1TapiaBaja } from "@/content/noticias/dubai-p1-2026-tapia-coello-baja-cuadro-abierto.mdx";
+import { metadata as dubaiP1Octavos } from "@/content/noticias/dubai-p1-2026-paquito-di-nenno-fuera-octavos.mdx";
 
 /**
  * Traducciones EN de los metadatos de cada artículo. Las ES vienen del propio
@@ -648,6 +649,13 @@ const EN_META: Record<string, { title: string; excerpt: string; tags: string[] }
       "Agustín Tapia is injured and Coello-Tapia have withdrawn from the Dubai P1 before playing a match, a day after Galán and Chingotto also pulled out. The last P1 of the season (€479,068, 1,000 points) is guaranteed a brand-new champion: Lebrón-Augsburger and Stupaczuk-Sanz take over the bill. Draw, Tuesday's results, Wednesday's order of play and the rackets of the new favourites.",
     tags: ["Premier Padel", "Dubai P1", "Tapia", "Coello", "Lebrón", "Stupaczuk", "Di Nenno", "Libaak"],
   },
+  "dubai-p1-2026-paquito-di-nenno-fuera-octavos": {
+    title:
+      "Dubai P1 2026: Paquito and Di Nenno fall after a 6-0 first set and the draw loses two of its top four seeds",
+    excerpt:
+      "Manuel Aragón and Albert Roglán, out of qualifying and ranked 93 and 88 in the world, knocked out the fourth seeds 6-0 4-6 2-6 after an immaculate opening set from the Spaniards. Lebrón and Augsburger survived, Stupaczuk and Sanz went through on a retirement, and Thursday's round of 16 debuts the women's top four: Triay-Brea face their first match point for world No. 1. Results, order of play and rackets.",
+    tags: ["Premier Padel", "Dubai P1", "Paquito Navarro", "Di Nenno", "Lebrón", "Stupaczuk", "Triay", "Brea", "Libaak"],
+  },
   "galan-chingalan-2027-equipo-nuevo-lesion-mano": {
     title:
       "Galán confirms Chingalán stays together for 2027: a new team and an injury with no return date",
@@ -760,6 +768,7 @@ export const ARTICLES: Article[] = [
   localize({ slug: "galan-chingalan-2027-equipo-nuevo-lesion-mano", ...galanChingalan2027 }),
   localize({ slug: "dubai-p1-2026-duenos-del-torneo", ...dubaiP1Duenos }),
   localize({ slug: "dubai-p1-2026-tapia-coello-baja-cuadro-abierto", ...dubaiP1TapiaBaja }),
+  localize({ slug: "dubai-p1-2026-paquito-di-nenno-fuera-octavos", ...dubaiP1Octavos }),
 ].sort((a, b) => b.date.localeCompare(a.date));
 
 export function getArticle(slug: string): Article | undefined {

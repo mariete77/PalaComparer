@@ -52,6 +52,31 @@
 
 ### 📰 Actualidad (contenido original y actual)
 
+Hechos verificados a 2026-11-12 (para la noche del 12→13): **Dubai P1 EN MARCHA (8-15 nov,
+Hamdan Sports Complex)**. Publicada la pieza de los octavos (ver item marcado). **Miércoles 11
+(dieciseisavos masc + octavos fem)**: batacazo — **Aragón Herrera/Roglán Pons** (previa, nº 93 y
+88) a **Di Nenno-Paquito** (TS4) 6-0 4-6 2-6; **Lebrón-Augsburger** 4-6 6-3 6-3 a Castaño-Pol
+Hernández; **Stupaczuk-Sanz** 6-3 5-1 y retirada de Emilio Sánchez Chamero (55 min); Libaak-Alfonso
+6-3 6-4 a Aguirre-Lijó; Tello-Arce 6-4 6-4; Yanguas-Coki 6-7 6-3 6-4 a Sintes-Zamora; Momo-Campagnolo
+6-3 7-5; Guerrero-Leal 6-3 6-4; Bautista-Bergamini 7-5 2-6 6-3; De Pascual-Garrido 6-3 7-6; Jofre-Esbrí
+6-4 7-6; Edu Alonso-Goñi 6-3 6-4; Abbate-Dal Bianco 4-6 6-1 6-4 a Álex Ruiz-Javi García (TS13);
+Víctor Ruiz-Facundo López 4-6 6-3 6-4 a Barahona-Piotto (TS16); lucky losers Marcos González-Diego
+García 6-4 3-6 7-6 a Rubini-Chozas. Mujeres: **Cánovas-Lobo 6-3 6-0 a Caldera-Goenaga** (mayor
+sorpresa). **Octavos jueves 12** (09:00 ES / 12:00 Dubái, horarios estimados del cuadro): masc
+Abbate/Dal Bianco-Aragón/Roglán 10:30; Momo/Campagnolo-Jofre/Esbrí 12:00; Lebrón/Augsburger-Víctor
+Ruiz/Facundo López 13:30; Tello/Arce-Edu Alonso/Goñi 13:30; Guerrero/Leal-Bautista/Bergamini 15:00;
+Libaak/Alfonso-González Blanco/García 15:00; Yanguas/Nieto-De Pascual/Garrido 16:00; Stupaczuk/Sanz-Maxi
+Sánchez/Sanyo 17:30. Fem: Triay/Brea-Talaván/Saiz; Josemaría/Bea-Fassio/Virseda; Ari/Ustero-Manquillo/
+Lucía Sainz; Fernández/Calvo-Castelló/Rodríguez; Araújo/Ortega-Velasco/Eugenio; Guinart/Ale
+Alonso-Cánovas/Lobo; Rufo/Iglesias-López Moral/Camila Fassio; Jensen/Icardo-Arellano/Kurz. **Race
+femenina: Triay-Brea +2.780 sobre Ari-Ustero, primer match ball por el nº 1** (Mundo Deportivo 9-nov).
+Pieza natural próxima noche (13→14): **cuartos del viernes 13** (desde cuartos, Red Bull TV) con
+resultados de los octavos y el cuadro que queda; verificar en premierpadel.com / StudyPadel antes
+de escribir. OJO: la home de premierpadel.com arrastra titulares viejos de Kuwait — no usarla como
+resultados. En tenis, **ATP Finals Turín 15-22 nov**: campo cerrado (Zverev, Alcaraz, Shelton,
+Medvedev, Cobolli, Fils, Tiafoe, Jódar; Sinner baja por lesión) y sorteo oficial el jueves 12 a las
+12:45 CET; pieza posible para el fin de semana.
+
 Hechos verificados a 2026-11-11 (para la noche del 11→12): **Dubai P1 EN MARCHA (8-15 nov,
 Hamdan Sports Complex)**. **BOMBAZO: Coello-Tapia se retiran antes de su primer partido por la
 lesión de Tapia** — anuncio del martes 10, «por recomendación de su equipo médico», sin alcance
@@ -1510,6 +1535,25 @@ Galán causó baja por lesión el 30-oct y entró Javi Leal. Hoy jornada 2: Espa
   6 H2 de contenido + 2 estructurales, 9 enlaces a producto por locale y 0 fugas de
   `ProductRef`/`undefined` en el DOM. Screenshot `docs/screenshots/2026-11-11-dubai-p1-tapia-baja.png`
   (1080×486, 38.099 colores únicos — verificado por DOM/píxeles, sin visión).
+
+
+- [x] **Actualidad Dubai P1 — octavos: Paquito y Di Nenno fuera (2026-11-12)**: artículo ES+EN
+  `dubai-p1-2026-paquito-di-nenno-fuera-octavos` (kind novedad, 5 min, 9 relatedProducts).
+  Ángulo propio: **el batacazo de los cuartos cabezas de serie** — Aragón Herrera/Roglán Pons
+  (previa, nº 93 y 88) eliminan a Paquito-Di Nenno 6-0 4-6 2-6 y el cuadro se queda con dos de
+  los cuatro primeros cabezas de serie fuera (ellos y Coello-Tapia, retirados). Incluye la
+  remontada de Lebrón-Augsburger (4-6 6-3 6-3 a Castaño-Pol Hernández), el pase sin desgaste de
+  Stupaczuk-Sanz (6-3 5-1 y retirada de Emilio Sánchez Chamero, 55 min), el resto de resultados
+  del miércoles con marcadores, el **orden de juego del jueves** (octavos, 09:00 ES / 12:00 Dubái,
+  con el debut del top-4 femenino y Triay-Brea jugándose su primer match ball por el nº 1 con
+  2.780 puntos de ventaja sobre Ari-Ustero), las **palas de los que siguen** y callouts de premios
+  y de guía de formas. Fuentes: StudyPadel (resultados y orden de juego), padelbackglass (cuadro
+  R32 + mayor sorpresa), Padel Magazine ES (crónica del miércoles), sport.es (batacazo y baja de
+  Tapia), diariodenavarra (retirada de Chamero, 6-3 5-1 en 55 min), Mundo Deportivo 9-nov (2.780
+  puntos y primer match ball del femenino). Build OK + check:translations OK; /es y /en a 200 con
+  H1 propio, 7 H2 de contenido y 12 enlaces a producto por locale (0 fugas de `ProductRef`).
+  Screenshot `docs/screenshots/2026-11-12-dubai-p1-paquito-di-nenno.png` (1280×6613, 37.873
+  colores únicos — verificado por DOM/píxeles, sin visión).
 
 
 ### 🎨 Visual (mejoras visuales)
