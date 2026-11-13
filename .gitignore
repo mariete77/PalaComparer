@@ -7,3 +7,6 @@ out/
 next-env.d.ts
 
 __pycache__/
+
+# Ficheros sueltos descargados por crons (no forman parte del sitio)
+/phantom-*.png
