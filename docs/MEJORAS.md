@@ -52,6 +52,25 @@
 
 ### 📰 Actualidad (contenido original y actual)
 
+Hechos verificados a 2026-11-13 (para la noche del 13→14): **Dubai P1, cuartos jugados el
+viernes 13** (primera jornada en Red Bull TV; el día arranca a las 09:00 ES / 12:00 Dubái).
+Los cuartos, según el orden publicado (hora española, hora local −3): Pista 1 ~14:00
+**Momo-Campagnolo vs Abbate-Dal Bianco**; central ~17:30 **Arce-Tello vs Lebrón-Augsburger (2)**;
+central no antes de 19:00 **Libaak-Alfonso vs Bautista-Bergamini**; central ~20:30
+**Stupaczuk-Sanz (3) vs De Pascual-Garrido**. Mujeres: **Triay-Brea (1) vs Jensen-Icardo**,
+**Ari-Ustero (3) vs Velasco-Eugenio**, **Josemaría-Bea (2) vs Guinart-Ale Alonso** y
+**Fernández-Calvo (4) vs Rufo-Iglesias**. **NO usar fantasypadeltour como fuente de horarios
+absolutos** (los da ya convertidos a hora española en la ficha de partido, pero son estimaciones).
+Pieza natural próxima noche (14→15): **semifinales del sábado 14** con los resultados de los
+cuartos, el cuadro que queda y quién se juega el nº 1 femenino; verificar marcadores en
+studypadel.com/tournaments/2026/dubai-p1-2026 y premierpadel.com. Datos ya confirmados y
+reutilizables: **479.068 € y 1.000 puntos** al campeón (26.000 €/jugador masc, 17.000 € fem);
+es el **último P1 de la temporada** (después, Mexico Major 23-29 nov y Finals de Barcelona 10-13
+dic); **Triay-Brea +2.780** sobre Ari-Ustero en la Race; **Bordeaux P2: Icardo-Jensen ganaron la
+final a Triay-Brea 3-6 6-1 6-1** tras eliminar a Josemaría-Bea en semifinales (6-4 6-3). En
+tenis, **ATP Finals Turín 15-22 nov** (arranca el domingo): pieza posible para el fin de semana,
+verificar sorteo y horarios en atptour.com antes de escribir.
+
 Hechos verificados a 2026-11-12 (para la noche del 12→13): **Dubai P1 EN MARCHA (8-15 nov,
 Hamdan Sports Complex)**. Publicada la pieza de los octavos (ver item marcado). **Miércoles 11
 (dieciseisavos masc + octavos fem)**: batacazo — **Aragón Herrera/Roglán Pons** (previa, nº 93 y
@@ -1554,6 +1573,24 @@ Galán causó baja por lesión el 30-oct y entró Javi Leal. Hoy jornada 2: Espa
   H1 propio, 7 H2 de contenido y 12 enlaces a producto por locale (0 fugas de `ProductRef`).
   Screenshot `docs/screenshots/2026-11-12-dubai-p1-paquito-di-nenno.png` (1280×6613, 37.873
   colores únicos — verificado por DOM/píxeles, sin visión).
+
+- [x] **Actualidad Dubai P1 — cuartos: el torneo sin dueño (2026-11-13)**: artículo ES+EN
+  `dubai-p1-2026-cuartos-sin-dueno` (kind novedad, 5 min, 12 relatedProducts).
+  Ángulo propio: **solo una de las ocho parejas masculinas que quedan ha ganado un torneo de
+  Premier Padel en 2026** (Lebrón-Augsburger, Bruselas P2: 2-6 6-3 6-3 a Coello-Tapia en abril).
+  Incluye los **ocho resultados de octavos con marcadores** (De Pascual-Garrido 7-6 3-6 7-6 a
+  Yanguas-Coki, 2h34; Bautista-Bergamini 1-6 7-5 6-3 a Leal-Guerrero, 1h35; Libaak-Alfonso
+  6-2 6-3; Stupa-Sanz 6-3 6-4 a Sanyo-Maxi sin ceder sets; Momo-Campagnolo 6-3 6-3; Arce-Tello
+  3-6 6-3 6-2 a Edu Alonso-Goñi; Abbate-Dal Bianco 7-6 6-3 a Aragón-Roglán; Lebrón-Augsburger a
+  Víctor Ruiz-Facundo López), los **cuatro cuartos masculinos uno a uno con horarios ES** y los
+  cuatro femeninos, la **racha de Icardo-Jensen** (campeonas en Burdeos ganando la final a
+  Triay-Brea 3-6 6-1 6-1 tras eliminar a Josemaría-Bea) y callout de horarios/Red Bull TV.
+  Build OK + tsc limpio + check:translations OK (155 productos); /es y /en prerenderizados a
+  200 con 6 H2 y sin fugas de `ProductRef`/`Callout`. Sin screenshot: es contenido, no cambio
+  visual. Fuentes: studypadel.com (cuadro y resultados), fantasypadeltour.com (marcadores
+  punto a punto de octavos y orden de cuartos), elneverazo (Red Bull TV desde cuartos), Red
+  Bull (final de Bruselas y FIP Gold de Stupa-Sanz en Belgrado), estudio del Bordeaux P2 en
+  StudyPadel (final femenina).
 
 
 ### 🎨 Visual (mejoras visuales)

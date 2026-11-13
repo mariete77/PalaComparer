@@ -120,6 +120,7 @@ import { metadata as galanChingalan2027 } from "@/content/noticias/galan-chingal
 import { metadata as dubaiP1Duenos } from "@/content/noticias/dubai-p1-2026-duenos-del-torneo.mdx";
 import { metadata as dubaiP1TapiaBaja } from "@/content/noticias/dubai-p1-2026-tapia-coello-baja-cuadro-abierto.mdx";
 import { metadata as dubaiP1Octavos } from "@/content/noticias/dubai-p1-2026-paquito-di-nenno-fuera-octavos.mdx";
+import { metadata as dubaiP1Cuartos } from "@/content/noticias/dubai-p1-2026-cuartos-sin-dueno.mdx";
 
 /**
  * Traducciones EN de los metadatos de cada artículo. Las ES vienen del propio
@@ -649,6 +650,13 @@ const EN_META: Record<string, { title: string; excerpt: string; tags: string[] }
       "Agustín Tapia is injured and Coello-Tapia have withdrawn from the Dubai P1 before playing a match, a day after Galán and Chingotto also pulled out. The last P1 of the season (€479,068, 1,000 points) is guaranteed a brand-new champion: Lebrón-Augsburger and Stupaczuk-Sanz take over the bill. Draw, Tuesday's results, Wednesday's order of play and the rackets of the new favourites.",
     tags: ["Premier Padel", "Dubai P1", "Tapia", "Coello", "Lebrón", "Stupaczuk", "Di Nenno", "Libaak"],
   },
+  "dubai-p1-2026-cuartos-sin-dueno": {
+    title:
+      "Dubai P1: quarter-finals with no clear owner and only one pair who know how to win in 2026",
+    excerpt:
+      "The round of 16 took out Yanguas-Nieto and Leal-Guerrero. On Friday, from 09:00 Spanish time and for the first time on Red Bull TV, the quarter-finals of the last P1 of the year take place: of the eight pairs left, only Lebrón and Augsburger have won a Premier Padel event this season. Draw, schedule and rackets.",
+    tags: ["Premier Padel", "Dubai P1", "Quarter-finals", "Lebrón", "Augsburger", "Stupaczuk", "Libaak", "Tello", "Triay", "Brea", "Icardo", "Ari Sánchez"],
+  },
   "dubai-p1-2026-paquito-di-nenno-fuera-octavos": {
     title:
       "Dubai P1 2026: Paquito and Di Nenno fall after a 6-0 first set and the draw loses two of its top four seeds",
@@ -769,6 +777,7 @@ export const ARTICLES: Article[] = [
   localize({ slug: "dubai-p1-2026-duenos-del-torneo", ...dubaiP1Duenos }),
   localize({ slug: "dubai-p1-2026-tapia-coello-baja-cuadro-abierto", ...dubaiP1TapiaBaja }),
   localize({ slug: "dubai-p1-2026-paquito-di-nenno-fuera-octavos", ...dubaiP1Octavos }),
+  localize({ slug: "dubai-p1-2026-cuartos-sin-dueno", ...dubaiP1Cuartos }),
 ].sort((a, b) => b.date.localeCompare(a.date));
 
 export function getArticle(slug: string): Article | undefined {
