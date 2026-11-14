@@ -52,6 +52,21 @@
 
 ### 📰 Actualidad (contenido original y actual)
 
+Hechos verificados a 2026-11-14 (para la noche del 14→15): **Dubai P1, semifinales este
+sábado 14 y finales el domingo 15**. Cuadro que queda — masculino: **Libaak-Alfonso vs
+De Pascual-Garrido** y **Lebrón-Augsburger (2) vs Abbate-Dal Bianco** (pareja de la previa,
+nº 47 y 81 del mundo, verdugos de Momo-Campagnolo 7-6 3-6 6-2); femenino:
+**Fernández-Calvo vs Icardo-Jensen** y **Josemaría-Bea vs Ari-Ustero**. Las nº 1
+**Triay-Brea cayeron en cuartos con Icardo-Jensen (6-3 3-6 6-1)** y el nº 1 del año vuelve a
+estar en juego (llegaban con +2.780 sobre Ari-Ustero). La crónica de semifinales (y la
+previa de la final del domingo, con las palas de los cuatro finalistas) es la pieza natural
+de la noche del 14→15: verificar marcadores en studypadel.com y premierpadel.com antes de
+escribir. Después del P1, el calendario queda: **Mexico Major 23-29 nov** y **Finals de
+Barcelona 10-13 dic**. En tenis, **ATP Finals Turín 15-22 nov** arranca el domingo 15: pieza
+posible para el fin de semana, con sorteo ya publicado (campo: Zverev, Alcaraz, Shelton,
+Medvedev, Cobolli, Fils, Tiafoe, Jódar; Sinner baja por lesión) — verificar cuadro y horarios
+en atptour.com.
+
 Hechos verificados a 2026-11-13 (para la noche del 13→14): **Dubai P1, cuartos jugados el
 viernes 13** (primera jornada en Red Bull TV; el día arranca a las 09:00 ES / 12:00 Dubái).
 Los cuartos, según el orden publicado (hora española, hora local −3): Pista 1 ~14:00
@@ -1591,6 +1606,30 @@ Galán causó baja por lesión el 30-oct y entró Javi Leal. Hoy jornada 2: Espa
   punto a punto de octavos y orden de cuartos), elneverazo (Red Bull TV desde cuartos), Red
   Bull (final de Bruselas y FIP Gold de Stupa-Sanz en Belgrado), estudio del Bordeaux P2 en
   StudyPadel (final femenina).
+
+- [x] **Actualidad Dubai P1 — semifinales: una pareja de la previa y el nº1 en el aire
+  (2026-11-14)**: artículo ES+EN `dubai-p1-2026-semifinales-previa-y-numero-uno`
+  (kind novedad, 5 min, 8 relatedProducts). Ángulo propio: **tres de las cuatro parejas
+  masculinas que juegan hoy las semifinales están fuera del top-8** y una de ellas,
+  **Abbate-Dal Bianco (47 y 81 del mundo), salió de la fase previa**; en el femenino,
+  **Triay-Brea caen en cuartos por primera vez esta temporada** y reabren la carrera por el
+  nº1. Incluye los **ocho resultados de cuartos con marcadores** (Abbate-Dal Bianco 7-6 3-6
+  6-2 a Momo-Campagnolo; Lebrón-Augsburger 6-3 3-6 6-2 a Tello-Arce; De Pascual-Garrido 6-1
+  7-5 a Stupaczuk-Sanz; Libaak-Alfonso 4-6 6-3 7-6 a Bautista-Bergamini; Icardo-Jensen 6-3
+  3-6 6-1 a Triay-Brea; Fernández-Calvo 7-6(2) 6-4 a Rufo-Iglesias; Josemaría-Bea 6-3 6-1 a
+  Guinart-Ale Alonso; Ari-Ustero 6-2 6-3 a Velasco-Eugenio), los **cuatro cruces de
+  semifinales**, el contexto del nº1 (Triay-Brea llegaban con +2.780 puntos y la primera
+  bola de partido matemática) y el dato de Fernández-Calvo (**nueve torneos juntas, nueve
+  semifinales**). Sección de material reducida a los **8 semifinalistas con ficha en el
+  catálogo** (Lebrón, Augsburger, Libaak, Garrido, Icardo, Bea, Fernández, Ari Sánchez) y
+  mención explícita de los 8 que aún no la tienen.
+  Verificación: build OK, check:translations OK (156 productos), /es y /en a 200 con 7 H2,
+  8 fotos de palas reales en el grid, sin `ProductRef`/`Callout` en crudo, sin overflow
+  horizontal, artículo primero en `/es/noticias` y en el sitemap. Screenshot:
+  `docs/screenshots/2026-11-14-dubai-p1-semifinales.png`. Fuentes: studypadel.com (cuadro y
+  marcadores), Mundo Deportivo y Marca (crónicas de cuartos, contexto del nº1 y del A1 de
+  Dal Bianco), Diario de Navarra (9 torneos/9 semifinales de Calvo-Fernández).
+
 
 
 ### 🎨 Visual (mejoras visuales)

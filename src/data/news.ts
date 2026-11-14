@@ -121,6 +121,7 @@ import { metadata as dubaiP1Duenos } from "@/content/noticias/dubai-p1-2026-duen
 import { metadata as dubaiP1TapiaBaja } from "@/content/noticias/dubai-p1-2026-tapia-coello-baja-cuadro-abierto.mdx";
 import { metadata as dubaiP1Octavos } from "@/content/noticias/dubai-p1-2026-paquito-di-nenno-fuera-octavos.mdx";
 import { metadata as dubaiP1Cuartos } from "@/content/noticias/dubai-p1-2026-cuartos-sin-dueno.mdx";
+import { metadata as dubaiP1Semis } from "@/content/noticias/dubai-p1-2026-semifinales-previa-y-numero-uno.mdx";
 
 /**
  * Traducciones EN de los metadatos de cada artículo. Las ES vienen del propio
@@ -657,6 +658,13 @@ const EN_META: Record<string, { title: string; excerpt: string; tags: string[] }
       "The round of 16 took out Yanguas-Nieto and Leal-Guerrero. On Friday, from 09:00 Spanish time and for the first time on Red Bull TV, the quarter-finals of the last P1 of the year take place: of the eight pairs left, only Lebrón and Augsburger have won a Premier Padel event this season. Draw, schedule and rackets.",
     tags: ["Premier Padel", "Dubai P1", "Quarter-finals", "Lebrón", "Augsburger", "Stupaczuk", "Libaak", "Tello", "Triay", "Brea", "Icardo", "Ari Sánchez"],
   },
+  "dubai-p1-2026-semifinales-previa-y-numero-uno": {
+    title:
+      "Dubai P1: a qualifying pair reach the semi-finals and Triay-Brea leave the No. 1 race open",
+    excerpt:
+      "Abbate and Dal Bianco (world No. 47 and 81, out of qualifying) knock out Momo and Campagnolo and will face Lebrón-Augsburger; De Pascual-Garrido upset Stupaczuk-Sanz. In the women's draw, Icardo and Jensen take out the world No. 1s and the race for the top spot is wide open again. Results, semi-final draw and the rackets of the eight survivors.",
+    tags: ["Premier Padel", "Dubai P1", "Semi-finals", "Abbate", "Dal Bianco", "Lebrón", "Augsburger", "Libaak", "Icardo", "Jensen", "Triay", "Brea"],
+  },
   "dubai-p1-2026-paquito-di-nenno-fuera-octavos": {
     title:
       "Dubai P1 2026: Paquito and Di Nenno fall after a 6-0 first set and the draw loses two of its top four seeds",
@@ -778,6 +786,7 @@ export const ARTICLES: Article[] = [
   localize({ slug: "dubai-p1-2026-tapia-coello-baja-cuadro-abierto", ...dubaiP1TapiaBaja }),
   localize({ slug: "dubai-p1-2026-paquito-di-nenno-fuera-octavos", ...dubaiP1Octavos }),
   localize({ slug: "dubai-p1-2026-cuartos-sin-dueno", ...dubaiP1Cuartos }),
+  localize({ slug: "dubai-p1-2026-semifinales-previa-y-numero-uno", ...dubaiP1Semis }),
 ].sort((a, b) => b.date.localeCompare(a.date));
 
 export function getArticle(slug: string): Article | undefined {
