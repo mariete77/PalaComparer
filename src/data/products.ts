@@ -3577,6 +3577,30 @@ export const PRODUCTS: Product[] = [
       "Siux's new control benchmark: the Obsidian Pro Black 2027 debuts a fresh tear-drop mould sitting between the Trilogy and the Diablo, with a low balance and the biggest sweet spot of the entire 2027 collection (92 cm²) for a 5/10 feel. 16K carbon faces over an EVA Soft core and a satin finish with 3D texture that grips the ball for spin and precise placement. More leverage than a round shape when it's time to finish the point, with the handling of a pure control racket — it takes over from the Trilogy as the brand's control reference.",
   },
   {
+    id: "starvie-triton-balance-2027",
+    sport: "padel",
+    brand: "StarVie",
+    model: "Triton Balance +",
+    year: 2027,
+    price: 265.5,
+    image: "/images/rackets/starvie-triton-balance-2027.svg",
+    level: ["avanzado", "profesional"],
+    style: ["polivalente"],
+    padel: {
+      shape: "diamante",
+      weight: "350-366 g",
+      balance: "medio",
+      core: "M-Eva Balance",
+      faces: "18K Carbon Hybrid",
+      surface: "rugosa",
+      hardness: "media",
+    },
+    description:
+      "El mismo molde diamante de la Triton Power + 2027, pero con goma M-Eva Balance de densidad media: rebaja el balance hasta la zona media y cambia el perfil de ataque puro por uno versátil, con pegada cuando se acelera y control cuando toca defender. Plano 18K Carbon Hybrid sobre perfil de 38 mm y 358 g (±8) de peso declarado, con TriTech Core repartiendo el peso en el corazón, Five Sides Tech y Anatomic Bridge Design en la estructura, Spin Boost Tech rugoso para rascar efectos y Z-Shock en el puño para filtrar vibraciones, más Longer Handgrip para el revés a dos manos. Fabricada en España para jugadores de nivel alto que no quieren elegir entre pegar y colocar.",
+    descriptionEn:
+      "The same diamond mould as the 2027 Triton Power +, but with medium-density M-Eva Balance rubber: it drops the balance to the mid zone and swaps the pure-attack profile for a versatile one — punch when you accelerate, control when you have to defend. 18K Carbon Hybrid face on a 38 mm profile and a stated 358 g (±8) weight, with TriTech Core spreading weight through the heart, Five Sides Tech and Anatomic Bridge Design in the structure, a rough Spin Boost Tech face for grabbing spin and Z-Shock in the grip to filter vibrations, plus a Longer Handgrip for two-handed backhands. Made in Spain for high-level players who refuse to choose between hitting hard and placing the ball.",
+  },
+  {
     id: "starvie-triton-t-one-2027",
     sport: "padel",
     brand: "StarVie",
