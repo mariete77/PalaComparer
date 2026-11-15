@@ -52,6 +52,31 @@
 
 ### 📰 Actualidad (contenido original y actual)
 
+Hechos verificados a 2026-11-15 (para la noche del 15→16): **Dubai P1, FINALES este domingo
+15** — 15:00 ES femenina **Calvo-Fernández (4) vs Josemaría-Bea (2)** y no antes de 17:00 ES
+masculina **Libaak-Alfonso (10) vs Lebrón-Augsburger (2)** (18:00 y 20:00 locales Dubái,
+UTC+4). Semifinales del sábado 14 (widget oficial FIP/matchscorerlive FIP-2026-4501, día 7):
+**Lebrón-Augsburger 6-4 6-2 Abbate-Dal Bianco (1h04)**; **Libaak-Alfonso 6-1 6-4
+De Pascual-Garrido (1h02)**; **Josemaría-Bea 6-4 7-5 Ari Sánchez-Ustero (1h38)**;
+**Fernández-Calvo 6-3 6-1 Icardo-Jensen (1h16)**. **Ninguna de las dos finales se ha jugado
+nunca** (Premier Padel). **Lebrón: 71ª final, supera a Juani Mieres y es 9º histórico;
+Augsburger: 9ª final, 2ª de la temporada en Premier; quinta final del año para la pareja
+(Cancún, Bruselas, Málaga, Milán, Dubái) con un solo título (Bruselas)**. **Libaak (21) juega
+su primera final en el circuito; Alfonso la tercera** (Gijón y Cancún 2025 con Tolito
+Aguirre, perdió las dos). **H2H 2-0 para Libaak-Alfonso en 2026, ambos en octavos: Madrid P1
+7-6 7-5 y Kuwait Major 4-6 7-5 6-1**. **Race Barcelona: Alfonso entra en el top-16; Libaak a
+70 puntos** (premierpadel.com). **Triay-Brea certifican el nº1 mundial si alcanzan los cuartos
+del Mexico Major (23-29 nov)**. **Abbate es el primer italiano en unas semifinales de P1**; la
+pareja era la 30 y llevaba dos torneos juntos. Datos del catálogo para reutilizar: la final
+femenina es **Bullpadel contra Bullpadel** (`bullpadel-pearl-2027` de Bea, 294,90 €, diamante
+535 cm²; `bullpadel-wonder-2027` de Claudia, 284,99 €, híbrida 517 cm²), y en la masculina
+**Libaak es el único de los tres finalistas con ficha que NO juega un diamante**
+(`siux-diablo-pro-2026`, híbrida, 350 €) — juega en la derecha. **Gonzalo Alfonso y Martina
+Calvo no tienen ficha**. Calendario después: **Mexico Major 23-29 nov**, **Finals Barcelona
+9-12 dic según premierpadel.com (10-13 dic según otras fuentes: verificar)**. En tenis, **ATP
+Finals Turín arranca el domingo 15 nov**: pieza natural de la próxima noche (verificar cuadro
+y horarios en atptour.com; Sinner baja por lesión).
+
 Hechos verificados a 2026-11-14 (para la noche del 14→15): **Dubai P1, semifinales este
 sábado 14 y finales el domingo 15**. Cuadro que queda — masculino: **Libaak-Alfonso vs
 De Pascual-Garrido** y **Lebrón-Augsburger (2) vs Abbate-Dal Bianco** (pareja de la previa,
@@ -1631,6 +1656,27 @@ Galán causó baja por lesión el 30-oct y entró Javi Leal. Hoy jornada 2: Espa
   Dal Bianco), Diario de Navarra (9 torneos/9 semifinales de Calvo-Fernández).
 
 
+
+- [x] **Actualidad Dubai P1 — finales inéditas: Libaak-Alfonso y las dos Bullpadel
+  (2026-11-15)**: artículo ES+EN `dubai-p1-2026-finales-ineditas-libaak-lebron` (kind
+  novedad, 5 min, 5 relatedProducts). Ángulo propio: **las cuatro semifinales se resolvieron
+  en poco más de una hora y ninguna de las dos finales se ha jugado nunca**; el duelo
+  **Libaak-Alfonso vs Lebrón-Augsburger** con el **H2H 2-0 argentino en 2026 (ambos en
+  octavos)** y la **primera final sin Coello-Tapia para los nº2**; y el detalle de catálogo:
+  **la final femenina es Bullpadel contra Bullpadel** (Pearl 2027 de Bea González vs Wonder
+  2027 de Claudia Fernández), con **Libaak como único finalista con ficha que no juega un
+  diamante** (`siux-diablo-pro-2026`, híbrida, porque juega en la derecha). Incluye los cuatro
+  marcadores de semifinales, la 71ª final de Lebrón (9º histórico, supera a Mieres), la
+  primera final de Libaak a los 21 y la tercera de Alfonso, la Race a Barcelona (Alfonso
+  top-16, Libaak a 70 puntos), el nº1 de Triay-Brea que se certifica si llegan a cuartos en
+  México, y callout con horarios (15:00 y no antes de 17:00 ES) y dónde verlo.
+  Verificación: build OK, check:translations OK (156 productos), /es y /en a 200 con 6 H2,
+  los 5 `ProductRef`/grid resuelven a `/es/producto/...`, sin componentes en crudo, artículo
+  primero en `/es/noticias`. Screenshot: `docs/screenshots/2026-11-15-dubai-p1-finales.png`
+  (1440x1100, recortado a 1080 px). Fuentes: widget oficial FIP (matchscorerlive,
+  FIP-2026-4501 días 6 y 7) para los marcadores, premierpadel.com (nota de semifinales: nº2
+  de Josemaría-Bea, top-16 de Alfonso y nº1 de Triay-Brea en México), Bola Pádel y Marca
+  (finales de Lebrón-Augsburger, H2H, edades y contexto de Abbate).
 
 ### 🎨 Visual (mejoras visuales)
 
