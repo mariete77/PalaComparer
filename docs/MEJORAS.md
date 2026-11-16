@@ -52,6 +52,43 @@
 
 ### 📰 Actualidad (contenido original y actual)
 
+Hechos verificados a 2026-11-16 (para la noche del 16→17): **Dubai P1, FINALES del domingo 15
+ya jugadas** (premierpadel.com, crónica del 15-nov) — **femenina: Calvo-Fernández (4) 7-5 6-1
+Josemaría-Bea (2) en 1h57**; las *Niñas Prodigio* suman su **tercer título en nueve torneos**,
+una semana después de ganar el Mundial con España en Qatar; **Claudia Fernández defendió el
+título que ganó en 2026 junto a Bea González**, su rival de esta final; Josemaría-Bea quedan
+**fuera de forma matemática del nº1** y sin su séptimo título del año, pero mantienen el nº2 del
+ranking FIP y en el Mexico Major. **Masculina: Lebrón-Augsburger (2) 7-6 5-7 6-3
+Libaak-Alfonso (10) en 2h22** (el 1er set cayó en tie-break y el 3º con un break temprano):
+**segundo título como pareja** tras el P2 de Bruselas y **tercera vez que se enfrentaban este
+año** (Libaak-Alfonso habían ganado Madrid P1 y Kuwait Major). Frases verificadas: Lebrón «en el
+segundo set nos despistamos… yo tuve una desconexión»; Augsburger «me criticaron mucho tras la
+derrota en la final de la FIP World Cup». Después: **Mexico Major en Acapulco 23-29 nov** —
+**Triay-Brea certifican el nº1 si alcanzan las SEMIFINALES** (ojo: la nota del 15-nov decía
+cuartos)— y **Finals 10-13 dic en el Palau Sant Jordi** con los 16 mejores. **Alfonso entra en
+el top-16 de la Race; Libaak se queda a 70 puntos**.
+[x] 2026-11-16 — Publicada la crónica de las finales del Dubai P1 con las palas de los
+campeones (`dubai-p1-2026-campeones-calvo-fernandez-lebron-augsburger`, ES+EN).
+**Pendiente/incompleto:** Gonzalo **Alfonso no tiene ficha** en el catálogo y **Martina Calvo
+tampoco**; la crónica cierra la serie del P1.
+
+Hechos verificados a 2026-11-16 para la pieza de **ATP Finals Turín** (atptour.com + tennisnerd
+gear preview 12-nov + iq.tennis): **en marcha del 15 al 22-nov (Inalpi Arena)**. **Día 1,
+domingo 15**: **Zverev (1) 6-4 6-4 Jódar (8)** (1h27) y **Shelton (3) 6-2 3-6 6-3 Fils (6)**
+(1h58). **Día 2, lunes 16**: **Alcaraz (2) vs Tiafoe (7)** no antes de **14:00 CET** (H2H 2-1
+Alcaraz: US Open 2022 semis y Wimbledon 2024 3ª ronda en cinco sets, Tiafoe ganó Barcelona 2021;
+Alcaraz llega con **9 victorias seguidas indoor**, títulos en Viena y París, finalista en 2025 y
+4ª participación con 7-5) y **Cobolli vs Medvedev** no antes de **20:30 CET** (Grupo Ivan Lendl;
+Medvedev campeón en 2020). **Tiafoe debuta en las Finals** a los 28. **Raquetas (tennisnerd,
+12-nov)**: HEAD 3 (Zverev **Gravity Tour 100 molde pro stock** —la de tienda es la Gravity Tour
+98—, Cobolli **Radical Pro**, Jódar **Speed MP pro stock**), Babolat 2 (Alcaraz y Fils **Pure
+Aero 98**, 16x20), Yonex 2 (Shelton **EZONE 98**, Tiafoe **Percept 97**), Tecnifibre 1
+(Medvedev **T-Fight 305S**); **ningún Wilson en el cuadro individual**. Cuerdas verificadas:
+Alcaraz RPM Team 1.30 25/23 kg, Fils RPM Blast 24/22, Medvedev Razor Soft 1.25 a 21, Tiafoe
+PolyTour Pro 1.20 a 19 (el más flojo), Jódar Lynx Tour 1.30 a 23, Cobolli Firestorm a 25.
+**Hueco de catálogo: la Radical Pro 2025 de Cobolli no está** (tenemos Radical MP Auxetic 2023,
+otro modelo) — no dar de alta sin foto real verificada.
+
 Hechos verificados a 2026-11-15 (para la noche del 15→16): **Dubai P1, FINALES este domingo
 15** — 15:00 ES femenina **Calvo-Fernández (4) vs Josemaría-Bea (2)** y no antes de 17:00 ES
 masculina **Libaak-Alfonso (10) vs Lebrón-Augsburger (2)** (18:00 y 20:00 locales Dubái,

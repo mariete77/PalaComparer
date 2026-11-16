@@ -123,6 +123,7 @@ import { metadata as dubaiP1Octavos } from "@/content/noticias/dubai-p1-2026-paq
 import { metadata as dubaiP1Cuartos } from "@/content/noticias/dubai-p1-2026-cuartos-sin-dueno.mdx";
 import { metadata as dubaiP1Semis } from "@/content/noticias/dubai-p1-2026-semifinales-previa-y-numero-uno.mdx";
 import { metadata as dubaiP1Finales } from "@/content/noticias/dubai-p1-2026-finales-ineditas-libaak-lebron.mdx";
+import { metadata as dubaiP1Campeones } from "@/content/noticias/dubai-p1-2026-campeones-calvo-fernandez-lebron-augsburger.mdx";
 
 /**
  * Traducciones EN de los metadatos de cada artículo. Las ES vienen del propio
@@ -673,6 +674,13 @@ const EN_META: Record<string, { title: string; excerpt: string; tags: string[] }
       "All four semi-finals were done in barely an hour and the last P1 of the year will crown new champions in both draws. Libaak, 21, plays his first final on the tour; across the net, the pair who have already beaten Lebrón-Augsburger twice this season. In the women's draw, Josemaría-Bea defend the No. 2 spot against Calvo-Fernández. Results, schedule and the four finalists' rackets.",
     tags: ["Premier Padel", "Dubai P1", "Final", "Libaak", "Alfonso", "Lebrón", "Augsburger", "Josemaría", "Bea González", "Calvo", "Claudia Fernández"],
   },
+  "dubai-p1-2026-campeones-calvo-fernandez-lebron-augsburger": {
+    title:
+      "Dubai P1: Calvo-Fernández and Lebrón-Augsburger crown the tournament of surprises and close the P1 year",
+    excerpt:
+      "The Niñas Prodigio won their third title in nine events (7-5, 6-1 over Josemaría-Bea) and Lebrón-Augsburger finally beat Libaak-Alfonso (7-6, 5-7, 6-3) in the last P1 of 2026. The race for No. 1, the calendar left, and the champions' rackets.",
+    tags: ["Premier Padel", "Dubai P1", "Calvo", "Claudia Fernández", "Lebrón", "Augsburger", "Libaak", "Bea González", "Josemaría"],
+  },
   "dubai-p1-2026-paquito-di-nenno-fuera-octavos": {
     title:
       "Dubai P1 2026: Paquito and Di Nenno fall after a 6-0 first set and the draw loses two of its top four seeds",
@@ -796,6 +804,7 @@ export const ARTICLES: Article[] = [
   localize({ slug: "dubai-p1-2026-cuartos-sin-dueno", ...dubaiP1Cuartos }),
   localize({ slug: "dubai-p1-2026-semifinales-previa-y-numero-uno", ...dubaiP1Semis }),
   localize({ slug: "dubai-p1-2026-finales-ineditas-libaak-lebron", ...dubaiP1Finales }),
+  localize({ slug: "dubai-p1-2026-campeones-calvo-fernandez-lebron-augsburger", ...dubaiP1Campeones }),
 ].sort((a, b) => b.date.localeCompare(a.date));
 
 export function getArticle(slug: string): Article | undefined {
