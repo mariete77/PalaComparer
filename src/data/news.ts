@@ -124,6 +124,7 @@ import { metadata as dubaiP1Cuartos } from "@/content/noticias/dubai-p1-2026-cua
 import { metadata as dubaiP1Semis } from "@/content/noticias/dubai-p1-2026-semifinales-previa-y-numero-uno.mdx";
 import { metadata as dubaiP1Finales } from "@/content/noticias/dubai-p1-2026-finales-ineditas-libaak-lebron.mdx";
 import { metadata as dubaiP1Campeones } from "@/content/noticias/dubai-p1-2026-campeones-calvo-fernandez-lebron-augsburger.mdx";
+import { metadata as mexicoMajorPrevia } from "@/content/noticias/mexico-major-2026-acapulco-previa.mdx";
 
 /**
  * Traducciones EN de los metadatos de cada artículo. Las ES vienen del propio
@@ -681,6 +682,13 @@ const EN_META: Record<string, { title: string; excerpt: string; tags: string[] }
       "The Niñas Prodigio won their third title in nine events (7-5, 6-1 over Josemaría-Bea) and Lebrón-Augsburger finally beat Libaak-Alfonso (7-6, 5-7, 6-3) in the last P1 of 2026. The race for No. 1, the calendar left, and the champions' rackets.",
     tags: ["Premier Padel", "Dubai P1", "Calvo", "Claudia Fernández", "Lebrón", "Augsburger", "Libaak", "Bea González", "Josemaría"],
   },
+  "mexico-major-2026-acapulco-previa": {
+    title:
+      "Mexico Major 2026 in Acapulco: the year's last Major decides No. 1 and the Barcelona places",
+    excerpt:
+      "From 23 to 29 November, the Arena GNP Seguros hosts the third GNP Mexico Major with the world's top 100 players. Tapia and Coello are back, Galán's return is uncertain, and Triay-Brea need a semi-final to seal No. 1.",
+    tags: ["Premier Padel", "Mexico Major", "Acapulco", "Tapia", "Coello", "Galán", "Triay", "Delfi Brea", "Premier Padel Finals"],
+  },
   "dubai-p1-2026-paquito-di-nenno-fuera-octavos": {
     title:
       "Dubai P1 2026: Paquito and Di Nenno fall after a 6-0 first set and the draw loses two of its top four seeds",
@@ -805,6 +813,7 @@ export const ARTICLES: Article[] = [
   localize({ slug: "dubai-p1-2026-semifinales-previa-y-numero-uno", ...dubaiP1Semis }),
   localize({ slug: "dubai-p1-2026-finales-ineditas-libaak-lebron", ...dubaiP1Finales }),
   localize({ slug: "dubai-p1-2026-campeones-calvo-fernandez-lebron-augsburger", ...dubaiP1Campeones }),
+  localize({ slug: "mexico-major-2026-acapulco-previa", ...mexicoMajorPrevia }),
 ].sort((a, b) => b.date.localeCompare(a.date));
 
 export function getArticle(slug: string): Article | undefined {
