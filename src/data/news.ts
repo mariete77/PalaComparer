@@ -125,6 +125,7 @@ import { metadata as dubaiP1Semis } from "@/content/noticias/dubai-p1-2026-semif
 import { metadata as dubaiP1Finales } from "@/content/noticias/dubai-p1-2026-finales-ineditas-libaak-lebron.mdx";
 import { metadata as dubaiP1Campeones } from "@/content/noticias/dubai-p1-2026-campeones-calvo-fernandez-lebron-augsburger.mdx";
 import { metadata as mexicoMajorPrevia } from "@/content/noticias/mexico-major-2026-acapulco-previa.mdx";
+import { metadata as atpFinalsDia3 } from "@/content/noticias/atp-finals-2026-turin-zverev-shelton-raquetas.mdx";
 
 /**
  * Traducciones EN de los metadatos de cada artículo. Las ES vienen del propio
@@ -682,6 +683,13 @@ const EN_META: Record<string, { title: string; excerpt: string; tags: string[] }
       "The Niñas Prodigio won their third title in nine events (7-5, 6-1 over Josemaría-Bea) and Lebrón-Augsburger finally beat Libaak-Alfonso (7-6, 5-7, 6-3) in the last P1 of 2026. The race for No. 1, the calendar left, and the champions' rackets.",
     tags: ["Premier Padel", "Dubai P1", "Calvo", "Claudia Fernández", "Lebrón", "Augsburger", "Libaak", "Bea González", "Josemaría"],
   },
+  "atp-finals-2026-turin-zverev-shelton-raquetas": {
+    title:
+      "ATP Finals 2026: Zverev is Year-End No. 1 and today he meets the one man he has never lost to",
+    excerpt:
+      "The German collected his Year-End No. 1 trophy on Monday after winning Roland Garros and the US Open, while Alcaraz and Medvedev opened with straight-set wins. Day 3 in Turin: Zverev-Shelton (6-0 in their head-to-head) and Fils-Jodar \u2014 plus the rackets of all eight players, brand by brand and tension by tension.",
+    tags: ["ATP Finals", "Turin", "Zverev", "Shelton", "Alcaraz", "Medvedev", "Jodar", "Fils", "Racquets"],
+  },
   "mexico-major-2026-acapulco-previa": {
     title:
       "Mexico Major 2026 in Acapulco: the year's last Major decides No. 1 and the Barcelona places",
@@ -814,6 +822,7 @@ export const ARTICLES: Article[] = [
   localize({ slug: "dubai-p1-2026-finales-ineditas-libaak-lebron", ...dubaiP1Finales }),
   localize({ slug: "dubai-p1-2026-campeones-calvo-fernandez-lebron-augsburger", ...dubaiP1Campeones }),
   localize({ slug: "mexico-major-2026-acapulco-previa", ...mexicoMajorPrevia }),
+  localize({ slug: "atp-finals-2026-turin-zverev-shelton-raquetas", ...atpFinalsDia3 }),
 ].sort((a, b) => b.date.localeCompare(a.date));
 
 export function getArticle(slug: string): Article | undefined {

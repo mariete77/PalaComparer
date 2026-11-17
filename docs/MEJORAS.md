@@ -52,6 +52,39 @@
 
 ### 📰 Actualidad (contenido original y actual)
 
+Hechos verificados a 2026-11-17 (para la noche del 17→18): **ATP Finals Turín, EN MARCHA (15-22
+nov, Inalpi Arena)**. *Día 3 (hoy, martes 17)*: 11:30 dobles Heliovaara-Patten (1) vs Arevalo-Pavic
+(4); **14:00 Fils (6) vs Jódar (8)**; 18:00 Arribage-Olivetti vs Luz-Matos; **20:30 Zverev (1) vs
+Shelton (3)** (atptour daily-schedule). *Día 2 (lunes 16)*: **Alcaraz (2) 6-2 6-2 Tiafoe (7) en
+69 min** (4-0 de salida, 3 bolas de break salvadas en el 3-2 del 2º set; H2H 3-1; Alcaraz llegaba
+con títulos consecutivos París+Viena y 20-2 desde el US Open; Tiafoe debutaba a los 28, el más
+veterano desde Anderson/Isner 2018, 44 victorias en 2026 y título en Halle) y **Medvedev (4)
+7-6(4) 6-3 Cobolli (5)** (6 bolas de break salvadas por Cobolli en el 1er set; Medvedev 83% de
+puntos con 1er saque, «es una pista cubierta muy rápida, así que el saque es importante»; H2H 3-1;
+7ª participación tras perderse 2025; 4 títulos y 53 triunfos en 2026). Dobles: Krawietz-Puetz (7)
+6-1 6-3 a Harrison-Skupski (2); Granollers-Zeballos (3) 6-4 6-4 Bolelli-Vavassori. **Heliovaara-
+Patten, nº1 del año en dobles** (trofeo el lunes). **Zverev recibió el lunes el trofeo de nº1 del
+año** (atptour): RG + US Open 2026, semis en Australia, 1ª final en Wimbledon, **66 victorias**
+(líder), jugador nº30 en llegar al nº1, **primer alemán que acaba el año arriba**, **más veterano
+en estrenarse (29a217d** > Agassi 29a214d en 1999 y Murray 29a197d en 2016); 4º activo tras
+Djokovic (8), Alcaraz (2) y Sinner (1). Frase: «ser el número uno del año es lo más especial que
+hay… el mayor logro de mi carrera». **H2H Zverev-Shelton 6-0** (final del US Open 2026 en 4 sets y
+Finals 2025 en 2). **H2H Fils-Jódar 2-1 Jódar** (Fils ganó Barcelona; Jódar Washington y Montreal
+7-6(5) 6-3). Jódar: 20 años, primer jugador que se clasifica para las Finals en la misma temporada
+de su debut en el circuito (Sky). **Sinner, baja por lesión de rodilla** (dos veces defensor).
+*Raquetas (tennisnerd, gear preview)*: HEAD 3, Babolat 2, Yonex 2, Tecnifibre 1 y **ninguna
+Wilson**; Zverev Gravity Tour 100 molde (Hawk Touch/VS Touch), Alcaraz Pure Aero 98 RPM Team 1.30
+25/23 kg, **Fils Pure Aero 98** RPM Blast 24/22, Shelton EZONE 98 (PT Rev/PT Pro 54/57 lbs),
+Medvedev TFight 305S Razor Soft 1.25 21 kg, Cobolli Radical Pro Firestorm 25 kg, Tiafoe Percept 97
+PolyTour Pro 1.20 **19 kg** (el más flojo), Jódar Speed MP pro stock TGT339 Lynx Tour 1.30 23 kg.
+**Siguiente pieza natural (17→18)**: día 3 resuelto (¿Zverev 7-0 vs Shelton?, ¿Jódar-Fils?) y
+previa del Alcaraz-Medvedev del miércoles.
+[x] 2026-11-17 — Publicado el día 3 del ATP Finals: Zverev nº1 del año, Alcaraz/Medvedev del lunes,
+Zverev-Shelton y Fils-Jódar + **las raquetas de los ocho** (tabla con 7 fichas del catálogo)
+(`atp-finals-2026-turin-zverev-shelton-raquetas`, ES+EN) y **Arthur Fils añadido al campo
+`player` de `babolat-pure-aero-98-2026`** (página `/jugadores/arthur-fils` creada; fuente
+babolat.com). **Hueco sigue abierto: la Radical Pro de Cobolli no está en el catálogo.**
+
 Hechos verificados a 2026-11-16 (para la noche del 16→17): **Dubai P1, FINALES del domingo 15
 ya jugadas** (premierpadel.com, crónica del 15-nov) — **femenina: Calvo-Fernández (4) 7-5 6-1
 Josemaría-Bea (2) en 1h57**; las *Niñas Prodigio* suman su **tercer título en nueve torneos**,
