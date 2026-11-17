@@ -1,6 +1,12 @@
 {
   "$comment": "Manifiesto de fotos reales. Lo escribe `npm run import:images` a partir de scripts/image-sources.json. Clave = id de producto.",
   "images": {
+    "starvie-shade-2027": {
+      "src": "/images/rackets/real/starvie-shade-2027.png",
+      "credit": "© StarVie / PadelPROShop",
+      "source": "https://padelproshop.com/products/pala-starvie-shade-2027",
+      "licence": "pendiente"
+    },
     "starvie-phantom-2027": {
       "src": "/images/rackets/real/starvie-phantom-2027.png",
       "credit": "© StarVie / PadelPROShop",
@@ -257,12 +263,6 @@
       "src": "/images/rackets/real/wilson-bela-pro-2024.jpg",
       "credit": "© Amazon ES",
       "source": "https://www.amazon.es/s?k=wilson+bela+pro+2024",
-      "licence": "pendiente"
-    },
-    "wilson-bela-v3-2026": {
-      "src": "/images/rackets/real/wilson-bela-v3-2026.png",
-      "credit": "© Wilson Sporting Goods",
-      "source": "https://www.wilson.com/es-es/product/bela-v3-padel-wr18650",
       "licence": "pendiente"
     },
     "wilson-endure-pro-v1-2026": {

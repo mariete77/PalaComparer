@@ -3773,6 +3773,30 @@ export const PRODUCTS: Product[] = [
     descriptionEn:
       "Joma's 2027 competition racket: a hybrid mould with a medium-high balance, built to hit hard without losing precision when it's time to defend. 12K carbon faces sit on a Dualtech Frame with a high-density EVA Black Hard core that delivers a firm, dry response on the smash. The Joma 3D Spin finish adds sand-textured relief for spin, Aerobump Tech grooves in the frame improve aerodynamics and the open heart lightens the swing. 360-370 g with a 38 mm profile: a demanding racket for advanced players whose technique is already in place.",
   },
+  {
+    id: "starvie-shade-2027",
+    sport: "padel",
+    brand: "StarVie",
+    model: "Shade",
+    year: 2027,
+    price: 124.9,
+    image: "/images/rackets/starvie-shade-2027.svg",
+    level: ["principiante"],
+    style: ["control"],
+    padel: {
+      shape: "redonda",
+      weight: "350-370 g",
+      balance: "bajo",
+      core: "S-EVA Flex",
+      faces: "Aluminized X-Glass (fibra de vidrio aluminizada)",
+      surface: "rugosa",
+      hardness: "blanda",
+    },
+    description:
+      "La pala de iniciación de StarVie para 2027: forma redonda, balance bajo y solo 350-370 g, el combinado más fácil de mover que fabrica la marca. Su plano de Aluminized X-Glass —fibra de vidrio aluminizada— suma algo de rigidez sin perder la elasticidad del vidrio, y el núcleo S-Eva Flex blando saca la bola con poco esfuerzo y perdona el golpe descentrado. Monta Geo Bridge para acelerar el swing con menos fuerza, Reactive Holes para estabilizar la respuesta y un mango alargado que deja sitio a las dos manos. Fabricada en España en la gama Advance, para quien empieza o vuelve al pádel sin querer pelearse con la pala.",
+    descriptionEn:
+      "StarVie's 2027 starter racket: round shape, low balance and just 350-370 g — the easiest combination to swing in the brand's line-up. Its Aluminized X-Glass face — aluminized fibreglass — adds a touch of stiffness without losing glass-like elasticity, while the soft S-Eva Flex core pushes the ball out with little effort and forgives off-centre hits. It carries Geo Bridge to speed up the swing with less force, Reactive Holes for a more stable response and an extended handle that leaves room for two-handed defence. Made in Spain in the Advance range, for players starting out or coming back to padel without wanting to fight the racket.",
+  },
 ];
 
 export function getProduct(id: string) {
