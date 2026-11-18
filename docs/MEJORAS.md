@@ -1748,6 +1748,27 @@ Galán causó baja por lesión el 30-oct y entró Javi Leal. Hoy jornada 2: Espa
   de Josemaría-Bea, top-16 de Alfonso y nº1 de Triay-Brea en México), Bola Pádel y Marca
   (finales de Lebrón-Augsburger, H2H, edades y contexto de Abbate).
 
+- [x] **Actualidad ATP Finals — día 4 en Turín (2026-11-18)**: artículo ES+EN
+  `atp-finals-2026-turin-dia-4-alcaraz-medvedev`. Crónica del día 3 con datos oficiales
+  (Zverev 6-2 7-6(4) a Shelton y primer semifinalista, 7-0 de H2H, 24 errores no forzados
+  por 10; Fils 4-6 6-2 6-2 a Jódar, primer francés en ganar en las Finals desde Tsonga
+  2011 y primer nacido en 2004+ en ganar un partido; problemas físicos de Jódar y 0-2),
+  el dobles (Arévalo-Pavić remontan a los campeones Heliovaara-Patten 6-7(5) 6-3 10-4 y se
+  clasifican; Luz-Matos fuera), la tabla del grupo McEnroe con el triple empate posible el
+  jueves, el orden de juego de hoy (Alcaraz-Medvedev no antes de 14:00, Cobolli-Tiafoe no
+  antes de 20:30, dobles 11:30 y 18:00) y el ángulo propio: **16x20 (Pure Aero 98 de
+  Alcaraz) contra 18x19 (TFight 305S de Medvedev)** con el mismo swingweight declarado
+  (324) y quote de Medvedev sobre la pista rápida como su mejor opción. H2H 7-3 Alcaraz,
+  1-1 en 2026 (Indian Wells Medvedev 6-3 7-6(3), Viena Alcaraz 6-4 7-6(2)). Datos de
+  catálogo: Pure Aero 98 16x20/98"/323 g/RA 66; TFight 305S 18x19/98"/320 g/RA 63;
+  Percept 97 de Tiafoe. **Extra**: corregido `player` erróneo en
+  `head-instinct-mp-2025` (tenía "Daniil Medvedev"; Tecnifibre confirma T-Fight 305S),
+  para que `/jugadores/daniil-medvedev` no muestre una raqueta que no juega.
+  Fuentes: atptour.com (resultados del 17-nov, crónica Zverev-Shelton, crónica Fils-Jódar,
+  order of play del miércoles), cuadro oficial protennislive (standings y premios),
+  rolandgarros.com (final RG 2026 Cobolli-Zverev), tennis365/Yahoo (H2H y quotes),
+  tecnifibre.com (T-Fight 305S y jugadores).
+
 ### 🎨 Visual (mejoras visuales)
 
 1. [x] **Dark mode completo** — toggle sol/luna en la Nav con persistencia

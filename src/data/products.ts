@@ -2008,7 +2008,6 @@ export const PRODUCTS: Product[] = [
     image: "/images/rackets/head-instinct-mp-2025.svg",
     level: ["intermedio", "avanzado"],
     style: ["potencia"],
-    player: "Daniil Medvedev",
     tenis: {
       headSize: 100,
       weightStrung: 300,
