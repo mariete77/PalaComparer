@@ -1769,6 +1769,26 @@ Galán causó baja por lesión el 30-oct y entró Javi Leal. Hoy jornada 2: Espa
   rolandgarros.com (final RG 2026 Cobolli-Zverev), tennis365/Yahoo (H2H y quotes),
   tecnifibre.com (T-Fight 305S y jugadores).
 
+- [x] **Actualidad ATP Finals — día 5 en Turín (2026-11-19)**: artículo ES+EN
+  `atp-finals-2026-turin-dia-5-aritmetica-semifinales`. Ángulo propio (no crónica): **la
+  aritmética de la última jornada del grupo John McEnroe**, con los **diez escenarios
+  oficiales de la ATP** traducidos a lenguaje humano (Shelton pasa si gana salvo que Fils
+  gane en dos sets; Fils pasa ganando en dos sets y también perdiendo en tres si Shelton
+  pierde; Jódar solo con un 2-0 suyo y un 2-0 de Zverev —escenario 3— o por % de juegos si
+  su victoria es en tres), tabla de standings con sets y % de juegos (25-16/4-0 Zverev,
+  27-25/3-3 Fils, 23-24/2-3 Shelton, 18-28/1-4 Jódar), horarios reales (Shelton-Jódar no
+  antes de 14:00; Zverev-Fils no antes de 20:30; dobles 11:30; semis 21 y final 22 a las
+  17:00), el detalle verificado de que Jódar sería el segundo ganador más joven de las
+  Finals este siglo (20 años y 2 meses, detrás de del Potro 2008) y el otro grupo (Alcaraz
+  2-0 y 11 victorias seguidas; Cobolli eliminado por el 7-6(6) 6-0 de Tiafoe; Medvedev-Tiafoe
+  del viernes decide la otra plaza). Specs de catálogo para el duelo de estilos: EZONE 98 de
+  Shelton (16x19/98"/320 g/RA 63), Pure Aero 98 de Fils (16x20/323 g/RA 66), Gravity Tour de
+  Zverev (RA 61), Speed MP de Jódar (100"/315 g/RA 60), TFight 305S 18x19 y Percept 97.
+  Raquetas de Jódar (Speed MP pro stock) y Fils (Pure Aero 98) verificadas en prensa
+  especializada. Screenshot: `docs/screenshots/2026-11-19-atp-finals-dia-5.png`.
+  Fuentes: atptour.com (preview del día 5 y página oficial de escenarios de clasificación),
+  cuadro oficial protennislive, reuters.com (Fils-Jódar), tennisnerd/tennisexpress (Speed MP).
+
 ### 🎨 Visual (mejoras visuales)
 
 1. [x] **Dark mode completo** — toggle sol/luna en la Nav con persistencia
@@ -1986,6 +2006,20 @@ pádel las cubre el cron de palas). Al terminar, actualizar el estado de la fila
 ---
 
 ## Notas (varias noches)
+
+- 2026-11-19 — **La tipografía de los artículos no existía**: `@tailwindcss/typography`
+  estaba en package.json pero **nunca se cargaba** (`@plugin` ausente en globals.css), así
+  que en las ~90 noticias y guías el `.prose` no aplicaba nada: H2 a 16px/400 sin márgenes
+  (mismo tamaño que el cuerpo), listas sin viñetas ni sangría y **tablas con celdas a
+  padding 0**, con las cifras pegadas a la columna siguiente. Arreglado con
+  `@plugin "@tailwindcss/typography";` y un bloque propio de tablas (cabecera en
+  versalitas, línea de 1px por fila, columnas numéricas alineadas a la derecha con
+  `tabular-nums`, 13px en móvil) usando los tokens `--hairline`/`--outline-variant`, así
+  que funciona en claro y oscuro. Verificado sin ojos: H2 24px/700 con 48px de margen,
+  `ul` con `disc` y 26px de sangría (antes `none`/0), contraste 15,6:1 en claro y 14,4:1 en
+  oscuro, 0 overflow a 390px (tabla 342px). OJO: en headless la `transition` de
+  background-color del body puede quedarse a medio camino al cambiar `data-theme`; para
+  medir colores hay que poner `body.style.transition='none'` o se lee un fondo falso.
 
 - 2026-11-08 — **Mundial de Doha cerrado** (España campeona en las dos categorías). Pendiente
   para el **cron de palas** (no lo toca el nocturno): cuatro protagonistas del doblete siguen

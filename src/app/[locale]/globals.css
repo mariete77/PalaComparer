@@ -1,5 +1,6 @@
 @import "tailwindcss";
 @import "@blossom-carousel/react/style.css";
+@plugin "@tailwindcss/typography";
 
 /* ============ ProCourt Precision Design Tokens ============ */
 /* Tema base (SSR, sin JS, y data-theme="dark"): OSCURO — paleta diseñada. */
@@ -239,6 +240,54 @@ html[data-theme="light"] .prose-invert {
   --tw-prose-invert-pre-bg: rgba(22, 27, 38, 0.06);
   --tw-prose-invert-th-borders: rgba(22, 27, 38, 0.18);
   --tw-prose-invert-td-borders: rgba(22, 27, 38, 0.1);
+}
+
+/* Tablas en artículos: el plugin de tipografía deja las celdas sin aire y las
+   cifras pegadas a la columna siguiente. Estilo propio, con la misma retícula
+   fina del resto de la web: cabecera en versalitas, filas separadas por línea
+   de 1px y cifras alineadas a la derecha para poder compararlas en vertical. */
+.prose table {
+  width: 100%;
+  margin: 2rem 0;
+  border-collapse: collapse;
+  font-size: 0.9375rem;
+  line-height: 1.5;
+}
+.prose thead th {
+  padding: 0.5rem 0.75rem 0.5rem 0;
+  border-bottom: 1px solid var(--outline-variant);
+  font-size: 0.6875rem;
+  font-weight: 600;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  text-align: left;
+  color: var(--on-surface-variant);
+  vertical-align: bottom;
+}
+.prose tbody td {
+  padding: 0.625rem 0.75rem 0.625rem 0;
+  border-bottom: 1px solid var(--hairline);
+  color: var(--on-surface);
+  vertical-align: top;
+}
+.prose tbody tr:last-child td {
+  border-bottom: 0;
+}
+.prose tbody td:first-child,
+.prose thead th:first-child {
+  font-weight: 600;
+}
+/* Columnas numéricas (2-0, 4-0, 25-16…) alineadas a la derecha: es lo que
+   permite ver de un vistazo quién gana el average. */
+.prose tbody td:nth-child(n + 2):not(:last-child),
+.prose thead th:nth-child(n + 2):not(:last-child) {
+  text-align: right;
+  font-variant-numeric: tabular-nums;
+}
+@media (max-width: 640px) {
+  .prose table { font-size: 0.8125rem; }
+  .prose thead th,
+  .prose tbody td { padding-right: 0.5rem; }
 }
 
 /* Split-tone card: image top (radial gradient) + data bottom (slate) */
