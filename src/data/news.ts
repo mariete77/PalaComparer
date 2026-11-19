@@ -127,6 +127,7 @@ import { metadata as dubaiP1Campeones } from "@/content/noticias/dubai-p1-2026-c
 import { metadata as mexicoMajorPrevia } from "@/content/noticias/mexico-major-2026-acapulco-previa.mdx";
 import { metadata as atpFinalsDia3 } from "@/content/noticias/atp-finals-2026-turin-zverev-shelton-raquetas.mdx";
 import { metadata as atpFinalsDia4 } from "@/content/noticias/atp-finals-2026-turin-dia-4-alcaraz-medvedev.mdx";
+import { metadata as atpFinalsDia5 } from "@/content/noticias/atp-finals-2026-turin-dia-5-aritmetica-semifinales.mdx";
 
 /**
  * Traducciones EN de los metadatos de cada artículo. Las ES vienen del propio
@@ -698,6 +699,13 @@ const EN_META: Record<string, { title: string; excerpt: string; tags: string[] }
       "The World No. 1 sealed his semi-final spot with a 6-2, 7-6(4) win over Shelton and Fils rallied past Jodar, whose body gave out. Today: Alcaraz-Medvedev (14:00) and Cobolli-Tiafoe (20:30), a 16x20 versus 18x19 puzzle on a court that rewards the serve.",
     tags: ["ATP Finals", "Turin", "Alcaraz", "Medvedev", "Zverev", "Shelton", "Fils", "Jodar", "Cobolli", "Tiafoe"],
   },
+  "atp-finals-2026-turin-dia-5-aritmetica-semifinales": {
+    title:
+      "Turin, Day 5: the arithmetic of the semi-finals \u2014 ten scenarios, one spot and four rackets",
+    excerpt:
+      "Zverev and Alcaraz are already through. The last spot in the John McEnroe Group is decided today by Shelton, Fils and a Jodar who only qualifies by winning 2-0 with Zverev winning 2-0. The ten possible paths, the Shelton-Fils style clash and the verified specs of their rackets.",
+    tags: ["ATP Finals", "Turin", "Shelton", "Fils", "Jodar", "Zverev", "Medvedev", "Tiafoe", "Racquets"],
+  },
   "mexico-major-2026-acapulco-previa": {
     title:
       "Mexico Major 2026 in Acapulco: the year's last Major decides No. 1 and the Barcelona places",
@@ -832,6 +840,7 @@ export const ARTICLES: Article[] = [
   localize({ slug: "mexico-major-2026-acapulco-previa", ...mexicoMajorPrevia }),
   localize({ slug: "atp-finals-2026-turin-zverev-shelton-raquetas", ...atpFinalsDia3 }),
   localize({ slug: "atp-finals-2026-turin-dia-4-alcaraz-medvedev", ...atpFinalsDia4 }),
+  localize({ slug: "atp-finals-2026-turin-dia-5-aritmetica-semifinales", ...atpFinalsDia5 }),
 ].sort((a, b) => b.date.localeCompare(a.date));
 
 export function getArticle(slug: string): Article | undefined {
