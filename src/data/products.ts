@@ -3796,6 +3796,31 @@ export const PRODUCTS: Product[] = [
     descriptionEn:
       "StarVie's 2027 starter racket: round shape, low balance and just 350-370 g — the easiest combination to swing in the brand's line-up. Its Aluminized X-Glass face — aluminized fibreglass — adds a touch of stiffness without losing glass-like elasticity, while the soft S-Eva Flex core pushes the ball out with little effort and forgives off-centre hits. It carries Geo Bridge to speed up the swing with less force, Reactive Holes for a more stable response and an extended handle that leaves room for two-handed defence. Made in Spain in the Advance range, for players starting out or coming back to padel without wanting to fight the racket.",
   },
+  {
+    id: "siux-valkiria-pro-2027",
+    sport: "padel",
+    brand: "Siux",
+    model: "Valkiria Pro 2027",
+    year: 2027,
+    price: 359.95,
+    image: "/images/rackets/siux-valkiria-pro-2027.svg",
+    level: ["avanzado", "profesional"],
+    style: ["polivalente"],
+    player: "Sofía Araújo",
+    padel: {
+      shape: "lagrima",
+      weight: "340-360 g",
+      balance: "medio",
+      core: "EVA Soft",
+      faces: "Carbono 24K",
+      surface: "rugosa",
+      hardness: "blanda",
+    },
+    description:
+      "La pala de Sofía Araújo para 2027, y una de las propuestas más ligeras de la gama Pro de Siux: forma lágrima, balance medio y solo 340-360 g, lo que la deja muy por debajo del peso habitual en palas profesionales. Las caras de carbono y el núcleo EVA Soft dan un tacto de 6/10 —cómodo, sin el rebote blando de una pala de iniciación— y un punto dulce amplio que perdona en defensa y en los globos. El acabado satinado con textura 3D añade efecto al golpe. Pensada para jugadoras que atacan por transición más que por remate plano: se mueve rápido en la volea y sigue saliendo con la bola en la contra.",
+    descriptionEn:
+      "Sofía Araújo's paddle for 2027, and one of the lightest offerings in Siux's Pro line: teardrop shape, medium balance and just 340-360 g, well under the usual weight for a professional frame. Carbon faces over a soft EVA core give it a 6/10 feel — plush without the trampoline of a beginner's racket — and a generous sweet spot that forgives on defence and when digging out lobs. The satin 3D-textured finish adds bite on the ball. Built for players who attack through transition rather than flat smashes: it whips quickly at the net and still comes through the ball on the counter.",
+  },
 ];
 
 export function getProduct(id: string) {
