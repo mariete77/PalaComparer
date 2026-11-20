@@ -52,6 +52,39 @@
 
 ### 📰 Actualidad (contenido original y actual)
 
+Hechos verificados a 2026-11-19 (para la noche del 19→20): **ATP Finals Turín, EN MARCHA (15-22
+nov, Inalpi Arena)**. *Día 5, jueves 19 — grupo John McEnroe cerrado*: **Shelton (3) 7-6(8) 7-5
+Jódar (8)** en 2h07 (salvó 2 bolas de set en el TB del primer set y rompió en el 5-5 del segundo;
+escribió en la cámara «I'll be watching Arthur»; 24 años, el estadounidense más joven en unas
+semifinales del Finals desde Roddick (22) en 2004) y **Zverev (1) 6-4 7-6(6) Fils (6)** (iba 6-1
+en el TB del segundo y Fils **salvó cinco bolas de partido consecutivas**). Zverev acaba **3-0 con
+seis sets ganados y ninguno perdido**; Shelton entra segundo; **Fils eliminado** (su victoria del
+martes sobre Jódar fue la primera de un francés en el torneo desde Tsonga 2011) y **Jódar 0-3** en
+su debut (jugará la Final 8 de la Davis con España en Bolonia). **La noticia del día: Alcaraz**,
+ya primero del grupo Lendl desde el miércoles, pasó el jueves por el Istituto di Medicina dello
+Sport para una **resonancia del isquio izquierdo y de la rodilla derecha**, anuló su entrenamiento
+de la 13:00 con el júnior Guto Miguel y **COPE informó de que «las pruebas médicas han ido bien y
+el murciano seguirá en el torneo»**, con previsión de jugar el viernes (14:00) contra Cobolli; no
+hay parte oficial. Frase del miércoles: «I feel it a little bit. I'm not gonna lie». **La regla
+que decide**: retirarse de un partido de liguilla después de la primera ronda impide jugar la
+fase eliminatoria — si no juega el viernes, está fuera y no hay semifinal contra Shelton.
+**Viernes 20**: Alcaraz-Cobolli (14:00) y **Medvedev-Tiafoe (20:30), que decide el segundo del
+grupo Lendl gane quien gane**. **Semifinales del sábado 21**: Alcaraz-Shelton y Zverev vs
+Medvedev/Tiafoe. Premios: 15,75 M$ (máximo 5.171.000 $ para un campeón invicto). En dobles,
+Arevalo-Pavic y Arribage-Olivetti ya están en semifinales desde el martes. **Pádel**: el
+**México Major (Acapulco, Arena GNP Seguros)** es del 21 al 29 de noviembre —clasificación el 21-22
+y cuadro final del 23 al 29, así que las fechas de la previa del 16-nov son correctas—; 1.044.849 €
+en premios y 2.000 puntos, y decide las últimas plazas de las Finals de Barcelona (10-13 dic).
+**Siguiente pieza natural (20→21)**: semifinales del sábado (Alcaraz-Shelton y Zverev-M/T) con el
+parte médico de Alcaraz ya publicado y, si se confirma, las raquetas de los cuatro semifinalistas.
+[x] 2026-11-20 — Publicado el día 5 del ATP Finals +
+el cruce de semifinales: victorias de Shelton (7-6(8) 7-5 a Jódar) y Zverev (6-4 7-6(6) a Fils,
+con cinco bolas de partido salvadas por el francés), la **resonancia de Alcaraz** y la regla que le
+obliga a jugar el viernes, el Medvedev-Tiafoe que decide la otra plaza y una tabla con las **cinco
+raquetas que siguen vivas** (todas de 97-98 pulgadas) con specs del catálogo
+(`atp-finals-2026-turin-shelton-semifinales-alcaraz-resonancia`, ES+EN). Screenshot en
+`docs/screenshots/2026-11-20-atp-finals-shelton-alcaraz.png`.
+
 Hechos verificados a 2026-11-17 (para la noche del 17→18): **ATP Finals Turín, EN MARCHA (15-22
 nov, Inalpi Arena)**. *Día 3 (hoy, martes 17)*: 11:30 dobles Heliovaara-Patten (1) vs Arevalo-Pavic
 (4); **14:00 Fils (6) vs Jódar (8)**; 18:00 Arribage-Olivetti vs Luz-Matos; **20:30 Zverev (1) vs
