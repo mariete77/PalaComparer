@@ -3821,6 +3821,30 @@ export const PRODUCTS: Product[] = [
     descriptionEn:
       "Sofía Araújo's paddle for 2027, and one of the lightest offerings in Siux's Pro line: teardrop shape, medium balance and just 340-360 g, well under the usual weight for a professional frame. Carbon faces over a soft EVA core give it a 6/10 feel — plush without the trampoline of a beginner's racket — and a generous sweet spot that forgives on defence and when digging out lobs. The satin 3D-textured finish adds bite on the ball. Built for players who attack through transition rather than flat smashes: it whips quickly at the net and still comes through the ball on the counter.",
   },
+  {
+    id: "starvie-drax-2027",
+    sport: "padel",
+    brand: "StarVie",
+    model: "Drax+",
+    year: 2027,
+    price: 198,
+    image: "/images/rackets/starvie-drax-2027.svg",
+    level: ["intermedio", "avanzado"],
+    style: ["polivalente"],
+    padel: {
+      shape: "lagrima",
+      weight: "350-370 g",
+      balance: "medio",
+      core: "M-Eva Balance",
+      faces: "Carbono 12K Hyper",
+      surface: "rugosa",
+      hardness: "media",
+    },
+    description:
+      "La polivalente de la gama Premium de StarVie para 2027: lágrima, balance medio y 350-370 g, la combinación que permite defender desde el fondo y acelerar en la volea sin cambiar de pala. Las caras de 12K Carbon Hyper amplían el punto dulce y dan un tacto reactivo, y la goma M-Eva Balance —densidad media-dura— mantiene la respuesta firme sin castigar el codo. Perfil de 38 mm, Hepta Bridge de siete lados para reducir la torsión, Shock Shield y Z-Shock para filtrar vibraciones, Reactive Holes en los laterales y mango alargado. Rugosidad Spin Boost Tech para rascar efecto. Pensada para quien sube de nivel y quiere una sola pala para todo.",
+    descriptionEn:
+      "StarVie's all-round Premium frame for 2027: teardrop shape, medium balance and 350-370 g — the blend that lets you defend from the back and accelerate at the net without switching rackets. The 12K Carbon Hyper faces widen the sweet spot and give a reactive feel, while the M-Eva Balance rubber — medium-hard density — keeps the response firm without punishing your elbow. A 38 mm profile, seven-sided Hepta Bridge to cut torsion, Shock Shield and Z-Shock to filter vibration, Reactive Holes on the outer edges and an extended handle. Spin Boost Tech roughness adds bite on the ball. Built for players stepping up a level who want one racket for everything.",
+  },
 ];
 
 export function getProduct(id: string) {
