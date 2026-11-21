@@ -52,6 +52,32 @@
 
 ### 📰 Actualidad (contenido original y actual)
 
+Hechos verificados a 2026-11-21 (para la noche del 21→22): **ATP Finals Turín, EN MARCHA (15-22
+nov, Inalpi Arena)**. *Viernes 20 — liguilla cerrada*: **Alcaraz (2) 6-4 6-1 Cobolli (5) en 65 min**
+(3-0 en el grupo Lendl, sin ceder un set; dijo «the way I felt on court today was incredible» tras
+la resonancia del jueves; **40 victorias en pista dura en 2026**, solo por detrás de las 42 de
+Medvedev) y **Medvedev (4) 6-3 6-4 Tiafoe (7)** en el duelo a vida o muerte («I love to win»; 4ª
+semifinal en las Finals y primera desde 2023). **Semifinales del sábado 21**: dobles 12:00
+(Arevalo-Pavic vs Harrison-Skupski), **Alcaraz-Shelton no antes de 14:30**, dobles 18:00
+(Krawietz-Puetz vs Arribage-Olivetti) y **Zverev-Medvedev no antes de 20:30**; final el domingo 22.
+**Cara a cara (atptour.com)**: **Alcaraz 4-1 Shelton** (única derrota, cuartos del US Open 2026
+6-7(5) 6-1 6-3 1-6 7-6(10-7), 4h28, final a las 3:33, primera victoria del estadounidense sobre un
+top-3; último precedente, final de París 2026 7-6(5) 7-5 Alcaraz en indoor) y **Medvedev 14-8
+Zverev** en 22 duelos. Las dos liguillas salieron calcadas: los primeros de grupo 3-0 y 6-0 en
+sets, los segundos 2-1 y 4-3. **Pádel**: el **México Major (Acapulco)** arranca el 23 (previa ya
+publicada el 16-nov); la Final 8 de la **Copa Davis en Bolonia** es del **24 al 29 de noviembre**
+(no del 17-22: cuidado con las fechas), con Italia 1, España 2, Alemania 3 y Chequia 4 de cabeza de
+serie. **Siguiente pieza natural (21→22)**: final del domingo 22 con los dos ganadores de las
+semifinales del sábado — verificar marcadores en atptour.com/nittoatpfinals.com y las raquetas del
+campeón; y previa de la Final 8 de Bolonia (cuadro ya sorteado) para el 23-24.
+[x] 2026-11-21 — Publicada la previa de las dos semifinales de Turín: liguillas calcadas (3-0 y 6-0
+en sets frente a 2-1 y 4-3), el 4-1 Alcaraz-Shelton con el 3:33 de la madrugada del US Open como
+única derrota y la final de París como último precedente, el 14-8 de Medvedev sobre Zverev y una
+tabla comparativa de los cuatro marcos de 98″ con patrón, peso, RA y precio del catálogo
+(`atp-finals-2026-semifinales-alcaraz-shelton-zverev-medvedev`, ES+EN). Tablas acortadas para que
+no desborden a 390 px (scrollWidth = clientWidth en ES y EN). Screenshot en
+`docs/screenshots/2026-11-21-atp-finals-semis.png`.
+
 Hechos verificados a 2026-11-19 (para la noche del 19→20): **ATP Finals Turín, EN MARCHA (15-22
 nov, Inalpi Arena)**. *Día 5, jueves 19 — grupo John McEnroe cerrado*: **Shelton (3) 7-6(8) 7-5
 Jódar (8)** en 2h07 (salvó 2 bolas de set en el TB del primer set y rompió en el 5-5 del segundo;
