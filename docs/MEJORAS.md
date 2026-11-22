@@ -52,6 +52,52 @@
 
 ### 📰 Actualidad (contenido original y actual)
 
+Hechos verificados a 2026-11-22 (para la noche del 22→23): **México Major (Acapulco), EN MARCHA**
+(21-29 nov: clasificación el fin de semana, cuadro final desde el lunes 23, Arena GNP Seguros).
+**La noticia del día: Galán y Chingotto NO juegan** — Galán lo anunció el sábado 21 en Instagram
+(«no podré jugar tampoco el Major de Acapulco… objetivo, las Finals»); lesión de la **mano derecha**
+(ligamento de un dedo con desplazamiento de tendón, desde el Milano P1 de octubre), cuarta cita
+seguida de baja tras Kuwait, el Mundial de Doha y Dubái; cirugía sobre la mesa sin decisión. Nuevo
+reparto de cabezas de serie (Mundo Deportivo + Sport): **1 Tapia-Coello, 2 Augsburger-Lebrón,
+3 Stupaczuk-Sanz, 4 Di Nenno-Navarro, 5 Nieto-Yanguas, 6 Leal-Guerrero, 7 Arce-Tello,
+8 González-Campagnolo** (Galán-Chingotto eran segundos con 28.152 puntos el 19-nov; Lebrón-
+Augsburger, terceros con 17.056). Di Nenno-Navarro no juegan primera ronda (Sport). **Platinum de
+Aguascalientes (15-21, último del año)**: ninguna de las cuatro primeras parejas del cuadro llegó a
+la final; Nieto-Yanguas (1) fuera en cuartos ante Sanyo-Maxi Sánchez 6-2/7-6; Leal-Guerrero (2)
+perdieron la semi con Bergamini-Gala 1-6/7-6/6-4 tras ganar a Libaak-Alfonso; Momo González-
+Campagnolo (3) cayeron en cuartos con Bergamini-Gala 6-3/7-5; Tello-Arce (4) en cuartos con
+Alonso-Goñi 5-7/6-3/6-2. **Finales del sábado por la noche** (resultados NO verificados a la hora
+de escribir): Alonso-Goñi vs Bergamini-Gala y Osoro-Jensen vs Castelló-Rodríguez. **Femenino**:
+a Triay-Brea les basta con **semifinales** en Acapulco para el nº1; Sánchez-Ustero y Josemaría-Bea,
+fuera matemáticamente. **ATP Finals Turín**: final el domingo 22 (semifinales del sábado Alcaraz-
+Shelton y Zverev-Medvedev; resultados sin verificar aquí). **Copa Davis Final 8, Bolonia: 24-29
+nov** (Italia 1, España 2, Alemania 3, Chequia 4). **Siguiente pieza natural (22→23)**: primera
+ronda del Major con el cuadro ya publicado (verificar en premierpadel.com/padelfip.com) y/o la
+final de Turín + la Final 8 de Bolonia.
+[x] 2026-11-22 — Publicada la pieza de actualidad del México Major tras la baja confirmada de
+Galán y Chingotto (`mexico-major-2026-sin-chingalan-cuadro-acapulco`, ES+EN, kind novedad, 4 min,
+6 relatedProducts). Ángulo propio: la mano derecha que no cura y las cuatro ausencias seguidas,
+el reparto nuevo de los ocho cabezas de serie en **tabla de dos columnas** (cabe a 390 px) y por
+qué el salto de Lebrón-Augsburger al nº2 los manda a la **mitad opuesta a Tapia-Coello** (solo se
+cruzan en la final, antes era semifinal); el aviso de Aguascalientes con los cuatro tropiezos del
+top-8 verificados uno a uno y los marcadores; el nº1 femenino que se firma con semifinales; y
+**las palas de los ocho cabezas de serie**, con 11 de 16 jugadores con ficha en el catálogo
+(Tapia Nox AT10 18K, Coello Head Coello Pro las dos lágrimas del nº1; Augsburger Siux Fenix Pro
+Black y Lebrón Babolat Viper 3.1 los dos diamantes del nº2; Stupaczuk Siux Electra Pro IT 26
+lágrima frente a Jon Sanz Drop Shot Axion Attack 2.0; Di Nenno Bullpadel XPLO 02 y Paquito Hack
+05; Tello Vertex 05; y **Momo González como única redonda del top-8**, Wilson Endure Pro V1).
+Verificación: build OK, check:translations OK (160 productos), /es y /en a 200 con 1 H1 + 5 H2 de
+contenido (7 con los bloques del template), 22 enlaces a `/producto/`, sin componentes en crudo,
+artículo primero en `/es/noticias`, sin desbordamiento horizontal a 390 px en ES y EN
+(scrollWidth = clientWidth, tabla 342 px). Screenshot:
+`docs/screenshots/2026-11-22-mexico-major-sin-chingalan.png` (1440×1100, recortado a 1080).
+Fuentes: Mundo Deportivo y Sport (baja, nuevo reparto de cabezas de serie, 28.152/17.056 puntos),
+Padel Magazine UK y TiebreakNews (lesión y cronología), VibrandoPadel, AnalistasPadel, Padel
+Spain y StudyPadel (Aguascalientes: marcadores y cabezas de serie), Padel Magazine (cuentas del
+nº1 femenino), padelfip.com y premierpadel.com (fechas de Acapulco).
+HUECO para el cron de palas (no lo toco yo): **Nieto, Yanguas, Leal, Guerrero y Campagnolo** no
+tienen ficha en el catálogo, y son cinco de los dieciséis jugadores del top-8 del Major.
+
 Hechos verificados a 2026-11-21 (para la noche del 21→22): **ATP Finals Turín, EN MARCHA (15-22
 nov, Inalpi Arena)**. *Viernes 20 — liguilla cerrada*: **Alcaraz (2) 6-4 6-1 Cobolli (5) en 65 min**
 (3-0 en el grupo Lendl, sin ceder un set; dijo «the way I felt on court today was incredible» tras

@@ -125,6 +125,7 @@ import { metadata as dubaiP1Semis } from "@/content/noticias/dubai-p1-2026-semif
 import { metadata as dubaiP1Finales } from "@/content/noticias/dubai-p1-2026-finales-ineditas-libaak-lebron.mdx";
 import { metadata as dubaiP1Campeones } from "@/content/noticias/dubai-p1-2026-campeones-calvo-fernandez-lebron-augsburger.mdx";
 import { metadata as mexicoMajorPrevia } from "@/content/noticias/mexico-major-2026-acapulco-previa.mdx";
+import { metadata as mexicoMajorSinChingalan } from "@/content/noticias/mexico-major-2026-sin-chingalan-cuadro-acapulco.mdx";
 import { metadata as atpFinalsDia3 } from "@/content/noticias/atp-finals-2026-turin-zverev-shelton-raquetas.mdx";
 import { metadata as atpFinalsDia4 } from "@/content/noticias/atp-finals-2026-turin-dia-4-alcaraz-medvedev.mdx";
 import { metadata as atpFinalsDia5 } from "@/content/noticias/atp-finals-2026-turin-dia-5-aritmetica-semifinales.mdx";
@@ -722,6 +723,13 @@ const EN_META: Record<string, { title: string; excerpt: string; tags: string[] }
       "Alcaraz closed the round robin 3-0 without dropping a set and Medvedev grabbed the last spot with a 6-3 6-4 win over Tiafoe. Saturday's semi-finals in Turin pair the two unbeaten 6-0-in-sets group winners with the two runners-up who already know how to beat them.",
     tags: ["ATP Finals", "Turin", "Alcaraz", "Shelton", "Zverev", "Medvedev", "Semi-finals", "Racquets"],
   },
+  "mexico-major-2026-sin-chingalan-cuadro-acapulco": {
+    title:
+      "No Chingalán in Acapulco: Galán confirms he is out and the Mexico Major draw changes hands",
+    excerpt:
+      "Galán announced on Saturday that his right hand will not let him play the last Major of the year, so Lebrón-Augsburger move up to second seeds and the top four places change pairs. Four of Acapulco's eight favourites fell before the Aguascalientes Platinum final, and Triay-Brea will settle No. 1 here.",
+    tags: ["Premier Padel", "Mexico Major", "Acapulco", "Galán", "Chingotto", "Lebrón", "Augsburger", "Triay", "Premier Padel Finals"],
+  },
   "mexico-major-2026-acapulco-previa": {
     title:
       "Mexico Major 2026 in Acapulco: the year's last Major decides No. 1 and the Barcelona places",
@@ -859,6 +867,7 @@ export const ARTICLES: Article[] = [
   localize({ slug: "atp-finals-2026-turin-dia-5-aritmetica-semifinales", ...atpFinalsDia5 }),
   localize({ slug: "atp-finals-2026-turin-shelton-semifinales-alcaraz-resonancia", ...atpFinalsShelton }),
   localize({ slug: "atp-finals-2026-semifinales-alcaraz-shelton-zverev-medvedev", ...atpFinalsSemis }),
+  localize({ slug: "mexico-major-2026-sin-chingalan-cuadro-acapulco", ...mexicoMajorSinChingalan }),
 ].sort((a, b) => b.date.localeCompare(a.date));
 
 export function getArticle(slug: string): Article | undefined {
