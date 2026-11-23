@@ -131,6 +131,7 @@ import { metadata as atpFinalsDia4 } from "@/content/noticias/atp-finals-2026-tu
 import { metadata as atpFinalsDia5 } from "@/content/noticias/atp-finals-2026-turin-dia-5-aritmetica-semifinales.mdx";
 import { metadata as atpFinalsShelton } from "@/content/noticias/atp-finals-2026-turin-shelton-semifinales-alcaraz-resonancia.mdx";
 import { metadata as atpFinalsSemis } from "@/content/noticias/atp-finals-2026-semifinales-alcaraz-shelton-zverev-medvedev.mdx";
+import { metadata as mexicoMajorRace } from "@/content/noticias/mexico-major-2026-race-ultimas-plazas-acapulco.mdx";
 
 /**
  * Traducciones EN de los metadatos de cada artículo. Las ES vienen del propio
@@ -730,6 +731,13 @@ const EN_META: Record<string, { title: string; excerpt: string; tags: string[] }
       "Galán announced on Saturday that his right hand will not let him play the last Major of the year, so Lebrón-Augsburger move up to second seeds and the top four places change pairs. Four of Acapulco's eight favourites fell before the Aguascalientes Platinum final, and Triay-Brea will settle No. 1 here.",
     tags: ["Premier Padel", "Mexico Major", "Acapulco", "Galán", "Chingotto", "Lebrón", "Augsburger", "Triay", "Premier Padel Finals"],
   },
+  "mexico-major-2026-race-ultimas-plazas-acapulco": {
+    title:
+      "Mexico Major opens with the Race on fire: 50 points and a No. 1 spot on the line in Acapulco",
+    excerpt:
+      "The GNP Mexico Major (November 23-29, Arena GNP Seguros) starts its main draw today with five men separated by 50 points in the fight for the last Barcelona places, Triay-Brea one final away from the women's No. 1 and Salazar chasing a farewell with no room for error.",
+    tags: ["Premier Padel", "Mexico Major", "Acapulco", "Race", "Premier Padel Finals", "Triay", "Delfi Brea", "Alejandra Salazar", "Coki Nieto", "Campagnolo"],
+  },
   "mexico-major-2026-acapulco-previa": {
     title:
       "Mexico Major 2026 in Acapulco: the year's last Major decides No. 1 and the Barcelona places",
@@ -868,6 +876,7 @@ export const ARTICLES: Article[] = [
   localize({ slug: "atp-finals-2026-turin-shelton-semifinales-alcaraz-resonancia", ...atpFinalsShelton }),
   localize({ slug: "atp-finals-2026-semifinales-alcaraz-shelton-zverev-medvedev", ...atpFinalsSemis }),
   localize({ slug: "mexico-major-2026-sin-chingalan-cuadro-acapulco", ...mexicoMajorSinChingalan }),
+  localize({ slug: "mexico-major-2026-race-ultimas-plazas-acapulco", ...mexicoMajorRace }),
 ].sort((a, b) => b.date.localeCompare(a.date));
 
 export function getArticle(slug: string): Article | undefined {

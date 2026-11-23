@@ -52,6 +52,43 @@
 
 ### 📰 Actualidad (contenido original y actual)
 
+Hechos verificados a 2026-11-23 (para la noche del 23→24): **México Major (Acapulco), EN MARCHA y ya
+con el cuadro final en pista** (21-29 nov; clasificación 21-22, primera ronda masculina el lunes 23,
+femenino el martes 24; Arena GNP Seguros; 2.000 puntos al campeón y bolsa de 1.044.849 €). **Lo
+nuevo: las finales del FIP Platinum de Aguascalientes del sábado 21** — **Bergamini-Gala (7) 6-4 6-2
+a Edu Alonso-Aimar Goñi (5)**; **Osoro-Jensen (1) 1-6 7-5 7-5 a Castelló-Laia Rodríguez (6)**; 300
+puntos FIP a cada campeón, 180 a los finalistas. **Race publicada por Premier Padel el 20-nov (antes
+de esas finales)**: hombres 15 Momo 3.305 · 16 Gonza Alfonso 3.300 · 17 Campagnolo 3.250 · 18 Coki
+Nieto 3.234 (solo 21 torneos, la Race cuenta 22) · 19 Libaak 3.230 · 20 Leal 3.169 · 21 Edu Alonso
+3.090; mujeres 14 Alonso 3.155 · 15 Salazar (se retira a final de temporada y NO jugó Aguascalientes)
+· 16 Virseda 2.810 · 17 N. Rodríguez 2.760 · 18 Dal Pozzo 2.730. **Nº1 femenino**: Triay-Brea 14.200
+vs Sánchez-Ustero 11.600 (2.600 de ventaja); Premier Padel dice que **una final en Acapulco** se lo
+da, parte de la prensa lo rebaja a **semifinales** — discrepancia sin resolver, publicada tal cual.
+**Zona horaria**: Acapulco UTC-6, **7 h menos que España** (una final a las 17:00 locales = 00:00 del
+lunes en la Península). **Siguiente pieza natural (24→25)**: primera ronda femenina + segundos de
+los hombres, con resultados verificados en premierpadel.com/padelfip.com; y la Final 8 de la Copa
+Davis en Bolonia (24-29 nov).
+
+- [x] **Actualidad México Major — arranque del cuadro final y la Race al rojo (2026-11-23)**:
+  artículo ES+EN `mexico-major-2026-race-ultimas-plazas-acapulco` (kind novedad, 5 min, 12
+  relatedProducts). Ángulo propio y distinto de las dos piezas previas de Acapulco (previa del 16 y
+  baja de Galán del 22): **la cuenta de la Race tras las finales de Aguascalientes**. Contenido: las
+  dos finales del Platinum con marcadores y los 300 puntos; tabla de 3 columnas de la zona caliente
+  masculina (15-21) con la nota de que los datos son del 20-nov; el detalle de que **Momo defiende la
+  15ª por 5 puntos sobre Alfonso y Campagnolo no puede adelantarle** porque sus resultados serán
+  idénticos; **Coki Nieto como mejor colocado de fuera** (21 torneos, la Race cuenta 22); el nº1
+  femenino con la discrepancia final/semis declarada; **Salazar como única sin red** (no jugó
+  Aguascalientes y se retira este año); **las palas de los implicados** con ficha real; y el aviso
+  horario (7 h de diferencia, finales de madrugada en España). Verificación: `npm run build` OK
+  (prebuild `check:translations` incluido), /es y /en a 200, 1 H1 + 7 H2 de contenido (más los
+  bloques del template), 30 enlaces a `/producto/` y 3 a `/jugadores/`, tabla de 342 px, sin
+  desbordamiento a 390 px en ES y EN (scrollWidth = clientWidth), 0 imágenes rotas tras scroll
+  completo. Screenshot: `docs/screenshots/2026-11-23-mexico-major-race.png` (1440×900).
+  Fuentes: premierpadel.com (noviembre de la Race, listado de clasificados y cuentas del nº1),
+  padelfip.com (sistema de puntos y defensa 2026), Mundo Deportivo (16-nov, Race al detalle),
+  PadelHoy, TiebreakNews y Padel Magazine UK (finales de Aguascalientes), actu-padel.com y
+  padelspeak.com (fechas, premios y husos horarios).
+
 Hechos verificados a 2026-11-22 (para la noche del 22→23): **México Major (Acapulco), EN MARCHA**
 (21-29 nov: clasificación el fin de semana, cuadro final desde el lunes 23, Arena GNP Seguros).
 **La noticia del día: Galán y Chingotto NO juegan** — Galán lo anunció el sábado 21 en Instagram
