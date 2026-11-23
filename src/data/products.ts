@@ -3845,6 +3845,31 @@ export const PRODUCTS: Product[] = [
     descriptionEn:
       "StarVie's all-round Premium frame for 2027: teardrop shape, medium balance and 350-370 g — the blend that lets you defend from the back and accelerate at the net without switching rackets. The 12K Carbon Hyper faces widen the sweet spot and give a reactive feel, while the M-Eva Balance rubber — medium-hard density — keeps the response firm without punishing your elbow. A 38 mm profile, seven-sided Hepta Bridge to cut torsion, Shock Shield and Z-Shock to filter vibration, Reactive Holes on the outer edges and an extended handle. Spin Boost Tech roughness adds bite on the ball. Built for players stepping up a level who want one racket for everything.",
   },
+  {
+    id: "nox-ventus-hybrid-12k-lite-2027",
+    sport: "padel",
+    brand: "Nox",
+    model: "Ventus Hybrid 12K Lite 2027 by Marina Guinart",
+    year: 2027,
+    price: 299.95,
+    image: "/images/rackets/nox-ventus-hybrid-12k-lite-2027.svg",
+    level: ["intermedio", "avanzado"],
+    style: ["polivalente"],
+    player: "Marina Guinart",
+    padel: {
+      shape: "lagrima",
+      weight: "350-360 g",
+      balance: "medio",
+      core: "MLD Black EVA",
+      faces: "Carbono 12K",
+      surface: "rugosa",
+      hardness: "media",
+    },
+    description:
+      "La versión más ligera de la gama Ventus de Nox, firmada por Marina Guinart: 350-360 g, lágrima y balance medio para que la pala acompañe tanto la defensa desde el fondo como la subida a la red. Las caras de carbono 12K dan rigidez y salida de bola, y el núcleo MLD Black EVA de densidades diferenciadas hace que la pelota salga fácil en los golpes lentos y explote en el remate sin exigir de más al brazo. Monta el sistema antivibración VCS en el interior del puño —filtra hasta un 60% más de vibraciones que la generación anterior— y el acabado Dual Spin, con relieve 3D y arena de silicio, para rascar efecto. Incluye Weight Balance para añadir contrapesos de 2 y 4 g hasta un máximo de 8 g.",
+    descriptionEn:
+      "The lightest frame in Nox's Ventus range, signed by Marina Guinart: 350-360 g, teardrop shape and medium balance so the racket works both when defending from the back and when moving up to the net. The 12K carbon faces add stiffness and easy ball output, while the MLD Black EVA core with differentiated densities lets the ball flow on slow strokes and explode on the smash without overloading your arm. It carries the VCS anti-vibration system inside the handle — filtering up to 60% more vibration than the previous generation — and the Dual Spin finish, with 3D relief and silicon sand, for extra bite. Weight Balance lets you add 2 g and 4 g weights up to a maximum of 8 g.",
+  },
 ];
 
 export function getProduct(id: string) {
