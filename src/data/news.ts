@@ -132,6 +132,7 @@ import { metadata as atpFinalsDia5 } from "@/content/noticias/atp-finals-2026-tu
 import { metadata as atpFinalsShelton } from "@/content/noticias/atp-finals-2026-turin-shelton-semifinales-alcaraz-resonancia.mdx";
 import { metadata as atpFinalsSemis } from "@/content/noticias/atp-finals-2026-semifinales-alcaraz-shelton-zverev-medvedev.mdx";
 import { metadata as mexicoMajorRace } from "@/content/noticias/mexico-major-2026-race-ultimas-plazas-acapulco.mdx";
+import { metadata as finalsBarcelonaRecord } from "@/content/noticias/premier-padel-finals-barcelona-record-asistencia.mdx";
 
 /**
  * Traducciones EN de los metadatos de cada artículo. Las ES vienen del propio
@@ -738,6 +739,13 @@ const EN_META: Record<string, { title: string; excerpt: string; tags: string[] }
       "The GNP Mexico Major (November 23-29, Arena GNP Seguros) starts its main draw today with five men separated by 50 points in the fight for the last Barcelona places, Triay-Brea one final away from the women's No. 1 and Salazar chasing a farewell with no room for error.",
     tags: ["Premier Padel", "Mexico Major", "Acapulco", "Race", "Premier Padel Finals", "Triay", "Delfi Brea", "Alejandra Salazar", "Coki Nieto", "Campagnolo"],
   },
+  "premier-padel-finals-barcelona-record-asistencia": {
+    title:
+      "Barcelona's Finals chase the world record: 17,000 fans and an expanded Palau Sant Jordi",
+    excerpt:
+      "Organisers presented the Qatar Airways Premier Padel Finals (December 10-13) with a stated goal: beating Buenos Aires' 16,920 spectators with an expanded stand at the Palau. Very few tickets remain for the semi-finals and finals.",
+    tags: ["Premier Padel", "Premier Padel Finals", "Barcelona", "Palau Sant Jordi", "Tapia", "Coello", "Ari Sánchez", "Carraro"],
+  },
   "mexico-major-2026-acapulco-previa": {
     title:
       "Mexico Major 2026 in Acapulco: the year's last Major decides No. 1 and the Barcelona places",
@@ -877,6 +885,7 @@ export const ARTICLES: Article[] = [
   localize({ slug: "atp-finals-2026-semifinales-alcaraz-shelton-zverev-medvedev", ...atpFinalsSemis }),
   localize({ slug: "mexico-major-2026-sin-chingalan-cuadro-acapulco", ...mexicoMajorSinChingalan }),
   localize({ slug: "mexico-major-2026-race-ultimas-plazas-acapulco", ...mexicoMajorRace }),
+  localize({ slug: "premier-padel-finals-barcelona-record-asistencia", ...finalsBarcelonaRecord }),
 ].sort((a, b) => b.date.localeCompare(a.date));
 
 export function getArticle(slug: string): Article | undefined {
