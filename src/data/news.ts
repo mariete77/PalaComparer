@@ -132,6 +132,7 @@ import { metadata as atpFinalsDia5 } from "@/content/noticias/atp-finals-2026-tu
 import { metadata as atpFinalsShelton } from "@/content/noticias/atp-finals-2026-turin-shelton-semifinales-alcaraz-resonancia.mdx";
 import { metadata as atpFinalsSemis } from "@/content/noticias/atp-finals-2026-semifinales-alcaraz-shelton-zverev-medvedev.mdx";
 import { metadata as mexicoMajorRace } from "@/content/noticias/mexico-major-2026-race-ultimas-plazas-acapulco.mdx";
+import { metadata as mexicoMajorCuna } from "@/content/noticias/mexico-major-2026-acapulco-cuna-del-padel.mdx";
 import { metadata as finalsBarcelonaRecord } from "@/content/noticias/premier-padel-finals-barcelona-record-asistencia.mdx";
 
 /**
@@ -739,6 +740,13 @@ const EN_META: Record<string, { title: string; excerpt: string; tags: string[] }
       "The GNP Mexico Major (November 23-29, Arena GNP Seguros) starts its main draw today with five men separated by 50 points in the fight for the last Barcelona places, Triay-Brea one final away from the women's No. 1 and Salazar chasing a farewell with no room for error.",
     tags: ["Premier Padel", "Mexico Major", "Acapulco", "Race", "Premier Padel Finals", "Triay", "Delfi Brea", "Alejandra Salazar", "Coki Nieto", "Campagnolo"],
   },
+  "mexico-major-2026-acapulco-cuna-del-padel": {
+    title:
+      "Acapulco, 1969: the Major returns to padel's birthplace with Tapia and Coello chasing all four Majors",
+    excerpt:
+      "The GNP Mexico Major (23-29 November, Arena GNP Seguros) is played in the same city where Enrique Corcuera built the first padel court in 1969. Tapia and Coello defend the title that sealed their No. 1 in 2024 and 2025, this time with a clean sweep of the Majors on the line, while champion Claudia Fernández defends with a new partner.",
+    tags: ["Premier Padel", "Mexico Major", "Acapulco", "Tapia", "Coello", "Claudia Fernández", "Triay", "Padel history"],
+  },
   "premier-padel-finals-barcelona-record-asistencia": {
     title:
       "Barcelona's Finals chase the world record: 17,000 fans and an expanded Palau Sant Jordi",
@@ -885,6 +893,7 @@ export const ARTICLES: Article[] = [
   localize({ slug: "atp-finals-2026-semifinales-alcaraz-shelton-zverev-medvedev", ...atpFinalsSemis }),
   localize({ slug: "mexico-major-2026-sin-chingalan-cuadro-acapulco", ...mexicoMajorSinChingalan }),
   localize({ slug: "mexico-major-2026-race-ultimas-plazas-acapulco", ...mexicoMajorRace }),
+  localize({ slug: "mexico-major-2026-acapulco-cuna-del-padel", ...mexicoMajorCuna }),
   localize({ slug: "premier-padel-finals-barcelona-record-asistencia", ...finalsBarcelonaRecord }),
 ].sort((a, b) => b.date.localeCompare(a.date));
 

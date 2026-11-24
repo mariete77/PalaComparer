@@ -52,6 +52,46 @@
 
 ### 📰 Actualidad (contenido original y actual)
 
+Hechos verificados a 2026-11-24 (para la noche del 24→25): **México Major en marcha en la Arena GNP
+Seguros (Acapulco)**. A las 01:00 UTC del 24 la 1.ª ronda masculina **seguía sin resultados
+publicados** en StudyPadel/Premier Padel (todos los partidos en «Programado»), así que NO hay
+marcadores que publicar todavía. Calendario: **mar. 24 = 1.ª ronda femenina + 2.ª masculina**;
+octavos jue. 26, cuartos vie. 27, semis sáb. 28, finales dom. 29. **Tapia-Coello buscan el pleno de
+los cuatro Majors** (ya ganaron Roma, París y Kuwait); el nº1 ya está asegurado, y un título más
+igualaría sus 14 de 2024 (Mundo Deportivo). Primeros rivales de los nº1: **Mouriño-Quilez o
+López-Ruiz**; Lebrón-Augsburger (2) debutan ante **Javi Ruiz-José Luis González o Gala-Rubini** (MD,
+22-nov). **Final femenina de 2025 ya no se puede repetir**: Bea González y Claudia Fernández se
+separaron; Fernández juega con **Martina Calvo** (campeonas en Dubái) y Bea con **Josemaría**.
+**Copa Davis Final 8 (Bolonia, 24-29 nov)**: daviscup.com dice **Chequia-Canadá el mar. 24**,
+**Italia-Corea el mié. 25** y **GB-Alemania + Austria-España el jue. 26**; la RFET publica
+**España-Austria el mar. 24 (17:00)** — discrepancia sin resolver, verificar antes de escribir.
+**Siguiente pieza natural (25→26)**: resultados de la 1.ª ronda masculina y femenina con marcadores
+reales, y/o la Final 8 de Bolonia. Ojo: los resultados de la jornada mexicana llegan de madrugada
+en España.
+
+- [x] **Actualidad México Major — Acapulco, la cuna del pádel y el pleno de Majors (2026-11-24)**:
+  artículo ES+EN `mexico-major-2026-acapulco-cuna-del-padel` (kind novedad, 4 min, 6
+  relatedProducts). Ángulo propio y distinto de las tres piezas previas de Acapulco (previa del 16,
+  baja de Galán del 22 y cuenta de la Race del 23): **el torneo vuelve al lugar donde se inventó el
+  pádel**. Contenido: la pista de **Enrique Corcuera en Las Brisas (1969)** —20×10 m, muros de 3 m,
+  red de tenis— y el reglamento que escribió su mujer **Viviana** (FIP); el salto a Marbella con
+  **Hohenlohe**; tabla de campeones 2024/2025 (Tapia-Coello a Stupaczuk-Yanguas 4-6/6-1/6-2 y a
+  Galán-Chingotto 6-4/7-6(5); Triay-Fernández en 2024 y González-Fernández 6-2/6-4 en 2025); el
+  pleno de cuatro Majors que persiguen los nº1 con el nº1 ya cerrado; **la pista lenta y al aire
+  libre** según la prensa tras la final de 2025, enlazada con las formas reales de las palas
+  (Tapia AT10 18K y Coello Pro, lágrimas; Wonder y Elite 02, híbridas; Pearl y Vertex 05 Woman,
+  diamantes); la final femenina que no se repite porque **Fernández-Calvo y Josemaría-Bea**; y la
+  guía práctica (7 h de diferencia, YouTube gratis hasta cuartos, Red Bull TV, abono desde 3.600
+  MXN, 35.000 asistentes previstos, 247 países). Verificación: `npm run build` OK,
+  `check:translations` OK (161 productos), /es y /en a 200, 1 H1 + 6 H2 de contenido, 18 enlaces a
+  `/producto/`, sin componentes en crudo, artículo primero en `/es/noticias`, tabla de 342 px y
+  `scrollWidth = clientWidth` a 390 px en ES y EN, 0 imágenes rotas tras scroll completo.
+  Screenshot: `docs/screenshots/2026-11-24-mexico-major-cuna.png` (1080×675).
+  Fuentes: padelfip.com (historia del pádel y origen en Acapulco), Relevo (final 2024 y nº1 cerrado
+  en 2024/2025, pleno de Majors), padel.com y ESPN (final de 2025, 6-4 y 7-6(5), pista lenta y al
+  aire libre), Mundo Deportivo (rivales de debut y 14 títulos de 2024), StudyPadel (palmarés 2024),
+  padelspeak y Gobierno de Guerrero (premios, entradas, 35.000 asistentes, 247 países).
+
 Hechos verificados a 2026-11-23 (para la noche del 23→24): **México Major (Acapulco), EN MARCHA y ya
 con el cuadro final en pista** (21-29 nov; clasificación 21-22, primera ronda masculina el lunes 23,
 femenino el martes 24; Arena GNP Seguros; 2.000 puntos al campeón y bolsa de 1.044.849 €). **Lo
