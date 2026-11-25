@@ -52,6 +52,47 @@
 
 ### 📰 Actualidad (contenido original y actual)
 
+Hechos verificados a 2026-11-25 (para la noche del 25→26): **México Major en marcha** (Acapulco,
+23-29 nov). A las 01:00 UTC del 25 los **resultados del martes (2.ª jornada de R64: 12 partidos
+masculinos + 8 femeninos) todavía no estaban publicados** — el orden de juego oficial marcaba la
+sesión a las 16:00 locales (22:00 UTC), así que a esa hora se estaba jugando. **Siguiente pieza
+natural (26→27)**: resultados reales de los dieciseisavos con el debut de **Tapia-Coello ante
+Mouriño-Quílez** (miércoles 25). Otras citas de la semana: **Copa Davis Final 8 (Bolonia, 24-29
+nov)** — el calendario de daviscup.com da Chequia-Canadá (mar. 24), Italia-Corea (mié. 25) y
+GB-Alemania + Austria-España (jue. 26), con la discrepancia de la RFET ya anotada abajo.
+**Premier Padel Finals de Barcelona**: 7-13 dic (la pieza de la previa ya existe).
+
+- [x] **Actualidad México Major — el último baile de Lamperti: de perder la previa a jugar como
+  lucky loser (2026-11-25)**: artículo ES+EN `lamperti-ultimo-baile-acapulco-lucky-loser` (kind
+  novedad, 4 min, 5 relatedProducts). Ángulo propio y distinto de las cuatro piezas previas de
+  Acapulco (previa 16-nov, baja de Galán 22-nov, Race 23-nov, cuna del pádel 24-nov): **la
+  despedida de Miguel Lamperti**, que a los 48 años (cumplidos el 11-nov) disputa en Acapulco su
+  último Premier Padel. Contenido: la derrota 7-6 y 7-6 ante Patiniotis-Roper en la última ronda
+  de la previa (casi 2 h); la baja en el cuadro que le devuelve la plaza como **[LL]** con Octavio
+  Álvarez (el orden de juego oficial lo lista en la 2.ª rotación de la Cancha Mifel, con cierre de
+  firma de lucky losers a las 15:30 locales); su reacción («Me tocó lucky loser por una vez…»,
+  Mundo Deportivo); qué es exactamente un lucky loser; el rival (Goenaga-Collado, 24 y 21 años;
+  Collado nº39 con 1.600 pts) y el premio (Libaak-Alfonso, cabezas de serie 9, en dieciseisavos);
+  la pareja con Álvarez desde septiembre y los octavos del Major de Kuwait; **la pala**: por qué
+  un jugador de 48 años compite con una redonda de control, con las specs oficiales de Nox de la
+  ML10 Ventus Control 3K 2026 (redonda, 360-375 g, carbono 3K, HR3 Color EVA, Dual Spin, mejor
+  pala de control para Testea dos años seguidos) frente a la ML10 Pro Cup Luxury 2023; tabla de
+  seis hitos de su carrera (2006 nº1 de Argentina, 2008 primer título en Salamanca con Matías
+  Díaz, 2012 Valencia con Grabiel, 2016 campeón del mundo en Portugal cerrando el punto ante
+  Cepero-Lebrón, 2021 pareja de Coello, 2026 última temporada); y la guía práctica de horarios
+  (7 h de diferencia, YouTube gratis hasta octavos, Red Bull TV desde cuartos, finales el 29 a
+  las 17:00 locales). Nota de datos: el nº118 FIP con 498 puntos es la lista del 19-oct (Padeltics);
+  el resultado del partido no estaba publicado al cierre y NO se inventó. Verificación:
+  `npm run build` OK, `check:translations` OK (161 productos), /es y /en a 200, 1 H1 + 7 H2 de
+  contenido, 12 enlaces a `/producto/`, 0 componentes en crudo, artículo primero en `/es/noticias`,
+  tabla de 342 px y `scrollWidth = clientWidth` a 390 px en ES y EN, 0 imágenes rotas tras scroll
+  completo. Screenshot: `docs/screenshots/2026-11-25-lamperti-ultimo-baile.png` (1440×900).
+  Fuentes: Mundo Deportivo (reacción y retirada del circuito, 24-nov), Bola Pádel (lucky loser,
+  rival, Libaak-Alfonso, pareja desde septiembre, Kuwait), padelfip.com (orden de juego oficial del
+  24-nov con «[LL] Lamperti/Álvarez» y la hora límite de firma), Nox (specs y premio Testea),
+  Wikipedia (carrera, 2016 y 2021), Padeltics (nº118 FIP y resultados 2025) y Padel Magazine
+  (favoritismo de Goenaga-Collado).
+
 Hechos verificados a 2026-11-24 (para la noche del 24→25): **México Major en marcha en la Arena GNP
 Seguros (Acapulco)**. A las 01:00 UTC del 24 la 1.ª ronda masculina **seguía sin resultados
 publicados** en StudyPadel/Premier Padel (todos los partidos en «Programado»), así que NO hay

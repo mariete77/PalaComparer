@@ -134,6 +134,7 @@ import { metadata as atpFinalsSemis } from "@/content/noticias/atp-finals-2026-s
 import { metadata as mexicoMajorRace } from "@/content/noticias/mexico-major-2026-race-ultimas-plazas-acapulco.mdx";
 import { metadata as mexicoMajorCuna } from "@/content/noticias/mexico-major-2026-acapulco-cuna-del-padel.mdx";
 import { metadata as finalsBarcelonaRecord } from "@/content/noticias/premier-padel-finals-barcelona-record-asistencia.mdx";
+import { metadata as lampertiUltimoBaile } from "@/content/noticias/lamperti-ultimo-baile-acapulco-lucky-loser.mdx";
 
 /**
  * Traducciones EN de los metadatos de cada artículo. Las ES vienen del propio
@@ -747,6 +748,13 @@ const EN_META: Record<string, { title: string; excerpt: string; tags: string[] }
       "The GNP Mexico Major (23-29 November, Arena GNP Seguros) is played in the same city where Enrique Corcuera built the first padel court in 1969. Tapia and Coello defend the title that sealed their No. 1 in 2024 and 2025, this time with a clean sweep of the Majors on the line, while champion Claudia Fernández defends with a new partner.",
     tags: ["Premier Padel", "Mexico Major", "Acapulco", "Tapia", "Coello", "Claudia Fernández", "Triay", "Padel history"],
   },
+  "lamperti-ultimo-baile-acapulco-lucky-loser": {
+    title:
+      "Lamperti's last dance: from losing in qualifying on two tie-breaks to playing the Acapulco main draw",
+    excerpt:
+      "Miguel Lamperti, 48, had said 2026 would be his final season. He lost the last qualifying round of the Mexico Major 7-6, 7-6 — then a withdrawal handed him the spot back as a lucky loser. It is his last Premier Padel event.",
+    tags: ["Premier Padel", "Mexico Major", "Acapulco", "Miguel Lamperti", "Nox", "ML10"],
+  },
   "premier-padel-finals-barcelona-record-asistencia": {
     title:
       "Barcelona's Finals chase the world record: 17,000 fans and an expanded Palau Sant Jordi",
@@ -895,6 +903,7 @@ export const ARTICLES: Article[] = [
   localize({ slug: "mexico-major-2026-race-ultimas-plazas-acapulco", ...mexicoMajorRace }),
   localize({ slug: "mexico-major-2026-acapulco-cuna-del-padel", ...mexicoMajorCuna }),
   localize({ slug: "premier-padel-finals-barcelona-record-asistencia", ...finalsBarcelonaRecord }),
+  localize({ slug: "lamperti-ultimo-baile-acapulco-lucky-loser", ...lampertiUltimoBaile }),
 ].sort((a, b) => b.date.localeCompare(a.date));
 
 export function getArticle(slug: string): Article | undefined {
