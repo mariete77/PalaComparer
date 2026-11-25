@@ -1,6 +1,11 @@
 {
   "$comment": "Fotos reales por producto. Clave = id en src/data/products.ts. Rellena 'url' con una imagen que tengas derecho a usar y ejecuta `npm run import:images`. Las entradas con url vacía se ignoran. Regenera esta plantilla con `npm run images:scaffold`.",
   "$licence": "El campo 'licence' registra la situación de derechos: 'pendiente' (por defecto: en uso pero sin permiso del titular), 'prensa' (material de prensa del fabricante), 'feed' (feed de afiliación) o 'propia'. El importador te resume cuántas quedan pendientes.",
+  "adidas-crossit-light-2026": {
+    "url": "https://cdn.shopify.com/s/files/1/0763/9577/4257/files/PaladeAdidasCrossItLight2026MartaOrtega_1.webp?v=1777017222",
+    "credit": "© Adidas / PadelPROShop",
+    "source": "https://padelproshop.com/products/pala-adidas-crossit-light-2026"
+  },
   "starvie-shade-2027": {
     "url": "https://cdn.shopify.com/s/files/1/0763/9577/4257/files/SHADE1.1.webp?v=1788529544",
     "credit": "© StarVie / PadelPROShop",

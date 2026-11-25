@@ -3870,6 +3870,31 @@ export const PRODUCTS: Product[] = [
     descriptionEn:
       "The lightest frame in Nox's Ventus range, signed by Marina Guinart: 350-360 g, teardrop shape and medium balance so the racket works both when defending from the back and when moving up to the net. The 12K carbon faces add stiffness and easy ball output, while the MLD Black EVA core with differentiated densities lets the ball flow on slow strokes and explode on the smash without overloading your arm. It carries the VCS anti-vibration system inside the handle — filtering up to 60% more vibration than the previous generation — and the Dual Spin finish, with 3D relief and silicon sand, for extra bite. Weight Balance lets you add 2 g and 4 g weights up to a maximum of 8 g.",
   },
+  {
+    id: "adidas-crossit-light-2026",
+    sport: "padel",
+    brand: "Adidas",
+    model: "Cross IT Light 2026",
+    year: 2026,
+    price: 300,
+    image: "/images/rackets/adidas-crossit-light-2026.svg",
+    level: ["avanzado", "profesional"],
+    style: ["control"],
+    player: "Marta Ortega",
+    padel: {
+      shape: "redonda",
+      weight: "345-360 g",
+      balance: "medio",
+      core: "EVA Soft Energy",
+      faces: "Carbono Aluminizado 24K",
+      surface: "rugosa",
+      hardness: "blanda",
+    },
+    description:
+      "La pala de Marta Ortega para 2026 es la Cross IT Light: redonda, 345-360 g y solo 38 mm de perfil, pensada para mover la pala rápido y colocar la bola antes que para cerrar puntos de un golpe. El Carbono Aluminizado 24K sobre goma EVA Soft Energy da un tacto blando y cómodo con salida fácil, y el molde Spin Blade añade relieve 3D para rascar efecto. Adidas estrena aquí el Dynamic Air Flow (agujeros repartidos para reducir resistencia al aire) y el patrón 11 Thirteen, con once perforaciones de menor diámetro que rigidizan el plano sin perder punto dulce. El grip alargado retrasa el peso hacia el puño y suma inercia en el remate sin renunciar a la manejabilidad.",
+    descriptionEn:
+      "Marta Ortega's 2026 racket is the Cross IT Light: round, 345-360 g and just 38 mm through the profile, built to move the racket fast and place the ball rather than to end points in one swing. Carbon Aluminized 24K over EVA Soft Energy rubber gives a soft, comfortable feel with easy ball output, and the Spin Blade mold adds 3D relief for bite. Adidas debuts Dynamic Air Flow here (strategically spread holes to cut air drag) plus the 11 Thirteen pattern — eleven smaller-diameter holes that stiffen the face without losing sweet spot. The extended grip shifts weight toward the handle and adds inertia on the smash without giving up manoeuvrability.",
+  },
 ];
 
 export function getProduct(id: string) {
