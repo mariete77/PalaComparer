@@ -52,6 +52,46 @@
 
 ### 📰 Actualidad (contenido original y actual)
 
+Hechos verificados a 2026-11-26 (para la noche del 26→27): **Copa Davis Final 8 (Bolonia,
+SuperTennis Arena, 24-29 nov) — primera semifinal cerrada**. Mar. 24: **Chequia 2-0 Canadá**
+(Macháč d. Draxl 6-2 3-6 6-2; Lehečka d. Auger-Aliassime 7-6(4) 6-2, salvando las 9 bolas de
+break que afrontó; primera semi checa desde 2014; capitán Berdych). Mié. 25: **Italia 2-1 Corea
+del Sur** (Musetti d. Hong 6-0 7-6(5); Kwon, nº139, d. Cobolli 3-6 7-6(3) 7-6(5); dobles
+Berrettini/Vavassori d. Chung/Kwon 7-6(2) 7-6(11) en 1h54 salvando 4 set points; quinta semi
+seguida de Italia y 15 series ganadas al hilo, última derrota Canadá-2023 fase de grupos).
+**Vie. 27, 16:00 CET: Chequia-Italia.** Jue. 26: **Alemania-GB (10:00)** y **España-Austria**
+(no antes de 17:00) → el ganador de cada uno se cruza el sábado 28 a las 12:00 y la final es el
+domingo 29 a las 15:00. España: Alcaraz, Jódar, Mérida, P. Martínez y Granollers (Mérida entró
+por el lesionado Davidovich); Alcaraz ganó las ATP Finals el domingo, no entrenó el martes y
+arrastra molestias en muslo izquierdo y rodilla derecha; Austria manda 3-2 el cara a cara.
+**México Major (Acapulco)**: a las 01:00 UTC del 26 solo había 2 partidos masculinos de
+dieciseisavos terminados (Leal-Guerrero y Jofre-Esbri) y 4 en juego — **no había material para
+una crónica**. Pendiente para 27→28: resultados reales de dieciseisavos y octavos (jue. 26 desde
+las 16:00 locales, 22:00 UTC) y si **Tapia-Coello** y **Lebrón-Augsburger** siguen vivos.
+**Premier Padel Finals de Barcelona**: 10-13 dic (la previa ya existe).
+
+- [x] **Actualidad Copa Davis — Italia sobrevive a Corea y Chequia espera en semifinales
+  (2026-11-26)**: artículo ES+EN `davis-cup-2026-italia-chequia-semis-bolonia` (kind novedad, 4
+  min, 4 relatedProducts: yonex-vcore-100-2026, babolat-pure-aero-98-2026,
+  babolat-pure-aero-2026, head-speed-mp-2026). Motivo del cambio de foco: en el México Major la
+  sesión de dieciseisavos acababa de empezar y la mayoría de cabezas de serie estaban «Later»,
+  así que la noticia con datos cerrados era la Davis. Contenido: Kwon (nº139, temporada 2025
+  perdida por el servicio militar) tumbando a Cobolli; el dobles que salva a Italia (4 set points
+  y desempate 13-11); las 15 series seguidas y la quinta semi consecutiva; Chequia 12 años
+  después con Berdych de capitán y la apuesta por Macháč por delante de Menšík; el cara a cara
+  Lehečka-FAA (3-1 → 3-2, 9 bolas de break salvadas); la previa del viernes y el España-Austria
+  de hoy con la duda de Alcaraz; y las raquetas verificadas (VCORE 100 de Macháč con PolyTour
+  Fire según Yonex; Pure Aero 98 de FAA; Pure Aero de Alcaraz; Speed MP 2026 de Jódar, código
+  pro TGT/PT 339 según Tennisnerd). Verificación: `npm run build` OK, `check:translations` OK
+  (162 productos), /es y /en a 200, 1 H1 + 7 H2 de contenido, 8 enlaces a `/producto/` (4
+  fichas, todas 200), 0 componentes en crudo, artículo primero en `/es/noticias`, 0 imágenes
+  rotas tras scroll completo, `scrollWidth = clientWidth` a 390 px en ES y EN. Screenshot:
+  `docs/screenshots/2026-11-26-davis-cup-italia-chequia.png` (1440×900). Fuentes: ATP Tour
+  (resultados oficiales de los dos días, 9 bolas de break, 15 series, quinta semi), daviscup.com
+  y Europa Press/AFP (crónicas y horarios), tennisuptodate/Tennis TourTalk (Berdych, Menšík,
+  bajas canadienses, 1h54), RFET (convocatoria, Mérida por Davidovich, horarios), Eurosport
+  (3-2 histórico de Austria), Yonex (VCORE 100 de Macháč) y Tennisnerd (Speed MP pro de Jódar).
+
 Hechos verificados a 2026-11-25 (para la noche del 25→26): **México Major en marcha** (Acapulco,
 23-29 nov). A las 01:00 UTC del 25 los **resultados del martes (2.ª jornada de R64: 12 partidos
 masculinos + 8 femeninos) todavía no estaban publicados** — el orden de juego oficial marcaba la

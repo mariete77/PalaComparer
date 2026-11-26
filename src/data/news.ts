@@ -73,6 +73,7 @@ import { metadata as laverCupDomingo } from "@/content/noticias/laver-cup-2026-d
 import { metadata as espanaPrelistaMundial } from "@/content/noticias/espana-prelista-mundial-qatar-2026.mdx";
 import { metadata as espanaConvocatoriaMundial } from "@/content/noticias/espana-convocatoria-mundial-qatar-2026-palas.mdx";
 import { metadata as davisCupFinal8 } from "@/content/noticias/davis-cup-2026-final-8-bolonia-clasificados.mdx";
+import { metadata as davisCupSemisBolonia } from "@/content/noticias/davis-cup-2026-italia-chequia-semis-bolonia.mdx";
 import { metadata as fipPlatinumLyon } from "@/content/noticias/fip-platinum-lyon-2026-palas-favoritos.mdx";
 import { metadata as fipPlatinumLyonOctavos } from "@/content/noticias/fip-platinum-lyon-2026-octavos-garrido-sanyo-fuera.mdx";
 import { metadata as rotterdamP2Race } from "@/content/noticias/rotterdam-p2-2026-race-numero-uno-palas.mdx";
@@ -355,6 +356,12 @@ const EN_META: Record<string, { title: string; excerpt: string; tags: string[] }
     excerpt:
       "Czechia come from behind to beat the United States in Prague, Auger-Aliassime seals Canada's place at home and Spain sweep Chile without dropping a rubber. The Bologna Final 8 (November 24-29) has its eight teams.",
     tags: ["Davis Cup", "Final 8", "Bologna", "Spain", "Zverev", "Tennis"],
+  },
+  "davis-cup-2026-italia-chequia-semis-bolonia": {
+    title: "Italy survive Korea in the doubles and set up a semi-final with Czechia",
+    excerpt:
+      "Kwon, the world No. 139, beat Cobolli to force a deciding doubles, where Berrettini and Vavassori saved four set points to send Italy into a fifth straight semi-final. Czechia await on Friday. Today: Germany v Great Britain and Spain v Austria, with Alcaraz in doubt.",
+    tags: ["Davis Cup", "Final 8", "Bologna", "Italy", "Czechia", "Spain", "Tennis"],
   },
   "fip-platinum-lyon-2026-palas-favoritos": {
     title: "FIP Platinum Lyon 2026: 300 points that could earn a Finals spot — the rackets of the favourites",
@@ -842,6 +849,7 @@ export const ARTICLES: Article[] = [
   localize({ slug: "espana-prelista-mundial-qatar-2026", ...espanaPrelistaMundial }),
   localize({ slug: "espana-convocatoria-mundial-qatar-2026-palas", ...espanaConvocatoriaMundial }),
   localize({ slug: "davis-cup-2026-final-8-bolonia-clasificados", ...davisCupFinal8 }),
+  localize({ slug: "davis-cup-2026-italia-chequia-semis-bolonia", ...davisCupSemisBolonia }),
   localize({ slug: "fip-platinum-lyon-2026-palas-favoritos", ...fipPlatinumLyon }),
   localize({ slug: "fip-platinum-lyon-2026-octavos-garrido-sanyo-fuera", ...fipPlatinumLyonOctavos }),
   localize({ slug: "rotterdam-p2-2026-race-numero-uno-palas", ...rotterdamP2Race }),
