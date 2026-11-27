@@ -1,6 +1,11 @@
 {
   "$comment": "Fotos reales por producto. Clave = id en src/data/products.ts. Rellena 'url' con una imagen que tengas derecho a usar y ejecuta `npm run import:images`. Las entradas con url vacía se ignoran. Regenera esta plantilla con `npm run images:scaffold`.",
   "$licence": "El campo 'licence' registra la situación de derechos: 'pendiente' (por defecto: en uso pero sin permiso del titular), 'prensa' (material de prensa del fabricante), 'feed' (feed de afiliación) o 'propia'. El importador te resume cuántas quedan pendientes.",
+  "joma-blast-pro-soft-2027": {
+    "url": "https://cdn.shopify.com/s/files/1/0763/9577/4257/files/PalaJomaBlastProSoftBurdeos-Beige2027_1.webp?v=1793780166",
+    "credit": "© Joma / PadelPROShop",
+    "source": "https://www.joma-sport.com/es_ES/pala-de-padel-blast-pro-soft-burdeos-beige/402061.671.html"
+  },
   "adidas-crossit-light-2026": {
     "url": "https://cdn.shopify.com/s/files/1/0763/9577/4257/files/PaladeAdidasCrossItLight2026MartaOrtega_1.webp?v=1777017222",
     "credit": "© Adidas / PadelPROShop",

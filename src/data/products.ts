@@ -3773,6 +3773,30 @@ export const PRODUCTS: Product[] = [
       "Joma's 2027 competition racket: a hybrid mould with a medium-high balance, built to hit hard without losing precision when it's time to defend. 12K carbon faces sit on a Dualtech Frame with a high-density EVA Black Hard core that delivers a firm, dry response on the smash. The Joma 3D Spin finish adds sand-textured relief for spin, Aerobump Tech grooves in the frame improve aerodynamics and the open heart lightens the swing. 360-370 g with a 38 mm profile: a demanding racket for advanced players whose technique is already in place.",
   },
   {
+    id: "joma-blast-pro-soft-2027",
+    sport: "padel",
+    brand: "Joma",
+    model: "Blast Pro Soft Burdeos/Beige",
+    year: 2027,
+    price: 180,
+    image: "/images/rackets/joma-blast-pro-soft-2027.svg",
+    level: ["avanzado"],
+    style: ["potencia", "polivalente"],
+    padel: {
+      shape: "diamante",
+      weight: "350-370 g",
+      balance: "alto",
+      core: "Black EVA Soft",
+      faces: "Carbono 12K",
+      surface: "rugosa",
+      hardness: "blanda",
+    },
+    description:
+      "La hermana blanda del Blast Pro de 2027, la versión que Joma asocia a Alberto García Trabanco: mismo molde de diamante y balance alto, pero con núcleo Black EVA Soft en lugar del EVA duro. El resultado es una pala de ataque que no castiga la mano cuando la bola no llega en el sitio ideal, con más salida y confort en peloteos largos. Caras de carbono 12K sobre marco Dualtech Frame, acabado 3D con efecto arena para rascar efecto y corazón abierto que aligera el swing. 350-370 g y perfil de 38 mm: para jugadores avanzados que quieren definir sin pagar el precio de una pala seca.",
+    descriptionEn:
+      "The soft-side sibling of the 2027 Blast Pro — the version Joma links to Alberto García Trabanco: same diamond mould and high balance, but with a Black EVA Soft core instead of the hard EVA. The result is an attacking racket that doesn't punish your hand when the ball isn't perfectly placed, with more rebound and comfort over long rallies. 12K carbon faces on a Dualtech Frame, a sand-textured 3D finish for spin and an open heart that lightens the swing. 350-370 g with a 38 mm profile: for advanced players who want to finish points without paying the price of a dry-feeling racket.",
+  },
+  {
     id: "starvie-shade-2027",
     sport: "padel",
     brand: "StarVie",

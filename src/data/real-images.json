@@ -1,6 +1,12 @@
 {
   "$comment": "Manifiesto de fotos reales. Lo escribe `npm run import:images` a partir de scripts/image-sources.json. Clave = id de producto.",
   "images": {
+    "joma-blast-pro-soft-2027": {
+      "src": "/images/rackets/real/joma-blast-pro-soft-2027.png",
+      "credit": "© Joma / PadelPROShop",
+      "source": "https://www.joma-sport.com/es_ES/pala-de-padel-blast-pro-soft-burdeos-beige/402061.671.html",
+      "licence": "pendiente"
+    },
     "adidas-crossit-light-2026": {
       "src": "/images/rackets/real/adidas-crossit-light-2026.png",
       "credit": "© Adidas / PadelPROShop",
