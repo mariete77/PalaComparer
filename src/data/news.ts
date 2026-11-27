@@ -136,6 +136,7 @@ import { metadata as mexicoMajorRace } from "@/content/noticias/mexico-major-202
 import { metadata as mexicoMajorCuna } from "@/content/noticias/mexico-major-2026-acapulco-cuna-del-padel.mdx";
 import { metadata as finalsBarcelonaRecord } from "@/content/noticias/premier-padel-finals-barcelona-record-asistencia.mdx";
 import { metadata as lampertiUltimoBaile } from "@/content/noticias/lamperti-ultimo-baile-acapulco-lucky-loser.mdx";
+import { metadata as mexicoMajorBilletes } from "@/content/noticias/mexico-major-2026-cuatro-billetes-finals-acapulco.mdx";
 
 /**
  * Traducciones EN de los metadatos de cada artículo. Las ES vienen del propio
@@ -762,6 +763,13 @@ const EN_META: Record<string, { title: string; excerpt: string; tags: string[] }
       "Miguel Lamperti, 48, had said 2026 would be his final season. He lost the last qualifying round of the Mexico Major 7-6, 7-6 — then a withdrawal handed him the spot back as a lucky loser. It is his last Premier Padel event.",
     tags: ["Premier Padel", "Mexico Major", "Acapulco", "Miguel Lamperti", "Nox", "ML10"],
   },
+  "mexico-major-2026-cuatro-billetes-finals-acapulco": {
+    title:
+      "Four tickets to Barcelona: Sanz, Navarro, Di Nenno and Guerrero are into the Finals",
+    excerpt:
+      "The Mexico Major round of 32 settled the first half of the Race: Jon Sanz, Paquito Navarro, Martín Di Nenno and Fran Guerrero booked their Premier Padel Finals places (10-13 December, Palau Sant Jordi). Four spots remain, and Javi Leal (73 points out) and Tino Libaak (75) must win their round of 16 in Acapulco.",
+    tags: ["Premier Padel", "Mexico Major", "Acapulco", "Premier Padel Finals", "Race", "Jon Sanz", "Paquito Navarro", "Di Nenno"],
+  },
   "premier-padel-finals-barcelona-record-asistencia": {
     title:
       "Barcelona's Finals chase the world record: 17,000 fans and an expanded Palau Sant Jordi",
@@ -912,6 +920,7 @@ export const ARTICLES: Article[] = [
   localize({ slug: "mexico-major-2026-acapulco-cuna-del-padel", ...mexicoMajorCuna }),
   localize({ slug: "premier-padel-finals-barcelona-record-asistencia", ...finalsBarcelonaRecord }),
   localize({ slug: "lamperti-ultimo-baile-acapulco-lucky-loser", ...lampertiUltimoBaile }),
+  localize({ slug: "mexico-major-2026-cuatro-billetes-finals-acapulco", ...mexicoMajorBilletes }),
 ].sort((a, b) => b.date.localeCompare(a.date));
 
 export function getArticle(slug: string): Article | undefined {

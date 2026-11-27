@@ -52,6 +52,22 @@
 
 ### 📰 Actualidad (contenido original y actual)
 
+Hechos verificados a 2026-11-27 (para la noche del 27→28): **México Major (Acapulco, 23-29 nov)**.
+A las 01:00 UTC del 27 los **octavos estaban en juego** (scud.life marcaba 2 partidos «En juego»
+y 6 «Por jugar»): **no había crónica de octavos publicable**. Lo cerrado era la **Race**: tras los
+dieciseisavos del 25, **Jon Sanz, Paquito Navarro, Martín Di Nenno y Fran Guerrero** aseguraron su
+plaza en las Finals (Sanz-Stupa 7-5 6-2 a Aguirre-Lijó; Di Nenno-Navarro 6-4 6-3 a Montiel-Santigosa;
+Leal-Guerrero 6-4 6-2 a Castaño-Pol Hernández). Corte en 3.310 puntos (Momo González, 16.º): **Leal
+3.237 (a 73)** y **Libaak 3.235 (a 75)** necesitaban ganar los octavos; **Edu Alonso 3.225 (a 85)**,
+rival directo de Leal; **Gonza Alfonso 3.325 (15.º)** dentro con Libaak fuera. **Arce-Tello (7)**
+cayeron 6(5)-7 5-7 ante **Valenzuela-Gil** y ya no dependen de sí mismos; Sintes-Zamora ganaron
+6-2 6(4)-7 6-3 a Garrido-De Pascual. **Pendiente para 28→29: resultados reales de octavos y cruces
+de cuartos** (vie. 27 desde las 14:00 PST / 23:00 CET), semis sáb. 28 y final dom. 29.
+**Copa Davis (Bolonia, 24-29 nov)**: España **2-0 Austria sin necesidad de Alcaraz** (Mérida 6-4 6-4
+a Schwaerzler; Jódar 2-6 6-0 6-1 a Rodionov) y **GB 2-1 Alemania** (Norrie 6-3 3-6 6-2 a Struff);
+**semifinal España-GB el sábado 28 a las 12:00** y **Chequia-Italia el viernes 27 a las 16:00 CET**.
+**Premier Padel Finals**: 10-13 dic, Palau Sant Jordi.
+
 Hechos verificados a 2026-11-26 (para la noche del 26→27): **Copa Davis Final 8 (Bolonia,
 SuperTennis Arena, 24-29 nov) — primera semifinal cerrada**. Mar. 24: **Chequia 2-0 Canadá**
 (Macháč d. Draxl 6-2 3-6 6-2; Lehečka d. Auger-Aliassime 7-6(4) 6-2, salvando las 9 bolas de
@@ -69,6 +85,24 @@ dieciseisavos terminados (Leal-Guerrero y Jofre-Esbri) y 4 en juego — **no hab
 una crónica**. Pendiente para 27→28: resultados reales de dieciseisavos y octavos (jue. 26 desde
 las 16:00 locales, 22:00 UTC) y si **Tapia-Coello** y **Lebrón-Augsburger** siguen vivos.
 **Premier Padel Finals de Barcelona**: 10-13 dic (la previa ya existe).
+
+- [x] **Actualidad México Major — cuatro billetes para las Finals en Acapulco (2026-11-27)**:
+  artículo ES+EN `mexico-major-2026-cuatro-billetes-finals-acapulco` (kind novedad, 4 min, 6
+  relatedProducts: drop-shot-axion-attack-1-0-2025, bullpadel-hack-05-2027,
+  bullpadel-xplo-02-2027, siux-diablo-pro-2026, nox-ea10-ventus-attack-12k-2026,
+  bullpadel-vertex-05-2027). Ángulo propio: en vez de una previa más (ya había 4 piezas del
+  Major), la **resolución de la Race** — los cuatro clasificados tras los dieciseisavos, la
+  calculadora de Leal (73) y Libaak (75) y el duelo directo Leal-Edu Alonso, Arce-Tello a la
+  espera, tabla de los 8 cruces de octavos con lo que se juega cada uno, y las palas de los
+  clasificados (Sanz la única lágrima; Paquito diamante 26,5 cm; Di Nenno XPLO 38 mm). Archivos:
+  2 MDX nuevos (ES + EN) y `src/data/news.ts` (import + EN_META + ARTICLES). Verificación:
+  `npm run build` OK, `check:translations` OK (162 productos), /es y /en a 200, 1 H1 + 5 H2 de
+  contenido, 18 enlaces a `/producto/`, tabla de 342 px sin desbordar a 390 px (scrollWidth =
+  clientWidth en ES y EN), screenshot `docs/screenshots/2026-11-27-mexico-major-cuatro-billetes.png`
+  (1280×1000). Fuentes: Premier Padel (previa oficial con los puntos de la Race y el pleno de
+  Majors), El Neverazo (los cuatro clasificados y las distancias de Leal/Libaak), Canal Tenis y
+  scud.life (marcadores de dieciseisavos y estado de los octavos), AnalistasPadel (programación
+  de octavos).
 
 - [x] **Actualidad Copa Davis — Italia sobrevive a Corea y Chequia espera en semifinales
   (2026-11-26)**: artículo ES+EN `davis-cup-2026-italia-chequia-semis-bolonia` (kind novedad, 4
