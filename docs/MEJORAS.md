@@ -52,6 +52,49 @@
 
 ### 📰 Actualidad (contenido original y actual)
 
+Hechos verificados a 2026-11-28 (para la noche del 28→29): **México Major (Acapulco, 23-29 nov)**.
+**Octavos cerrados** (jue. 26, madrugada del vie. 27 en España): Tapia-Coello 6-1 6-7 6-0 a
+Ruiz/Javi García; Valenzuela-Gil 3-6 7-6(9-7) 6-2 a Sintes-Zamora; Bautista-Bergamini (11) 7-5 6-1
+a **Momo-Campagnolo (8)**; Di Nenno-Paquito 6-3 6-4 a Jiménez-Chozas; **Libaak-Alfonso 7-6 4-6 6-4 a
+Stupaczuk-Sanz (3)**; Leal-Guerrero 7-6 6-7 6-2 a Edu Alonso-Goñi (2h40); **Jofre-Esbrí a
+Nieto-Yanguas (5)** en tres sets (Coki ganó el 1.º 6-3); Lebrón-Augsburger 7-6 6-4 a Maxi
+Sánchez-Sanyo. **Fuera de las Finals**: Coki Nieto, Momo González, Edu Alonso y Aimar Goñi (hombres);
+Aranza Osoro, Nuria Rodríguez y Dal Pozzo (mujeres). **Ale Salazar entra si Triay-Brea ganan a
+Caldera-Goenaga** (su último torneo como profesional). **Cuartos** vie. 27 desde 16:00 México /
+23:00 España: a las 01:00 UTC del 28 solo había 2 resultados femeninos (Josemaría-Bea 6-1 6-0 a
+Icardo-Jensen; Ari-Ustero 6-3 6-2 a Guinart-Ale Alonso), el resto en juego o por jugar — NO
+publicar marcadores de cuartos sin verificar. Clave del viernes: **Leal-Guerrero vs Libaak-Alfonso**
+se juega una plaza de Finals (corte 3.310 de Momo; Leal 3.237, Libaak 3.235 antes del torneo).
+**Semis sáb. 28 desde las 16:00 locales (23:00 España)** y **final dom. 29 a las 17:00 locales**
+(00:00 del lunes en la Península). **Copa Davis (Bolonia)**: Chequia-Italia el vie. 27 a las 16:00
+CET y **semifinal España-GB el sábado 28 a las 12:00** — resultado del Chequia-Italia sin verificar.
+Pendiente 28→29: cuartos completos del Major + previa de semis, y/o crónica de la semi de la Davis.
+
+- [x] **Actualidad México Major — Acapulco cierra la puerta: Coki Nieto fuera de las Finals y el
+  billete Leal-Libaak (2026-11-28)**: artículo ES+EN
+  `mexico-major-2026-octavos-coki-nieto-fuera-finals` (kind novedad, 5 min, 8 relatedProducts:
+  siux-diablo-pro-2026, nox-at10-genius-18k-2026, head-coello-pro-2026,
+  babolat-viper-3-1-2027-juan-lebron, bullpadel-xplo-02-2027, bullpadel-hack-05-2027,
+  bullpadel-elite-02-2027, bullpadel-flow-2027). Ángulo propio y distinto de las cinco piezas
+  previas de Acapulco (previa, baja de Galán, Race, cuna del pádel, Lamperti, cuatro clasificados):
+  **quién se queda FUERA de las Finals** tras los octavos y el duelo directo que decide la última
+  plaza. Contenido: tabla de los 8 octavos con marcadores; las cuatro eliminaciones matemáticas
+  masculinas (Coki, Momo, Edu Alonso, Goñi) y las tres femeninas (Osoro, N. Rodríguez, Dal Pozzo);
+  el corte en 3.310 puntos de Momo con Leal a 73 y Libaak a 75 y el detalle de que sus compañeros
+  (Guerrero y Gonza Alfonso) ya tienen billete; los siete torneos seguidos de Libaak-Alfonso sin
+  bajar de cuartos desde julio; Valenzuela-Gil y sus primeros cuartos de Major (verdugos de
+  Tello-Arce en R32); Salazar dependiendo de Triay-Brea y el nº1 que se certifica con la final; y
+  las palas de todos los protagonistas con specs del catálogo. Verificación: `npm run build` OK,
+  `check:translations` OK (163 productos), /es y /en a 200, 1 H1 + 6 H2 de contenido, 26 enlaces a
+  `/producto/` por locale, 0 componentes en crudo, 0 dobles prefijos /es/es ni /en/en,
+  `scrollWidth = clientWidth` a 390 px, tabla de 342 px, 17/17 imágenes cargadas (0 rotas),
+  artículo primero en `/es/noticias`. Screenshot `docs/screenshots/2026-11-28-mexico-major-octavos-coki.png`
+  (1080×843, 58.672 colores únicos). Fuentes: padeladdict (crónica de octavos con marcadores y OOP,
+  artículo de Coki fuera de las Finals con la lista de eliminados y la dependencia de Salazar,
+  horarios de cuartos), Canal Tenis (resultados completos de las tres jornadas), padelfip.com
+  (ficha y horarios oficiales: cuartos vie. 16:00, semis sáb. 16:00, final dom. 17:00) y Red Bull
+  TV (emisión desde cuartos).
+
 Hechos verificados a 2026-11-27 (para la noche del 27→28): **México Major (Acapulco, 23-29 nov)**.
 A las 01:00 UTC del 27 los **octavos estaban en juego** (scud.life marcaba 2 partidos «En juego»
 y 6 «Por jugar»): **no había crónica de octavos publicable**. Lo cerrado era la **Race**: tras los

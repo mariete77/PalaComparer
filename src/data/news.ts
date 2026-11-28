@@ -137,6 +137,7 @@ import { metadata as mexicoMajorCuna } from "@/content/noticias/mexico-major-202
 import { metadata as finalsBarcelonaRecord } from "@/content/noticias/premier-padel-finals-barcelona-record-asistencia.mdx";
 import { metadata as lampertiUltimoBaile } from "@/content/noticias/lamperti-ultimo-baile-acapulco-lucky-loser.mdx";
 import { metadata as mexicoMajorBilletes } from "@/content/noticias/mexico-major-2026-cuatro-billetes-finals-acapulco.mdx";
+import { metadata as mexicoMajorOctavos } from "@/content/noticias/mexico-major-2026-octavos-coki-nieto-fuera-finals.mdx";
 
 /**
  * Traducciones EN de los metadatos de cada artículo. Las ES vienen del propio
@@ -770,6 +771,13 @@ const EN_META: Record<string, { title: string; excerpt: string; tags: string[] }
       "The Mexico Major round of 32 settled the first half of the Race: Jon Sanz, Paquito Navarro, Martín Di Nenno and Fran Guerrero booked their Premier Padel Finals places (10-13 December, Palau Sant Jordi). Four spots remain, and Javi Leal (73 points out) and Tino Libaak (75) must win their round of 16 in Acapulco.",
     tags: ["Premier Padel", "Mexico Major", "Acapulco", "Premier Padel Finals", "Race", "Jon Sanz", "Paquito Navarro", "Di Nenno"],
   },
+  "mexico-major-2026-octavos-coki-nieto-fuera-finals": {
+    title:
+      "Acapulco shuts the door: Coki Nieto misses the Finals and Leal vs Libaak decides the last ticket",
+    excerpt:
+      "The Mexico Major round of 16 knocked Coki Nieto, Momo González, Edu Alonso and Aimar Goñi out of the Premier Padel Finals race. In the quarter-finals, Javi Leal and Tino Libaak face each other for the last spot still open, while Ale Salazar needs Triay and Brea to win.",
+    tags: ["Premier Padel", "Mexico Major", "Acapulco", "Premier Padel Finals", "Race", "Coki Nieto", "Tino Libaak", "Javi Leal"],
+  },
   "premier-padel-finals-barcelona-record-asistencia": {
     title:
       "Barcelona's Finals chase the world record: 17,000 fans and an expanded Palau Sant Jordi",
@@ -921,6 +929,7 @@ export const ARTICLES: Article[] = [
   localize({ slug: "premier-padel-finals-barcelona-record-asistencia", ...finalsBarcelonaRecord }),
   localize({ slug: "lamperti-ultimo-baile-acapulco-lucky-loser", ...lampertiUltimoBaile }),
   localize({ slug: "mexico-major-2026-cuatro-billetes-finals-acapulco", ...mexicoMajorBilletes }),
+  localize({ slug: "mexico-major-2026-octavos-coki-nieto-fuera-finals", ...mexicoMajorOctavos }),
 ].sort((a, b) => b.date.localeCompare(a.date));
 
 export function getArticle(slug: string): Article | undefined {
